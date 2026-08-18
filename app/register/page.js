@@ -6,7 +6,7 @@ import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { useLanguage } from "@/context/LanguageContext";
-import { CheckCircle2, Shield, Chrome } from "lucide-react";
+import { CheckCircle2, Shield, Globe } from "lucide-react";
 
 export default function RegisterPage() {
   const { t } = useLanguage();
@@ -107,7 +107,7 @@ export default function RegisterPage() {
                   href="https://portal.think4ever.com/#/register"
                   className="w-full bg-white border border-[#c8d9ed] hover:border-[#093cad] text-[#09090d] font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition-all shadow-sm mb-6 text-sm"
                 >
-                  <Chrome className="w-4 h-4 text-[#07A7E1]" />
+                  <Globe className="w-4 h-4 text-[#07A7E1]" />
                   <span>{t("registerPage.btnGoogle")}</span>
                 </a>
 

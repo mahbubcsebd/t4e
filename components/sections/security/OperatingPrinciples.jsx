@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { Lock, EyeCheck, Sliders, Server } from "lucide-react";
+import { Lock, Eye, Sliders, Server } from "lucide-react";
 
 export default function OperatingPrinciples() {
   const { t } = useLanguage();
@@ -15,7 +15,7 @@ export default function OperatingPrinciples() {
       desc: t("securityPage.card1Desc"),
     },
     {
-      icon: <EyeCheck className="w-5 h-5 text-[#093cad]" />,
+      icon: <Eye className="w-5 h-5 text-[#093cad]" />,
       tag: t("securityPage.card2Tag"),
       title: t("securityPage.card2Title"),
       desc: t("securityPage.card2Desc"),
