@@ -60,7 +60,16 @@
     "cardTwoIntentName": "Refunds remain reviewable and customer-visible.",
     "cardTwoImplTag": "IMPLEMENTATION",
     "cardTwoImplName": "Rule, workflow and acceptance criteria",
-    "cardTwoStatus": "✓ objective preserved"
+    "cardTwoStatus": "✓ objective preserved",
+    "tabOne": "CODE → DESIGN",
+    "tabTwo": "DESIGN → CODE",
+    "cardOneFooter": "Living repository map synced in real-time",
+    "cardTwoFooter": "Approved intent enforced before code execution",
+    "nodeBooking": "Booking",
+    "nodePayments": "Payments",
+    "nodeRefundRule": "Refund rule",
+    "nodeUI": "UI",
+    "watchDemo": "Watch Demo"
   },
   "problem": {
     "eyebrow": "The context gap",

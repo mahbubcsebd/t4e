@@ -70,38 +70,38 @@ export default function HeroSection() {
 
           {/* Right Column Motion Card */}
           <div className="lg:col-span-6">
-            <div className="relative rounded-2xl border border-[#bcd1e9] bg-gradient-to-br from-[#f9fcff] to-[#ebf4ff] p-6 shadow-2xl shadow-[#142f58]/10 overflow-hidden min-h-[380px] sm:min-h-[420px] flex flex-col justify-between">
-              {/* Scene Switcher Pills */}
-              <div className="flex items-center justify-between border-b border-[#c8d9ed]/60 pb-4 mb-4">
-                <div className="flex items-center gap-2">
+            <div className="relative rounded-2xl border border-[#bcd1e9] bg-gradient-to-br from-[#f9fcff] to-[#ebf4ff] p-6 shadow-2xl shadow-[#142f58]/10 overflow-hidden h-[420px] sm:h-[450px] lg:h-[460px] flex flex-col justify-between">
+              {/* Modern Scene Switcher Segmented Control */}
+              <div className="flex items-center justify-between border-b border-[#c8d9ed]/60 pb-5 mb-6">
+                <div className="flex items-center bg-[#f2f7fd] p-1.5 rounded-xl border border-[#c8d9ed]/50 shadow-inner">
                   <button
                     onClick={() => setActiveScene(1)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                    className={`relative px-5 py-2 rounded-lg text-[11px] font-extrabold tracking-wider transition-all duration-300 outline-none focus:outline-none focus:ring-0 ${
                       activeScene === 1
-                        ? "bg-[#093cad] text-white shadow-md shadow-[#093cad]/20"
-                        : "bg-white text-[#465a75] hover:bg-slate-100"
+                        ? "text-[#093cad] shadow-sm bg-white"
+                        : "text-[#71849c] hover:text-[#465a75]"
                     }`}
                   >
-                    CODE → DESIGN
+                    {t("hero.tabOne")}
                   </button>
                   <button
                     onClick={() => setActiveScene(2)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                    className={`relative px-5 py-2 rounded-lg text-[11px] font-extrabold tracking-wider transition-all duration-300 outline-none focus:outline-none focus:ring-0 ${
                       activeScene === 2
-                        ? "bg-[#093cad] text-white shadow-md shadow-[#093cad]/20"
-                        : "bg-white text-[#465a75] hover:bg-slate-100"
+                        ? "text-[#093cad] shadow-sm bg-white"
+                        : "text-[#71849c] hover:text-[#465a75]"
                     }`}
                   >
-                    DESIGN → CODE
+                    {t("hero.tabTwo")}
                   </button>
                 </div>
 
                 <div className="flex items-center gap-1.5">
                   <span
-                    className={`w-2 h-2 rounded-full ${activeScene === 1 ? "bg-[#07A7E1]" : "bg-slate-300"}`}
+                    className={`h-2 rounded-full transition-all duration-300 ${activeScene === 1 ? "bg-[#07A7E1] w-4" : "bg-slate-300 w-2"}`}
                   ></span>
                   <span
-                    className={`w-2 h-2 rounded-full ${activeScene === 2 ? "bg-[#07A7E1]" : "bg-slate-300"}`}
+                    className={`h-2 rounded-full transition-all duration-300 ${activeScene === 2 ? "bg-[#07A7E1] w-4" : "bg-slate-300 w-2"}`}
                   ></span>
                 </div>
               </div>
@@ -111,10 +111,10 @@ export default function HeroSection() {
                 {activeScene === 1 ? (
                   <motion.div
                     key="scene1"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.4 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
                     className="flex-1 flex flex-col justify-between"
                   >
                     <div>
@@ -127,69 +127,110 @@ export default function HeroSection() {
                     </div>
 
                     {/* Stage diagram */}
-                    <div className="grid grid-cols-11 gap-2 items-center bg-white p-4 rounded-xl border border-[#bcd1e9]">
-                      <div className="col-span-5 bg-[#f2f7fd] p-3 rounded-lg border border-[#a8c3e2]">
+                    <div className="grid grid-cols-[1fr_auto_1fr] gap-0 items-center bg-white p-5 rounded-2xl border border-[#bcd1e9] shadow-sm relative">
+                      <motion.div 
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+                        className="bg-[#f2f7fd] p-4 rounded-xl border border-[#a8c3e2] shadow-sm relative z-10"
+                      >
                         <small className="text-[9px] font-bold text-[#4670a7] block uppercase">
                           {t("hero.cardOneRepoTag")}
                         </small>
                         <b className="text-xs font-bold text-[#09090d] block mt-1">
                           {t("hero.cardOneRepoName")}
                         </b>
-                        <div className="mt-2 space-y-1">
+                        <div className="mt-3 space-y-1.5">
                           <div className="h-1.5 bg-[#a9b9cc] rounded-full w-full"></div>
                           <div className="h-1.5 bg-[#a9b9cc] rounded-full w-3/4"></div>
                           <div className="h-1.5 bg-[#07A7E1] rounded-full w-4/5"></div>
                         </div>
+                      </motion.div>
+
+                      {/* Central Interactive Play Button Connection */}
+                      <div className="flex items-center justify-center relative px-2 sm:px-6 w-20 sm:w-28 h-full">
+                        {/* Connecting Line and Arrowhead CSS */}
+                        <motion.div
+                          initial={{ scaleX: 0, opacity: 0 }}
+                          animate={{ scaleX: 1, opacity: 1 }}
+                          transition={{
+                            duration: 0.6,
+                            delay: 0.4,
+                            ease: "easeOut",
+                          }}
+                          style={{ originX: 0 }}
+                          className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex items-center z-0"
+                        >
+                          <div className="flex-grow h-[3px] bg-gradient-to-r from-[#093cad] to-[#07A7E1]"></div>
+                          <div className="w-0 h-0 border-y-[6px] border-y-transparent border-l-[9px] border-l-[#07A7E1] -ml-[1px]"></div>
+                        </motion.div>
+
+                        {/* The Play Button */}
+                        <motion.button
+                          initial={{ scale: 0.65, opacity: 0 }}
+                          animate={{ scale: 1, opacity: 1 }}
+                          transition={{
+                            duration: 0.5,
+                            delay: 1.0,
+                            type: "spring",
+                            stiffness: 250,
+                            damping: 20,
+                          }}
+                          onClick={() => {
+                            setVideoId("FY68DuwOf4Q");
+                            setIsVideoOpen(true);
+                          }}
+                          className="relative z-20 group flex items-center justify-center w-11 h-11 bg-[#093cad] rounded-full shadow-[0_4px_15px_rgba(9,60,173,0.3)] border-[3.5px] border-white hover:scale-110 transition-transform duration-300 outline-none focus:outline-none"
+                          aria-label={t("hero.watchDemo")}
+                        >
+                          <div className="absolute inset-0 bg-[#07A7E1] rounded-full animate-ping opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
+                          <Play
+                            className="w-4 h-4 text-white ml-0.5 relative z-10"
+                            fill="currentColor"
+                          />
+                        </motion.button>
                       </div>
 
-                      <div className="col-span-1 flex justify-center text-[#07A7E1]">
-                        <ArrowRight className="w-5 h-5 animate-pulse" />
-                      </div>
-
-                      <div className="col-span-5 bg-[#f2f7fd] p-3 rounded-lg border border-[#a8c3e2]">
+                      <motion.div 
+                        initial={{ opacity: 0, x: 10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
+                        className="bg-[#f2f7fd] p-4 rounded-xl border border-[#a8c3e2] shadow-sm relative z-10"
+                      >
                         <small className="text-[9px] font-bold text-[#4670a7] block uppercase">
                           {t("hero.cardOneBlueprintTag")}
                         </small>
                         <b className="text-xs font-bold text-[#09090d] block mt-1">
                           {t("hero.cardOneBlueprintName")}
                         </b>
-                        <div className="grid grid-cols-2 gap-1.5 mt-2">
-                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-semibold px-1.5 py-1 rounded border border-[#07A7E1]/30">
-                            Booking
+                        <div className="grid grid-cols-2 gap-2 mt-3">
+                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-bold px-1.5 py-1.5 rounded border border-[#07A7E1]/30 text-center">
+                            {t("hero.nodeBooking")}
                           </span>
-                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-semibold px-1.5 py-1 rounded border border-[#07A7E1]/30">
-                            Payments
+                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-bold px-1.5 py-1.5 rounded border border-[#07A7E1]/30 text-center">
+                            {t("hero.nodePayments")}
                           </span>
-                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-semibold px-1.5 py-1 rounded border border-[#07A7E1]/30">
-                            Refund rule
+                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-bold px-1.5 py-1.5 rounded border border-[#07A7E1]/30 text-center">
+                            {t("hero.nodeRefundRule")}
                           </span>
-                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-semibold px-1.5 py-1 rounded border border-[#07A7E1]/30">
-                            UI
+                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-bold px-1.5 py-1.5 rounded border border-[#07A7E1]/30 text-center">
+                            {t("hero.nodeUI")}
                           </span>
                         </div>
-                      </div>
+                      </motion.div>
                     </div>
 
-                    <div className="mt-4 flex items-center justify-between text-xs font-medium text-[#465a75]">
-                      <span>Living repository map synced in real-time</span>
-                      <button
-                        onClick={() => {
-                          setVideoId("FY68DuwOf4Q");
-                          setIsVideoOpen(true);
-                        }}
-                        className="text-[#093cad] font-bold flex items-center gap-1 hover:underline focus:outline-none"
-                      >
-                        <Play className="w-3 h-3 fill-current" /> Watch Demo
-                      </button>
+                    <div className="mt-5 flex justify-center text-[13px] font-semibold text-[#465a75]">
+                      <span>{t("hero.cardOneFooter")}</span>
                     </div>
                   </motion.div>
                 ) : (
                   <motion.div
                     key="scene2"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.4 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
                     className="flex-1 flex flex-col justify-between"
                   >
                     <div>
@@ -202,47 +243,86 @@ export default function HeroSection() {
                     </div>
 
                     {/* Stage diagram */}
-                    <div className="grid grid-cols-11 gap-2 items-center bg-white p-4 rounded-xl border border-[#bcd1e9]">
-                      <div className="col-span-5 bg-[#f2f7fd] p-3 rounded-lg border border-[#a8c3e2]">
+                    <div className="grid grid-cols-[1fr_auto_1fr] gap-0 items-center bg-white p-5 rounded-2xl border border-[#bcd1e9] shadow-sm relative">
+                      <motion.div 
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+                        className="bg-[#f2f7fd] p-4 rounded-xl border border-[#a8c3e2] shadow-sm relative z-10 h-full flex flex-col justify-center"
+                      >
                         <small className="text-[9px] font-bold text-[#4670a7] block uppercase">
                           {t("hero.cardTwoIntentTag")}
                         </small>
                         <b className="text-xs font-bold text-[#09090d] block mt-1 leading-snug">
                           {t("hero.cardTwoIntentName")}
                         </b>
+                      </motion.div>
+
+                      {/* Central Interactive Play Button Connection */}
+                      <div className="flex items-center justify-center relative px-2 sm:px-6 w-20 sm:w-28 h-full">
+                        {/* Connecting Line and Arrowhead CSS */}
+                        <motion.div
+                          initial={{ scaleX: 0, opacity: 0 }}
+                          animate={{ scaleX: 1, opacity: 1 }}
+                          transition={{
+                            duration: 0.6,
+                            delay: 0.4,
+                            ease: "easeOut",
+                          }}
+                          style={{ originX: 0 }}
+                          className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex items-center z-0"
+                        >
+                          <div className="flex-grow h-[3px] bg-gradient-to-r from-[#093cad] to-[#07A7E1]"></div>
+                          <div className="w-0 h-0 border-y-[6px] border-y-transparent border-l-[9px] border-l-[#07A7E1] -ml-[1px]"></div>
+                        </motion.div>
+
+                        {/* The Play Button */}
+                        <motion.button
+                          initial={{ scale: 0.65, opacity: 0 }}
+                          animate={{ scale: 1, opacity: 1 }}
+                          transition={{
+                            duration: 0.5,
+                            delay: 1.0,
+                            type: "spring",
+                            stiffness: 250,
+                            damping: 20,
+                          }}
+                          onClick={() => {
+                            setVideoId("Lq-vza9_CzI");
+                            setIsVideoOpen(true);
+                          }}
+                          className="relative z-20 group flex items-center justify-center w-11 h-11 bg-[#093cad] rounded-full shadow-[0_4px_15px_rgba(9,60,173,0.3)] border-[3.5px] border-white hover:scale-110 transition-transform duration-300 outline-none focus:outline-none"
+                          aria-label={t("hero.watchDemo")}
+                        >
+                          <div className="absolute inset-0 bg-[#07A7E1] rounded-full animate-ping opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
+                          <Play
+                            className="w-4 h-4 text-white ml-0.5 relative z-10"
+                            fill="currentColor"
+                          />
+                        </motion.button>
                       </div>
 
-                      <div className="col-span-1 flex justify-center text-[#093cad]">
-                        <ArrowRight className="w-5 h-5 animate-pulse" />
-                      </div>
-
-                      <div className="col-span-5 bg-[#f2f7fd] p-3 rounded-lg border border-[#a8c3e2] relative">
+                      <motion.div 
+                        initial={{ opacity: 0, x: 10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
+                        className="bg-[#f2f7fd] p-4 rounded-xl border border-[#a8c3e2] shadow-sm relative z-10 h-full flex flex-col justify-center"
+                      >
                         <small className="text-[9px] font-bold text-[#4670a7] block uppercase">
                           {t("hero.cardTwoImplTag")}
                         </small>
                         <b className="text-xs font-bold text-[#09090d] block mt-1 leading-snug">
                           {t("hero.cardTwoImplName")}
                         </b>
-                        <span className="mt-2 inline-flex items-center gap-1 bg-[#e0f7ed] text-[#167451] text-[9px] font-bold px-2 py-0.5 rounded-md">
-                          <CheckCircle2 className="w-3 h-3" />{" "}
+                        <span className="mt-3 inline-flex items-center gap-1.5 bg-[#e0f7ed] text-[#167451] text-[10px] font-extrabold px-2 py-1 rounded-md w-fit">
+                          <CheckCircle2 className="w-3.5 h-3.5" />{" "}
                           {t("hero.cardTwoStatus")}
                         </span>
-                      </div>
+                      </motion.div>
                     </div>
 
-                    <div className="mt-4 flex items-center justify-between text-xs font-medium text-[#465a75]">
-                      <span>
-                        Approved intent enforced before code execution
-                      </span>
-                      <button
-                        onClick={() => {
-                          setVideoId("Lq-vza9_CzI");
-                          setIsVideoOpen(true);
-                        }}
-                        className="text-[#093cad] font-bold flex items-center gap-1 hover:underline focus:outline-none"
-                      >
-                        <Play className="w-3 h-3 fill-current" /> Watch Demo
-                      </button>
+                    <div className="mt-5 flex justify-center text-[13px] font-semibold text-[#465a75]">
+                      <span>{t("hero.cardTwoFooter")}</span>
                     </div>
                   </motion.div>
                 )}

@@ -58,7 +58,16 @@
     "cardTwoIntentName": "Los reembolsos permanecen revisables y visibles para el cliente.",
     "cardTwoImplTag": "IMPLEMENTACIÓN",
     "cardTwoImplName": "Regla, flujo de trabajo y criterios de aceptación",
-    "cardTwoStatus": "✓ objetivo preservado"
+    "cardTwoStatus": "✓ objetivo preservado",
+    "tabOne": "CÓDIGO → DISEÑO",
+    "tabTwo": "DISEÑO → CÓDIGO",
+    "cardOneFooter": "Mapa de repositorio vivo sincronizado en tiempo real",
+    "cardTwoFooter": "Intención aprobada y forzada antes de la ejecución del código",
+    "nodeBooking": "Reservas",
+    "nodePayments": "Pagos",
+    "nodeRefundRule": "Regla de reembolso",
+    "nodeUI": "UI",
+    "watchDemo": "Ver Demo"
   },
   "problem": {
     "eyebrow": "La brecha de contexto",
