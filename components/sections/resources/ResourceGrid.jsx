@@ -9,7 +9,10 @@ export default function ResourceGrid() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 md:py-20 bg-white border-b border-[#c8d9ed]/40" id="resources">
+    <section
+      className="py-16 md:py-20 bg-white border-b border-[#c8d9ed]/40"
+      id="resources"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Hero Banner */}
         <div className="text-center max-w-4xl mx-auto">
@@ -18,7 +21,7 @@ export default function ResourceGrid() {
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090d] tracking-tight leading-[1.15] mb-4">
             {t("resourcesPage.heroTitlePrefix")}
-            <span className="text-gradient underline decoration-[#07A7E1]/30">
+            <span className="text-gradient decoration-[#07A7E1]/30">
               {t("resourcesPage.heroTitleHighlight")}
             </span>
           </h1>
@@ -91,7 +94,10 @@ export default function ResourceGrid() {
         </div>
 
         {/* Featured Thinking & White Papers */}
-        <div id="guides" className="bg-[#f7fafe] border border-[#c8d9ed] rounded-3xl p-8 sm:p-10">
+        <div
+          id="guides"
+          className="bg-[#f7fafe] border border-[#c8d9ed] rounded-3xl p-8 sm:p-10"
+        >
           <div className="mb-8">
             <span className="text-xs font-bold text-[#093cad] uppercase tracking-wider block mb-1">
               {t("resourcesPage.thinkingEyebrow")}
@@ -170,7 +176,10 @@ export default function ResourceGrid() {
                   {t("resourcesPage.card1Desc")}
                 </p>
               </div>
-              <a href="https://think4ever.com/blog/think4ever-approach-vs-vibe-coding/" className="text-xs font-bold text-[#093cad] hover:underline">
+              <a
+                href="https://think4ever.com/blog/think4ever-approach-vs-vibe-coding/"
+                className="text-xs font-bold text-[#093cad] hover:underline"
+              >
                 {t("resourcesPage.card1Link")}
               </a>
             </div>
@@ -187,7 +196,10 @@ export default function ResourceGrid() {
                   {t("resourcesPage.card2Desc")}
                 </p>
               </div>
-              <a href="https://think4ever.com/blog/architecture-first-agentic-development-with-think4ever/" className="text-xs font-bold text-[#093cad] hover:underline">
+              <a
+                href="https://think4ever.com/blog/architecture-first-agentic-development-with-think4ever/"
+                className="text-xs font-bold text-[#093cad] hover:underline"
+              >
                 {t("resourcesPage.card2Link")}
               </a>
             </div>
@@ -204,7 +216,10 @@ export default function ResourceGrid() {
                   {t("resourcesPage.card3Desc")}
                 </p>
               </div>
-              <Link href="/how-it-works" className="text-xs font-bold text-[#093cad] hover:underline">
+              <Link
+                href="/how-it-works"
+                className="text-xs font-bold text-[#093cad] hover:underline"
+              >
                 {t("resourcesPage.card3Link")}
               </Link>
             </div>

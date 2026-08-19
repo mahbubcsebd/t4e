@@ -16,7 +16,7 @@ export default function TermsContent() {
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090d] tracking-tight leading-tight mb-4">
             {t("termsPage.heroTitlePrefix")}
-            <span className="text-gradient underline decoration-[#07A7E1]/30">
+            <span className="text-gradient decoration-[#07A7E1]/30">
               {t("termsPage.heroTitleHighlight")}
             </span>
           </h1>

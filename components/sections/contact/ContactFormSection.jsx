@@ -41,7 +41,10 @@ export default function ContactFormSection() {
 
   const toggleNeed = (need) => {
     if (form.primaryNeeds.includes(need)) {
-      setForm({ ...form, primaryNeeds: form.primaryNeeds.filter((n) => n !== need) });
+      setForm({
+        ...form,
+        primaryNeeds: form.primaryNeeds.filter((n) => n !== need),
+      });
     } else if (form.primaryNeeds.length < 5) {
       setForm({ ...form, primaryNeeds: [...form.primaryNeeds, need] });
     }
@@ -66,7 +69,7 @@ export default function ContactFormSection() {
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090d] tracking-tight mb-4">
             {t("contactPage.heroTitlePrefix")}
-            <span className="text-gradient underline decoration-[#07A7E1]/30">
+            <span className="text-gradient decoration-[#07A7E1]/30">
               {t("contactPage.heroTitleHighlight")}
             </span>
           </h1>
@@ -83,9 +86,12 @@ export default function ContactFormSection() {
                 <div className="w-12 h-12 rounded-full bg-[#e0f7ed] text-[#167451] flex items-center justify-center mx-auto">
                   <Check className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#09090d]">Thank you for reaching out!</h3>
+                <h3 className="text-2xl font-bold text-[#09090d]">
+                  Thank you for reaching out!
+                </h3>
                 <p className="text-sm text-[#465a75]">
-                  We have received your message and will get back to you shortly.
+                  We have received your message and will get back to you
+                  shortly.
                 </p>
               </div>
             ) : (
@@ -97,12 +103,16 @@ export default function ContactFormSection() {
                   <select
                     required
                     value={form.segment}
-                    onChange={(e) => setForm({ ...form, segment: e.target.value })}
+                    onChange={(e) =>
+                      setForm({ ...form, segment: e.target.value })
+                    }
                     className="w-full px-4 py-3 rounded-xl border border-[#c8d9ed] text-sm focus:outline-none focus:border-[#093cad] bg-white"
                   >
                     <option value="">Select your segment</option>
                     {segmentOptions.map((opt, i) => (
-                      <option key={i} value={opt}>{opt}</option>
+                      <option key={i} value={opt}>
+                        {opt}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -117,7 +127,9 @@ export default function ContactFormSection() {
                       required
                       placeholder="First name"
                       value={form.firstName}
-                      onChange={(e) => setForm({ ...form, firstName: e.target.value })}
+                      onChange={(e) =>
+                        setForm({ ...form, firstName: e.target.value })
+                      }
                       className="w-full px-4 py-3 rounded-xl border border-[#c8d9ed] text-sm focus:outline-none focus:border-[#093cad] bg-white"
                     />
                   </div>
@@ -130,7 +142,9 @@ export default function ContactFormSection() {
                       required
                       placeholder="Last name"
                       value={form.lastName}
-                      onChange={(e) => setForm({ ...form, lastName: e.target.value })}
+                      onChange={(e) =>
+                        setForm({ ...form, lastName: e.target.value })
+                      }
                       className="w-full px-4 py-3 rounded-xl border border-[#c8d9ed] text-sm focus:outline-none focus:border-[#093cad] bg-white"
                     />
                   </div>
@@ -146,7 +160,9 @@ export default function ContactFormSection() {
                       required
                       placeholder="you@company.com"
                       value={form.email}
-                      onChange={(e) => setForm({ ...form, email: e.target.value })}
+                      onChange={(e) =>
+                        setForm({ ...form, email: e.target.value })
+                      }
                       className="w-full px-4 py-3 rounded-xl border border-[#c8d9ed] text-sm focus:outline-none focus:border-[#093cad] bg-white"
                     />
                   </div>
@@ -159,7 +175,9 @@ export default function ContactFormSection() {
                       required
                       placeholder="Your company"
                       value={form.companyName}
-                      onChange={(e) => setForm({ ...form, companyName: e.target.value })}
+                      onChange={(e) =>
+                        setForm({ ...form, companyName: e.target.value })
+                      }
                       className="w-full px-4 py-3 rounded-xl border border-[#c8d9ed] text-sm focus:outline-none focus:border-[#093cad] bg-white"
                     />
                   </div>
@@ -173,7 +191,9 @@ export default function ContactFormSection() {
                     <select
                       required
                       value={form.companySize}
-                      onChange={(e) => setForm({ ...form, companySize: e.target.value })}
+                      onChange={(e) =>
+                        setForm({ ...form, companySize: e.target.value })
+                      }
                       className="w-full px-4 py-3 rounded-xl border border-[#c8d9ed] text-sm focus:outline-none focus:border-[#093cad] bg-white"
                     >
                       <option value="">Select size</option>
@@ -192,7 +212,9 @@ export default function ContactFormSection() {
                       required
                       placeholder="e.g., CTO, VP Engineering"
                       value={form.role}
-                      onChange={(e) => setForm({ ...form, role: e.target.value })}
+                      onChange={(e) =>
+                        setForm({ ...form, role: e.target.value })
+                      }
                       className="w-full px-4 py-3 rounded-xl border border-[#c8d9ed] text-sm focus:outline-none focus:border-[#093cad] bg-white"
                     />
                   </div>
@@ -217,7 +239,9 @@ export default function ContactFormSection() {
                           }`}
                         >
                           <span>{opt}</span>
-                          {isSelected && <Check className="w-4 h-4 text-[#093cad] shrink-0" />}
+                          {isSelected && (
+                            <Check className="w-4 h-4 text-[#093cad] shrink-0" />
+                          )}
                         </button>
                       );
                     })}
@@ -232,7 +256,9 @@ export default function ContactFormSection() {
                     rows={4}
                     placeholder={t("contactPage.interestsPlaceholder")}
                     value={form.interests}
-                    onChange={(e) => setForm({ ...form, interests: e.target.value })}
+                    onChange={(e) =>
+                      setForm({ ...form, interests: e.target.value })
+                    }
                     className="w-full px-4 py-3 rounded-xl border border-[#c8d9ed] text-sm focus:outline-none focus:border-[#093cad] bg-white"
                   ></textarea>
                 </div>
@@ -242,7 +268,9 @@ export default function ContactFormSection() {
                     type="checkbox"
                     required
                     checked={form.agree}
-                    onChange={(e) => setForm({ ...form, agree: e.target.checked })}
+                    onChange={(e) =>
+                      setForm({ ...form, agree: e.target.checked })
+                    }
                     className="mt-0.5 rounded border-[#c8d9ed] text-[#093cad]"
                   />
                   <span className="text-xs text-[#465a75] font-semibold">
@@ -250,8 +278,16 @@ export default function ContactFormSection() {
                   </span>
                 </label>
 
-                <button type="submit" disabled={isSubmitting} className="btn-primary w-full justify-center text-sm py-3.5">
-                  <span>{isSubmitting ? t("contactPage.sending") : t("contactPage.btnSubmit")}</span>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="btn-primary w-full justify-center text-sm py-3.5"
+                >
+                  <span>
+                    {isSubmitting
+                      ? t("contactPage.sending")
+                      : t("contactPage.btnSubmit")}
+                  </span>
                 </button>
               </form>
             )}
@@ -287,7 +323,10 @@ export default function ContactFormSection() {
                     <h4 className="text-xs font-bold text-[#09090d] mb-1">
                       {t("contactPage.emailTitle")}
                     </h4>
-                    <a href="mailto:info@think4ever.com" className="text-xs font-bold text-[#093cad] hover:underline">
+                    <a
+                      href="mailto:info@think4ever.com"
+                      className="text-xs font-bold text-[#093cad] hover:underline"
+                    >
                       {t("contactPage.emailVal")}
                     </a>
                   </div>

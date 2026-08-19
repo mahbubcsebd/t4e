@@ -16,7 +16,10 @@ export default function FaqAccordion() {
   };
 
   return (
-    <section className="py-16 md:py-20 bg-white border-b border-[#c8d9ed]/40" id="faq">
+    <section
+      className="py-16 md:py-20 bg-white border-b border-[#c8d9ed]/40"
+      id="faq"
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section embedded */}
         <div className="text-center mb-12">
@@ -26,7 +29,7 @@ export default function FaqAccordion() {
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090d] tracking-tight leading-[1.15] mb-4">
             {t("faqPage.heroTitlePrefix")}
-            <span className="text-gradient underline decoration-[#07A7E1]/30">
+            <span className="text-gradient decoration-[#07A7E1]/30">
               {t("faqPage.heroTitleHighlight")}
             </span>
           </h1>
@@ -36,7 +39,10 @@ export default function FaqAccordion() {
           </p>
 
           <div className="flex justify-center gap-4">
-            <Link href="https://portal.think4ever.com/#/register" className="btn-primary text-sm py-2.5 px-6">
+            <Link
+              href="https://portal.think4ever.com/#/register"
+              className="btn-primary text-sm py-2.5 px-6"
+            >
               <span>{t("faqPage.heroCtaPrimary")}</span>
             </Link>
             <Link href="/how-it-works" className="btn-alt text-sm py-2.5 px-6">

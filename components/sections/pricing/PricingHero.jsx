@@ -16,7 +16,7 @@ export default function PricingHero() {
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090d] tracking-tight leading-[1.15] mb-6">
           {t("pricingPage.heroTitlePrefix")}
-          <span className="text-gradient underline decoration-[#07A7E1]/30">
+          <span className="text-gradient decoration-[#07A7E1]/30">
             {t("pricingPage.heroTitleHighlight")}
           </span>
         </h1>
@@ -26,7 +26,10 @@ export default function PricingHero() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 mb-4">
-          <Link href="https://portal.think4ever.com/#/register" className="btn-primary text-sm py-3 px-7">
+          <Link
+            href="https://portal.think4ever.com/#/register"
+            className="btn-primary text-sm py-3 px-7"
+          >
             <span>{t("pricingPage.heroCtaPrimary")}</span>
           </Link>
         </div>

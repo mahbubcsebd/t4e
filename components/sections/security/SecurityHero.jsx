@@ -16,7 +16,7 @@ export default function SecurityHero() {
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090d] tracking-tight leading-[1.15] mb-6">
           {t("securityPage.heroTitlePrefix")}
-          <span className="text-gradient underline decoration-[#07A7E1]/30">
+          <span className="text-gradient decoration-[#07A7E1]/30">
             {t("securityPage.heroTitleHighlight")}
           </span>
         </h1>
@@ -32,7 +32,10 @@ export default function SecurityHero() {
           >
             <span>{t("securityPage.heroCtaPrimary")}</span>
           </a>
-          <Link href="https://portal.think4ever.com/#/register" className="btn-alt text-sm py-3 px-6">
+          <Link
+            href="https://portal.think4ever.com/#/register"
+            className="btn-alt text-sm py-3 px-6"
+          >
             <span>{t("securityPage.heroCtaSecondary")}</span>
           </Link>
         </div>

@@ -16,7 +16,10 @@ export default function CoherenceSection() {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-[#f7fafe] border-b border-[#c8d9ed]/40" id="code-to-design">
+    <section
+      className="py-16 md:py-20 bg-[#f7fafe] border-b border-[#c8d9ed]/40"
+      id="code-to-design"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
@@ -25,7 +28,7 @@ export default function CoherenceSection() {
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#09090d] tracking-tight mb-4">
             {t("coherence.titlePrefix")}
-            <span className="text-gradient underline decoration-[#07A7E1]/30">
+            <span className="text-gradient decoration-[#07A7E1]/30">
               {t("coherence.titleHighlight")}
             </span>
           </h2>

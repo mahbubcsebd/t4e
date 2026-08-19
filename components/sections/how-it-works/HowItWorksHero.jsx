@@ -16,7 +16,7 @@ export default function HowItWorksHero() {
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090d] tracking-tight leading-[1.15] mb-6">
           {t("howItWorksPage.heroTitlePrefix")}
-          <span className="text-gradient underline decoration-[#07A7E1]/30">
+          <span className="text-gradient decoration-[#07A7E1]/30">
             {t("howItWorksPage.heroTitleHighlight")}
           </span>
         </h1>
@@ -26,7 +26,10 @@ export default function HowItWorksHero() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 mb-4">
-          <Link href="https://portal.think4ever.com/#/register" className="btn-primary text-sm py-3 px-7">
+          <Link
+            href="https://portal.think4ever.com/#/register"
+            className="btn-primary text-sm py-3 px-7"
+          >
             <span>{t("howItWorksPage.heroCtaPrimary")}</span>
           </Link>
           <Link href="/code-to-design" className="btn-alt text-sm py-3 px-6">
