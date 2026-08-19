@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
@@ -30,6 +30,15 @@ export default function Header() {
   const [mobileHowItWorksOpen, setMobileHowItWorksOpen] = useState(false);
   const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
   const [mobileDocsOpen, setMobileDocsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const currentLang =
     availableLanguages.find((l) => l.code === language) ||
@@ -111,8 +120,18 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#c8d9ed]/50 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <header
+      className={`sticky top-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        scrolled
+          ? "bg-white/80 backdrop-blur-xl border-b border-white/20 shadow-[0_4px_32px_rgba(9,60,173,0.08)]"
+          : "bg-white/95 backdrop-blur-md border-b border-[#c8d9ed]/50"
+      }`}
+    >
+      <div
+        className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          scrolled ? "h-14" : "h-20"
+        }`}
+      >
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
@@ -120,7 +139,9 @@ export default function Header() {
             alt="Think4Ever"
             width={180}
             height={41}
-            className="h-10 w-auto object-contain"
+            className={`w-auto object-contain transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              scrolled ? "h-7" : "h-10"
+            }`}
             priority
           />
         </Link>
