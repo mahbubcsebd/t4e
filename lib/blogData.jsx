@@ -136,40 +136,123 @@ const POST_TRANSLATIONS = {
   }
 };
 
-const translateHtmlHeadings = (html, lang) => {
+const translateArticleContent = (html, lang) => {
   if (!html || lang === "en") return html;
+
   if (lang === "es") {
     return html
+      .replace(/1\. Executive Summary/g, "1. Resumen Ejecutivo")
+      .replace(/2\. The Problem: The "Code-First" Collapse/g, '2. El Problema: El Colapso "Código Primero"')
+      .replace(/3\. The Think4Ever Approach: Architecture as the Source of Truth/g, "3. El Enfoque Think4Ever: La Arquitectura como Fuente de Verdad")
+      .replace(/4\. Addressing Diverse Market Needs/g, "4. Atendiendo a las Diversas Necesidades del Mercado")
+      .replace(/5\. Architectural Governance & Operational Safeguards/g, "5. Gobernanza Arquitectónica y Salvaguardas Operativas")
+      .replace(/6\. Conclusion/g, "6. Conclusión")
       .replace(/Executive Summary/g, "Resumen Ejecutivo")
-      .replace(/The Problem: The "Code-First" Collapse/g, 'El Problema: El Colapso "Código Primero"')
-      .replace(/The Think4Ever Approach: Architecture as the Source of Truth/g, "El Enfoque Think4Ever: La Arquitectura como Fuente de Verdad")
-      .replace(/Addressing Diverse Market Needs/g, "Atendiendo a las Diversas Necesidades del Mercado")
+      .replace(/The Fallacy of Code-First Agentic Loops/g, 'La Falacia de los Bucles Agénticos "Código Primero"')
+      .replace(/The Think4Ever Design-First Paradigm/g, "El Paradigma de Diseño Primero de Think4Ever")
+      .replace(/System Architecture & Implementation Pipeline/g, "Arquitectura del Sistema y Flujo de Implementación")
+      .replace(/The Shift from Vibe Coding to System Architecture/g, "El Cambio del Vibe Coding a la Arquitectura del Sistema")
+      .replace(/Key Architectural Guardrails/g, "Salvaguardas Arquitectónicas Clave")
+      .replace(/Comparison Matrix: Vibe Coding vs. Think4Ever/g, "Matriz Comparativa: Vibe Coding vs. Think4Ever")
+      .replace(/The Fragmented Agent Ecosystem/g, "El Ecosistema Agéntico Fragmentado")
+      .replace(/Model Context Protocol \(MCP\) as the Architectural Bridge/g, "Model Context Protocol (MCP) como Puente Arquitectónico")
+      .replace(/Multi-Agent Synchronization & Workflow/g, "Sincronización y Flujo de Trabajo Multi-Agente")
+      .replace(/Enterprise AI Engineering Challenges/g, "Desafíos de la Ingeniería de IA Empresarial")
+      .replace(/The Think Design Framework/g, "El Marco Think Design")
+      .replace(/Enterprise Case Studies & Evaluation/g, "Casos de Estudio y Evaluación Empresarial")
       .replace(/Key Pillars:/g, "Pilares Clave:")
+      .replace(/The Architect Agent:/g, "El Agente Arquitecto:")
+      .replace(/Formalized Contracts:/g, "Contratos Formalizados:")
+      .replace(/Constraint-Based Generation:/g, "Generación Basada en Restricciones:")
+      .replace(/Multi-Agent Orchestration:/g, "Orquestación Multi-Agente:")
+      .replace(/Incremental Entropy:/g, "Entropía Incremental:")
+      .replace(/Contextual Fragmentation:/g, "Fragmentación Contextual:")
+      .replace(/The Orchestration Gap:/g, "La Brecha de Orquestación:")
+      .replace(/Individual Users \("Vibe Coding"\)/g, 'Usuarios Individuales ("Vibe Coding")')
+      .replace(/Product Managers/g, "Gerentes de Producto")
+      .replace(/Small Businesses/g, "Pequeñas Empresas")
+      .replace(/Systems Integrators \/ Consultants/g, "Integradores de Sistemas / Consultores")
+      .replace(/Enterprise & Mid-Market/g, "Empresas y Medianas Empresas")
       .replace(/Requirements Summary/g, "Resumen de Requisitos")
       .replace(/Concept Overview/g, "Visión General del Concepto")
       .replace(/Fig 1:/g, "Fig. 1:")
       .replace(/Fig 2:/g, "Fig. 2:")
-      .replace(/Architecture-first/g, "Arquitectura primero")
+      .replace(/Fig 3:/g, "Fig. 3:")
+      .replace(/Fig 4:/g, "Fig. 4:")
+      .replace(/Fig 5:/g, "Fig. 5:")
       .replace(/Single Source of Truth/g, "Fuente Única de Verdad")
-      .replace(/Implementation/g, "Implementación")
-      .replace(/Conclusion/g, "Conclusión");
+      .replace(/Code-First Result/g, "Resultado Código Primero")
+      .replace(/Design-First Result/g, "Resultado Diseño Primero")
+      .replace(/Tech Debt/g, "Deuda Técnica")
+      .replace(/Onboarding/g, "Incorporación")
+      .replace(/Refactoring/g, "Refactorización")
+      .replace(/As AI coding agents become ubiquitous, software bottlenecks have shifted from writing syntax to maintaining architectural integrity\./g,
+               "A medida que los agentes de código de IA se vuelven ubicuos, los cuellos de botella del software han pasado de escribir sintaxis a mantener la integridad arquitectónica.")
+      .replace(/Current market leaders like Claude Code and Cursor operate on high-context, iterative loops focused on immediate file-level implementation\./g,
+               "Los líderes actuales del mercado como Claude Code y Cursor operan en bucles iterativos de alto contexto enfocados en la implementación inmediata a nivel de archivo.")
+      .replace(/Think4Ever flips the development lifecycle, treating the System Design Document \(SDD\) and Architectural Decision Records \(ADR\) as the "Source of Truth" rather than existing code\./g,
+               "Think4Ever invierte el ciclo de vida del desarrollo, tratando el Documento de Diseño del Sistema (SDD) y los Registros de Decisiones Arquitectónicas (ADR) como la 'Fuente de Verdad' en lugar del código existente.")
+      .replace(/The future of software engineering is not about writing syntax faster—it is about orchestrating complex systems with mathematical precision\./g,
+               "El futuro de la ingeniería de software no consiste en escribir sintaxis más rápido, sino en orquestar sistemas complejos con precisión matemática.");
   }
+
   if (lang === "nl") {
     return html
+      .replace(/1\. Executive Summary/g, "1. Samenvatting")
+      .replace(/2\. The Problem: The "Code-First" Collapse/g, '2. Het Probleem: De "Code-First" Ineenstorting')
+      .replace(/3\. The Think4Ever Approach: Architecture as the Source of Truth/g, "3. De Think4Ever Aanpak: Architectuur als Bron van Waarheid")
+      .replace(/4\. Addressing Diverse Market Needs/g, "4. Inspelen op Uiteenlopende Marktbehoeften")
+      .replace(/5\. Architectural Governance & Operational Safeguards/g, "5. Architecturale Governance & Operationele Waarborgen")
+      .replace(/6\. Conclusion/g, "6. Conclusie")
       .replace(/Executive Summary/g, "Samenvatting")
-      .replace(/The Problem: The "Code-First" Collapse/g, 'Het Probleem: De "Code-First" Ineenstorting')
-      .replace(/The Think4Ever Approach: Architecture as the Source of Truth/g, "De Think4Ever Aanpak: Architectuur als Bron van Waarheid")
-      .replace(/Addressing Diverse Market Needs/g, "Inspelen op Uiteenlopende Marktbehoeften")
+      .replace(/The Fallacy of Code-First Agentic Loops/g, 'De Misvatting van Code-First Agentische Loops')
+      .replace(/The Think4Ever Design-First Paradigm/g, "Het Think4Ever Design-First Paradigma")
+      .replace(/System Architecture & Implementation Pipeline/g, "Systeemarchitectuur & Implementatie-pipeline")
+      .replace(/The Shift from Vibe Coding to System Architecture/g, "De Verschuiving van Vibe Coding naar Systeemarchitectuur")
+      .replace(/Key Architectural Guardrails/g, "Belangrijkste Architecturale Waarborgen")
+      .replace(/Comparison Matrix: Vibe Coding vs. Think4Ever/g, "Vergelijkingsmatrix: Vibe Coding vs. Think4Ever")
+      .replace(/The Fragmented Agent Ecosystem/g, "Het Gefragmenteerde Agent-Ecosysteem")
+      .replace(/Model Context Protocol \(MCP\) as the Architectural Bridge/g, "Model Context Protocol (MCP) als Architecturale Brug")
+      .replace(/Multi-Agent Synchronization & Workflow/g, "Multi-Agent Synchronisatie & Werkstroom")
+      .replace(/Enterprise AI Engineering Challenges/g, "Enterprise AI Engineering Uitdagingen")
+      .replace(/The Think Design Framework/g, "Het Think Design Framework")
+      .replace(/Enterprise Case Studies & Evaluation/g, "Enterprise Casestudies & Evaluatie")
       .replace(/Key Pillars:/g, "Kernpijlers:")
+      .replace(/The Architect Agent:/g, "De Architect-Agent:")
+      .replace(/Formalized Contracts:/g, "Gevormaliseerde Contracten:")
+      .replace(/Constraint-Based Generation:/g, "Generatie op Basis van Beperkingen:")
+      .replace(/Multi-Agent Orchestration:/g, "Multi-Agent Orchestratie:")
+      .replace(/Incremental Entropy:/g, "Incrementele Entropie:")
+      .replace(/Contextual Fragmentation:/g, "Contextuele Fragmentatie:")
+      .replace(/The Orchestration Gap:/g, "De Orchestratie-Kloof:")
+      .replace(/Individual Users \("Vibe Coding"\)/g, 'Individuele Gebruikers ("Vibe Coding")')
+      .replace(/Product Managers/g, "Product Managers")
+      .replace(/Small Businesses/g, "Kleine Bedrijven")
+      .replace(/Systems Integrators \/ Consultants/g, "Systeemintegratoren / Consultants")
+      .replace(/Enterprise & Mid-Market/g, "Enterprise & Middelgrote Bedrijven")
       .replace(/Requirements Summary/g, "Samenvatting van Vereisten")
       .replace(/Concept Overview/g, "Concept Overzicht")
       .replace(/Fig 1:/g, "Fig. 1:")
       .replace(/Fig 2:/g, "Fig. 2:")
-      .replace(/Architecture-first/g, "Architectuur eerst")
+      .replace(/Fig 3:/g, "Fig. 3:")
+      .replace(/Fig 4:/g, "Fig. 4:")
+      .replace(/Fig 5:/g, "Fig. 5:")
       .replace(/Single Source of Truth/g, "Enkele Bron van Waarheid")
-      .replace(/Implementation/g, "Implementatie")
-      .replace(/Conclusion/g, "Conclusie");
+      .replace(/Code-First Result/g, "Resultaat Code-First")
+      .replace(/Design-First Result/g, "Resultaat Design-First")
+      .replace(/Tech Debt/g, "Technische Schuld")
+      .replace(/Onboarding/g, "Inwerken")
+      .replace(/Refactoring/g, "Refactoring")
+      .replace(/As AI coding agents become ubiquitous, software bottlenecks have shifted from writing syntax to maintaining architectural integrity\./g,
+               "Naarmate AI-coderingsagenten alomtegenwoordig worden, zijn softwareknelpunten verschoven van het schrijven van syntaxis naar het behoud van architecturale integriteit.")
+      .replace(/Current market leaders like Claude Code and Cursor operate on high-context, iterative loops focused on immediate file-level implementation\./g,
+               "Huidige marktleiders zoals Claude Code en Cursor werken in iteratieve lussen met hoge context, gericht op directe implementatie op bestandsniveau.")
+      .replace(/Think4Ever flips the development lifecycle, treating the System Design Document \(SDD\) and Architectural Decision Records \(ADR\) as the "Source of Truth" rather than existing code\./g,
+               "Think4Ever keert de ontwikkelingscyclus om en behandelt het System Design Document (SDD) en de Architectural Decision Records (ADR) als de 'Bron van Waarheid' in plaats van bestaande code.")
+      .replace(/The future of software engineering is not about writing syntax faster—it is about orchestrating complex systems with mathematical precision\./g,
+               "De toekomst van software engineering gaat niet over het sneller schrijven van syntaxis—het gaat over het orchestreren van complexe systemen met mathematische precisie.");
   }
+
   return html;
 };
 
@@ -189,7 +272,7 @@ export function getLocalizedPost(post, language) {
   };
 
   const rawContent = resolveValue(post.content, "content");
-  const content = translateHtmlHeadings(rawContent, lang);
+  const content = translateArticleContent(rawContent, lang);
 
   return {
     ...post,
