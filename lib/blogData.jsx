@@ -225,11 +225,49 @@ const translateArticleContent = (html, lang) => {
       .replace(/Tech Debt/g, "Deuda Técnica")
       .replace(/Onboarding/g, "Incorporación")
       .replace(/Refactoring/g, "Refactorización")
-      .replace(/System Coherence:/g, "Coherencia del Sistema:")
-      .replace(/Governed Autonomy:/g, "Autonomía Gobernada:")
-      .replace(/Legacy Refactoring:/g, "Refactorización de Sistemas Heredados:")
-      .replace(/Digital Augmentation:/g, "Aumento Digital:")
-      .replace(/Security & Compliance:/g, "Seguridad y Cumplimiento:")
+      .replace(/The Point-Assistant Approach \(Cursor, Lovable, Bolt\)/g, "El Enfoque de Asistente Puntual (Cursor, Lovable, Bolt)")
+      .replace(/The Point-Assistant Approach/g, "El Enfoque de Asistente Puntual")
+      .replace(/The Think4Ever Autonomous Approach/g, "El Enfoque Autónomo Think4Ever")
+      .replace(/Operational Model/g, "Modelo Operativo")
+      .replace(/System Visibility/g, "Visibilidad del Sistema")
+      .replace(/Scalability Limit/g, "Límite de Escalabilidad")
+      .replace(/Resource Efficiency/g, "Eficiencia de Recursos")
+      .replace(/Security & Trust/g, "Seguridad y Confianza")
+      .replace(/Engineering Vector/g, "Vector de Ingeniería")
+      .replace(/Strategic Development Metric/g, "Métrica Estratégica de Desarrollo")
+      .replace(/Fragmented, Conversation-Bound Agents \(Code-First\)/g, "Agentes Fragmentados Basados en Conversación (Código Primero)")
+      .replace(/Unified Think4Ever MCP Architecture \(Design-First\)/g, "Arquitectura Unificada Think4Ever MCP (Diseño Primero)")
+      .replace(/Context Longevity/g, "Longevidad del Contexto")
+      .replace(/Cross-Tool Interoperability/g, "Interoperabilidad entre Herramientas")
+      .replace(/Architectural Enforcement/g, "Cumplimiento Arquitectónico")
+      .replace(/Token Consumption Efficiency/g, "Eficiencia en Consumo de Tokens")
+      .replace(/Developer Autonomy/g, "Autonomía del Desarrollador")
+      .replace(/A faster keyboard; assists humans in writing code file-by-file\./g,
+               "Un teclado más rápido; ayuda a los humanos a escribir código archivo por archivo.")
+      .replace(/An autonomous engineering engine driving the entire SDLC from spec to deployment\./g,
+               "Un motor de ingeniería autónomo que impulsa todo el SDLC desde la especificación hasta la implementación.")
+      .replace(/Fragmented; reads local file contexts but lacks architectural awareness\./g,
+               "Fragmentado; lee contextos de archivos locales pero carece de conciencia arquitectónica.")
+      .replace(/Absolute; maintained via a persistent design harness and system-level coherence\./g,
+               "Absoluto; mantenido a través de un arnés de diseño persistente y coherencia a nivel de sistema.")
+      .replace(/Hits a wall when codebase complexity outgrows the LLM context window\./g,
+               "Choca contra un muro cuando la complejidad del código supera la ventana de contexto del LLM.")
+      .replace(/Infinite vertical scale via multi-session context preservation and graph-based state tracking\./g,
+               "Escala vertical infinita mediante preservación de contexto multisesión y seguimiento de estado basado en grafos.")
+      .replace(/High token waste from constantly feeding raw repository files back to the LLM\./g,
+               "Alto desperdicio de tokens por alimentar constantemente archivos sin procesar al LLM.")
+      .replace(/Ultra-low token consumption via targeted, harness-guided code execution\./g,
+               "Consumo de tokens ultrabajo mediante ejecución de código dirigida por el arnés.")
+      .replace(/Reactive; relies on external scanners or human code reviews after generation\./g,
+               "Reactivo; depende de escáneres externos o revisiones de código humanas después de la generación.")
+      .replace(/Proactive; native security analysis is a mandatory gate in the compilation loop\./g,
+               "Proactivo; el análisis de seguridad nativo es una puerta obligatoria en el bucle de compilación.")
+      .replace(/Architectural overview and structured system design workflow\./g,
+               "Visión general arquitectónica y flujo de trabajo de diseño de sistema estructurado.")
+      .replace(/Persistent context management and continuity across long-lived development cycles\./g,
+               "Gestión persistente del contexto y continuidad a través de ciclos de desarrollo prolongados.")
+      .replace(/Security Analysis and Reporting/g, "Análisis e Informes de Seguridad")
+      .replace(/The Structural Reality:/g, "La Realidad Estructural:")
       .replace(/The Challenge:/g, "El Desafío:")
       .replace(/The Think4Ever Approach:/g, "El Enfoque Think4Ever:")
       .replace(/1\. Unified Architecture:/g, "1. Arquitectura Unificada:")
@@ -328,6 +366,49 @@ const translateArticleContent = (html, lang) => {
       .replace(/Legacy Refactoring:/g, "Refactoring van Bestaande Systemen:")
       .replace(/Digital Augmentation:/g, "Digitale Uitbreiding:")
       .replace(/Security & Compliance:/g, "Beveiliging & Naleving:")
+      .replace(/The Point-Assistant Approach \(Cursor, Lovable, Bolt\)/g, "De Punt-Assistent Aanpak (Cursor, Lovable, Bolt)")
+      .replace(/The Point-Assistant Approach/g, "De Punt-Assistent Aanpak")
+      .replace(/The Think4Ever Autonomous Approach/g, "De Think4Ever Autonome Aanpak")
+      .replace(/Operational Model/g, "Operationeel Model")
+      .replace(/System Visibility/g, "Systeeminzicht")
+      .replace(/Scalability Limit/g, "Schaalbaarheidslimiet")
+      .replace(/Resource Efficiency/g, "Resource-efficiëntie")
+      .replace(/Security & Trust/g, "Beveiliging & Vertrouwen")
+      .replace(/Engineering Vector/g, "Engineering Vector")
+      .replace(/Strategic Development Metric/g, "Strategische Ontwikkelingsmetric")
+      .replace(/Fragmented, Conversation-Bound Agents \(Code-First\)/g, "Gefragmenteerde, Conversatiegebonden Agenten (Code-First)")
+      .replace(/Unified Think4Ever MCP Architecture \(Design-First\)/g, "Geünificeerde Think4Ever MCP Architectuur (Design-First)")
+      .replace(/Context Longevity/g, "Contextlevensduur")
+      .replace(/Cross-Tool Interoperability/g, "Interoperabiliteit Tussen Tools")
+      .replace(/Architectural Enforcement/g, "Architecturale Handhaving")
+      .replace(/Token Consumption Efficiency/g, "Token-verbruiksefficiëntie")
+      .replace(/Developer Autonomy/g, "Ontwikkelaarsautonomie")
+      .replace(/A faster keyboard; assists humans in writing code file-by-file\./g,
+               "Een sneller toetsenbord; helpt mensen bestand voor bestand code te schrijven.")
+      .replace(/An autonomous engineering engine driving the entire SDLC from spec to deployment\./g,
+               "Een autonome engineering-engine die de gehele SDLC van specificatie tot implementatie stuurt.")
+      .replace(/Fragmented; reads local file contexts but lacks architectural awareness\./g,
+               "Gefragmenteerd; leest lokale bestandscontexten maar mist architecturaal inzicht.")
+      .replace(/Absolute; maintained via a persistent design harness and system-level coherence\./g,
+               "Absoluut; behouden via een permanente ontwerpharnas en systeemcoherentie.")
+      .replace(/Hits a wall when codebase complexity outgrows the LLM context window\./g,
+               "Stuit op een muur wanneer de code-complexiteit het LLM-contextvenster ontgroeit.")
+      .replace(/Infinite vertical scale via multi-session context preservation and graph-based state tracking\./g,
+               "Oneindige verticale schaal via multi-sessie contextbehoud en op grafen gebaseerd traceren.")
+      .replace(/High token waste from constantly feeding raw repository files back to the LLM\./g,
+               "Hoge tokenverspilling door voortdurend ruwe bestanden aan het LLM te voeren.")
+      .replace(/Ultra-low token consumption via targeted, harness-guided code execution\./g,
+               "Extreem laag tokenverbruik via doelgerichte, door het harnas geleide code-uitvoering.")
+      .replace(/Reactive; relies on external scanners or human code reviews after generation\./g,
+               "Reactief; vertrouwt op externe scanners of menselijke beoordelingen na generatie.")
+      .replace(/Proactive; native security analysis is a mandatory gate in the compilation loop\./g,
+               "Proactief; native beveiligingsanalyse is een verplichte poort in de compilatie-loop.")
+      .replace(/Architectural overview and structured system design workflow\./g,
+               "Architectuuroverzicht en gestructureerde werkstroom voor systeemontwerp.")
+      .replace(/Persistent context management and continuity across long-lived development cycles\./g,
+               "Permanent contextbeheer en continuïteit over langlopende ontwikkelingscycli.")
+      .replace(/Security Analysis and Reporting/g, "Beveiligingsanalyse en Rapportage")
+      .replace(/The Structural Reality:/g, "De Structurele Realiteit:")
       .replace(/The Challenge:/g, "De Uitdaging:")
       .replace(/The Think4Ever Approach:/g, "De Think4Ever Aanpak:")
       .replace(/1\. Unified Architecture:/g, "1. Geünificeerde Architectuur:")
