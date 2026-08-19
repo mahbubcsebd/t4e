@@ -17,7 +17,7 @@ export default function CoherenceSection() {
 
   return (
     <section
-      className="py-20 md:py-28 bg-[#f8fafc]/30 border-b border-zinc-200/60"
+      className="py-20 md:py-28 bg-[#f2f7ff] border-b border-zinc-200/60"
       id="code-to-design"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

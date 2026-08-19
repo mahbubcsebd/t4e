@@ -53,7 +53,7 @@ export default function ProductModelSection() {
             {perspectives.map((p, idx) => (
               <div
                 key={idx}
-                className="bg-[#f8fafc]/50 border border-zinc-200/60 rounded-2xl p-6 hover:border-zinc-300 hover:shadow-md transition-all flex items-start gap-4"
+                className="bg-[#f9fcff] border border-zinc-200/80 rounded-2xl p-6 hover:border-zinc-300 hover:shadow-lg transition-all flex items-start gap-4"
               >
                 <div className="p-2.5 rounded-xl bg-white border border-zinc-200/60 shadow-sm">
                   {p.icon}
