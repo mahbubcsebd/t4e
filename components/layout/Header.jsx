@@ -370,10 +370,13 @@ export default function Header() {
             {t("nav.signIn")}
           </a>
 
-          {/* Start free solid blue pill button */}
+          {/* Start free gradient pill button */}
           <a
             href="https://portal.think4ever.com/#/register"
-            className="bg-[#093cad] hover:bg-[#072f85] text-white text-[15px] font-bold px-6 py-2.5 rounded-full transition-all shadow-md shadow-blue-600/20 whitespace-nowrap inline-flex items-center justify-center"
+            className="inline-flex items-center justify-center whitespace-nowrap text-[15px] font-bold px-6 py-2.5 rounded-full text-white transition-all duration-300"
+            style={{ background: "linear-gradient(135deg, #07A7E1 0%, #093cad 100%)", boxShadow: "0 4px 14px rgba(9,60,173,0.25)" }}
+            onMouseEnter={e => e.currentTarget.style.boxShadow = "0 6px 20px rgba(9,60,173,0.38)"}
+            onMouseLeave={e => e.currentTarget.style.boxShadow = "0 4px 14px rgba(9,60,173,0.25)"}
           >
             <span>{t("nav.startFree")}</span>
           </a>
