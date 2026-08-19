@@ -19,7 +19,7 @@ export default function ProblemSection() {
   return (
     <section className="py-24 md:py-32 bg-white relative overflow-hidden border-b border-[#c8d9ed]/40">
       {/* Background canvas elements */}
-      <div className="absolute inset-0 bg-[#f8fbff] bg-[radial-gradient(#c8d9ed_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
+      <div className="absolute inset-0 bg-[#f8fbff]"></div>
 
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Header */}
