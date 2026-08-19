@@ -1,5 +1,28 @@
 import { BookOpen, Layers, Sparkles } from "lucide-react";
 
+export function getLocalizedPost(post, language) {
+  if (!post) return null;
+  const lang = language || "en";
+
+  const resolveValue = (val) => {
+    if (!val) return "";
+    if (typeof val === "object" && !val.$$typeof) {
+      return val[lang] || val["en"] || Object.values(val)[0] || "";
+    }
+    return val;
+  };
+
+  return {
+    ...post,
+    title: resolveValue(post.title),
+    desc: resolveValue(post.desc) || resolveValue(post.description),
+    date: resolveValue(post.date),
+    readTime: resolveValue(post.readTime),
+    category: resolveValue(post.category) || post.type,
+    content: resolveValue(post.content),
+  };
+}
+
 export const BLOG_POSTS = [
   {
     id: 1,

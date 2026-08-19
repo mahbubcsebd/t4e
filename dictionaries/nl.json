@@ -539,17 +539,18 @@
     "sec6Text": "Neem voor vragen over deze Voorwaarden contact met ons op via info@think4ever.com."
   },
   "blogPage": {
-    "heroEyebrow": "Blog & Inzichten",
-    "heroTitlePrefix": "Laatste artikelen & ",
-    "heroTitleHighlight": "Inzichten",
-    "heroSubtitle": "Blijf op de hoogte van de nieuwste architectuurkaders, agentische werkstromen en updates van Think4Ever.",
-    "readMore": "Lees volledig artikel →",
-    "backToBlog": "← Terug naar artikelen",
-    "searchPlaceholder": "Zoek artikelen...",
+    "heroEyebrow": "Engineering & Architectuur",
+    "heroTitlePrefix": "Inzichten, Frameworks & ",
+    "heroTitleHighlight": "Whitepapers",
+    "heroSubtitle": "Ontdek diepgaande technische artikelen, architectuurpatronen en engineeringgidsen voor het bouwen van software met AI.",
+    "searchPlaceholder": "Artikelen zoeken...",
+    "readMore": "Lees artikel →",
+    "backToArticles": "Terug naar artikelen",
+    "recommendedReading": "Aanbevolen lectuur",
     "categories": {
-      "all": "Alle",
+      "all": "Alle artikelen",
       "architecture": "Architectuur",
-      "mcp": "MCP & Agents",
+      "mcp": "Think MCP",
       "whitepaper": "Whitepaper"
     }
   }

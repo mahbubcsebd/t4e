@@ -1,15 +1,20 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import { useLanguage } from '@/context/LanguageContext';
+import { getLocalizedPost } from '@/lib/blogData';
 
 export const BlogRecommendations = ({ posts, currentPostId }) => {
+  const { t, language } = useLanguage();
+
   const recommendedPosts = posts
     .filter(p => p.id !== currentPostId)
-    .slice(0, 2);
+    .slice(0, 2)
+    .map(p => getLocalizedPost(p, language));
 
   return (
     <div className="mt-20">
-      <h3 className="text-[20px] font-bold text-[#1f2937] mb-8">Recommended Reading</h3>
+      <h3 className="text-[20px] font-bold text-[#1f2937] mb-8">{t("blogPage.recommendedReading")}</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {recommendedPosts.map((recommended) => (
           <Link 

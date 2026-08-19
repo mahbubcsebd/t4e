@@ -694,5 +694,21 @@
         "Evaluate Think4Ever for future use"
       ]
     }
+  },
+  "blogPage": {
+    "heroEyebrow": "Engineering & Architecture",
+    "heroTitlePrefix": "Insights, Frameworks & ",
+    "heroTitleHighlight": "White Papers",
+    "heroSubtitle": "Explore deep-dive technical articles, architectural patterns, and engineering guides for building software with AI.",
+    "searchPlaceholder": "Search articles...",
+    "readMore": "Read Article →",
+    "backToArticles": "Back to Articles",
+    "recommendedReading": "Recommended Reading",
+    "categories": {
+      "all": "All Articles",
+      "architecture": "Architecture",
+      "mcp": "Think MCP",
+      "whitepaper": "White Paper"
+    }
   }
 }

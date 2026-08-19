@@ -700,5 +700,21 @@
         "Evaluar Think4Ever para uso futuro"
       ]
     }
+  },
+  "blogPage": {
+    "heroEyebrow": "Ingeniería y Arquitectura",
+    "heroTitlePrefix": "Artículos, Marcos y ",
+    "heroTitleHighlight": "Libros Blancos",
+    "heroSubtitle": "Explore artículos técnicos detallados, patrones arquitectónicos y guías de ingeniería para crear software con IA.",
+    "searchPlaceholder": "Buscar artículos...",
+    "readMore": "Leer artículo →",
+    "backToArticles": "Volver a artículos",
+    "recommendedReading": "Lecturas recomendadas",
+    "categories": {
+      "all": "Todos los artículos",
+      "architecture": "Arquitectura",
+      "mcp": "Think MCP",
+      "whitepaper": "Libro Blanco"
+    }
   }
 }

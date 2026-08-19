@@ -4,14 +4,16 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Search } from "lucide-react";
-import { BLOG_POSTS } from "@/lib/blogData";
+import { BLOG_POSTS, getLocalizedPost } from "@/lib/blogData";
 
 export default function BlogGridSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [search, setSearch] = useState("");
   const [selectedCat, setSelectedCat] = useState("all");
 
-  const filtered = BLOG_POSTS.filter((art) => {
+  const localizedPosts = BLOG_POSTS.map((art) => getLocalizedPost(art, language));
+
+  const filtered = localizedPosts.filter((art) => {
     const matchCat = selectedCat === "all" || art.cat === selectedCat;
     const matchSearch =
       art.title.toLowerCase().includes(search.toLowerCase()) ||
