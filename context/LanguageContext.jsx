@@ -12,7 +12,7 @@ const LanguageContext = createContext();
 export const availableLanguages = [
   { code: "en", name: "English", flag: "🇺🇸" },
   { code: "es", name: "Español", flag: "🇪🇸" },
-  { code: "nl", name: "Nederlands", flag: "🇳🇱" },
+  // { code: "nl", name: "Nederlands", flag: "🇳🇱" },
 ];
 
 export function LanguageProvider({ children }) {

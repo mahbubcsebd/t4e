@@ -41,19 +41,19 @@ export default function Header() {
         t("nav.resourceLibrary") === "nav.resourceLibrary"
           ? "Resource Library"
           : t("nav.resourceLibrary"),
-      desc: "Explore our collection of resources.",
+      desc: t("nav.resourceLibraryDesc", "Explore our collection of resources."),
       href: "/resources",
       icon: <Puzzle className="w-4 h-4 text-[#07A7E1]" />,
     },
     {
       title: t("nav.blog") === "nav.blog" ? "Blog" : t("nav.blog"),
-      desc: "Read the latest news and articles.",
+      desc: t("nav.blogDesc", "Read the latest news and articles."),
       href: "/blog",
       icon: <Globe className="w-4 h-4 text-[#093cad]" />,
     },
     {
-      title: "FAQ",
-      desc: "Frequently asked questions.",
+      title: t("nav.faq", "FAQ"),
+      desc: t("nav.faqDesc", "Frequently asked questions."),
       href: "/faq",
       icon: <Settings className="w-4 h-4 text-slate-600" />,
     },
@@ -61,50 +61,50 @@ export default function Header() {
 
   const docsLinks = [
     {
-      title: "Customer Onboarding",
-      desc: "Get started with Think4Ever.",
+      title: t("nav.docsMenu.onboardingTitle", "Customer Onboarding"),
+      desc: t("nav.docsMenu.onboardingDesc", "Get started with Think4Ever."),
       href: "https://think4ever.com/docs/onboarding.html",
       icon: <Rocket className="w-4 h-4 text-[#07A7E1]" />,
     },
     {
-      title: "Think4Ever Designer",
-      desc: "Learn how to map systems.",
+      title: t("nav.docsMenu.designerTitle", "Think4Ever Designer"),
+      desc: t("nav.docsMenu.designerDesc", "Learn how to map systems."),
       href: "https://think4ever.com/docs/manual_introduction.html",
       icon: <Palette className="w-4 h-4 text-[#093cad]" />,
     },
     {
-      title: "Think4Ever Developer",
-      desc: "Technical guide for developers.",
+      title: t("nav.docsMenu.developerTitle", "Think4Ever Developer"),
+      desc: t("nav.docsMenu.developerDesc", "Technical guide for developers."),
       href: "https://think4ever.com/docs/dev/start_new_project.html",
       icon: <Code className="w-4 h-4 text-indigo-600" />,
     },
     {
-      title: "Think4Ever Portal",
-      desc: "Manage team dashboard.",
+      title: t("nav.docsMenu.portalTitle", "Think4Ever Portal"),
+      desc: t("nav.docsMenu.portalDesc", "Manage team dashboard."),
       href: "https://think4ever.com/docs/portal/dashboard.html",
       icon: <Users className="w-4 h-4 text-[#07A7E1]" />,
     },
     {
-      title: "Reverse Engineering",
-      desc: "Reverse engineer codebases.",
+      title: t("nav.docsMenu.reverseEngTitle", "Reverse Engineering"),
+      desc: t("nav.docsMenu.reverseEngDesc", "Reverse engineer codebases."),
       href: "https://think4ever.com/docs/reverse_engineering.html",
       icon: <Settings className="w-4 h-4 text-slate-600" />,
     },
     {
-      title: "Think MCP",
-      desc: "Claude Code, Codex, and Cursor.",
+      title: t("nav.docsMenu.mcpTitle", "Think MCP"),
+      desc: t("nav.docsMenu.mcpDesc", "Claude Code, Codex, and Cursor."),
       href: "https://think4ever.com/docs/manual_think_mcp.html",
       icon: <Puzzle className="w-4 h-4 text-amber-500" />,
     },
     {
-      title: "VS Code Plugin",
-      desc: "Access T4E inside VS Code.",
+      title: t("nav.docsMenu.vscodeTitle", "VS Code Plugin"),
+      desc: t("nav.docsMenu.vscodeDesc", "Access T4E inside VS Code."),
       href: "https://think4ever.com/docs/dev/vs_code_integration.html",
       icon: <Code className="w-4 h-4 text-blue-600" />,
     },
     {
-      title: "Think API",
-      desc: "Programmatically manage tokens.",
+      title: t("nav.docsMenu.apiTitle", "Think API"),
+      desc: t("nav.docsMenu.apiDesc", "Programmatically manage tokens."),
       href: "https://think4ever.com/docs/manual_think_api.html",
       icon: <Terminal className="w-4 h-4 text-emerald-600" />,
     },
@@ -175,7 +175,7 @@ export default function Header() {
                     {t("nav.codeToDesign")}
                   </div>
                   <p className="text-[10px] text-[#71849c] mt-0.5">
-                    Reverse engineer code to visuals
+                    {t("nav.codeToDesignDesc", "Reverse engineer code to visuals")}
                   </p>
                 </div>
               </Link>
@@ -191,7 +191,7 @@ export default function Header() {
                     {t("nav.designToCode")}
                   </div>
                   <p className="text-[10px] text-[#71849c] mt-0.5">
-                    Turn systems into actual code
+                    {t("nav.designToCodeDesc", "Turn systems into actual code")}
                   </p>
                 </div>
               </Link>

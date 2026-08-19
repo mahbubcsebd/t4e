@@ -4,79 +4,161 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import { FaYoutube, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-white border-t border-[#c8d9ed] py-12">
+    <footer className="bg-white border-t border-[#c8d9ed] pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/images/think4ever-logo.png"
-              alt="Think4Ever"
-              width={150}
-              height={34}
-              className="h-8 w-auto object-contain"
-            />
-          </Link>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8">
+          {/* Brand Column */}
+          <div className="md:col-span-4 lg:col-span-5 flex flex-col items-start">
+            <Link href="/" className="mb-3">
+              <Image
+                src="/images/think4ever-logo.png"
+                alt="Think4Ever"
+                width={180}
+                height={41}
+                className="h-10 w-auto object-contain"
+              />
+            </Link>
+            <p className="text-[#71849c] text-sm leading-relaxed max-w-sm">
+              {t("hero.subtitle")}
+            </p>
+          </div>
 
-          {/* Footer Navigation Links */}
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs font-semibold text-[#465a75]">
-            <Link href="/how-it-works" className="hover:text-[#093cad] transition-colors">
-              {t("nav.product")}
-            </Link>
-            <Link href="/code-to-design" className="hover:text-[#093cad] transition-colors">
-              {t("nav.codeToDesign")}
-            </Link>
-            <Link href="/design-to-code" className="hover:text-[#093cad] transition-colors">
-              {t("nav.designToCode")}
-            </Link>
-            <Link href="/integrations" className="hover:text-[#093cad] transition-colors">
-              {t("nav.integrations")}
-            </Link>
-            <Link href="/resources" className="hover:text-[#093cad] transition-colors">
-              {t("nav.resources")}
-            </Link>
-            <Link href="/blog" className="hover:text-[#093cad] transition-colors">
-              {t("nav.blog")}
-            </Link>
-            <Link href="/pricing" className="hover:text-[#093cad] transition-colors">
-              {t("nav.pricing")}
-            </Link>
-            <Link href="/faq" className="hover:text-[#093cad] transition-colors">
-              {t("footer.faq")}
-            </Link>
-            <a
-              href="https://think4ever.com/docs/onboarding.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#093cad] transition-colors"
-            >
-              {t("nav.docs")}
-            </a>
-            <Link href="/security" className="hover:text-[#093cad] transition-colors">
-              {t("footer.trust")}
-            </Link>
+          {/* Links Grid */}
+          <div className="md:col-span-8 lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
+            {/* Product Column */}
+            <div className="flex flex-col gap-4 text-sm">
+              <h4 className="font-bold text-[#09090d] uppercase tracking-wider text-xs mb-2">
+                {t("nav.product")}
+              </h4>
+              <Link
+                href="/how-it-works"
+                className="text-[#465a75] hover:text-[#093cad] transition-colors"
+              >
+                {t("nav.howItWorks")}
+              </Link>
+              <Link
+                href="/code-to-design"
+                className="text-[#465a75] hover:text-[#093cad] transition-colors"
+              >
+                {t("nav.codeToDesign")}
+              </Link>
+              <Link
+                href="/design-to-code"
+                className="text-[#465a75] hover:text-[#093cad] transition-colors"
+              >
+                {t("nav.designToCode")}
+              </Link>
+              <Link
+                href="/integrations"
+                className="text-[#465a75] hover:text-[#093cad] transition-colors"
+              >
+                {t("nav.integrations")}
+              </Link>
+              <Link
+                href="/pricing"
+                className="text-[#465a75] hover:text-[#093cad] transition-colors"
+              >
+                {t("nav.pricing")}
+              </Link>
+            </div>
+
+            {/* Resources Column */}
+            <div className="flex flex-col gap-4 text-sm">
+              <h4 className="font-bold text-[#09090d] uppercase tracking-wider text-xs mb-2">
+                {t("nav.resources")}
+              </h4>
+              <Link
+                href="/resources"
+                className="text-[#465a75] hover:text-[#093cad] transition-colors"
+              >
+                {t("nav.resourceLibrary") === "nav.resourceLibrary"
+                  ? "Resource Library"
+                  : t("nav.resourceLibrary")}
+              </Link>
+              <Link
+                href="/blog"
+                className="text-[#465a75] hover:text-[#093cad] transition-colors"
+              >
+                {t("nav.blog")}
+              </Link>
+              <Link
+                href="/faq"
+                className="text-[#465a75] hover:text-[#093cad] transition-colors"
+              >
+                {t("footer.faq")}
+              </Link>
+              <a
+                href="https://think4ever.com/docs/onboarding.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#465a75] hover:text-[#093cad] transition-colors"
+              >
+                {t("nav.docs")}
+              </a>
+              <Link
+                href="/security"
+                className="text-[#465a75] hover:text-[#093cad] transition-colors"
+              >
+                {t("footer.trust")}
+              </Link>
+            </div>
+
+            {/* Legal Column */}
+            <div className="flex flex-col gap-4 text-sm">
+              <h4 className="font-bold text-[#09090d] uppercase tracking-wider text-xs mb-2">
+                {t("privacyPolicyPage.heroEyebrow")}
+              </h4>
+              <Link
+                href="/contact-us"
+                className="text-[#465a75] hover:text-[#093cad] transition-colors"
+              >
+                {t("footer.contact")}
+              </Link>
+              <Link
+                href="/privacy-policy"
+                className="text-[#465a75] hover:text-[#093cad] transition-colors"
+              >
+                {t("footer.privacy")}
+              </Link>
+              <Link
+                href="/terms-and-conditions"
+                className="text-[#465a75] hover:text-[#093cad] transition-colors"
+              >
+                {t("footer.terms")}
+              </Link>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Legal & Copyright */}
-        <div className="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#71849c]">
-          <div className="flex items-center gap-6 font-medium">
-            <Link href="/privacy-policy" className="hover:text-[#093cad] transition-colors">
-              {t("footer.privacy")}
-            </Link>
-            <Link href="/terms-and-conditions" className="hover:text-[#093cad] transition-colors">
-              {t("footer.terms")}
-            </Link>
-            <Link href="/contact-us" className="hover:text-[#093cad] transition-colors">
-              {t("footer.contact")}
-            </Link>
+        {/* Bottom Footer */}
+        <div className="mt-16 pt-8 border-t border-[#c8d9ed]/50 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-[#71849c] font-medium">
+            {t("footer.copyright")}
+          </p>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.youtube.com/@Think4EverInc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#71849c] hover:text-[#093cad] transition-colors"
+            >
+              <FaYoutube className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/think4ever-global-inc/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#71849c] hover:text-[#093cad] transition-colors"
+            >
+              <FaLinkedinIn className="w-5 h-5" />
+            </a>
           </div>
-          <p className="font-semibold">{t("footer.copyright")}</p>
         </div>
       </div>
     </footer>
