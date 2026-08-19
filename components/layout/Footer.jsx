@@ -29,7 +29,6 @@ export default function Footer() {
                 width={180}
                 height={41}
                 className="h-10 w-auto object-contain"
-                style={{ filter: "brightness(0) invert(1)" }}
               />
             </Link>
             <p className="text-[#8a9ab5] text-sm leading-relaxed max-w-sm">
