@@ -307,13 +307,13 @@ export default function Header() {
           <div className="relative">
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#c8d9ed] hover:border-[#093cad] text-xs font-semibold text-[#314865] bg-white transition-all"
+              className="flex items-center gap-2 px-3.5 py-2 rounded-full border border-[#c8d9ed] hover:border-[#093cad] text-sm font-medium text-[#314865] bg-white transition-all shadow-sm h-10"
             >
-              <Globe className="w-3.5 h-3.5 text-[#07A7E1]" />
-              <span>
-                {currentLang.flag} {currentLang.name}
+              <Globe className="w-4 h-4 text-[#07A7E1] shrink-0" />
+              <span className="font-semibold text-xs tracking-wide">
+                {currentLang.name}
               </span>
-              <ChevronDown className="w-3 h-3 opacity-60" />
+              <ChevronDown className="w-3.5 h-3.5 opacity-60 shrink-0" />
             </button>
 
             {langDropdownOpen && (
@@ -325,16 +325,13 @@ export default function Header() {
                       setLanguage(lang.code);
                       setLangDropdownOpen(false);
                     }}
-                    className={`w-full flex items-center justify-between px-3 py-2 text-xs font-medium transition-colors ${
+                    className={`w-full flex items-center justify-between px-3.5 py-2 text-xs font-semibold transition-colors ${
                       language === lang.code
                         ? "bg-[#f2f7ff] text-[#093cad] font-bold"
                         : "text-[#314865] hover:bg-slate-50"
                     }`}
                   >
-                    <span className="flex items-center gap-2">
-                      <span>{lang.flag}</span>
-                      <span>{lang.name}</span>
-                    </span>
+                    <span>{lang.name}</span>
                     {language === lang.code && (
                       <span className="text-[#07A7E1] font-bold">✓</span>
                     )}
@@ -366,10 +363,11 @@ export default function Header() {
           <div className="relative">
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              className="flex items-center gap-1 px-2.5 py-1 rounded-full border border-[#c8d9ed] text-xs font-medium text-[#314865]"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#c8d9ed] text-xs font-semibold text-[#314865]"
             >
-              <span>{currentLang.flag}</span>
-              <ChevronDown className="w-3 h-3" />
+              <Globe className="w-3.5 h-3.5 text-[#07A7E1]" />
+              <span>{currentLang.name}</span>
+              <ChevronDown className="w-3 h-3 opacity-60" />
             </button>
 
             {langDropdownOpen && (
@@ -381,16 +379,13 @@ export default function Header() {
                       setLanguage(lang.code);
                       setLangDropdownOpen(false);
                     }}
-                    className={`w-full flex items-center justify-between px-3 py-2 text-xs font-medium transition-colors ${
+                    className={`w-full flex items-center justify-between px-3 py-2 text-xs font-semibold transition-colors ${
                       language === lang.code
                         ? "bg-[#f2f7ff] text-[#093cad] font-bold"
                         : "text-[#314865] hover:bg-slate-50"
                     }`}
                   >
-                    <span className="flex items-center gap-2">
-                      <span>{lang.flag}</span>
-                      <span>{lang.name}</span>
-                    </span>
+                    <span>{lang.name}</span>
                     {language === lang.code && (
                       <span className="text-[#07A7E1] font-bold">✓</span>
                     )}
