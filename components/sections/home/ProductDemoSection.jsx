@@ -1,11 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Play } from "lucide-react";
+import VideoModal from "@/components/ui/VideoModal";
 
 export default function ProductDemoSection() {
   const { t } = useLanguage();
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [videoId, setVideoId] = useState("");
 
   return (
     <section className="py-16 md:py-20 bg-[#f7fafe] border-b border-[#c8d9ed]/40" id="resources">
@@ -24,27 +27,35 @@ export default function ProductDemoSection() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full sm:w-auto">
-            <a
-              href="https://www.youtube.com/watch?v=FY68DuwOf4Q"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => {
+                setVideoId("FY68DuwOf4Q");
+                setIsVideoOpen(true);
+              }}
               className="btn-primary w-full sm:w-auto justify-center text-sm py-3 px-6"
             >
               <Play className="w-4 h-4 fill-current" />
               <span>{t("demo.btnCodeToDesign")}</span>
-            </a>
-            <a
-              href="https://www.youtube.com/watch?v=Lq-vza9_CzI"
-              target="_blank"
-              rel="noopener noreferrer"
+            </button>
+            <button
+              onClick={() => {
+                setVideoId("Lq-vza9_CzI");
+                setIsVideoOpen(true);
+              }}
               className="bg-white text-[#093cad] hover:bg-slate-100 font-semibold rounded-full px-6 py-3 text-sm flex items-center justify-center gap-2 transition-all shadow-md w-full sm:w-auto"
             >
               <Play className="w-4 h-4 fill-current" />
               <span>{t("demo.btnDesignToCode")}</span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
+
+      <VideoModal
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        videoId={videoId}
+      />
     </section>
   );
 }

@@ -1,11 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import VideoModal from "@/components/ui/VideoModal";
 
 export default function CodeToDesignHero() {
   const { t } = useLanguage();
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [videoId, setVideoId] = useState("");
 
   return (
     <section className="py-16 md:py-20 bg-gradient-to-b from-white via-[#f7fafe] to-white border-b border-[#c8d9ed]/40 text-center">
@@ -32,16 +35,23 @@ export default function CodeToDesignHero() {
           >
             <span>{t("codeToDesignPage.heroCtaPrimary")}</span>
           </Link>
-          <a
-            href="https://www.youtube.com/watch?v=FY68DuwOf4Q"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => {
+              setVideoId("FY68DuwOf4Q");
+              setIsVideoOpen(true);
+            }}
             className="btn-alt text-sm py-3 px-6"
           >
             <span>{t("codeToDesignPage.heroCtaSecondary")}</span>
-          </a>
+          </button>
         </div>
       </div>
+
+      <VideoModal
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        videoId={videoId}
+      />
     </section>
   );
 }

@@ -74,6 +74,10 @@ body {
   box-shadow: 0 4px 14px rgba(9, 60, 173, 0.12);
 }
 
+button {
+  cursor: pointer;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;

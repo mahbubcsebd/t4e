@@ -1,12 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Play, BookOpen, Layers } from "lucide-react";
+import VideoModal from "@/components/ui/VideoModal";
 
 export default function ResourceGrid() {
   const { t } = useLanguage();
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [videoId, setVideoId] = useState("");
 
   return (
     <section
@@ -57,15 +60,16 @@ export default function ResourceGrid() {
                   {t("resourcesPage.video1Desc")}
                 </p>
               </div>
-              <a
-                href="https://www.youtube.com/watch?v=FY68DuwOf4Q"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-bold text-[#093cad] hover:text-[#07A7E1] flex items-center gap-1.5"
+              <button
+                onClick={() => {
+                  setVideoId("FY68DuwOf4Q");
+                  setIsVideoOpen(true);
+                }}
+                className="text-xs font-bold text-[#093cad] hover:text-[#07A7E1] flex items-center gap-1.5 focus:outline-none"
               >
                 <Play className="w-3.5 h-3.5 fill-current" />
                 <span>{t("resourcesPage.video1Link")}</span>
-              </a>
+              </button>
             </div>
 
             <div className="bg-[#f9fcff] border border-[#c8d9ed] rounded-2xl p-7 hover:border-[#093cad] transition-all flex flex-col justify-between">
@@ -80,15 +84,16 @@ export default function ResourceGrid() {
                   {t("resourcesPage.video2Desc")}
                 </p>
               </div>
-              <a
-                href="https://www.youtube.com/watch?v=Lq-vza9_CzI"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-bold text-[#093cad] hover:text-[#07A7E1] flex items-center gap-1.5"
+              <button
+                onClick={() => {
+                  setVideoId("Lq-vza9_CzI");
+                  setIsVideoOpen(true);
+                }}
+                className="text-xs font-bold text-[#093cad] hover:text-[#07A7E1] flex items-center gap-1.5 focus:outline-none"
               >
                 <Play className="w-3.5 h-3.5 fill-current" />
                 <span>{t("resourcesPage.video2Link")}</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -226,6 +231,12 @@ export default function ResourceGrid() {
           </div>
         </div>
       </div>
+
+      <VideoModal
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        videoId={videoId}
+      />
     </section>
   );
 }

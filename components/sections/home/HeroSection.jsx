@@ -5,10 +5,13 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Play, CheckCircle2 } from "lucide-react";
+import VideoModal from "@/components/ui/VideoModal";
 
 export default function HeroSection() {
   const { t } = useLanguage();
   const [activeScene, setActiveScene] = useState(1);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [videoId, setVideoId] = useState("");
 
   // Auto toggle hero showcase scene every 6 seconds
   useEffect(() => {
@@ -48,14 +51,15 @@ export default function HeroSection() {
               >
                 <span>{t("hero.ctaPrimary")}</span>
               </Link>
-              <a
-                href="https://www.youtube.com/watch?v=FY68DuwOf4Q"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => {
+                  setVideoId("FY68DuwOf4Q");
+                  setIsVideoOpen(true);
+                }}
                 className="btn-alt w-full sm:w-auto justify-center text-sm py-3 px-6"
               >
                 <span>{t("hero.ctaSecondary")}</span>
-              </a>
+              </button>
             </div>
 
             {/* Micro guarantee */}
@@ -168,14 +172,15 @@ export default function HeroSection() {
 
                     <div className="mt-4 flex items-center justify-between text-xs font-medium text-[#465a75]">
                       <span>Living repository map synced in real-time</span>
-                      <a
-                        href="https://www.youtube.com/watch?v=FY68DuwOf4Q"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#093cad] font-bold flex items-center gap-1 hover:underline"
+                      <button
+                        onClick={() => {
+                          setVideoId("FY68DuwOf4Q");
+                          setIsVideoOpen(true);
+                        }}
+                        className="text-[#093cad] font-bold flex items-center gap-1 hover:underline focus:outline-none"
                       >
                         <Play className="w-3 h-3 fill-current" /> Watch Demo
-                      </a>
+                      </button>
                     </div>
                   </motion.div>
                 ) : (
@@ -229,14 +234,15 @@ export default function HeroSection() {
                       <span>
                         Approved intent enforced before code execution
                       </span>
-                      <a
-                        href="https://www.youtube.com/watch?v=Lq-vza9_CzI"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#093cad] font-bold flex items-center gap-1 hover:underline"
+                      <button
+                        onClick={() => {
+                          setVideoId("Lq-vza9_CzI");
+                          setIsVideoOpen(true);
+                        }}
+                        className="text-[#093cad] font-bold flex items-center gap-1 hover:underline focus:outline-none"
                       >
                         <Play className="w-3 h-3 fill-current" /> Watch Demo
-                      </a>
+                      </button>
                     </div>
                   </motion.div>
                 )}
@@ -245,6 +251,12 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+
+      <VideoModal
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        videoId={videoId}
+      />
     </section>
   );
 }
