@@ -1,25 +1,205 @@
-import { BookOpen, Layers, Sparkles } from "lucide-react";
+const POST_TRANSLATIONS = {
+  1: {
+    title: {
+      en: "Think4Ever - Turn Ideas into Integrated Systems. Instantly",
+      es: "Think4Ever - Convierta ideas en sistemas integrados al instante",
+      nl: "Think4Ever - Zet ideeën direct om in geïntegreerde systemen"
+    },
+    desc: {
+      en: 'As AI coding agents become ubiquitous, software bottlenecks have shifted from writing syntax to maintaining architectural integrity. Think4Ever addresses this via a "Design-First" protocol that formalizes system architecture, data contracts, and service boundaries before coding begins.',
+      es: 'A medida que los agentes de código de IA se vuelven ubicuos, los cuellos de botella del software han pasado de escribir sintaxis a mantener la integridad arquitectónica. Think4Ever aborda esto mediante un protocolo de "Diseño Primero" que formaliza la arquitectura del sistema.',
+      nl: 'Naarmate AI-coderingsagenten alomtegenwoordig worden, zijn softwareknelpunten verschoven van het schrijven van syntaxis naar het behoud van architecturale integriteit. Think4Ever pakt dit aan via een "Design-First" protocol.'
+    },
+    date: {
+      en: "March 20, 2026",
+      es: "20 de marzo de 2026",
+      nl: "20 maart 2026"
+    },
+    readTime: {
+      en: "9 min read",
+      es: "9 min de lectura",
+      nl: "9 min leestijd"
+    },
+    type: {
+      en: "Engineering",
+      es: "Ingeniería",
+      nl: "Engineering"
+    }
+  },
+  2: {
+    title: {
+      en: "Architecture-first agentic development with Think4Ever™",
+      es: "Desarrollo agéntico basado en la arquitectura con Think4Ever™",
+      nl: "Architectuur-eerst agentische ontwikkeling met Think4Ever™"
+    },
+    desc: {
+      en: "The future of AI software development is not faster code generation, but stronger system architecture. Learn how Think4Ever’s design-first approach creates a locked blueprint before coding begins, helping teams build scalable, production-ready systems with greater consistency than code-first tools.",
+      es: "El futuro del desarrollo de software de IA no es una generación de código más rápida, sino una arquitectura de sistema más sólida. Aprenda cómo el enfoque de diseño primero de Think4Ever crea un modelo bloqueado antes de que comience la codificación.",
+      nl: "De toekomst van AI-softwareontwikkeling is niet snellere codegeneratie, maar een sterkere systeemarchitectuur. Ontdek hoe Think4Ever's design-first aanpak een vergrendelde blauwdruk creëert voordat het coderen begint."
+    },
+    date: {
+      en: "March 28, 2026",
+      es: "28 de marzo de 2026",
+      nl: "28 maart 2026"
+    },
+    readTime: {
+      en: "7 min read",
+      es: "7 min de lectura",
+      nl: "7 min leestijd"
+    },
+    type: {
+      en: "Architecture",
+      es: "Arquitectura",
+      nl: "Architectuur"
+    }
+  },
+  3: {
+    title: {
+      en: "Think4Ever Approach vs. Vibe Coding",
+      es: "Enfoque Think4Ever frente al Vibe Coding",
+      nl: "Think4Ever-aanpak versus Vibe Coding"
+    },
+    desc: {
+      en: "First-generation AI coding tools act as point-solution helpers. Learn how Think4Ever replaces this piecemeal model with a unified, autonomous engineering environment driven by architectural guardrails and multi-session context.",
+      es: "Las herramientas de código IA de primera generación funcionan como asistentes puntuales. Aprenda cómo Think4Ever reemplaza este modelo fragmentado con un entorno de ingeniería autónomo e unificado.",
+      nl: "Eerste-generatie AI-coderingshulpmiddelen fungeren als puntoplossingen. Ontdek hoe Think4Ever dit gefragmenteerde model vervangt door een verenigde, autonome engineering-omgeving."
+    },
+    date: {
+      en: "April 05, 2026",
+      es: "05 de abril de 2026",
+      nl: "05 april 2026"
+    },
+    readTime: {
+      en: "5 min read",
+      es: "5 min de lectura",
+      nl: "5 min leestijd"
+    },
+    type: {
+      en: "Perspective",
+      es: "Perspectiva",
+      nl: "Perspectief"
+    }
+  },
+  4: {
+    title: {
+      en: "One Spec, Every Agent: Unifying the Agentic Developer Ecosystem via Think4Ever and MCP",
+      es: "Una especificación, todos los agentes: Unificando el ecosistema de desarrolladores agénticos mediante Think4Ever y MCP",
+      nl: "Één spec, elke agent: Het verenigde agentische ontwikkelaars-ecosysteem via Think4Ever en MCP"
+    },
+    desc: {
+      en: "The rapid proliferation of AI coding assistants has ushered in an era of unprecedented, localized execution speed. Learn how Think4Ever leverages Model Context Protocol (MCP) to serve as a universal architecture server.",
+      es: "La rápida proliferación de asistentes de código IA ha dado paso a una era de velocidad de ejecución localizada sin precedentes. Descubra cómo Think4Ever aprovecha el Model Context Protocol (MCP) para funcionar como un servidor de arquitectura universal.",
+      nl: "De snelle verspreiding van AI-coderingsagenten heeft geleid tot een tijdperk van ongeëvenaarde uitvoeringssnelheid. Ontdek hoe Think4Ever het Model Context Protocol (MCP) benut als universele architectuurserver."
+    },
+    date: {
+      en: "April 12, 2026",
+      es: "12 de abril de 2026",
+      nl: "12 april 2026"
+    },
+    readTime: {
+      en: "6 min read",
+      es: "6 min de lectura",
+      nl: "6 min leestijd"
+    },
+    type: {
+      en: "MCP & agent ecosystems",
+      es: "Ecosistemas MCP y agentes",
+      nl: "MCP & agent-ecosystemen"
+    }
+  },
+  5: {
+    title: {
+      en: "White Paper: Think Design - Redefining the AI Coding Harness for Enterprise Software Development",
+      es: "Libro Blanco: Think Design - Redefiniendo el arnés de código IA para el desarrollo de software empresarial",
+      nl: "Whitepaper: Think Design - Het AI-coderingsharnas opnieuw definiëren voor enterprise softwareontwikkeling"
+    },
+    desc: {
+      en: "The emergence of AI-driven software development has shifted the bottleneck of software engineering from manual syntax writing to context management and verification. Learn how Think Design grounds agentic execution in design contracts.",
+      es: "La aparición del desarrollo de software impulsado por IA ha desplazado el cuello de botella de la ingeniería de software de la escritura manual de sintaxis a la gestión y verificación del contexto.",
+      nl: "De opkomst van AI-gestuurde softwareontwikkeling heeft het knelpunt van softwareontwikkeling verschoven van het handmatig schrijven van syntaxis naar contextbeheer en -verificatie."
+    },
+    date: {
+      en: "April 18, 2026",
+      es: "18 de abril de 2026",
+      nl: "18 april 2026"
+    },
+    readTime: {
+      en: "8 min read",
+      es: "8 min de lectura",
+      nl: "8 min leestijd"
+    },
+    type: {
+      en: "White paper",
+      es: "Libro blanco",
+      nl: "Whitepaper"
+    }
+  }
+};
+
+const translateHtmlHeadings = (html, lang) => {
+  if (!html || lang === "en") return html;
+  if (lang === "es") {
+    return html
+      .replace(/Executive Summary/g, "Resumen Ejecutivo")
+      .replace(/The Problem: The "Code-First" Collapse/g, 'El Problema: El Colapso "Código Primero"')
+      .replace(/The Think4Ever Approach: Architecture as the Source of Truth/g, "El Enfoque Think4Ever: La Arquitectura como Fuente de Verdad")
+      .replace(/Addressing Diverse Market Needs/g, "Atendiendo a las Diversas Necesidades del Mercado")
+      .replace(/Key Pillars:/g, "Pilares Clave:")
+      .replace(/Requirements Summary/g, "Resumen de Requisitos")
+      .replace(/Concept Overview/g, "Visión General del Concepto")
+      .replace(/Fig 1:/g, "Fig. 1:")
+      .replace(/Fig 2:/g, "Fig. 2:")
+      .replace(/Architecture-first/g, "Arquitectura primero")
+      .replace(/Single Source of Truth/g, "Fuente Única de Verdad")
+      .replace(/Implementation/g, "Implementación")
+      .replace(/Conclusion/g, "Conclusión");
+  }
+  if (lang === "nl") {
+    return html
+      .replace(/Executive Summary/g, "Samenvatting")
+      .replace(/The Problem: The "Code-First" Collapse/g, 'Het Probleem: De "Code-First" Ineenstorting')
+      .replace(/The Think4Ever Approach: Architecture as the Source of Truth/g, "De Think4Ever Aanpak: Architectuur als Bron van Waarheid")
+      .replace(/Addressing Diverse Market Needs/g, "Inspelen op Uiteenlopende Marktbehoeften")
+      .replace(/Key Pillars:/g, "Kernpijlers:")
+      .replace(/Requirements Summary/g, "Samenvatting van Vereisten")
+      .replace(/Concept Overview/g, "Concept Overzicht")
+      .replace(/Fig 1:/g, "Fig. 1:")
+      .replace(/Fig 2:/g, "Fig. 2:")
+      .replace(/Architecture-first/g, "Architectuur eerst")
+      .replace(/Single Source of Truth/g, "Enkele Bron van Waarheid")
+      .replace(/Implementation/g, "Implementatie")
+      .replace(/Conclusion/g, "Conclusie");
+  }
+  return html;
+};
 
 export function getLocalizedPost(post, language) {
   if (!post) return null;
   const lang = language || "en";
+  const tr = POST_TRANSLATIONS[post.id] || {};
 
-  const resolveValue = (val) => {
-    if (!val) return "";
+  const resolveValue = (val, key) => {
     if (typeof val === "object" && !val.$$typeof) {
       return val[lang] || val["en"] || Object.values(val)[0] || "";
     }
-    return val;
+    if (tr[key] && tr[key][lang]) {
+      return tr[key][lang];
+    }
+    return val || (tr[key] ? tr[key]["en"] : "");
   };
+
+  const rawContent = resolveValue(post.content, "content");
+  const content = translateHtmlHeadings(rawContent, lang);
 
   return {
     ...post,
-    title: resolveValue(post.title),
-    desc: resolveValue(post.desc) || resolveValue(post.description),
-    date: resolveValue(post.date),
-    readTime: resolveValue(post.readTime),
-    category: resolveValue(post.category) || post.type,
-    content: resolveValue(post.content),
+    title: resolveValue(post.title, "title"),
+    desc: resolveValue(post.desc || post.description, "desc"),
+    date: resolveValue(post.date, "date"),
+    readTime: resolveValue(post.readTime, "readTime"),
+    category: resolveValue(post.type || post.category || post.cat, "type"),
+    type: resolveValue(post.type, "type"),
+    content,
   };
 }
 
@@ -31,7 +211,6 @@ export const BLOG_POSTS = [
     cat: 'architecture',
     date: 'March 20, 2026',
     readTime: '9 min read',
-    icon: <BookOpen className="w-5 h-5 text-[#093cad]" />,
     title: 'Think4Ever - Turn Ideas into Integrated Systems. Instantly',
     desc:
       'As AI coding agents become ubiquitous, software bottlenecks have shifted from writing syntax to maintaining architectural integrity. Think4Ever addresses this via a "Design-First" protocol that formalizes system architecture, data contracts, and service boundaries before coding begins.',
@@ -182,7 +361,6 @@ export const BLOG_POSTS = [
     cat: 'architecture',
     date: 'March 28, 2026',
     readTime: '7 min read',
-    icon: <BookOpen className="w-5 h-5 text-[#093cad]" />,
     title: 'Architecture-first agentic development with Think4Ever™',
     desc:
       'The future of AI software development is not faster code generation, but stronger system architecture. Learn how Think4Ever’s design-first approach creates a locked blueprint before coding begins, helping teams build scalable, production-ready systems with greater consistency than code-first tools.',
@@ -379,7 +557,6 @@ export const BLOG_POSTS = [
     cat: 'architecture',
     date: 'April 05, 2026',
     readTime: '5 min read',
-    icon: <Sparkles className="w-5 h-5 text-[#07A7E1]" />,
     title: 'Think4Ever Approach vs. Vibe Coding',
     desc:
       'First-generation AI coding tools act as point-solution helpers. Learn how Think4Ever replaces this piecemeal model with a unified, autonomous engineering environment driven by architectural guardrails and multi-session context.',
@@ -593,7 +770,6 @@ export const BLOG_POSTS = [
     cat: 'mcp',
     date: 'April 12, 2026',
     readTime: '6 min read',
-    icon: <Layers className="w-5 h-5 text-[#093cad]" />,
     title:
       'One Spec, Every Agent: Unifying the Agentic Developer Ecosystem via Think4Ever and MCP',
     desc:
@@ -932,7 +1108,6 @@ export const BLOG_POSTS = [
     cat: 'whitepaper',
     date: 'April 18, 2026',
     readTime: '8 min read',
-    icon: <BookOpen className="w-5 h-5 text-[#093cad]" />,
     title: 'White Paper: Think Design - Redefining the AI Coding Harness for Enterprise Software Development',
     desc:
       'The emergence of AI-driven software development has shifted the bottleneck of software engineering from manual syntax writing to context management and verification. Learn how Think Design grounds agentic execution in design contracts, system architecture, and explicit specifications before code is generated.',

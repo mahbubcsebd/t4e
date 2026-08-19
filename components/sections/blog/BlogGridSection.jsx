@@ -3,8 +3,15 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { Search } from "lucide-react";
+import { Search, BookOpen, Layers, Sparkles } from "lucide-react";
 import { BLOG_POSTS, getLocalizedPost } from "@/lib/blogData";
+
+const getCategoryIcon = (cat) => {
+  if (cat === "mcp") return <Layers className="w-5 h-5 text-[#093cad]" />;
+  if (cat === "whitepaper") return <BookOpen className="w-5 h-5 text-[#093cad]" />;
+  if (cat === "architecture") return <BookOpen className="w-5 h-5 text-[#093cad]" />;
+  return <Sparkles className="w-5 h-5 text-[#07A7E1]" />;
+};
 
 export default function BlogGridSection() {
   const { t, language } = useLanguage();
@@ -16,8 +23,8 @@ export default function BlogGridSection() {
   const filtered = localizedPosts.filter((art) => {
     const matchCat = selectedCat === "all" || art.cat === selectedCat;
     const matchSearch =
-      art.title.toLowerCase().includes(search.toLowerCase()) ||
-      art.desc.toLowerCase().includes(search.toLowerCase());
+      (art.title && art.title.toLowerCase().includes(search.toLowerCase())) ||
+      (art.desc && art.desc.toLowerCase().includes(search.toLowerCase()));
     return matchCat && matchSearch;
   });
 
@@ -88,10 +95,10 @@ export default function BlogGridSection() {
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-white border border-[#c8d9ed] text-[#093cad]">
-                    {art.type}
+                    {art.type || art.category}
                   </span>
                   <div className="p-2 rounded-xl bg-white border border-[#c8d9ed]">
-                    {art.icon}
+                    {art.icon || getCategoryIcon(art.cat)}
                   </div>
                 </div>
 
