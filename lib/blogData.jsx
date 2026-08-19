@@ -146,6 +146,9 @@ const translateArticleContent = (html, lang) => {
       .replace(/3\. The Think4Ever Approach: Architecture as the Source of Truth/g, "3. El Enfoque Think4Ever: La Arquitectura como Fuente de Verdad")
       .replace(/4\. Addressing Diverse Market Needs/g, "4. Atendiendo a las Diversas Necesidades del Mercado")
       .replace(/5\. Architectural Governance & Operational Safeguards/g, "5. Gobernanza Arquitectónica y Salvaguardas Operativas")
+      .replace(/5\. Solving the Enterprise Crisis/g, "5. Resolviendo la Crisis Empresarial")
+      .replace(/6\. Case Study: Digital Banking & Payment Networks/g, "6. Caso de Estudio: Redes Bancarias y de Pago Digitales")
+      .replace(/7\. Summary: Architecture as the "New Compiler"/g, '7. Resumen: La Arquitectura como el "Nuevo Compilador"')
       .replace(/6\. Conclusion/g, "6. Conclusión")
       .replace(/Executive Summary/g, "Resumen Ejecutivo")
       .replace(/The Fallacy of Code-First Agentic Loops/g, 'La Falacia de los Bucles Agénticos "Código Primero"')
@@ -172,28 +175,47 @@ const translateArticleContent = (html, lang) => {
       .replace(/Product Managers/g, "Gerentes de Producto")
       .replace(/Small Businesses/g, "Pequeñas Empresas")
       .replace(/Systems Integrators \/ Consultants/g, "Integradores de Sistemas / Consultores")
+      .replace(/Consulting & Agencies/g, "Consultoría y Agencias")
       .replace(/Enterprise & Mid-Market/g, "Empresas y Medianas Empresas")
       .replace(/Requirements Summary/g, "Resumen de Requisitos")
       .replace(/Concept Overview/g, "Visión General del Concepto")
+      .replace(/API Architecture/g, "Arquitectura de API")
+      .replace(/Application Interface/g, "Interfaz de Aplicación")
+      .replace(/System Dashboard/g, "Tablero del Sistema")
       .replace(/Fig 1:/g, "Fig. 1:")
       .replace(/Fig 2:/g, "Fig. 2:")
       .replace(/Fig 3:/g, "Fig. 3:")
       .replace(/Fig 4:/g, "Fig. 4:")
       .replace(/Fig 5:/g, "Fig. 5:")
+      .replace(/Fig 6:/g, "Fig. 6:")
       .replace(/Single Source of Truth/g, "Fuente Única de Verdad")
       .replace(/Code-First Result/g, "Resultado Código Primero")
       .replace(/Design-First Result/g, "Resultado Diseño Primero")
       .replace(/Tech Debt/g, "Deuda Técnica")
       .replace(/Onboarding/g, "Incorporación")
       .replace(/Refactoring/g, "Refactorización")
-      .replace(/As AI coding agents become ubiquitous, software bottlenecks have shifted from writing syntax to maintaining architectural integrity\./g,
-               "A medida que los agentes de código de IA se vuelven ubicuos, los cuellos de botella del software han pasado de escribir sintaxis a mantener la integridad arquitectónica.")
-      .replace(/Current market leaders like Claude Code and Cursor operate on high-context, iterative loops focused on immediate file-level implementation\./g,
-               "Los líderes actuales del mercado como Claude Code y Cursor operan en bucles iterativos de alto contexto enfocados en la implementación inmediata a nivel de archivo.")
-      .replace(/Think4Ever flips the development lifecycle, treating the System Design Document \(SDD\) and Architectural Decision Records \(ADR\) as the "Source of Truth" rather than existing code\./g,
-               "Think4Ever invierte el ciclo de vida del desarrollo, tratando el Documento de Diseño del Sistema (SDD) y los Registros de Decisiones Arquitectónicas (ADR) como la 'Fuente de Verdad' en lugar del código existente.")
-      .replace(/The future of software engineering is not about writing syntax faster—it is about orchestrating complex systems with mathematical precision\./g,
-               "El futuro de la ingeniería de software no consiste en escribir sintaxis más rápido, sino en orquestar sistemas complejos con precisión matemática.");
+      .replace(/System Coherence:/g, "Coherencia del Sistema:")
+      .replace(/Governed Autonomy:/g, "Autonomía Gobernada:")
+      .replace(/Legacy Refactoring:/g, "Refactorización de Sistemas Heredados:")
+      .replace(/Digital Augmentation:/g, "Aumento Digital:")
+      .replace(/Security & Compliance:/g, "Seguridad y Cumplimiento:")
+      .replace(/The Challenge:/g, "El Desafío:")
+      .replace(/The Think4Ever Approach:/g, "El Enfoque Think4Ever:")
+      .replace(/1\. Unified Architecture:/g, "1. Arquitectura Unificada:")
+      .replace(/2\. Simultaneous Execution:/g, "2. Ejecución Simultánea:")
+      .replace(/3\. Result:/g, "3. Resultado:")
+      .replace(/High-velocity creation from natural language ideas to running apps\./g,
+               "Creación a gran velocidad desde ideas en lenguaje natural hasta aplicaciones en ejecución.")
+      .replace(/Functional prototyping directly from business requirements to validate flows without engineering sprints\./g,
+               "Prototipado funcional directamente desde los requisitos del negocio para validar flujos sin esprints de ingeniería.")
+      .replace(/Automating core processes with minimal overhead\./g,
+               "Automatización de procesos centrales con una sobrecarga mínima.")
+      .replace(/Scalable engine for delivering complex custom solutions with increased margins\./g,
+               "Motor escalable para ofrecer soluciones personalizadas complejas con mayores márgenes.")
+      .replace(/Large enterprises are hamstrung by technical debt and resource scarcity\. Think4Ever resolves these "wicked" problems:/g,
+               "Las grandes empresas se ven obstaculizadas por la deuda técnica y la escasez de recursos. Think4Ever resuelve estos problemas complejos:")
+      .replace(/In 2026, maintenance is expensive while code is cheap\. Think4Ever enables teams to build complex, enterprise-grade applications resilient to the chaos of automated generation by moving the "thinking" to the architecture layer\./g,
+               "En 2026, el mantenimiento es costoso mientras que el código es barato. Think4Ever permite a los equipos construir aplicaciones complejas de grado empresarial resistentes al caos de la generación automatizada al llevar el 'pensamiento' a la capa de arquitectura.");
   }
 
   if (lang === "nl") {
@@ -203,6 +225,9 @@ const translateArticleContent = (html, lang) => {
       .replace(/3\. The Think4Ever Approach: Architecture as the Source of Truth/g, "3. De Think4Ever Aanpak: Architectuur als Bron van Waarheid")
       .replace(/4\. Addressing Diverse Market Needs/g, "4. Inspelen op Uiteenlopende Marktbehoeften")
       .replace(/5\. Architectural Governance & Operational Safeguards/g, "5. Architecturale Governance & Operationele Waarborgen")
+      .replace(/5\. Solving the Enterprise Crisis/g, "5. De Enterprise Crisis Oplossen")
+      .replace(/6\. Case Study: Digital Banking & Payment Networks/g, "6. Casestudy: Digitale Bank- & Betalingsnetwerken")
+      .replace(/7\. Summary: Architecture as the "New Compiler"/g, '7. Samenvatting: Architectuur als de "Nieuwe Compiler"')
       .replace(/6\. Conclusion/g, "6. Conclusie")
       .replace(/Executive Summary/g, "Samenvatting")
       .replace(/The Fallacy of Code-First Agentic Loops/g, 'De Misvatting van Code-First Agentische Loops')
@@ -229,28 +254,47 @@ const translateArticleContent = (html, lang) => {
       .replace(/Product Managers/g, "Product Managers")
       .replace(/Small Businesses/g, "Kleine Bedrijven")
       .replace(/Systems Integrators \/ Consultants/g, "Systeemintegratoren / Consultants")
+      .replace(/Consulting & Agencies/g, "Consultancy & Bureaus")
       .replace(/Enterprise & Mid-Market/g, "Enterprise & Middelgrote Bedrijven")
       .replace(/Requirements Summary/g, "Samenvatting van Vereisten")
       .replace(/Concept Overview/g, "Concept Overzicht")
+      .replace(/API Architecture/g, "API-Architectuur")
+      .replace(/Application Interface/g, "Applicatie-interface")
+      .replace(/System Dashboard/g, "Systeemdashboard")
       .replace(/Fig 1:/g, "Fig. 1:")
       .replace(/Fig 2:/g, "Fig. 2:")
       .replace(/Fig 3:/g, "Fig. 3:")
       .replace(/Fig 4:/g, "Fig. 4:")
       .replace(/Fig 5:/g, "Fig. 5:")
+      .replace(/Fig 6:/g, "Fig. 6:")
       .replace(/Single Source of Truth/g, "Enkele Bron van Waarheid")
       .replace(/Code-First Result/g, "Resultaat Code-First")
       .replace(/Design-First Result/g, "Resultaat Design-First")
       .replace(/Tech Debt/g, "Technische Schuld")
       .replace(/Onboarding/g, "Inwerken")
       .replace(/Refactoring/g, "Refactoring")
-      .replace(/As AI coding agents become ubiquitous, software bottlenecks have shifted from writing syntax to maintaining architectural integrity\./g,
-               "Naarmate AI-coderingsagenten alomtegenwoordig worden, zijn softwareknelpunten verschoven van het schrijven van syntaxis naar het behoud van architecturale integriteit.")
-      .replace(/Current market leaders like Claude Code and Cursor operate on high-context, iterative loops focused on immediate file-level implementation\./g,
-               "Huidige marktleiders zoals Claude Code en Cursor werken in iteratieve lussen met hoge context, gericht op directe implementatie op bestandsniveau.")
-      .replace(/Think4Ever flips the development lifecycle, treating the System Design Document \(SDD\) and Architectural Decision Records \(ADR\) as the "Source of Truth" rather than existing code\./g,
-               "Think4Ever keert de ontwikkelingscyclus om en behandelt het System Design Document (SDD) en de Architectural Decision Records (ADR) als de 'Bron van Waarheid' in plaats van bestaande code.")
-      .replace(/The future of software engineering is not about writing syntax faster—it is about orchestrating complex systems with mathematical precision\./g,
-               "De toekomst van software engineering gaat niet over het sneller schrijven van syntaxis—het gaat over het orchestreren van complexe systemen met mathematische precisie.");
+      .replace(/System Coherence:/g, "Systeemcoherentie:")
+      .replace(/Governed Autonomy:/g, "Gesteurde Autonomie:")
+      .replace(/Legacy Refactoring:/g, "Refactoring van Bestaande Systemen:")
+      .replace(/Digital Augmentation:/g, "Digitale Uitbreiding:")
+      .replace(/Security & Compliance:/g, "Beveiliging & Naleving:")
+      .replace(/The Challenge:/g, "De Uitdaging:")
+      .replace(/The Think4Ever Approach:/g, "De Think4Ever Aanpak:")
+      .replace(/1\. Unified Architecture:/g, "1. Geünificeerde Architectuur:")
+      .replace(/2\. Simultaneous Execution:/g, "2. Gelijktijdige Uitvoering:")
+      .replace(/3\. Result:/g, "3. Resultaat:")
+      .replace(/High-velocity creation from natural language ideas to running apps\./g,
+               "Supersnelle creatie van natuurlijke taal-ideeën tot werkende apps.")
+      .replace(/Functional prototyping directly from business requirements to validate flows without engineering sprints\./g,
+               "Functionele prototyping rechtstreeks uit zakelijke vereisten om stromen te valideren zonder engineering sprints.")
+      .replace(/Automating core processes with minimal overhead\./g,
+               "Automatisering van kernprocessen met minimale overhead.")
+      .replace(/Scalable engine for delivering complex custom solutions with increased margins\./g,
+               "Schaalbare engine voor het leveren van complexe maatwerkoplossingen met hogere marges.")
+      .replace(/Large enterprises are hamstrung by technical debt and resource scarcity\. Think4Ever resolves these "wicked" problems:/g,
+               "Grote ondernemingen worden belemmerd door technische schuld en schaarste aan middelen. Think4Ever lost deze complexe problemen op:")
+      .replace(/In 2026, maintenance is expensive while code is cheap\. Think4Ever enables teams to build complex, enterprise-grade applications resilient to the chaos of automated generation by moving the "thinking" to the architecture layer\./g,
+               "In 2026 is onderhoud duur terwijl code goedkoop is. Think4Ever stelt teams in staat om complexe, enterprise-grade applicaties te bouwen die bestand zijn tegen de chaos van geautomatiseerde generatie door het 'denken' naar de architectuurlaag te verplaatsen.");
   }
 
   return html;
