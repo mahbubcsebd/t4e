@@ -363,13 +363,42 @@ export default function Header() {
 
         {/* Mobile Menu Toggle */}
         <div className="flex items-center gap-3 lg:hidden">
-          <button
-            onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-            className="flex items-center gap-1 px-2.5 py-1 rounded-full border border-[#c8d9ed] text-xs font-medium text-[#314865]"
-          >
-            <span>{currentLang.flag}</span>
-            <ChevronDown className="w-3 h-3" />
-          </button>
+          <div className="relative">
+            <button
+              onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+              className="flex items-center gap-1 px-2.5 py-1 rounded-full border border-[#c8d9ed] text-xs font-medium text-[#314865]"
+            >
+              <span>{currentLang.flag}</span>
+              <ChevronDown className="w-3 h-3" />
+            </button>
+
+            {langDropdownOpen && (
+              <div className="absolute right-0 top-full mt-2 w-36 bg-white rounded-xl shadow-xl border border-[#c8d9ed] py-1.5 z-50 animate-in fade-in slide-in-from-top-2">
+                {availableLanguages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => {
+                      setLanguage(lang.code);
+                      setLangDropdownOpen(false);
+                    }}
+                    className={`w-full flex items-center justify-between px-3 py-2 text-xs font-medium transition-colors ${
+                      language === lang.code
+                        ? "bg-[#f2f7ff] text-[#093cad] font-bold"
+                        : "text-[#314865] hover:bg-slate-50"
+                    }`}
+                  >
+                    <span className="flex items-center gap-2">
+                      <span>{lang.flag}</span>
+                      <span>{lang.name}</span>
+                    </span>
+                    {language === lang.code && (
+                      <span className="text-[#07A7E1] font-bold">✓</span>
+                    )}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
