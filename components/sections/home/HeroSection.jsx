@@ -46,8 +46,8 @@ export default function HeroSection() {
             {/* Hero CTAs */}
             <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto mb-4">
               <Link
-                href="#register"
-                className="btn-primary w-full sm:w-auto justify-center text-sm py-3 px-7"
+                href="https://portal.think4ever.com/#/register"
+                className="bg-[#093cad] hover:bg-[#072f85] text-white text-sm font-bold px-7 py-3 rounded-full transition-all shadow-md shadow-blue-600/20 whitespace-nowrap inline-flex items-center justify-center w-full sm:w-auto"
               >
                 <span>{t("hero.ctaPrimary")}</span>
               </Link>
