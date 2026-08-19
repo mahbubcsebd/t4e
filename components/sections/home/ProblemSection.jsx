@@ -2,38 +2,30 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { RefreshCw, Users, AlertTriangle } from "lucide-react";
+import {
+  FileCode,
+  Workflow,
+  Bot,
+  Database,
+  LayoutTemplate,
+  Network,
+  Users,
+  GitPullRequest,
+} from "lucide-react";
 
 export default function ProblemSection() {
   const { t } = useLanguage();
 
-  const problems = [
-    {
-      icon: <RefreshCw className="w-5 h-5 text-[#07A7E1]" />,
-      tag: t("problem.card1Tag"),
-      title: t("problem.card1Title"),
-      desc: t("problem.card1Desc"),
-    },
-    {
-      icon: <Users className="w-5 h-5 text-[#093cad]" />,
-      tag: t("problem.card2Tag"),
-      title: t("problem.card2Title"),
-      desc: t("problem.card2Desc"),
-    },
-    {
-      icon: <AlertTriangle className="w-5 h-5 text-amber-500" />,
-      tag: t("problem.card3Tag"),
-      title: t("problem.card3Title"),
-      desc: t("problem.card3Desc"),
-    },
-  ];
-
   return (
-    <section className="py-20 md:py-28 bg-[#f2f7ff] border-b border-zinc-200/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+    <section className="py-24 md:py-32 bg-white relative overflow-hidden border-b border-[#c8d9ed]/40">
+      {/* Background canvas elements */}
+      <div className="absolute inset-0 bg-[#f8fbff] bg-[radial-gradient(#c8d9ed_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
+
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Editorial Header */}
+        <div className="max-w-3xl mx-auto mb-10 md:mb-14 text-center">
           <span className="inline-block px-3 py-1 rounded-full bg-[#f2f7ff] text-[#093cad] text-xs font-bold uppercase tracking-wider mb-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#07A7E1] animate-pulse"></span>
             {t("problem.eyebrow")}
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#09090d] tracking-tight">
@@ -41,31 +33,231 @@ export default function ProblemSection() {
           </h2>
         </div>
 
-        {/* 3 Problem Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {problems.map((card, idx) => (
-            <div
-              key={idx}
-              className="bg-white border border-zinc-200/60 rounded-3xl p-8 hover:shadow-xl hover:border-zinc-300 transition-all duration-300 group flex flex-col justify-between"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#093cad] bg-[#eaf0fb] px-3 py-1 rounded-full">
-                    {card.tag}
-                  </span>
-                  <div className="p-2.5 rounded-xl bg-white border border-zinc-200/60 shadow-sm group-hover:scale-110 transition-transform">
-                    {card.icon}
-                  </div>
+        {/* The System Canvas Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+          {/* Block 01 - Context Resets (Left) */}
+          <div className="lg:col-span-7 bg-white rounded-3xl border border-[#c8d9ed]/70 shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col group">
+            {/* Visual Canvas */}
+            <div className="h-64 sm:h-80 bg-gradient-to-b from-[#f2f7fd] to-white border-b border-[#f0f4f8] relative overflow-hidden flex items-center justify-center p-6">
+              <div className="relative w-full max-w-sm aspect-video flex items-center justify-center">
+                {/* Central AI Node */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-2xl shadow-lg border border-[#c8d9ed] flex items-center justify-center z-20 group-hover:scale-105 transition-transform duration-500">
+                  <Bot className="w-8 h-8 text-[#093cad]" />
                 </div>
-                <h3 className="text-lg font-bold text-[#09090d] mb-2 leading-snug">
-                  {card.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-[#465a75] leading-relaxed">
-                  {card.desc}
-                </p>
+
+                {/* Connecting lines */}
+                <svg
+                  viewBox="0 0 400 200"
+                  preserveAspectRatio="none"
+                  className="absolute inset-0 w-full h-full text-[#c8d9ed] z-0 opacity-60"
+                  style={{ strokeDasharray: "4,4" }}
+                >
+                  <line
+                    x1="80"
+                    y1="50"
+                    x2="170"
+                    y2="85"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="320"
+                    y1="60"
+                    x2="230"
+                    y2="90"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="100"
+                    y1="160"
+                    x2="180"
+                    y2="120"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="300"
+                    y1="150"
+                    x2="220"
+                    y2="115"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                </svg>
+
+                {/* Floating Fragments */}
+                <div className="absolute top-[10%] left-[10%] bg-white p-3 rounded-xl border border-[#c8d9ed]/60 shadow-sm z-10 opacity-70 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-500">
+                  <FileCode className="w-5 h-5 text-slate-400" />
+                </div>
+                <div className="absolute top-[15%] right-[15%] bg-white p-3 rounded-xl border border-[#c8d9ed]/60 shadow-sm z-10 opacity-60 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-500 delay-75">
+                  <Database className="w-5 h-5 text-slate-400" />
+                </div>
+                <div className="absolute bottom-[10%] left-[15%] bg-white p-3 rounded-xl border border-[#c8d9ed]/60 shadow-sm z-10 opacity-50 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-500 delay-100">
+                  <Workflow className="w-5 h-5 text-slate-400" />
+                </div>
+                <div className="absolute bottom-[15%] right-[20%] bg-white p-3 rounded-xl border border-[#c8d9ed]/60 shadow-sm z-10 opacity-80 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-500 delay-150">
+                  <LayoutTemplate className="w-5 h-5 text-slate-400" />
+                </div>
               </div>
             </div>
-          ))}
+
+            {/* Content */}
+            <div className="p-8 sm:p-10 flex-1">
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-xs font-mono font-medium text-slate-400">
+                  01
+                </span>
+                <span className="h-[1px] w-8 bg-[#c8d9ed]"></span>
+                <span className="text-[10px] font-bold text-[#093cad] uppercase tracking-widest">
+                  {t("problem.card1Tag")}
+                </span>
+              </div>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#09090d] mb-3 tracking-tight">
+                {t("problem.card1Title")}
+              </h3>
+              <p className="text-[#465a75] text-sm sm:text-base leading-relaxed">
+                {t("problem.card1Desc")}
+              </p>
+            </div>
+          </div>
+
+          {/* Block 02 - Knowledge lives in different places (Right) */}
+          <div className="lg:col-span-5 bg-white rounded-3xl border border-[#c8d9ed]/70 shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col group">
+            {/* Visual Canvas */}
+            <div className="h-64 sm:h-80 bg-gradient-to-b from-[#f2f7fd] to-white border-b border-[#f0f4f8] relative p-6 flex flex-col items-center justify-center gap-5 overflow-hidden">
+              {/* Vertical Alignment Guide */}
+              <div className="absolute top-8 bottom-8 left-1/2 -translate-x-1/2 w-px border-l border-dashed border-[#a8c3e2] z-0 opacity-50"></div>
+
+              {/* Layers */}
+              <div className="w-full max-w-[220px] bg-white border border-[#c8d9ed] rounded-xl p-3 flex items-center justify-between shadow-sm relative z-30 -translate-x-4 group-hover:-translate-x-6 transition-transform duration-500">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-blue-50/50 rounded-lg text-blue-600 border border-blue-100/50">
+                    <FileCode className="w-4 h-4" />
+                  </div>
+                  <span className="text-xs font-bold text-slate-700">Code</span>
+                </div>
+                <div className="w-1.5 h-1.5 rounded-full bg-[#07A7E1] absolute -right-3 top-1/2 -translate-y-1/2 ring-4 ring-white"></div>
+              </div>
+
+              <div className="w-full max-w-[220px] bg-white border border-[#c8d9ed] rounded-xl p-3 flex items-center justify-between shadow-sm relative z-20 translate-x-3 group-hover:translate-x-5 transition-transform duration-500 delay-75">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#093cad] absolute -left-3 top-1/2 -translate-y-1/2 ring-4 ring-white"></div>
+                <div className="flex items-center gap-3 ml-1">
+                  <div className="p-2 bg-indigo-50/50 rounded-lg text-indigo-600 border border-indigo-100/50">
+                    <Workflow className="w-4 h-4" />
+                  </div>
+                  <span className="text-xs font-bold text-slate-700">
+                    Workflows
+                  </span>
+                </div>
+              </div>
+
+              <div className="w-full max-w-[220px] bg-white border border-[#c8d9ed] rounded-xl p-3 flex items-center justify-between shadow-sm relative z-10 -translate-x-2 group-hover:-translate-x-4 transition-transform duration-500 delay-150">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-emerald-50/50 rounded-lg text-emerald-600 border border-emerald-100/50">
+                    <Users className="w-4 h-4" />
+                  </div>
+                  <span className="text-xs font-bold text-slate-700">
+                    Decisions
+                  </span>
+                </div>
+                <div className="w-1.5 h-1.5 rounded-full bg-slate-400 absolute -right-3 top-1/2 -translate-y-1/2 ring-4 ring-white"></div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="p-8 sm:p-10 flex-1">
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-xs font-mono font-medium text-slate-400">
+                  02
+                </span>
+                <span className="h-[1px] w-8 bg-[#c8d9ed]"></span>
+                <span className="text-[10px] font-bold text-[#093cad] uppercase tracking-widest">
+                  {t("problem.card2Tag")}
+                </span>
+              </div>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#09090d] mb-3 tracking-tight">
+                {t("problem.card2Title")}
+              </h3>
+              <p className="text-[#465a75] text-sm sm:text-base leading-relaxed">
+                {t("problem.card2Desc")}
+              </p>
+            </div>
+          </div>
+
+          {/* Block 03 - Impact appears late (Bottom Full Width) */}
+          <div className="lg:col-span-12 bg-white rounded-3xl border border-[#c8d9ed]/70 shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden grid lg:grid-cols-12 group">
+            {/* Content (Left side on desktop) */}
+            <div className="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-[#f0f4f8] order-2 lg:order-1">
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-xs font-mono font-medium text-slate-400">
+                  03
+                </span>
+                <span className="h-[1px] w-8 bg-amber-200"></span>
+                <span className="text-[10px] font-bold text-amber-600 uppercase tracking-widest">
+                  {t("problem.card3Tag")}
+                </span>
+              </div>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#09090d] mb-3 tracking-tight">
+                {t("problem.card3Title")}
+              </h3>
+              <p className="text-[#465a75] text-sm sm:text-base leading-relaxed">
+                {t("problem.card3Desc")}
+              </p>
+            </div>
+
+            {/* Visual Canvas (Right side on desktop) */}
+            <div className="lg:col-span-7 h-auto min-h-64 lg:h-auto bg-[#fafbfc] relative p-6 sm:p-10 flex items-center justify-center order-1 lg:order-2 overflow-hidden">
+              <div className="w-full max-w-md relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 sm:gap-4">
+                {/* Connecting Line */}
+                <div className="absolute left-[36px] sm:left-[40px] top-[40px] sm:top-1/2 sm:-translate-y-1/2 bottom-[40px] sm:bottom-auto w-[2px] sm:w-auto sm:h-[2px] sm:right-[150px] bg-gradient-to-b sm:bg-gradient-to-r from-amber-400 via-amber-200 to-slate-200 z-0"></div>
+
+                {/* Local Change Node */}
+                <div className="relative z-10 flex flex-row sm:flex-col items-center gap-4 sm:gap-3 bg-white sm:bg-transparent p-3 sm:p-0 rounded-xl sm:rounded-none border border-slate-200 sm:border-none shadow-sm sm:shadow-none w-full sm:w-auto">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white border-[3px] border-amber-400 shadow-md flex items-center justify-center relative shrink-0 group-hover:scale-110 transition-transform duration-500">
+                    <div
+                      className="absolute inset-0 rounded-full bg-amber-400/30 animate-ping"
+                      style={{ animationDuration: "3s" }}
+                    ></div>
+                    <GitPullRequest className="w-5 h-5 text-amber-500" />
+                  </div>
+                  <span className="text-xs sm:text-[10px] font-extrabold text-slate-700 sm:text-slate-500 uppercase tracking-widest bg-white sm:bg-transparent px-2 py-1 rounded">
+                    Local Edit
+                  </span>
+                </div>
+
+                {/* Cascading Impact Nodes */}
+                <div className="relative z-10 flex flex-col gap-4 pl-16 sm:pl-0 w-full sm:w-auto">
+                  <div className="bg-white border border-[#c8d9ed] rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-75">
+                    <div className="absolute -left-[30px] sm:-left-[24px] top-1/2 -translate-y-1/2 w-[22px] sm:w-[16px] h-[2px] bg-slate-200"></div>
+                    <div className="w-2 h-2 rounded-full bg-[#093cad] absolute -left-1 top-1/2 -translate-y-1/2"></div>
+                    <Network className="w-4 h-4 text-[#093cad]" />
+                    <span className="text-xs font-bold text-slate-700">
+                      APIs & Interfaces
+                    </span>
+                  </div>
+
+                  <div className="bg-white border border-[#c8d9ed] rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-150">
+                    <div className="absolute -left-[30px] sm:-left-[24px] top-1/2 -translate-y-1/2 w-[22px] sm:w-[16px] h-[2px] bg-slate-200"></div>
+                    <div className="w-2 h-2 rounded-full bg-[#07A7E1] absolute -left-1 top-1/2 -translate-y-1/2"></div>
+                    <Database className="w-4 h-4 text-[#07A7E1]" />
+                    <span className="text-xs font-bold text-slate-700">
+                      Data Models
+                    </span>
+                  </div>
+
+                  <div className="bg-white border border-[#c8d9ed] rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-200">
+                    <div className="absolute -left-[30px] sm:-left-[24px] top-1/2 -translate-y-1/2 w-[22px] sm:w-[16px] h-[2px] bg-slate-200"></div>
+                    <div className="w-2 h-2 rounded-full bg-slate-400 absolute -left-1 top-1/2 -translate-y-1/2"></div>
+                    <LayoutTemplate className="w-4 h-4 text-slate-500" />
+                    <span className="text-xs font-bold text-slate-700">
+                      UI / Workflows
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
