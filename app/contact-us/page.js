@@ -1,6 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import ContactFormSection from "@/components/sections/contact/ContactFormSection";
+import ContactSection from "@/components/sections/contact/ContactSection";
 
 export const metadata = {
   title: "Contact Us - Think4Ever",
@@ -12,7 +12,7 @@ export default function ContactPage() {
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
       <main className="flex-grow">
-        <ContactFormSection />
+        <ContactSection />
       </main>
       <Footer />
     </div>

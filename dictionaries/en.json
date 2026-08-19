@@ -635,5 +635,64 @@
       "mcp": "MCP & Agents",
       "whitepaper": "White Paper"
     }
+  },
+  "contact": {
+    "eyebrow": "Get in Touch",
+    "titlePrefix": "Let's build ",
+    "titleHighlight": "together.",
+    "title": "Contact Us",
+    "subtitle": "Enter your details and a member of the Think4Ever team will follow up shortly.",
+    "segmentLabel": "Your Segment",
+    "segmentPlaceholder": "Select your segment",
+    "firstNameLabel": "First Name",
+    "firstNamePlaceholder": "Enter your first name",
+    "lastNameLabel": "Last Name",
+    "lastNamePlaceholder": "Enter your last name",
+    "emailLabel": "Work Email",
+    "emailPlaceholder": "you@company.com",
+    "companyLabel": "Company Name",
+    "companyPlaceholder": "Your company",
+    "sizeLabel": "Company Size",
+    "sizePlaceholder": "Select size",
+    "roleLabel": "Your Role",
+    "rolePlaceholder": "e.g., CTO, VP Engineering",
+    "needsLabel": "Primary Need (ranked up to 5)",
+    "interestsLabel": "What are you most interested in?",
+    "interestsPlaceholder": "Tell us about your specific use case, challenges, or what features you'd like to see...",
+    "thankYou": "Thank you for helping us understand your business need.",
+    "agreementPrefix": "I agree to the",
+    "privacyPolicy": "Privacy Policy",
+    "agreementSuffix": "and consent to being contacted.",
+    "submitBtn": "Submit",
+    "submittingBtn": "Sending...",
+    "requiredError": "This field is required",
+    "officeTitle": "Office Information",
+    "hqLabel": "Headquarters",
+    "hqAddress": "161 Bay Street, 27th Floor",
+    "hqCity": "Toronto, ON M5J2S1",
+    "emailHeading": "Email",
+    "emailAddress": "info@think4ever.com",
+    "options": {
+      "segment": [
+        "Independent Developers",
+        "Start ups & New Ventures",
+        "Software & SaaS",
+        "Systems Integrators / Consultants",
+        "Enterprise & Mid-size Business"
+      ],
+      "size": ["1 - 10", "11 - 50", "51 - 200", "500+"],
+      "needs": [
+        "Ammend and fix existing code",
+        "Design the right architecture upfront",
+        "Simplify SDLC stack with fewer tools",
+        "Build AI agents or automation workflows",
+        "Keep systems aligned as complexity grows",
+        "See system dependencies and change impact in real time",
+        "Reduce rework caused by fragmented delivery",
+        "Improve governance, approvals, and control",
+        "Modernize legacy systems safely",
+        "Evaluate Think4Ever for future use"
+      ]
+    }
   }
 }

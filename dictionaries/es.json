@@ -639,7 +639,66 @@
       "all": "Todos",
       "architecture": "Arquitectura",
       "mcp": "MCP y Agentes",
-      "whitepaper": "Libro Blanco"
+      "whitepaper": "Documento Técnico"
+    }
+  },
+  "contact": {
+    "eyebrow": "Ponerse en Contacto",
+    "titlePrefix": "Construyamos ",
+    "titleHighlight": "juntos.",
+    "title": "Contáctenos",
+    "subtitle": "Ingrese sus datos y un miembro del equipo de Think4Ever se pondrá en contacto en breve.",
+    "segmentLabel": "Su Segmento",
+    "segmentPlaceholder": "Seleccione su segmento",
+    "firstNameLabel": "Nombre",
+    "firstNamePlaceholder": "Ingrese su nombre",
+    "lastNameLabel": "Apellido",
+    "lastNamePlaceholder": "Ingrese su apellido",
+    "emailLabel": "Correo de Trabajo",
+    "emailPlaceholder": "tu@empresa.com",
+    "companyLabel": "Nombre de la Empresa",
+    "companyPlaceholder": "Su empresa",
+    "sizeLabel": "Tamaño de la Empresa",
+    "sizePlaceholder": "Seleccione el tamaño",
+    "roleLabel": "Su Rol",
+    "rolePlaceholder": "ej., CTO, VP de Ingeniería",
+    "needsLabel": "Necesidad Principal (clasifique hasta 5)",
+    "interestsLabel": "¿En qué está más interesado?",
+    "interestsPlaceholder": "Cuéntenos sobre su caso de uso específico, desafíos o qué características le gustaría ver...",
+    "thankYou": "Gracias por ayudarnos a comprender sus necesidades comerciales.",
+    "agreementPrefix": "Acepto la",
+    "privacyPolicy": "Política de Privacidad",
+    "agreementSuffix": "y consiento ser contactado.",
+    "submitBtn": "Enviar",
+    "submittingBtn": "Enviando...",
+    "requiredError": "Este campo es obligatorio",
+    "officeTitle": "Información de la Oficina",
+    "hqLabel": "Sede Central",
+    "hqAddress": "161 Bay Street, Piso 27",
+    "hqCity": "Toronto, ON M5J2S1",
+    "emailHeading": "Correo",
+    "emailAddress": "info@think4ever.com",
+    "options": {
+      "segment": [
+        "Desarrolladores Independientes",
+        "Startups y Nuevas Empresas",
+        "Software y SaaS",
+        "Integradores de Sistemas / Consultores",
+        "Empresas y Negocios Medianos"
+      ],
+      "size": ["1 - 10", "11 - 50", "51 - 200", "500+"],
+      "needs": [
+        "Modificar y arreglar el código existente",
+        "Diseñar la arquitectura adecuada desde el principio",
+        "Simplificar la pila SDLC con menos herramientas",
+        "Construir agentes de IA o flujos de trabajo de automatización",
+        "Mantener los sistemas alineados a medida que crece la complejidad",
+        "Ver las dependencias del sistema y el impacto del cambio en tiempo real",
+        "Reducir el retrabajo causado por la entrega fragmentada",
+        "Mejorar la gobernanza, las aprobaciones y el control",
+        "Modernizar los sistemas heredados de forma segura",
+        "Evaluar Think4Ever para uso futuro"
+      ]
     }
   }
 }
