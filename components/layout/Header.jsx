@@ -4,7 +4,21 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
-import { ChevronDown, Globe, Menu, X, ExternalLink, Rocket, Palette, Code, Users, Settings, Puzzle, Terminal } from "lucide-react";
+import {
+  ChevronDown,
+  Globe,
+  Menu,
+  X,
+  ExternalLink,
+  Rocket,
+  Palette,
+  Code,
+  Users,
+  Settings,
+  Puzzle,
+  Terminal,
+  Play,
+} from "lucide-react";
 
 export default function Header() {
   const { t, language, setLanguage, availableLanguages } = useLanguage();
@@ -12,54 +26,84 @@ export default function Header() {
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [docsOpen, setDocsOpen] = useState(false);
+  const [howItWorksOpen, setHowItWorksOpen] = useState(false);
+  const [mobileHowItWorksOpen, setMobileHowItWorksOpen] = useState(false);
+  const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
+  const [mobileDocsOpen, setMobileDocsOpen] = useState(false);
 
-  const currentLang = availableLanguages.find((l) => l.code === language) || availableLanguages[0];
+  const currentLang =
+    availableLanguages.find((l) => l.code === language) ||
+    availableLanguages[0];
+
+  const resourcesLinks = [
+    {
+      title:
+        t("nav.resourceLibrary") === "nav.resourceLibrary"
+          ? "Resource Library"
+          : t("nav.resourceLibrary"),
+      desc: "Explore our collection of resources.",
+      href: "/resources",
+      icon: <Puzzle className="w-4 h-4 text-[#07A7E1]" />,
+    },
+    {
+      title: t("nav.blog") === "nav.blog" ? "Blog" : t("nav.blog"),
+      desc: "Read the latest news and articles.",
+      href: "/blog",
+      icon: <Globe className="w-4 h-4 text-[#093cad]" />,
+    },
+    {
+      title: "FAQ",
+      desc: "Frequently asked questions.",
+      href: "/faq",
+      icon: <Settings className="w-4 h-4 text-slate-600" />,
+    },
+  ];
 
   const docsLinks = [
     {
-      title: t("header.docs.onboardingTitle", "Customer Onboarding"),
+      title: "Customer Onboarding",
       desc: "Get started with Think4Ever.",
       href: "https://think4ever.com/docs/onboarding.html",
       icon: <Rocket className="w-4 h-4 text-[#07A7E1]" />,
     },
     {
-      title: t("header.docs.designerTitle", "Think4Ever Designer"),
+      title: "Think4Ever Designer",
       desc: "Learn how to map systems.",
       href: "https://think4ever.com/docs/manual_introduction.html",
       icon: <Palette className="w-4 h-4 text-[#093cad]" />,
     },
     {
-      title: t("header.docs.developerTitle", "Think4Ever Developer"),
+      title: "Think4Ever Developer",
       desc: "Technical guide for developers.",
       href: "https://think4ever.com/docs/dev/start_new_project.html",
       icon: <Code className="w-4 h-4 text-indigo-600" />,
     },
     {
-      title: t("header.docs.portalTitle", "Think4Ever Portal"),
+      title: "Think4Ever Portal",
       desc: "Manage team dashboard.",
       href: "https://think4ever.com/docs/portal/dashboard.html",
       icon: <Users className="w-4 h-4 text-[#07A7E1]" />,
     },
     {
-      title: t("header.docs.reverseEngineeringTitle", "Reverse Engineering"),
+      title: "Reverse Engineering",
       desc: "Reverse engineer codebases.",
       href: "https://think4ever.com/docs/reverse_engineering.html",
       icon: <Settings className="w-4 h-4 text-slate-600" />,
     },
     {
-      title: t("header.docs.thinkMcpTitle", "Think MCP"),
+      title: "Think MCP",
       desc: "Claude Code, Codex, and Cursor.",
       href: "https://think4ever.com/docs/manual_think_mcp.html",
       icon: <Puzzle className="w-4 h-4 text-amber-500" />,
     },
     {
-      title: t("header.docs.vscodePluginTitle", "VS Code Plugin"),
+      title: "VS Code Plugin",
       desc: "Access T4E inside VS Code.",
       href: "https://think4ever.com/docs/dev/vs_code_integration.html",
       icon: <Code className="w-4 h-4 text-blue-600" />,
     },
     {
-      title: t("header.docs.thinkApiTitle", "Think API"),
+      title: "Think API",
       desc: "Programmatically manage tokens.",
       href: "https://think4ever.com/docs/manual_think_api.html",
       icon: <Terminal className="w-4 h-4 text-emerald-600" />,
@@ -74,30 +118,97 @@ export default function Header() {
           <Image
             src="/images/think4ever-logo.png"
             alt="Think4Ever"
-            width={150}
-            height={34}
-            className="h-8 w-auto object-contain"
+            width={180}
+            height={41}
+            className="h-10 w-auto object-contain"
             priority
           />
         </Link>
 
         {/* Center Desktop Menu Items */}
         <nav className="hidden lg:flex items-center gap-6 xl:gap-7 text-[15px] font-semibold text-[#465a75]">
-          <Link href="/how-it-works" className="hover:text-[#093cad] transition-colors whitespace-nowrap">
-            {t("nav.product")}
-          </Link>
-          <Link href="/code-to-design" className="hover:text-[#093cad] transition-colors whitespace-nowrap">
-            {t("nav.codeToDesign")}
-          </Link>
-          <Link href="/design-to-code" className="hover:text-[#093cad] transition-colors whitespace-nowrap">
-            {t("nav.designToCode")}
-          </Link>
-          <Link href="/integrations" className="hover:text-[#093cad] transition-colors whitespace-nowrap">
+          {/* Product Dropdown */}
+          <div
+            className="relative group"
+            onMouseLeave={() => setHowItWorksOpen(false)}
+          >
+            <button
+              onClick={() => setHowItWorksOpen(!howItWorksOpen)}
+              onMouseEnter={() => setHowItWorksOpen(true)}
+              className="flex items-center gap-1 hover:text-[#093cad] transition-colors py-2 whitespace-nowrap"
+            >
+              <span>{t("nav.product", "Product")}</span>
+              <ChevronDown className="w-4 h-4 text-[#07A7E1] group-hover:rotate-180 transition-transform" />
+            </button>
+            <div
+              className={`absolute top-full left-0 w-64 bg-white rounded-2xl shadow-2xl border border-[#c8d9ed] py-2 transition-all duration-200 z-50 ${
+                howItWorksOpen
+                  ? "opacity-100 visible translate-y-0"
+                  : "opacity-0 invisible -translate-y-2"
+              }`}
+            >
+              <Link
+                href="/how-it-works"
+                className="flex items-start gap-3 px-4 py-3 hover:bg-[#f2f7ff] group/item transition-colors"
+              >
+                <div className="p-1.5 rounded-lg bg-[#f7fafe] border border-[#c8d9ed]/50 group-hover/item:bg-white shrink-0">
+                  <Play className="w-4 h-4 text-[#07A7E1]" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-[#09090d] group-hover/item:text-[#093cad]">
+                    {t("nav.howItWorks")}
+                  </div>
+                  <p className="text-[10px] text-[#71849c] mt-0.5">
+                    {t("nav.howItWorksDesc")}
+                  </p>
+                </div>
+              </Link>
+              <Link
+                href="/code-to-design"
+                className="flex items-start gap-3 px-4 py-3 hover:bg-[#f2f7ff] group/item transition-colors"
+              >
+                <div className="p-1.5 rounded-lg bg-[#f7fafe] border border-[#c8d9ed]/50 group-hover/item:bg-white shrink-0">
+                  <Code className="w-4 h-4 text-[#093cad]" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-[#09090d] group-hover/item:text-[#093cad]">
+                    {t("nav.codeToDesign")}
+                  </div>
+                  <p className="text-[10px] text-[#71849c] mt-0.5">
+                    Reverse engineer code to visuals
+                  </p>
+                </div>
+              </Link>
+              <Link
+                href="/design-to-code"
+                className="flex items-start gap-3 px-4 py-3 hover:bg-[#f2f7ff] group/item transition-colors"
+              >
+                <div className="p-1.5 rounded-lg bg-[#f7fafe] border border-[#c8d9ed]/50 group-hover/item:bg-white shrink-0">
+                  <Palette className="w-4 h-4 text-[#07A7E1]" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-[#09090d] group-hover/item:text-[#093cad]">
+                    {t("nav.designToCode")}
+                  </div>
+                  <p className="text-[10px] text-[#71849c] mt-0.5">
+                    Turn systems into actual code
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </div>
+          <Link
+            href="/integrations"
+            className="hover:text-[#093cad] transition-colors whitespace-nowrap"
+          >
             {t("nav.integrations")}
           </Link>
 
           {/* Resources Dropdown with chevron */}
-          <div className="relative group" onMouseLeave={() => setResourcesOpen(false)}>
+          <div
+            className="relative group"
+            onMouseLeave={() => setResourcesOpen(false)}
+          >
             <button
               onClick={() => setResourcesOpen(!resourcesOpen)}
               onMouseEnter={() => setResourcesOpen(true)}
@@ -107,40 +218,54 @@ export default function Header() {
               <ChevronDown className="w-4 h-4 text-[#07A7E1] group-hover:rotate-180 transition-transform" />
             </button>
             <div
-              className={`absolute top-full left-0 w-56 bg-white rounded-2xl shadow-2xl border border-[#c8d9ed] py-2 transition-all duration-200 z-50 ${
-                resourcesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
+              className={`absolute top-full left-1/2 -translate-x-1/2 w-[260px] bg-white rounded-2xl shadow-2xl border border-[#c8d9ed] p-2 transition-all duration-200 z-50 grid grid-cols-1 gap-1 ${
+                resourcesOpen
+                  ? "opacity-100 visible translate-y-0"
+                  : "opacity-0 invisible -translate-y-2"
               }`}
             >
-              <Link href="/resources" className="block px-4 py-2.5 text-xs font-semibold text-[#09090d] hover:bg-[#f2f7ff] hover:text-[#093cad]">
-                {t("nav.resourceLibrary")}
-              </Link>
-              <Link href="/blog" className="block px-4 py-2.5 text-xs font-semibold text-[#09090d] hover:bg-[#f2f7ff] hover:text-[#093cad]">
-                {t("nav.blog")}
-              </Link>
-              <Link href="/resources#videos" className="block px-4 py-2.5 text-xs font-semibold text-[#09090d] hover:bg-[#f2f7ff] hover:text-[#093cad]">
-                {t("nav.productVideos")}
-              </Link>
-              <Link href="/resources#guides" className="block px-4 py-2.5 text-xs font-semibold text-[#09090d] hover:bg-[#f2f7ff] hover:text-[#093cad]">
-                {t("nav.whitePapers")}
-              </Link>
-              <Link href="/faq" className="block px-4 py-2.5 text-xs font-semibold text-[#09090d] hover:bg-[#f2f7ff] hover:text-[#093cad]">
-                FAQ
-              </Link>
+              {resourcesLinks.map((res, idx) => (
+                <Link
+                  key={idx}
+                  href={res.href}
+                  className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-[#f2f7ff] group/item transition-colors"
+                >
+                  <div className="p-1.5 rounded-lg bg-[#f7fafe] border border-[#c8d9ed]/50 group-hover/item:bg-white shrink-0 mt-0.5">
+                    {res.icon}
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-[#09090d] group-hover/item:text-[#093cad] flex items-center gap-1">
+                      <span>{res.title}</span>
+                    </div>
+                    <p className="text-[10px] text-[#71849c] leading-snug mt-0.5">
+                      {res.desc}
+                    </p>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
 
           {/* Docs Dropdown */}
-          <div className="relative group" onMouseLeave={() => setDocsOpen(false)}>
+          <div
+            className="relative group"
+            onMouseLeave={() => setDocsOpen(false)}
+          >
             <button
               onClick={() => setDocsOpen(!docsOpen)}
               onMouseEnter={() => setDocsOpen(true)}
               className="flex items-center gap-1 hover:text-[#093cad] transition-colors py-2 whitespace-nowrap"
             >
-              <span>{t("nav.docs")}</span>
+              <span>
+                {t("nav.docs") === "nav.docs" ? "Docs" : t("nav.docs")}
+              </span>
+              <ChevronDown className="w-4 h-4 text-[#07A7E1] group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-1/2 -translate-x-1/2 w-[540px] bg-white rounded-2xl shadow-2xl border border-[#c8d9ed] p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
-                docsOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
+                docsOpen
+                  ? "opacity-100 visible translate-y-0"
+                  : "opacity-0 invisible -translate-y-2"
               }`}
             >
               {docsLinks.map((doc, idx) => (
@@ -168,7 +293,10 @@ export default function Header() {
             </div>
           </div>
 
-          <Link href="/pricing" className="hover:text-[#093cad] transition-colors whitespace-nowrap">
+          <Link
+            href="/pricing"
+            className="hover:text-[#093cad] transition-colors whitespace-nowrap"
+          >
             {t("nav.pricing")}
           </Link>
         </nav>
@@ -182,7 +310,9 @@ export default function Header() {
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#c8d9ed] hover:border-[#093cad] text-xs font-semibold text-[#314865] bg-white transition-all"
             >
               <Globe className="w-3.5 h-3.5 text-[#07A7E1]" />
-              <span>{currentLang.flag} {currentLang.name}</span>
+              <span>
+                {currentLang.flag} {currentLang.name}
+              </span>
               <ChevronDown className="w-3 h-3 opacity-60" />
             </button>
 
@@ -205,7 +335,9 @@ export default function Header() {
                       <span>{lang.flag}</span>
                       <span>{lang.name}</span>
                     </span>
-                    {language === lang.code && <span className="text-[#07A7E1] font-bold">✓</span>}
+                    {language === lang.code && (
+                      <span className="text-[#07A7E1] font-bold">✓</span>
+                    )}
                   </button>
                 ))}
               </div>
@@ -243,7 +375,11 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 text-[#09090d] hover:text-[#093cad] transition-colors"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
@@ -251,37 +387,122 @@ export default function Header() {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-b border-[#c8d9ed] px-6 py-6 flex flex-col gap-4 animate-in fade-in slide-in-from-top-4">
-          <Link href="/how-it-works" onClick={() => setMobileMenuOpen(false)} className="text-sm font-semibold text-[#314865]">
-            {t("nav.product")}
-          </Link>
-          <Link href="/code-to-design" onClick={() => setMobileMenuOpen(false)} className="text-sm font-semibold text-[#314865]">
-            {t("nav.codeToDesign")}
-          </Link>
-          <Link href="/design-to-code" onClick={() => setMobileMenuOpen(false)} className="text-sm font-semibold text-[#314865]">
-            {t("nav.designToCode")}
-          </Link>
-          <Link href="/integrations" onClick={() => setMobileMenuOpen(false)} className="text-sm font-semibold text-[#314865]">
+          <div className="flex flex-col gap-3">
+            <button
+              onClick={() => setMobileHowItWorksOpen(!mobileHowItWorksOpen)}
+              className="flex items-center justify-between text-sm font-semibold text-[#314865] w-full text-left"
+            >
+              <span>{t("nav.product", "Product")}</span>
+              <ChevronDown
+                className={`w-4 h-4 transition-transform ${mobileHowItWorksOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+            {mobileHowItWorksOpen && (
+              <div className="flex flex-col gap-3 pl-4 border-l-2 border-[#c8d9ed]/50 ml-1">
+                <Link
+                  href="/how-it-works"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-xs font-medium text-[#465a75] hover:text-[#093cad]"
+                >
+                  {t("nav.howItWorks")}
+                </Link>
+                <Link
+                  href="/code-to-design"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-xs font-medium text-[#465a75] hover:text-[#093cad]"
+                >
+                  {t("nav.codeToDesign")}
+                </Link>
+                <Link
+                  href="/design-to-code"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-xs font-medium text-[#465a75] hover:text-[#093cad]"
+                >
+                  {t("nav.designToCode")}
+                </Link>
+              </div>
+            )}
+          </div>
+          <Link
+            href="/integrations"
+            onClick={() => setMobileMenuOpen(false)}
+            className="text-sm font-semibold text-[#314865]"
+          >
             {t("nav.integrations")}
           </Link>
-          <Link href="/resources" onClick={() => setMobileMenuOpen(false)} className="text-sm font-semibold text-[#314865]">
-            {t("nav.resources")}
-          </Link>
-          <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="text-sm font-semibold text-[#314865]">
-            {t("nav.blog")}
-          </Link>
-          <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="text-sm font-semibold text-[#314865]">
+          <div className="flex flex-col gap-3">
+            <button
+              onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)}
+              className="flex items-center justify-between text-sm font-semibold text-[#314865] w-full text-left"
+            >
+              <span>{t("nav.resources")}</span>
+              <ChevronDown
+                className={`w-4 h-4 transition-transform ${mobileResourcesOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+            {mobileResourcesOpen && (
+              <div className="flex flex-col gap-3 pl-4 border-l-2 border-[#c8d9ed]/50 ml-1">
+                <Link
+                  href="/resources"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-xs font-medium text-[#465a75] hover:text-[#093cad]"
+                >
+                  {t("nav.resourceLibrary")}
+                </Link>
+                <Link
+                  href="/blog"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-xs font-medium text-[#465a75] hover:text-[#093cad]"
+                >
+                  {t("nav.blog")}
+                </Link>
+                <Link
+                  href="/faq"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-xs font-medium text-[#465a75] hover:text-[#093cad]"
+                >
+                  FAQ
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <button
+              onClick={() => setMobileDocsOpen(!mobileDocsOpen)}
+              className="flex items-center justify-between text-sm font-semibold text-[#314865] w-full text-left"
+            >
+              <span>{t("nav.docs")}</span>
+              <ChevronDown
+                className={`w-4 h-4 transition-transform ${mobileDocsOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+            {mobileDocsOpen && (
+              <div className="flex flex-col gap-3 pl-4 border-l-2 border-[#c8d9ed]/50 ml-1">
+                {docsLinks.map((doc, idx) => (
+                  <a
+                    key={idx}
+                    href={doc.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center justify-between text-xs font-medium text-[#465a75] hover:text-[#093cad]"
+                  >
+                    <span>{doc.title}</span>
+                    <ExternalLink className="w-3 h-3 opacity-50" />
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <Link
+            href="/pricing"
+            onClick={() => setMobileMenuOpen(false)}
+            className="text-sm font-semibold text-[#314865]"
+          >
             {t("nav.pricing")}
           </Link>
-          <a
-            href="https://think4ever.com/docs/onboarding.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-sm font-semibold text-[#314865] flex items-center justify-between"
-          >
-            <span>{t("nav.docs")}</span>
-            <ExternalLink className="w-3.5 h-3.5 opacity-50" />
-          </a>
 
           <div className="pt-4 border-t border-[#c8d9ed] flex flex-col gap-3">
             <a

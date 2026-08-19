@@ -1,6 +1,8 @@
 {
   "nav": {
     "product": "Producto",
+    "howItWorks": "Cómo funciona",
+    "howItWorksDesc": "Conectar, Revisar, Cambiar",
     "codeToDesign": "Código → Diseño",
     "designToCode": "Diseño → Código",
     "integrations": "Integraciones",

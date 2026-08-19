@@ -30,11 +30,9 @@ export default function HeroSection() {
             </span>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold tracking-tight text-[#09090d] leading-[1.1] mb-5">
+            <h1 className="md:max-w-[500px] text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold tracking-tight text-[#09090d] leading-[1.1] mb-5">
               {t("hero.titlePrefix")}
-              <span className="text-gradient underline decoration-[#07A7E1]/30 underline-offset-8">
-                {t("hero.titleHighlight")}
-              </span>
+              <span className="text-gradient">{t("hero.titleHighlight")}</span>
             </h1>
 
             {/* Subtitle */}
@@ -44,7 +42,10 @@ export default function HeroSection() {
 
             {/* Hero CTAs */}
             <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto mb-4">
-              <Link href="#register" className="btn-primary w-full sm:w-auto justify-center text-sm py-3 px-7">
+              <Link
+                href="#register"
+                className="btn-primary w-full sm:w-auto justify-center text-sm py-3 px-7"
+              >
                 <span>{t("hero.ctaPrimary")}</span>
               </Link>
               <a
@@ -92,8 +93,12 @@ export default function HeroSection() {
                 </div>
 
                 <div className="flex items-center gap-1.5">
-                  <span className={`w-2 h-2 rounded-full ${activeScene === 1 ? "bg-[#07A7E1]" : "bg-slate-300"}`}></span>
-                  <span className={`w-2 h-2 rounded-full ${activeScene === 2 ? "bg-[#07A7E1]" : "bg-slate-300"}`}></span>
+                  <span
+                    className={`w-2 h-2 rounded-full ${activeScene === 1 ? "bg-[#07A7E1]" : "bg-slate-300"}`}
+                  ></span>
+                  <span
+                    className={`w-2 h-2 rounded-full ${activeScene === 2 ? "bg-[#07A7E1]" : "bg-slate-300"}`}
+                  ></span>
                 </div>
               </div>
 
@@ -145,17 +150,30 @@ export default function HeroSection() {
                           {t("hero.cardOneBlueprintName")}
                         </b>
                         <div className="grid grid-cols-2 gap-1.5 mt-2">
-                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-semibold px-1.5 py-1 rounded border border-[#07A7E1]/30">Booking</span>
-                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-semibold px-1.5 py-1 rounded border border-[#07A7E1]/30">Payments</span>
-                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-semibold px-1.5 py-1 rounded border border-[#07A7E1]/30">Refund rule</span>
-                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-semibold px-1.5 py-1 rounded border border-[#07A7E1]/30">UI</span>
+                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-semibold px-1.5 py-1 rounded border border-[#07A7E1]/30">
+                            Booking
+                          </span>
+                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-semibold px-1.5 py-1 rounded border border-[#07A7E1]/30">
+                            Payments
+                          </span>
+                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-semibold px-1.5 py-1 rounded border border-[#07A7E1]/30">
+                            Refund rule
+                          </span>
+                          <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-semibold px-1.5 py-1 rounded border border-[#07A7E1]/30">
+                            UI
+                          </span>
                         </div>
                       </div>
                     </div>
 
                     <div className="mt-4 flex items-center justify-between text-xs font-medium text-[#465a75]">
                       <span>Living repository map synced in real-time</span>
-                      <a href="https://www.youtube.com/watch?v=FY68DuwOf4Q" target="_blank" rel="noopener noreferrer" className="text-[#093cad] font-bold flex items-center gap-1 hover:underline">
+                      <a
+                        href="https://www.youtube.com/watch?v=FY68DuwOf4Q"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#093cad] font-bold flex items-center gap-1 hover:underline"
+                      >
                         <Play className="w-3 h-3 fill-current" /> Watch Demo
                       </a>
                     </div>
@@ -201,14 +219,22 @@ export default function HeroSection() {
                           {t("hero.cardTwoImplName")}
                         </b>
                         <span className="mt-2 inline-flex items-center gap-1 bg-[#e0f7ed] text-[#167451] text-[9px] font-bold px-2 py-0.5 rounded-md">
-                          <CheckCircle2 className="w-3 h-3" /> {t("hero.cardTwoStatus")}
+                          <CheckCircle2 className="w-3 h-3" />{" "}
+                          {t("hero.cardTwoStatus")}
                         </span>
                       </div>
                     </div>
 
                     <div className="mt-4 flex items-center justify-between text-xs font-medium text-[#465a75]">
-                      <span>Approved intent enforced before code execution</span>
-                      <a href="https://www.youtube.com/watch?v=Lq-vza9_CzI" target="_blank" rel="noopener noreferrer" className="text-[#093cad] font-bold flex items-center gap-1 hover:underline">
+                      <span>
+                        Approved intent enforced before code execution
+                      </span>
+                      <a
+                        href="https://www.youtube.com/watch?v=Lq-vza9_CzI"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#093cad] font-bold flex items-center gap-1 hover:underline"
+                      >
                         <Play className="w-3 h-3 fill-current" /> Watch Demo
                       </a>
                     </div>
