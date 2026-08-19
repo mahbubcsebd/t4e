@@ -125,13 +125,13 @@ export default function ResourceGrid() {
                   {t("resourcesPage.guide1Desc")}
                 </p>
               </div>
-              <a
-                href="https://think4ever.com/blog/think-design-redefining-ai-coding-harness/"
+              <Link
+                href="/blog/think-design-redefining-ai-coding-harness/"
                 className="text-xs font-bold text-[#093cad] hover:underline flex items-center gap-1"
               >
                 <BookOpen className="w-3.5 h-3.5" />
                 <span>{t("resourcesPage.guide1Link")}</span>
-              </a>
+              </Link>
             </div>
 
             <div className="bg-white border border-[#c8d9ed] rounded-2xl p-7 hover:border-[#093cad] transition-all flex flex-col justify-between">
@@ -146,13 +146,13 @@ export default function ResourceGrid() {
                   {t("resourcesPage.guide2Desc")}
                 </p>
               </div>
-              <a
-                href="https://think4ever.com/blog/one-spec-every-agent-think4ever-mcp/"
+              <Link
+                href="/blog/one-spec-every-agent-think4ever-mcp/"
                 className="text-xs font-bold text-[#093cad] hover:underline flex items-center gap-1"
               >
                 <Layers className="w-3.5 h-3.5" />
                 <span>{t("resourcesPage.guide2Link")}</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -181,12 +181,12 @@ export default function ResourceGrid() {
                   {t("resourcesPage.card1Desc")}
                 </p>
               </div>
-              <a
-                href="https://think4ever.com/blog/think4ever-approach-vs-vibe-coding/"
+              <Link
+                href="/blog/think4ever-approach-vs-vibe-coding/"
                 className="text-xs font-bold text-[#093cad] hover:underline"
               >
                 {t("resourcesPage.card1Link")}
-              </a>
+              </Link>
             </div>
 
             <div className="bg-[#f9fcff] border border-[#c8d9ed] rounded-2xl p-6 flex flex-col justify-between">
@@ -201,12 +201,12 @@ export default function ResourceGrid() {
                   {t("resourcesPage.card2Desc")}
                 </p>
               </div>
-              <a
-                href="https://think4ever.com/blog/architecture-first-agentic-development-with-think4ever/"
+              <Link
+                href="/blog/architecture-first-agentic-development-with-think4ever/"
                 className="text-xs font-bold text-[#093cad] hover:underline"
               >
                 {t("resourcesPage.card2Link")}
-              </a>
+              </Link>
             </div>
 
             <div className="bg-[#f9fcff] border border-[#c8d9ed] rounded-2xl p-6 flex flex-col justify-between">

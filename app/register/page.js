@@ -38,7 +38,7 @@ export default function RegisterPage() {
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#09090d] tracking-tight leading-tight mb-4">
                 {t("registerPage.title")}
-                <span className="text-gradient underline decoration-[#07A7E1]/30">
+                <span className="text-gradient decoration-[#07A7E1]/30">
                   {t("registerPage.titleHighlight")}
                 </span>
               </h1>
@@ -129,7 +129,9 @@ export default function RegisterPage() {
                       required
                       placeholder="Jane Doe"
                       value={formData.fullName}
-                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, fullName: e.target.value })
+                      }
                       className="w-full px-4 py-2.5 rounded-xl border border-[#c8d9ed] text-sm focus:outline-none focus:border-[#093cad] transition-colors"
                     />
                   </div>
@@ -143,7 +145,9 @@ export default function RegisterPage() {
                       required
                       placeholder="jane@company.com"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
                       className="w-full px-4 py-2.5 rounded-xl border border-[#c8d9ed] text-sm focus:outline-none focus:border-[#093cad] transition-colors"
                     />
                   </div>
@@ -159,7 +163,9 @@ export default function RegisterPage() {
                         minLength={10}
                         placeholder="••••••••••••"
                         value={formData.password}
-                        onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, password: e.target.value })
+                        }
                         className="w-full px-4 py-2.5 rounded-xl border border-[#c8d9ed] text-sm focus:outline-none focus:border-[#093cad] transition-colors"
                       />
                     </div>
@@ -170,7 +176,9 @@ export default function RegisterPage() {
                       </label>
                       <select
                         value={formData.region}
-                        onChange={(e) => setFormData({ ...formData, region: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, region: e.target.value })
+                        }
                         className="w-full px-4 py-2.5 rounded-xl border border-[#c8d9ed] text-sm focus:outline-none focus:border-[#093cad] transition-colors bg-white"
                       >
                         <option value="us-west">US West (recommended)</option>
@@ -187,7 +195,9 @@ export default function RegisterPage() {
                         type="checkbox"
                         required
                         checked={formData.terms}
-                        onChange={(e) => setFormData({ ...formData, terms: e.target.checked })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, terms: e.target.checked })
+                        }
                         className="mt-0.5 rounded border-[#c8d9ed] text-[#093cad] focus:ring-[#093cad]"
                       />
                       <span className="text-xs text-[#465a75]">
@@ -199,7 +209,12 @@ export default function RegisterPage() {
                       <input
                         type="checkbox"
                         checked={formData.marketing}
-                        onChange={(e) => setFormData({ ...formData, marketing: e.target.checked })}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            marketing: e.target.checked,
+                          })
+                        }
                         className="mt-0.5 rounded border-[#c8d9ed] text-[#093cad] focus:ring-[#093cad]"
                       />
                       <span className="text-xs text-[#465a75]">
@@ -208,14 +223,20 @@ export default function RegisterPage() {
                     </label>
                   </div>
 
-                  <button type="submit" className="btn-primary w-full justify-center text-sm py-3 mt-4">
+                  <button
+                    type="submit"
+                    className="btn-primary w-full justify-center text-sm py-3 mt-4"
+                  >
                     <span>{t("registerPage.btnSubmit")}</span>
                   </button>
                 </form>
 
                 <div className="mt-6 pt-4 border-t border-[#c8d9ed]/50 text-center text-xs text-[#71849c]">
                   <span>{t("registerPage.alreadyAccount")} </span>
-                  <a href="https://portal.think4ever.com/#/login" className="font-bold text-[#093cad] hover:underline">
+                  <a
+                    href="https://portal.think4ever.com/#/login"
+                    className="font-bold text-[#093cad] hover:underline"
+                  >
                     {t("registerPage.signIn")}
                   </a>
                 </div>

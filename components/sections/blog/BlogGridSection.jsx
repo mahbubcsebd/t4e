@@ -3,63 +3,19 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { BookOpen, Layers, Sparkles, ArrowRight, Search } from "lucide-react";
+import { Search } from "lucide-react";
+import { BLOG_POSTS } from "@/lib/blogData";
 
 export default function BlogGridSection() {
   const { t } = useLanguage();
   const [search, setSearch] = useState("");
   const [selectedCat, setSelectedCat] = useState("all");
 
-  const articles = [
-    {
-      slug: "think-design-redefining-ai-coding-harness",
-      type: "White paper",
-      cat: "whitepaper",
-      title: "Think Design: Redefining the AI coding harness for enterprise software development",
-      desc: "A framework for moving beyond prompt-to-code toward structured, reviewed system context.",
-      date: "April 18, 2026",
-      readTime: "8 min read",
-      icon: <BookOpen className="w-5 h-5 text-indigo-600" />,
-      external: "https://think4ever.com/blog/think-design-redefining-ai-coding-harness/",
-    },
-    {
-      slug: "one-spec-every-agent-think4ever-mcp",
-      type: "MCP & agent ecosystems",
-      cat: "mcp",
-      title: "One spec, every agent: How Think4Ever and MCP power consistent AI development",
-      desc: "How Think4Ever and Model Context Protocol provide a consistent system model across coding agents.",
-      date: "April 12, 2026",
-      readTime: "6 min read",
-      icon: <Layers className="w-5 h-5 text-[#093cad]" />,
-      external: "https://think4ever.com/blog/one-spec-every-agent-think4ever-mcp/",
-    },
-    {
-      slug: "think4ever-approach-vs-vibe-coding",
-      type: "Perspective",
-      cat: "architecture",
-      title: "Think4Ever vs. vibe coding: Why architecture matters when generation is easy",
-      desc: "Why system intent, review and coherence matter when code generation becomes instantaneous.",
-      date: "April 05, 2026",
-      readTime: "5 min read",
-      icon: <Sparkles className="w-5 h-5 text-[#07A7E1]" />,
-      external: "https://think4ever.com/blog/think4ever-approach-vs-vibe-coding/",
-    },
-    {
-      slug: "architecture-first-agentic-development-with-think4ever",
-      type: "Architecture",
-      cat: "architecture",
-      title: "Architecture-first agentic development with Think4Ever",
-      desc: "Use explicit system structure and boundary models to guide agentic implementation without drift.",
-      date: "March 28, 2026",
-      readTime: "7 min read",
-      icon: <BookOpen className="w-5 h-5 text-[#093cad]" />,
-      external: "https://think4ever.com/blog/architecture-first-agentic-development-with-think4ever/",
-    },
-  ];
-
-  const filtered = articles.filter((art) => {
+  const filtered = BLOG_POSTS.filter((art) => {
     const matchCat = selectedCat === "all" || art.cat === selectedCat;
-    const matchSearch = art.title.toLowerCase().includes(search.toLowerCase()) || art.desc.toLowerCase().includes(search.toLowerCase());
+    const matchSearch =
+      art.title.toLowerCase().includes(search.toLowerCase()) ||
+      art.desc.toLowerCase().includes(search.toLowerCase());
     return matchCat && matchSearch;
   });
 
@@ -73,7 +29,7 @@ export default function BlogGridSection() {
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090d] tracking-tight mb-4">
             {t("blogPage.heroTitlePrefix")}
-            <span className="text-gradient underline decoration-[#07A7E1]/30">
+            <span className="text-gradient decoration-[#07A7E1]/30">
               {t("blogPage.heroTitleHighlight")}
             </span>
           </h1>
@@ -87,7 +43,10 @@ export default function BlogGridSection() {
           <div className="flex flex-wrap gap-2">
             {[
               { id: "all", label: t("blogPage.categories.all") },
-              { id: "architecture", label: t("blogPage.categories.architecture") },
+              {
+                id: "architecture",
+                label: t("blogPage.categories.architecture"),
+              },
               { id: "mcp", label: t("blogPage.categories.mcp") },
               { id: "whitepaper", label: t("blogPage.categories.whitepaper") },
             ].map((cat) => (
@@ -135,9 +94,7 @@ export default function BlogGridSection() {
                 </div>
 
                 <h3 className="text-xl font-bold text-[#09090d] mb-3 leading-snug hover:text-[#093cad] transition-colors">
-                  <a href={art.external} target="_blank" rel="noopener noreferrer">
-                    {art.title}
-                  </a>
+                  <Link href={`/blog/${art.slug}`}>{art.title}</Link>
                 </h3>
 
                 <p className="text-xs sm:text-sm text-[#465a75] mb-6 leading-relaxed">
@@ -146,15 +103,15 @@ export default function BlogGridSection() {
               </div>
 
               <div className="flex items-center justify-between pt-4 border-t border-[#c8d9ed]/50 text-xs font-semibold text-[#71849c]">
-                <span>{art.date} • {art.readTime}</span>
-                <a
-                  href={art.external}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <span>
+                  {art.date} • {art.readTime}
+                </span>
+                <Link
+                  href={`/blog/${art.slug}`}
                   className="text-[#093cad] font-bold hover:underline flex items-center gap-1"
                 >
                   <span>{t("blogPage.readMore")}</span>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
