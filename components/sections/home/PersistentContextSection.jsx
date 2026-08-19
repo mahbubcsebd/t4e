@@ -2,11 +2,10 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import CodingToolPills from "@/components/ui/CodingToolPills";
 
 export default function PersistentContextSection() {
   const { t } = useLanguage();
-
-  const tools = ["Claude Code", "Codex", "Cursor", "Windsurf", "MCP Clients"];
 
   return (
     <section className="py-16 md:py-20 bg-gradient-to-br from-[#09090d] via-[#123b69] to-[#093cad] text-white">
@@ -15,7 +14,7 @@ export default function PersistentContextSection() {
           {t("persistent.eyebrow")}
         </span>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">
+        <h2 className="text-3xl sm:text-4xl md:text-4xl font-extrabold tracking-tight mb-4 text-white">
           {t("persistent.title")}
         </h2>
 
@@ -24,16 +23,7 @@ export default function PersistentContextSection() {
         </p>
 
         {/* Partner tool badges */}
-        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 max-w-3xl mx-auto">
-          {tools.map((tool, i) => (
-            <span
-              key={i}
-              className="bg-white/10 border border-white/20 hover:border-[#07A7E1] text-white text-sm font-semibold px-5 py-2.5 rounded-full backdrop-blur-md transition-all hover:scale-105 hover:bg-white/20"
-            >
-              {tool}
-            </span>
-          ))}
-        </div>
+        <CodingToolPills variant="dark" />
       </div>
     </section>
   );

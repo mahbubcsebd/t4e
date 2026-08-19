@@ -16,7 +16,10 @@ export default function CtaSection() {
         <p className="text-base sm:text-lg text-[#465a75] mb-8 max-w-xl mx-auto leading-relaxed">
           {t("cta.subtitle")}
         </p>
-        <Link href="https://portal.think4ever.com/#/register" className="btn-primary text-base py-3.5 px-8">
+        <Link
+          href="https://portal.think4ever.com/#/register"
+          className="btn-primary text-base py-3.5 px-8"
+        >
           <span>{t("cta.btn")}</span>
         </Link>
       </div>

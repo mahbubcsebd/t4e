@@ -128,7 +128,13 @@
     "alertDesc": "Resolve the decision before execution.",
     "impactTag": "CHANGE IMPACT",
     "impactTitle": "Affected by this change",
-    "nodes": ["Refund policy", "Payments API", "Customer UI", "Notifications", "Acceptance tests"]
+    "nodes": [
+      "Refund policy",
+      "Payments API",
+      "Customer UI",
+      "Notifications",
+      "Acceptance tests"
+    ]
   },
   "persistent": {
     "eyebrow": "Persistent context for people and agents",
@@ -152,8 +158,8 @@
     "eyebrow": "See the product",
     "title": "Watch Think4Ever work in both directions.",
     "subtitle": "See an existing project become an inspectable system model, then see reviewed system intent guide implementation.",
-    "btnCodeToDesign": "Code → Design ↗",
-    "btnDesignToCode": "Design → Code ↗"
+    "btnCodeToDesign": "Code → Design",
+    "btnDesignToCode": "Design → Code"
   },
   "cta": {
     "title": "See the system behind your code.",
@@ -230,7 +236,11 @@
     "card3Title": "Give agents the system",
     "card3Desc": "Carry reviewed system context into the coding agent your team already uses.",
     "quote": "“Generated understanding becomes useful when the team can inspect it, correct it and use it to guide the next change.”",
-    "proofPills": ["Review repository access", "Human review", "Keep your editor and stack"],
+    "proofPills": [
+      "Review repository access",
+      "Human review",
+      "Keep your editor and stack"
+    ],
     "ctaTitle": "Stop guessing how the project works.",
     "ctaSubtitle": "Connect one real project and review the system behind the code."
   },
@@ -280,11 +290,19 @@
     "card2Tag": "VS Code",
     "card2Title": "Understanding in the editor",
     "card2Desc": "Bring the system map closer to development work through the Think4Ever extension.",
-    "card2List": ["Stay in the existing editor", "Use reviewed context", "Avoid workflow replacement"],
+    "card2List": [
+      "Stay in the existing editor",
+      "Use reviewed context",
+      "Avoid workflow replacement"
+    ],
     "card3Tag": "Think API",
     "card3Title": "Connect your workflow",
     "card3Desc": "Use Think4Ever APIs and integration points to connect projects, tools and enterprise processes.",
-    "card3List": ["Custom workflows", "Project systems", "Enterprise integration"],
+    "card3List": [
+      "Custom workflows",
+      "Project systems",
+      "Enterprise integration"
+    ],
     "modelsEyebrow": "Model choice",
     "modelsTitle": "Choose models without losing the system.",
     "modelsSubtitle": "Keep reviewed context independent from any model or harness; use frontier or open-weight models where each fits.",
@@ -484,7 +502,12 @@
     "evalEyebrow": "Enterprise evaluation",
     "evalTitle": "Evaluate the environment around your code.",
     "evalSubtitle": "Evaluate repository access, model providers, deployment environments and team controls for your operating requirements.",
-    "evalList": ["Repository and project access", "Model-provider data flows", "Deployment topology", "Usage controls and support"],
+    "evalList": [
+      "Repository and project access",
+      "Model-provider data flows",
+      "Deployment topology",
+      "Usage controls and support"
+    ],
     "reviewTitle": "Bring your requirements to the team.",
     "reviewDesc": "Discuss repository access, model providers, data handling, deployment topology and support expectations before rollout.",
     "ctaTitle": "Need to evaluate Think4Ever?",

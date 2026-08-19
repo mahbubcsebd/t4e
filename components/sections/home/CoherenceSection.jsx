@@ -39,9 +39,9 @@ export default function CoherenceSection() {
 
         {/* Approval Comparison Panel */}
         <div className="max-w-4xl mx-auto space-y-6">
-          <div className="grid md:grid-cols-2 gap-4 items-center">
+          <div className="grid md:grid-cols-2 gap-4 items-stretch">
             {/* Approved Business Intent */}
-            <div className="bg-white border-2 border-emerald-500/40 rounded-2xl p-6 shadow-md relative">
+            <div className="bg-white border-2 border-emerald-500/40 rounded-2xl p-6 shadow-md relative h-full">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-[10px] font-extrabold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full uppercase tracking-wider">
                   {t("coherence.approvedTag")}
@@ -57,7 +57,7 @@ export default function CoherenceSection() {
             </div>
 
             {/* Proposed Implementation (Conflict) */}
-            <div className="bg-[#fff8f9] border-2 border-rose-400/50 rounded-2xl p-6 shadow-md relative">
+            <div className="bg-[#fff8f9] border-2 border-rose-400/50 rounded-2xl p-6 shadow-md relative h-full">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-[10px] font-extrabold text-rose-700 bg-rose-100 px-2.5 py-1 rounded-full uppercase tracking-wider">
                   {t("coherence.proposedTag")}

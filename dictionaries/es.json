@@ -126,7 +126,13 @@
     "alertDesc": "Resuelva la decisión antes de la ejecución.",
     "impactTag": "IMPACTO DEL CAMBIO",
     "impactTitle": "Afectados por este cambio",
-    "nodes": ["Política de reembolso", "API de pagos", "UI de cliente", "Notificaciones", "Pruebas de aceptación"]
+    "nodes": [
+      "Política de reembolso",
+      "API de pagos",
+      "UI de cliente",
+      "Notificaciones",
+      "Pruebas de aceptación"
+    ]
   },
   "persistent": {
     "eyebrow": "Contexto persistente para personas y agentes",
@@ -150,8 +156,8 @@
     "eyebrow": "Ver el producto",
     "title": "Mire Think4Ever funcionar en ambas direcciones.",
     "subtitle": "Vea cómo un proyecto existente se convierte en un modelo de sistema inspeccionable, luego vea cómo la intención del sistema guía la implementación.",
-    "btnCodeToDesign": "Código → Diseño ↗",
-    "btnDesignToCode": "Diseño → Código ↗"
+    "btnCodeToDesign": "Código → Diseño",
+    "btnDesignToCode": "Diseño → Código"
   },
   "cta": {
     "title": "Vea el sistema detrás de su código.",
@@ -184,7 +190,11 @@
     "path2Tag": "Diseño → Código",
     "path2Title": "Definir un nuevo sistema",
     "path2Desc": "Capture objetivos, roles, flujos de trabajo y criterios de aceptación antes del código.",
-    "path2Pills": ["intención de negocio", "decisiones", "criterios de aceptación"],
+    "path2Pills": [
+      "intención de negocio",
+      "decisiones",
+      "criterios de aceptación"
+    ],
     "controlEyebrow": "El punto de control",
     "controlTitle": "Apruebe la intención. Vea el impacto antes de la ejecución.",
     "controlSubtitle": "Compare la implementación propuesta con las reglas aprobadas y revele qué más se ve afectado.",
@@ -196,7 +206,11 @@
     "approvedTag": "Regla de negocio aprobada",
     "approvedRule": "Los reembolsos requieren revisión en un plazo de 24 horas",
     "divergence": "La implementación propone 48 horas — revisión requerida",
-    "proofPills": ["Decisión humana", "Criterios actualizados", "Contexto del agente"],
+    "proofPills": [
+      "Decisión humana",
+      "Criterios actualizados",
+      "Contexto del agente"
+    ],
     "ctaTitle": "Comience con un proyecto real.",
     "ctaSubtitle": "Vea el sistema detrás del código antes de pedirle a un agente que lo cambie."
   },
@@ -228,7 +242,11 @@
     "card3Title": "Entregue el sistema a los agentes",
     "card3Desc": "Lleve el contexto del sistema revisado al agente de código que su equipo ya utiliza.",
     "quote": "“La comprensión generada se vuelve útil cuando el equipo puede inspeccionarla, corregirla y usarla para guiar el siguiente cambio.”",
-    "proofPills": ["Acceso al repositorio de revisión", "Revisión humana", "Conserve su editor y stack"],
+    "proofPills": [
+      "Acceso al repositorio de revisión",
+      "Revisión humana",
+      "Conserve su editor y stack"
+    ],
     "ctaTitle": "Deje de adivinar cómo funciona el proyecto.",
     "ctaSubtitle": "Conecte un proyecto real y revise el sistema detrás del código."
   },
@@ -278,11 +296,19 @@
     "card2Tag": "VS Code",
     "card2Title": "Comprensión en el editor",
     "card2Desc": "Acerque el mapa del sistema al trabajo de desarrollo a través de la extensión Think4Ever.",
-    "card2List": ["Permanezca en el editor existente", "Use el contexto revisado", "Evite el reemplazo de flujos de trabajo"],
+    "card2List": [
+      "Permanezca en el editor existente",
+      "Use el contexto revisado",
+      "Evite el reemplazo de flujos de trabajo"
+    ],
     "card3Tag": "Think API",
     "card3Title": "Conecte su flujo de trabajo",
     "card3Desc": "Use las APIs y puntos de integración de Think4Ever para conectar proyectos, herramientas y procesos empresariales.",
-    "card3List": ["Flujos de trabajo personalizados", "Sistemas de proyectos", "Integración empresarial"],
+    "card3List": [
+      "Flujos de trabajo personalizados",
+      "Sistemas de proyectos",
+      "Integración empresarial"
+    ],
     "modelsEyebrow": "Elección de modelos",
     "modelsTitle": "Elija modelos sin perder el sistema.",
     "modelsSubtitle": "Mantenga el contexto revisado independiente de cualquier modelo; use modelos avanzados o de código abierto según corresponda.",
@@ -482,7 +508,12 @@
     "evalEyebrow": "Evaluación empresarial",
     "evalTitle": "Evalúe el entorno que rodea a su código.",
     "evalSubtitle": "Evalúe el acceso al repositorio, proveedores de modelos y entornos de despliegue para sus requisitos.",
-    "evalList": ["Acceso a repositorios y proyectos", "Flujos de datos de proveedores de modelos", "Topología de despliegue", "Controles de uso y soporte"],
+    "evalList": [
+      "Acceso a repositorios y proyectos",
+      "Flujos de datos de proveedores de modelos",
+      "Topología de despliegue",
+      "Controles de uso y soporte"
+    ],
     "reviewTitle": "Traiga sus requisitos al equipo.",
     "reviewDesc": "Discuta el acceso al repositorio, proveedores de modelos y manejo de datos antes del lanzamiento.",
     "ctaTitle": "¿Necesita evaluar Think4Ever?",

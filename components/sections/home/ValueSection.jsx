@@ -3,6 +3,7 @@
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Eye, ShieldCheck, SlidersHorizontal, Terminal } from "lucide-react";
+import CodingToolPills from "@/components/ui/CodingToolPills";
 
 export default function ValueSection() {
   const { t } = useLanguage();
@@ -72,13 +73,7 @@ export default function ValueSection() {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            {["Claude Code", "Codex", "Cursor", "Windsurf", "MCP Clients"].map((tool, i) => (
-              <span key={i} className="bg-white border border-[#c8d9ed] text-[#093cad] text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm">
-                {tool}
-              </span>
-            ))}
-          </div>
+          <CodingToolPills variant="light" />
         </div>
       </div>
     </section>
