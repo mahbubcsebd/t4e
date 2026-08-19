@@ -153,6 +153,37 @@ const translateArticleContent = (html, lang) => {
       .replace(/Executive Summary/g, "Resumen Ejecutivo")
       .replace(/The Fallacy of Code-First Agentic Loops/g, 'La Falacia de los Bucles Agénticos "Código Primero"')
       .replace(/The Think4Ever Design-First Paradigm/g, "El Paradigma de Diseño Primero de Think4Ever")
+      .replace(/Think4Ever Approach: Architecture as the Primary Artifact/g, "El Enfoque Think4Ever: La Arquitectura como Artefacto Principal")
+      .replace(/Key Pillars of the Design-First Protocol:/g, "Pilares Clave del Protocolo de Diseño Primero:")
+      .replace(/Role-Specific Excellence: Code is Not Everyone's Job/g, "Excelencia Específica por Rol: El Código no es Trabajo de Todos")
+      .replace(/Technical Implementation & Workflow/g, "Implementación Técnica y Flujo de Trabajo")
+      .replace(/Why Architecture is the "New Compiler"/g, 'Por Qué la Arquitectura es el "Nuevo Compilador"')
+      .replace(/Core Capabilities/g, "Capacidades Principales")
+      .replace(/1\. Moving From Copilots to Autonomous System Engineering/g, "1. De Copilotos a Ingeniería Autónoma del Sistema")
+      .replace(/2\. Eliminating the Context Window Bottleneck/g, "2. Eliminando el Cuello de Botella de la Ventana de Contexto")
+      .replace(/3\. Token-Efficient, Deterministic Execution/g, "3. Ejecución Determinista Eficiente en Tokens")
+      .replace(/4\. Security Analysis/g, "4. Análisis de Seguridad")
+      .replace(/The Structural Shift in Application Development/g, "El Cambio Estructural en el Desarrollo de Aplicaciones")
+      .replace(/The Core Volatility: The Ephemeral Context Problem/g, "La Volatilidad Principal: El Problema del Contexto Efímero")
+      .replace(/The Architectural Solution: Think4Ever as an MCP Gateway/g, "La Solución Arquitectónica: Think4Ever como Puerta de Enlace MCP")
+      .replace(/The Structural Anatomy of the Permanent Product Blueprint/g, "La Anatomía Estructural del Modelo de Producto Permanente")
+      .replace(/Why Connect a Client: Six Practical Benefits/g, "Por Qué Conectar un Cliente: Seis Beneficios Prácticos")
+      .replace(/I\. One Spec, Every Agent/g, "I. Una Espec: Todos los Agentes")
+      .replace(/II\. Stop Re-explaining Your Product/g, "II. Deje de Reexplicar su Producto")
+      .replace(/III\. One Task Board, Everywhere/g, "III. Un Tablero de Tareas en Todos Lados")
+      .replace(/IV\. Issues Filed at the Source/g, "IV. Problemas Registrados en la Fuente")
+      .replace(/V\. Specs That Never Go Stale/g, "V. Especificaciones que Nunca Caducan")
+      .replace(/VI\. Switch Vendors, Keep Everything/g, "VI. Cambie de Proveedor, Conserve Todo")
+      .replace(/Multi-Agent Workflows in Practice/g, "Flujos de Trabajo Multi-Agente en la Práctica")
+      .replace(/Session Logs: Real-World Multi-Client Invocations/g, "Registros de Sesión: Invocaciones Multicliente en el Mundo Real")
+      .replace(/1\. Defining the Coding Harness/g, "1. Definiendo el Arnés de Código")
+      .replace(/Core Elements of a Coding Harness/g, "Elementos Principales de un Arnés de Código")
+      .replace(/2\. The Failure Modes of Current Coding Harnesses/g, "2. Modos de Falla de los Arneses de Código Actuales")
+      .replace(/A\. The "Code-First" Reactive Loop/g, 'A. El Bucle Reactivo "Código Primero"')
+      .replace(/B\. Context Rot and Architectural Drift/g, "B. Degradación del Contexto y Deriva Arquitectónica")
+      .replace(/C\. High Token Cost & Infinite Correction Loops/g, "C. Alto Costo de Tokens y Bucles Infinitos de Corrección")
+      .replace(/The Core Problem/g, "El Problema Principal")
+      .replace(/Summary/g, "Resumen")
       .replace(/System Architecture & Implementation Pipeline/g, "Arquitectura del Sistema y Flujo de Implementación")
       .replace(/The Shift from Vibe Coding to System Architecture/g, "El Cambio del Vibe Coding a la Arquitectura del Sistema")
       .replace(/Key Architectural Guardrails/g, "Salvaguardas Arquitectónicas Clave")
@@ -203,19 +234,7 @@ const translateArticleContent = (html, lang) => {
       .replace(/The Think4Ever Approach:/g, "El Enfoque Think4Ever:")
       .replace(/1\. Unified Architecture:/g, "1. Arquitectura Unificada:")
       .replace(/2\. Simultaneous Execution:/g, "2. Ejecución Simultánea:")
-      .replace(/3\. Result:/g, "3. Resultado:")
-      .replace(/High-velocity creation from natural language ideas to running apps\./g,
-               "Creación a gran velocidad desde ideas en lenguaje natural hasta aplicaciones en ejecución.")
-      .replace(/Functional prototyping directly from business requirements to validate flows without engineering sprints\./g,
-               "Prototipado funcional directamente desde los requisitos del negocio para validar flujos sin esprints de ingeniería.")
-      .replace(/Automating core processes with minimal overhead\./g,
-               "Automatización de procesos centrales con una sobrecarga mínima.")
-      .replace(/Scalable engine for delivering complex custom solutions with increased margins\./g,
-               "Motor escalable para ofrecer soluciones personalizadas complejas con mayores márgenes.")
-      .replace(/Large enterprises are hamstrung by technical debt and resource scarcity\. Think4Ever resolves these "wicked" problems:/g,
-               "Las grandes empresas se ven obstaculizadas por la deuda técnica y la escasez de recursos. Think4Ever resuelve estos problemas complejos:")
-      .replace(/In 2026, maintenance is expensive while code is cheap\. Think4Ever enables teams to build complex, enterprise-grade applications resilient to the chaos of automated generation by moving the "thinking" to the architecture layer\./g,
-               "En 2026, el mantenimiento es costoso mientras que el código es barato. Think4Ever permite a los equipos construir aplicaciones complejas de grado empresarial resistentes al caos de la generación automatizada al llevar el 'pensamiento' a la capa de arquitectura.");
+      .replace(/3\. Result:/g, "3. Resultado:");
   }
 
   if (lang === "nl") {
@@ -232,6 +251,37 @@ const translateArticleContent = (html, lang) => {
       .replace(/Executive Summary/g, "Samenvatting")
       .replace(/The Fallacy of Code-First Agentic Loops/g, 'De Misvatting van Code-First Agentische Loops')
       .replace(/The Think4Ever Design-First Paradigm/g, "Het Think4Ever Design-First Paradigma")
+      .replace(/Think4Ever Approach: Architecture as the Primary Artifact/g, "De Think4Ever Aanpak: Architectuur als Primair Artefact")
+      .replace(/Key Pillars of the Design-First Protocol:/g, "Kernpijlers van het Design-First Protocol:")
+      .replace(/Role-Specific Excellence: Code is Not Everyone's Job/g, "Rolspecifieke Uitmuntendheid: Code is niet Ieders Werk")
+      .replace(/Technical Implementation & Workflow/g, "Technische Implementatie & Werkstroom")
+      .replace(/Why Architecture is the "New Compiler"/g, 'Waarom Architectuur de "Nieuwe Compiler" is')
+      .replace(/Core Capabilities/g, "Kerncapaciteiten")
+      .replace(/1\. Moving From Copilots to Autonomous System Engineering/g, "1. Van Copilots naar Autonome Systeem-Engineering")
+      .replace(/2\. Eliminating the Context Window Bottleneck/g, "2. Het Knelpunt van het Contextvenster Elimineren")
+      .replace(/3\. Token-Efficient, Deterministic Execution/g, "3. Token-Efficiënte, Deterministische Uitvoering")
+      .replace(/4\. Security Analysis/g, "4. Beveiligingsanalyse")
+      .replace(/The Structural Shift in Application Development/g, "De Structurele Verschuiving in Applicatie-ontwikkeling")
+      .replace(/The Core Volatility: The Ephemeral Context Problem/g, "De Kernvolatiliteit: Het Probleem van Ephemere Context")
+      .replace(/The Architectural Solution: Think4Ever as an MCP Gateway/g, "De Architecturale Oplossing: Think4Ever als MCP Gateway")
+      .replace(/The Structural Anatomy of the Permanent Product Blueprint/g, "De Structurele Anatomie van de Permanente Productblauwdruk")
+      .replace(/Why Connect a Client: Six Practical Benefits/g, "Waarom een Client Verbinden: Zes Praktische Voordelen")
+      .replace(/I\. One Spec, Every Agent/g, "I. Één Spec, Elke Agent")
+      .replace(/II\. Stop Re-explaining Your Product/g, "II. Stop met het Opnieuw Uitleggen van uw Product")
+      .replace(/III\. One Task Board, Everywhere/g, "III. Één Taakbord, Overal")
+      .replace(/IV\. Issues Filed at the Source/g, "IV. Problemen Geregistreerd bij de Bron")
+      .replace(/V\. Specs That Never Go Stale/g, "V. Specificaties die Nooit Verouderen")
+      .replace(/VI\. Switch Vendors, Keep Everything/g, "VI. Wissel van Leverancier, Behoud Alles")
+      .replace(/Multi-Agent Workflows in Practice/g, "Multi-Agent Werkstromen in de Praktijk")
+      .replace(/Session Logs: Real-World Multi-Client Invocations/g, "Sessielogs: Real-World Multi-Client Invocaties")
+      .replace(/1\. Defining the Coding Harness/g, "1. Het Coderingsharnas Definiëren")
+      .replace(/Core Elements of a Coding Harness/g, "Kernelementen van een Coderingsharnas")
+      .replace(/2\. The Failure Modes of Current Coding Harnesses/g, "2. Foutmodi van Huidige Coderingsharnassen")
+      .replace(/A\. The "Code-First" Reactive Loop/g, 'A. De "Code-First" Reactieve Loop')
+      .replace(/B\. Context Rot and Architectural Drift/g, "B. Contextrot en Architecturale Verschuiving")
+      .replace(/C\. High Token Cost & Infinite Correction Loops/g, "C. Hoge Tokenkosten & Oneindige Correctieloops")
+      .replace(/The Core Problem/g, "Het Kernprobleem")
+      .replace(/Summary/g, "Samenvatting")
       .replace(/System Architecture & Implementation Pipeline/g, "Systeemarchitectuur & Implementatie-pipeline")
       .replace(/The Shift from Vibe Coding to System Architecture/g, "De Verschuiving van Vibe Coding naar Systeemarchitectuur")
       .replace(/Key Architectural Guardrails/g, "Belangrijkste Architecturale Waarborgen")
@@ -282,19 +332,7 @@ const translateArticleContent = (html, lang) => {
       .replace(/The Think4Ever Approach:/g, "De Think4Ever Aanpak:")
       .replace(/1\. Unified Architecture:/g, "1. Geünificeerde Architectuur:")
       .replace(/2\. Simultaneous Execution:/g, "2. Gelijktijdige Uitvoering:")
-      .replace(/3\. Result:/g, "3. Resultaat:")
-      .replace(/High-velocity creation from natural language ideas to running apps\./g,
-               "Supersnelle creatie van natuurlijke taal-ideeën tot werkende apps.")
-      .replace(/Functional prototyping directly from business requirements to validate flows without engineering sprints\./g,
-               "Functionele prototyping rechtstreeks uit zakelijke vereisten om stromen te valideren zonder engineering sprints.")
-      .replace(/Automating core processes with minimal overhead\./g,
-               "Automatisering van kernprocessen met minimale overhead.")
-      .replace(/Scalable engine for delivering complex custom solutions with increased margins\./g,
-               "Schaalbare engine voor het leveren van complexe maatwerkoplossingen met hogere marges.")
-      .replace(/Large enterprises are hamstrung by technical debt and resource scarcity\. Think4Ever resolves these "wicked" problems:/g,
-               "Grote ondernemingen worden belemmerd door technische schuld en schaarste aan middelen. Think4Ever lost deze complexe problemen op:")
-      .replace(/In 2026, maintenance is expensive while code is cheap\. Think4Ever enables teams to build complex, enterprise-grade applications resilient to the chaos of automated generation by moving the "thinking" to the architecture layer\./g,
-               "In 2026 is onderhoud duur terwijl code goedkoop is. Think4Ever stelt teams in staat om complexe, enterprise-grade applicaties te bouwen die bestand zijn tegen de chaos van geautomatiseerde generatie door het 'denken' naar de architectuurlaag te verplaatsen.");
+      .replace(/3\. Result:/g, "3. Resultaat:");
   }
 
   return html;
