@@ -20,11 +20,11 @@ export default function VideoModal({ isOpen, onClose, videoId }) {
         showCloseButton={false}
       >
         <DialogTitle className="sr-only">Video Player</DialogTitle>
-        <div className="relative w-full bg-white rounded-2xl shadow-2xl overflow-hidden border border-[#c8d9ed]/50">
-          <DialogClose className="absolute top-4 right-4 z-10 p-2 bg-white/80 hover:bg-white text-[#465a75] hover:text-[#09090d] rounded-full shadow-sm backdrop-blur-sm transition-colors border border-[#c8d9ed] outline-none">
-            <X className="w-5 h-5" />
-            <span className="sr-only">Close video</span>
-          </DialogClose>
+        <DialogClose className="fixed top-4 right-4 sm:top-6 sm:right-6 z-[60] p-2 bg-transparent text-slate-500 hover:text-slate-900 transition-colors outline-none cursor-pointer">
+          <X className="w-8 h-8 sm:w-10 sm:h-10" />
+          <span className="sr-only">Close video</span>
+        </DialogClose>
+        <div className="relative w-full rounded-2xl shadow-2xl overflow-hidden border border-[#c8d9ed]/50">
           <div className="relative w-full pb-[56.25%] bg-[#09090d]">
             <iframe
               src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
