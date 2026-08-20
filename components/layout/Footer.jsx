@@ -29,6 +29,7 @@ export default function Footer() {
                 width={180}
                 height={41}
                 className="h-10 w-auto object-contain"
+                style={{ filter: "brightness(0) invert(1)" }}
               />
             </Link>
             <p className="text-[#8a9ab5] text-sm leading-relaxed max-w-sm">
@@ -40,17 +41,17 @@ export default function Footer() {
                 href="https://www.youtube.com/@Think4EverInc"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#8a9ab5] hover:text-white hover:bg-[#093cad]/60 hover:border-[#093cad]/40 transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#8a9ab5] hover:text-white hover:bg-[#093cad]/60 hover:border-[#093cad]/40 transition-all duration-300"
               >
-                <FaYoutube className="w-4 h-4" />
+                <FaYoutube className="w-5 h-5" />
               </a>
               <a
                 href="https://www.linkedin.com/company/think4ever-global-inc/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#8a9ab5] hover:text-white hover:bg-[#07A7E1]/60 hover:border-[#07A7E1]/40 transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#8a9ab5] hover:text-white hover:bg-[#07A7E1]/60 hover:border-[#07A7E1]/40 transition-all duration-300"
               >
-                <FaLinkedinIn className="w-4 h-4" />
+                <FaLinkedinIn className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -138,7 +139,7 @@ export default function Footer() {
             {/* Legal Column */}
             <div className="flex flex-col gap-3 text-sm">
               <h4 className="text-white font-bold uppercase tracking-wider text-xs mb-2">
-                {t("privacyPolicyPage.heroEyebrow")}
+                Legal & Privacy
               </h4>
               <Link
                 href="/contact-us"

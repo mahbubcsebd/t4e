@@ -9,7 +9,7 @@ export default function CtaSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 md:py-32 bg-[#f2f7ff] border-b border-zinc-200/60" id="register">
+    <section className="py-24 md:py-32 bg-[#f2f7ff]" id="register">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Eyebrow */}
         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-[#093cad] text-xs font-bold uppercase tracking-wider mb-6 border border-[#c8d9ed] shadow-sm">
