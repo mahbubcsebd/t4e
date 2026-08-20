@@ -50,7 +50,10 @@ export default function Header() {
         t("nav.resourceLibrary") === "nav.resourceLibrary"
           ? "Resource Library"
           : t("nav.resourceLibrary"),
-      desc: t("nav.resourceLibraryDesc", "Explore our collection of resources."),
+      desc: t(
+        "nav.resourceLibraryDesc",
+        "Explore our collection of resources.",
+      ),
       href: "/resources",
       icon: <Puzzle className="w-4 h-4 text-[#07A7E1]" />,
     },
@@ -147,7 +150,7 @@ export default function Header() {
         </Link>
 
         {/* Center Desktop Menu Items */}
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-7 text-[15px] font-semibold text-[#465a75]">
+        <nav className="header-nav hidden lg:flex items-center gap-6 xl:gap-7 text-[15px] font-semibold text-[#465a75]">
           {/* Product Dropdown */}
           <div
             className="relative group"
@@ -196,7 +199,10 @@ export default function Header() {
                     {t("nav.codeToDesign")}
                   </div>
                   <p className="text-[10px] text-[#71849c] mt-0.5">
-                    {t("nav.codeToDesignDesc", "Reverse engineer code to visuals")}
+                    {t(
+                      "nav.codeToDesignDesc",
+                      "Reverse engineer code to visuals",
+                    )}
                   </p>
                 </div>
               </Link>
@@ -365,7 +371,7 @@ export default function Header() {
           {/* Sign in text link */}
           <a
             href="https://portal.think4ever.com/#/login"
-            className="text-[15px] font-semibold text-[#465a75] hover:text-[#093cad] transition-colors whitespace-nowrap"
+            className="text-[15px] font-medium text-[#465a75] hover:text-[#093cad] transition-colors whitespace-nowrap"
           >
             {t("nav.signIn")}
           </a>
@@ -373,10 +379,19 @@ export default function Header() {
           {/* Start free gradient pill button */}
           <a
             href="https://portal.think4ever.com/#/register"
-            className="inline-flex items-center justify-center whitespace-nowrap text-[15px] font-bold px-6 py-2.5 rounded-full text-white transition-all duration-300"
-            style={{ background: "linear-gradient(135deg, #07A7E1 0%, #093cad 100%)", boxShadow: "0 4px 14px rgba(9,60,173,0.25)" }}
-            onMouseEnter={e => e.currentTarget.style.boxShadow = "0 6px 20px rgba(9,60,173,0.38)"}
-            onMouseLeave={e => e.currentTarget.style.boxShadow = "0 4px 14px rgba(9,60,173,0.25)"}
+            className="inline-flex items-center justify-center whitespace-nowrap text-[15px] font-medium px-6 py-2.5 rounded-full text-white transition-all duration-300"
+            style={{
+              background: "linear-gradient(135deg, #07A7E1 0%, #093cad 100%)",
+              boxShadow: "0 4px 14px rgba(9,60,173,0.25)",
+            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.boxShadow =
+                "0 6px 20px rgba(9,60,173,0.38)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.boxShadow =
+                "0 4px 14px rgba(9,60,173,0.25)")
+            }
           >
             <span>{t("nav.startFree")}</span>
           </a>

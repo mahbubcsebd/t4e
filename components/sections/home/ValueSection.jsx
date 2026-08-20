@@ -28,7 +28,6 @@ export default function ValueSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Left Column (Clarity & Compatibility) */}
           <div className="lg:col-span-8 flex flex-col gap-6">
-            
             {/* Card 1: Clarity */}
             <div className="flex-1 bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl overflow-hidden flex flex-col group">
               {/* Large Visual Canvas */}
@@ -44,12 +43,12 @@ export default function ValueSection() {
                   <div className="absolute top-[30%] right-[25%] p-3 bg-indigo-50 text-indigo-500 rounded-2xl border border-indigo-100 shadow-sm opacity-60 group-hover:opacity-100 group-hover:-translate-x-2 transition-all duration-700 delay-300 z-10">
                     <Network className="w-6 h-6" />
                   </div>
-  
+
                   {/* Center Magnifying Glass / Focus */}
                   <div className="relative z-20 w-24 h-24 bg-white/90 backdrop-blur-md rounded-full shadow-[0_20px_40px_rgb(7,167,225,0.15)] border-4 border-[#07A7E1]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
                     <Search className="w-10 h-10 text-[#07A7E1]" />
                   </div>
-  
+
                   {/* Connecting lines that fade in */}
                   <svg className="absolute inset-0 w-full h-full text-slate-300 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
                     <line
@@ -82,7 +81,7 @@ export default function ValueSection() {
                   </svg>
                 </div>
               </div>
-  
+
               {/* Content */}
               <div className="p-8 sm:p-10 flex-1 bg-gradient-to-b from-[#f8fafc] to-[#f1f5f9]">
                 <div className="flex items-center gap-3 mb-5">
@@ -101,18 +100,18 @@ export default function ValueSection() {
                 </p>
               </div>
             </div>
-            
+
             {/* Bottom Banner: Compatibility (Now inside left column) */}
             <div className="bg-white border border-[#e2e8f0] shadow-sm rounded-3xl p-8 flex flex-col xl:flex-row items-center justify-between gap-6 relative overflow-hidden group">
               {/* Subtle background gradient */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-  
+
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 text-left relative z-10 w-full xl:w-auto">
                 <div className="p-4 bg-[#09090d] text-white rounded-xl shadow-xl shadow-black/10 shrink-0 group-hover:scale-110 transition-transform duration-500">
                   <Terminal className="w-6 h-6" />
                 </div>
                 <div>
-                  <strong className="text-xl sm:text-2xl font-extrabold text-[#09090d] block mb-2 tracking-tight">
+                  <strong className="text-xl sm:text-2xl font-medium text-[#09090d] block mb-2 tracking-tight">
                     {t("values.compatTitle")}
                   </strong>
                   <p className="text-sm text-slate-600 max-w-md leading-relaxed">
@@ -120,7 +119,7 @@ export default function ValueSection() {
                   </p>
                 </div>
               </div>
-  
+
               <div className="relative z-10 w-full xl:w-auto overflow-x-auto hide-scrollbar pb-2 xl:pb-0">
                 <CodingToolPills variant="light" />
               </div>

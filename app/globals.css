@@ -29,6 +29,23 @@ body {
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
+/* Few global improvements (Might need to delete later) */
+
+h1 {
+  font-weight: 600;
+}
+
+h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+.header-nav a,
+.header-nav button span {
+  font-weight: 500;
+}
+
+
+
 /* Gradient text: cyan at top -> blue at bottom */
 .text-gradient {
   background: linear-gradient(180deg, #07A7E1 0%, #093cad 100%);
