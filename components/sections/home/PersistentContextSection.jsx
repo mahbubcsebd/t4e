@@ -11,34 +11,37 @@ export default function PersistentContextSection() {
 
   return (
     <section className="py-24 md:py-32 bg-white border-b border-zinc-200/60 overflow-hidden relative">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Header */}
-        <div className="max-w-3xl mx-auto mb-12 md:mb-14 text-center flex flex-col items-center">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-3">
-            {t("persistent.eyebrow")}
-          </span>
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-12 mb-12 md:mb-16">
+          <div className="flex flex-col items-start max-w-xl">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e7f7fc] text-[#093cad] text-xs font-bold uppercase tracking-wider mb-4 border border-[#07A7E1]/20">
+              {t("persistent.eyebrow")}
+            </span>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#09090d] tracking-tight mb-4">
-            {t("persistent.title")
-              .split(". ")
-              .map((sentence, i, arr) => (
-                <React.Fragment key={i}>
-                  {i === 0 ? (
-                    <span>{sentence}. </span>
-                  ) : (
-                    <span className="text-gradient">{sentence}</span>
-                  )}
-                </React.Fragment>
-              ))}
-          </h2>
-
-          <p className="text-base text-[#465a75] leading-relaxed">
-            {t("persistent.subtitle")}
-          </p>
+            <h2 className="text-2xl sm:text-3xl md:text-[44px] font-extrabold text-[#09090d] tracking-tight leading-[1.2]">
+              {t("persistent.title")
+                .split(". ")
+                .map((sentence, i, arr) => (
+                  <React.Fragment key={i}>
+                    {i === 0 ? (
+                      <span>{sentence}. </span>
+                    ) : (
+                      <span className="text-gradient">{sentence}</span>
+                    )}
+                  </React.Fragment>
+                ))}
+            </h2>
+          </div>
+          <div className="max-w-md">
+            <p className="text-base sm:text-lg text-[#465a75] leading-relaxed">
+              {t("persistent.subtitle")}
+            </p>
+          </div>
         </div>
 
         {/* Central Brain Visualization */}
-        <div className="max-w-4xl mx-auto relative mt-8 md:mt-16 py-10">
+        <div className="max-w-4xl mx-auto relative mt-8 md:mt-16 py-10 pb-0">
           {/* Connecting Dashed Line (Desktop Horizontal) */}
           <div className="hidden md:block absolute top-[120px] left-[15%] right-[15%] border-t-2 border-dashed border-[#c8d9ed] z-0"></div>
 

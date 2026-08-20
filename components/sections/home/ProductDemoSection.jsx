@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { Play, ArrowRight } from "lucide-react";
+import { Play } from "lucide-react";
 import VideoModal from "@/components/ui/VideoModal";
 
 export default function ProductDemoSection() {
@@ -36,30 +36,48 @@ export default function ProductDemoSection() {
             </p>
           </div>
 
-          {/* Right: Buttons */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full sm:w-auto relative z-10">
+          {/* Right: Video Cards */}
+          <div className="flex flex-col sm:flex-row items-stretch gap-4 shrink-0 w-full lg:w-auto relative z-10">
+            {/* Card 1 */}
             <button
               onClick={() => {
                 setVideoId("FY68DuwOf4Q");
                 setIsVideoOpen(true);
               }}
-              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#093cad] hover:bg-[#072f85] text-white font-bold rounded-full px-6 py-3 text-sm transition-all shadow-md shadow-blue-600/20 whitespace-nowrap"
-              style={{
-                background: "linear-gradient(135deg, #07A7E1 0%, #093cad 100%)",
-              }}
+              className="group flex flex-col items-start gap-4 bg-white border border-[#c8d9ed] hover:border-[#07A7E1]/50 rounded-2xl p-5 hover:-translate-y-1 transition-all duration-300 text-left w-full sm:w-[200px]"
             >
-              <Play className="w-4 h-4 fill-current" />
-              <span>{t("demo.btnCodeToDesign")}</span>
+              <div className="w-12 h-12 rounded-full bg-[#e7f7fc] text-[#07A7E1] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#07A7E1] group-hover:text-white transition-all duration-300">
+                <Play className="w-6 h-6" />
+              </div>
+              <div>
+                <span className="block text-[10px] font-semibold text-[#07A7E1] uppercase tracking-widest mb-1">
+                  {t("demo.eyebrow")}
+                </span>
+                <span className="block text-[15px] font-semibold text-[#09090d] leading-tight group-hover:text-[#07A7E1] transition-colors">
+                  {t("demo.btnCodeToDesign")}
+                </span>
+              </div>
             </button>
+
+            {/* Card 2 */}
             <button
               onClick={() => {
                 setVideoId("Lq-vza9_CzI");
                 setIsVideoOpen(true);
               }}
-              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-white text-[#093cad] hover:bg-[#f2f7ff] font-bold rounded-full px-6 py-3 text-sm transition-all shadow-sm border border-[#c8d9ed] whitespace-nowrap"
+              className="group flex flex-col items-start gap-4 bg-white border border-[#c8d9ed] hover:border-[#093cad]/50 rounded-2xl p-5 hover:-translate-y-1 transition-all duration-300 text-left w-full sm:w-[200px]"
             >
-              <Play className="w-4 h-4 fill-current" />
-              <span>{t("demo.btnDesignToCode")}</span>
+              <div className="w-12 h-12 rounded-full bg-[#f2f7ff] text-[#093cad] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#093cad] group-hover:text-white transition-all duration-300">
+                <Play className="w-6 h-6" />
+              </div>
+              <div>
+                <span className="block text-[10px] font-semibold text-[#093cad] uppercase tracking-widest mb-1">
+                  {t("demo.eyebrow")}
+                </span>
+                <span className="block text-[15px] font-semibold text-[#09090d] leading-tight group-hover:text-[#093cad] transition-colors">
+                  {t("demo.btnDesignToCode")}
+                </span>
+              </div>
             </button>
           </div>
         </div>

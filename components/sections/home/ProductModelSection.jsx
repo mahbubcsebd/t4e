@@ -95,7 +95,7 @@ export default function ProductModelSection() {
                       <Layers className="w-10 h-10 text-white" />
                     </div>
 
-                    <span className="inline-block px-3 py-1 bg-white text-[#093cad] border border-[#c8d9ed]/60 rounded-md text-[10px] font-extrabold uppercase tracking-widest mb-3 shadow-sm">
+                    <span className="inline-block px-3 py-1 bg-white text-[#093cad] border border-[#c8d9ed]/60 rounded-md text-[10px] font-extrabold uppercase tracking-widest mb-3">
                       {t("productModel.centerTag")}
                     </span>
 
