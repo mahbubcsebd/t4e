@@ -2,6 +2,8 @@
 
 import Container from "@/components/ui/Container";
 
+import SectionHeading from "@/components/layout/SectionHeading";
+
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { SiClaude, SiCursor, SiWindsurf } from "react-icons/si";
@@ -15,13 +17,11 @@ export default function PersistentContextSection() {
     <section className="py-24 md:py-32 bg-white border-b border-zinc-200/60 overflow-hidden relative">
       <Container className="relative z-10">
         {/* Editorial Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-12 mb-12 md:mb-16">
-          <div className="flex flex-col items-start max-w-xl">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e7f7fc] text-[#093cad] text-xs font-bold uppercase tracking-wider mb-4 border border-[#07A7E1]/20">
-              {t("persistent.eyebrow")}
-            </span>
-
-            <h2 className="text-2xl sm:text-3xl md:text-[44px] font-extrabold text-[#09090d] tracking-tight leading-[1.2]">
+        <SectionHeading 
+          align="split"
+          eyebrow={t("persistent.eyebrow")}
+          title={
+            <>
               {t("persistent.title")
                 .split(". ")
                 .map((sentence, i, arr) => (
@@ -33,14 +33,10 @@ export default function PersistentContextSection() {
                     )}
                   </React.Fragment>
                 ))}
-            </h2>
-          </div>
-          <div className="max-w-md">
-            <p className="text-base sm:text-lg text-[#465a75] leading-relaxed">
-              {t("persistent.subtitle")}
-            </p>
-          </div>
-        </div>
+            </>
+          }
+          subtitle={t("persistent.subtitle")}
+        />
 
         {/* Central Brain Visualization */}
         <div className="max-w-4xl mx-auto relative mt-8 md:mt-16 py-10 pb-0">

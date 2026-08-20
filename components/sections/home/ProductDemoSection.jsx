@@ -2,6 +2,8 @@
 
 import Container from "@/components/ui/Container";
 
+import SectionHeading from "@/components/layout/SectionHeading";
+
 import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Play } from "lucide-react";
@@ -26,17 +28,12 @@ export default function ProductDemoSection() {
           </div>
 
           {/* Left: Text */}
-          <div className="max-w-2xl text-center lg:text-left relative z-10">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-4 border border-[#07A7E1]/20">
-              {t("demo.eyebrow")}
-            </span>
-            <h2 className="max-w-[500px] text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#09090d] tracking-tight mb-4">
-              {t("demo.title")}
-            </h2>
-            <p className="max-w-[500px] text-sm sm:text-base text-[#465a75] leading-relaxed">
-              {t("demo.subtitle")}
-            </p>
-          </div>
+          <SectionHeading 
+            align="left"
+            eyebrow={t("demo.eyebrow")}
+            title={t("demo.title")}
+            subtitle={t("demo.subtitle")}
+          />
 
           {/* Right: Video Cards */}
           <div className="flex flex-col sm:flex-row items-stretch gap-4 shrink-0 w-full lg:w-auto relative z-10">

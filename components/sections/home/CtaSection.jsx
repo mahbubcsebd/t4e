@@ -2,6 +2,8 @@
 
 import Container from "@/components/ui/Container";
 
+import SectionHeading from "@/components/layout/SectionHeading";
+
 import React from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
@@ -13,17 +15,15 @@ export default function CtaSection() {
   return (
     <section className="py-24 md:py-32 bg-white" id="register">
       <Container className="max-w-3xl text-center">
-        {/* Eyebrow */}
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e7f7fc] text-[#093cad] text-xs font-bold uppercase tracking-wider mb-6 border border-[#c8d9ed]">
-          {t("nav.startFree")}
-        </span>
-
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090d] tracking-tight mb-5 leading-[1.1]">
-          {t("cta.title")}
-        </h2>
-        <p className="text-base sm:text-lg text-[#465a75] mb-10 max-w-xl mx-auto leading-relaxed">
-          {t("cta.subtitle")}
-        </p>
+        <SectionHeading 
+          eyebrow={t("nav.startFree")}
+          title={t("cta.title")}
+          subtitle={t("cta.subtitle")}
+          className="mb-10 max-w-none"
+          titleClassName="text-3xl sm:text-4xl md:text-5xl leading-[1.1] mb-5"
+          subtitleClassName="max-w-xl mx-auto"
+          eyebrowClassName="border border-[#c8d9ed] mb-6"
+        />
 
         {/* CTA Button */}
         <Link

@@ -2,6 +2,8 @@
 
 import Container from "@/components/ui/Container";
 
+import SectionHeading from "@/components/layout/SectionHeading";
+
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { SiClaude, SiCursor, SiWindsurf, SiGithub } from "react-icons/si";
@@ -25,14 +27,10 @@ export default function HowItWorksSection() {
     >
       <Container className="relative z-10">
         {/* Editorial Header */}
-        <div className="max-w-3xl mx-auto mb-12 md:mb-14 text-center flex flex-col items-center">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-3">
-            {t("howItWorks.eyebrow")}
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#09090d] tracking-tight mb-4">
-            {t("howItWorks.title")}
-          </h2>
-        </div>
+        <SectionHeading 
+          eyebrow={t("howItWorks.eyebrow")}
+          title={t("howItWorks.title")}
+        />
 
         {/* Workflow Pipeline */}
         <div className="relative">

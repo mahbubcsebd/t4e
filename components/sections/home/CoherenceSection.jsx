@@ -1,6 +1,7 @@
 "use client";
 
 import Container from "@/components/ui/Container";
+import SectionHeading from "@/components/layout/SectionHeading";
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
@@ -31,25 +32,12 @@ export default function CoherenceSection() {
       id="code-to-design"
     >
       <Container className="relative z-10">
-        {/* Editorial Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-12 mb-12 md:mb-16">
-          <div className="flex flex-col items-start max-w-xl">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e7f7fc] text-[#093cad] text-xs font-bold uppercase tracking-wider mb-4 border border-[#07A7E1]/20">
-              {t("coherence.eyebrow")}
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-[44px] font-extrabold text-[#09090d] tracking-tight leading-[1.2]">
-              {t("coherence.titlePrefix")}
-              <span className="text-gradient">
-                {t("coherence.titleHighlight")}
-              </span>
-            </h2>
-          </div>
-          <div className="max-w-md">
-            <p className="text-base sm:text-lg text-[#465a75] leading-relaxed">
-              {t("coherence.subtitle")}
-            </p>
-          </div>
-        </div>
+        <SectionHeading 
+          align="split"
+          eyebrow={t("coherence.eyebrow")}
+          title={<>{t("coherence.titlePrefix")} <span className="text-gradient">{t("coherence.titleHighlight")}</span></>}
+          subtitle={t("coherence.subtitle")}
+        />
 
         {/* Workspace Interface Window */}
         <div className="max-w-7xl mx-auto bg-white rounded-3xl border border-zinc-200 shadow-[0_20px_40px_rgb(9,60,173,0.06)] overflow-hidden flex flex-col group">

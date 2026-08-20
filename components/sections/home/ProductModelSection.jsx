@@ -2,6 +2,8 @@
 
 import Container from "@/components/ui/Container";
 
+import SectionHeading from "@/components/layout/SectionHeading";
+
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import {
@@ -26,18 +28,12 @@ export default function ProductModelSection() {
 
       <Container className="relative z-10">
         {/* Editorial Header */}
-        <div className="max-w-3xl mx-auto mb-12 md:mb-14 text-center flex flex-col items-center">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#07A7E1] animate-pulse"></span>
-            {t("productModel.eyebrow")}
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#09090d] tracking-tight mb-4">
-            {t("productModel.title")}
-          </h2>
-          <p className="text-base text-[#465a75] leading-relaxed">
-            {t("productModel.subtitle")}
-          </p>
-        </div>
+        <SectionHeading 
+          animatePulse={true}
+          eyebrow={t("productModel.eyebrow")}
+          title={t("productModel.title")}
+          subtitle={t("productModel.subtitle")}
+        />
 
         {/* The Blueprint Architecture Visual */}
         <div className="relative max-w-5xl mx-auto mt-10">

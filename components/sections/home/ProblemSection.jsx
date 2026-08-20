@@ -2,6 +2,8 @@
 
 import Container from "@/components/ui/Container";
 
+import SectionHeading from "@/components/layout/SectionHeading";
+
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import {
@@ -25,15 +27,13 @@ export default function ProblemSection() {
 
       <Container className="relative z-10">
         {/* Editorial Header */}
-        <div className="max-w-[700px] mx-auto mb-10 md:mb-14 text-center">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#f2f7ff] text-[#093cad] text-xs font-bold uppercase tracking-wider mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#07A7E1] animate-pulse"></span>
-            {t("problem.eyebrow")}
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#09090d] tracking-tight">
-            {t("problem.title")}
-          </h2>
-        </div>
+        <SectionHeading 
+          animatePulse={true}
+          eyebrow={t("problem.eyebrow")}
+          title={t("problem.title")}
+          className="max-w-[700px] mx-auto mb-10 md:mb-14"
+          eyebrowClassName="bg-[#f2f7ff] text-[#093cad] mb-3"
+        />
 
         {/* The System Canvas Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
