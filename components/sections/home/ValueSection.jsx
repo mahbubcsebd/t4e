@@ -1,6 +1,6 @@
 "use client";
 
-import Container from "@/components/ui/Container";
+import Container from "@/components/layout/Container";
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";

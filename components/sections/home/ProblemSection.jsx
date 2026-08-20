@@ -1,6 +1,6 @@
 "use client";
 
-import Container from "@/components/ui/Container";
+import Container from "@/components/layout/Container";
 
 import SectionHeading from "@/components/layout/SectionHeading";
 
@@ -27,8 +27,7 @@ export default function ProblemSection() {
 
       <Container className="relative z-10">
         {/* Editorial Header */}
-        <SectionHeading 
-          animatePulse={true}
+        <SectionHeading
           eyebrow={t("problem.eyebrow")}
           title={t("problem.title")}
           className="max-w-[700px] mx-auto mb-10 md:mb-14"

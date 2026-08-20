@@ -1,6 +1,6 @@
 "use client";
 
-import Container from "@/components/ui/Container";
+import Container from "@/components/layout/Container";
 
 import SectionHeading from "@/components/layout/SectionHeading";
 
@@ -28,8 +28,7 @@ export default function ProductModelSection() {
 
       <Container className="relative z-10">
         {/* Editorial Header */}
-        <SectionHeading 
-          animatePulse={true}
+        <SectionHeading
           eyebrow={t("productModel.eyebrow")}
           title={t("productModel.title")}
           subtitle={t("productModel.subtitle")}

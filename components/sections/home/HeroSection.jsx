@@ -1,6 +1,6 @@
 "use client";
 
-import Container from "@/components/ui/Container";
+import Container from "@/components/layout/Container";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
