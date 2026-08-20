@@ -21,15 +21,13 @@ export default function VideoModal({ isOpen, onClose, videoId }) {
         overlayClassName="bg-black/70 backdrop-blur-sm"
       >
         <DialogTitle className="sr-only">Video Player</DialogTitle>
-        {/* Relative wrapper so absolute close button is positioned relative to the modal */}
         <div className="relative w-full">
-          {/* Close button: top-right, just above the video */}
-          <DialogClose className="absolute top-0 -right-10 z-[60] p-1.5 bg-transparent text-slate-700 hover:text-slate-900 transition-colors outline-none cursor-pointer">
-            <X className="w-6 h-6" strokeWidth={2.5} />
-            <span className="sr-only">Close video</span>
-          </DialogClose>
-
           <div className="relative w-full rounded-2xl shadow-2xl overflow-hidden border border-[#c8d9ed]/50">
+            {/* Close button inside video top-right corner */}
+            <DialogClose className="absolute top-3 right-3 z-[60] p-2 bg-black/40 hover:bg-black/60 text-white rounded-full transition-colors outline-none cursor-pointer backdrop-blur-sm">
+              <X className="w-5 h-5" strokeWidth={2.5} />
+              <span className="sr-only">Close video</span>
+            </DialogClose>
             <div className="relative w-full pb-[56.25%] bg-[#09090d]">
               <iframe
                 src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
