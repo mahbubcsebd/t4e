@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
@@ -31,6 +31,20 @@ export default function Header() {
   const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
   const [mobileDocsOpen, setMobileDocsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const langDropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        langDropdownRef.current &&
+        !langDropdownRef.current.contains(event.target)
+      ) {
+        setLangDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -331,41 +345,54 @@ export default function Header() {
         {/* Right Action Items */}
         <div className="hidden lg:flex items-center gap-5 shrink-0">
           {/* Language Selector Dropdown */}
-          <div className="relative">
+          <div className="relative" ref={langDropdownRef}>
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              className="flex items-center gap-2 px-3.5 py-2 rounded-full border border-[#c8d9ed] hover:border-[#093cad] text-sm font-medium text-[#314865] bg-white transition-all shadow-sm h-10"
+              className="flex items-center gap-1.5 text-[15px] font-semibold text-[#465a75] hover:text-[#093cad] transition-colors py-2"
             >
-              <Globe className="w-4 h-4 text-[#07A7E1] shrink-0" />
-              <span className="font-semibold text-xs tracking-wide">
-                {currentLang.name}
-              </span>
-              <ChevronDown className="w-3.5 h-3.5 opacity-60 shrink-0" />
+              <Globe className="w-4 h-4 text-[#07A7E1]" />
+              <span className="uppercase">{currentLang.code}</span>
+              <ChevronDown
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
+              />
             </button>
 
-            {langDropdownOpen && (
-              <div className="absolute right-0 top-full mt-2 w-36 bg-white rounded-xl shadow-xl border border-[#c8d9ed] py-1.5 z-50 animate-in fade-in slide-in-from-top-2">
-                {availableLanguages.map((lang) => (
+            <div
+              className={`absolute right-0 top-full mt-1 w-36 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-slate-100 py-2 z-50 transition-all duration-200 ${
+                langDropdownOpen
+                  ? "opacity-100 visible translate-y-0"
+                  : "opacity-0 invisible -translate-y-2"
+              }`}
+            >
+              {availableLanguages
+                .filter((l) => !l.hidden)
+                .map((lang) => (
                   <button
                     key={lang.code}
                     onClick={() => {
                       setLanguage(lang.code);
                       setLangDropdownOpen(false);
                     }}
-                    className={`w-full flex items-center justify-between px-3.5 py-2 text-xs font-semibold transition-colors ${
+                    className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
                       language === lang.code
-                        ? "bg-[#f2f7ff] text-[#093cad] font-bold"
-                        : "text-[#314865] hover:bg-slate-50"
+                        ? "text-[#093cad] font-bold bg-[#f2f7ff]/50"
+                        : "text-[#465a75] font-medium hover:text-[#093cad] hover:bg-slate-50"
                     }`}
                   >
-                    <span>{lang.name}</span>
+                    <div className="flex items-center gap-2">
+                      <img
+                        src={`https://flagcdn.com/w20/${lang.code === "en" ? "us" : lang.code}.png`}
+                        alt={lang.name}
+                        className="w-[18px] h-auto shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
+                      />
+                      <span>{lang.name}</span>
+                    </div>
                     {language === lang.code && (
-                      <span className="text-[#07A7E1] font-bold">✓</span>
+                      <span className="text-[#07A7E1] text-xs">✓</span>
                     )}
                   </button>
                 ))}
-              </div>
-            )}
+            </div>
           </div>
 
           {/* Sign in text link */}
@@ -402,34 +429,47 @@ export default function Header() {
           <div className="relative">
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#c8d9ed] text-xs font-semibold text-[#314865]"
+              className="flex items-center gap-1 text-[14px] font-semibold text-[#465a75] py-2"
             >
-              <Globe className="w-3.5 h-3.5 text-[#07A7E1]" />
-              <span>{currentLang.name}</span>
-              <ChevronDown className="w-3 h-3 opacity-60" />
+              <Globe className="w-4 h-4 text-[#07A7E1]" />
+              <span className="uppercase">{currentLang.code}</span>
+              <ChevronDown
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
+              />
             </button>
 
             {langDropdownOpen && (
-              <div className="absolute right-0 top-full mt-2 w-36 bg-white rounded-xl shadow-xl border border-[#c8d9ed] py-1.5 z-50 animate-in fade-in slide-in-from-top-2">
-                {availableLanguages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => {
-                      setLanguage(lang.code);
-                      setLangDropdownOpen(false);
-                    }}
-                    className={`w-full flex items-center justify-between px-3 py-2 text-xs font-semibold transition-colors ${
-                      language === lang.code
-                        ? "bg-[#f2f7ff] text-[#093cad] font-bold"
-                        : "text-[#314865] hover:bg-slate-50"
-                    }`}
-                  >
-                    <span>{lang.name}</span>
-                    {language === lang.code && (
-                      <span className="text-[#07A7E1] font-bold">✓</span>
-                    )}
-                  </button>
-                ))}
+              <div className="absolute right-0 top-full mt-1 w-36 bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-slate-100 py-1.5 z-50 animate-in fade-in slide-in-from-top-2">
+                {availableLanguages
+                  .filter((l) => !l.hidden)
+                  .map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => {
+                        setLanguage(lang.code);
+                        setLangDropdownOpen(false);
+                      }}
+                      className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
+                        language === lang.code
+                          ? "text-[#093cad] font-bold bg-[#f2f7ff]/50"
+                          : "text-[#465a75] font-medium hover:bg-slate-50"
+                      }`}
+                    >
+                      <div className="flex items-center gap-2">
+                        <img
+                          src={`https://flagcdn.com/w20/${lang.code === "en" ? "us" : lang.code}.png`}
+                          alt={lang.name}
+                          className="w-[18px] h-auto rounded-sm shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
+                        />
+                        <span>{lang.name}</span>
+                      </div>
+                      {language === lang.code && (
+                        <span className="text-[#07A7E1] font-bold text-xs">
+                          ✓
+                        </span>
+                      )}
+                    </button>
+                  ))}
               </div>
             )}
           </div>

@@ -59,7 +59,7 @@ export default function Footer() {
           <div className="md:col-span-8 lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
             {/* Product Column */}
             <div className="flex flex-col gap-3 text-sm">
-              <h4 className="font-bold text-white uppercase tracking-wider text-xs mb-2 opacity-40">
+              <h4 className="text-white font-bold uppercase tracking-wider text-xs mb-2">
                 {t("nav.product")}
               </h4>
               <Link
@@ -96,7 +96,7 @@ export default function Footer() {
 
             {/* Resources Column */}
             <div className="flex flex-col gap-3 text-sm">
-              <h4 className="font-bold text-white uppercase tracking-wider text-xs mb-2 opacity-40">
+              <h4 className="text-white font-bold uppercase tracking-wider text-xs mb-2">
                 {t("nav.resources")}
               </h4>
               <Link
@@ -137,7 +137,7 @@ export default function Footer() {
 
             {/* Legal Column */}
             <div className="flex flex-col gap-3 text-sm">
-              <h4 className="font-bold text-white uppercase tracking-wider text-xs mb-2 opacity-40">
+              <h4 className="text-white font-bold uppercase tracking-wider text-xs mb-2">
                 {t("privacyPolicyPage.heroEyebrow")}
               </h4>
               <Link
@@ -170,7 +170,9 @@ export default function Footer() {
           {/* Gradient badge */}
           <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#093cad]/20 to-[#07A7E1]/20 border border-white/5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#07A7E1] animate-pulse" />
-            <span className="text-xs font-semibold text-[#8a9ab5]">Think4Ever Inc.</span>
+            <span className="text-xs font-semibold text-[#8a9ab5]">
+              Think4Ever Inc.
+            </span>
           </div>
         </div>
       </div>
