@@ -18,6 +18,7 @@ export default function VideoModal({ isOpen, onClose, videoId }) {
       <DialogContent 
         className="w-full max-w-5xl p-0 bg-transparent border-0 shadow-none sm:max-w-5xl" 
         showCloseButton={false}
+        overlayClassName="bg-black/70 backdrop-blur-sm"
       >
         <DialogTitle className="sr-only">Video Player</DialogTitle>
         {/* Relative wrapper so absolute close button is positioned relative to the modal */}
