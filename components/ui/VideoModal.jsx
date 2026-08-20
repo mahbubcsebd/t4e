@@ -20,20 +20,25 @@ export default function VideoModal({ isOpen, onClose, videoId }) {
         showCloseButton={false}
       >
         <DialogTitle className="sr-only">Video Player</DialogTitle>
-        <DialogClose className="absolute -top-12 right-0 md:-right-12 z-[60] p-2 bg-transparent text-slate-600 hover:text-slate-900 transition-colors outline-none cursor-pointer">
-          <X className="w-8 h-8" />
-          <span className="sr-only">Close video</span>
-        </DialogClose>
-        <div className="relative w-full rounded-2xl shadow-2xl overflow-hidden border border-[#c8d9ed]/50">
-          <div className="relative w-full pb-[56.25%] bg-[#09090d]">
-            <iframe
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute top-0 left-0 w-full h-full"
-            ></iframe>
+        {/* Relative wrapper so absolute close button is positioned relative to the modal */}
+        <div className="relative w-full">
+          {/* Close button: top-right, just above the video */}
+          <DialogClose className="absolute -top-10 right-0 z-[60] p-1.5 bg-transparent text-white/80 hover:text-white transition-colors outline-none cursor-pointer">
+            <X className="w-6 h-6" strokeWidth={2.5} />
+            <span className="sr-only">Close video</span>
+          </DialogClose>
+
+          <div className="relative w-full rounded-2xl shadow-2xl overflow-hidden border border-[#c8d9ed]/50">
+            <div className="relative w-full pb-[56.25%] bg-[#09090d]">
+              <iframe
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full"
+              ></iframe>
+            </div>
           </div>
         </div>
       </DialogContent>
