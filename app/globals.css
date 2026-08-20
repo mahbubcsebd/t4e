@@ -57,7 +57,7 @@ h2, h3, h4, h5, h6 {
 .btn-primary {
   background: linear-gradient(135deg, #07A7E1 0%, #093cad 100%);
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 9999px;
   padding: 10px 24px;
   display: inline-flex;

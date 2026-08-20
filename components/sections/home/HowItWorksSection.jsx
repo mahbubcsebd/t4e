@@ -79,7 +79,7 @@ export default function HowItWorksSection() {
                 </div>
                 {/* Content */}
                 <div className="p-6 md:p-8 flex flex-col flex-1">
-                  <span className="text-[10px] font-extrabold text-[#07A7E1] uppercase tracking-widest mb-3">
+                  <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-widest mb-3">
                     {t("howItWorks.step1Num")}
                   </span>
                   <h3 className="text-xl font-bold text-[#09090d] mb-3">
@@ -153,7 +153,7 @@ export default function HowItWorksSection() {
                 </div>
                 {/* Content */}
                 <div className="p-6 md:p-8 flex flex-col flex-1">
-                  <span className="text-[10px] font-extrabold text-[#07A7E1] uppercase tracking-widest mb-3">
+                  <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-widest mb-3">
                     {t("howItWorks.step2Num")}
                   </span>
                   <h3 className="text-xl font-bold text-[#09090d] mb-3">
@@ -213,7 +213,7 @@ export default function HowItWorksSection() {
                 </div>
                 {/* Content */}
                 <div className="p-6 md:p-8 flex flex-col flex-1">
-                  <span className="text-[10px] font-extrabold text-[#07A7E1] uppercase tracking-widest mb-3">
+                  <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-widest mb-3">
                     {t("howItWorks.step3Num")}
                   </span>
                   <h3 className="text-xl font-bold text-[#09090d] mb-3">

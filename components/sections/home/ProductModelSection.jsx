@@ -43,7 +43,7 @@ export default function ProductModelSection() {
             {/* Left Column (Perspectives 1 & 3) */}
             <div className="lg:col-span-4 flex flex-col justify-between gap-6 lg:gap-16 relative z-10 order-2 lg:order-1">
               {/* Perspective 1: Engineering */}
-              <div className="bg-white border border-[#c8d9ed]/80 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+              <div className="bg-white border border-[#c8d9ed]/80 rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                 {/* Connecting Line to Center */}
                 <div className="absolute -right-8 top-1/2 w-8 h-[2px] bg-gradient-to-r from-[#c8d9ed] to-slate-200 hidden lg:block group-hover:from-[#07A7E1] transition-all duration-500 origin-left"></div>
 
@@ -63,7 +63,7 @@ export default function ProductModelSection() {
               </div>
 
               {/* Perspective 3: Operations */}
-              <div className="bg-white border border-[#c8d9ed]/80 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+              <div className="bg-white border border-[#c8d9ed]/80 rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                 {/* Connecting Line to Center */}
                 <div className="absolute -right-8 top-1/2 w-8 h-[2px] bg-gradient-to-r from-[#c8d9ed] to-slate-200 hidden lg:block group-hover:from-indigo-400 transition-all duration-500 origin-left"></div>
 
@@ -103,7 +103,7 @@ export default function ProductModelSection() {
                       {t("productModel.centerTitle")}
                     </h3>
 
-                    <div className="flex items-center justify-center gap-2 text-[11px] font-bold text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-100 shadow-sm">
+                    <div className="flex items-center justify-center gap-2 text-[11px] font-medium text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-100">
                       <RefreshCw
                         className="w-3.5 h-3.5 animate-spin-slow"
                         style={{ animationDuration: "4s" }}
@@ -118,7 +118,7 @@ export default function ProductModelSection() {
             {/* Right Column (Perspectives 2 & 4) */}
             <div className="lg:col-span-4 flex flex-col justify-between gap-6 lg:gap-16 relative z-10 order-3">
               {/* Perspective 2: Product */}
-              <div className="bg-white border border-[#c8d9ed]/80 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+              <div className="bg-white border border-[#c8d9ed]/80 rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                 {/* Connecting Line to Center */}
                 <div className="absolute -left-8 top-1/2 w-8 h-[2px] bg-gradient-to-l from-[#c8d9ed] to-slate-200 hidden lg:block group-hover:from-[#093cad] transition-all duration-500 origin-right"></div>
 
@@ -138,7 +138,7 @@ export default function ProductModelSection() {
               </div>
 
               {/* Perspective 4: Business */}
-              <div className="bg-white border border-[#c8d9ed]/80 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+              <div className="bg-white border border-[#c8d9ed]/80 rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                 {/* Connecting Line to Center */}
                 <div className="absolute -left-8 top-1/2 w-8 h-[2px] bg-gradient-to-l from-[#c8d9ed] to-slate-200 hidden lg:block group-hover:from-cyan-500 transition-all duration-500 origin-right"></div>
 

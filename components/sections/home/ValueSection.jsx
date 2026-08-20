@@ -86,9 +86,9 @@ export default function ValueSection() {
               <div className="p-8 sm:p-10 flex-1 bg-gradient-to-b from-[#f8fafc] to-[#f1f5f9]">
                 <div className="flex items-center gap-3 mb-5">
                   <div className="p-2 bg-white rounded-lg border border-slate-200 shadow-sm">
-                    <Eye className="w-4 h-4 text-[#07A7E1]" />
+                    <Eye className="w-4 h-4 text-[#093cad]" />
                   </div>
-                  <span className="text-[10px] font-extrabold text-[#07A7E1] uppercase tracking-widest">
+                  <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-widest">
                     {t("values.card1Tag")}
                   </span>
                 </div>
@@ -102,7 +102,7 @@ export default function ValueSection() {
             </div>
 
             {/* Bottom Banner: Compatibility (Now inside left column) */}
-            <div className="bg-white border border-[#e2e8f0] shadow-sm rounded-3xl p-8 flex flex-col xl:flex-row items-center justify-between gap-6 relative overflow-hidden group">
+            <div className="bg-white border border-[#e2e8f0] rounded-3xl p-8 flex flex-col xl:flex-row items-center justify-between gap-6 relative overflow-hidden group">
               {/* Subtle background gradient */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
 
@@ -179,9 +179,9 @@ export default function ValueSection() {
               <div className="p-6 sm:p-8 flex-1 bg-gradient-to-b from-[#f8fafc] to-[#f1f5f9]">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-white rounded-lg border border-slate-200 shadow-sm">
-                    <SlidersHorizontal className="w-4 h-4 text-indigo-600" />
+                    <SlidersHorizontal className="w-4 h-4 text-[#093cad]" />
                   </div>
-                  <span className="text-[10px] font-extrabold text-indigo-600 uppercase tracking-widest">
+                  <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-widest">
                     {t("values.card3Tag")}
                   </span>
                 </div>

@@ -36,7 +36,7 @@ export default function CodingToolPills({ variant = "light" }) {
       {tools.map((tool, i) => (
         <div
           key={i}
-          className="group flex items-center gap-2.5 bg-white border border-[#c8d9ed]/80 hover:border-[#07A7E1]/50 text-[#093cad] text-[13px] font-bold pr-4 pl-1.5 py-1.5 rounded-full shadow-sm hover:shadow-[0_6px_16px_rgba(9,60,173,0.1)] transition-all duration-300 cursor-default hover:-translate-y-0.5"
+          className="group flex items-center gap-2.5 bg-white border border-[#c8d9ed]/80 hover:border-[#07A7E1]/50 text-[#093cad] text-[13px] font-semibold pr-4 pl-1.5 py-1.5 rounded-full transition-all duration-300 cursor-default"
         >
           <div className="flex items-center justify-center w-7 h-7 rounded-full bg-[#f4f9ff] border border-[#c8d9ed]/50 group-hover:scale-110 transition-transform duration-300">
             <tool.icon className="w-[15px] h-[15px] text-[#07A7E1]" />

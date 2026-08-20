@@ -50,21 +50,21 @@ export default function PersistentContextSection() {
               <div className="hidden md:block absolute top-[40px] h-[128px] left-1/2 border-l-2 border-dashed border-[#c8d9ed] -translate-x-1/2 z-0"></div>
 
               {/* Card 1: Cursor */}
-              <div className="w-full md:w-[200px] bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm hover:shadow-md hover:border-[#07A7E1]/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-full md:w-[200px] bg-white border border-zinc-200 rounded-2xl p-3 hover:border-[#07A7E1]/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-[#f4f9ff] rounded-xl text-[#07A7E1] group-hover:scale-110 transition-transform">
                   <SiCursor className="w-5 h-5" />
                 </div>
-                <strong className="text-sm font-bold text-slate-800 tracking-wide">
+                <strong className="text-sm font-semibold text-slate-800 tracking-wide">
                   Cursor
                 </strong>
               </div>
 
               {/* Card 2: Windsurf */}
-              <div className="w-full md:w-[200px] bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm hover:shadow-md hover:border-[#07A7E1]/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-full md:w-[200px] bg-white border border-zinc-200 rounded-2xl p-3  hover:border-[#07A7E1]/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-[#f4f9ff] rounded-xl text-[#07A7E1] group-hover:scale-110 transition-transform">
                   <SiWindsurf className="w-5 h-5" />
                 </div>
-                <strong className="text-sm font-bold text-slate-800 tracking-wide">
+                <strong className="text-sm font-semibold text-slate-800 tracking-wide">
                   Windsurf
                 </strong>
               </div>
@@ -106,11 +106,11 @@ export default function PersistentContextSection() {
               </div>
 
               {/* Bottom Node (MCP Clients) */}
-              <div className="w-full md:w-[200px] bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm hover:shadow-md hover:border-[#07A7E1]/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-full md:w-[200px] bg-white border border-zinc-200 rounded-2xl p-3  hover:border-[#07A7E1]/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-[#f4f9ff] rounded-xl text-[#07A7E1] group-hover:scale-110 transition-transform">
                   <Network className="w-5 h-5" />
                 </div>
-                <strong className="text-sm font-bold text-slate-800 tracking-wide">
+                <strong className="text-sm font-semibold text-slate-800 tracking-wide">
                   MCP Clients
                 </strong>
               </div>
@@ -122,21 +122,21 @@ export default function PersistentContextSection() {
               <div className="hidden md:block absolute top-[40px] h-[128px] left-1/2 border-l-2 border-dashed border-[#c8d9ed] -translate-x-1/2 z-0"></div>
 
               {/* Card 3: Claude */}
-              <div className="w-full md:w-[200px] bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm hover:shadow-md hover:border-[#07A7E1]/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-full md:w-[200px] bg-white border border-zinc-200 rounded-2xl p-3  hover:border-[#07A7E1]/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-[#f4f9ff] rounded-xl text-[#07A7E1] group-hover:scale-110 transition-transform">
                   <SiClaude className="w-5 h-5" />
                 </div>
-                <strong className="text-sm font-bold text-slate-800 tracking-wide">
+                <strong className="text-sm font-semibold text-slate-800 tracking-wide">
                   Claude Code
                 </strong>
               </div>
 
               {/* Card 4: Codex / GPT */}
-              <div className="w-full md:w-[200px] bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm hover:shadow-md hover:border-[#07A7E1]/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-full md:w-[200px] bg-white border border-zinc-200 rounded-2xl p-3  hover:border-[#07A7E1]/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-[#f4f9ff] rounded-xl text-[#07A7E1] group-hover:scale-110 transition-transform">
                   <TbBrandOpenai className="w-5 h-5" />
                 </div>
-                <strong className="text-sm font-bold text-slate-800 tracking-wide">
+                <strong className="text-sm font-semibold text-slate-800 tracking-wide">
                   Codex
                 </strong>
               </div>

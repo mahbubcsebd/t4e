@@ -193,8 +193,8 @@ export default function ProblemSection() {
                 <span className="text-xs font-mono font-medium text-slate-400">
                   03
                 </span>
-                <span className="h-[1px] w-8 bg-amber-200"></span>
-                <span className="text-[10px] font-bold text-amber-600 uppercase tracking-widest">
+                <span className="h-[1px] w-8 bg-[#c8d9ed]"></span>
+                <span className="text-[10px] font-bold text-[#093cad] uppercase tracking-widest">
                   {t("problem.card3Tag")}
                 </span>
               </div>
@@ -208,47 +208,56 @@ export default function ProblemSection() {
 
             {/* Visual Canvas (Right side on desktop) */}
             <div className="lg:col-span-7 h-auto min-h-64 lg:h-auto bg-[#fafbfc] relative p-6 sm:p-10 flex items-center justify-center order-1 lg:order-2 overflow-hidden">
-              <div className="w-full max-w-md relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 sm:gap-4">
-                {/* Connecting Line */}
-                <div className="absolute left-[36px] sm:left-[40px] top-[40px] sm:top-1/2 sm:-translate-y-1/2 bottom-[40px] sm:bottom-auto w-[2px] sm:w-auto sm:h-[2px] sm:right-[150px] bg-gradient-to-b sm:bg-gradient-to-r from-amber-400 via-amber-200 to-slate-200 z-0"></div>
+              <div className="w-full max-w-md relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 sm:gap-0">
+                {/* Connecting Line Mobile */}
+                <div className="sm:hidden absolute left-[36px] top-[40px] bottom-[40px] border-l-2 border-dashed border-[#c8d9ed] z-0"></div>
 
                 {/* Local Change Node */}
-                <div className="relative z-10 flex flex-row sm:flex-col items-center gap-4 sm:gap-3 bg-white sm:bg-transparent p-3 sm:p-0 rounded-xl sm:rounded-none border border-slate-200 sm:border-none shadow-sm sm:shadow-none w-full sm:w-auto">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white border-[3px] border-amber-400 shadow-md flex items-center justify-center relative shrink-0 group-hover:scale-110 transition-transform duration-500">
+                <div className="relative z-10 flex flex-row sm:flex-col items-center gap-4 sm:gap-3 bg-white sm:bg-transparent p-3 sm:p-0 rounded-xl sm:rounded-none border border-slate-200 sm:border-none shadow-sm sm:shadow-none w-full sm:w-auto shrink-0 md:translate-x-[20px]">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white border-[3px] border-[#093cad] shadow-md flex items-center justify-center relative shrink-0 group-hover:scale-110 transition-transform duration-500 md:mt-[30px]">
                     <div
-                      className="absolute inset-0 rounded-full bg-amber-400/30 animate-ping"
+                      className="absolute inset-0 rounded-full bg-[#093cad]/30 animate-ping"
                       style={{ animationDuration: "3s" }}
                     ></div>
-                    <GitPullRequest className="w-5 h-5 text-amber-500" />
+                    <GitPullRequest className="w-5 h-5 text-[#093cad]" />
                   </div>
                   <span className="text-xs sm:text-[10px] font-extrabold text-slate-700 sm:text-slate-500 uppercase tracking-widest bg-white sm:bg-transparent px-2 py-1 rounded">
                     Local Edit
                   </span>
                 </div>
 
+                {/* Connecting Line Desktop */}
+                <div className="hidden sm:block flex-1 h-0 border-t-2 border-dashed border-[#c8d9ed] z-0"></div>
+
                 {/* Cascading Impact Nodes */}
-                <div className="relative z-10 flex flex-col gap-4 pl-16 sm:pl-0 w-full sm:w-auto">
-                  <div className="bg-white border border-[#c8d9ed] rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-75">
-                    <div className="absolute -left-[30px] sm:-left-[24px] top-1/2 -translate-y-1/2 w-[22px] sm:w-[16px] h-[2px] bg-slate-200"></div>
-                    <div className="w-2 h-2 rounded-full bg-[#093cad] absolute -left-1 top-1/2 -translate-y-1/2"></div>
+                <div className="relative z-10 flex flex-col gap-4 pl-16 sm:pl-0 sm:ml-[24px] w-full sm:w-auto shrink-0">
+                  {/* Tree Branches (Desktop only) */}
+                  <div className="hidden sm:block absolute -left-[24px] top-[24px] bottom-1/2 border-l-2 border-t-2 border-dashed border-[#c8d9ed] rounded-tl-2xl w-[24px] z-0"></div>
+                  <div className="hidden sm:block absolute -left-[24px] top-1/2 bottom-[24px] border-l-2 border-b-2 border-dashed border-[#c8d9ed] rounded-bl-2xl w-[24px] z-0"></div>
+                  <div className="hidden sm:block absolute -left-[24px] top-1/2 -translate-y-[1px] w-[24px] border-t-2 border-dashed border-[#c8d9ed] z-0"></div>
+
+                  <div className="bg-white border border-[#c8d9ed] rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-75 z-10">
+                    {/* Mobile Card connecting line */}
+                    <div className="sm:hidden absolute -left-[28px] top-1/2 -translate-y-[1px] w-[28px] border-t-2 border-dashed border-[#c8d9ed] z-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[#093cad] absolute -left-1 top-1/2 -translate-y-1/2 z-20"></div>
                     <Network className="w-4 h-4 text-[#093cad]" />
                     <span className="text-xs font-bold text-slate-700">
                       APIs & Interfaces
                     </span>
                   </div>
 
-                  <div className="bg-white border border-[#c8d9ed] rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-150">
-                    <div className="absolute -left-[30px] sm:-left-[24px] top-1/2 -translate-y-1/2 w-[22px] sm:w-[16px] h-[2px] bg-slate-200"></div>
-                    <div className="w-2 h-2 rounded-full bg-[#07A7E1] absolute -left-1 top-1/2 -translate-y-1/2"></div>
+                  <div className="bg-white border border-[#c8d9ed] rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-150 z-10">
+                    <div className="sm:hidden absolute -left-[28px] top-1/2 -translate-y-[1px] w-[28px] border-t-2 border-dashed border-[#c8d9ed] z-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[#07A7E1] absolute -left-1 top-1/2 -translate-y-1/2 z-20"></div>
                     <Database className="w-4 h-4 text-[#07A7E1]" />
                     <span className="text-xs font-bold text-slate-700">
                       Data Models
                     </span>
                   </div>
 
-                  <div className="bg-white border border-[#c8d9ed] rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-200">
-                    <div className="absolute -left-[30px] sm:-left-[24px] top-1/2 -translate-y-1/2 w-[22px] sm:w-[16px] h-[2px] bg-slate-200"></div>
-                    <div className="w-2 h-2 rounded-full bg-slate-400 absolute -left-1 top-1/2 -translate-y-1/2"></div>
+                  <div className="bg-white border border-[#c8d9ed] rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-200 z-10">
+                    <div className="sm:hidden absolute -left-[28px] top-1/2 -translate-y-[1px] w-[28px] border-t-2 border-dashed border-[#c8d9ed] z-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-slate-400 absolute -left-1 top-1/2 -translate-y-1/2 z-20"></div>
                     <LayoutTemplate className="w-4 h-4 text-slate-500" />
                     <span className="text-xs font-bold text-slate-700">
                       UI / Workflows
