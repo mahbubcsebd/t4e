@@ -9,17 +9,8 @@ export default function CtaSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 md:py-32 bg-[#f2f7ff] border-b border-zinc-200/60 relative overflow-hidden" id="register">
-      {/* Decorative glow blobs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#07A7E1]/8 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#093cad]/8 rounded-full blur-[100px] pointer-events-none" />
-
-      {/* Subtle watermark */}
-      <div className="absolute inset-0 flex items-center justify-center text-[#093cad]/[0.025] text-[220px] font-black leading-none select-none pointer-events-none overflow-hidden">
-        T4E
-      </div>
-
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <section className="py-24 md:py-32 bg-[#f2f7ff] border-b border-zinc-200/60" id="register">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Eyebrow */}
         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-[#093cad] text-xs font-bold uppercase tracking-wider mb-6 border border-[#c8d9ed] shadow-sm">
           <span className="w-1.5 h-1.5 rounded-full bg-[#07A7E1] animate-pulse"></span>
