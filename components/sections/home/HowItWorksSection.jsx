@@ -1,5 +1,7 @@
 "use client";
 
+import Container from "@/components/ui/Container";
+
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { SiClaude, SiCursor, SiWindsurf, SiGithub } from "react-icons/si";
@@ -21,7 +23,7 @@ export default function HowItWorksSection() {
       className="py-24 md:py-32 bg-white border-b border-zinc-200/60 relative overflow-hidden"
       id="how-it-works"
     >
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <Container className="relative z-10">
         {/* Editorial Header */}
         <div className="max-w-3xl mx-auto mb-12 md:mb-14 text-center flex flex-col items-center">
           <span className="inline-block px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-3">
@@ -227,7 +229,7 @@ export default function HowItWorksSection() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
 
       {/* Keyframes for the line animation */}
       <style

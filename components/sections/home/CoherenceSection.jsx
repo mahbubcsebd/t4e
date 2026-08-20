@@ -1,5 +1,7 @@
 "use client";
 
+import Container from "@/components/ui/Container";
+
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import {
@@ -28,7 +30,7 @@ export default function CoherenceSection() {
       className="py-24 md:py-32 bg-white border-b border-zinc-200/60 overflow-hidden relative"
       id="code-to-design"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <Container className="relative z-10">
         {/* Editorial Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-12 mb-12 md:mb-16">
           <div className="flex flex-col items-start max-w-xl">
@@ -50,7 +52,7 @@ export default function CoherenceSection() {
         </div>
 
         {/* Workspace Interface Window */}
-        <div className="max-w-5xl mx-auto bg-white rounded-3xl border border-zinc-200 shadow-[0_20px_40px_rgb(9,60,173,0.06)] overflow-hidden flex flex-col group">
+        <div className="max-w-7xl mx-auto bg-white rounded-3xl border border-zinc-200 shadow-[0_20px_40px_rgb(9,60,173,0.06)] overflow-hidden flex flex-col group">
           {/* Mac-style Window Header */}
           <div className="h-12 bg-zinc-50 border-b border-zinc-100 flex items-center px-5 justify-between">
             <div className="flex items-center gap-2">
@@ -185,7 +187,7 @@ export default function CoherenceSection() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

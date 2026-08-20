@@ -1,5 +1,7 @@
 "use client";
 
+import Container from "@/components/ui/Container";
+
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
@@ -30,7 +32,7 @@ export default function HeroSection() {
 
   return (
     <section className="py-12 md:py-18 lg:py-20 bg-gradient-to-b from-white via-[#f7fafe] to-white border-b border-[#c8d9ed]/40 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Container>
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column Copy */}
           <div className="lg:col-span-6 flex flex-col items-start text-left">
@@ -394,7 +396,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
 
       <VideoModal
         isOpen={isVideoOpen}

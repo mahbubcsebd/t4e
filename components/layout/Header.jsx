@@ -59,18 +59,18 @@ export default function Header() {
     availableLanguages[0];
 
   const resourcesLinks = [
-    {
-      title:
-        t("nav.resourceLibrary") === "nav.resourceLibrary"
-          ? "Resource Library"
-          : t("nav.resourceLibrary"),
-      desc: t(
-        "nav.resourceLibraryDesc",
-        "Explore our collection of resources.",
-      ),
-      href: "/resources",
-      icon: <Puzzle className="w-4 h-4 text-[#07A7E1]" />,
-    },
+    // {
+    //   title:
+    //     t("nav.resourceLibrary") === "nav.resourceLibrary"
+    //       ? "Resource Library"
+    //       : t("nav.resourceLibrary"),
+    //   desc: t(
+    //     "nav.resourceLibraryDesc",
+    //     "Explore our collection of resources.",
+    //   ),
+    //   href: "/resources",
+    //   icon: <Puzzle className="w-4 h-4 text-[#07A7E1]" />,
+    // },
     {
       title: t("nav.blog") === "nav.blog" ? "Blog" : t("nav.blog"),
       desc: t("nav.blogDesc", "Read the latest news and articles."),

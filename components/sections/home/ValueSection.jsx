@@ -1,5 +1,7 @@
 "use client";
 
+import Container from "@/components/ui/Container";
+
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import {
@@ -23,7 +25,7 @@ export default function ValueSection() {
 
   return (
     <section className="py-24 md:py-32 bg-white border-b border-zinc-200/60 overflow-hidden relative">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <Container className="relative z-10">
         {/* Bento Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Left Column (Clarity & Compatibility) */}
@@ -195,7 +197,7 @@ export default function ValueSection() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -1,5 +1,7 @@
 "use client";
 
+import Container from "@/components/ui/Container";
+
 import React from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
@@ -9,10 +11,10 @@ export default function CtaSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 md:py-32 bg-[#f2f7ff]" id="register">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-24 md:py-32 bg-white" id="register">
+      <Container className="max-w-3xl text-center">
         {/* Eyebrow */}
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-[#093cad] text-xs font-bold uppercase tracking-wider mb-6 border border-[#c8d9ed]">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e7f7fc] text-[#093cad] text-xs font-bold uppercase tracking-wider mb-6 border border-[#c8d9ed]">
           {t("nav.startFree")}
         </span>
 
@@ -38,7 +40,7 @@ export default function CtaSection() {
         <p className="text-xs text-[#8a9ab5] mt-4 font-medium">
           No credit card required · Free to start
         </p>
-      </div>
+      </Container>
     </section>
   );
 }

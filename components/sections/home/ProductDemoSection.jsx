@@ -1,5 +1,7 @@
 "use client";
 
+import Container from "@/components/ui/Container";
+
 import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Play } from "lucide-react";
@@ -15,7 +17,7 @@ export default function ProductDemoSection() {
       className="py-20 md:py-28 bg-white border-b border-zinc-200/60"
       id="resources"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Container>
         {/* Clean card matching other sections */}
         <div className="bg-[#f2f7ff] rounded-3xl border border-[#c8d9ed]/70 shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-8 sm:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 overflow-hidden relative">
           {/* Subtle background watermark */}
@@ -81,7 +83,7 @@ export default function ProductDemoSection() {
             </button>
           </div>
         </div>
-      </div>
+      </Container>
 
       <VideoModal
         isOpen={isVideoOpen}

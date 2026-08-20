@@ -1,5 +1,7 @@
 "use client";
 
+import Container from "@/components/ui/Container";
+
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import {
@@ -20,9 +22,9 @@ export default function ProductModelSection() {
       id="product"
     >
       {/* Subtle Grid Background */}
-      <div className="absolute inset-0 bg-[#f8fbff]"></div>
+      <div className="absolute inset-0 bg-white"></div>
 
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <Container className="relative z-10">
         {/* Editorial Header */}
         <div className="max-w-3xl mx-auto mb-12 md:mb-14 text-center flex flex-col items-center">
           <span className="inline-block px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-3">
@@ -159,7 +161,7 @@ export default function ProductModelSection() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

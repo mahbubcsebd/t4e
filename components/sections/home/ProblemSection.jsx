@@ -1,5 +1,7 @@
 "use client";
 
+import Container from "@/components/ui/Container";
+
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import {
@@ -21,7 +23,7 @@ export default function ProblemSection() {
       {/* Background canvas elements */}
       <div className="absolute inset-0 bg-white"></div>
 
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <Container className="relative z-10">
         {/* Editorial Header */}
         <div className="max-w-[700px] mx-auto mb-10 md:mb-14 text-center">
           <span className="inline-block px-3 py-1 rounded-full bg-[#f2f7ff] text-[#093cad] text-xs font-bold uppercase tracking-wider mb-3">
@@ -268,7 +270,7 @@ export default function ProblemSection() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
