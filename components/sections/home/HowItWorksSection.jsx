@@ -18,7 +18,7 @@ export default function HowItWorksSection() {
 
   return (
     <section
-      className="py-24 md:py-32 bg-[#f8fafc] border-b border-zinc-200/60 relative overflow-hidden"
+      className="py-24 md:py-32 bg-white border-b border-zinc-200/60 relative overflow-hidden"
       id="how-it-works"
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

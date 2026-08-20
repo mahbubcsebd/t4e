@@ -12,8 +12,7 @@ export default function CtaSection() {
     <section className="py-24 md:py-32 bg-[#f2f7ff]" id="register">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Eyebrow */}
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-[#093cad] text-xs font-bold uppercase tracking-wider mb-6 border border-[#c8d9ed] shadow-sm">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#07A7E1] animate-pulse"></span>
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-[#093cad] text-xs font-bold uppercase tracking-wider mb-6 border border-[#c8d9ed]">
           {t("nav.startFree")}
         </span>
 
@@ -27,11 +26,12 @@ export default function CtaSection() {
         {/* CTA Button */}
         <Link
           href="https://portal.think4ever.com/#/register"
-          className="inline-flex items-center justify-center gap-2 text-base font-bold text-white rounded-full px-10 py-4 transition-all duration-300 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/35 hover:-translate-y-0.5"
-          style={{ background: "linear-gradient(135deg, #07A7E1 0%, #093cad 100%)" }}
+          className="inline-flex items-center justify-center gap-2 text-base font-medium text-white rounded-full px-10 py-4 transition-all duration-300 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/35 hover:-translate-y-0.5"
+          style={{
+            background: "linear-gradient(135deg, #07A7E1 0%, #093cad 100%)",
+          }}
         >
           <span>{t("cta.btn")}</span>
-          <ArrowRight className="w-5 h-5" />
         </Link>
 
         {/* Trust micro-copy */}

@@ -19,11 +19,11 @@ export default function ProblemSection() {
   return (
     <section className="py-24 md:py-32 bg-white relative overflow-hidden border-b border-[#c8d9ed]/40">
       {/* Background canvas elements */}
-      <div className="absolute inset-0 bg-[#f8fbff]"></div>
+      <div className="absolute inset-0 bg-white"></div>
 
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Header */}
-        <div className="max-w-3xl mx-auto mb-10 md:mb-14 text-center">
+        <div className="max-w-[700px] mx-auto mb-10 md:mb-14 text-center">
           <span className="inline-block px-3 py-1 rounded-full bg-[#f2f7ff] text-[#093cad] text-xs font-bold uppercase tracking-wider mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-[#07A7E1] animate-pulse"></span>
             {t("problem.eyebrow")}
