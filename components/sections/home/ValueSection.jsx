@@ -2,78 +2,199 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { Eye, ShieldCheck, SlidersHorizontal, Terminal } from "lucide-react";
+import {
+  Eye,
+  ShieldCheck,
+  SlidersHorizontal,
+  Terminal,
+  Search,
+  Database,
+  Network,
+  Layout,
+  FileCode,
+  FileText,
+  CheckCircle2,
+  ToggleRight,
+} from "lucide-react";
 import CodingToolPills from "@/components/ui/CodingToolPills";
 
 export default function ValueSection() {
   const { t } = useLanguage();
 
-  const values = [
-    {
-      icon: <Eye className="w-5 h-5 text-[#07A7E1]" />,
-      tag: t("values.card1Tag"),
-      title: t("values.card1Title"),
-      desc: t("values.card1Desc"),
-    },
-    {
-      icon: <ShieldCheck className="w-5 h-5 text-[#093cad]" />,
-      tag: t("values.card2Tag"),
-      title: t("values.card2Title"),
-      desc: t("values.card2Desc"),
-    },
-    {
-      icon: <SlidersHorizontal className="w-5 h-5 text-indigo-600" />,
-      tag: t("values.card3Tag"),
-      title: t("values.card3Title"),
-      desc: t("values.card3Desc"),
-    },
-  ];
-
   return (
-    <section className="py-20 md:py-28 bg-white border-b border-zinc-200/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* 3 Value Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {values.map((v, idx) => (
-            <div
-              key={idx}
-              className="bg-[#f8fafc]/50 border border-zinc-200/60 rounded-3xl p-8 hover:border-zinc-300 transition-all hover:shadow-lg"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2.5 rounded-xl bg-white border border-zinc-200/60 shadow-sm">
-                  {v.icon}
+    <section className="py-24 md:py-32 bg-white border-b border-zinc-200/60 overflow-hidden relative">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Bento Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          {/* Left Column (Clarity & Compatibility) */}
+          <div className="lg:col-span-8 flex flex-col gap-6">
+            
+            {/* Card 1: Clarity */}
+            <div className="flex-1 bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl overflow-hidden flex flex-col group">
+              {/* Large Visual Canvas */}
+              <div className="h-64 sm:h-80 bg-white relative overflow-hidden flex flex-col items-center justify-center p-6 border-b border-[#f1f5f9]">
+                <div className="relative w-full max-w-lg h-full flex items-center justify-center">
+                  {/* Background Nodes */}
+                  <div className="absolute top-[20%] left-[20%] p-3 bg-blue-50 text-blue-500 rounded-2xl border border-blue-100 shadow-sm opacity-60 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-700 delay-100 z-10">
+                    <Database className="w-6 h-6" />
+                  </div>
+                  <div className="absolute bottom-[20%] left-[35%] p-3 bg-emerald-50 text-emerald-500 rounded-2xl border border-emerald-100 shadow-sm opacity-60 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-700 delay-200 z-10">
+                    <Layout className="w-6 h-6" />
+                  </div>
+                  <div className="absolute top-[30%] right-[25%] p-3 bg-indigo-50 text-indigo-500 rounded-2xl border border-indigo-100 shadow-sm opacity-60 group-hover:opacity-100 group-hover:-translate-x-2 transition-all duration-700 delay-300 z-10">
+                    <Network className="w-6 h-6" />
+                  </div>
+  
+                  {/* Center Magnifying Glass / Focus */}
+                  <div className="relative z-20 w-24 h-24 bg-white/90 backdrop-blur-md rounded-full shadow-[0_20px_40px_rgb(7,167,225,0.15)] border-4 border-[#07A7E1]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <Search className="w-10 h-10 text-[#07A7E1]" />
+                  </div>
+  
+                  {/* Connecting lines that fade in */}
+                  <svg className="absolute inset-0 w-full h-full text-slate-300 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                    <line
+                      x1="30%"
+                      y1="30%"
+                      x2="50%"
+                      y2="50%"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeDasharray="4,4"
+                    />
+                    <line
+                      x1="40%"
+                      y1="70%"
+                      x2="50%"
+                      y2="50%"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeDasharray="4,4"
+                    />
+                    <line
+                      x1="70%"
+                      y1="40%"
+                      x2="50%"
+                      y2="50%"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeDasharray="4,4"
+                    />
+                  </svg>
                 </div>
-                <span className="text-xs font-bold text-[#093cad] uppercase tracking-wider bg-[#eaf0fb] px-3 py-1 rounded-full">
-                  {v.tag}
-                </span>
               </div>
-              <h3 className="text-lg font-bold text-[#09090d] mb-2 leading-snug">
-                {v.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-[#465a75] leading-relaxed">
-                {v.desc}
-              </p>
+  
+              {/* Content */}
+              <div className="p-8 sm:p-10 flex-1 bg-gradient-to-b from-[#f8fafc] to-[#f1f5f9]">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="p-2 bg-white rounded-lg border border-slate-200 shadow-sm">
+                    <Eye className="w-4 h-4 text-[#07A7E1]" />
+                  </div>
+                  <span className="text-[10px] font-extrabold text-[#07A7E1] uppercase tracking-widest">
+                    {t("values.card1Tag")}
+                  </span>
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#09090d] mb-4 tracking-tight">
+                  {t("values.card1Title")}
+                </h3>
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl">
+                  {t("values.card1Desc")}
+                </p>
+              </div>
             </div>
-          ))}
-        </div>
-
-        {/* Compatibility Bar */}
-        <div className="bg-white border border-zinc-200/60 shadow-sm rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4 text-center md:text-left">
-            <div className="p-3 bg-[#093cad] text-white rounded-xl shadow-md">
-              <Terminal className="w-6 h-6" />
-            </div>
-            <div>
-              <strong className="text-base font-bold text-[#09090d] block">
-                {t("values.compatTitle")}
-              </strong>
-              <p className="text-xs sm:text-sm text-[#465a75] mt-1 max-w-xl">
-                {t("values.compatDesc")}
-              </p>
+            
+            {/* Bottom Banner: Compatibility (Now inside left column) */}
+            <div className="bg-white border border-[#e2e8f0] shadow-sm rounded-3xl p-8 flex flex-col xl:flex-row items-center justify-between gap-6 relative overflow-hidden group">
+              {/* Subtle background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+  
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 text-left relative z-10 w-full xl:w-auto">
+                <div className="p-4 bg-[#09090d] text-white rounded-xl shadow-xl shadow-black/10 shrink-0 group-hover:scale-110 transition-transform duration-500">
+                  <Terminal className="w-6 h-6" />
+                </div>
+                <div>
+                  <strong className="text-xl sm:text-2xl font-extrabold text-[#09090d] block mb-2 tracking-tight">
+                    {t("values.compatTitle")}
+                  </strong>
+                  <p className="text-sm text-slate-600 max-w-md leading-relaxed">
+                    {t("values.compatDesc")}
+                  </p>
+                </div>
+              </div>
+  
+              <div className="relative z-10 w-full xl:w-auto overflow-x-auto hide-scrollbar pb-2 xl:pb-0">
+                <CodingToolPills variant="light" />
+              </div>
             </div>
           </div>
 
-          <CodingToolPills variant="light" />
+          {/* Cards 2 & 3: Coherence & Control (Right Column) */}
+          <div className="lg:col-span-4 flex flex-col gap-6">
+            {/* Card 2: Coherence */}
+            <div className="flex-1 bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl overflow-hidden flex flex-col group">
+              <div className="h-40 bg-white relative overflow-hidden flex items-center justify-center p-4 border-b border-[#f1f5f9]">
+                <div className="flex items-center gap-4 relative z-10">
+                  <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-500 shadow-sm group-hover:-translate-x-2 transition-transform duration-500">
+                    <FileText className="w-5 h-5" />
+                  </div>
+                  <div className="w-10 h-[2px] bg-slate-200"></div>
+                  <div className="w-8 h-8 rounded-full bg-[#093cad] border-2 border-white shadow-md flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 group-hover:scale-110 transition-transform duration-500">
+                    <CheckCircle2 className="w-4 h-4 text-white" />
+                  </div>
+                  <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl text-blue-600 shadow-sm group-hover:translate-x-2 transition-transform duration-500">
+                    <FileCode className="w-5 h-5" />
+                  </div>
+                </div>
+              </div>
+              <div className="p-6 sm:p-8 flex-1 bg-gradient-to-b from-[#f8fafc] to-[#f1f5f9]">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-white rounded-lg border border-slate-200 shadow-sm">
+                    <ShieldCheck className="w-4 h-4 text-[#093cad]" />
+                  </div>
+                  <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-widest">
+                    {t("values.card2Tag")}
+                  </span>
+                </div>
+                <h3 className="text-lg sm:text-xl font-extrabold text-[#09090d] mb-2 tracking-tight">
+                  {t("values.card2Title")}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {t("values.card2Desc")}
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3: Control */}
+            <div className="flex-1 bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl overflow-hidden flex flex-col group">
+              <div className="h-40 bg-white relative overflow-hidden flex items-center justify-center p-4 border-b border-[#f1f5f9]">
+                <div className="flex flex-col gap-3 w-36">
+                  <div className="flex items-center justify-between p-2.5 bg-slate-50 border border-slate-100 rounded-lg shadow-sm group-hover:-translate-x-1 transition-transform duration-500">
+                    <div className="w-16 h-2 rounded-full bg-slate-200"></div>
+                    <ToggleRight className="w-5 h-5 text-indigo-500 group-hover:text-indigo-600 transition-colors" />
+                  </div>
+                  <div className="flex items-center justify-between p-2.5 bg-slate-50 border border-slate-100 rounded-lg shadow-sm group-hover:translate-x-1 transition-transform duration-500 delay-75">
+                    <div className="w-8 h-2 rounded-full bg-slate-200"></div>
+                    <ToggleRight className="w-5 h-5 text-slate-300 group-hover:text-indigo-500 transition-colors delay-100" />
+                  </div>
+                </div>
+              </div>
+              <div className="p-6 sm:p-8 flex-1 bg-gradient-to-b from-[#f8fafc] to-[#f1f5f9]">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-white rounded-lg border border-slate-200 shadow-sm">
+                    <SlidersHorizontal className="w-4 h-4 text-indigo-600" />
+                  </div>
+                  <span className="text-[10px] font-extrabold text-indigo-600 uppercase tracking-widest">
+                    {t("values.card3Tag")}
+                  </span>
+                </div>
+                <h3 className="text-lg sm:text-xl font-extrabold text-[#09090d] mb-2 tracking-tight">
+                  {t("values.card3Title")}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {t("values.card3Desc")}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
