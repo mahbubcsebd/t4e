@@ -23,7 +23,7 @@ export default function VideoModal({ isOpen, onClose, videoId }) {
         {/* Relative wrapper so absolute close button is positioned relative to the modal */}
         <div className="relative w-full">
           {/* Close button: top-right, just above the video */}
-          <DialogClose className="absolute top-0 right-10 z-[60] p-1.5 bg-transparent text-white/80 hover:text-white transition-colors outline-none cursor-pointer">
+          <DialogClose className="absolute top-0 -right-10 z-[60] p-1.5 bg-transparent text-slate-700 hover:text-slate-900 transition-colors outline-none cursor-pointer">
             <X className="w-6 h-6" strokeWidth={2.5} />
             <span className="sr-only">Close video</span>
           </DialogClose>
