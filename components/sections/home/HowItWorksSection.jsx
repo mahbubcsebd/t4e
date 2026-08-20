@@ -2,70 +2,246 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { Link2, CheckSquare, Sparkles } from "lucide-react";
+import { SiClaude, SiCursor, SiWindsurf, SiGithub } from "react-icons/si";
+import { TbBrandOpenai } from "react-icons/tb";
+import {
+  GitBranch,
+  CheckCircle2,
+  Code2,
+  Network,
+  Check,
+  Sparkles,
+} from "lucide-react";
 
 export default function HowItWorksSection() {
   const { t } = useLanguage();
 
-  const steps = [
-    {
-      num: t("howItWorks.step1Num"),
-      title: t("howItWorks.step1Title"),
-      desc: t("howItWorks.step1Desc"),
-      icon: <Link2 className="w-6 h-6 text-[#07A7E1]" />,
-    },
-    {
-      num: t("howItWorks.step2Num"),
-      title: t("howItWorks.step2Title"),
-      desc: t("howItWorks.step2Desc"),
-      icon: <CheckSquare className="w-6 h-6 text-[#093cad]" />,
-    },
-    {
-      num: t("howItWorks.step3Num"),
-      title: t("howItWorks.step3Title"),
-      desc: t("howItWorks.step3Desc"),
-      icon: <Sparkles className="w-6 h-6 text-amber-500" />,
-    },
-  ];
-
   return (
-    <section className="py-20 md:py-28 bg-[#f9fcff] border-b border-zinc-200/60" id="how-it-works">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#f2f7ff] text-[#093cad] text-xs font-bold uppercase tracking-wider mb-3">
+    <section
+      className="py-24 md:py-32 bg-[#f8fafc] border-b border-zinc-200/60 relative overflow-hidden"
+      id="how-it-works"
+    >
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Editorial Header */}
+        <div className="max-w-3xl mx-auto mb-12 md:mb-14 text-center flex flex-col items-center">
+          <span className="inline-block px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-3">
             {t("howItWorks.eyebrow")}
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#09090d] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#09090d] tracking-tight mb-4">
             {t("howItWorks.title")}
           </h2>
         </div>
 
-        {/* 3 Step Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {steps.map((s, idx) => (
-            <div
-              key={idx}
-              className="bg-white border border-zinc-200/60 rounded-3xl p-8 hover:border-zinc-300 transition-all hover:shadow-lg relative overflow-hidden"
-            >
-              <div className="flex items-center justify-between mb-5">
-                <span className="text-xs font-extrabold text-[#093cad] bg-[#eaf0fb] px-3 py-1 rounded-full uppercase tracking-wider">
-                  {s.num}
-                </span>
-                <div className="p-3 bg-[#f2f7ff] rounded-xl border border-zinc-200/60 shadow-sm">
-                  {s.icon}
+        {/* Workflow Pipeline */}
+        <div className="relative">
+          {/* Horizontal connection line (Desktop) */}
+          <div className="hidden lg:block absolute top-[120px] left-[15%] right-[15%] border-t-2 border-dashed border-[#c8d9ed] z-0">
+            {/* Animated particle moving across */}
+            <div className="absolute top-[-5px] left-0 w-2 h-2 rounded-full bg-[#07A7E1] shadow-[0_0_12px_#07A7E1] animate-[slide_4s_ease-in-out_infinite]"></div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 relative z-10">
+            {/* STEP 1: Connect */}
+            <div className="relative group">
+              <div className="bg-white border border-zinc-200 rounded-3xl overflow-hidden hover:border-[#07A7E1]/40 transition-all duration-500 flex flex-col h-full">
+                {/* Visual Container */}
+                <div className="h-[240px] bg-[#f8fafc] border-b border-zinc-100 flex items-center justify-center p-6 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(7,167,225,0.05)_0%,transparent_70%)]"></div>
+
+                  {/* Connect Micro UI */}
+                  <div className="w-full max-w-[240px] bg-white rounded-xl border border-zinc-200/60 overflow-hidden relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
+                    <div className="h-8 bg-zinc-50 border-b border-zinc-100 flex items-center px-3 gap-1.5">
+                      <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
+                      <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
+                      <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
+                    </div>
+                    <div className="p-4 space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 bg-[#f4f9ff] rounded-lg text-[#07A7E1]">
+                          <GitBranch className="w-5 h-5" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="h-2 w-16 bg-zinc-200 rounded-full mb-1.5"></div>
+                          <div className="h-1.5 w-24 bg-zinc-100 rounded-full"></div>
+                        </div>
+                      </div>
+                      <div className="w-full h-8 border border-zinc-200 rounded-lg flex items-center px-2.5 gap-2 bg-zinc-50">
+                        <SiGithub className="w-4 h-4 text-zinc-400" />
+                        <span className="text-[10px] text-zinc-500 font-mono">
+                          github.com/org/repo
+                        </span>
+                      </div>
+                      <div className="w-full h-8 bg-gradient-to-r from-[#07A7E1] to-[#093cad] rounded-lg flex items-center justify-center text-[10px] font-bold text-white tracking-wide shadow-sm shadow-blue-500/20">
+                        CONNECT
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Content */}
+                <div className="p-6 md:p-8 flex flex-col flex-1">
+                  <span className="text-[10px] font-extrabold text-[#07A7E1] uppercase tracking-widest mb-3">
+                    {t("howItWorks.step1Num")}
+                  </span>
+                  <h3 className="text-xl font-bold text-[#09090d] mb-3">
+                    {t("howItWorks.step1Title")}
+                  </h3>
+                  <p className="text-sm text-[#465a75] leading-relaxed">
+                    {t("howItWorks.step1Desc")}
+                  </p>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-[#09090d] mb-2">
-                {s.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-[#465a75] leading-relaxed">
-                {s.desc}
-              </p>
             </div>
-          ))}
+
+            {/* STEP 2: Review */}
+            <div className="relative group">
+              <div className="bg-white border border-zinc-200 rounded-3xl overflow-hidden hover:border-[#07A7E1]/40 transition-all duration-500 flex flex-col h-full">
+                {/* Visual Container */}
+                <div className="h-[240px] bg-[#f8fafc] border-b border-zinc-100 flex items-center justify-center p-6 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(7,167,225,0.05)_0%,transparent_70%)]"></div>
+
+                  {/* Review Micro UI (Node Graph) */}
+                  <div className="relative w-full max-w-[220px] h-[160px] z-10 group-hover:-translate-y-2 transition-transform duration-500">
+                    {/* Connections */}
+                    <svg className="absolute inset-0 w-full h-full">
+                      <line
+                        x1="50%"
+                        y1="30%"
+                        x2="25%"
+                        y2="65%"
+                        stroke="#c8d9ed"
+                        strokeWidth="2"
+                        strokeDasharray="4 4"
+                      />
+                      <line
+                        x1="50%"
+                        y1="30%"
+                        x2="75%"
+                        y2="65%"
+                        stroke="#c8d9ed"
+                        strokeWidth="2"
+                        strokeDasharray="4 4"
+                      />
+                    </svg>
+
+                    {/* Top Node */}
+                    <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white border border-[#07A7E1] rounded-xl p-2.5 shadow-sm z-10 flex items-center justify-center">
+                      <Network className="w-6 h-6 text-[#07A7E1]" />
+                      {/* Checkmark Badge */}
+                      <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white flex items-center justify-center shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                        <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                      </div>
+                    </div>
+
+                    {/* Left Node */}
+                    <div className="absolute top-[65%] left-[25%] -translate-x-1/2 -translate-y-1/2 bg-white border border-zinc-200 rounded-lg p-2 shadow-sm z-10">
+                      <div className="w-4 h-4 rounded bg-zinc-100"></div>
+                    </div>
+
+                    {/* Right Node */}
+                    <div className="absolute top-[65%] left-[75%] -translate-x-1/2 -translate-y-1/2 bg-white border border-zinc-200 rounded-lg p-2 shadow-sm z-10">
+                      <div className="w-4 h-4 rounded bg-zinc-100"></div>
+                    </div>
+
+                    {/* Validation Alert */}
+                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-max bg-emerald-50 border border-emerald-200 rounded-full py-1.5 px-4 flex items-center justify-center gap-1.5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                      <span className="text-[9px] font-bold text-emerald-700 tracking-wider">
+                        MAP VALIDATED
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                {/* Content */}
+                <div className="p-6 md:p-8 flex flex-col flex-1">
+                  <span className="text-[10px] font-extrabold text-[#07A7E1] uppercase tracking-widest mb-3">
+                    {t("howItWorks.step2Num")}
+                  </span>
+                  <h3 className="text-xl font-bold text-[#09090d] mb-3">
+                    {t("howItWorks.step2Title")}
+                  </h3>
+                  <p className="text-sm text-[#465a75] leading-relaxed">
+                    {t("howItWorks.step2Desc")}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* STEP 3: Change */}
+            <div className="relative group">
+              <div className="bg-white border border-zinc-200 rounded-3xl overflow-hidden hover:border-[#07A7E1]/40 transition-all duration-500 flex flex-col h-full">
+                {/* Visual Container */}
+                <div className="h-[240px] bg-[#f8fafc] border-b border-zinc-100 flex items-center justify-center p-6 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(7,167,225,0.05)_0%,transparent_70%)]"></div>
+
+                  {/* Change Micro UI (Agent Interface) */}
+                  <div className="w-full max-w-[240px] bg-white rounded-xl border border-zinc-200/60 overflow-hidden relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
+                    <div className="h-7 bg-zinc-50 border-b border-zinc-100 flex items-center px-3 justify-between">
+                      <div className="flex gap-1.5">
+                        <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
+                        <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
+                        <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Sparkles className="w-3 h-3 text-[#07A7E1]" />
+                        <span className="text-[8px] text-slate-500 font-bold tracking-wider">
+                          Think4Ever
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-3">
+                      <div className="bg-[#f4f9ff] border border-[#c8d9ed]/50 rounded-lg p-2.5 mb-2 relative">
+                        <span className="text-[9px] text-[#093cad] font-medium leading-relaxed block">
+                          "Implement checkout based on the validated map."
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 mt-3">
+                        <div className="w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
+                          <Check
+                            className="w-2.5 h-2.5 text-emerald-600"
+                            strokeWidth={3}
+                          />
+                        </div>
+                        <span className="text-[9px] font-mono font-bold text-emerald-700">
+                          Context loaded
+                        </span>
+                      </div>
+                      <div className="mt-3 h-1 w-3/4 bg-zinc-100 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 delay-300"></div>
+                      <div className="mt-1.5 h-1 w-1/2 bg-zinc-100 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 delay-400"></div>
+                      <div className="mt-1.5 h-1 w-5/6 bg-zinc-100 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 delay-500"></div>
+                    </div>
+                  </div>
+                </div>
+                {/* Content */}
+                <div className="p-6 md:p-8 flex flex-col flex-1">
+                  <span className="text-[10px] font-extrabold text-[#07A7E1] uppercase tracking-widest mb-3">
+                    {t("howItWorks.step3Num")}
+                  </span>
+                  <h3 className="text-xl font-bold text-[#09090d] mb-3">
+                    {t("howItWorks.step3Title")}
+                  </h3>
+                  <p className="text-sm text-[#465a75] leading-relaxed">
+                    {t("howItWorks.step3Desc")}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Keyframes for the line animation */}
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+        @keyframes slide {
+          0% { left: 0%; opacity: 0; }
+          10% { opacity: 1; }
+          90% { opacity: 1; }
+          100% { left: 100%; opacity: 0; }
+        }
+      `,
+        }}
+      />
     </section>
   );
 }
