@@ -20,8 +20,8 @@ export default function VideoModal({ isOpen, onClose, videoId }) {
         showCloseButton={false}
       >
         <DialogTitle className="sr-only">Video Player</DialogTitle>
-        <DialogClose className="fixed top-4 right-4 sm:top-6 sm:right-6 z-[60] p-2 bg-transparent text-slate-500 hover:text-slate-900 transition-colors outline-none cursor-pointer">
-          <X className="w-8 h-8 sm:w-10 sm:h-10" />
+        <DialogClose className="absolute -top-12 right-0 md:-right-12 z-[60] p-2 bg-transparent text-slate-600 hover:text-slate-900 transition-colors outline-none cursor-pointer">
+          <X className="w-8 h-8" />
           <span className="sr-only">Close video</span>
         </DialogClose>
         <div className="relative w-full rounded-2xl shadow-2xl overflow-hidden border border-[#c8d9ed]/50">
