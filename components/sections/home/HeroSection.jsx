@@ -41,7 +41,7 @@ export default function HeroSection() {
           </span>
 
           {/* Main Headline */}
-          <h1 className="text-muted-foregroundxl sm:text-muted-foregroundxl md:text-[56px] lg:text-[64px] font-extrabold tracking-tight text-foreground leading-[1.05] mb-6">
+          <h1 className="text-muted-foregroundxl sm:text-muted-foregroundxl text-[32px] leading-[38px] md:text-[56px] lg:text-[64px] font-extrabold tracking-tight text-foreground md:leading-[1.05] mb-6">
             {t("hero.titlePrefix")}
             <br className="hidden md:block" />
             <span className="text-primary"> {t("hero.titleHighlight")}</span>

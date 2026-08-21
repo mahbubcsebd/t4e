@@ -20,7 +20,7 @@ export default function ProductModelSection() {
 
   return (
     <section
-      className="py-24 md:py-32 bg-background border-b border-border overflow-hidden relative"
+      className="py-12 md:py-32 bg-background border-b border-border overflow-hidden relative"
       id="product"
     >
       {/* Subtle Grid Background */}

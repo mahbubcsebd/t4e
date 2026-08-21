@@ -21,7 +21,7 @@ export default function ProblemSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 md:py-32 bg-background relative overflow-hidden border-b border-border">
+    <section className="py-12 md:py-32 bg-background relative overflow-hidden border-b border-border">
       {/* Background canvas elements */}
       <div className="absolute inset-0 bg-background"></div>
 
@@ -211,7 +211,7 @@ export default function ProblemSection() {
             <div className="lg:col-span-7 h-auto min-h-64 lg:h-auto bg-muted relative p-6 sm:p-10 flex items-center justify-center order-1 lg:order-2 overflow-hidden">
               <div className="w-full max-w-md relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 sm:gap-0">
                 {/* Connecting Line Mobile */}
-                <div className="sm:hidden absolute left-[36px] top-[40px] bottom-[40px] border-l-2 border-dashed border-border z-0"></div>
+                <div className="sm:hidden absolute left-[36px] top-[40px] bottom-[24px] border-l-2 border-dashed border-border z-0"></div>
 
                 {/* Local Change Node */}
                 <div className="relative z-10 flex flex-row sm:flex-col items-center gap-4 sm:gap-3 bg-card sm:bg-transparent p-3 sm:p-0 rounded-xl sm:rounded-none border border-border sm:border-none shadow-sm sm:shadow-none w-full sm:w-auto shrink-0 md:translate-x-[20px]">

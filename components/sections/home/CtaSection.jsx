@@ -14,7 +14,7 @@ export default function CtaSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 md:py-32 bg-background" id="register">
+    <section className="py-12 md:py-32 bg-background" id="register">
       <Container className="max-w-3xl text-center">
         <SectionHeading 
           eyebrow={t("nav.startFree")}

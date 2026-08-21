@@ -16,7 +16,7 @@ export default function SectionHeading({
     return (
       <div
         className={cn(
-          "flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-12 mb-12 md:mb-16",
+          "flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-12 mb-8 md:mb-16",
           className,
         )}
       >
@@ -106,7 +106,7 @@ export default function SectionHeading({
   return (
     <div
       className={cn(
-        "max-w-3xl mx-auto mb-10 md:mb-14 text-center flex flex-col items-center",
+        "max-w-3xl mx-auto mb-8 md:mb-14 text-center flex flex-col items-center",
         className,
       )}
     >

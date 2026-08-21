@@ -26,7 +26,7 @@ export default function CoherenceSection() {
 
   return (
     <section
-      className="py-24 md:py-32 bg-background border-b border-border overflow-hidden relative"
+      className="py-12 md:py-32 bg-background border-b border-border overflow-hidden relative"
       id="code-to-design"
     >
       <Container className="relative z-10">

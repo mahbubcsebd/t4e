@@ -24,7 +24,7 @@ export default function ValueSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 md:py-32 bg-background border-b border-border overflow-hidden relative">
+    <section className="py-12 md:py-32 bg-background border-b border-border overflow-hidden relative">
       <Container className="relative z-10">
         {/* Bento Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -47,8 +47,8 @@ export default function ValueSection() {
                   </div>
 
                   {/* Center Magnifying Glass / Focus */}
-                  <div className="relative z-20 w-24 h-24 bg-card/90 backdrop-blur-md rounded-full shadow-md shadow-primary/25 border-4 border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                    <Search className="w-10 h-10 text-primary" />
+                  <div className="relative z-20 w-16 h-16 sm:w-24 sm:h-24 bg-card/90 backdrop-blur-md rounded-full shadow-md shadow-primary/25 border-4 border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <Search className="w-6 h-6 sm:w-10 sm:h-10 text-primary" />
                   </div>
 
                   {/* Connecting lines that fade in */}

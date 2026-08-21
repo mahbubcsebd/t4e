@@ -14,10 +14,10 @@ export default function PersistentContextSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 md:py-32 bg-background border-b border-border overflow-hidden relative">
+    <section className="py-12 md:py-32 bg-background border-b border-border overflow-hidden relative">
       <Container className="relative z-10">
         {/* Editorial Header */}
-        <SectionHeading 
+        <SectionHeading
           align="split"
           eyebrow={t("persistent.eyebrow")}
           title={
@@ -39,19 +39,22 @@ export default function PersistentContextSection() {
         />
 
         {/* Central Brain Visualization */}
-        <div className="max-w-4xl mx-auto relative mt-8 md:mt-16 py-10 pb-0">
+        <div className="max-w-4xl mx-auto relative md:mt-8 md:mt-16 py-10 pb-0">
           {/* Connecting Dashed Line (Desktop Horizontal) */}
           <div className="hidden md:block absolute top-[120px] left-[15%] right-[15%] border-t-2 border-dashed border-border z-0"></div>
 
           {/* Grid Layout (3 Columns) */}
-          <div className="flex flex-col md:flex-row items-start justify-center gap-8 md:gap-16 relative z-10 w-full">
+          <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8 md:gap-16 relative z-10 w-full">
+            {/* Mobile Vertical Dashed Line */}
+            <div className="block md:hidden absolute top-[40px] bottom-[40px] left-1/2 border-l-2 border-dashed border-border -translate-x-1/2 z-0"></div>
+
             {/* Left Column (Cursor -> Windsurf) */}
-            <div className="flex flex-col items-center gap-12 relative z-10 mt-0 md:mt-10">
+            <div className="flex flex-col items-center gap-8 md:gap-12 relative z-10 mt-0 md:mt-10 w-full">
               {/* Vertical line joining them */}
               <div className="hidden md:block absolute top-[40px] h-[128px] left-1/2 border-l-2 border-dashed border-border -translate-x-1/2 z-0"></div>
 
               {/* Card 1: Cursor */}
-              <div className="w-full md:w-[200px] bg-card border border-border rounded-2xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-[260px] md:w-[200px] bg-card border border-border rounded-2xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                   <SiCursor className="w-5 h-5" />
                 </div>
@@ -61,7 +64,7 @@ export default function PersistentContextSection() {
               </div>
 
               {/* Card 2: Windsurf */}
-              <div className="w-full md:w-[200px] bg-card border border-border rounded-2xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-[260px] md:w-[200px] bg-card border border-border rounded-2xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                   <SiWindsurf className="w-5 h-5" />
                 </div>
@@ -72,7 +75,7 @@ export default function PersistentContextSection() {
             </div>
 
             {/* Center Column (Brain -> MCP) */}
-            <div className="flex flex-col items-center gap-12 relative z-20">
+            <div className="flex flex-col items-center gap-8 md:gap-12 relative z-20 w-full">
               {/* Vertical line joining them */}
               <div className="hidden md:block absolute top-[80px] h-[168px] left-1/2 border-l-2 border-dashed border-border -translate-x-1/2 z-0"></div>
 
@@ -107,7 +110,7 @@ export default function PersistentContextSection() {
               </div>
 
               {/* Bottom Node (MCP Clients) */}
-              <div className="w-full md:w-[200px] bg-card border border-border rounded-2xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-[260px] md:w-[200px] bg-card border border-border rounded-2xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                   <Network className="w-5 h-5" />
                 </div>
@@ -118,12 +121,12 @@ export default function PersistentContextSection() {
             </div>
 
             {/* Right Column (Claude -> Codex) */}
-            <div className="flex flex-col items-center gap-12 relative z-10 mt-0 md:mt-10">
+            <div className="flex flex-col items-center gap-8 md:gap-12 relative z-10 mt-0 md:mt-10 w-full">
               {/* Vertical line joining them */}
               <div className="hidden md:block absolute top-[40px] h-[128px] left-1/2 border-l-2 border-dashed border-border -translate-x-1/2 z-0"></div>
 
               {/* Card 3: Claude */}
-              <div className="w-full md:w-[200px] bg-card border border-border rounded-2xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-[260px] md:w-[200px] bg-card border border-border rounded-2xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                   <SiClaude className="w-5 h-5" />
                 </div>
@@ -133,7 +136,7 @@ export default function PersistentContextSection() {
               </div>
 
               {/* Card 4: Codex / GPT */}
-              <div className="w-full md:w-[200px] bg-card border border-border rounded-2xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-[260px] md:w-[200px] bg-card border border-border rounded-2xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                   <TbBrandOpenai className="w-5 h-5" />
                 </div>
