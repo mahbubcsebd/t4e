@@ -153,7 +153,7 @@ export default function Header() {
     >
       <div
         className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          scrolled ? "h-14" : "h-20"
+          scrolled ? "h-14" : "h-16"
         }`}
       >
         {/* Brand Logo */}
@@ -164,7 +164,7 @@ export default function Header() {
             width={180}
             height={41}
             className={`w-auto object-contain transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-              scrolled ? "h-7" : "h-10"
+              scrolled ? "h-7" : "h-8"
             }`}
             priority
           />
