@@ -17,7 +17,7 @@ export default function FaqAccordion() {
 
   return (
     <section
-      className="py-16 md:py-20 bg-white border-b border-[#c8d9ed]/40"
+      className="py-16 md:py-20 bg-card border-b border-border"
       id="faq"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,14 +27,14 @@ export default function FaqAccordion() {
             {t("faqPage.heroEyebrow")}
           </span>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090d] tracking-tight leading-[1.15] mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-4">
             {t("faqPage.heroTitlePrefix")}
             <span className="text-gradient decoration-[#07A7E1]/30">
               {t("faqPage.heroTitleHighlight")}
             </span>
           </h1>
 
-          <p className="text-base text-[#465a75] leading-relaxed mb-6">
+          <p className="text-base text-muted-foreground leading-relaxed mb-6">
             {t("faqPage.heroSubtitle")}
           </p>
 
@@ -58,11 +58,11 @@ export default function FaqAccordion() {
             return (
               <div
                 key={idx}
-                className="bg-[#f9fcff] border border-[#c8d9ed] rounded-2xl overflow-hidden transition-all duration-200"
+                className="bg-[#f9fcff] border border-border rounded-2xl overflow-hidden transition-all duration-200"
               >
                 <button
                   onClick={() => toggleItem(idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-base text-[#09090d] hover:text-[#093cad] transition-colors"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-base text-foreground hover:text-[#093cad] transition-colors"
                 >
                   <span>{item.q}</span>
                   <ChevronDown
@@ -73,7 +73,7 @@ export default function FaqAccordion() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 text-sm text-[#465a75] leading-relaxed border-t border-[#c8d9ed]/50 pt-4 animate-in fade-in slide-in-from-top-1">
+                  <div className="px-6 pb-6 text-sm text-muted-foreground leading-relaxed border-t border-border/50 pt-4 animate-in fade-in slide-in-from-top-1">
                     {item.a}
                   </div>
                 )}

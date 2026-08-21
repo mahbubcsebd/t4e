@@ -40,7 +40,7 @@ export const BlogArticle = ({ post }) => {
   }, [localizedPost.content, zoomedImgSrc]);
 
   return (
-    <article className="bg-white rounded-3xl p-6 sm:p-10 lg:p-16 shadow-[0_4px_24px_-2px_rgba(0,0,0,0.04),0_1px_3px_rgba(0,0,0,0.02)] border border-gray-100">
+    <article className="bg-card rounded-3xl p-6 sm:p-10 lg:p-16 shadow-[0_4px_24px_-2px_rgba(0,0,0,0.04),0_1px_3px_rgba(0,0,0,0.02)] border border-border">
       <motion.div 
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export const BlogArticle = ({ post }) => {
             <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-400 font-bold">
               {localizedPost.author ? localizedPost.author.charAt(0) : "T"}
             </div>
-            <span className="text-gray-900 font-bold">{localizedPost.author || "Think4Ever Team"}</span>
+            <span className="text-foreground font-bold">{localizedPost.author || "Think4Ever Team"}</span>
           </div>
           <div className="flex items-center gap-2">
             <span>{localizedPost.date}</span>
@@ -75,7 +75,7 @@ export const BlogArticle = ({ post }) => {
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-        className="mb-12 relative aspect-[2/1] overflow-hidden rounded-2xl border border-gray-100 shadow-sm"
+        className="mb-12 relative aspect-[2/1] overflow-hidden rounded-2xl border border-border shadow-sm"
       >
         <ZoomableImage
           src={localizedPost.image}
