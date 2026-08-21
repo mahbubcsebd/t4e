@@ -163,7 +163,7 @@ export default function CoherenceSection() {
                 {impactNodes.map((node, i) => (
                   <div
                     key={i}
-                    className="bg-card border border-border rounded-xl p-3 pr-4 flex items-center gap-3 hover:border-primary transition-all cursor-default group/node"
+                    className="bg-card border border-border rounded-full p-3 pr-4 flex items-center gap-3 hover:border-primary transition-all cursor-default group/node"
                   >
                     <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(37,99,235,0.6)]"></div>
                     <span className="text-xs font-semibold text-foreground leading-tight">
