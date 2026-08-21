@@ -351,21 +351,6 @@ export default function Header() {
 
         {/* Right Action Items */}
         <div className="hidden lg:flex items-center gap-3 shrink-0">
-          {/* Theme Toggle Button */}
-          <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
-            aria-label="Toggle Theme"
-          >
-            {mounted && theme === "dark" ? (
-              <Sun className="h-4 w-4" />
-            ) : mounted ? (
-              <Moon className="h-4 w-4" />
-            ) : (
-              <div className="h-4 w-4" />
-            )}
-          </button>
-
           {/* Language Selector Dropdown */}
           <div className="relative" ref={langDropdownRef}>
             <button
@@ -434,21 +419,6 @@ export default function Header() {
 
         {/* Mobile Menu Toggle */}
         <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
-          {/* Theme Toggle Button (Mobile) */}
-          <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
-            aria-label="Toggle Theme"
-          >
-            {mounted && theme === "dark" ? (
-              <Sun className="h-4 w-4" />
-            ) : mounted ? (
-              <Moon className="h-4 w-4" />
-            ) : (
-              <div className="h-4 w-4" />
-            )}
-          </button>
-
           <div className="relative">
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
