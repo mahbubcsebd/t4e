@@ -31,13 +31,13 @@ export default function WhereItHelps() {
   const proofPills = t("codeToDesignPage.proofPills") || ["Review repository access", "Human review", "Keep your editor and stack"];
 
   return (
-    <section className="py-16 md:py-20 bg-[#f7fafe] border-b border-[#c8d9ed]/40">
+    <section className="py-16 md:py-20 bg-[#f7fafe] border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="inline-block px-3 py-1 rounded-full bg-[#f2f7ff] text-[#093cad] text-xs font-bold uppercase tracking-wider mb-3">
             {t("codeToDesignPage.whereHelpsEyebrow")}
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#09090d] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight">
             {t("codeToDesignPage.whereHelpsTitle")}
           </h2>
         </div>
@@ -46,20 +46,20 @@ export default function WhereItHelps() {
           {cards.map((c, idx) => (
             <div
               key={idx}
-              className="bg-white border border-[#c8d9ed] rounded-2xl p-7 hover:border-[#093cad] transition-all hover:shadow-lg"
+              className="bg-card border border-border rounded-2xl p-7 hover:border-[#093cad] transition-all hover:shadow-lg"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2.5 rounded-xl bg-[#f2f7ff] border border-[#c8d9ed]/50">
+                <div className="p-2.5 rounded-xl bg-[#f2f7ff] border border-border/50">
                   {c.icon}
                 </div>
                 <span className="text-xs font-bold text-[#093cad] uppercase tracking-wider bg-[#eaf0fb] px-3 py-1 rounded-full">
                   {c.tag}
                 </span>
               </div>
-              <h3 className="text-lg font-bold text-[#09090d] mb-2 leading-snug">
+              <h3 className="text-lg font-bold text-foreground mb-2 leading-snug">
                 {c.title}
               </h3>
-              <p className="text-xs sm:text-sm text-[#465a75] leading-relaxed">
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                 {c.desc}
               </p>
             </div>
@@ -67,13 +67,13 @@ export default function WhereItHelps() {
         </div>
 
         {/* Quote and Proof Banner */}
-        <div className="bg-white border border-[#c8d9ed] rounded-2xl p-8 max-w-4xl mx-auto text-center shadow-md">
-          <blockquote className="text-base sm:text-lg font-semibold text-[#09090d] italic mb-6">
+        <div className="bg-card border border-border rounded-2xl p-8 max-w-4xl mx-auto text-center shadow-md">
+          <blockquote className="text-base sm:text-lg font-semibold text-foreground italic mb-6">
             {t("codeToDesignPage.quote")}
           </blockquote>
           <div className="flex flex-wrap justify-center gap-3">
             {proofPills.map((pill, i) => (
-              <span key={i} className="text-xs font-bold text-[#093cad] bg-[#eaf0fb] px-4 py-2 rounded-full border border-[#c8d9ed]">
+              <span key={i} className="text-xs font-bold text-[#093cad] bg-[#eaf0fb] px-4 py-2 rounded-full border border-border">
                 ✓ {pill}
               </span>
             ))}

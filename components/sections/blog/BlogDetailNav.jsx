@@ -10,7 +10,7 @@ export const BlogDetailNav = () => {
     <div className="mb-10 sm:mb-12 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
       <Link
         href="/blog"
-        className="group flex items-center gap-2 text-gray-400 hover:text-gray-900 transition-colors font-medium text-[14px]"
+        className="group flex items-center gap-2 text-gray-400 hover:text-foreground transition-colors font-medium text-[14px]"
       >
         <ArrowLeft
           size={18}

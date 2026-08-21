@@ -15,7 +15,7 @@ export default function EnterpriseEvaluation() {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-[#f7fafe] border-b border-[#c8d9ed]/40">
+    <section className="py-16 md:py-20 bg-[#f7fafe] border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column */}
@@ -23,16 +23,16 @@ export default function EnterpriseEvaluation() {
             <span className="inline-block px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-3">
               {t("securityPage.evalEyebrow")}
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#09090d] tracking-tight mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-4">
               {t("securityPage.evalTitle")}
             </h2>
-            <p className="text-base text-[#465a75] leading-relaxed mb-6">
+            <p className="text-base text-muted-foreground leading-relaxed mb-6">
               {t("securityPage.evalSubtitle")}
             </p>
 
             <ul className="space-y-3">
               {evalList.map((item, idx) => (
-                <li key={idx} className="flex items-center gap-3 text-sm font-semibold text-[#09090d]">
+                <li key={idx} className="flex items-center gap-3 text-sm font-semibold text-foreground">
                   <CheckCircle2 className="w-5 h-5 text-[#07A7E1] shrink-0" />
                   <span>{item}</span>
                 </li>
@@ -41,14 +41,14 @@ export default function EnterpriseEvaluation() {
           </div>
 
           {/* Right Column Box */}
-          <div className="bg-white border border-[#c8d9ed] rounded-2xl p-8 shadow-xl">
+          <div className="bg-card border border-border rounded-2xl p-8 shadow-xl">
             <span className="text-xs font-extrabold text-[#093cad] uppercase tracking-wider bg-[#eaf0fb] px-3 py-1 rounded-full inline-block mb-3">
               Security Review
             </span>
-            <h3 className="text-xl font-bold text-[#09090d] mb-3">
+            <h3 className="text-xl font-bold text-foreground mb-3">
               {t("securityPage.reviewTitle")}
             </h3>
-            <p className="text-xs sm:text-sm text-[#465a75] leading-relaxed mb-6">
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-6">
               {t("securityPage.reviewDesc")}
             </p>
             <a

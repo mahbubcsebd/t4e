@@ -13,7 +13,7 @@ export default function ResourceGrid() {
 
   return (
     <section
-      className="py-16 md:py-20 bg-white border-b border-[#c8d9ed]/40"
+      className="py-16 md:py-20 bg-card border-b border-border"
       id="resources"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
@@ -22,13 +22,13 @@ export default function ResourceGrid() {
           <span className="inline-block px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-4 border border-[#07A7E1]/20">
             {t("resourcesPage.heroEyebrow")}
           </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090d] tracking-tight leading-[1.15] mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-4">
             {t("resourcesPage.heroTitlePrefix")}
             <span className="text-gradient decoration-[#07A7E1]/30">
               {t("resourcesPage.heroTitleHighlight")}
             </span>
           </h1>
-          <p className="text-base text-[#465a75] leading-relaxed">
+          <p className="text-base text-muted-foreground leading-relaxed">
             {t("resourcesPage.heroSubtitle")}
           </p>
         </div>
@@ -39,24 +39,24 @@ export default function ResourceGrid() {
             <span className="text-xs font-bold text-[#093cad] uppercase tracking-wider block mb-1">
               {t("resourcesPage.videosEyebrow")}
             </span>
-            <h2 className="text-2xl font-bold text-[#09090d]">
+            <h2 className="text-2xl font-bold text-foreground">
               {t("resourcesPage.videosTitle")}
             </h2>
-            <p className="text-xs sm:text-sm text-[#465a75]">
+            <p className="text-xs sm:text-sm text-muted-foreground">
               {t("resourcesPage.videosSubtitle")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-[#f9fcff] border border-[#c8d9ed] rounded-2xl p-7 hover:border-[#093cad] transition-all flex flex-col justify-between">
+            <div className="bg-[#f9fcff] border border-border rounded-2xl p-7 hover:border-[#093cad] transition-all flex flex-col justify-between">
               <div>
                 <span className="text-[10px] font-extrabold text-[#07A7E1] uppercase tracking-wider block mb-2">
                   {t("resourcesPage.video1Type")}
                 </span>
-                <h3 className="text-xl font-bold text-[#09090d] mb-2">
+                <h3 className="text-xl font-bold text-foreground mb-2">
                   {t("resourcesPage.video1Title")}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#465a75] mb-6">
+                <p className="text-xs sm:text-sm text-muted-foreground mb-6">
                   {t("resourcesPage.video1Desc")}
                 </p>
               </div>
@@ -72,15 +72,15 @@ export default function ResourceGrid() {
               </button>
             </div>
 
-            <div className="bg-[#f9fcff] border border-[#c8d9ed] rounded-2xl p-7 hover:border-[#093cad] transition-all flex flex-col justify-between">
+            <div className="bg-[#f9fcff] border border-border rounded-2xl p-7 hover:border-[#093cad] transition-all flex flex-col justify-between">
               <div>
                 <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-wider block mb-2">
                   {t("resourcesPage.video2Type")}
                 </span>
-                <h3 className="text-xl font-bold text-[#09090d] mb-2">
+                <h3 className="text-xl font-bold text-foreground mb-2">
                   {t("resourcesPage.video2Title")}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#465a75] mb-6">
+                <p className="text-xs sm:text-sm text-muted-foreground mb-6">
                   {t("resourcesPage.video2Desc")}
                 </p>
               </div>
@@ -101,27 +101,27 @@ export default function ResourceGrid() {
         {/* Featured Thinking & White Papers */}
         <div
           id="guides"
-          className="bg-[#f7fafe] border border-[#c8d9ed] rounded-3xl p-8 sm:p-10"
+          className="bg-[#f7fafe] border border-border rounded-3xl p-8 sm:p-10"
         >
           <div className="mb-8">
             <span className="text-xs font-bold text-[#093cad] uppercase tracking-wider block mb-1">
               {t("resourcesPage.thinkingEyebrow")}
             </span>
-            <h2 className="text-2xl font-bold text-[#09090d]">
+            <h2 className="text-2xl font-bold text-foreground">
               {t("resourcesPage.thinkingTitle")}
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white border border-[#c8d9ed] rounded-2xl p-7 hover:border-[#093cad] transition-all flex flex-col justify-between">
+            <div className="bg-card border border-border rounded-2xl p-7 hover:border-[#093cad] transition-all flex flex-col justify-between">
               <div>
                 <span className="text-[10px] font-extrabold text-indigo-600 uppercase tracking-wider block mb-2">
                   {t("resourcesPage.guide1Type")}
                 </span>
-                <h3 className="text-lg font-bold text-[#09090d] mb-2">
+                <h3 className="text-lg font-bold text-foreground mb-2">
                   {t("resourcesPage.guide1Title")}
                 </h3>
-                <p className="text-xs text-[#465a75] mb-6">
+                <p className="text-xs text-muted-foreground mb-6">
                   {t("resourcesPage.guide1Desc")}
                 </p>
               </div>
@@ -134,15 +134,15 @@ export default function ResourceGrid() {
               </Link>
             </div>
 
-            <div className="bg-white border border-[#c8d9ed] rounded-2xl p-7 hover:border-[#093cad] transition-all flex flex-col justify-between">
+            <div className="bg-card border border-border rounded-2xl p-7 hover:border-[#093cad] transition-all flex flex-col justify-between">
               <div>
                 <span className="text-[10px] font-extrabold text-indigo-600 uppercase tracking-wider block mb-2">
                   {t("resourcesPage.guide2Type")}
                 </span>
-                <h3 className="text-lg font-bold text-[#09090d] mb-2">
+                <h3 className="text-lg font-bold text-foreground mb-2">
                   {t("resourcesPage.guide2Title")}
                 </h3>
-                <p className="text-xs text-[#465a75] mb-6">
+                <p className="text-xs text-muted-foreground mb-6">
                   {t("resourcesPage.guide2Desc")}
                 </p>
               </div>
@@ -163,21 +163,21 @@ export default function ResourceGrid() {
             <span className="text-xs font-bold text-[#093cad] uppercase tracking-wider block mb-1">
               {t("resourcesPage.perspEyebrow")}
             </span>
-            <h2 className="text-2xl font-bold text-[#09090d]">
+            <h2 className="text-2xl font-bold text-foreground">
               {t("resourcesPage.perspTitle")}
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-[#f9fcff] border border-[#c8d9ed] rounded-2xl p-6 flex flex-col justify-between">
+            <div className="bg-[#f9fcff] border border-border rounded-2xl p-6 flex flex-col justify-between">
               <div>
                 <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-wider block mb-2">
                   {t("resourcesPage.card1Type")}
                 </span>
-                <h3 className="text-base font-bold text-[#09090d] mb-2">
+                <h3 className="text-base font-bold text-foreground mb-2">
                   {t("resourcesPage.card1Title")}
                 </h3>
-                <p className="text-xs text-[#465a75] mb-4">
+                <p className="text-xs text-muted-foreground mb-4">
                   {t("resourcesPage.card1Desc")}
                 </p>
               </div>
@@ -189,15 +189,15 @@ export default function ResourceGrid() {
               </Link>
             </div>
 
-            <div className="bg-[#f9fcff] border border-[#c8d9ed] rounded-2xl p-6 flex flex-col justify-between">
+            <div className="bg-[#f9fcff] border border-border rounded-2xl p-6 flex flex-col justify-between">
               <div>
                 <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-wider block mb-2">
                   {t("resourcesPage.card2Type")}
                 </span>
-                <h3 className="text-base font-bold text-[#09090d] mb-2">
+                <h3 className="text-base font-bold text-foreground mb-2">
                   {t("resourcesPage.card2Title")}
                 </h3>
-                <p className="text-xs text-[#465a75] mb-4">
+                <p className="text-xs text-muted-foreground mb-4">
                   {t("resourcesPage.card2Desc")}
                 </p>
               </div>
@@ -209,15 +209,15 @@ export default function ResourceGrid() {
               </Link>
             </div>
 
-            <div className="bg-[#f9fcff] border border-[#c8d9ed] rounded-2xl p-6 flex flex-col justify-between">
+            <div className="bg-[#f9fcff] border border-border rounded-2xl p-6 flex flex-col justify-between">
               <div>
                 <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-wider block mb-2">
                   {t("resourcesPage.card3Type")}
                 </span>
-                <h3 className="text-base font-bold text-[#09090d] mb-2">
+                <h3 className="text-base font-bold text-foreground mb-2">
                   {t("resourcesPage.card3Title")}
                 </h3>
-                <p className="text-xs text-[#465a75] mb-4">
+                <p className="text-xs text-muted-foreground mb-4">
                   {t("resourcesPage.card3Desc")}
                 </p>
               </div>

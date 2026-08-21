@@ -20,11 +20,11 @@ export default function ProductModelSection() {
 
   return (
     <section
-      className="py-24 md:py-32 bg-[#fafafa] border-b border-zinc-200/60 overflow-hidden relative"
+      className="py-24 md:py-32 bg-background border-b border-zinc-200/60 overflow-hidden relative"
       id="product"
     >
       {/* Subtle Grid Background */}
-      <div className="absolute inset-0 bg-white"></div>
+      <div className="absolute inset-0 bg-card"></div>
 
       <Container className="relative z-10">
         {/* Editorial Header */}
@@ -40,7 +40,7 @@ export default function ProductModelSection() {
             {/* Left Column (Perspectives 1 & 3) */}
             <div className="lg:col-span-4 flex flex-col justify-between gap-6 lg:gap-16 relative z-10 order-2 lg:order-1">
               {/* Perspective 1: Engineering */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+              <div className="bg-card border border-border rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                 {/* Connecting Line to Center */}
                 <div className="absolute -right-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-blue-600 transition-colors duration-500 origin-left"></div>
 
@@ -52,7 +52,7 @@ export default function ProductModelSection() {
                     <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest block mb-1">
                       {t("productModel.persp1Tag")}
                     </span>
-                    <h3 className="text-sm font-bold text-[#09090d] leading-snug">
+                    <h3 className="text-sm font-bold text-foreground leading-snug">
                       {t("productModel.persp1Title")}
                     </h3>
                   </div>
@@ -60,7 +60,7 @@ export default function ProductModelSection() {
               </div>
 
               {/* Perspective 3: Operations */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+              <div className="bg-card border border-border rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                 {/* Connecting Line to Center */}
                 <div className="absolute -right-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-blue-600 transition-colors duration-500 origin-left"></div>
 
@@ -72,7 +72,7 @@ export default function ProductModelSection() {
                     <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest block mb-1">
                       {t("productModel.persp3Tag")}
                     </span>
-                    <h3 className="text-sm font-bold text-[#09090d] leading-snug">
+                    <h3 className="text-sm font-bold text-foreground leading-snug">
                       {t("productModel.persp3Title")}
                     </h3>
                   </div>
@@ -86,17 +86,17 @@ export default function ProductModelSection() {
                 {/* Glowing Background Effect */}
                 <div className="absolute inset-0 bg-blue-600 blur-2xl opacity-10 rounded-[40px]"></div>
 
-                <div className="bg-white border-[1.5px] border-blue-200 rounded-[32px] p-8 shadow-sm relative overflow-hidden group flex-1 flex flex-col items-center justify-center min-h-[280px]">
+                <div className="bg-card border-[1.5px] border-blue-200 rounded-[32px] p-8 shadow-sm relative overflow-hidden group flex-1 flex flex-col items-center justify-center min-h-[280px]">
                   <div className="relative z-10 flex flex-col items-center text-center">
                     <div className="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-600/20 mb-6 group-hover:scale-105 transition-transform duration-500">
                       <Layers className="w-10 h-10 text-white" />
                     </div>
 
-                    <span className="inline-block px-3 py-1 bg-white text-blue-600 border border-blue-200 rounded-md text-[10px] font-extrabold uppercase tracking-widest mb-3">
+                    <span className="inline-block px-3 py-1 bg-card text-blue-600 border border-blue-200 rounded-md text-[10px] font-extrabold uppercase tracking-widest mb-3">
                       {t("productModel.centerTag")}
                     </span>
 
-                    <h3 className="text-xl sm:text-2xl font-extrabold text-[#09090d] tracking-tight mb-5">
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-foreground tracking-tight mb-5">
                       {t("productModel.centerTitle")}
                     </h3>
 
@@ -115,7 +115,7 @@ export default function ProductModelSection() {
             {/* Right Column (Perspectives 2 & 4) */}
             <div className="lg:col-span-4 flex flex-col justify-between gap-6 lg:gap-16 relative z-10 order-3">
               {/* Perspective 2: Product */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+              <div className="bg-card border border-border rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                 {/* Connecting Line to Center */}
                 <div className="absolute -left-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-blue-600 transition-colors duration-500 origin-right"></div>
 
@@ -127,7 +127,7 @@ export default function ProductModelSection() {
                     <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest block mb-1">
                       {t("productModel.persp2Tag")}
                     </span>
-                    <h3 className="text-sm font-bold text-[#09090d] leading-snug">
+                    <h3 className="text-sm font-bold text-foreground leading-snug">
                       {t("productModel.persp2Title")}
                     </h3>
                   </div>
@@ -135,7 +135,7 @@ export default function ProductModelSection() {
               </div>
 
               {/* Perspective 4: Business */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+              <div className="bg-card border border-border rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                 {/* Connecting Line to Center */}
                 <div className="absolute -left-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-blue-600 transition-colors duration-500 origin-right"></div>
 
@@ -147,7 +147,7 @@ export default function ProductModelSection() {
                     <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest block mb-1">
                       {t("productModel.persp4Tag")}
                     </span>
-                    <h3 className="text-sm font-bold text-[#09090d] leading-snug">
+                    <h3 className="text-sm font-bold text-foreground leading-snug">
                       {t("productModel.persp4Title")}
                     </h3>
                   </div>

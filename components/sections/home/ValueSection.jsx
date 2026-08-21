@@ -24,7 +24,7 @@ export default function ValueSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 md:py-32 bg-[#fafafa] border-b border-zinc-200/60 overflow-hidden relative">
+    <section className="py-24 md:py-32 bg-background border-b border-zinc-200/60 overflow-hidden relative">
       <Container className="relative z-10">
         {/* Bento Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -33,13 +33,13 @@ export default function ValueSection() {
             {/* Card 1: Clarity */}
             <div className="flex-1 bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl overflow-hidden flex flex-col group">
               {/* Large Visual Canvas */}
-              <div className="h-64 sm:h-80 bg-white relative overflow-hidden flex flex-col items-center justify-center p-6 border-b border-[#f1f5f9]">
+              <div className="h-64 sm:h-80 bg-card relative overflow-hidden flex flex-col items-center justify-center p-6 border-b border-[#f1f5f9]">
                 <div className="relative w-full max-w-lg h-full flex items-center justify-center">
                   {/* Background Nodes */}
                   <div className="absolute top-[20%] left-[20%] p-3 bg-blue-50 text-blue-500 rounded-2xl border border-blue-100 shadow-sm opacity-60 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-700 delay-100 z-10">
                     <Database className="w-6 h-6" />
                   </div>
-                  <div className="absolute bottom-[20%] left-[35%] p-3 bg-gray-50 text-gray-500 rounded-2xl border border-gray-200 shadow-sm opacity-60 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-700 delay-200 z-10">
+                  <div className="absolute bottom-[20%] left-[35%] p-3 bg-muted text-gray-500 rounded-2xl border border-border shadow-sm opacity-60 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-700 delay-200 z-10">
                     <Layout className="w-6 h-6" />
                   </div>
                   <div className="absolute top-[30%] right-[25%] p-3 bg-blue-50 text-blue-500 rounded-2xl border border-blue-100 shadow-sm opacity-60 group-hover:opacity-100 group-hover:-translate-x-2 transition-all duration-700 delay-300 z-10">
@@ -47,7 +47,7 @@ export default function ValueSection() {
                   </div>
 
                   {/* Center Magnifying Glass / Focus */}
-                  <div className="relative z-20 w-24 h-24 bg-white/90 backdrop-blur-md rounded-full shadow-md shadow-blue-600/10 border-4 border-blue-200 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                  <div className="relative z-20 w-24 h-24 bg-card/90 backdrop-blur-md rounded-full shadow-md shadow-blue-600/10 border-4 border-blue-200 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
                     <Search className="w-10 h-10 text-blue-600" />
                   </div>
 
@@ -85,26 +85,26 @@ export default function ValueSection() {
               </div>
 
               {/* Content */}
-              <div className="p-8 sm:p-10 flex-1 bg-gray-50">
+              <div className="p-8 sm:p-10 flex-1 bg-muted">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="p-2 bg-white rounded-lg border border-slate-200 shadow-sm">
+                  <div className="p-2 bg-card rounded-lg border border-slate-200 shadow-sm">
                     <Eye className="w-4 h-4 text-blue-600" />
                   </div>
                   <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest">
                     {t("values.card1Tag")}
                   </span>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#09090d] mb-4 tracking-tight">
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-4 tracking-tight">
                   {t("values.card1Title")}
                 </h3>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl">
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed max-w-xl">
                   {t("values.card1Desc")}
                 </p>
               </div>
             </div>
 
             {/* Bottom Banner: Compatibility (Now inside left column) */}
-            <div className="bg-white border border-[#e2e8f0] rounded-3xl p-8 flex flex-col xl:flex-row items-center justify-between gap-6 relative overflow-hidden group">
+            <div className="bg-card border border-[#e2e8f0] rounded-3xl p-8 flex flex-col xl:flex-row items-center justify-between gap-6 relative overflow-hidden group">
               {/* Subtle background gradient */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
 
@@ -113,10 +113,10 @@ export default function ValueSection() {
                   <Terminal className="w-6 h-6" />
                 </div>
                 <div>
-                  <strong className="text-xl sm:text-2xl font-medium text-[#09090d] block mb-2 tracking-tight">
+                  <strong className="text-xl sm:text-2xl font-medium text-foreground block mb-2 tracking-tight">
                     {t("values.compatTitle")}
                   </strong>
-                  <p className="text-sm text-slate-600 max-w-md leading-relaxed">
+                  <p className="text-sm text-muted-foreground max-w-md leading-relaxed">
                     {t("values.compatDesc")}
                   </p>
                 </div>
@@ -132,9 +132,9 @@ export default function ValueSection() {
           <div className="lg:col-span-4 flex flex-col gap-6">
             {/* Card 2: Coherence */}
             <div className="flex-1 bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl overflow-hidden flex flex-col group">
-              <div className="h-40 bg-white relative overflow-hidden flex items-center justify-center p-4 border-b border-[#f1f5f9]">
+              <div className="h-40 bg-card relative overflow-hidden flex items-center justify-center p-4 border-b border-[#f1f5f9]">
                 <div className="flex items-center gap-4 relative z-10">
-                  <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-500 shadow-sm group-hover:-translate-x-2 transition-transform duration-500">
+                  <div className="p-3 bg-muted border border-slate-200 rounded-xl text-muted-foreground shadow-sm group-hover:-translate-x-2 transition-transform duration-500">
                     <FileText className="w-5 h-5" />
                   </div>
                   <div className="w-10 h-[2px] bg-slate-200"></div>
@@ -146,19 +146,19 @@ export default function ValueSection() {
                   </div>
                 </div>
               </div>
-              <div className="p-6 sm:p-8 flex-1 bg-gray-50">
+              <div className="p-6 sm:p-8 flex-1 bg-muted">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 bg-white rounded-lg border border-slate-200 shadow-sm">
+                  <div className="p-2 bg-card rounded-lg border border-slate-200 shadow-sm">
                     <ShieldCheck className="w-4 h-4 text-blue-600" />
                   </div>
                   <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest">
                     {t("values.card2Tag")}
                   </span>
                 </div>
-                <h3 className="text-lg sm:text-xl font-extrabold text-[#09090d] mb-2 tracking-tight">
+                <h3 className="text-lg sm:text-xl font-extrabold text-foreground mb-2 tracking-tight">
                   {t("values.card2Title")}
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {t("values.card2Desc")}
                 </p>
               </div>
@@ -166,31 +166,31 @@ export default function ValueSection() {
 
             {/* Card 3: Control */}
             <div className="flex-1 bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl overflow-hidden flex flex-col group">
-              <div className="h-40 bg-white relative overflow-hidden flex items-center justify-center p-4 border-b border-[#f1f5f9]">
+              <div className="h-40 bg-card relative overflow-hidden flex items-center justify-center p-4 border-b border-[#f1f5f9]">
                 <div className="flex flex-col gap-3 w-36">
-                  <div className="flex items-center justify-between p-2.5 bg-slate-50 border border-slate-100 rounded-lg shadow-sm group-hover:-translate-x-1 transition-transform duration-500">
+                  <div className="flex items-center justify-between p-2.5 bg-muted border border-slate-100 rounded-lg shadow-sm group-hover:-translate-x-1 transition-transform duration-500">
                     <div className="w-16 h-2 rounded-full bg-slate-200"></div>
                     <ToggleRight className="w-5 h-5 text-blue-500 group-hover:text-blue-600 transition-colors" />
                   </div>
-                  <div className="flex items-center justify-between p-2.5 bg-slate-50 border border-slate-100 rounded-lg shadow-sm group-hover:translate-x-1 transition-transform duration-500 delay-75">
+                  <div className="flex items-center justify-between p-2.5 bg-muted border border-slate-100 rounded-lg shadow-sm group-hover:translate-x-1 transition-transform duration-500 delay-75">
                     <div className="w-8 h-2 rounded-full bg-slate-200"></div>
                     <ToggleRight className="w-5 h-5 text-slate-300 group-hover:text-blue-500 transition-colors delay-100" />
                   </div>
                 </div>
               </div>
-              <div className="p-6 sm:p-8 flex-1 bg-gray-50">
+              <div className="p-6 sm:p-8 flex-1 bg-muted">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 bg-white rounded-lg border border-slate-200 shadow-sm">
+                  <div className="p-2 bg-card rounded-lg border border-slate-200 shadow-sm">
                     <SlidersHorizontal className="w-4 h-4 text-blue-600" />
                   </div>
                   <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest">
                     {t("values.card3Tag")}
                   </span>
                 </div>
-                <h3 className="text-lg sm:text-xl font-extrabold text-[#09090d] mb-2 tracking-tight">
+                <h3 className="text-lg sm:text-xl font-extrabold text-foreground mb-2 tracking-tight">
                   {t("values.card3Title")}
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {t("values.card3Desc")}
                 </p>
               </div>

@@ -348,17 +348,27 @@ export default function Header() {
         </nav>
 
         {/* Right Action Items */}
-        <div className="hidden lg:flex items-center gap-5 shrink-0">
+        <div className="hidden lg:flex items-center gap-3 shrink-0">
+          {/* Theme Toggle Button */}
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="p-2 rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="Toggle Theme"
+          >
+            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          </button>
+
           {/* Language Selector Dropdown */}
           <div className="relative" ref={langDropdownRef}>
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              className="flex items-center gap-1.5 text-[15px] font-semibold text-[#465a75] hover:text-[#093cad] transition-colors py-2"
+              className="flex items-center gap-1.5 text-[15px] font-bold text-foreground hover:text-primary transition-colors py-2"
             >
-              <Globe className="w-4 h-4 text-[#07A7E1]" />
+              <Globe className="w-4 h-4 text-primary" />
               <span className="uppercase">{currentLang.code}</span>
               <ChevronDown
-                className={`w-3.5 h-3.5 transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
+                className={`w-3.5 h-3.5 text-muted-foreground transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
               />
             </button>
 
@@ -399,16 +409,6 @@ export default function Header() {
                 ))}
             </div>
           </div>
-
-          {/* Theme Toggle Button */}
-          <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
-            aria-label="Toggle Theme"
-          >
-            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          </button>
 
           {/* Sign in text link */}
           <Button asChild variant="ghost">

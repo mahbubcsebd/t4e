@@ -14,7 +14,7 @@ export default function PersistentContextSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 md:py-32 bg-[#fafafa] border-b border-zinc-200/60 overflow-hidden relative">
+    <section className="py-24 md:py-32 bg-background border-b border-zinc-200/60 overflow-hidden relative">
       <Container className="relative z-10">
         {/* Editorial Header */}
         <SectionHeading 
@@ -41,17 +41,17 @@ export default function PersistentContextSection() {
         {/* Central Brain Visualization */}
         <div className="max-w-4xl mx-auto relative mt-8 md:mt-16 py-10 pb-0">
           {/* Connecting Dashed Line (Desktop Horizontal) */}
-          <div className="hidden md:block absolute top-[120px] left-[15%] right-[15%] border-t-2 border-dashed border-gray-200 z-0"></div>
+          <div className="hidden md:block absolute top-[120px] left-[15%] right-[15%] border-t-2 border-dashed border-border z-0"></div>
 
           {/* Grid Layout (3 Columns) */}
           <div className="flex flex-col md:flex-row items-start justify-center gap-8 md:gap-16 relative z-10 w-full">
             {/* Left Column (Cursor -> Windsurf) */}
             <div className="flex flex-col items-center gap-12 relative z-10 mt-0 md:mt-10">
               {/* Vertical line joining them */}
-              <div className="hidden md:block absolute top-[40px] h-[128px] left-1/2 border-l-2 border-dashed border-gray-200 -translate-x-1/2 z-0"></div>
+              <div className="hidden md:block absolute top-[40px] h-[128px] left-1/2 border-l-2 border-dashed border-border -translate-x-1/2 z-0"></div>
 
               {/* Card 1: Cursor */}
-              <div className="w-full md:w-[200px] bg-white border border-zinc-200 rounded-2xl p-3 hover:border-blue-600/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-full md:w-[200px] bg-card border border-zinc-200 rounded-2xl p-3 hover:border-blue-600/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-blue-50 rounded-xl text-blue-600 group-hover:scale-110 transition-transform">
                   <SiCursor className="w-5 h-5" />
                 </div>
@@ -61,7 +61,7 @@ export default function PersistentContextSection() {
               </div>
 
               {/* Card 2: Windsurf */}
-              <div className="w-full md:w-[200px] bg-white border border-zinc-200 rounded-2xl p-3 hover:border-blue-600/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-full md:w-[200px] bg-card border border-zinc-200 rounded-2xl p-3 hover:border-blue-600/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-blue-50 rounded-xl text-blue-600 group-hover:scale-110 transition-transform">
                   <SiWindsurf className="w-5 h-5" />
                 </div>
@@ -74,14 +74,14 @@ export default function PersistentContextSection() {
             {/* Center Column (Brain -> MCP) */}
             <div className="flex flex-col items-center gap-12 relative z-20">
               {/* Vertical line joining them */}
-              <div className="hidden md:block absolute top-[80px] h-[168px] left-1/2 border-l-2 border-dashed border-gray-200 -translate-x-1/2 z-0"></div>
+              <div className="hidden md:block absolute top-[80px] h-[168px] left-1/2 border-l-2 border-dashed border-border -translate-x-1/2 z-0"></div>
 
               {/* Main Center Node */}
               <div className="shrink-0 relative z-10">
                 {/* Background Glow */}
                 <div className="absolute inset-0 bg-blue-600 blur-3xl opacity-20 rounded-full scale-150"></div>
 
-                <div className="relative w-36 h-36 md:w-40 md:h-40 bg-white border border-zinc-200 rounded-full flex flex-col items-center justify-center shadow-md shadow-blue-600/10 group">
+                <div className="relative w-36 h-36 md:w-40 md:h-40 bg-card border border-zinc-200 rounded-full flex flex-col items-center justify-center shadow-md shadow-blue-600/10 group">
                   <div className="absolute inset-0 rounded-full border-2 border-blue-600 animate-ping opacity-20"></div>
                   <div className="absolute inset-1 rounded-full border border-dashed border-blue-200 animate-[spin_20s_linear_infinite]"></div>
 
@@ -95,19 +95,19 @@ export default function PersistentContextSection() {
 
                 {/* Flow indicators (Desktop) */}
                 <div className="hidden md:block absolute -left-[3.5rem] top-1/2 -translate-y-1/2 z-30">
-                  <div className="px-1.5 py-1 bg-white border border-zinc-200 rounded-md shadow-sm flex items-center">
+                  <div className="px-1.5 py-1 bg-card border border-zinc-200 rounded-md shadow-sm flex items-center">
                     <ArrowRight className="w-3.5 h-3.5 text-slate-400 rotate-180" />
                   </div>
                 </div>
                 <div className="hidden md:block absolute -right-[3.5rem] top-1/2 -translate-y-1/2 z-30">
-                  <div className="px-1.5 py-1 bg-white border border-zinc-200 rounded-md shadow-sm flex items-center">
+                  <div className="px-1.5 py-1 bg-card border border-zinc-200 rounded-md shadow-sm flex items-center">
                     <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
                   </div>
                 </div>
               </div>
 
               {/* Bottom Node (MCP Clients) */}
-              <div className="w-full md:w-[200px] bg-white border border-zinc-200 rounded-2xl p-3 hover:border-blue-600/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-full md:w-[200px] bg-card border border-zinc-200 rounded-2xl p-3 hover:border-blue-600/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-blue-50 rounded-xl text-blue-600 group-hover:scale-110 transition-transform">
                   <Network className="w-5 h-5" />
                 </div>
@@ -120,10 +120,10 @@ export default function PersistentContextSection() {
             {/* Right Column (Claude -> Codex) */}
             <div className="flex flex-col items-center gap-12 relative z-10 mt-0 md:mt-10">
               {/* Vertical line joining them */}
-              <div className="hidden md:block absolute top-[40px] h-[128px] left-1/2 border-l-2 border-dashed border-gray-200 -translate-x-1/2 z-0"></div>
+              <div className="hidden md:block absolute top-[40px] h-[128px] left-1/2 border-l-2 border-dashed border-border -translate-x-1/2 z-0"></div>
 
               {/* Card 3: Claude */}
-              <div className="w-full md:w-[200px] bg-white border border-zinc-200 rounded-2xl p-3 hover:border-blue-600/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-full md:w-[200px] bg-card border border-zinc-200 rounded-2xl p-3 hover:border-blue-600/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-blue-50 rounded-xl text-blue-600 group-hover:scale-110 transition-transform">
                   <SiClaude className="w-5 h-5" />
                 </div>
@@ -133,7 +133,7 @@ export default function PersistentContextSection() {
               </div>
 
               {/* Card 4: Codex / GPT */}
-              <div className="w-full md:w-[200px] bg-white border border-zinc-200 rounded-2xl p-3 hover:border-blue-600/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-full md:w-[200px] bg-card border border-zinc-200 rounded-2xl p-3 hover:border-blue-600/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-blue-50 rounded-xl text-blue-600 group-hover:scale-110 transition-transform">
                   <TbBrandOpenai className="w-5 h-5" />
                 </div>

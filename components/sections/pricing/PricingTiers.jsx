@@ -56,7 +56,7 @@ export default function PricingTiers() {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-white border-b border-[#c8d9ed]/40">
+    <section className="py-16 md:py-20 bg-card border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {plans.map((plan, idx) => (
@@ -65,7 +65,7 @@ export default function PricingTiers() {
               className={`rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 ${
                 plan.featured
                   ? "bg-[#f2f7ff] border-2 border-[#093cad] shadow-xl relative"
-                  : "bg-[#f9fcff] border border-[#c8d9ed] hover:border-[#093cad] hover:shadow-md h-full"
+                  : "bg-[#f9fcff] border border-border hover:border-[#093cad] hover:shadow-md h-full"
               }`}
             >
               <div>
@@ -79,21 +79,21 @@ export default function PricingTiers() {
                 </span>
 
                 <div className="flex flex-row items-end gap-1 mb-3">
-                  <span className="text-2xl sm:text-3xl font-extrabold text-[#09090d]">
+                  <span className="text-2xl sm:text-3xl font-extrabold text-foreground">
                     {plan.price.split("/")[0]}
                   </span>
                   {plan.price.split("/")[1] && (
-                    <span className="text-sm font-semibold text-[#465a75] pb-1">
+                    <span className="text-sm font-semibold text-muted-foreground pb-1">
                       /{plan.price.split("/")[1]}
                     </span>
                   )}
                 </div>
 
-                <p className="text-xs text-[#465a75] mb-6 leading-relaxed">
+                <p className="text-xs text-muted-foreground mb-6 leading-relaxed">
                   {plan.desc}
                 </p>
 
-                <ul className="space-y-3 mb-8 pt-4 border-t border-[#c8d9ed]/50 text-xs font-semibold text-[#09090d]">
+                <ul className="space-y-3 mb-8 pt-4 border-t border-border/50 text-xs font-semibold text-foreground">
                   {plan.list.map((item, i) => (
                     <li key={i} className="flex items-center gap-2 font-normal">
                       <Check className="w-4 h-4 text-[#07A7E1] shrink-0" />

@@ -28,7 +28,7 @@ export default function CoherenceSection() {
 
   return (
     <section
-      className="py-24 md:py-32 bg-[#fafafa] border-b border-zinc-200/60 overflow-hidden relative"
+      className="py-24 md:py-32 bg-background border-b border-zinc-200/60 overflow-hidden relative"
       id="code-to-design"
     >
       <Container className="relative z-10">
@@ -40,7 +40,7 @@ export default function CoherenceSection() {
         />
 
         {/* Workspace Interface Window */}
-        <div className="max-w-7xl mx-auto bg-white rounded-3xl border border-zinc-200 shadow-[0_20px_40px_rgb(9,60,173,0.06)] overflow-hidden flex flex-col group">
+        <div className="max-w-7xl mx-auto bg-card rounded-3xl border border-zinc-200 shadow-[0_20px_40px_rgb(9,60,173,0.06)] overflow-hidden flex flex-col group">
           {/* Mac-style Window Header */}
           <div className="h-12 bg-zinc-50 border-b border-zinc-100 flex items-center px-5 justify-between">
             <div className="flex items-center gap-2">
@@ -57,7 +57,7 @@ export default function CoherenceSection() {
           {/* Split View Comparison */}
           <div className="flex flex-col lg:flex-row relative items-stretch">
             {/* Center VS Divider on Desktop */}
-            <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white border border-zinc-200 rounded-full items-center justify-center z-20 shadow-sm text-[10px] font-medium text-zinc-400">
+            <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-card border border-zinc-200 rounded-full items-center justify-center z-20 shadow-sm text-[10px] font-medium text-zinc-400">
               VS
             </div>
 
@@ -72,14 +72,14 @@ export default function CoherenceSection() {
                 </span>
               </div>
 
-              <div className="bg-white border border-blue-200/60 rounded-2xl p-6 shadow-sm relative group-hover:-translate-y-1 transition-transform duration-500 flex-1">
+              <div className="bg-card border border-blue-200/60 rounded-2xl p-6 shadow-sm relative group-hover:-translate-y-1 transition-transform duration-500 flex-1">
                 <div className="absolute -top-3 -right-3 bg-blue-600 text-white rounded-full p-1 shadow-md">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
-                <strong className="text-lg sm:text-xl font-medium text-[#09090d] block mb-3 leading-snug">
+                <strong className="text-lg sm:text-xl font-medium text-foreground block mb-3 leading-snug">
                   "{t("coherence.approvedTitle")}"
                 </strong>
-                <p className="text-sm text-slate-500 leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {t("coherence.approvedDesc")}
                 </p>
               </div>
@@ -88,17 +88,17 @@ export default function CoherenceSection() {
             {/* Right: Proposed Implementation (Light Theme) */}
             <div className="flex-1 p-8 lg:p-12 bg-gradient-to-bl from-gray-50/40 to-transparent flex flex-col">
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 bg-gray-100 text-gray-600 rounded-lg">
+                <div className="p-2 bg-gray-100 text-muted-foreground rounded-lg">
                   <GitPullRequest className="w-4 h-4" />
                 </div>
-                <span className="text-[10px] font-medium text-gray-600 uppercase tracking-widest">
+                <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-widest">
                   {t("coherence.proposedTag")}
                 </span>
               </div>
 
-              <div className="bg-white border border-gray-200/60 rounded-2xl p-6 shadow-sm font-mono relative overflow-hidden group-hover:-translate-y-1 transition-transform duration-500 delay-75 flex-1">
+              <div className="bg-card border border-border/60 rounded-2xl p-6 shadow-sm font-mono relative overflow-hidden group-hover:-translate-y-1 transition-transform duration-500 delay-75 flex-1">
                 {/* Subtle grey tint for diff */}
-                <div className="absolute inset-0 bg-gray-50/50 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-muted/50 pointer-events-none"></div>
 
                 <div className="flex items-center gap-4 text-[11px] text-gray-500/70 mb-3 tracking-wider uppercase font-sans font-medium">
                   <span>src/config/policy.ts</span>
@@ -108,7 +108,7 @@ export default function CoherenceSection() {
                   <strong className="text-gray-800 block mb-3 leading-relaxed">
                     {t("coherence.proposedTitle")}
                   </strong>
-                  <p className="text-slate-500 font-sans text-xs">
+                  <p className="text-muted-foreground font-sans text-xs">
                     // {t("coherence.proposedDesc")}
                   </p>
                 </div>
@@ -117,22 +117,22 @@ export default function CoherenceSection() {
           </div>
 
           {/* Inline Alert Panel */}
-          <div className="border-t border-zinc-100 bg-white p-6 lg:px-12 lg:py-8">
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 shadow-sm shadow-gray-100/50">
+          <div className="border-t border-zinc-100 bg-card p-6 lg:px-12 lg:py-8">
+            <div className="bg-muted border border-border rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 shadow-sm shadow-gray-100/50">
               <div className="flex items-start sm:items-center gap-4">
-                <div className="p-2.5 bg-white rounded-xl shadow-sm border border-gray-200 text-gray-600 shrink-0">
+                <div className="p-2.5 bg-card rounded-xl shadow-sm border border-border text-muted-foreground shrink-0">
                   <AlertCircle className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-medium text-gray-600 uppercase tracking-widest block mb-1">
+                  <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-widest block mb-1">
                     {t("coherence.alertTag")}
                   </span>
-                  <strong className="text-sm sm:text-base font-medium text-gray-900 block">
+                  <strong className="text-sm sm:text-base font-medium text-foreground block">
                     {t("coherence.alertTitle")}
                   </strong>
                 </div>
               </div>
-              <div className="bg-white border border-gray-300 text-gray-700 text-[11px] font-medium px-4 py-2.5 rounded-lg whitespace-nowrap shadow-sm flex items-center gap-2 hover:bg-gray-700 hover:text-white hover:border-gray-700 transition-colors cursor-pointer">
+              <div className="bg-card border border-gray-300 text-foreground text-[11px] font-medium px-4 py-2.5 rounded-lg whitespace-nowrap shadow-sm flex items-center gap-2 hover:bg-gray-700 hover:text-white hover:border-gray-700 transition-colors cursor-pointer">
                 {t("coherence.alertDesc")}
                 <ArrowRight className="w-3 h-3" />
               </div>
@@ -146,14 +146,14 @@ export default function CoherenceSection() {
 
             <div className="flex flex-col gap-6 relative z-10">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-white rounded-lg border border-zinc-200 shadow-sm text-blue-600">
+                <div className="p-2 bg-card rounded-lg border border-zinc-200 shadow-sm text-blue-600">
                   <Workflow className="w-4 h-4" />
                 </div>
                 <div>
                   <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-widest block mb-0.5">
                     {t("coherence.impactTag")}
                   </span>
-                  <strong className="text-sm font-medium text-[#09090d]">
+                  <strong className="text-sm font-medium text-foreground">
                     {t("coherence.impactTitle")}
                   </strong>
                 </div>
@@ -163,10 +163,10 @@ export default function CoherenceSection() {
                 {impactNodes.map((node, i) => (
                   <div
                     key={i}
-                    className="bg-white border border-slate-200 rounded-xl p-3 pr-4 flex items-center gap-3 hover:border-blue-600  transition-all cursor-default group/node"
+                    className="bg-card border border-slate-200 rounded-xl p-3 pr-4 flex items-center gap-3 hover:border-blue-600  transition-all cursor-default group/node"
                   >
                     <div className="w-2 h-2 rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.6)]"></div>
-                    <span className="text-xs font-semibold text-slate-700 leading-tight">
+                    <span className="text-xs font-semibold text-foreground leading-tight">
                       {node}
                     </span>
                   </div>

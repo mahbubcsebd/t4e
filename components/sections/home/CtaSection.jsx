@@ -14,14 +14,14 @@ export default function CtaSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 md:py-32 bg-[#fafafa]" id="register">
+    <section className="py-24 md:py-32 bg-background" id="register">
       <Container className="max-w-3xl text-center">
         <SectionHeading 
           eyebrow={t("nav.startFree")}
           title={t("cta.title")}
           subtitle={t("cta.subtitle")}
           className="mb-10 max-w-none"
-          titleClassName="text-3xl sm:text-4xl md:text-5xl leading-[1.1] mb-5"
+          titleClassName="text-3xl sm:text-muted-foregroundxl md:text-muted-foregroundxl leading-[1.1] mb-5"
           subtitleClassName="max-w-xl mx-auto"
           eyebrowClassName="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-6 border border-blue-200 shadow-sm"
         />

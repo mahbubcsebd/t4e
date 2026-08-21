@@ -41,7 +41,7 @@ export default function HeroSection() {
           </span>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] font-extrabold tracking-tight text-foreground leading-[1.05] mb-6">
+          <h1 className="text-muted-foregroundxl sm:text-muted-foregroundxl md:text-[56px] lg:text-[64px] font-extrabold tracking-tight text-foreground leading-[1.05] mb-6">
             {t("hero.titlePrefix")}
             <br className="hidden md:block" />
             <span className="text-blue-600"> {t("hero.titleHighlight")}</span>
@@ -147,7 +147,7 @@ export default function HeroSection() {
                           delay: 0.1,
                           ease: "easeOut",
                         }}
-                        className="bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm relative z-10"
+                        className="bg-card p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm relative z-10"
                       >
                         <div className="flex items-center gap-1 mb-2">
                           <Code2 className="w-4 h-4 text-muted-foreground" />

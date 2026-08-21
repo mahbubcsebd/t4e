@@ -9,7 +9,7 @@ export default function ContactSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-white via-[#f7fafe] to-white border-b border-[#c8d9ed]/40">
+    <section className="py-16 md:py-20 bg-gradient-to-b from-white via-[#f7fafe] to-white border-b border-border">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-b from-[#07A7E1]/5 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
 
@@ -19,13 +19,13 @@ export default function ContactSection() {
           <span className="inline-block px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-3">
             {t("contact.eyebrow")}
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090d] tracking-tight leading-[1.15] mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-6">
             {t("contact.titlePrefix")}
             <span className="text-gradient decoration-[#07A7E1]/30">
               {t("contact.titleHighlight")}
             </span>
           </h2>
-          <p className="text-base text-[#465a75] leading-relaxed">
+          <p className="text-base text-muted-foreground leading-relaxed">
             {t("contact.subtitle")}
           </p>
         </div>

@@ -15,18 +15,18 @@ export default function SeeSystem() {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-white border-b border-[#c8d9ed]/40">
+    <section className="py-16 md:py-20 bg-card border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Diagram Mock */}
-          <div className="bg-[#f9fcff] border border-[#c8d9ed] rounded-2xl p-6 sm:p-8 shadow-xl">
+          <div className="bg-[#f9fcff] border border-border rounded-2xl p-6 sm:p-8 shadow-xl">
             <div className="grid grid-cols-11 gap-3 items-center">
-              <div className="col-span-5 bg-white p-4 rounded-xl border border-[#bcd1e9]">
+              <div className="col-span-5 bg-card p-4 rounded-xl border border-[#bcd1e9]">
                 <small className="text-[9px] font-bold text-[#4670a7] uppercase block mb-1">
                   appointment-platform
                 </small>
-                <strong className="text-xs font-bold text-[#09090d] block mb-2">src/</strong>
-                <div className="text-[10px] text-[#465a75] font-mono leading-relaxed space-y-1">
+                <strong className="text-xs font-bold text-foreground block mb-2">src/</strong>
+                <div className="text-[10px] text-muted-foreground font-mono leading-relaxed space-y-1">
                   <div>services/booking</div>
                   <div>policies/refunds</div>
                   <div>payments</div>
@@ -38,11 +38,11 @@ export default function SeeSystem() {
                 <ArrowRight className="w-5 h-5" />
               </div>
 
-              <div className="col-span-5 bg-white p-4 rounded-xl border border-[#bcd1e9]">
+              <div className="col-span-5 bg-card p-4 rounded-xl border border-[#bcd1e9]">
                 <small className="text-[9px] font-bold text-[#4670a7] uppercase block mb-1">
                   LIVING BLUEPRINT
                 </small>
-                <strong className="text-xs font-bold text-[#09090d] block mb-2">Connected system</strong>
+                <strong className="text-xs font-bold text-foreground block mb-2">Connected system</strong>
                 <div className="flex flex-wrap gap-1">
                   <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-semibold px-2 py-0.5 rounded">Booking</span>
                   <span className="bg-[#eaf4ff] text-[#093cad] text-[9px] font-semibold px-2 py-0.5 rounded">Payments</span>
@@ -58,16 +58,16 @@ export default function SeeSystem() {
             <span className="inline-block px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-3">
               {t("codeToDesignPage.seeSystemEyebrow")}
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#09090d] tracking-tight mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-4">
               {t("codeToDesignPage.seeSystemTitle")}
             </h2>
-            <p className="text-base text-[#465a75] leading-relaxed mb-6">
+            <p className="text-base text-muted-foreground leading-relaxed mb-6">
               {t("codeToDesignPage.seeSystemSubtitle")}
             </p>
 
             <ul className="space-y-3">
               {seeSystemList.map((item, idx) => (
-                <li key={idx} className="flex items-center gap-3 text-sm font-semibold text-[#09090d]">
+                <li key={idx} className="flex items-center gap-3 text-sm font-semibold text-foreground">
                   <CheckCircle2 className="w-5 h-5 text-[#07A7E1] shrink-0" />
                   <span>{item}</span>
                 </li>

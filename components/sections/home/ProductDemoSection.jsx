@@ -32,7 +32,7 @@ export default function ProductDemoSection() {
             <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wide mb-6 border border-primary/20">
               {t("demo.eyebrow")}
             </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight">
+            <h2 className="text-3xl md:text-muted-foregroundxl font-extrabold text-foreground mb-4 tracking-tight">
               {t("demo.title")}
             </h2>
             <p className="text-lg text-muted-foreground mb-8">

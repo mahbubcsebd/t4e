@@ -26,16 +26,16 @@ export default function CostControl() {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-[#f7fafe] border-b border-[#c8d9ed]/40">
+    <section className="py-16 md:py-20 bg-[#f7fafe] border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="inline-block px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-3">
             {t("pricingPage.costEyebrow")}
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#09090d] tracking-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-4">
             {t("pricingPage.costTitle")}
           </h2>
-          <p className="text-base text-[#465a75] leading-relaxed">
+          <p className="text-base text-muted-foreground leading-relaxed">
             {t("pricingPage.costSubtitle")}
           </p>
         </div>
@@ -44,15 +44,15 @@ export default function CostControl() {
           {cards.map((c, idx) => (
             <div
               key={idx}
-              className="bg-white border border-[#c8d9ed] rounded-2xl p-7 hover:border-[#093cad] transition-all shadow-md"
+              className="bg-card border border-border rounded-2xl p-7 hover:border-[#093cad] transition-all shadow-md"
             >
-              <div className="p-2.5 rounded-xl bg-[#f2f7ff] border border-[#c8d9ed]/50 w-fit mb-4">
+              <div className="p-2.5 rounded-xl bg-[#f2f7ff] border border-border/50 w-fit mb-4">
                 {c.icon}
               </div>
-              <h3 className="text-lg font-bold text-[#09090d] mb-2 leading-snug">
+              <h3 className="text-lg font-bold text-foreground mb-2 leading-snug">
                 {c.title}
               </h3>
-              <p className="text-xs sm:text-sm text-[#465a75] leading-relaxed">
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                 {c.desc}
               </p>
             </div>
