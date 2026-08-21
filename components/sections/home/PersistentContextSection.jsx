@@ -29,7 +29,7 @@ export default function PersistentContextSection() {
                     {i === 0 ? (
                       <span>{sentence}. </span>
                     ) : (
-                      <span className="text-blue-600">{sentence}</span>
+                      <span className="text-primary">{sentence}</span>
                     )}
                   </React.Fragment>
                 ))}
@@ -52,20 +52,20 @@ export default function PersistentContextSection() {
 
               {/* Card 1: Cursor */}
               <div className="w-full md:w-[200px] bg-card border border-border rounded-2xl p-3 hover:border-blue-600/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
-                <div className="p-2.5 bg-blue-50 rounded-xl text-blue-600 group-hover:scale-110 transition-transform">
+                <div className="p-2.5 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                   <SiCursor className="w-5 h-5" />
                 </div>
-                <strong className="text-sm font-semibold text-slate-800 tracking-wide">
+                <strong className="text-sm font-semibold text-foreground tracking-wide">
                   Cursor
                 </strong>
               </div>
 
               {/* Card 2: Windsurf */}
               <div className="w-full md:w-[200px] bg-card border border-border rounded-2xl p-3 hover:border-blue-600/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
-                <div className="p-2.5 bg-blue-50 rounded-xl text-blue-600 group-hover:scale-110 transition-transform">
+                <div className="p-2.5 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                   <SiWindsurf className="w-5 h-5" />
                 </div>
-                <strong className="text-sm font-semibold text-slate-800 tracking-wide">
+                <strong className="text-sm font-semibold text-foreground tracking-wide">
                   Windsurf
                 </strong>
               </div>
@@ -85,8 +85,8 @@ export default function PersistentContextSection() {
                   <div className="absolute inset-0 rounded-full border-2 border-blue-600 animate-ping opacity-20"></div>
                   <div className="absolute inset-1 rounded-full border border-dashed border-primary/30 animate-[spin_20s_linear_infinite]"></div>
 
-                  <Database className="w-8 h-8 md:w-10 md:h-10 text-blue-600 mb-2 group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-500" />
-                  <span className="text-[10px] md:text-xs font-extrabold text-blue-600 uppercase tracking-widest text-center px-4 leading-tight">
+                  <Database className="w-8 h-8 md:w-10 md:h-10 text-primary mb-2 group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-500" />
+                  <span className="text-[10px] md:text-xs font-extrabold text-primary uppercase tracking-widest text-center px-4 leading-tight">
                     Reviewed
                     <br />
                     Context
@@ -96,22 +96,22 @@ export default function PersistentContextSection() {
                 {/* Flow indicators (Desktop) */}
                 <div className="hidden md:block absolute -left-[3.5rem] top-1/2 -translate-y-1/2 z-30">
                   <div className="px-1.5 py-1 bg-card border border-border rounded-md shadow-sm flex items-center">
-                    <ArrowRight className="w-3.5 h-3.5 text-slate-400 rotate-180" />
+                    <ArrowRight className="w-3.5 h-3.5 text-muted-foreground rotate-180" />
                   </div>
                 </div>
                 <div className="hidden md:block absolute -right-[3.5rem] top-1/2 -translate-y-1/2 z-30">
                   <div className="px-1.5 py-1 bg-card border border-border rounded-md shadow-sm flex items-center">
-                    <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
+                    <ArrowRight className="w-3.5 h-3.5 text-muted-foreground" />
                   </div>
                 </div>
               </div>
 
               {/* Bottom Node (MCP Clients) */}
               <div className="w-full md:w-[200px] bg-card border border-border rounded-2xl p-3 hover:border-blue-600/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
-                <div className="p-2.5 bg-blue-50 rounded-xl text-blue-600 group-hover:scale-110 transition-transform">
+                <div className="p-2.5 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                   <Network className="w-5 h-5" />
                 </div>
-                <strong className="text-sm font-semibold text-slate-800 tracking-wide">
+                <strong className="text-sm font-semibold text-foreground tracking-wide">
                   MCP Clients
                 </strong>
               </div>
@@ -124,20 +124,20 @@ export default function PersistentContextSection() {
 
               {/* Card 3: Claude */}
               <div className="w-full md:w-[200px] bg-card border border-border rounded-2xl p-3 hover:border-blue-600/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
-                <div className="p-2.5 bg-blue-50 rounded-xl text-blue-600 group-hover:scale-110 transition-transform">
+                <div className="p-2.5 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                   <SiClaude className="w-5 h-5" />
                 </div>
-                <strong className="text-sm font-semibold text-slate-800 tracking-wide">
+                <strong className="text-sm font-semibold text-foreground tracking-wide">
                   Claude Code
                 </strong>
               </div>
 
               {/* Card 4: Codex / GPT */}
               <div className="w-full md:w-[200px] bg-card border border-border rounded-2xl p-3 hover:border-blue-600/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
-                <div className="p-2.5 bg-blue-50 rounded-xl text-blue-600 group-hover:scale-110 transition-transform">
+                <div className="p-2.5 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                   <TbBrandOpenai className="w-5 h-5" />
                 </div>
-                <strong className="text-sm font-semibold text-slate-800 tracking-wide">
+                <strong className="text-sm font-semibold text-foreground tracking-wide">
                   Codex
                 </strong>
               </div>
