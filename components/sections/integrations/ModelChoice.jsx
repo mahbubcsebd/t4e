@@ -3,61 +3,89 @@
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Brain, Cpu } from "lucide-react";
+import Container from "@/components/layout/Container";
+import SectionHeading from "@/components/layout/SectionHeading";
+import SectionCard from "@/components/layout/SectionCard";
 
 export default function ModelChoice() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 md:py-20 bg-[#f7fafe] border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-3">
-            {t("integrationsPage.modelsEyebrow")}
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-            {t("integrationsPage.modelsTitle")}
-          </h2>
-          <p className="text-base text-muted-foreground leading-relaxed">
-            {t("integrationsPage.modelsSubtitle")}
-          </p>
-        </div>
+    <section className="py-12 md:py-32 bg-background border-b border-border">
+      <Container>
+        <SectionCard glowPosition="reverse">
+          <SectionHeading
+            eyebrow={t("integrationsPage.modelsEyebrow")}
+            title={t("integrationsPage.modelsTitle")}
+            subtitle={t("integrationsPage.modelsSubtitle")}
+            className="mb-12 md:mb-16 relative z-10 max-w-2xl"
+          />
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="bg-card border border-border rounded-2xl p-7 hover:border-[#093cad] transition-all shadow-md">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2.5 rounded-xl bg-[#f2f7ff] border border-border/50">
-                <Brain className="w-5 h-5 text-[#093cad]" />
-              </div>
-              <span className="text-xs font-bold text-[#093cad] uppercase tracking-wider bg-[#eaf0fb] px-3 py-1 rounded-full">
-                {t("integrationsPage.model1Tag")}
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-foreground mb-2">
-              {t("integrationsPage.model1Title")}
-            </h3>
-            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-              {t("integrationsPage.model1Desc")}
-            </p>
-          </div>
+          <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 lg:gap-10 max-w-5xl mx-auto relative z-10">
+            {/* Card 1 */}
+            <div className="flex-1 relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-[2rem] p-8 sm:p-10 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 flex flex-col items-center text-center group overflow-hidden translate-y-0 hover:-translate-y-2">
+              {/* Hover Gradient Background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-          <div className="bg-card border border-border rounded-2xl p-7 hover:border-[#093cad] transition-all shadow-md">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2.5 rounded-xl bg-[#f2f7ff] border border-border/50">
-                <Cpu className="w-5 h-5 text-[#07A7E1]" />
+              <div className="relative z-10 flex flex-col items-center">
+                <div className="mb-6 p-5 rounded-full bg-primary/10 border border-primary/20 shadow-[0_0_30px_rgba(var(--primary),0.15)] group-hover:shadow-[0_0_40px_rgba(var(--primary),0.3)] transition-all duration-500 group-hover:scale-110">
+                  <Brain className="w-10 h-10 text-primary" />
+                </div>
+                <span className="mb-6 text-[10px] font-extrabold text-primary bg-primary/10 px-4 py-1.5 rounded-full uppercase tracking-[0.2em] border border-primary/20 group-hover:border-primary/40 transition-colors">
+                  {t("integrationsPage.model1Tag")}
+                </span>
+                <h3 className="text-2xl font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+                  {t("integrationsPage.model1Title")}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/90 transition-colors duration-300 max-w-[300px]">
+                  {t("integrationsPage.model1Desc")}
+                </p>
               </div>
-              <span className="text-xs font-bold text-[#07A7E1] uppercase tracking-wider bg-[#e7f7fc] px-3 py-1 rounded-full">
-                {t("integrationsPage.model2Tag")}
-              </span>
             </div>
-            <h3 className="text-xl font-bold text-foreground mb-2">
-              {t("integrationsPage.model2Title")}
-            </h3>
-            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-              {t("integrationsPage.model2Desc")}
-            </p>
+
+            {/* Central Divider */}
+            <div className="hidden md:flex flex-col items-center justify-center relative px-2">
+              {/* Vertical dashed line */}
+              <div className="absolute top-[10%] bottom-[10%] left-1/2 -translate-x-1/2 w-0.5 border-l-2 border-dashed border-border/60"></div>
+              {/* Center Badge */}
+              <div className="relative z-10 bg-card border border-border/80 text-muted-foreground font-bold text-[10px] px-3 py-2 rounded-xl uppercase tracking-widest shadow-sm">
+                OR
+              </div>
+            </div>
+
+            {/* Mobile Divider */}
+            <div className="md:hidden flex items-center justify-center relative py-4">
+              {/* Horizontal dashed line */}
+              <div className="absolute left-[10%] right-[10%] top-1/2 -translate-y-1/2 h-0.5 border-t-2 border-dashed border-border/60"></div>
+              {/* Center Badge */}
+              <div className="relative z-10 bg-card border border-border/80 text-muted-foreground font-bold text-[10px] px-3 py-2 rounded-xl uppercase tracking-widest shadow-sm">
+                OR
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="flex-1 relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-[2rem] p-8 sm:p-10 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 flex flex-col items-center text-center group overflow-hidden translate-y-0 hover:-translate-y-2">
+              {/* Hover Gradient Background */}
+              <div className="absolute inset-0 bg-gradient-to-bl from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10 flex flex-col items-center">
+                <div className="mb-6 p-5 rounded-full bg-primary/10 border border-primary/20 shadow-[0_0_30px_rgba(var(--primary),0.15)] group-hover:shadow-[0_0_40px_rgba(var(--primary),0.3)] transition-all duration-500 group-hover:scale-110">
+                  <Cpu className="w-10 h-10 text-primary" />
+                </div>
+                <span className="mb-6 text-[10px] font-extrabold text-primary bg-primary/10 px-4 py-1.5 rounded-full uppercase tracking-[0.2em] border border-primary/20 group-hover:border-primary/40 transition-colors">
+                  {t("integrationsPage.model2Tag")}
+                </span>
+                <h3 className="text-2xl font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+                  {t("integrationsPage.model2Title")}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/90 transition-colors duration-300 max-w-[300px]">
+                  {t("integrationsPage.model2Desc")}
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </SectionCard>
+      </Container>
     </section>
   );
 }
