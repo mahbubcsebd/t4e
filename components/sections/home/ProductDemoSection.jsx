@@ -23,7 +23,7 @@ export default function ProductDemoSection() {
         {/* Clean card matching other sections */}
         <div className="bg-[#f2f7ff] rounded-3xl border border-[#c8d9ed]/70 shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-8 sm:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 overflow-hidden relative">
           {/* Subtle background watermark */}
-          <div className="absolute right-0 bottom-0 text-[#093cad]/[0.03] text-[180px] font-black leading-none select-none pointer-events-none overflow-hidden">
+          <div className="absolute right-0 bottom-0 text-blue-600/[0.03] text-[180px] font-black leading-none select-none pointer-events-none overflow-hidden">
             T4E
           </div>
 

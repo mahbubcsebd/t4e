@@ -39,16 +39,16 @@ export default function ValueSection() {
                   <div className="absolute top-[20%] left-[20%] p-3 bg-blue-50 text-blue-500 rounded-2xl border border-blue-100 shadow-sm opacity-60 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-700 delay-100 z-10">
                     <Database className="w-6 h-6" />
                   </div>
-                  <div className="absolute bottom-[20%] left-[35%] p-3 bg-emerald-50 text-emerald-500 rounded-2xl border border-emerald-100 shadow-sm opacity-60 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-700 delay-200 z-10">
+                  <div className="absolute bottom-[20%] left-[35%] p-3 bg-gray-50 text-gray-500 rounded-2xl border border-gray-200 shadow-sm opacity-60 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-700 delay-200 z-10">
                     <Layout className="w-6 h-6" />
                   </div>
-                  <div className="absolute top-[30%] right-[25%] p-3 bg-indigo-50 text-indigo-500 rounded-2xl border border-indigo-100 shadow-sm opacity-60 group-hover:opacity-100 group-hover:-translate-x-2 transition-all duration-700 delay-300 z-10">
+                  <div className="absolute top-[30%] right-[25%] p-3 bg-blue-50 text-blue-500 rounded-2xl border border-blue-100 shadow-sm opacity-60 group-hover:opacity-100 group-hover:-translate-x-2 transition-all duration-700 delay-300 z-10">
                     <Network className="w-6 h-6" />
                   </div>
 
                   {/* Center Magnifying Glass / Focus */}
-                  <div className="relative z-20 w-24 h-24 bg-white/90 backdrop-blur-md rounded-full shadow-[0_20px_40px_rgb(7,167,225,0.15)] border-4 border-[#07A7E1]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                    <Search className="w-10 h-10 text-[#07A7E1]" />
+                  <div className="relative z-20 w-24 h-24 bg-white/90 backdrop-blur-md rounded-full shadow-md shadow-blue-600/10 border-4 border-blue-200 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <Search className="w-10 h-10 text-blue-600" />
                   </div>
 
                   {/* Connecting lines that fade in */}
@@ -85,12 +85,12 @@ export default function ValueSection() {
               </div>
 
               {/* Content */}
-              <div className="p-8 sm:p-10 flex-1 bg-gradient-to-b from-[#f8fafc] to-[#f1f5f9]">
+              <div className="p-8 sm:p-10 flex-1 bg-gray-50">
                 <div className="flex items-center gap-3 mb-5">
                   <div className="p-2 bg-white rounded-lg border border-slate-200 shadow-sm">
-                    <Eye className="w-4 h-4 text-[#093cad]" />
+                    <Eye className="w-4 h-4 text-blue-600" />
                   </div>
-                  <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-widest">
+                  <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest">
                     {t("values.card1Tag")}
                   </span>
                 </div>
@@ -138,7 +138,7 @@ export default function ValueSection() {
                     <FileText className="w-5 h-5" />
                   </div>
                   <div className="w-10 h-[2px] bg-slate-200"></div>
-                  <div className="w-8 h-8 rounded-full bg-[#093cad] border-2 border-white shadow-md flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 group-hover:scale-110 transition-transform duration-500">
+                  <div className="w-8 h-8 rounded-full bg-blue-600 border-2 border-white shadow-md flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 group-hover:scale-110 transition-transform duration-500">
                     <CheckCircle2 className="w-4 h-4 text-white" />
                   </div>
                   <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl text-blue-600 shadow-sm group-hover:translate-x-2 transition-transform duration-500">
@@ -146,12 +146,12 @@ export default function ValueSection() {
                   </div>
                 </div>
               </div>
-              <div className="p-6 sm:p-8 flex-1 bg-gradient-to-b from-[#f8fafc] to-[#f1f5f9]">
+              <div className="p-6 sm:p-8 flex-1 bg-gray-50">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-white rounded-lg border border-slate-200 shadow-sm">
-                    <ShieldCheck className="w-4 h-4 text-[#093cad]" />
+                    <ShieldCheck className="w-4 h-4 text-blue-600" />
                   </div>
-                  <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-widest">
+                  <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest">
                     {t("values.card2Tag")}
                   </span>
                 </div>
@@ -170,20 +170,20 @@ export default function ValueSection() {
                 <div className="flex flex-col gap-3 w-36">
                   <div className="flex items-center justify-between p-2.5 bg-slate-50 border border-slate-100 rounded-lg shadow-sm group-hover:-translate-x-1 transition-transform duration-500">
                     <div className="w-16 h-2 rounded-full bg-slate-200"></div>
-                    <ToggleRight className="w-5 h-5 text-indigo-500 group-hover:text-indigo-600 transition-colors" />
+                    <ToggleRight className="w-5 h-5 text-blue-500 group-hover:text-blue-600 transition-colors" />
                   </div>
                   <div className="flex items-center justify-between p-2.5 bg-slate-50 border border-slate-100 rounded-lg shadow-sm group-hover:translate-x-1 transition-transform duration-500 delay-75">
                     <div className="w-8 h-2 rounded-full bg-slate-200"></div>
-                    <ToggleRight className="w-5 h-5 text-slate-300 group-hover:text-indigo-500 transition-colors delay-100" />
+                    <ToggleRight className="w-5 h-5 text-slate-300 group-hover:text-blue-500 transition-colors delay-100" />
                   </div>
                 </div>
               </div>
-              <div className="p-6 sm:p-8 flex-1 bg-gradient-to-b from-[#f8fafc] to-[#f1f5f9]">
+              <div className="p-6 sm:p-8 flex-1 bg-gray-50">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-white rounded-lg border border-slate-200 shadow-sm">
-                    <SlidersHorizontal className="w-4 h-4 text-[#093cad]" />
+                    <SlidersHorizontal className="w-4 h-4 text-blue-600" />
                   </div>
-                  <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-widest">
+                  <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest">
                     {t("values.card3Tag")}
                   </span>
                 </div>

@@ -87,8 +87,8 @@ export default function HeroSection() {
                     style={{ WebkitTapHighlightColor: "transparent" }}
                     className={`relative flex-1 sm:flex-none px-2.5 sm:px-5 py-1.5 sm:py-2 rounded-lg text-[9px] sm:text-[11px] font-semibold tracking-wider transition-all duration-300 outline-none focus:outline-none focus-visible:outline-none focus:ring-0 focus-visible:ring-0 whitespace-nowrap ${
                       activeScene === 1
-                        ? "text-[#093cad] shadow-sm bg-white border border-slate-200/60"
-                        : "text-slate-500 hover:text-[#093cad] border border-transparent"
+                        ? "text-blue-600 shadow-sm bg-white border border-slate-200/60"
+                        : "text-slate-500 hover:text-blue-600 border border-transparent"
                     }`}
                   >
                     {t("hero.tabOne")}
@@ -98,8 +98,8 @@ export default function HeroSection() {
                     style={{ WebkitTapHighlightColor: "transparent" }}
                     className={`relative flex-1 sm:flex-none px-2.5 sm:px-5 py-1.5 sm:py-2 rounded-lg text-[9px] sm:text-[11px] font-semibold tracking-wider transition-all duration-300 outline-none focus:outline-none focus-visible:outline-none focus:ring-0 focus-visible:ring-0 whitespace-nowrap ${
                       activeScene === 2
-                        ? "text-[#093cad] shadow-sm bg-white border border-slate-200/60"
-                        : "text-slate-500 hover:text-[#093cad] border border-transparent"
+                        ? "text-blue-600 shadow-sm bg-white border border-slate-200/60"
+                        : "text-slate-500 hover:text-blue-600 border border-transparent"
                     }`}
                   >
                     {t("hero.tabTwo")}
@@ -111,7 +111,7 @@ export default function HeroSection() {
                     className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${activeScene === 1 ? "bg-blue-600 w-4" : "bg-gray-200 w-2"}`}
                   ></span>
                   <span
-                    className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${activeScene === 2 ? "bg-[#093cad] w-4" : "bg-slate-200 w-2"}`}
+                    className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${activeScene === 2 ? "bg-blue-600 w-4" : "bg-slate-200 w-2"}`}
                   ></span>
                 </div>
               </div>
@@ -212,7 +212,7 @@ export default function HeroSection() {
                             setVideoId("FY68DuwOf4Q");
                             setIsVideoOpen(true);
                           }}
-                          className="relative z-20 group flex items-center justify-center w-8 h-8 sm:w-11 sm:h-11 bg-[#093cad] rounded-full shadow-lg border-2 border-white hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
+                          className="relative z-20 group flex items-center justify-center w-8 h-8 sm:w-11 sm:h-11 bg-blue-600 rounded-full shadow-lg border-2 border-white hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
                           aria-label={t("hero.watchDemo")}
                         >
                           <Play
@@ -272,7 +272,7 @@ export default function HeroSection() {
                     className="flex-1 flex flex-col justify-between"
                   >
                     <div>
-                      <span className="text-[11px] font-medium text-[#093cad] bg-[#093cad]/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                      <span className="text-[11px] font-medium text-blue-600 bg-blue-600/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                         {t("hero.cardTwoBadge")}
                       </span>
                       <h3 className="text-xl font-medium text-[#09090d] mt-2 mb-6">
@@ -351,7 +351,7 @@ export default function HeroSection() {
                             setVideoId("Lq-vza9_CzI");
                             setIsVideoOpen(true);
                           }}
-                          className="relative z-20 group flex items-center justify-center w-8 h-8 sm:w-11 sm:h-11 bg-[#093cad] rounded-full shadow-lg border-2 border-white hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
+                          className="relative z-20 group flex items-center justify-center w-8 h-8 sm:w-11 sm:h-11 bg-blue-600 rounded-full shadow-lg border-2 border-white hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
                           aria-label={t("hero.watchDemo")}
                         >
                           <Play

@@ -35,18 +35,18 @@ export default function HowItWorksSection() {
         {/* Workflow Pipeline */}
         <div className="relative">
           {/* Horizontal connection line (Desktop) */}
-          <div className="hidden lg:block absolute top-[120px] left-[15%] right-[15%] border-t-2 border-dashed border-[#c8d9ed] z-0">
+          <div className="hidden lg:block absolute top-[120px] left-[15%] right-[15%] border-t-2 border-dashed border-gray-200 z-0">
             {/* Animated particle moving across */}
-            <div className="absolute top-[-5px] left-0 w-2 h-2 rounded-full bg-[#07A7E1] shadow-[0_0_12px_#07A7E1] animate-[slide_4s_ease-in-out_infinite]"></div>
+            <div className="absolute top-[-5px] left-0 w-2 h-2 rounded-full bg-blue-600 shadow-[0_0_12px_#2563eb] animate-[slide_4s_ease-in-out_infinite]"></div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 relative z-10">
             {/* STEP 1: Connect */}
             <div className="relative group">
-              <div className="bg-white border border-zinc-200 rounded-3xl overflow-hidden hover:border-[#07A7E1]/40 transition-all duration-500 flex flex-col h-full">
+              <div className="bg-white border border-zinc-200 rounded-3xl overflow-hidden hover:border-blue-600/40 transition-all duration-500 flex flex-col h-full">
                 {/* Visual Container */}
                 <div className="h-[240px] bg-[#f8fafc] border-b border-zinc-100 flex items-center justify-center p-6 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(7,167,225,0.05)_0%,transparent_70%)]"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.05)_0%,transparent_70%)]"></div>
 
                   {/* Connect Micro UI */}
                   <div className="w-full max-w-[240px] bg-white rounded-xl border border-zinc-200/60 overflow-hidden relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
@@ -57,7 +57,7 @@ export default function HowItWorksSection() {
                     </div>
                     <div className="p-4 space-y-4">
                       <div className="flex items-center gap-3">
-                        <div className="p-2 bg-[#f4f9ff] rounded-lg text-[#07A7E1]">
+                        <div className="p-2 bg-blue-50 rounded-lg text-blue-600">
                           <GitBranch className="w-5 h-5" />
                         </div>
                         <div className="flex-1">
@@ -71,7 +71,7 @@ export default function HowItWorksSection() {
                           github.com/org/repo
                         </span>
                       </div>
-                      <div className="w-full h-8 bg-gradient-to-r from-[#07A7E1] to-[#093cad] rounded-lg flex items-center justify-center text-[10px] font-bold text-white tracking-wide shadow-sm shadow-blue-500/20">
+                      <div className="w-full h-8 bg-blue-600 rounded-lg flex items-center justify-center text-[10px] font-bold text-white tracking-wide shadow-sm shadow-blue-600/20">
                         CONNECT
                       </div>
                     </div>
@@ -79,7 +79,7 @@ export default function HowItWorksSection() {
                 </div>
                 {/* Content */}
                 <div className="p-6 md:p-8 flex flex-col flex-1">
-                  <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-widest mb-3">
+                  <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest mb-3">
                     {t("howItWorks.step1Num")}
                   </span>
                   <h3 className="text-xl font-bold text-[#09090d] mb-3">
@@ -94,10 +94,10 @@ export default function HowItWorksSection() {
 
             {/* STEP 2: Review */}
             <div className="relative group">
-              <div className="bg-white border border-zinc-200 rounded-3xl overflow-hidden hover:border-[#07A7E1]/40 transition-all duration-500 flex flex-col h-full">
+              <div className="bg-white border border-zinc-200 rounded-3xl overflow-hidden hover:border-blue-600/40 transition-all duration-500 flex flex-col h-full">
                 {/* Visual Container */}
                 <div className="h-[240px] bg-[#f8fafc] border-b border-zinc-100 flex items-center justify-center p-6 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(7,167,225,0.05)_0%,transparent_70%)]"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.05)_0%,transparent_70%)]"></div>
 
                   {/* Review Micro UI (Node Graph) */}
                   <div className="relative w-full max-w-[220px] h-[160px] z-10 group-hover:-translate-y-2 transition-transform duration-500">
@@ -108,7 +108,7 @@ export default function HowItWorksSection() {
                         y1="30%"
                         x2="25%"
                         y2="65%"
-                        stroke="#c8d9ed"
+                        stroke="#e5e7eb"
                         strokeWidth="2"
                         strokeDasharray="4 4"
                       />
@@ -117,17 +117,17 @@ export default function HowItWorksSection() {
                         y1="30%"
                         x2="75%"
                         y2="65%"
-                        stroke="#c8d9ed"
+                        stroke="#e5e7eb"
                         strokeWidth="2"
                         strokeDasharray="4 4"
                       />
                     </svg>
 
                     {/* Top Node */}
-                    <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white border border-[#07A7E1] rounded-xl p-2.5 shadow-sm z-10 flex items-center justify-center">
-                      <Network className="w-6 h-6 text-[#07A7E1]" />
+                    <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white border border-blue-600 rounded-xl p-2.5 shadow-sm z-10 flex items-center justify-center">
+                      <Network className="w-6 h-6 text-blue-600" />
                       {/* Checkmark Badge */}
-                      <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white flex items-center justify-center shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                      <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-blue-600 rounded-full border-2 border-white flex items-center justify-center shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                         <Check className="w-3 h-3 text-white" strokeWidth={3} />
                       </div>
                     </div>
@@ -143,9 +143,9 @@ export default function HowItWorksSection() {
                     </div>
 
                     {/* Validation Alert */}
-                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-max bg-emerald-50 border border-emerald-200 rounded-full py-1.5 px-4 flex items-center justify-center gap-1.5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                      <span className="text-[9px] font-bold text-emerald-700 tracking-wider">
+                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-max bg-blue-50 border border-blue-200 rounded-full py-1.5 px-4 flex items-center justify-center gap-1.5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-blue-600" />
+                      <span className="text-[9px] font-bold text-blue-700 tracking-wider">
                         MAP VALIDATED
                       </span>
                     </div>
@@ -153,7 +153,7 @@ export default function HowItWorksSection() {
                 </div>
                 {/* Content */}
                 <div className="p-6 md:p-8 flex flex-col flex-1">
-                  <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-widest mb-3">
+                  <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest mb-3">
                     {t("howItWorks.step2Num")}
                   </span>
                   <h3 className="text-xl font-bold text-[#09090d] mb-3">
@@ -168,10 +168,10 @@ export default function HowItWorksSection() {
 
             {/* STEP 3: Change */}
             <div className="relative group">
-              <div className="bg-white border border-zinc-200 rounded-3xl overflow-hidden hover:border-[#07A7E1]/40 transition-all duration-500 flex flex-col h-full">
+              <div className="bg-white border border-zinc-200 rounded-3xl overflow-hidden hover:border-blue-600/40 transition-all duration-500 flex flex-col h-full">
                 {/* Visual Container */}
                 <div className="h-[240px] bg-[#f8fafc] border-b border-zinc-100 flex items-center justify-center p-6 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(7,167,225,0.05)_0%,transparent_70%)]"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.05)_0%,transparent_70%)]"></div>
 
                   {/* Change Micro UI (Agent Interface) */}
                   <div className="w-full max-w-[240px] bg-white rounded-xl border border-zinc-200/60 overflow-hidden relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
@@ -182,26 +182,26 @@ export default function HowItWorksSection() {
                         <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Sparkles className="w-3 h-3 text-[#07A7E1]" />
+                        <Sparkles className="w-3 h-3 text-blue-600" />
                         <span className="text-[8px] text-slate-500 font-bold tracking-wider">
                           Think4Ever
                         </span>
                       </div>
                     </div>
                     <div className="p-3">
-                      <div className="bg-[#f4f9ff] border border-[#c8d9ed]/50 rounded-lg p-2.5 mb-2 relative">
-                        <span className="text-[9px] text-[#093cad] font-medium leading-relaxed block">
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-2.5 mb-2 relative">
+                        <span className="text-[9px] text-blue-600 font-medium leading-relaxed block">
                           "Implement checkout based on the validated map."
                         </span>
                       </div>
                       <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 mt-3">
-                        <div className="w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
+                        <div className="w-4 h-4 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
                           <Check
-                            className="w-2.5 h-2.5 text-emerald-600"
+                            className="w-2.5 h-2.5 text-blue-600"
                             strokeWidth={3}
                           />
                         </div>
-                        <span className="text-[9px] font-mono font-bold text-emerald-700">
+                        <span className="text-[9px] font-mono font-bold text-blue-700">
                           Context loaded
                         </span>
                       </div>
@@ -213,7 +213,7 @@ export default function HowItWorksSection() {
                 </div>
                 {/* Content */}
                 <div className="p-6 md:p-8 flex flex-col flex-1">
-                  <span className="text-[10px] font-extrabold text-[#093cad] uppercase tracking-widest mb-3">
+                  <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest mb-3">
                     {t("howItWorks.step3Num")}
                   </span>
                   <h3 className="text-xl font-bold text-[#09090d] mb-3">

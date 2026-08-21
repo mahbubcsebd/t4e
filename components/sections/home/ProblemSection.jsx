@@ -31,7 +31,7 @@ export default function ProblemSection() {
           eyebrow={t("problem.eyebrow")}
           title={t("problem.title")}
           className="max-w-[700px] mx-auto mb-10 md:mb-14"
-          eyebrowClassName="bg-[#f2f7ff] text-[#093cad] mb-3"
+          eyebrowClassName="bg-blue-50 text-blue-700 mb-3"
         />
 
         {/* The System Canvas Grid */}
@@ -39,11 +39,11 @@ export default function ProblemSection() {
           {/* Block 01 - Context Resets (Left) */}
           <div className="lg:col-span-7 bg-white rounded-3xl border border-[#c8d9ed]/70 shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col group">
             {/* Visual Canvas */}
-            <div className="h-64 sm:h-80 bg-gradient-to-b from-[#f2f7fd] to-white border-b border-[#f0f4f8] relative overflow-hidden flex items-center justify-center p-6">
+            <div className="h-64 sm:h-80 bg-gray-50 border-b border-gray-100 relative overflow-hidden flex items-center justify-center p-6">
               <div className="relative w-full max-w-sm aspect-video flex items-center justify-center">
                 {/* Central AI Node */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-2xl shadow-lg border border-[#c8d9ed] flex items-center justify-center z-20 group-hover:scale-105 transition-transform duration-500">
-                  <Bot className="w-8 h-8 text-[#093cad]" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-2xl shadow-lg border border-gray-200 flex items-center justify-center z-20 group-hover:scale-105 transition-transform duration-500">
+                  <Bot className="w-8 h-8 text-blue-600" />
                 </div>
 
                 {/* Connecting lines */}
@@ -110,7 +110,7 @@ export default function ProblemSection() {
                   01
                 </span>
                 <span className="h-[1px] w-8 bg-[#c8d9ed]"></span>
-                <span className="text-[10px] font-bold text-[#093cad] uppercase tracking-widest">
+                <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">
                   {t("problem.card1Tag")}
                 </span>
               </div>
@@ -126,43 +126,43 @@ export default function ProblemSection() {
           {/* Block 02 - Knowledge lives in different places (Right) */}
           <div className="lg:col-span-5 bg-white rounded-3xl border border-[#c8d9ed]/70 shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col group">
             {/* Visual Canvas */}
-            <div className="h-64 sm:h-80 bg-gradient-to-b from-[#f2f7fd] to-white border-b border-[#f0f4f8] relative p-6 flex flex-col items-center justify-center gap-5 overflow-hidden">
+            <div className="h-64 sm:h-80 bg-gray-50 border-b border-gray-100 relative p-6 flex flex-col items-center justify-center gap-5 overflow-hidden">
               {/* Vertical Alignment Guide */}
-              <div className="absolute top-8 bottom-8 left-1/2 -translate-x-1/2 w-px border-l border-dashed border-[#a8c3e2] z-0 opacity-50"></div>
+              <div className="absolute top-8 bottom-8 left-1/2 -translate-x-1/2 w-px border-l border-dashed border-gray-300 z-0 opacity-50"></div>
 
               {/* Layers */}
-              <div className="w-full max-w-[220px] bg-white border border-[#c8d9ed] rounded-xl p-3 flex items-center justify-between shadow-sm relative z-30 -translate-x-4 group-hover:-translate-x-6 transition-transform duration-500">
+              <div className="w-full max-w-[220px] bg-white border border-gray-200 rounded-xl p-3 flex items-center justify-between shadow-sm relative z-30 -translate-x-4 group-hover:-translate-x-6 transition-transform duration-500">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-blue-50/50 rounded-lg text-blue-600 border border-blue-100/50">
+                  <div className="p-2 bg-blue-50 rounded-lg text-blue-600 border border-blue-100">
                     <FileCode className="w-4 h-4" />
                   </div>
-                  <span className="text-xs font-bold text-slate-700">Code</span>
+                  <span className="text-xs font-bold text-gray-700">Code</span>
                 </div>
-                <div className="w-1.5 h-1.5 rounded-full bg-[#07A7E1] absolute -right-3 top-1/2 -translate-y-1/2 ring-4 ring-white"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 absolute -right-3 top-1/2 -translate-y-1/2 ring-4 ring-white"></div>
               </div>
 
-              <div className="w-full max-w-[220px] bg-white border border-[#c8d9ed] rounded-xl p-3 flex items-center justify-between shadow-sm relative z-20 translate-x-3 group-hover:translate-x-5 transition-transform duration-500 delay-75">
-                <div className="w-1.5 h-1.5 rounded-full bg-[#093cad] absolute -left-3 top-1/2 -translate-y-1/2 ring-4 ring-white"></div>
+              <div className="w-full max-w-[220px] bg-white border border-gray-200 rounded-xl p-3 flex items-center justify-between shadow-sm relative z-20 translate-x-3 group-hover:translate-x-5 transition-transform duration-500 delay-75">
+                <div className="w-1.5 h-1.5 rounded-full bg-blue-600 absolute -left-3 top-1/2 -translate-y-1/2 ring-4 ring-white"></div>
                 <div className="flex items-center gap-3 ml-1">
-                  <div className="p-2 bg-indigo-50/50 rounded-lg text-indigo-600 border border-indigo-100/50">
+                  <div className="p-2 bg-gray-50 rounded-lg text-gray-600 border border-gray-100">
                     <Workflow className="w-4 h-4" />
                   </div>
-                  <span className="text-xs font-bold text-slate-700">
+                  <span className="text-xs font-bold text-gray-700">
                     Workflows
                   </span>
                 </div>
               </div>
 
-              <div className="w-full max-w-[220px] bg-white border border-[#c8d9ed] rounded-xl p-3 flex items-center justify-between shadow-sm relative z-10 -translate-x-2 group-hover:-translate-x-4 transition-transform duration-500 delay-150">
+              <div className="w-full max-w-[220px] bg-white border border-gray-200 rounded-xl p-3 flex items-center justify-between shadow-sm relative z-10 -translate-x-2 group-hover:-translate-x-4 transition-transform duration-500 delay-150">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-emerald-50/50 rounded-lg text-emerald-600 border border-emerald-100/50">
+                  <div className="p-2 bg-gray-50 rounded-lg text-gray-600 border border-gray-100">
                     <Users className="w-4 h-4" />
                   </div>
-                  <span className="text-xs font-bold text-slate-700">
+                  <span className="text-xs font-bold text-gray-700">
                     Decisions
                   </span>
                 </div>
-                <div className="w-1.5 h-1.5 rounded-full bg-slate-400 absolute -right-3 top-1/2 -translate-y-1/2 ring-4 ring-white"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-gray-400 absolute -right-3 top-1/2 -translate-y-1/2 ring-4 ring-white"></div>
               </div>
             </div>
 
@@ -173,7 +173,7 @@ export default function ProblemSection() {
                   02
                 </span>
                 <span className="h-[1px] w-8 bg-[#c8d9ed]"></span>
-                <span className="text-[10px] font-bold text-[#093cad] uppercase tracking-widest">
+                <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">
                   {t("problem.card2Tag")}
                 </span>
               </div>
@@ -195,7 +195,7 @@ export default function ProblemSection() {
                   03
                 </span>
                 <span className="h-[1px] w-8 bg-[#c8d9ed]"></span>
-                <span className="text-[10px] font-bold text-[#093cad] uppercase tracking-widest">
+                <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">
                   {t("problem.card3Tag")}
                 </span>
               </div>
@@ -208,19 +208,19 @@ export default function ProblemSection() {
             </div>
 
             {/* Visual Canvas (Right side on desktop) */}
-            <div className="lg:col-span-7 h-auto min-h-64 lg:h-auto bg-[#fafbfc] relative p-6 sm:p-10 flex items-center justify-center order-1 lg:order-2 overflow-hidden">
+            <div className="lg:col-span-7 h-auto min-h-64 lg:h-auto bg-gray-50 relative p-6 sm:p-10 flex items-center justify-center order-1 lg:order-2 overflow-hidden">
               <div className="w-full max-w-md relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 sm:gap-0">
                 {/* Connecting Line Mobile */}
-                <div className="sm:hidden absolute left-[36px] top-[40px] bottom-[40px] border-l-2 border-dashed border-[#c8d9ed] z-0"></div>
+                <div className="sm:hidden absolute left-[36px] top-[40px] bottom-[40px] border-l-2 border-dashed border-gray-300 z-0"></div>
 
                 {/* Local Change Node */}
                 <div className="relative z-10 flex flex-row sm:flex-col items-center gap-4 sm:gap-3 bg-white sm:bg-transparent p-3 sm:p-0 rounded-xl sm:rounded-none border border-slate-200 sm:border-none shadow-sm sm:shadow-none w-full sm:w-auto shrink-0 md:translate-x-[20px]">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white border-[3px] border-[#093cad] shadow-md flex items-center justify-center relative shrink-0 group-hover:scale-110 transition-transform duration-500 md:mt-[30px]">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white border-[3px] border-blue-600 shadow-md flex items-center justify-center relative shrink-0 group-hover:scale-110 transition-transform duration-500 md:mt-[30px]">
                     <div
-                      className="absolute inset-0 rounded-full bg-[#093cad]/30 animate-ping"
+                      className="absolute inset-0 rounded-full bg-blue-600/30 animate-ping"
                       style={{ animationDuration: "3s" }}
                     ></div>
-                    <GitPullRequest className="w-5 h-5 text-[#093cad]" />
+                    <GitPullRequest className="w-5 h-5 text-blue-600" />
                   </div>
                   <span className="text-xs sm:text-[10px] font-extrabold text-slate-700 sm:text-slate-500 uppercase tracking-widest bg-white sm:bg-transparent px-2 py-1 rounded">
                     Local Edit
@@ -228,36 +228,36 @@ export default function ProblemSection() {
                 </div>
 
                 {/* Connecting Line Desktop */}
-                <div className="hidden sm:block flex-1 h-0 border-t-2 border-dashed border-[#c8d9ed] z-0"></div>
+                <div className="hidden sm:block flex-1 h-0 border-t-2 border-dashed border-gray-300 z-0"></div>
 
                 {/* Cascading Impact Nodes */}
                 <div className="relative z-10 flex flex-col gap-4 pl-16 sm:pl-0 sm:ml-[24px] w-full sm:w-auto shrink-0">
                   {/* Tree Branches (Desktop only) */}
-                  <div className="hidden sm:block absolute -left-[24px] top-[24px] bottom-1/2 border-l-2 border-t-2 border-dashed border-[#c8d9ed] rounded-tl-2xl w-[24px] z-0"></div>
-                  <div className="hidden sm:block absolute -left-[24px] top-1/2 bottom-[24px] border-l-2 border-b-2 border-dashed border-[#c8d9ed] rounded-bl-2xl w-[24px] z-0"></div>
-                  <div className="hidden sm:block absolute -left-[24px] top-1/2 -translate-y-[1px] w-[24px] border-t-2 border-dashed border-[#c8d9ed] z-0"></div>
+                  <div className="hidden sm:block absolute -left-[24px] top-[24px] bottom-1/2 border-l-2 border-t-2 border-dashed border-gray-300 rounded-tl-2xl w-[24px] z-0"></div>
+                  <div className="hidden sm:block absolute -left-[24px] top-1/2 bottom-[24px] border-l-2 border-b-2 border-dashed border-gray-300 rounded-bl-2xl w-[24px] z-0"></div>
+                  <div className="hidden sm:block absolute -left-[24px] top-1/2 -translate-y-[1px] w-[24px] border-t-2 border-dashed border-gray-300 z-0"></div>
 
-                  <div className="bg-white border border-[#c8d9ed] rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-75 z-10">
+                  <div className="bg-white border border-gray-200 rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-75 z-10">
                     {/* Mobile Card connecting line */}
-                    <div className="sm:hidden absolute -left-[28px] top-1/2 -translate-y-[1px] w-[28px] border-t-2 border-dashed border-[#c8d9ed] z-0"></div>
-                    <div className="w-2 h-2 rounded-full bg-[#093cad] absolute -left-1 top-1/2 -translate-y-1/2 z-20"></div>
-                    <Network className="w-4 h-4 text-[#093cad]" />
+                    <div className="sm:hidden absolute -left-[28px] top-1/2 -translate-y-[1px] w-[28px] border-t-2 border-dashed border-gray-300 z-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-blue-600 absolute -left-1 top-1/2 -translate-y-1/2 z-20"></div>
+                    <Network className="w-4 h-4 text-blue-600" />
                     <span className="text-xs font-bold text-slate-700">
                       APIs & Interfaces
                     </span>
                   </div>
 
-                  <div className="bg-white border border-[#c8d9ed] rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-150 z-10">
-                    <div className="sm:hidden absolute -left-[28px] top-1/2 -translate-y-[1px] w-[28px] border-t-2 border-dashed border-[#c8d9ed] z-0"></div>
-                    <div className="w-2 h-2 rounded-full bg-[#07A7E1] absolute -left-1 top-1/2 -translate-y-1/2 z-20"></div>
-                    <Database className="w-4 h-4 text-[#07A7E1]" />
+                  <div className="bg-white border border-gray-200 rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-150 z-10">
+                    <div className="sm:hidden absolute -left-[28px] top-1/2 -translate-y-[1px] w-[28px] border-t-2 border-dashed border-gray-300 z-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-gray-500 absolute -left-1 top-1/2 -translate-y-1/2 z-20"></div>
+                    <Database className="w-4 h-4 text-gray-500" />
                     <span className="text-xs font-bold text-slate-700">
                       Data Models
                     </span>
                   </div>
 
-                  <div className="bg-white border border-[#c8d9ed] rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-200 z-10">
-                    <div className="sm:hidden absolute -left-[28px] top-1/2 -translate-y-[1px] w-[28px] border-t-2 border-dashed border-[#c8d9ed] z-0"></div>
+                  <div className="bg-white border border-gray-200 rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-200 z-10">
+                    <div className="sm:hidden absolute -left-[28px] top-1/2 -translate-y-[1px] w-[28px] border-t-2 border-dashed border-gray-300 z-0"></div>
                     <div className="w-2 h-2 rounded-full bg-slate-400 absolute -left-1 top-1/2 -translate-y-1/2 z-20"></div>
                     <LayoutTemplate className="w-4 h-4 text-slate-500" />
                     <span className="text-xs font-bold text-slate-700">
