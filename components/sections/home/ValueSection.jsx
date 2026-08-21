@@ -103,26 +103,25 @@ export default function ValueSection() {
               </div>
             </div>
 
-            {/* Bottom Banner: Compatibility (Now inside left column) */}
-            <div className="bg-card border border-border rounded-3xl p-8 flex flex-col xl:flex-row items-center justify-between gap-6 relative overflow-hidden group">
+            <div className="bg-card border border-border rounded-3xl p-8 flex flex-col items-center text-center justify-center gap-8 relative overflow-hidden group">
               {/* Subtle background gradient */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
 
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 text-left relative z-10 w-full xl:w-auto">
-                <div className="p-4 bg-foreground text-background rounded-xl shadow-xl shadow-black/10 shrink-0 group-hover:scale-110 transition-transform duration-500">
+              <div className="flex flex-col items-center gap-4 relative z-10 w-full max-w-xl">
+                <div className="p-4 bg-foreground text-background rounded-xl shadow-xl shadow-black/10 shrink-0 group-hover:scale-110 transition-transform duration-500 mb-2">
                   <Terminal className="w-6 h-6" />
                 </div>
                 <div>
                   <strong className="text-xl sm:text-2xl font-medium text-foreground block mb-2 tracking-tight">
                     {t("values.compatTitle")}
                   </strong>
-                  <p className="text-sm text-muted-foreground max-w-md leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {t("values.compatDesc")}
                   </p>
                 </div>
               </div>
 
-              <div className="relative z-10 w-full xl:w-auto overflow-x-auto hide-scrollbar pb-2 xl:pb-0">
+              <div className="relative z-10 w-full overflow-x-auto hide-scrollbar pb-2 xl:pb-0">
                 <CodingToolPills variant="light" />
               </div>
             </div>
