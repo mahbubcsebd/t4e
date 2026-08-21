@@ -28,10 +28,10 @@ export default function ModelChoice() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="relative z-10 flex flex-col items-center">
-                <div className="mb-6 p-5 rounded-full bg-primary/10 border border-primary/20 shadow-[0_0_30px_rgba(var(--primary),0.15)] group-hover:shadow-[0_0_40px_rgba(var(--primary),0.3)] transition-all duration-500 group-hover:scale-110">
+                <div className="mb-6 p-5 rounded-full bg-blue-50  border border-primary/20 shadow-[0_0_30px_rgba(var(--primary),0.15)] group-hover:shadow-[0_0_40px_rgba(var(--primary),0.3)] transition-all duration-500 group-hover:scale-110">
                   <Brain className="w-10 h-10 text-primary" />
                 </div>
-                <span className="mb-6 text-[10px] font-extrabold text-primary bg-primary/10 px-4 py-1.5 rounded-full uppercase tracking-[0.2em] border border-primary/20 group-hover:border-primary/40 transition-colors">
+                <span className="mb-6 text-[10px] font-extrabold text-primary bg-blue-50 px-4 py-1.5 rounded-full uppercase tracking-[0.2em] border border-primary/20 group-hover:border-primary/40 transition-colors">
                   {t("integrationsPage.model1Tag")}
                 </span>
                 <h3 className="text-2xl font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
@@ -69,10 +69,10 @@ export default function ModelChoice() {
               <div className="absolute inset-0 bg-gradient-to-bl from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="relative z-10 flex flex-col items-center">
-                <div className="mb-6 p-5 rounded-full bg-primary/10 border border-primary/20 shadow-[0_0_30px_rgba(var(--primary),0.15)] group-hover:shadow-[0_0_40px_rgba(var(--primary),0.3)] transition-all duration-500 group-hover:scale-110">
+                <div className="mb-6 p-5 rounded-full bg-blue-50  border border-primary/20 shadow-[0_0_30px_rgba(var(--primary),0.15)] group-hover:shadow-[0_0_40px_rgba(var(--primary),0.3)] transition-all duration-500 group-hover:scale-110">
                   <Cpu className="w-10 h-10 text-primary" />
                 </div>
-                <span className="mb-6 text-[10px] font-extrabold text-primary bg-primary/10 px-4 py-1.5 rounded-full uppercase tracking-[0.2em] border border-primary/20 group-hover:border-primary/40 transition-colors">
+                <span className="mb-6 text-[10px] font-extrabold text-primary bg-blue-50  px-4 py-1.5 rounded-full uppercase tracking-[0.2em] border border-primary/20 group-hover:border-primary/40 transition-colors">
                   {t("integrationsPage.model2Tag")}
                 </span>
                 <h3 className="text-2xl font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
