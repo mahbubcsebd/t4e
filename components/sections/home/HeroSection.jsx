@@ -33,59 +33,59 @@ export default function HeroSection() {
   return (
     <section className="py-12 md:py-18 lg:py-20 bg-white border-b border-gray-200 overflow-hidden">
       <Container>
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Left Column Copy */}
-          <div className="lg:col-span-6 flex flex-col items-start text-left">
-            {/* Eyebrow */}
-            <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold tracking-wide mb-4 border border-blue-200">
-              {t("hero.eyebrow")}
-            </span>
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16 pt-8">
+          {/* Eyebrow */}
+          <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold tracking-wide mb-6 border border-blue-200">
+            {t("hero.eyebrow")}
+          </span>
 
-            {/* Main Headline */}
-            <h1 className="md:max-w-[500px] text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold tracking-tight text-[#09090d] leading-[1.1] mb-5">
-              {t("hero.titlePrefix")}
-              <span className="text-blue-600">{t("hero.titleHighlight")}</span>
-            </h1>
+          {/* Main Headline */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-extrabold tracking-tight text-[#09090d] leading-[1.05] mb-6">
+            {t("hero.titlePrefix")}
+            <br className="hidden md:block" />
+            <span className="text-blue-600"> {t("hero.titleHighlight")}</span>
+          </h1>
 
-            {/* Subtitle */}
-            <p className="max-w-[480px] text-base sm:text-lg text-[#465a75] font-normal leading-relaxed mb-8">
-              {t("hero.subtitle")}
-            </p>
+          {/* Subtitle */}
+          <p className="max-w-[640px] text-lg sm:text-xl text-[#465a75] font-normal leading-relaxed mb-10">
+            {t("hero.subtitle")}
+          </p>
 
-            {/* Hero CTAs */}
-            <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto mb-4">
-              <Link
-                href="https://portal.think4ever.com/#/register"
-                className="btn-primary w-full sm:w-auto justify-center text-sm py-3 px-7"
-              >
-                <span>{t("hero.ctaPrimary")}</span>
-              </Link>
-              <button
-                onClick={() => {
-                  setVideoId("FY68DuwOf4Q");
-                  setIsVideoOpen(true);
-                }}
-                className="btn-alt w-full sm:w-auto justify-center text-sm py-3 px-6"
-              >
-                <span>{t("hero.ctaSecondary")}</span>
-              </button>
-            </div>
-
-            {/* Micro guarantee */}
-            <p className="text-xs font-medium text-[#71849c]">
-              {t("hero.micro")}
-            </p>
+          {/* Hero CTAs */}
+          <div className="flex flex-wrap items-center justify-center gap-4 w-full sm:w-auto mb-6">
+            <Link
+              href="https://portal.think4ever.com/#/register"
+              className="btn-primary w-full sm:w-auto justify-center text-base py-3.5 px-8"
+            >
+              <span>{t("hero.ctaPrimary")}</span>
+            </Link>
+            <button
+              onClick={() => {
+                setVideoId("FY68DuwOf4Q");
+                setIsVideoOpen(true);
+              }}
+              className="btn-alt w-full sm:w-auto justify-center text-base py-3.5 px-8"
+            >
+              <span>{t("hero.ctaSecondary")}</span>
+            </button>
           </div>
 
-          {/* Right Column Motion Card */}
-          <div className="lg:col-span-6 w-full max-w-full overflow-hidden">
-            <div className="relative rounded-2xl border border-slate-200 bg-white p-3 sm:p-6 shadow-xl shadow-slate-200/50 overflow-hidden min-h-[460px] sm:min-h-0 sm:h-[480px] lg:h-[460px] flex flex-col justify-between">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-slate-100 pb-3 sm:pb-5 mb-4 sm:mb-6">
+          {/* Micro guarantee */}
+          <p className="text-xs font-medium text-[#71849c]">
+            {t("hero.micro")}
+          </p>
+        </div>
+
+        {/* The Massive Visual Block */}
+        <div className="w-full max-w-5xl mx-auto overflow-hidden">
+          <div className="relative rounded-3xl border border-slate-200 bg-[#f8fafc] p-2 sm:p-4 shadow-2xl shadow-slate-200/50">
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-8 flex flex-col justify-between min-h-[460px] relative overflow-hidden">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-slate-100 pb-3 sm:pb-5 mb-4 sm:mb-8 relative z-10">
                 <div className="flex items-center bg-slate-50 p-1 sm:p-1.5 rounded-xl border border-slate-100 shadow-inner w-full sm:w-auto overflow-x-auto hide-scrollbar">
                   <button
                     onClick={() => setActiveScene(1)}
                     style={{ WebkitTapHighlightColor: "transparent" }}
-                    className={`relative flex-1 sm:flex-none px-2.5 sm:px-5 py-1.5 sm:py-2 rounded-lg text-[9px] sm:text-[11px] font-semibold tracking-wider transition-all duration-300 outline-none focus:outline-none focus-visible:outline-none focus:ring-0 focus-visible:ring-0 whitespace-nowrap ${
+                    className={`relative flex-1 sm:flex-none px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg text-[10px] sm:text-xs font-bold tracking-wider transition-all duration-300 outline-none focus:outline-none focus-visible:outline-none focus:ring-0 focus-visible:ring-0 whitespace-nowrap ${
                       activeScene === 1
                         ? "text-blue-600 shadow-sm bg-white border border-slate-200/60"
                         : "text-slate-500 hover:text-blue-600 border border-transparent"
@@ -96,7 +96,7 @@ export default function HeroSection() {
                   <button
                     onClick={() => setActiveScene(2)}
                     style={{ WebkitTapHighlightColor: "transparent" }}
-                    className={`relative flex-1 sm:flex-none px-2.5 sm:px-5 py-1.5 sm:py-2 rounded-lg text-[9px] sm:text-[11px] font-semibold tracking-wider transition-all duration-300 outline-none focus:outline-none focus-visible:outline-none focus:ring-0 focus-visible:ring-0 whitespace-nowrap ${
+                    className={`relative flex-1 sm:flex-none px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg text-[10px] sm:text-xs font-bold tracking-wider transition-all duration-300 outline-none focus:outline-none focus-visible:outline-none focus:ring-0 focus-visible:ring-0 whitespace-nowrap ${
                       activeScene === 2
                         ? "text-blue-600 shadow-sm bg-white border border-slate-200/60"
                         : "text-slate-500 hover:text-blue-600 border border-transparent"
@@ -125,19 +125,19 @@ export default function HeroSection() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="flex-1 flex flex-col justify-between"
+                    className="flex-1 flex flex-col justify-between relative z-10"
                   >
-                    <div>
-                      <span className="text-[11px] font-medium text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                    <div className="text-center mb-8">
+                      <span className="inline-block text-[11px] font-medium text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full uppercase tracking-wider">
                         {t("hero.cardOneBadge")}
                       </span>
-                      <h3 className="text-xl font-medium text-[#09090d] mt-2 mb-6">
+                      <h3 className="text-2xl font-bold text-[#09090d] mt-3">
                         {t("hero.cardOneTitle")}
                       </h3>
                     </div>
 
                     {/* Stage diagram */}
-                    <div className="grid grid-cols-[1fr_auto_1fr] gap-0 items-center bg-slate-50/50 p-2.5 sm:p-5 rounded-2xl border border-slate-100 relative">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-0 items-center bg-slate-50/50 p-4 sm:p-8 rounded-2xl border border-slate-100 relative max-w-4xl mx-auto w-full">
                       <motion.div
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -146,26 +146,26 @@ export default function HeroSection() {
                           delay: 0.1,
                           ease: "easeOut",
                         }}
-                        className="bg-white p-2.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm relative z-10"
+                        className="bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm relative z-10"
                       >
-                        <div className="flex items-center gap-1 mb-1">
-                          <Code2 className="w-3 h-3 text-slate-400" />
-                          <small className="text-[8px] sm:text-[9px] font-medium text-slate-500 block uppercase tracking-wider">
+                        <div className="flex items-center gap-1 mb-2">
+                          <Code2 className="w-4 h-4 text-slate-400" />
+                          <small className="text-[9px] sm:text-[10px] font-bold text-slate-500 block uppercase tracking-wider">
                             {t("hero.cardOneRepoTag")}
                           </small>
                         </div>
-                        <b className="text-[10px] sm:text-xs font-medium text-[#09090d] block mt-1">
+                        <b className="text-xs sm:text-sm font-bold text-[#09090d] block mt-1">
                           {t("hero.cardOneRepoName")}
                         </b>
-                        <div className="mt-2 sm:mt-3 space-y-1.5">
-                          <div className="h-1 sm:h-1.5 bg-slate-200 rounded-full w-full"></div>
-                          <div className="h-1 sm:h-1.5 bg-slate-200 rounded-full w-3/4"></div>
-                          <div className="h-1 sm:h-1.5 bg-blue-600 rounded-full w-4/5"></div>
+                        <div className="mt-4 space-y-2">
+                          <div className="h-1.5 sm:h-2 bg-slate-200 rounded-full w-full"></div>
+                          <div className="h-1.5 sm:h-2 bg-slate-200 rounded-full w-3/4"></div>
+                          <div className="h-1.5 sm:h-2 bg-blue-600 rounded-full w-4/5"></div>
                         </div>
                       </motion.div>
 
                       {/* Central Interactive Play Button Connection */}
-                      <div className="flex items-center justify-center relative px-1 sm:px-6 w-12 sm:w-28 h-full">
+                      <div className="flex items-center justify-center relative py-4 md:py-0 md:px-8 w-full md:w-32 h-full">
                         <motion.div
                           initial={{ scaleX: 0, opacity: 0 }}
                           animate={{ scaleX: 1, opacity: 1 }}
@@ -175,26 +175,25 @@ export default function HeroSection() {
                             ease: "easeOut",
                           }}
                           style={{ originX: 0 }}
-                          className="absolute left-0 right-0 top-1/2 -translate-y-1/2 hidden sm:flex items-center z-0"
+                          className="absolute left-0 right-0 top-1/2 -translate-y-1/2 hidden md:flex items-center z-0"
                         >
                           <div className="flex-grow h-[2px] bg-slate-300"></div>
-                          <div className="w-0 h-0 border-y-[4px] border-y-transparent border-l-[6px] border-l-slate-300 -ml-[1px]"></div>
+                          <div className="w-0 h-0 border-y-[5px] border-y-transparent border-l-[8px] border-l-slate-300 -ml-[1px]"></div>
                         </motion.div>
 
-                        {/* Mobile Connecting Line (shorter) */}
                         <motion.div
-                          initial={{ scaleX: 0, opacity: 0 }}
-                          animate={{ scaleX: 1, opacity: 1 }}
+                          initial={{ scaleY: 0, opacity: 0 }}
+                          animate={{ scaleY: 1, opacity: 1 }}
                           transition={{
                             duration: 0.6,
                             delay: 0.4,
                             ease: "easeOut",
                           }}
-                          style={{ originX: 0 }}
-                          className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex sm:hidden items-center z-0"
+                          style={{ originY: 0 }}
+                          className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 flex md:hidden flex-col items-center z-0"
                         >
-                          <div className="flex-grow h-[2px] bg-slate-300"></div>
-                          <div className="w-0 h-0 border-y-[4px] border-y-transparent border-l-[6px] border-l-slate-300 -ml-[1px]"></div>
+                          <div className="flex-grow w-[2px] bg-slate-300"></div>
+                          <div className="w-0 h-0 border-x-[5px] border-x-transparent border-t-[8px] border-t-slate-300 -mt-[1px]"></div>
                         </motion.div>
 
                         {/* The Play Button */}
@@ -212,11 +211,11 @@ export default function HeroSection() {
                             setVideoId("FY68DuwOf4Q");
                             setIsVideoOpen(true);
                           }}
-                          className="relative z-20 group flex items-center justify-center w-8 h-8 sm:w-11 sm:h-11 bg-blue-600 rounded-full shadow-lg border-2 border-white hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
+                          className="relative z-20 group flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 rounded-full shadow-lg border-4 border-white hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
                           aria-label={t("hero.watchDemo")}
                         >
                           <Play
-                            className="w-3 h-3 sm:w-4 sm:h-4 text-white ml-0.5"
+                            className="w-4 h-4 sm:w-6 sm:h-6 text-white ml-1"
                             fill="currentColor"
                           />
                         </motion.button>
@@ -230,35 +229,35 @@ export default function HeroSection() {
                           delay: 0.7,
                           ease: "easeOut",
                         }}
-                        className="bg-white p-2.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm relative z-10"
+                        className="bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm relative z-10"
                       >
-                        <div className="flex items-center gap-1 mb-1">
-                          <LayoutTemplate className="w-3 h-3 text-slate-400" />
-                          <small className="text-[8px] sm:text-[9px] font-medium text-slate-500 block uppercase tracking-wider">
+                        <div className="flex items-center gap-1 mb-2">
+                          <LayoutTemplate className="w-4 h-4 text-slate-400" />
+                          <small className="text-[9px] sm:text-[10px] font-bold text-slate-500 block uppercase tracking-wider">
                             {t("hero.cardOneBlueprintTag")}
                           </small>
                         </div>
-                        <b className="text-[10px] sm:text-xs font-medium text-[#09090d] block mt-1">
+                        <b className="text-xs sm:text-sm font-bold text-[#09090d] block mt-1">
                           {t("hero.cardOneBlueprintName")}
                         </b>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-2 mt-2 sm:mt-3">
-                          <span className="bg-slate-50 text-slate-600 text-[8px] sm:text-[9px] font-medium px-1 sm:px-1.5 py-1 sm:py-1.5 rounded border border-slate-200 text-center truncate">
+                        <div className="grid grid-cols-2 gap-2 mt-4">
+                          <span className="bg-slate-50 text-slate-600 text-[9px] sm:text-[11px] font-medium px-2 py-2 rounded-md border border-slate-200 text-center truncate">
                             {t("hero.nodeBooking")}
                           </span>
-                          <span className="bg-slate-50 text-slate-600 text-[8px] sm:text-[9px] font-medium px-1 sm:px-1.5 py-1 sm:py-1.5 rounded border border-slate-200 text-center truncate">
+                          <span className="bg-slate-50 text-slate-600 text-[9px] sm:text-[11px] font-medium px-2 py-2 rounded-md border border-slate-200 text-center truncate">
                             {t("hero.nodePayments")}
                           </span>
-                          <span className="bg-slate-50 text-slate-600 text-[8px] sm:text-[9px] font-medium px-1 sm:px-1.5 py-1 sm:py-1.5 rounded border border-slate-200 text-center truncate">
+                          <span className="bg-slate-50 text-slate-600 text-[9px] sm:text-[11px] font-medium px-2 py-2 rounded-md border border-slate-200 text-center truncate">
                             {t("hero.nodeRefundRule")}
                           </span>
-                          <span className="bg-slate-50 text-slate-600 text-[8px] sm:text-[9px] font-medium px-1 sm:px-1.5 py-1 sm:py-1.5 rounded border border-slate-200 text-center truncate">
+                          <span className="bg-slate-50 text-slate-600 text-[9px] sm:text-[11px] font-medium px-2 py-2 rounded-md border border-slate-200 text-center truncate">
                             {t("hero.nodeUI")}
                           </span>
                         </div>
                       </motion.div>
                     </div>
 
-                    <div className="mt-5 flex justify-center text-[13px] font-medium text-slate-500">
+                    <div className="mt-8 flex justify-center text-[13px] font-medium text-slate-500">
                       <span>{t("hero.cardOneFooter")}</span>
                     </div>
                   </motion.div>
@@ -269,19 +268,19 @@ export default function HeroSection() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="flex-1 flex flex-col justify-between"
+                    className="flex-1 flex flex-col justify-between relative z-10"
                   >
-                    <div>
-                      <span className="text-[11px] font-medium text-blue-600 bg-blue-600/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                    <div className="text-center mb-8">
+                      <span className="inline-block text-[11px] font-medium text-blue-600 bg-blue-600/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                         {t("hero.cardTwoBadge")}
                       </span>
-                      <h3 className="text-xl font-medium text-[#09090d] mt-2 mb-6">
+                      <h3 className="text-2xl font-bold text-[#09090d] mt-3">
                         {t("hero.cardTwoTitle")}
                       </h3>
                     </div>
 
                     {/* Stage diagram */}
-                    <div className="grid grid-cols-[1fr_auto_1fr] gap-0 items-center bg-slate-50/50 p-2.5 sm:p-5 rounded-2xl border border-slate-100 relative">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-0 items-center bg-slate-50/50 p-4 sm:p-8 rounded-2xl border border-slate-100 relative max-w-4xl mx-auto w-full">
                       <motion.div
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -290,21 +289,21 @@ export default function HeroSection() {
                           delay: 0.1,
                           ease: "easeOut",
                         }}
-                        className="bg-white p-2.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm relative z-10 h-full flex flex-col justify-center"
+                        className="bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm relative z-10 h-full flex flex-col justify-center"
                       >
-                        <div className="flex items-center gap-1 mb-1">
-                          <Box className="w-3 h-3 text-slate-400" />
-                          <small className="text-[8px] sm:text-[9px] font-medium text-slate-500 block uppercase tracking-wider">
+                        <div className="flex items-center gap-1 mb-2">
+                          <Box className="w-4 h-4 text-slate-400" />
+                          <small className="text-[9px] sm:text-[10px] font-bold text-slate-500 block uppercase tracking-wider">
                             {t("hero.cardTwoIntentTag")}
                           </small>
                         </div>
-                        <b className="text-[10px] sm:text-xs font-medium text-[#09090d] block mt-1 leading-snug">
+                        <b className="text-xs sm:text-sm font-bold text-[#09090d] block mt-1 leading-snug">
                           {t("hero.cardTwoIntentName")}
                         </b>
                       </motion.div>
 
                       {/* Central Interactive Play Button Connection */}
-                      <div className="flex items-center justify-center relative px-1 sm:px-6 w-12 sm:w-28 h-full">
+                      <div className="flex items-center justify-center relative py-4 md:py-0 md:px-8 w-full md:w-32 h-full">
                         <motion.div
                           initial={{ scaleX: 0, opacity: 0 }}
                           animate={{ scaleX: 1, opacity: 1 }}
@@ -314,26 +313,25 @@ export default function HeroSection() {
                             ease: "easeOut",
                           }}
                           style={{ originX: 0 }}
-                          className="absolute left-0 right-0 top-1/2 -translate-y-1/2 hidden sm:flex items-center z-0"
+                          className="absolute left-0 right-0 top-1/2 -translate-y-1/2 hidden md:flex items-center z-0"
                         >
                           <div className="flex-grow h-[2px] bg-slate-300"></div>
-                          <div className="w-0 h-0 border-y-[4px] border-y-transparent border-l-[6px] border-l-slate-300 -ml-[1px]"></div>
+                          <div className="w-0 h-0 border-y-[5px] border-y-transparent border-l-[8px] border-l-slate-300 -ml-[1px]"></div>
                         </motion.div>
 
-                        {/* Mobile Connecting Line (shorter) */}
                         <motion.div
-                          initial={{ scaleX: 0, opacity: 0 }}
-                          animate={{ scaleX: 1, opacity: 1 }}
+                          initial={{ scaleY: 0, opacity: 0 }}
+                          animate={{ scaleY: 1, opacity: 1 }}
                           transition={{
                             duration: 0.6,
                             delay: 0.4,
                             ease: "easeOut",
                           }}
-                          style={{ originX: 0 }}
-                          className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex sm:hidden items-center z-0"
+                          style={{ originY: 0 }}
+                          className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 flex md:hidden flex-col items-center z-0"
                         >
-                          <div className="flex-grow h-[2px] bg-slate-300"></div>
-                          <div className="w-0 h-0 border-y-[4px] border-y-transparent border-l-[6px] border-l-slate-300 -ml-[1px]"></div>
+                          <div className="flex-grow w-[2px] bg-slate-300"></div>
+                          <div className="w-0 h-0 border-x-[5px] border-x-transparent border-t-[8px] border-t-slate-300 -mt-[1px]"></div>
                         </motion.div>
 
                         {/* The Play Button */}
@@ -351,11 +349,11 @@ export default function HeroSection() {
                             setVideoId("Lq-vza9_CzI");
                             setIsVideoOpen(true);
                           }}
-                          className="relative z-20 group flex items-center justify-center w-8 h-8 sm:w-11 sm:h-11 bg-blue-600 rounded-full shadow-lg border-2 border-white hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
+                          className="relative z-20 group flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 rounded-full shadow-lg border-4 border-white hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
                           aria-label={t("hero.watchDemo")}
                         >
                           <Play
-                            className="w-3 h-3 sm:w-4 sm:h-4 text-white ml-0.5"
+                            className="w-4 h-4 sm:w-6 sm:h-6 text-white ml-1"
                             fill="currentColor"
                           />
                         </motion.button>
@@ -369,25 +367,25 @@ export default function HeroSection() {
                           delay: 0.7,
                           ease: "easeOut",
                         }}
-                        className="bg-white p-2.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm relative z-10 h-full flex flex-col justify-center"
+                        className="bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm relative z-10 h-full flex flex-col justify-center"
                       >
-                        <div className="flex items-center gap-1 mb-1">
-                          <Code2 className="w-3 h-3 text-slate-400" />
-                          <small className="text-[8px] sm:text-[9px] font-medium text-slate-500 block uppercase tracking-wider">
+                        <div className="flex items-center gap-1 mb-2">
+                          <Code2 className="w-4 h-4 text-slate-400" />
+                          <small className="text-[9px] sm:text-[10px] font-bold text-slate-500 block uppercase tracking-wider">
                             {t("hero.cardTwoImplTag")}
                           </small>
                         </div>
-                        <b className="text-[10px] sm:text-xs font-medium text-[#09090d] block mt-1 leading-snug">
+                        <b className="text-xs sm:text-sm font-bold text-[#09090d] block mt-1 leading-snug">
                           {t("hero.cardTwoImplName")}
                         </b>
-                        <span className="mt-2 sm:mt-3 inline-flex items-center gap-1 sm:gap-1.5 bg-slate-50 text-slate-600 text-[8px] font-medium px-1.5 sm:px-2 py-1 rounded-md w-fit border border-slate-200 whitespace-nowrap">
-                          <CheckCircle2 className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 text-green-600" />{" "}
+                        <span className="mt-4 inline-flex items-center gap-2 bg-slate-50 text-slate-600 text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-md w-fit border border-slate-200 whitespace-nowrap">
+                          <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600" />{" "}
                           {t("hero.cardTwoStatus")}
                         </span>
                       </motion.div>
                     </div>
 
-                    <div className="mt-5 flex justify-center text-[13px] font-medium text-slate-500">
+                    <div className="mt-8 flex justify-center text-[13px] font-medium text-slate-500">
                       <span>{t("hero.cardTwoFooter")}</span>
                     </div>
                   </motion.div>

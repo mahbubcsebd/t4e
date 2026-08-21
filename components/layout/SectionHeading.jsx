@@ -70,12 +70,12 @@ export default function SectionHeading({
         {eyebrow && (
           <span
             className={cn(
-              "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-4 border border-[#07A7E1]/20",
+              "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4 border border-blue-200",
               eyebrowClassName,
             )}
           >
             {animatePulse && (
-              <span className="w-1.5 h-1.5 rounded-full bg-[#07A7E1] animate-pulse"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
             )}
             {eyebrow}
           </span>
@@ -113,12 +113,12 @@ export default function SectionHeading({
       {eyebrow && (
         <span
           className={cn(
-            "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-3",
+            "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4 border border-blue-200",
             eyebrowClassName,
           )}
         >
           {animatePulse && (
-            <span className="w-1.5 h-1.5 rounded-full bg-[#07A7E1] animate-pulse"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
           )}
           {eyebrow}
         </span>
