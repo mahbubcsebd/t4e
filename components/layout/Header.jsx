@@ -145,9 +145,9 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] border-b ${
-        scrolled 
-          ? "bg-background/95 backdrop-blur-xl border-border shadow-sm dark:shadow-none" 
+      className={`sticky top-0 z-[100] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] border-b ${
+        scrolled
+          ? "bg-background/95 backdrop-blur-xl border-border shadow-sm dark:shadow-none"
           : "bg-background border-transparent shadow-none"
       }`}
     >
@@ -266,7 +266,7 @@ export default function Header() {
               <ChevronDown className="w-4 h-4 text-primary group-hover:rotate-180 transition-transform" />
             </button>
             <div
-              className={`absolute top-full left-1/2 -translate-x-1/2 w-[260px] bg-popover rounded-2xl shadow-2xl border border-border p-2 transition-all duration-200 z-50 grid grid-cols-1 gap-1 ${
+              className={`absolute top-full left-1/2 -translate-x-1/2 w-[260px] bg-card rounded-2xl shadow-2xl border border-border p-2 transition-all duration-200 z-50 grid grid-cols-1 gap-1 ${
                 resourcesOpen
                   ? "opacity-100 visible translate-y-0"
                   : "opacity-0 invisible -translate-y-2"
@@ -310,7 +310,7 @@ export default function Header() {
               <ChevronDown className="w-4 h-4 text-primary group-hover:rotate-180 transition-transform" />
             </button>
             <div
-              className={`absolute top-full left-1/2 -translate-x-1/2 w-[540px] bg-popover rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
+              className={`absolute top-full left-1/2 -translate-x-1/2 w-[540px] bg-card rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
                 docsOpen
                   ? "opacity-100 visible translate-y-0"
                   : "opacity-0 invisible -translate-y-2"
@@ -602,12 +602,18 @@ export default function Header() {
 
           <div className="pt-4 border-t border-border flex flex-col gap-3">
             <Button asChild variant="ghost" className="w-full text-center py-3">
-              <a href="https://portal.think4ever.com/#/login" onClick={() => setMobileMenuOpen(false)}>
+              <a
+                href="https://portal.think4ever.com/#/login"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 {t("nav.signIn")}
               </a>
             </Button>
             <Button asChild className="w-full text-center py-3">
-              <a href="https://portal.think4ever.com/#/register" onClick={() => setMobileMenuOpen(false)}>
+              <a
+                href="https://portal.think4ever.com/#/register"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 {t("nav.startFree")}
               </a>
             </Button>

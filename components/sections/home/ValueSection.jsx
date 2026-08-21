@@ -108,7 +108,7 @@ export default function ValueSection() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
 
               <div className="flex flex-col items-center gap-4 relative z-10 w-full max-w-xl">
-                <div className="p-4 bg-foreground text-background rounded-xl shadow-xl shadow-black/10 shrink-0 group-hover:scale-110 transition-transform duration-500 mb-2">
+                <div className="p-4 bg-primary text-background rounded-xl shadow-xl shadow-black/10 shrink-0 group-hover:scale-110 transition-transform duration-500 mb-2">
                   <Terminal className="w-6 h-6" />
                 </div>
                 <div>
