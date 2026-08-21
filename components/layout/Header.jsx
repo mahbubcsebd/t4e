@@ -145,15 +145,15 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-        scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-[0_4px_32px_rgba(9,60,173,0.08)]"
-          : "bg-background/95 backdrop-blur-md border-b border-border"
+      className={`sticky top-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] border-b ${
+        scrolled 
+          ? "bg-background/95 backdrop-blur-xl border-border shadow-sm dark:shadow-none" 
+          : "bg-background border-transparent shadow-none"
       }`}
     >
       <div
         className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          scrolled ? "h-14" : "h-16"
+          scrolled ? "h-16" : "h-[76px]"
         }`}
       >
         {/* Brand Logo */}
@@ -164,7 +164,7 @@ export default function Header() {
             width={180}
             height={41}
             className={`w-auto object-contain invert dark:invert-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-              scrolled ? "h-7" : "h-8"
+              scrolled ? "h-8" : "h-[34px]"
             }`}
             priority
           />
