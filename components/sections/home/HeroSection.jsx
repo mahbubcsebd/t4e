@@ -34,21 +34,21 @@ export default function HeroSection() {
   return (
     <section className="py-12 md:py-18 lg:py-20 bg-white border-b border-gray-200 overflow-hidden">
       <Container>
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16 pt-8">
+        <div className="flex flex-col items-center text-center max-w-5xl mx-auto mb-12 lg:mb-16 pt-8">
           {/* Eyebrow */}
           <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold tracking-wide mb-6 border border-blue-200">
             {t("hero.eyebrow")}
           </span>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-extrabold tracking-tight text-[#09090d] leading-[1.05] mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] font-extrabold tracking-tight text-[#09090d] leading-[1.05] mb-6">
             {t("hero.titlePrefix")}
             <br className="hidden md:block" />
             <span className="text-blue-600"> {t("hero.titleHighlight")}</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="max-w-[640px] text-lg sm:text-xl text-[#465a75] font-normal leading-relaxed mb-10">
+          <p className="max-w-[640px] text-lg sm:text-xl text-[#465a75] font-normal leading-relaxed mb-8">
             {t("hero.subtitle")}
           </p>
 
