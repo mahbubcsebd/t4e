@@ -36,10 +36,10 @@ export default function CodingToolPills({ variant = "light" }) {
       {tools.map((tool, i) => (
         <div
           key={i}
-          className="group flex items-center gap-2.5 bg-white border border-[#c8d9ed]/80 hover:border-[#07A7E1]/50 text-[#093cad] text-[13px] font-semibold pr-4 pl-1.5 py-1.5 rounded-full transition-all duration-300 cursor-default"
+          className="group flex items-center gap-2.5 bg-card border border-border hover:border-primary/50 text-foreground text-[13px] font-semibold pr-4 pl-1.5 py-1.5 rounded-full transition-all duration-300 cursor-default shadow-sm"
         >
-          <div className="flex items-center justify-center w-7 h-7 rounded-full bg-[#f4f9ff] border border-[#c8d9ed]/50 group-hover:scale-110 transition-transform duration-300">
-            <tool.icon className="w-[15px] h-[15px] text-[#07A7E1]" />
+          <div className="flex items-center justify-center w-7 h-7 rounded-full bg-muted border border-border group-hover:scale-110 transition-transform duration-300">
+            <tool.icon className="w-[15px] h-[15px] text-primary" />
           </div>
           <span className="tracking-wide">{tool.name}</span>
         </div>
