@@ -48,7 +48,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Subtitle */}
-          <p className="max-w-[640px] text-lg sm:text-xl text-muted-foreground font-normal leading-relaxed mb-8">
+          <p className="max-w-[800px] text-lg sm:text-xl text-muted-foreground font-normal leading-relaxed mb-8">
             {t("hero.subtitle")}
           </p>
 
@@ -78,8 +78,8 @@ export default function HeroSection() {
         </div>
 
         {/* The Massive Visual Block */}
-        <div className="w-full max-w-5xl mx-auto overflow-hidden">
-          <div className="relative rounded-3xl border border-border bg-card p-2 sm:p-4 shadow-2xl">
+        <div className="w-full max-w-5xl mx-auto">
+          <div className="relative rounded-3xl border border-border bg-card p-2 sm:p-4 shadow-sm">
             <div className="rounded-2xl border border-border bg-card p-4 sm:p-8 flex flex-col justify-between min-h-[460px] relative overflow-hidden">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-border pb-3 sm:pb-5 mb-4 sm:mb-8 relative z-10">
                 <div className="flex items-center bg-muted p-1 sm:p-1.5 rounded-xl border border-border w-full sm:w-auto overflow-x-auto hide-scrollbar">
