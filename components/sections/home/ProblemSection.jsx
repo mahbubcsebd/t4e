@@ -21,7 +21,7 @@ export default function ProblemSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 md:py-32 bg-white relative overflow-hidden border-b border-[#c8d9ed]/40">
+    <section className="py-24 md:py-32 bg-white relative overflow-hidden border-b border-gray-200">
       {/* Background canvas elements */}
       <div className="absolute inset-0 bg-white"></div>
 
@@ -37,7 +37,7 @@ export default function ProblemSection() {
         {/* The System Canvas Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
           {/* Block 01 - Context Resets (Left) */}
-          <div className="lg:col-span-7 bg-white rounded-3xl border border-[#c8d9ed]/70 shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col group">
+          <div className="lg:col-span-7 bg-white rounded-3xl border border-gray-200 shadow-sm overflow-hidden flex flex-col group">
             {/* Visual Canvas */}
             <div className="h-64 sm:h-80 bg-gray-50 border-b border-gray-100 relative overflow-hidden flex items-center justify-center p-6">
               <div className="relative w-full max-w-sm aspect-video flex items-center justify-center">
@@ -50,7 +50,7 @@ export default function ProblemSection() {
                 <svg
                   viewBox="0 0 400 200"
                   preserveAspectRatio="none"
-                  className="absolute inset-0 w-full h-full text-[#c8d9ed] z-0 opacity-60"
+                  className="absolute inset-0 w-full h-full text-gray-200 z-0 opacity-60"
                   style={{ strokeDasharray: "4,4" }}
                 >
                   <line
@@ -88,16 +88,16 @@ export default function ProblemSection() {
                 </svg>
 
                 {/* Floating Fragments */}
-                <div className="absolute top-[10%] left-[10%] bg-white p-3 rounded-xl border border-[#c8d9ed]/60 shadow-sm z-10 opacity-70 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-500">
+                <div className="absolute top-[10%] left-[10%] bg-white p-3 rounded-xl border border-gray-200 shadow-sm z-10 opacity-70 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-500">
                   <FileCode className="w-5 h-5 text-slate-400" />
                 </div>
-                <div className="absolute top-[15%] right-[15%] bg-white p-3 rounded-xl border border-[#c8d9ed]/60 shadow-sm z-10 opacity-60 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-500 delay-75">
+                <div className="absolute top-[15%] right-[15%] bg-white p-3 rounded-xl border border-gray-200 shadow-sm z-10 opacity-60 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-500 delay-75">
                   <Database className="w-5 h-5 text-slate-400" />
                 </div>
-                <div className="absolute bottom-[10%] left-[15%] bg-white p-3 rounded-xl border border-[#c8d9ed]/60 shadow-sm z-10 opacity-50 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-500 delay-100">
+                <div className="absolute bottom-[10%] left-[15%] bg-white p-3 rounded-xl border border-gray-200 shadow-sm z-10 opacity-50 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-500 delay-100">
                   <Workflow className="w-5 h-5 text-slate-400" />
                 </div>
-                <div className="absolute bottom-[15%] right-[20%] bg-white p-3 rounded-xl border border-[#c8d9ed]/60 shadow-sm z-10 opacity-80 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-500 delay-150">
+                <div className="absolute bottom-[15%] right-[20%] bg-white p-3 rounded-xl border border-gray-200 shadow-sm z-10 opacity-80 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-500 delay-150">
                   <LayoutTemplate className="w-5 h-5 text-slate-400" />
                 </div>
               </div>
@@ -109,7 +109,7 @@ export default function ProblemSection() {
                 <span className="text-xs font-mono font-medium text-slate-400">
                   01
                 </span>
-                <span className="h-[1px] w-8 bg-[#c8d9ed]"></span>
+                <span className="h-[1px] w-8 bg-gray-200"></span>
                 <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">
                   {t("problem.card1Tag")}
                 </span>
@@ -124,7 +124,7 @@ export default function ProblemSection() {
           </div>
 
           {/* Block 02 - Knowledge lives in different places (Right) */}
-          <div className="lg:col-span-5 bg-white rounded-3xl border border-[#c8d9ed]/70 shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col group">
+          <div className="lg:col-span-5 bg-white rounded-3xl border border-gray-200 shadow-sm overflow-hidden flex flex-col group">
             {/* Visual Canvas */}
             <div className="h-64 sm:h-80 bg-gray-50 border-b border-gray-100 relative p-6 flex flex-col items-center justify-center gap-5 overflow-hidden">
               {/* Vertical Alignment Guide */}
@@ -172,7 +172,7 @@ export default function ProblemSection() {
                 <span className="text-xs font-mono font-medium text-slate-400">
                   02
                 </span>
-                <span className="h-[1px] w-8 bg-[#c8d9ed]"></span>
+                <span className="h-[1px] w-8 bg-gray-200"></span>
                 <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">
                   {t("problem.card2Tag")}
                 </span>
@@ -187,14 +187,14 @@ export default function ProblemSection() {
           </div>
 
           {/* Block 03 - Impact appears late (Bottom Full Width) */}
-          <div className="lg:col-span-12 bg-white rounded-3xl border border-[#c8d9ed]/70 shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden grid lg:grid-cols-12 group">
+          <div className="lg:col-span-12 bg-white rounded-3xl border border-gray-200 shadow-sm overflow-hidden grid lg:grid-cols-12 group">
             {/* Content (Left side on desktop) */}
             <div className="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-[#f0f4f8] order-2 lg:order-1">
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-xs font-mono font-medium text-slate-400">
                   03
                 </span>
-                <span className="h-[1px] w-8 bg-[#c8d9ed]"></span>
+                <span className="h-[1px] w-8 bg-gray-200"></span>
                 <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">
                   {t("problem.card3Tag")}
                 </span>
