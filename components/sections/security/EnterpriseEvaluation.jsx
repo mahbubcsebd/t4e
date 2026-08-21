@@ -20,7 +20,7 @@ export default function EnterpriseEvaluation() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column */}
           <div>
-            <span className="inline-block px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-3">
+            <span className="inline-block text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-3">
               {t("securityPage.evalEyebrow")}
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-4">

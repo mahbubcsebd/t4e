@@ -37,7 +37,7 @@ export default function HowItWorksSection() {
           {/* Horizontal connection line (Desktop) */}
           <div className="hidden lg:block absolute top-[120px] left-[15%] right-[15%] border-t-2 border-dashed border-border z-0">
             {/* Animated particle moving across */}
-            <div className="absolute top-[-5px] left-0 w-2 h-2 rounded-full bg-primary shadow-[0_0_12px_#2563eb] animate-[slide_4s_ease-in-out_infinite]"></div>
+            <div className="absolute top-[-5px] left-0 w-2 h-2 rounded-full bg-primary shadow-[0_0_12px_#093cad] animate-[slide_4s_ease-in-out_infinite]"></div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 relative z-10">
@@ -46,7 +46,7 @@ export default function HowItWorksSection() {
               <div className="bg-card border border-border rounded-3xl overflow-hidden hover:border-primary/40 transition-all duration-500 flex flex-col h-full">
                 {/* Visual Container */}
                 <div className="h-[240px] bg-muted/10 border-b border-border flex items-center justify-center p-6 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.05)_0%,transparent_70%)]"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,60,173,0.05)_0%,transparent_70%)]"></div>
 
                   {/* Connect Micro UI */}
                   <div className="w-full max-w-[240px] bg-card rounded-xl border border-border overflow-hidden relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
@@ -97,7 +97,7 @@ export default function HowItWorksSection() {
               <div className="bg-card border border-border rounded-3xl overflow-hidden hover:border-primary/40 transition-all duration-500 flex flex-col h-full">
                 {/* Visual Container */}
                 <div className="h-[240px] bg-muted/10 border-b border-border flex items-center justify-center p-6 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.05)_0%,transparent_70%)]"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,60,173,0.05)_0%,transparent_70%)]"></div>
 
                   {/* Review Micro UI (Node Graph) */}
                   <div className="relative w-full max-w-[220px] h-[160px] z-10 group-hover:-translate-y-2 transition-transform duration-500">
@@ -171,7 +171,7 @@ export default function HowItWorksSection() {
               <div className="bg-card border border-border rounded-3xl overflow-hidden hover:border-primary/40 transition-all duration-500 flex flex-col h-full">
                 {/* Visual Container */}
                 <div className="h-[240px] bg-muted/10 border-b border-border flex items-center justify-center p-6 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.05)_0%,transparent_70%)]"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,60,173,0.05)_0%,transparent_70%)]"></div>
 
                   {/* Change Micro UI (Agent Interface) */}
                   <div className="w-full max-w-[240px] bg-card rounded-xl border border-border overflow-hidden relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
