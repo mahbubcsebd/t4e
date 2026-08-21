@@ -28,7 +28,7 @@ export default function Footer() {
                 alt="Think4Ever"
                 width={180}
                 height={41}
-                className="h-10 w-auto object-contain dark:brightness-0 dark:invert"
+                className="h-10 w-auto object-contain brightness-0 dark:invert"
               />
             </Link>
             <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed max-w-sm">
