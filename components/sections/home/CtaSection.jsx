@@ -22,7 +22,7 @@ export default function CtaSection() {
           className="mb-10 max-w-none"
           titleClassName="text-3xl sm:text-4xl md:text-5xl leading-[1.1] mb-5"
           subtitleClassName="max-w-xl mx-auto"
-          eyebrowClassName="border border-[#c8d9ed] mb-6"
+          eyebrowClassName="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-6 border border-blue-200 shadow-sm"
         />
 
         {/* CTA Button */}
@@ -30,7 +30,7 @@ export default function CtaSection() {
           href="https://portal.think4ever.com/#/register"
           className="inline-flex items-center justify-center gap-2 text-base font-medium text-white rounded-full px-10 py-4 transition-all duration-300 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/35 hover:-translate-y-0.5"
           style={{
-            background: "linear-gradient(135deg, #07A7E1 0%, #093cad 100%)",
+            backgroundColor: "#2563eb",
           }}
         >
           <span>{t("cta.btn")}</span>

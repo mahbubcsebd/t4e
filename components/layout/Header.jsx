@@ -176,7 +176,7 @@ export default function Header() {
               className="flex items-center gap-1 hover:text-[#093cad] transition-colors py-2 whitespace-nowrap"
             >
               <span>{t("nav.product", "Product")}</span>
-              <ChevronDown className="w-4 h-4 text-[#07A7E1] group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-4 h-4 text-blue-600 group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-0 w-64 bg-white rounded-2xl shadow-2xl border border-[#c8d9ed] py-2 transition-all duration-200 z-50 ${
@@ -256,7 +256,7 @@ export default function Header() {
               className="flex items-center gap-1 hover:text-[#093cad] transition-colors py-2 whitespace-nowrap"
             >
               <span>{t("nav.resources")}</span>
-              <ChevronDown className="w-4 h-4 text-[#07A7E1] group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-4 h-4 text-blue-600 group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-1/2 -translate-x-1/2 w-[260px] bg-white rounded-2xl shadow-2xl border border-[#c8d9ed] p-2 transition-all duration-200 z-50 grid grid-cols-1 gap-1 ${
@@ -300,7 +300,7 @@ export default function Header() {
               <span>
                 {t("nav.docs") === "nav.docs" ? "Docs" : t("nav.docs")}
               </span>
-              <ChevronDown className="w-4 h-4 text-[#07A7E1] group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-4 h-4 text-blue-600 group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-1/2 -translate-x-1/2 w-[540px] bg-white rounded-2xl shadow-2xl border border-[#c8d9ed] p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
@@ -408,7 +408,7 @@ export default function Header() {
             href="https://portal.think4ever.com/#/register"
             className="inline-flex items-center justify-center whitespace-nowrap text-[15px] font-medium px-6 py-2.5 rounded-full text-white transition-all duration-300"
             style={{
-              background: "linear-gradient(135deg, #07A7E1 0%, #093cad 100%)",
+              background: "#2563eb",
               boxShadow: "0 4px 14px rgba(9,60,173,0.25)",
             }}
             onMouseEnter={(e) =>

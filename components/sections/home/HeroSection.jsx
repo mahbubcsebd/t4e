@@ -31,20 +31,20 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="py-12 md:py-18 lg:py-20 bg-gradient-to-b from-white via-[#f7fafe] to-white border-b border-[#c8d9ed]/40 overflow-hidden">
+    <section className="py-12 md:py-18 lg:py-20 bg-white border-b border-gray-200 overflow-hidden">
       <Container>
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column Copy */}
           <div className="lg:col-span-6 flex flex-col items-start text-left">
             {/* Eyebrow */}
-            <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold tracking-wide mb-4 border border-[#07A7E1]/20">
+            <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold tracking-wide mb-4 border border-blue-200">
               {t("hero.eyebrow")}
             </span>
 
             {/* Main Headline */}
             <h1 className="md:max-w-[500px] text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold tracking-tight text-[#09090d] leading-[1.1] mb-5">
               {t("hero.titlePrefix")}
-              <span className="text-gradient">{t("hero.titleHighlight")}</span>
+              <span className="text-blue-600">{t("hero.titleHighlight")}</span>
             </h1>
 
             {/* Subtitle */}
@@ -108,7 +108,7 @@ export default function HeroSection() {
 
                 <div className="flex items-center justify-center sm:justify-end gap-1.5">
                   <span
-                    className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${activeScene === 1 ? "bg-[#07A7E1] w-4" : "bg-slate-200 w-2"}`}
+                    className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${activeScene === 1 ? "bg-blue-600 w-4" : "bg-gray-200 w-2"}`}
                   ></span>
                   <span
                     className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${activeScene === 2 ? "bg-[#093cad] w-4" : "bg-slate-200 w-2"}`}
@@ -128,7 +128,7 @@ export default function HeroSection() {
                     className="flex-1 flex flex-col justify-between"
                   >
                     <div>
-                      <span className="text-[11px] font-medium text-[#07A7E1] bg-[#07A7E1]/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                      <span className="text-[11px] font-medium text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full uppercase tracking-wider">
                         {t("hero.cardOneBadge")}
                       </span>
                       <h3 className="text-xl font-medium text-[#09090d] mt-2 mb-6">
@@ -160,7 +160,7 @@ export default function HeroSection() {
                         <div className="mt-2 sm:mt-3 space-y-1.5">
                           <div className="h-1 sm:h-1.5 bg-slate-200 rounded-full w-full"></div>
                           <div className="h-1 sm:h-1.5 bg-slate-200 rounded-full w-3/4"></div>
-                          <div className="h-1 sm:h-1.5 bg-[#07A7E1] rounded-full w-4/5"></div>
+                          <div className="h-1 sm:h-1.5 bg-blue-600 rounded-full w-4/5"></div>
                         </div>
                       </motion.div>
 
