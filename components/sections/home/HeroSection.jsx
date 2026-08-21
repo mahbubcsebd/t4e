@@ -15,6 +15,7 @@ import {
   LayoutTemplate,
 } from "lucide-react";
 import VideoModal from "@/components/ui/VideoModal";
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   const { t } = useLanguage();
@@ -53,21 +54,21 @@ export default function HeroSection() {
 
           {/* Hero CTAs */}
           <div className="flex flex-wrap items-center justify-center gap-4 w-full sm:w-auto mb-6">
-            <Link
-              href="https://portal.think4ever.com/#/register"
-              className="btn-primary w-full sm:w-auto justify-center text-base py-3.5 px-8"
-            >
-              <span>{t("hero.ctaPrimary")}</span>
-            </Link>
-            <button
+            <Button asChild className="w-full sm:w-auto">
+              <Link href="https://portal.think4ever.com/#/register">
+                {t("hero.ctaPrimary")}
+              </Link>
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full sm:w-auto"
               onClick={() => {
                 setVideoId("FY68DuwOf4Q");
                 setIsVideoOpen(true);
               }}
-              className="btn-alt w-full sm:w-auto justify-center text-base py-3.5 px-8"
             >
-              <span>{t("hero.ctaSecondary")}</span>
-            </button>
+              {t("hero.ctaSecondary")}
+            </Button>
           </div>
 
           {/* Micro guarantee */}

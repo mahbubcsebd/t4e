@@ -8,6 +8,7 @@ import React from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function CtaSection() {
   const { t } = useLanguage();
@@ -26,15 +27,11 @@ export default function CtaSection() {
         />
 
         {/* CTA Button */}
-        <Link
-          href="https://portal.think4ever.com/#/register"
-          className="inline-flex items-center justify-center gap-2 text-base font-medium text-white rounded-full px-10 py-4 transition-all duration-300 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/35 hover:-translate-y-0.5"
-          style={{
-            backgroundColor: "#2563eb",
-          }}
-        >
-          <span>{t("cta.btn")}</span>
-        </Link>
+        <Button asChild className="px-10 py-4 text-base shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/35 hover:-translate-y-0.5">
+          <Link href="https://portal.think4ever.com/#/register">
+            {t("cta.btn")}
+          </Link>
+        </Button>
 
         {/* Trust micro-copy */}
         <p className="text-xs text-[#8a9ab5] mt-4 font-medium">

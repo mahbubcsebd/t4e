@@ -8,6 +8,7 @@ import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Play } from "lucide-react";
 import VideoModal from "@/components/ui/VideoModal";
+import { Button } from "@/components/ui/button";
 
 export default function ProductDemoSection() {
   const { t } = useLanguage();
@@ -40,26 +41,27 @@ export default function ProductDemoSection() {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
-              <button
+              <Button
+                className="w-full sm:w-auto"
                 onClick={() => {
                   setVideoId("FY68DuwOf4Q");
                   setIsVideoOpen(true);
                 }}
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full px-8 py-3.5 text-base transition-all whitespace-nowrap"
               >
                 <Play className="w-5 h-5 fill-current" />
-                <span>{t("demo.btnCodeToDesign")}</span>
-              </button>
-              <button
+                {t("demo.btnCodeToDesign")}
+              </Button>
+              <Button
+                variant="outline"
+                className="w-full sm:w-auto"
                 onClick={() => {
                   setVideoId("Lq-vza9_CzI");
                   setIsVideoOpen(true);
                 }}
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-white text-gray-700 hover:bg-gray-50 font-bold rounded-full px-8 py-3.5 text-base transition-all border border-gray-200 whitespace-nowrap"
               >
                 <Play className="w-5 h-5 fill-current" />
-                <span>{t("demo.btnDesignToCode")}</span>
-              </button>
+                {t("demo.btnDesignToCode")}
+              </Button>
             </div>
           </div>
         </div>

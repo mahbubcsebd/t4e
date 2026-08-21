@@ -19,6 +19,7 @@ import {
   Terminal,
   Play,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const { t, language, setLanguage, availableLanguages } = useLanguage();
@@ -396,32 +397,18 @@ export default function Header() {
           </div>
 
           {/* Sign in text link */}
-          <a
-            href="https://portal.think4ever.com/#/login"
-            className="text-[15px] font-medium text-[#465a75] hover:text-[#093cad] transition-colors whitespace-nowrap"
-          >
-            {t("nav.signIn")}
-          </a>
+          <Button asChild variant="ghost" className="px-4 py-2">
+            <a href="https://portal.think4ever.com/#/login">
+              {t("nav.signIn")}
+            </a>
+          </Button>
 
-          {/* Start free gradient pill button */}
-          <a
-            href="https://portal.think4ever.com/#/register"
-            className="inline-flex items-center justify-center whitespace-nowrap text-[15px] font-medium px-6 py-2.5 rounded-full text-white transition-all duration-300"
-            style={{
-              background: "#2563eb",
-              boxShadow: "0 4px 14px rgba(9,60,173,0.25)",
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.boxShadow =
-                "0 6px 20px rgba(9,60,173,0.38)")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.boxShadow =
-                "0 4px 14px rgba(9,60,173,0.25)")
-            }
-          >
-            <span>{t("nav.startFree")}</span>
-          </a>
+          {/* Start free button */}
+          <Button asChild className="px-6 py-2.5 shadow-md shadow-blue-600/25">
+            <a href="https://portal.think4ever.com/#/register">
+              {t("nav.startFree")}
+            </a>
+          </Button>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -608,20 +595,16 @@ export default function Header() {
           </Link>
 
           <div className="pt-4 border-t border-[#c8d9ed] flex flex-col gap-3">
-            <a
-              href="https://portal.think4ever.com/#/login"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-center text-sm font-semibold text-[#314865] py-2"
-            >
-              {t("nav.signIn")}
-            </a>
-            <a
-              href="https://portal.think4ever.com/#/register"
-              onClick={() => setMobileMenuOpen(false)}
-              className="bg-[#093cad] text-white text-center text-sm font-bold py-3 rounded-full"
-            >
-              <span>{t("nav.startFree")}</span>
-            </a>
+            <Button asChild variant="ghost" className="w-full text-center py-3">
+              <a href="https://portal.think4ever.com/#/login" onClick={() => setMobileMenuOpen(false)}>
+                {t("nav.signIn")}
+              </a>
+            </Button>
+            <Button asChild className="w-full text-center py-3">
+              <a href="https://portal.think4ever.com/#/register" onClick={() => setMobileMenuOpen(false)}>
+                {t("nav.startFree")}
+              </a>
+            </Button>
           </div>
         </div>
       )}
