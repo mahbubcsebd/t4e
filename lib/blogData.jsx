@@ -1293,8 +1293,8 @@ export const BLOG_POSTS = [
             <div>
               <h3 class="text-xl font-bold text-gray-900 mb-2">I. One Spec, Every Agent</h3>
               <p>Coding agents are completely limited by their context window. Think4Ever stores the product blueprint as a permanent, machine-readable structure encompassing concepts, design contracts, user flows, named business rules, ERDs, API contracts, UI designs, and roles/access matrixes. Because every tool in the environment connects to that exact spec over MCP, tool lock-in is broken.</p>
-              <div class="bg-blue-50/50 border-l-4 border-blue-600 p-4 rounded-r-xl my-4">
-                <span class="block text-[10px] font-bold text-blue-600 uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
+              <div class="bg-blue-50/50 border-l-4 border-primary p-4 rounded-r-xl my-4">
+                <span class="block text-[10px] font-bold text-primary uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
                 <p class="text-sm italic text-gray-700">"Read the active think4ever concept before doing anything else, and treat it as the source of truth for this session."</p>
               </div>
             </div>
@@ -1302,8 +1302,8 @@ export const BLOG_POSTS = [
             <div>
               <h3 class="text-xl font-bold text-gray-900 mb-2">II. Stop Re-explaining Your Product</h3>
               <p>Developers no longer burn the first 20 minutes of every coding session re-describing data models, endpoints, or design rules to their chat assistants. The client fetches these parameters programmatically on startup.</p>
-              <div class="bg-blue-50/50 border-l-4 border-blue-600 p-4 rounded-r-xl my-4">
-                <span class="block text-[10px] font-bold text-blue-600 uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
+              <div class="bg-blue-50/50 border-l-4 border-primary p-4 rounded-r-xl my-4">
+                <span class="block text-[10px] font-bold text-primary uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
                 <p class="text-sm italic text-gray-700">"Load my project context from think4ever — concept, data objects, api contracts, and design rules — instead of asking me to describe it."</p>
               </div>
             </div>
@@ -1311,8 +1311,8 @@ export const BLOG_POSTS = [
             <div>
               <h3 class="text-xl font-bold text-gray-900 mb-2">III. One Task Board, Everywhere</h3>
               <p>The task lifecycle is fully democratized across tools. Sub-agents can list, pick up, update, and close project tasks natively from inside any connected interface, keeping team status perfectly synchronized regardless of whether a developer is working inside a terminal or a visual IDE workspace.</p>
-              <div class="bg-blue-50/50 border-l-4 border-blue-600 p-4 rounded-r-xl my-4">
-                <span class="block text-[10px] font-bold text-blue-600 uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
+              <div class="bg-blue-50/50 border-l-4 border-primary p-4 rounded-r-xl my-4">
+                <span class="block text-[10px] font-bold text-primary uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
                 <p class="text-sm italic text-gray-700">"List my open think4ever tasks and start the highest-priority one."</p>
               </div>
             </div>
@@ -1320,8 +1320,8 @@ export const BLOG_POSTS = [
             <div>
               <h3 class="text-xl font-bold text-gray-900 mb-2">IV. Issues Filed at the Source</h3>
               <p>When local test suites fail or runtime bugs appear mid-session, the executing agent directly pings the MCP gateway to file an issue block equipped with complete architectural context, preventing debugging logs from evaporating when the immediate chat finishes.</p>
-              <div class="bg-blue-50/50 border-l-4 border-blue-600 p-4 rounded-r-xl my-4">
-                <span class="block text-[10px] font-bold text-blue-600 uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
+              <div class="bg-blue-50/50 border-l-4 border-primary p-4 rounded-r-xl my-4">
+                <span class="block text-[10px] font-bold text-primary uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
                 <p class="text-sm italic text-gray-700">"Create a think4ever issue for this failing test with the stack trace and your root-cause analysis."</p>
               </div>
             </div>
@@ -1329,8 +1329,8 @@ export const BLOG_POSTS = [
             <div>
               <h3 class="text-xl font-bold text-gray-900 mb-2">V. Specs That Never Go Stale</h3>
               <p>When an engineer executes a structural refactor, the agent doesn't just update the local files—it updates the underlying blueprints inside Think4Ever, ensuring documentation natively tracks code changes dynamically.</p>
-              <div class="bg-blue-50/50 border-l-4 border-blue-600 p-4 rounded-r-xl my-4">
-                <span class="block text-[10px] font-bold text-blue-600 uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
+              <div class="bg-blue-50/50 border-l-4 border-primary p-4 rounded-r-xl my-4">
+                <span class="block text-[10px] font-bold text-primary uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
                 <p class="text-sm italic text-gray-700">"I split the billing module in two — update the think4ever concept and requirements to match."</p>
               </div>
             </div>
@@ -1338,8 +1338,8 @@ export const BLOG_POSTS = [
             <div>
               <h3 class="text-xl font-bold text-gray-900 mb-2">VI. Switch Vendors, Keep Everything</h3>
               <p>Product knowledge remains localized inside Think4Ever instead of being fragmented across disjointed vendor chat history logs. Engineering teams can swap out their agent stack mid-project without losing context momentum.</p>
-              <div class="bg-blue-50/50 border-l-4 border-blue-600 p-4 rounded-r-xl my-4">
-                <span class="block text-[10px] font-bold text-blue-600 uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
+              <div class="bg-blue-50/50 border-l-4 border-primary p-4 rounded-r-xl my-4">
+                <span class="block text-[10px] font-bold text-primary uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
                 <p class="text-sm italic text-gray-700">"You're new to this project — read everything in think4ever and continue where the previous agent stopped."</p>
               </div>
             </div>
@@ -1371,7 +1371,7 @@ export const BLOG_POSTS = [
                 <h4 class="font-bold text-gray-900">Developer Environment A: Terminal Interface via Claude Code</h4>
               </div>
               <div class="space-y-3 text-sm font-mono bg-white border border-gray-100 rounded-lg p-4 break-words overflow-x-auto">
-                <p class="text-blue-600 font-semibold"><span class="text-gray-400">$</span> claude-code "Scaffold out our room checking and reservation microservices."</p>
+                <p class="text-primary font-semibold"><span class="text-gray-400">$</span> claude-code "Scaffold out our room checking and reservation microservices."</p>
                 <div class="text-gray-600 space-y-1 pl-4 border-l-2 border-gray-200">
                   <p class="text-zinc-500">"Connecting to Think4Ever via Model Context Protocol... Exchanging handshake... Ready."</p>
                   <p class="text-zinc-500">"Invoking think4ever.get_data_model() to inspect database constraints..."</p>
@@ -1388,7 +1388,7 @@ export const BLOG_POSTS = [
                 <h4 class="font-bold text-gray-900">Developer Environment B: IDE Workspace via Cursor</h4>
               </div>
               <div class="space-y-3 text-sm font-mono bg-white border border-gray-100 rounded-lg p-4 break-words overflow-x-auto">
-                <p class="text-blue-600 font-semibold"><span class="text-gray-400">AI Chat:</span> @think4ever-mcp Generate the frontend administration screens for our operational dashboard.</p>
+                <p class="text-primary font-semibold"><span class="text-gray-400">AI Chat:</span> @think4ever-mcp Generate the frontend administration screens for our operational dashboard.</p>
                 <div class="text-gray-600 space-y-1 pl-4 border-l-2 border-gray-200">
                   <p class="text-zinc-500">"Querying Think4Ever MCP Server: think4ever.get_ui_screens(module: 'admin')..."</p>
                   <p class="text-zinc-500">"Successfully parsed 21 fully structured layout definitions containing pre-mapped dataRefs and flowRefs."</p>
@@ -1538,11 +1538,11 @@ export const BLOG_POSTS = [
           <h2 class="text-2xl font-bold text-gray-900 mb-4">Learn More</h2>
           <p>To explore the platform in more detail, the following Think4Ever resources provide a useful starting point for product information, documentation, and direct contact with the team.</p>
           <ul class="list-disc pl-5 space-y-3 mt-4">
-            <li><strong><a href="https://portal.think4ever.com" class="text-blue-600 hover:underline">Get Early Access</a></strong> – Free trial and monthly subscription.</li>
-            <li><strong><a href="/" class="text-blue-600 hover:underline">Think4Ever Homepage</a></strong> – Company overview and platform introduction.</li>
-            <li><strong><a href="https://think4ever.com/docs" class="text-blue-600 hover:underline">Documentation</a></strong> – Product documentation and implementation resources.</li>
-            <li><strong><a href="/faq" class="text-blue-600 hover:underline">FAQ</a></strong> – Answers to common product and platform questions.</li>
-            <li><strong><a href="/contact-us" class="text-blue-600 hover:underline">Contact Us</a></strong> – Connect with the Think4Ever team for product inquiries and discussions.</li>
+            <li><strong><a href="https://portal.think4ever.com" class="text-primary hover:underline">Get Early Access</a></strong> – Free trial and monthly subscription.</li>
+            <li><strong><a href="/" class="text-primary hover:underline">Think4Ever Homepage</a></strong> – Company overview and platform introduction.</li>
+            <li><strong><a href="https://think4ever.com/docs" class="text-primary hover:underline">Documentation</a></strong> – Product documentation and implementation resources.</li>
+            <li><strong><a href="/faq" class="text-primary hover:underline">FAQ</a></strong> – Answers to common product and platform questions.</li>
+            <li><strong><a href="/contact-us" class="text-primary hover:underline">Contact Us</a></strong> – Connect with the Think4Ever team for product inquiries and discussions.</li>
           </ul>
         </section>
       </div>
@@ -1600,7 +1600,7 @@ export const BLOG_POSTS = [
                   <p class="text-xs text-gray-600">Retrieves, prunes, and presents relevant repo state to the agent within token limits.</p>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider font-semibold">Concrete Example</span>
+                  <span class="text-[10px] font-bold text-primary uppercase tracking-wider font-semibold">Concrete Example</span>
                   <p class="text-xs text-gray-800 font-medium">Abstract Syntax Tree (AST) symbol indexing, vector search over docs, and dynamic file dependency graphs.</p>
                 </div>
               </div>
@@ -1614,7 +1614,7 @@ export const BLOG_POSTS = [
                   <p class="text-xs text-gray-600">Provides a sandboxed interface for the agent to manipulate the environment and inspect results.</p>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider font-semibold">Concrete Example</span>
+                  <span class="text-[10px] font-bold text-primary uppercase tracking-wider font-semibold">Concrete Example</span>
                   <p class="text-xs text-gray-800 font-medium">Headless VS Code environments, Dockerized terminal execution, linter hooks, and automated test runners.</p>
                 </div>
               </div>
@@ -1628,7 +1628,7 @@ export const BLOG_POSTS = [
                   <p class="text-xs text-gray-600">Imposes safety boundaries, linting rules, security checks, and write permissions.</p>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider font-semibold">Concrete Example</span>
+                  <span class="text-[10px] font-bold text-primary uppercase tracking-wider font-semibold">Concrete Example</span>
                   <p class="text-xs text-gray-800 font-medium">Read-only permissions on core infrastructure files, static analysis scanners (e.g., SonarQube), and secret leak detectors.</p>
                 </div>
               </div>
@@ -1642,7 +1642,7 @@ export const BLOG_POSTS = [
                   <p class="text-xs text-gray-600">Formats runtime outputs, failure logs, and diff results into actionable prompt updates for the agent.</p>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider font-semibold">Concrete Example</span>
+                  <span class="text-[10px] font-bold text-primary uppercase tracking-wider font-semibold">Concrete Example</span>
                   <p class="text-xs text-gray-800 font-medium">Parsing stack traces into structured JSON, capturing runtime console outputs, and feeding linter errors back to the agent for self-correction.</p>
                 </div>
               </div>
@@ -1744,8 +1744,8 @@ export const BLOG_POSTS = [
               </div>
             </div>
             <div class="bg-blue-50/50 border border-blue-200 rounded-xl p-5 shadow-sm">
-              <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-2 font-semibold">THINK DESIGN FIRST HARNESS:</span>
-              <div class="font-mono text-sm text-blue-900 bg-white border border-blue-200 rounded-lg p-3 overflow-x-auto font-medium">
+              <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-2 font-semibold">THINK DESIGN FIRST HARNESS:</span>
+              <div class="font-mono text-sm text-primary bg-white border border-blue-200 rounded-lg p-3 overflow-x-auto font-medium">
                 Prompt &mdash;&gt; [ Design Specification & System Contracts ] &mdash;&gt; [ Architecture Validation ] &mdash;&gt; [ Deterministic Code Generation ]
               </div>
             </div>
@@ -1808,7 +1808,7 @@ export const BLOG_POSTS = [
                   <p class="text-xs text-gray-500">Raw Source Code (.ts, .py, .go)</p>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider font-semibold">"Think Design First" Harness</span>
+                  <span class="text-[10px] font-bold text-primary uppercase tracking-wider font-semibold">"Think Design First" Harness</span>
                   <p class="text-xs text-gray-900 font-semibold text-gradient">Design Specifications, Schemas, & System Contracts</p>
                 </div>
               </div>
@@ -1822,7 +1822,7 @@ export const BLOG_POSTS = [
                   <p class="text-xs text-gray-500">Post-Execution (Compiler errors, test failures)</p>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider font-semibold">"Think Design First" Harness</span>
+                  <span class="text-[10px] font-bold text-primary uppercase tracking-wider font-semibold">"Think Design First" Harness</span>
                   <p class="text-xs text-gray-900 font-semibold text-gradient">Pre-Execution (Design validation) & Post-Execution</p>
                 </div>
               </div>
@@ -1836,7 +1836,7 @@ export const BLOG_POSTS = [
                   <p class="text-xs text-gray-500">Low (Degrades over multi-file edits)</p>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider font-semibold">"Think Design First" Harness</span>
+                  <span class="text-[10px] font-bold text-primary uppercase tracking-wider font-semibold">"Think Design First" Harness</span>
                   <p class="text-xs text-gray-900 font-semibold text-gradient">High (Anchored to explicit system specifications)</p>
                 </div>
               </div>
@@ -1850,7 +1850,7 @@ export const BLOG_POSTS = [
                   <p class="text-xs text-gray-500">Poor (Requires parsing and editing large code diffs)</p>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider font-semibold">"Think Design First" Harness</span>
+                  <span class="text-[10px] font-bold text-primary uppercase tracking-wider font-semibold">"Think Design First" Harness</span>
                   <p class="text-xs text-gray-900 font-semibold text-gradient">Excellent (Updates design contracts, propagating clean edits)</p>
                 </div>
               </div>
@@ -1864,7 +1864,7 @@ export const BLOG_POSTS = [
                   <p class="text-xs text-gray-500">Low (High iteration loops over long code blocks)</p>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider font-semibold">"Think Design First" Harness</span>
+                  <span class="text-[10px] font-bold text-primary uppercase tracking-wider font-semibold">"Think Design First" Harness</span>
                   <p class="text-xs text-gray-900 font-semibold text-gradient">High (Compact design models reduce code-generation iterations)</p>
                 </div>
               </div>
@@ -1878,7 +1878,7 @@ export const BLOG_POSTS = [
                   <p class="text-xs text-gray-500">Prototyping & isolated script generation</p>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider font-semibold">"Think Design First" Harness</span>
+                  <span class="text-[10px] font-bold text-primary uppercase tracking-wider font-semibold">"Think Design First" Harness</span>
                   <p class="text-xs text-gray-900 font-semibold text-gradient">Multi-service, full-stack, enterprise application development</p>
                 </div>
               </div>
@@ -1959,7 +1959,7 @@ export const BLOG_POSTS = [
               <h3 class="text-lg font-bold text-gray-900 mb-2">Related Blogs</h3>
               <ul class="list-disc pl-5 space-y-2">
                 <li>
-                  <strong><a href="/blog/architecture-first-agentic-development-with-think4ever" class="text-blue-600 hover:underline">Architecture-first agentic development with Think4Ever™</a>:</strong> As AI coding agents become ubiquitous, the bottleneck in software development has shifted from writing syntax to maintaining architectural integrity. Most current "Code-First" assistants excel at generating localized boilerplate but often fail to maintain global system coherence, leading to "architectural drift" and technical debt. Think4Ever addresses this by introducing a "Design-First" agentic protocol that formalizes system architecture, data contracts, and service boundaries before a single line of code is committed.
+                  <strong><a href="/blog/architecture-first-agentic-development-with-think4ever" class="text-primary hover:underline">Architecture-first agentic development with Think4Ever™</a>:</strong> As AI coding agents become ubiquitous, the bottleneck in software development has shifted from writing syntax to maintaining architectural integrity. Most current "Code-First" assistants excel at generating localized boilerplate but often fail to maintain global system coherence, leading to "architectural drift" and technical debt. Think4Ever addresses this by introducing a "Design-First" agentic protocol that formalizes system architecture, data contracts, and service boundaries before a single line of code is committed.
                 </li>
               </ul>
             </div>

@@ -43,7 +43,7 @@ export default function ProblemSection() {
               <div className="relative w-full max-w-sm aspect-video flex items-center justify-center">
                 {/* Central AI Node */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-card rounded-2xl shadow-lg border border-border flex items-center justify-center z-20 group-hover:scale-105 transition-transform duration-500">
-                  <Bot className="w-8 h-8 text-blue-600" />
+                  <Bot className="w-8 h-8 text-primary" />
                 </div>
 
                 {/* Connecting lines */}
@@ -110,7 +110,7 @@ export default function ProblemSection() {
                   01
                 </span>
                 <span className="h-[1px] w-8 bg-gray-200"></span>
-                <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">
+                <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
                   {t("problem.card1Tag")}
                 </span>
               </div>
@@ -133,16 +133,16 @@ export default function ProblemSection() {
               {/* Layers */}
               <div className="w-full max-w-[220px] bg-card border border-border rounded-xl p-3 flex items-center justify-between shadow-sm relative z-30 -translate-x-4 group-hover:-translate-x-6 transition-transform duration-500">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-blue-50 rounded-lg text-blue-600 border border-primary/20">
+                  <div className="p-2 bg-blue-50 rounded-lg text-primary border border-primary/20">
                     <FileCode className="w-4 h-4" />
                   </div>
                   <span className="text-xs font-bold text-foreground">Code</span>
                 </div>
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 absolute -right-3 top-1/2 -translate-y-1/2 ring-4 ring-white"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-primary absolute -right-3 top-1/2 -translate-y-1/2 ring-4 ring-white"></div>
               </div>
 
               <div className="w-full max-w-[220px] bg-card border border-border rounded-xl p-3 flex items-center justify-between shadow-sm relative z-20 translate-x-3 group-hover:translate-x-5 transition-transform duration-500 delay-75">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-600 absolute -left-3 top-1/2 -translate-y-1/2 ring-4 ring-white"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-primary absolute -left-3 top-1/2 -translate-y-1/2 ring-4 ring-white"></div>
                 <div className="flex items-center gap-3 ml-1">
                   <div className="p-2 bg-muted rounded-lg text-muted-foreground border border-border">
                     <Workflow className="w-4 h-4" />
@@ -173,7 +173,7 @@ export default function ProblemSection() {
                   02
                 </span>
                 <span className="h-[1px] w-8 bg-gray-200"></span>
-                <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">
+                <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
                   {t("problem.card2Tag")}
                 </span>
               </div>
@@ -195,7 +195,7 @@ export default function ProblemSection() {
                   03
                 </span>
                 <span className="h-[1px] w-8 bg-gray-200"></span>
-                <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">
+                <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
                   {t("problem.card3Tag")}
                 </span>
               </div>
@@ -215,12 +215,12 @@ export default function ProblemSection() {
 
                 {/* Local Change Node */}
                 <div className="relative z-10 flex flex-row sm:flex-col items-center gap-4 sm:gap-3 bg-card sm:bg-transparent p-3 sm:p-0 rounded-xl sm:rounded-none border border-border sm:border-none shadow-sm sm:shadow-none w-full sm:w-auto shrink-0 md:translate-x-[20px]">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-card border-[3px] border-blue-600 shadow-md flex items-center justify-center relative shrink-0 group-hover:scale-110 transition-transform duration-500 md:mt-[30px]">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-card border-[3px] border-primary shadow-md flex items-center justify-center relative shrink-0 group-hover:scale-110 transition-transform duration-500 md:mt-[30px]">
                     <div
-                      className="absolute inset-0 rounded-full bg-blue-600/30 animate-ping"
+                      className="absolute inset-0 rounded-full bg-primary/30 animate-ping"
                       style={{ animationDuration: "3s" }}
                     ></div>
-                    <GitPullRequest className="w-5 h-5 text-blue-600" />
+                    <GitPullRequest className="w-5 h-5 text-primary" />
                   </div>
                   <span className="text-xs sm:text-[10px] font-extrabold text-foreground sm:text-muted-foreground uppercase tracking-widest bg-card sm:bg-transparent px-2 py-1 rounded">
                     Local Edit
@@ -240,8 +240,8 @@ export default function ProblemSection() {
                   <div className="bg-card border border-border rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-75 z-10">
                     {/* Mobile Card connecting line */}
                     <div className="sm:hidden absolute -left-[28px] top-1/2 -translate-y-[1px] w-[28px] border-t-2 border-dashed border-border z-0"></div>
-                    <div className="w-2 h-2 rounded-full bg-blue-600 absolute -left-1 top-1/2 -translate-y-1/2 z-20"></div>
-                    <Network className="w-4 h-4 text-blue-600" />
+                    <div className="w-2 h-2 rounded-full bg-primary absolute -left-1 top-1/2 -translate-y-1/2 z-20"></div>
+                    <Network className="w-4 h-4 text-primary" />
                     <span className="text-xs font-bold text-foreground">
                       APIs & Interfaces
                     </span>

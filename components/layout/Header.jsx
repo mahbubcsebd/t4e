@@ -133,7 +133,7 @@ export default function Header() {
       title: t("nav.docsMenu.vscodeTitle", "VS Code Plugin"),
       desc: t("nav.docsMenu.vscodeDesc", "Access T4E inside VS Code."),
       href: "https://think4ever.com/docs/dev/vs_code_integration.html",
-      icon: <Code className="w-4 h-4 text-blue-600" />,
+      icon: <Code className="w-4 h-4 text-primary" />,
     },
     {
       title: t("nav.docsMenu.apiTitle", "Think API"),
@@ -425,7 +425,7 @@ export default function Header() {
           </Button>
 
           {/* Start free button */}
-          <Button asChild className="shadow-md shadow-blue-600/25">
+          <Button asChild className="shadow-md shadow-primary/25">
             <a href="https://portal.think4ever.com/#/register">
               {t("nav.startFree")}
             </a>

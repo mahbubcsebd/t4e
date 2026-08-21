@@ -36,7 +36,7 @@ export default function CoherenceSection() {
           title={
             <>
               {t('coherence.titlePrefix')}{' '}
-              <span className="text-blue-600">
+              <span className="text-primary">
                 {t('coherence.titleHighlight')}
               </span>
             </>

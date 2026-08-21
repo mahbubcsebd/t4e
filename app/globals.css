@@ -8,8 +8,8 @@
   --border: #e5e7eb;
   --muted: #f3f4f6;
   --muted-foreground: #6b7280;
-  --brand-blue: #2563eb;
-  --primary: #2563eb;
+  --brand-blue: #093cad;
+  --primary: #093cad;
   --primary-foreground: #ffffff;
 }
 
@@ -21,8 +21,8 @@
   --border: rgba(255, 255, 255, 0.04);
   --muted: #1c2028;
   --muted-foreground: #94a3b8;
-  --brand-blue: #3b82f6;
-  --primary: #3b82f6;
+  --brand-blue: #093cad;
+  --primary: #093cad;
   --primary-foreground: #ffffff;
 }
 

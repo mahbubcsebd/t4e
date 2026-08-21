@@ -27,7 +27,7 @@ export default function CtaSection() {
         />
 
         {/* CTA Button */}
-        <Button asChild className="px-10 py-4 text-base shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/35 hover:-translate-y-0.5">
+        <Button asChild className="px-10 py-4 text-base shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/25 hover:-translate-y-0.5">
           <Link href="https://portal.think4ever.com/#/register">
             {t("cta.btn")}
           </Link>

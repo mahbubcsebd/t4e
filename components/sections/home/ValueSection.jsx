@@ -47,7 +47,7 @@ export default function ValueSection() {
                   </div>
 
                   {/* Center Magnifying Glass / Focus */}
-                  <div className="relative z-20 w-24 h-24 bg-card/90 backdrop-blur-md rounded-full shadow-md shadow-blue-600/10 border-4 border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                  <div className="relative z-20 w-24 h-24 bg-card/90 backdrop-blur-md rounded-full shadow-md shadow-primary/25 border-4 border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
                     <Search className="w-10 h-10 text-primary" />
                   </div>
 

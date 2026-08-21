@@ -44,7 +44,7 @@ export default function HeroSection() {
           <h1 className="text-muted-foregroundxl sm:text-muted-foregroundxl md:text-[56px] lg:text-[64px] font-extrabold tracking-tight text-foreground leading-[1.05] mb-6">
             {t("hero.titlePrefix")}
             <br className="hidden md:block" />
-            <span className="text-blue-600"> {t("hero.titleHighlight")}</span>
+            <span className="text-primary"> {t("hero.titleHighlight")}</span>
           </h1>
 
           {/* Subtitle */}
@@ -88,8 +88,8 @@ export default function HeroSection() {
                     style={{ WebkitTapHighlightColor: "transparent" }}
                     className={`relative flex-1 sm:flex-none px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg text-[10px] sm:text-xs font-bold tracking-wider transition-all duration-300 outline-none focus:outline-none focus-visible:outline-none focus:ring-0 focus-visible:ring-0 whitespace-nowrap ${
                       activeScene === 1
-                        ? "text-blue-600 shadow-sm bg-card border border-border"
-                        : "text-muted-foreground hover:text-blue-600 border border-transparent"
+                        ? "text-primary shadow-sm bg-card border border-border"
+                        : "text-muted-foreground hover:text-primary border border-transparent"
                     }`}
                   >
                     {t("hero.tabOne")}
@@ -99,8 +99,8 @@ export default function HeroSection() {
                     style={{ WebkitTapHighlightColor: "transparent" }}
                     className={`relative flex-1 sm:flex-none px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg text-[10px] sm:text-xs font-bold tracking-wider transition-all duration-300 outline-none focus:outline-none focus-visible:outline-none focus:ring-0 focus-visible:ring-0 whitespace-nowrap ${
                       activeScene === 2
-                        ? "text-blue-600 shadow-sm bg-card border border-border"
-                        : "text-muted-foreground hover:text-blue-600 border border-transparent"
+                        ? "text-primary shadow-sm bg-card border border-border"
+                        : "text-muted-foreground hover:text-primary border border-transparent"
                     }`}
                   >
                     {t("hero.tabTwo")}
@@ -109,10 +109,10 @@ export default function HeroSection() {
 
                 <div className="flex items-center justify-center sm:justify-end gap-1.5">
                   <span
-                    className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${activeScene === 1 ? "bg-blue-600 w-4" : "bg-gray-200 w-2"}`}
+                    className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${activeScene === 1 ? "bg-primary w-4" : "bg-gray-200 w-2"}`}
                   ></span>
                   <span
-                    className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${activeScene === 2 ? "bg-blue-600 w-4" : "bg-slate-200 w-2"}`}
+                    className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${activeScene === 2 ? "bg-primary w-4" : "bg-slate-200 w-2"}`}
                   ></span>
                 </div>
               </div>
@@ -129,7 +129,7 @@ export default function HeroSection() {
                     className="flex-1 flex flex-col justify-between relative z-10"
                   >
                     <div className="text-center mb-8">
-                      <span className="inline-block text-[11px] font-medium text-blue-600 bg-blue-600/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                      <span className="inline-block text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                         {t("hero.cardOneBadge")}
                       </span>
                       <h3 className="text-2xl font-bold text-foreground mt-3">
@@ -161,7 +161,7 @@ export default function HeroSection() {
                         <div className="mt-4 space-y-2">
                           <div className="h-1.5 sm:h-2 bg-slate-200 rounded-full w-full"></div>
                           <div className="h-1.5 sm:h-2 bg-slate-200 rounded-full w-3/4"></div>
-                          <div className="h-1.5 sm:h-2 bg-blue-600 rounded-full w-4/5"></div>
+                          <div className="h-1.5 sm:h-2 bg-primary rounded-full w-4/5"></div>
                         </div>
                       </motion.div>
 
@@ -212,7 +212,7 @@ export default function HeroSection() {
                             setVideoId("FY68DuwOf4Q");
                             setIsVideoOpen(true);
                           }}
-                          className="relative z-20 group flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 rounded-full shadow-lg border-4 border-background hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
+                          className="relative z-20 group flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-primary rounded-full shadow-lg border-4 border-background hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
                           aria-label={t("hero.watchDemo")}
                         >
                           <Play
@@ -272,7 +272,7 @@ export default function HeroSection() {
                     className="flex-1 flex flex-col justify-between relative z-10"
                   >
                     <div className="text-center mb-8">
-                      <span className="inline-block text-[11px] font-medium text-blue-600 bg-blue-600/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                      <span className="inline-block text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                         {t("hero.cardTwoBadge")}
                       </span>
                       <h3 className="text-2xl font-bold text-foreground mt-3">
@@ -350,7 +350,7 @@ export default function HeroSection() {
                             setVideoId("Lq-vza9_CzI");
                             setIsVideoOpen(true);
                           }}
-                          className="relative z-20 group flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 rounded-full shadow-lg border-4 border-background hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
+                          className="relative z-20 group flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-primary rounded-full shadow-lg border-4 border-background hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
                           aria-label={t("hero.watchDemo")}
                         >
                           <Play

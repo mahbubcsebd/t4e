@@ -43,7 +43,7 @@ export default function HowItWorksSection() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 relative z-10">
             {/* STEP 1: Connect */}
             <div className="relative group">
-              <div className="bg-card border border-border rounded-3xl overflow-hidden hover:border-blue-600/40 transition-all duration-500 flex flex-col h-full">
+              <div className="bg-card border border-border rounded-3xl overflow-hidden hover:border-primary/40 transition-all duration-500 flex flex-col h-full">
                 {/* Visual Container */}
                 <div className="h-[240px] bg-muted/10 border-b border-border flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.05)_0%,transparent_70%)]"></div>
@@ -94,7 +94,7 @@ export default function HowItWorksSection() {
 
             {/* STEP 2: Review */}
             <div className="relative group">
-              <div className="bg-card border border-border rounded-3xl overflow-hidden hover:border-blue-600/40 transition-all duration-500 flex flex-col h-full">
+              <div className="bg-card border border-border rounded-3xl overflow-hidden hover:border-primary/40 transition-all duration-500 flex flex-col h-full">
                 {/* Visual Container */}
                 <div className="h-[240px] bg-muted/10 border-b border-border flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.05)_0%,transparent_70%)]"></div>
@@ -124,7 +124,7 @@ export default function HowItWorksSection() {
                     </svg>
 
                     {/* Top Node */}
-                    <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card border border-blue-600 rounded-xl p-2.5 shadow-sm z-10 flex items-center justify-center">
+                    <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card border border-primary rounded-xl p-2.5 shadow-sm z-10 flex items-center justify-center">
                       <Network className="w-6 h-6 text-primary" />
                       {/* Checkmark Badge */}
                       <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-primary rounded-full border-2 border-card flex items-center justify-center shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
@@ -168,7 +168,7 @@ export default function HowItWorksSection() {
 
             {/* STEP 3: Change */}
             <div className="relative group">
-              <div className="bg-card border border-border rounded-3xl overflow-hidden hover:border-blue-600/40 transition-all duration-500 flex flex-col h-full">
+              <div className="bg-card border border-border rounded-3xl overflow-hidden hover:border-primary/40 transition-all duration-500 flex flex-col h-full">
                 {/* Visual Container */}
                 <div className="h-[240px] bg-muted/10 border-b border-border flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.05)_0%,transparent_70%)]"></div>
