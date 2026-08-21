@@ -23,6 +23,7 @@ import {
   Moon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const { t, language, setLanguage, availableLanguages } = useLanguage();
@@ -481,145 +482,143 @@ export default function Header() {
       </div>
 
       {/* Mobile Drawer */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden bg-popover border-b border-border px-6 py-6 flex flex-col gap-4 animate-in fade-in slide-in-from-top-4">
-          <div className="flex flex-col gap-3">
-            <button
-              onClick={() => setMobileHowItWorksOpen(!mobileHowItWorksOpen)}
-              className="flex items-center justify-between text-sm font-semibold text-[#314865] w-full text-left"
-            >
-              <span>{t("nav.product", "Product")}</span>
-              <ChevronDown
-                className={`w-4 h-4 transition-transform ${mobileHowItWorksOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-            {mobileHowItWorksOpen && (
-              <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1">
-                <Link
-                  href="/how-it-works"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-xs font-medium text-muted-foreground hover:text-primary"
-                >
-                  {t("nav.howItWorks")}
-                </Link>
-                <Link
-                  href="/code-to-design"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-xs font-medium text-muted-foreground hover:text-primary"
-                >
-                  {t("nav.codeToDesign")}
-                </Link>
-                <Link
-                  href="/design-to-code"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-xs font-medium text-muted-foreground hover:text-primary"
-                >
-                  {t("nav.designToCode")}
-                </Link>
-              </div>
-            )}
-          </div>
-          <Link
-            href="/integrations"
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-sm font-semibold text-[#314865]"
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="lg:hidden bg-popover border-b border-border px-6 py-4 flex flex-col gap-0 overflow-hidden"
           >
-            {t("nav.integrations")}
-          </Link>
-          <div className="flex flex-col gap-3">
-            <button
-              onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)}
-              className="flex items-center justify-between text-sm font-semibold text-[#314865] w-full text-left"
-            >
-              <span>{t("nav.resources")}</span>
-              <ChevronDown
-                className={`w-4 h-4 transition-transform ${mobileResourcesOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-            {mobileResourcesOpen && (
-              <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1">
-                <Link
-                  href="/resources"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-xs font-medium text-muted-foreground hover:text-primary"
-                >
-                  {t("nav.resourceLibrary")}
-                </Link>
-                <Link
-                  href="/blog"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-xs font-medium text-muted-foreground hover:text-primary"
-                >
-                  {t("nav.blog")}
-                </Link>
-                <Link
-                  href="/faq"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-xs font-medium text-muted-foreground hover:text-primary"
-                >
-                  FAQ
-                </Link>
-              </div>
-            )}
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <button
-              onClick={() => setMobileDocsOpen(!mobileDocsOpen)}
-              className="flex items-center justify-between text-sm font-semibold text-[#314865] w-full text-left"
-            >
-              <span>{t("nav.docs")}</span>
-              <ChevronDown
-                className={`w-4 h-4 transition-transform ${mobileDocsOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-            {mobileDocsOpen && (
-              <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1">
-                {docsLinks.map((doc, idx) => (
-                  <a
-                    key={idx}
-                    href={doc.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between text-xs font-medium text-muted-foreground hover:text-primary"
+            <div className="flex flex-col gap-0">
+              <button
+                onClick={() => setMobileHowItWorksOpen(!mobileHowItWorksOpen)}
+                className="flex items-center justify-between text-[15px] font-semibold text-[#314865] w-full text-left py-2.5"
+              >
+                <span>{t("nav.product", "Product")}</span>
+                <motion.div animate={{ rotate: mobileHowItWorksOpen ? 180 : 0 }}>
+                  <ChevronDown className="w-4 h-4" />
+                </motion.div>
+              </button>
+              <AnimatePresence initial={false}>
+                {mobileHowItWorksOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                    className="overflow-hidden"
                   >
-                    <span>{doc.title}</span>
-                    <ExternalLink className="w-3 h-3 opacity-50" />
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
+                    <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
+                      <Link href="/how-it-works" onClick={() => setMobileMenuOpen(false)} className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors">
+                        {t("nav.howItWorks")}
+                      </Link>
+                      <Link href="/code-to-design" onClick={() => setMobileMenuOpen(false)} className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors">
+                        {t("nav.codeToDesign")}
+                      </Link>
+                      <Link href="/design-to-code" onClick={() => setMobileMenuOpen(false)} className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors">
+                        {t("nav.designToCode")}
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
-          <Link
-            href="/pricing"
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-sm font-semibold text-[#314865]"
-          >
-            {t("nav.pricing")}
-          </Link>
+            <div className="py-1">
+              <Link href="/integrations" onClick={() => setMobileMenuOpen(false)} className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5">
+                {t("nav.integrations")}
+              </Link>
+            </div>
 
-          <div className="pt-4 border-t border-border flex flex-col gap-3">
-            <Button asChild variant="ghost" className="w-full text-center py-3">
-              <a
-                href="https://portal.think4ever.com/#/login"
-                onClick={() => setMobileMenuOpen(false)}
+            <div className="flex flex-col gap-0">
+              <button
+                onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)}
+                className="flex items-center justify-between text-[15px] font-semibold text-[#314865] w-full text-left py-2.5"
               >
-                {t("nav.signIn")}
-              </a>
-            </Button>
-            <Button asChild className="w-full text-center py-3">
-              <a
-                href="https://portal.think4ever.com/#/register"
-                onClick={() => setMobileMenuOpen(false)}
+                <span>{t("nav.resources")}</span>
+                <motion.div animate={{ rotate: mobileResourcesOpen ? 180 : 0 }}>
+                  <ChevronDown className="w-4 h-4" />
+                </motion.div>
+              </button>
+              <AnimatePresence initial={false}>
+                {mobileResourcesOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
+                      <Link href="/resources" onClick={() => setMobileMenuOpen(false)} className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors">
+                        {t("nav.resourceLibrary")}
+                      </Link>
+                      <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors">
+                        {t("nav.blog")}
+                      </Link>
+                      <Link href="/faq" onClick={() => setMobileMenuOpen(false)} className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors">
+                        FAQ
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <div className="flex flex-col gap-0">
+              <button
+                onClick={() => setMobileDocsOpen(!mobileDocsOpen)}
+                className="flex items-center justify-between text-[15px] font-semibold text-[#314865] w-full text-left py-2.5"
               >
-                {t("nav.startFree")}
-              </a>
-            </Button>
-          </div>
-        </div>
-      )}
+                <span>{t("nav.docs")}</span>
+                <motion.div animate={{ rotate: mobileDocsOpen ? 180 : 0 }}>
+                  <ChevronDown className="w-4 h-4" />
+                </motion.div>
+              </button>
+              <AnimatePresence initial={false}>
+                {mobileDocsOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
+                      {docsLinks.map((doc, idx) => (
+                        <a key={idx} href={doc.href} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-between text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors">
+                          <span>{doc.title}</span>
+                          <ExternalLink className="w-3 h-3 opacity-50" />
+                        </a>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <div className="py-1 mb-2">
+              <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5">
+                {t("nav.pricing")}
+              </Link>
+            </div>
+
+            <div className="pt-2 pb-2 grid grid-cols-2 gap-2">
+              <Button asChild variant="outline" className="w-full text-center">
+                <a href="https://portal.think4ever.com/#/login" onClick={() => setMobileMenuOpen(false)}>
+                  {t("nav.signIn")}
+                </a>
+              </Button>
+              <Button asChild className="w-full text-center bg-[#093cad] hover:bg-[#093cad]/90 text-white">
+                <a href="https://portal.think4ever.com/#/register" onClick={() => setMobileMenuOpen(false)}>
+                  {t("nav.startFree")}
+                </a>
+              </Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

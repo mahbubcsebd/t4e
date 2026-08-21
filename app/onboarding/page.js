@@ -31,7 +31,7 @@ export default function OnboardingPage() {
         </div>
 
         <div className="flex items-center gap-3">
-          <span className="bg-[#e7f7fc] text-[#0679a4] text-xs font-bold px-3 py-1 rounded-full border border-[#07A7E1]/20">
+          <span className="inline-block text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
             Credits 500
           </span>
           <span className="w-8 h-8 rounded-full bg-[#093cad] text-white font-bold text-xs flex items-center justify-center">

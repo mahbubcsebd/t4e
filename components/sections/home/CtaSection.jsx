@@ -34,7 +34,7 @@ export default function CtaSection() {
         </Button>
 
         {/* Trust micro-copy */}
-        <p className="text-xs text-[#8a9ab5] mt-4 font-medium">
+        <p className="text-xs text-muted-foreground mt-4 font-medium">
           No credit card required · Free to start
         </p>
       </Container>

@@ -3,62 +3,71 @@
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Coins, Key, ShieldCheck } from "lucide-react";
+import Container from "@/components/layout/Container";
+import SectionHeading from "@/components/layout/SectionHeading";
+import SectionCard from "@/components/layout/SectionCard";
 
 export default function CostControl() {
   const { t } = useLanguage();
 
   const cards = [
     {
-      icon: <Coins className="w-5 h-5 text-[#07A7E1]" />,
+      icon: Coins,
       title: t("pricingPage.card1Title"),
       desc: t("pricingPage.card1Desc"),
     },
     {
-      icon: <Key className="w-5 h-5 text-[#093cad]" />,
+      icon: Key,
       title: t("pricingPage.card2Title"),
       desc: t("pricingPage.card2Desc"),
     },
     {
-      icon: <ShieldCheck className="w-5 h-5 text-indigo-600" />,
+      icon: ShieldCheck,
       title: t("pricingPage.card3Title"),
       desc: t("pricingPage.card3Desc"),
     },
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-[#f7fafe] border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-3">
-            {t("pricingPage.costEyebrow")}
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-            {t("pricingPage.costTitle")}
-          </h2>
-          <p className="text-base text-muted-foreground leading-relaxed">
-            {t("pricingPage.costSubtitle")}
-          </p>
-        </div>
+    <section className="py-12 md:py-32 bg-background border-b border-border">
+      <Container>
+        <SectionCard glowPosition="default">
+          <SectionHeading
+            eyebrow={t("pricingPage.costEyebrow")}
+            title={t("pricingPage.costTitle")}
+            subtitle={t("pricingPage.costSubtitle")}
+            className="mb-12 md:mb-16 relative z-10"
+          />
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {cards.map((c, idx) => (
-            <div
-              key={idx}
-              className="bg-card border border-border rounded-2xl p-7 hover:border-[#093cad] transition-all shadow-md"
-            >
-              <div className="p-2.5 rounded-xl bg-[#f2f7ff] border border-border/50 w-fit mb-4">
-                {c.icon}
-              </div>
-              <h3 className="text-lg font-bold text-foreground mb-2 leading-snug">
-                {c.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                {c.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 relative z-10">
+            {cards.map((c, idx) => {
+              const Icon = c.icon;
+              return (
+                <div
+                  key={idx}
+                  className="relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-3xl p-8 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 flex flex-col group overflow-hidden translate-y-0 hover:-translate-y-2"
+                >
+                  {/* Hover Gradient Background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div className="relative z-10 flex flex-col items-start">
+                    <div className="mb-6 p-4 rounded-2xl bg-blue-50  border border-primary/20 transition-all duration-500 group-hover:scale-110 shadow-sm group-hover:shadow-primary/10">
+                      <Icon className="w-7 h-7 text-primary transition-colors duration-300" />
+                    </div>
+
+                    <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                      {c.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/90 transition-colors duration-300">
+                      {c.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </SectionCard>
+      </Container>
     </section>
   );
 }
