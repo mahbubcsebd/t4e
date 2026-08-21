@@ -31,9 +31,9 @@ export default function ValueSection() {
           {/* Left Column (Clarity & Compatibility) */}
           <div className="lg:col-span-8 flex flex-col gap-6">
             {/* Card 1: Clarity */}
-            <div className="flex-1 bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl overflow-hidden flex flex-col group">
+            <div className="flex-1 bg-muted/10 border border-border rounded-3xl overflow-hidden flex flex-col group">
               {/* Large Visual Canvas */}
-              <div className="h-64 sm:h-80 bg-card relative overflow-hidden flex flex-col items-center justify-center p-6 border-b border-[#f1f5f9]">
+              <div className="h-64 sm:h-80 bg-card relative overflow-hidden flex flex-col items-center justify-center p-6 border-b border-border">
                 <div className="relative w-full max-w-lg h-full flex items-center justify-center">
                   {/* Background Nodes */}
                   <div className="absolute top-[20%] left-[20%] p-3 bg-primary/10 text-primary rounded-2xl border border-primary/20 shadow-sm opacity-60 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-700 delay-100 z-10">
@@ -104,12 +104,12 @@ export default function ValueSection() {
             </div>
 
             {/* Bottom Banner: Compatibility (Now inside left column) */}
-            <div className="bg-card border border-[#e2e8f0] rounded-3xl p-8 flex flex-col xl:flex-row items-center justify-between gap-6 relative overflow-hidden group">
+            <div className="bg-card border border-border rounded-3xl p-8 flex flex-col xl:flex-row items-center justify-between gap-6 relative overflow-hidden group">
               {/* Subtle background gradient */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 text-left relative z-10 w-full xl:w-auto">
-                <div className="p-4 bg-[#09090d] text-white rounded-xl shadow-xl shadow-black/10 shrink-0 group-hover:scale-110 transition-transform duration-500">
+                <div className="p-4 bg-foreground text-background rounded-xl shadow-xl shadow-black/10 shrink-0 group-hover:scale-110 transition-transform duration-500">
                   <Terminal className="w-6 h-6" />
                 </div>
                 <div>
@@ -131,15 +131,15 @@ export default function ValueSection() {
           {/* Cards 2 & 3: Coherence & Control (Right Column) */}
           <div className="lg:col-span-4 flex flex-col gap-6">
             {/* Card 2: Coherence */}
-            <div className="flex-1 bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl overflow-hidden flex flex-col group">
-              <div className="h-40 bg-card relative overflow-hidden flex items-center justify-center p-4 border-b border-[#f1f5f9]">
+            <div className="flex-1 bg-muted/10 border border-border rounded-3xl overflow-hidden flex flex-col group">
+              <div className="h-40 bg-card relative overflow-hidden flex items-center justify-center p-4 border-b border-border">
                 <div className="flex items-center gap-4 relative z-10">
                   <div className="p-3 bg-muted border border-border rounded-xl text-muted-foreground shadow-sm group-hover:-translate-x-2 transition-transform duration-500">
                     <FileText className="w-5 h-5" />
                   </div>
-                  <div className="w-10 h-[2px] bg-slate-200"></div>
-                  <div className="w-8 h-8 rounded-full bg-blue-600 border-2 border-card shadow-md flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 group-hover:scale-110 transition-transform duration-500">
-                    <CheckCircle2 className="w-4 h-4 text-white" />
+                  <div className="w-10 h-[2px] bg-border"></div>
+                  <div className="w-8 h-8 rounded-full bg-primary border-2 border-card shadow-md flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 group-hover:scale-110 transition-transform duration-500">
+                    <CheckCircle2 className="w-4 h-4 text-primary-foreground" />
                   </div>
                   <div className="p-3 bg-primary/10 border border-primary/30 rounded-xl text-primary shadow-sm group-hover:translate-x-2 transition-transform duration-500">
                     <FileCode className="w-5 h-5" />
@@ -165,8 +165,8 @@ export default function ValueSection() {
             </div>
 
             {/* Card 3: Control */}
-            <div className="flex-1 bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl overflow-hidden flex flex-col group">
-              <div className="h-40 bg-card relative overflow-hidden flex items-center justify-center p-4 border-b border-[#f1f5f9]">
+            <div className="flex-1 bg-muted/10 border border-border rounded-3xl overflow-hidden flex flex-col group">
+              <div className="h-40 bg-card relative overflow-hidden flex items-center justify-center p-4 border-b border-border">
                 <div className="flex flex-col gap-3 w-36">
                   <div className="flex items-center justify-between p-2.5 bg-muted border border-border rounded-lg shadow-sm group-hover:-translate-x-1 transition-transform duration-500">
                     <div className="w-16 h-2 rounded-full bg-slate-200"></div>

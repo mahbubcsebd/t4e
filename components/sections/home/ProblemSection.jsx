@@ -189,7 +189,7 @@ export default function ProblemSection() {
           {/* Block 03 - Impact appears late (Bottom Full Width) */}
           <div className="lg:col-span-12 bg-card rounded-3xl border border-border shadow-sm overflow-hidden grid lg:grid-cols-12 group">
             {/* Content (Left side on desktop) */}
-            <div className="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-[#f0f4f8] order-2 lg:order-1">
+            <div className="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-border order-2 lg:order-1">
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-xs font-mono font-medium text-slate-400">
                   03
