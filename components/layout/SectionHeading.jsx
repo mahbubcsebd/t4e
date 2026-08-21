@@ -24,19 +24,19 @@ export default function SectionHeading({
           {eyebrow && (
             <span
               className={cn(
-                "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4 border border-blue-200",
+                "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-primary/20",
                 eyebrowClassName,
               )}
             >
               {animatePulse && (
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
               )}
               {eyebrow}
             </span>
           )}
           <h2
             className={cn(
-              "text-2xl sm:text-3xl md:text-[44px] font-extrabold text-[#09090d] tracking-tight leading-[1.2]",
+              "text-2xl sm:text-3xl md:text-[44px] font-extrabold text-foreground tracking-tight leading-[1.2]",
               titleClassName,
             )}
           >
@@ -47,7 +47,7 @@ export default function SectionHeading({
           <div className="max-w-md">
             <p
               className={cn(
-                "text-base sm:text-lg text-[#465a75] leading-relaxed",
+                "text-base sm:text-lg text-muted-foreground leading-relaxed",
                 subtitleClassName,
               )}
             >
@@ -70,19 +70,19 @@ export default function SectionHeading({
         {eyebrow && (
           <span
             className={cn(
-              "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4 border border-blue-200",
+              "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-primary/20",
               eyebrowClassName,
             )}
           >
             {animatePulse && (
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
             )}
             {eyebrow}
           </span>
         )}
         <h2
           className={cn(
-            "max-w-[500px] text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#09090d] tracking-tight mb-4",
+            "max-w-[500px] text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-4",
             titleClassName,
           )}
         >
@@ -91,7 +91,7 @@ export default function SectionHeading({
         {subtitle && (
           <p
             className={cn(
-              "max-w-[500px] text-sm sm:text-base text-[#465a75] leading-relaxed",
+              "max-w-[500px] text-sm sm:text-base text-muted-foreground leading-relaxed",
               subtitleClassName,
             )}
           >
@@ -113,19 +113,19 @@ export default function SectionHeading({
       {eyebrow && (
         <span
           className={cn(
-            "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4 border border-blue-200",
+            "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-primary/20",
             eyebrowClassName,
           )}
         >
           {animatePulse && (
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
           )}
           {eyebrow}
         </span>
       )}
       <h2
         className={cn(
-          "text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#09090d] tracking-tight mb-4",
+          "text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-4",
           titleClassName,
         )}
       >
@@ -134,7 +134,7 @@ export default function SectionHeading({
       {subtitle && (
         <p
           className={cn(
-            "text-base text-[#465a75] leading-relaxed",
+            "text-base text-muted-foreground leading-relaxed",
             subtitleClassName,
           )}
         >

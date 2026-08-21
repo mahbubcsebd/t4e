@@ -328,11 +328,11 @@ export default function Header() {
                     {doc.icon}
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-[#09090d] group-hover/item:text-[#093cad] flex items-center gap-1">
+                    <div className="text-xs font-bold text-foreground group-hover/item:text-primary flex items-center gap-1">
                       <span>{doc.title}</span>
                       <ExternalLink className="w-3 h-3 opacity-40 group-hover/item:opacity-100" />
                     </div>
-                    <p className="text-[10px] text-[#71849c] leading-snug mt-0.5">
+                    <p className="text-[10px] text-muted-foreground leading-snug mt-0.5">
                       {doc.desc}
                     </p>
                   </div>
@@ -484,7 +484,7 @@ export default function Header() {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-[#09090d] hover:text-[#093cad] transition-colors"
+            className="p-2 text-foreground hover:text-primary transition-colors"
           >
             {mobileMenuOpen ? (
               <X className="w-6 h-6" />
