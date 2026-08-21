@@ -36,7 +36,7 @@ export default function HeroSection() {
       <Container>
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto mb-12 lg:mb-16 pt-8">
           {/* Eyebrow */}
-          <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold tracking-wide mb-6 border border-blue-200">
+          <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold tracking-wide mb-6 border border-primary/30">
             {t("hero.eyebrow")}
           </span>
 
@@ -147,7 +147,7 @@ export default function HeroSection() {
                           delay: 0.1,
                           ease: "easeOut",
                         }}
-                        className="bg-card p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm relative z-10"
+                        className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-sm relative z-10"
                       >
                         <div className="flex items-center gap-1 mb-2">
                           <Code2 className="w-4 h-4 text-muted-foreground" />

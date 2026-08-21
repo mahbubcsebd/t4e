@@ -20,7 +20,7 @@ export default function ProductModelSection() {
 
   return (
     <section
-      className="py-24 md:py-32 bg-background border-b border-zinc-200/60 overflow-hidden relative"
+      className="py-24 md:py-32 bg-background border-b border-border overflow-hidden relative"
       id="product"
     >
       {/* Subtle Grid Background */}
@@ -45,7 +45,7 @@ export default function ProductModelSection() {
                 <div className="absolute -right-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-blue-600 transition-colors duration-500 origin-left"></div>
 
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-blue-50 rounded-xl text-blue-600 border border-blue-100 shrink-0">
+                  <div className="p-3 bg-blue-50 rounded-xl text-blue-600 border border-primary/20 shrink-0">
                     <Cpu className="w-5 h-5" />
                   </div>
                   <div>
@@ -65,7 +65,7 @@ export default function ProductModelSection() {
                 <div className="absolute -right-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-blue-600 transition-colors duration-500 origin-left"></div>
 
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-blue-50 rounded-xl text-blue-600 border border-blue-100 shrink-0">
+                  <div className="p-3 bg-blue-50 rounded-xl text-blue-600 border border-primary/20 shrink-0">
                     <Workflow className="w-5 h-5" />
                   </div>
                   <div>
@@ -86,13 +86,13 @@ export default function ProductModelSection() {
                 {/* Glowing Background Effect */}
                 <div className="absolute inset-0 bg-blue-600 blur-2xl opacity-10 rounded-[40px]"></div>
 
-                <div className="bg-card border-[1.5px] border-blue-200 rounded-[32px] p-8 shadow-sm relative overflow-hidden group flex-1 flex flex-col items-center justify-center min-h-[280px]">
+                <div className="bg-card border-[1.5px] border-primary/30 rounded-[32px] p-8 shadow-sm relative overflow-hidden group flex-1 flex flex-col items-center justify-center min-h-[280px]">
                   <div className="relative z-10 flex flex-col items-center text-center">
                     <div className="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-600/20 mb-6 group-hover:scale-105 transition-transform duration-500">
                       <Layers className="w-10 h-10 text-white" />
                     </div>
 
-                    <span className="inline-block px-3 py-1 bg-card text-blue-600 border border-blue-200 rounded-md text-[10px] font-extrabold uppercase tracking-widest mb-3">
+                    <span className="inline-block px-3 py-1 bg-card text-blue-600 border border-primary/30 rounded-md text-[10px] font-extrabold uppercase tracking-widest mb-3">
                       {t("productModel.centerTag")}
                     </span>
 
@@ -100,7 +100,7 @@ export default function ProductModelSection() {
                       {t("productModel.centerTitle")}
                     </h3>
 
-                    <div className="flex items-center justify-center gap-2 text-[11px] font-medium text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full border border-blue-100">
+                    <div className="flex items-center justify-center gap-2 text-[11px] font-medium text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full border border-primary/20">
                       <RefreshCw
                         className="w-3.5 h-3.5 animate-spin-slow"
                         style={{ animationDuration: "4s" }}
@@ -120,7 +120,7 @@ export default function ProductModelSection() {
                 <div className="absolute -left-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-blue-600 transition-colors duration-500 origin-right"></div>
 
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-blue-50 rounded-xl text-blue-600 border border-blue-100 shrink-0">
+                  <div className="p-3 bg-blue-50 rounded-xl text-blue-600 border border-primary/20 shrink-0">
                     <Layout className="w-5 h-5" />
                   </div>
                   <div>
@@ -140,7 +140,7 @@ export default function ProductModelSection() {
                 <div className="absolute -left-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-blue-600 transition-colors duration-500 origin-right"></div>
 
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-blue-50 rounded-xl text-blue-600 border border-blue-100 shrink-0">
+                  <div className="p-3 bg-blue-50 rounded-xl text-blue-600 border border-primary/20 shrink-0">
                     <Database className="w-5 h-5" />
                   </div>
                   <div>

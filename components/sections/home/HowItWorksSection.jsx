@@ -22,7 +22,7 @@ export default function HowItWorksSection() {
 
   return (
     <section
-      className="py-24 md:py-32 bg-background border-b border-zinc-200/60 relative overflow-hidden"
+      className="py-24 md:py-32 bg-background border-b border-border relative overflow-hidden"
       id="how-it-works"
     >
       <Container className="relative z-10">
@@ -43,14 +43,14 @@ export default function HowItWorksSection() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 relative z-10">
             {/* STEP 1: Connect */}
             <div className="relative group">
-              <div className="bg-card border border-zinc-200 rounded-3xl overflow-hidden hover:border-blue-600/40 transition-all duration-500 flex flex-col h-full">
+              <div className="bg-card border border-border rounded-3xl overflow-hidden hover:border-blue-600/40 transition-all duration-500 flex flex-col h-full">
                 {/* Visual Container */}
-                <div className="h-[240px] bg-[#f8fafc] border-b border-zinc-100 flex items-center justify-center p-6 relative overflow-hidden">
+                <div className="h-[240px] bg-[#f8fafc] border-b border-border flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.05)_0%,transparent_70%)]"></div>
 
                   {/* Connect Micro UI */}
-                  <div className="w-full max-w-[240px] bg-card rounded-xl border border-zinc-200/60 overflow-hidden relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
-                    <div className="h-8 bg-zinc-50 border-b border-zinc-100 flex items-center px-3 gap-1.5">
+                  <div className="w-full max-w-[240px] bg-card rounded-xl border border-border overflow-hidden relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
+                    <div className="h-8 bg-muted/10 border-b border-border flex items-center px-3 gap-1.5">
                       <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
                       <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
                       <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
@@ -65,7 +65,7 @@ export default function HowItWorksSection() {
                           <div className="h-1.5 w-24 bg-zinc-100 rounded-full"></div>
                         </div>
                       </div>
-                      <div className="w-full h-8 border border-zinc-200 rounded-lg flex items-center px-2.5 gap-2 bg-zinc-50">
+                      <div className="w-full h-8 border border-border rounded-lg flex items-center px-2.5 gap-2 bg-muted/10">
                         <SiGithub className="w-4 h-4 text-zinc-400" />
                         <span className="text-[10px] text-zinc-500 font-mono">
                           github.com/org/repo
@@ -94,9 +94,9 @@ export default function HowItWorksSection() {
 
             {/* STEP 2: Review */}
             <div className="relative group">
-              <div className="bg-card border border-zinc-200 rounded-3xl overflow-hidden hover:border-blue-600/40 transition-all duration-500 flex flex-col h-full">
+              <div className="bg-card border border-border rounded-3xl overflow-hidden hover:border-blue-600/40 transition-all duration-500 flex flex-col h-full">
                 {/* Visual Container */}
-                <div className="h-[240px] bg-[#f8fafc] border-b border-zinc-100 flex items-center justify-center p-6 relative overflow-hidden">
+                <div className="h-[240px] bg-[#f8fafc] border-b border-border flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.05)_0%,transparent_70%)]"></div>
 
                   {/* Review Micro UI (Node Graph) */}
@@ -127,23 +127,23 @@ export default function HowItWorksSection() {
                     <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card border border-blue-600 rounded-xl p-2.5 shadow-sm z-10 flex items-center justify-center">
                       <Network className="w-6 h-6 text-blue-600" />
                       {/* Checkmark Badge */}
-                      <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-blue-600 rounded-full border-2 border-white flex items-center justify-center shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                      <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-blue-600 rounded-full border-2 border-card flex items-center justify-center shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                         <Check className="w-3 h-3 text-white" strokeWidth={3} />
                       </div>
                     </div>
 
                     {/* Left Node */}
-                    <div className="absolute top-[65%] left-[25%] -translate-x-1/2 -translate-y-1/2 bg-card border border-zinc-200 rounded-lg p-2 shadow-sm z-10">
+                    <div className="absolute top-[65%] left-[25%] -translate-x-1/2 -translate-y-1/2 bg-card border border-border rounded-lg p-2 shadow-sm z-10">
                       <div className="w-4 h-4 rounded bg-zinc-100"></div>
                     </div>
 
                     {/* Right Node */}
-                    <div className="absolute top-[65%] left-[75%] -translate-x-1/2 -translate-y-1/2 bg-card border border-zinc-200 rounded-lg p-2 shadow-sm z-10">
+                    <div className="absolute top-[65%] left-[75%] -translate-x-1/2 -translate-y-1/2 bg-card border border-border rounded-lg p-2 shadow-sm z-10">
                       <div className="w-4 h-4 rounded bg-zinc-100"></div>
                     </div>
 
                     {/* Validation Alert */}
-                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-max bg-blue-50 border border-blue-200 rounded-full py-1.5 px-4 flex items-center justify-center gap-1.5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-max bg-blue-50 border border-primary/30 rounded-full py-1.5 px-4 flex items-center justify-center gap-1.5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
                       <CheckCircle2 className="w-3.5 h-3.5 text-blue-600" />
                       <span className="text-[9px] font-bold text-blue-700 tracking-wider">
                         MAP VALIDATED
@@ -168,14 +168,14 @@ export default function HowItWorksSection() {
 
             {/* STEP 3: Change */}
             <div className="relative group">
-              <div className="bg-card border border-zinc-200 rounded-3xl overflow-hidden hover:border-blue-600/40 transition-all duration-500 flex flex-col h-full">
+              <div className="bg-card border border-border rounded-3xl overflow-hidden hover:border-blue-600/40 transition-all duration-500 flex flex-col h-full">
                 {/* Visual Container */}
-                <div className="h-[240px] bg-[#f8fafc] border-b border-zinc-100 flex items-center justify-center p-6 relative overflow-hidden">
+                <div className="h-[240px] bg-[#f8fafc] border-b border-border flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.05)_0%,transparent_70%)]"></div>
 
                   {/* Change Micro UI (Agent Interface) */}
-                  <div className="w-full max-w-[240px] bg-card rounded-xl border border-zinc-200/60 overflow-hidden relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
-                    <div className="h-7 bg-zinc-50 border-b border-zinc-100 flex items-center px-3 justify-between">
+                  <div className="w-full max-w-[240px] bg-card rounded-xl border border-border overflow-hidden relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
+                    <div className="h-7 bg-muted/10 border-b border-border flex items-center px-3 justify-between">
                       <div className="flex gap-1.5">
                         <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
                         <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
@@ -189,7 +189,7 @@ export default function HowItWorksSection() {
                       </div>
                     </div>
                     <div className="p-3">
-                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-2.5 mb-2 relative">
+                      <div className="bg-blue-50 border border-primary/30 rounded-lg p-2.5 mb-2 relative">
                         <span className="text-[9px] text-blue-600 font-medium leading-relaxed block">
                           "Implement checkout based on the validated map."
                         </span>
