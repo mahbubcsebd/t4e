@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import { useTheme } from "next-themes";
 import {
   ChevronDown,
   Globe,
@@ -18,6 +19,8 @@ import {
   Puzzle,
   Terminal,
   Play,
+  Sun,
+  Moon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -33,6 +36,7 @@ export default function Header() {
   const [mobileDocsOpen, setMobileDocsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const langDropdownRef = useRef(null);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -141,8 +145,8 @@ export default function Header() {
     <header
       className={`sticky top-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
         scrolled
-          ? "bg-white/80 backdrop-blur-xl border-b border-white/20 shadow-[0_4px_32px_rgba(9,60,173,0.08)]"
-          : "bg-white/95 backdrop-blur-md border-b border-[#c8d9ed]/50"
+          ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-[0_4px_32px_rgba(9,60,173,0.08)]"
+          : "bg-background/95 backdrop-blur-md border-b border-border"
       }`}
     >
       <div
@@ -165,7 +169,7 @@ export default function Header() {
         </Link>
 
         {/* Center Desktop Menu Items */}
-        <nav className="header-nav hidden lg:flex items-center gap-6 xl:gap-7 text-[15px] font-semibold text-[#465a75]">
+        <nav className="header-nav hidden lg:flex items-center gap-6 xl:gap-7 text-[15px] font-semibold text-muted-foreground">
           {/* Product Dropdown */}
           <div
             className="relative group"
@@ -174,13 +178,13 @@ export default function Header() {
             <button
               onClick={() => setHowItWorksOpen(!howItWorksOpen)}
               onMouseEnter={() => setHowItWorksOpen(true)}
-              className="flex items-center gap-1 hover:text-[#093cad] transition-colors py-2 whitespace-nowrap"
+              className="flex items-center gap-1 hover:text-foreground transition-colors py-2 whitespace-nowrap"
             >
               <span>{t("nav.product", "Product")}</span>
-              <ChevronDown className="w-4 h-4 text-blue-600 group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-4 h-4 text-primary group-hover:rotate-180 transition-transform" />
             </button>
             <div
-              className={`absolute top-full left-0 w-64 bg-white rounded-2xl shadow-2xl border border-[#c8d9ed] py-2 transition-all duration-200 z-50 ${
+              className={`absolute top-full left-0 w-64 bg-card rounded-2xl shadow-2xl border border-border py-2 transition-all duration-200 z-50 ${
                 howItWorksOpen
                   ? "opacity-100 visible translate-y-0"
                   : "opacity-0 invisible -translate-y-2"
@@ -188,32 +192,32 @@ export default function Header() {
             >
               <Link
                 href="/how-it-works"
-                className="flex items-start gap-3 px-4 py-3 hover:bg-[#f2f7ff] group/item transition-colors"
+                className="flex items-start gap-3 px-4 py-3 hover:bg-muted group/item transition-colors"
               >
-                <div className="p-1.5 rounded-lg bg-[#f7fafe] border border-[#c8d9ed]/50 group-hover/item:bg-white shrink-0">
+                <div className="p-1.5 rounded-lg bg-muted border border-border group-hover/item:bg-card shrink-0">
                   <Play className="w-4 h-4 text-[#07A7E1]" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-[#09090d] group-hover/item:text-[#093cad]">
+                  <div className="text-xs font-bold text-foreground group-hover/item:text-primary">
                     {t("nav.howItWorks")}
                   </div>
-                  <p className="text-[10px] text-[#71849c] mt-0.5">
+                  <p className="text-[10px] text-muted-foreground mt-0.5">
                     {t("nav.howItWorksDesc")}
                   </p>
                 </div>
               </Link>
               <Link
                 href="/code-to-design"
-                className="flex items-start gap-3 px-4 py-3 hover:bg-[#f2f7ff] group/item transition-colors"
+                className="flex items-start gap-3 px-4 py-3 hover:bg-muted group/item transition-colors"
               >
-                <div className="p-1.5 rounded-lg bg-[#f7fafe] border border-[#c8d9ed]/50 group-hover/item:bg-white shrink-0">
-                  <Code className="w-4 h-4 text-[#093cad]" />
+                <div className="p-1.5 rounded-lg bg-muted border border-border group-hover/item:bg-card shrink-0">
+                  <Code className="w-4 h-4 text-primary" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-[#09090d] group-hover/item:text-[#093cad]">
+                  <div className="text-xs font-bold text-foreground group-hover/item:text-primary">
                     {t("nav.codeToDesign")}
                   </div>
-                  <p className="text-[10px] text-[#71849c] mt-0.5">
+                  <p className="text-[10px] text-muted-foreground mt-0.5">
                     {t(
                       "nav.codeToDesignDesc",
                       "Reverse engineer code to visuals",
@@ -223,16 +227,16 @@ export default function Header() {
               </Link>
               <Link
                 href="/design-to-code"
-                className="flex items-start gap-3 px-4 py-3 hover:bg-[#f2f7ff] group/item transition-colors"
+                className="flex items-start gap-3 px-4 py-3 hover:bg-muted group/item transition-colors"
               >
-                <div className="p-1.5 rounded-lg bg-[#f7fafe] border border-[#c8d9ed]/50 group-hover/item:bg-white shrink-0">
+                <div className="p-1.5 rounded-lg bg-muted border border-border group-hover/item:bg-card shrink-0">
                   <Palette className="w-4 h-4 text-[#07A7E1]" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-[#09090d] group-hover/item:text-[#093cad]">
+                  <div className="text-xs font-bold text-foreground group-hover/item:text-primary">
                     {t("nav.designToCode")}
                   </div>
-                  <p className="text-[10px] text-[#71849c] mt-0.5">
+                  <p className="text-[10px] text-muted-foreground mt-0.5">
                     {t("nav.designToCodeDesc", "Turn systems into actual code")}
                   </p>
                 </div>
@@ -241,7 +245,7 @@ export default function Header() {
           </div>
           <Link
             href="/integrations"
-            className="hover:text-[#093cad] transition-colors whitespace-nowrap"
+            className="hover:text-foreground transition-colors whitespace-nowrap"
           >
             {t("nav.integrations")}
           </Link>
@@ -254,10 +258,10 @@ export default function Header() {
             <button
               onClick={() => setResourcesOpen(!resourcesOpen)}
               onMouseEnter={() => setResourcesOpen(true)}
-              className="flex items-center gap-1 hover:text-[#093cad] transition-colors py-2 whitespace-nowrap"
+              className="flex items-center gap-1 hover:text-foreground transition-colors py-2 whitespace-nowrap"
             >
               <span>{t("nav.resources")}</span>
-              <ChevronDown className="w-4 h-4 text-blue-600 group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-4 h-4 text-primary group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-1/2 -translate-x-1/2 w-[260px] bg-white rounded-2xl shadow-2xl border border-[#c8d9ed] p-2 transition-all duration-200 z-50 grid grid-cols-1 gap-1 ${
@@ -296,12 +300,12 @@ export default function Header() {
             <button
               onClick={() => setDocsOpen(!docsOpen)}
               onMouseEnter={() => setDocsOpen(true)}
-              className="flex items-center gap-1 hover:text-[#093cad] transition-colors py-2 whitespace-nowrap"
+              className="flex items-center gap-1 hover:text-foreground transition-colors py-2 whitespace-nowrap"
             >
               <span>
                 {t("nav.docs") === "nav.docs" ? "Docs" : t("nav.docs")}
               </span>
-              <ChevronDown className="w-4 h-4 text-blue-600 group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-4 h-4 text-primary group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-1/2 -translate-x-1/2 w-[540px] bg-white rounded-2xl shadow-2xl border border-[#c8d9ed] p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
@@ -337,7 +341,7 @@ export default function Header() {
 
           <Link
             href="/pricing"
-            className="hover:text-[#093cad] transition-colors whitespace-nowrap"
+            className="hover:text-foreground transition-colors whitespace-nowrap"
           >
             {t("nav.pricing")}
           </Link>
@@ -395,6 +399,16 @@ export default function Header() {
                 ))}
             </div>
           </div>
+
+          {/* Theme Toggle Button */}
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="p-2 rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="Toggle Theme"
+          >
+            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          </button>
 
           {/* Sign in text link */}
           <Button asChild variant="ghost">
