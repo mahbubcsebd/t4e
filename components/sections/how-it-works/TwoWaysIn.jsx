@@ -14,7 +14,7 @@ export default function TwoWaysIn() {
     <section className="py-16 md:py-20 bg-card border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#f2f7ff] text-[#093cad] text-xs font-bold uppercase tracking-wider mb-3">
+          <span className="inline-block text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-3">
             {t("howItWorksPage.twoWaysEyebrow")}
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-3">
@@ -27,13 +27,13 @@ export default function TwoWaysIn() {
 
         <div className="grid md:grid-cols-11 gap-6 items-center max-w-5xl mx-auto">
           {/* Path 1: Code to Design */}
-          <div className="md:col-span-5 bg-[#f9fcff] border border-border rounded-2xl p-7 hover:border-[#093cad] transition-all shadow-sm flex flex-col justify-between">
+          <div className="md:col-span-5 bg-card border border-border rounded-2xl p-7 hover:border-primary transition-all shadow-sm flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-bold text-[#093cad] bg-[#eaf0fb] px-3 py-1 rounded-full">
+                <span className="text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                   {t("howItWorksPage.path1Tag")}
                 </span>
-                <Code2 className="w-5 h-5 text-[#07A7E1]" />
+                <Code2 className="w-5 h-5 text-primary" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">
                 {t("howItWorksPage.path1Title")}
@@ -52,15 +52,15 @@ export default function TwoWaysIn() {
           </div>
 
           {/* Arrow Separator */}
-          <div className="md:col-span-1 flex justify-center text-[#07A7E1]">
+          <div className="md:col-span-1 flex justify-center text-primary/40">
             <ArrowRight className="w-8 h-8 rotate-90 md:rotate-0" />
           </div>
 
           {/* Path 2: Design to Code */}
-          <div className="md:col-span-5 bg-[#f9fcff] border border-border rounded-2xl p-7 hover:border-[#093cad] transition-all shadow-sm flex flex-col justify-between">
+          <div className="md:col-span-5 bg-card border border-border rounded-2xl p-7 hover:border-primary transition-all shadow-sm flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-bold text-[#093cad] bg-[#eaf0fb] px-3 py-1 rounded-full">
+                <span className="text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                   {t("howItWorksPage.path2Tag")}
                 </span>
                 <Sparkles className="w-5 h-5 text-amber-500" />
