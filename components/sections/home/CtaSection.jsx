@@ -23,7 +23,7 @@ export default function CtaSection() {
           className="mb-10 max-w-none"
           titleClassName="text-3xl sm:text-muted-foregroundxl md:text-muted-foregroundxl leading-[1.1] mb-5"
           subtitleClassName="max-w-xl mx-auto"
-          eyebrowClassName="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-6 border border-blue-200 shadow-sm"
+          eyebrowClassName="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6 shadow-sm"
         />
 
         {/* CTA Button */}

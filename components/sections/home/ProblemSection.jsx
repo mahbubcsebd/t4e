@@ -31,7 +31,7 @@ export default function ProblemSection() {
           eyebrow={t("problem.eyebrow")}
           title={t("problem.title")}
           className="max-w-[700px] mx-auto mb-10 md:mb-14"
-          eyebrowClassName="bg-blue-50 text-blue-700 mb-3"
+          eyebrowClassName="mb-3"
         />
 
         {/* The System Canvas Grid */}
