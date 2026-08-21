@@ -163,7 +163,7 @@ export default function Header() {
             alt="Think4Ever"
             width={180}
             height={41}
-            className={`w-auto object-contain brightness-0 dark:invert transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            className={`w-auto object-contain invert dark:invert-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               scrolled ? "h-7" : "h-8"
             }`}
             priority
