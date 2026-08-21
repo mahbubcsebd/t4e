@@ -37,8 +37,10 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const langDropdownRef = useRef(null);
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleClickOutside = (event) => {
       if (
         langDropdownRef.current &&
@@ -355,8 +357,13 @@ export default function Header() {
             className="p-2 rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
             aria-label="Toggle Theme"
           >
-            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            {mounted && theme === "dark" ? (
+              <Sun className="h-4 w-4" />
+            ) : mounted ? (
+              <Moon className="h-4 w-4" />
+            ) : (
+              <div className="h-4 w-4" />
+            )}
           </button>
 
           {/* Language Selector Dropdown */}

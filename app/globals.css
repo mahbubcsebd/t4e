@@ -14,15 +14,15 @@
 }
 
 .dark {
-  --background: #09090b;
+  --background: #0d0f12;
   --foreground: #ffffff;
-  --card: #0f0f11;
+  --card: #13161b;
   --card-foreground: #ffffff;
-  --border: rgba(255, 255, 255, 0.1);
-  --muted: #171717;
-  --muted-foreground: #a1a1aa;
+  --border: rgba(255, 255, 255, 0.08);
+  --muted: #1c2028;
+  --muted-foreground: #94a3b8;
   --brand-blue: #3b82f6;
-  --primary: #2563eb;
+  --primary: #3b82f6;
   --primary-foreground: #ffffff;
 }
 
