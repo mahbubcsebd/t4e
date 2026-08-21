@@ -22,7 +22,7 @@ export default function HowItWorksSection() {
 
   return (
     <section
-      className="py-24 md:py-32 bg-white border-b border-zinc-200/60 relative overflow-hidden"
+      className="py-24 md:py-32 bg-[#fafafa] border-b border-zinc-200/60 relative overflow-hidden"
       id="how-it-works"
     >
       <Container className="relative z-10">

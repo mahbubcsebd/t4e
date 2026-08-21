@@ -21,9 +21,9 @@ export default function ProblemSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 md:py-32 bg-white relative overflow-hidden border-b border-gray-200">
+    <section className="py-24 md:py-32 bg-[#fafafa] relative overflow-hidden border-b border-gray-200">
       {/* Background canvas elements */}
-      <div className="absolute inset-0 bg-white"></div>
+      <div className="absolute inset-0 bg-[#fafafa]"></div>
 
       <Container className="relative z-10">
         {/* Editorial Header */}

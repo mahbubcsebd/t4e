@@ -17,7 +17,7 @@ export default function ProductDemoSection() {
 
   return (
     <section
-      className="py-20 md:py-28 bg-white border-b border-zinc-200/60"
+      className="py-20 md:py-28 bg-[#fafafa] border-b border-zinc-200/60"
       id="resources"
     >
       <Container>

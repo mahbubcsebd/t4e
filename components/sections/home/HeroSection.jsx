@@ -32,7 +32,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="py-12 md:py-18 lg:py-20 bg-white border-b border-gray-200 overflow-hidden">
+    <section className="py-12 md:py-18 lg:py-20 bg-[#fafafa] border-b border-gray-200 overflow-hidden">
       <Container>
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto mb-12 lg:mb-16 pt-8">
           {/* Eyebrow */}
