@@ -14,7 +14,7 @@ export default function CtaSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="px-4 sm:px-6 md:px-8 pb-12 pt-6" id="register">
+    <section className="p-5" id="register">
       <div className="bg-card rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto py-8 md:py-12">
         <div className="absolute inset-0 bg-background z-0 pointer-events-none"></div>
         <Container className="max-w-3xl text-center relative z-10">
