@@ -32,7 +32,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="py-12 md:py-18 lg:py-20 border-b border-border overflow-hidden bg-background transition-colors duration-300">
+    <section className="py-12 md:py-18 lg:py-20 border-b border-border overflow-hidden bg-[#f4f7fb] dark:bg-background transition-colors duration-300">
       <Container>
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto mb-12 lg:mb-16 pt-8">
           {/* Eyebrow */}
@@ -79,7 +79,7 @@ export default function HeroSection() {
 
         {/* The Massive Visual Block */}
         <div className="w-full max-w-5xl mx-auto">
-          <div className="relative rounded-3xl border border-border/60 bg-gradient-to-b from-muted/30 to-muted/10 p-2 sm:p-4 shadow-2xl shadow-slate-200/50 dark:shadow-none">
+          <div className="relative rounded-3xl p-1 sm:p-2 bg-white/40 border border-white/60 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-none backdrop-blur-sm">
             <div className="rounded-2xl border border-border bg-card p-4 sm:p-8 flex flex-col justify-between min-h-[460px] relative overflow-hidden shadow-sm">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-border pb-3 sm:pb-5 mb-4 sm:mb-8 relative z-10">
                 <div className="flex items-center bg-muted p-1 sm:p-1.5 rounded-xl border border-border w-full sm:w-auto overflow-x-auto hide-scrollbar">
