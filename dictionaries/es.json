@@ -183,6 +183,8 @@
     "twoWaysEyebrow": "Dos vías de acceso",
     "twoWaysTitle": "Empiece desde el código o la intención.",
     "twoWaysSubtitle": "Ambos caminos convergen en un plano vivo: contexto compartido para personas y agentes.",
+    "explorePath1": "Explorar Código → Diseño",
+    "explorePath2": "Explorar Diseño → Código",
     "path1Tag": "Código → Diseño",
     "path1Title": "Analizar código existente",
     "path1Desc": "Conecte un repositorio o suba un proyecto. Think4Ever mapea estructura, dependencias, flujos y reglas.",

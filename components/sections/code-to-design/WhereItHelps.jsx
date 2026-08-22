@@ -2,84 +2,105 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { Compass, RefreshCw, Bot } from "lucide-react";
+import { Compass, RefreshCw, Bot, CheckCircle2 } from "lucide-react";
+import SectionCard from "@/components/layout/SectionCard";
+import Container from "@/components/layout/Container";
+import SectionHeading from "@/components/layout/SectionHeading";
 
 export default function WhereItHelps() {
   const { t } = useLanguage();
 
   const cards = [
     {
-      icon: <Compass className="w-5 h-5 text-[#07A7E1]" />,
+      icon: <Compass className="w-6 h-6 text-primary" />,
       tag: t("codeToDesignPage.card1Tag"),
       title: t("codeToDesignPage.card1Title"),
       desc: t("codeToDesignPage.card1Desc"),
     },
     {
-      icon: <RefreshCw className="w-5 h-5 text-[#093cad]" />,
+      icon: <RefreshCw className="w-6 h-6 text-primary" />,
       tag: t("codeToDesignPage.card2Tag"),
       title: t("codeToDesignPage.card2Title"),
       desc: t("codeToDesignPage.card2Desc"),
     },
     {
-      icon: <Bot className="w-5 h-5 text-indigo-600" />,
+      icon: <Bot className="w-6 h-6 text-primary" />,
       tag: t("codeToDesignPage.card3Tag"),
       title: t("codeToDesignPage.card3Title"),
       desc: t("codeToDesignPage.card3Desc"),
     },
   ];
 
-  const proofPills = t("codeToDesignPage.proofPills") || ["Review repository access", "Human review", "Keep your editor and stack"];
+  const proofPills = t("codeToDesignPage.proofPills") || [
+    "Review repository access",
+    "Human review",
+    "Keep your editor and stack",
+  ];
 
   return (
-    <section className="py-16 md:py-20 bg-[#f7fafe] border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#f2f7ff] text-[#093cad] text-xs font-bold uppercase tracking-wider mb-3">
-            {t("codeToDesignPage.whereHelpsEyebrow")}
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight">
-            {t("codeToDesignPage.whereHelpsTitle")}
-          </h2>
-        </div>
+    <section className="py-12 md:py-24 border-b border-border bg-background">
+      <SectionCard>
+        <Container>
+          <SectionHeading
+            align="center"
+            eyebrow={t("codeToDesignPage.whereHelpsEyebrow")}
+            title={t("codeToDesignPage.whereHelpsTitle")}
+            className="max-w-[500px]"
+          />
 
-        <div className="grid md:grid-cols-3 gap-8 mb-14">
-          {cards.map((c, idx) => (
-            <div
-              key={idx}
-              className="bg-card border border-border rounded-2xl p-7 hover:border-[#093cad] transition-all hover:shadow-lg"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2.5 rounded-xl bg-[#f2f7ff] border border-border/50">
-                  {c.icon}
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-16 relative z-10">
+            {cards.map((c, idx) => (
+              <div
+                key={idx}
+                className="bg-card/80 backdrop-blur-xl border border-border/60 rounded-xl p-8 sm:p-10 hover:border-primary/50 hover:-translate-y-2 shadow-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 overflow-hidden group flex flex-col justify-between"
+              >
+                <div className="absolute inset-0 bg-gradient-to-bl from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="flex items-center justify-between mb-8">
+                    <div className="p-3 rounded-2xl bg-primary/10 border border-primary/20 group-hover:scale-110 transition-transform duration-500">
+                      {c.icon}
+                    </div>
+                    <span className="text-[10px] font-extrabold text-primary uppercase tracking-wider bg-primary/5 px-3 py-1.5 rounded-full border border-primary/20">
+                      {c.tag}
+                    </span>
+                  </div>
+
+                  <div className="mt-auto">
+                    <h3 className="text-xl font-bold text-foreground mb-3 leading-snug group-hover:text-primary transition-colors duration-300">
+                      {c.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
+                      {c.desc}
+                    </p>
+                  </div>
                 </div>
-                <span className="text-xs font-bold text-[#093cad] uppercase tracking-wider bg-[#eaf0fb] px-3 py-1 rounded-full">
-                  {c.tag}
-                </span>
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-2 leading-snug">
-                {c.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                {c.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Quote and Proof Banner */}
-        <div className="bg-card border border-border rounded-2xl p-8 max-w-4xl mx-auto text-center shadow-md">
-          <blockquote className="text-base sm:text-lg font-semibold text-foreground italic mb-6">
-            {t("codeToDesignPage.quote")}
-          </blockquote>
-          <div className="flex flex-wrap justify-center gap-3">
-            {proofPills.map((pill, i) => (
-              <span key={i} className="text-xs font-bold text-[#093cad] bg-[#eaf0fb] px-4 py-2 rounded-full border border-border">
-                ✓ {pill}
-              </span>
             ))}
           </div>
-        </div>
-      </div>
+
+          {/* Quote and Proof Banner */}
+          <div className="relative z-10 bg-white border border-border/60 rounded-xl p-8 sm:p-12 max-w-4xl mx-auto text-center shadow-sm hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/40 transition-all duration-500 group overflow-hidden">
+            <div className="relative z-10">
+              <blockquote className="text-lg sm:text-xl font-medium text-foreground mb-8 leading-relaxed">
+                "{t("codeToDesignPage.quote")}"
+              </blockquote>
+
+              <div className="flex flex-wrap justify-center gap-3">
+                {proofPills.map((pill, i) => (
+                  <span
+                    key={i}
+                    className="flex items-center gap-1.5 text-xs font-bold text-foreground bg-white px-4 py-2 rounded-xl border border-border/80 shadow-sm group-hover:border-primary/30 transition-colors duration-300"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-primary" />
+                    {pill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </SectionCard>
     </section>
   );
 }

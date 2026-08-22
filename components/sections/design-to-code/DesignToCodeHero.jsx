@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
 import VideoModal from "@/components/ui/VideoModal";
 
@@ -17,24 +17,23 @@ export default function DesignToCodeHero() {
           {t("designToCodePage.heroEyebrow")}
         </span>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-6">
+        <h1 className="max-w-[700px] mx-auto text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-6">
           {t("designToCodePage.heroTitlePrefix")}
-          <span className="text-gradient decoration-[#07A7E1]/30">
+          <span className="text-primary decoration-[#07A7E1]/30">
             {t("designToCodePage.heroTitleHighlight")}
           </span>
         </h1>
 
-        <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
+        <p className="max-w-[600px] text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
           {t("designToCodePage.heroSubtitle")}
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <Link
-            href="https://portal.think4ever.com/#/register"
-            className="btn-primary text-sm py-3 px-7"
-          >
-            <span>{t("designToCodePage.heroCtaPrimary")}</span>
-          </Link>
+          <Button asChild className="shadow-md shadow-primary/25">
+            <a href="https://portal.think4ever.com/#/register">
+              {t("nav.startFree")}
+            </a>
+          </Button>
           <button
             onClick={() => {
               setVideoId("Lq-vza9_CzI");

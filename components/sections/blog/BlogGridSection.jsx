@@ -8,8 +8,10 @@ import { BLOG_POSTS, getLocalizedPost } from "@/lib/blogData";
 
 const getCategoryIcon = (cat) => {
   if (cat === "mcp") return <Layers className="w-5 h-5 text-[#093cad]" />;
-  if (cat === "whitepaper") return <BookOpen className="w-5 h-5 text-[#093cad]" />;
-  if (cat === "architecture") return <BookOpen className="w-5 h-5 text-[#093cad]" />;
+  if (cat === "whitepaper")
+    return <BookOpen className="w-5 h-5 text-[#093cad]" />;
+  if (cat === "architecture")
+    return <BookOpen className="w-5 h-5 text-[#093cad]" />;
   return <Sparkles className="w-5 h-5 text-[#07A7E1]" />;
 };
 
@@ -18,7 +20,9 @@ export default function BlogGridSection() {
   const [search, setSearch] = useState("");
   const [selectedCat, setSelectedCat] = useState("all");
 
-  const localizedPosts = BLOG_POSTS.map((art) => getLocalizedPost(art, language));
+  const localizedPosts = BLOG_POSTS.map((art) =>
+    getLocalizedPost(art, language),
+  );
 
   const filtered = localizedPosts.filter((art) => {
     const matchCat = selectedCat === "all" || art.cat === selectedCat;
@@ -33,7 +37,7 @@ export default function BlogGridSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-block text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
+          <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
             {t("blogPage.heroEyebrow")}
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight mb-4">

@@ -185,6 +185,8 @@
     "twoWaysEyebrow": "Two ways in",
     "twoWaysTitle": "Start from code or intent.",
     "twoWaysSubtitle": "Both paths converge on one living blueprint: shared context for people and coding agents.",
+    "explorePath1": "Explore Code to Design",
+    "explorePath2": "Explore Design to Code",
     "path1Tag": "Code → Design",
     "path1Title": "Analyze existing code",
     "path1Desc": "Connect a repository or upload a project. Think4Ever maps structure, dependencies, workflows and rules.",
