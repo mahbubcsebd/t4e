@@ -48,8 +48,8 @@ export default function ChooseConnection() {
 
   return (
     <section className="py-12 md:py-32 bg-background border-b border-border">
-      <Container>
-        <SectionCard>
+      <SectionCard>
+        <Container>
           <SectionHeading
             eyebrow={t("integrationsPage.chooseEyebrow")}
             title={t("integrationsPage.chooseTitle")}
@@ -62,11 +62,8 @@ export default function ChooseConnection() {
               return (
                 <div
                   key={idx}
-                  className="relative bg-[#F7F7F4] backdrop-blur-xl border border-border/60 rounded-3xl p-8 sm:p-10 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 flex flex-col justify-between group overflow-hidden"
+                  className="relative shadow-sm backdrop-blur-xl border border-border/60 rounded-3xl p-8 sm:p-10 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 flex flex-col justify-between group overflow-hidden"
                 >
-                  {/* Hover Gradient Background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
                   <div className="relative z-10">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
                       <div className="p-4 rounded-2xl bg-blue-50  border border-primary/20 transition-all duration-300 group-hover:scale-110 shadow-sm group-hover:shadow-primary/10">
@@ -103,8 +100,8 @@ export default function ChooseConnection() {
               );
             })}
           </div>
-        </SectionCard>
-      </Container>
+        </Container>
+      </SectionCard>
     </section>
   );
 }

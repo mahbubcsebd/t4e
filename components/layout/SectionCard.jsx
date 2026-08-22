@@ -5,7 +5,7 @@ export default function SectionCard({ children, className }) {
   return (
     <div
       className={cn(
-        "bg-[#cce6ff] border border-[#aaccff] rounded-2xl p-6 sm:p-10 md:p-8 shadow-[0_0_50px_rgba(14,165,233,0.2)]",
+        "max-w-[1400px] mx-auto bg-[#cce6ff] border border-[#aaccff] rounded-2xl p-6 sm:p-10 md:p-8 shadow-[0_0_50px_rgba(14,165,233,0.2)]",
         className,
       )}
     >

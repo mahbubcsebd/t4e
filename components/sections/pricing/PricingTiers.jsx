@@ -58,14 +58,14 @@ export default function PricingTiers() {
   ];
 
   return (
-    <section className="py-12 md:py-32 bg-background border-b border-border">
-      <Container>
-        <SectionCard className="!p-4 sm:!p-8 md:!p-10">
+    <section className="py-12 md:py-24 bg-background border-b border-border">
+      <SectionCard className="!p-4 sm:!p-8 md:!p-10">
+        <Container>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 items-stretch">
             {plans.map((plan, idx) => (
               <div
                 key={idx}
-                className={`relative rounded-3xl p-6 flex flex-col justify-between transition-all duration-500 group hover:-translate-y-2 ${
+                className={`relative rounded-3xl p-6 flex flex-col justify-between transition-all duration-500 group hover:-translate-y-2 shadow-sm ${
                   plan.featured
                     ? "bg-card border-2 border-primary/40 shadow-2xl shadow-primary/10"
                     : "bg-card/60 backdrop-blur-sm border border-border/60 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5"
@@ -135,8 +135,8 @@ export default function PricingTiers() {
               </div>
             ))}
           </div>
-        </SectionCard>
-      </Container>
+        </Container>
+      </SectionCard>
     </section>
   );
 }

@@ -58,9 +58,9 @@ export default function FaqAccordion() {
         </div>
       </div>
 
-      <Container>
-        {/* FAQ List */}
-        <SectionCard className=" mx-auto !p-4 sm:!p-8">
+      {/* FAQ List */}
+      <SectionCard className=" mx-auto !p-4 sm:!p-8">
+        <Container>
           <div className="space-y-4 relative z-10">
             {items.map((item, idx) => {
               const isOpen = openIndex === idx;
@@ -106,8 +106,8 @@ export default function FaqAccordion() {
               );
             })}
           </div>
-        </SectionCard>
-      </Container>
+        </Container>
+      </SectionCard>
     </section>
   );
 }

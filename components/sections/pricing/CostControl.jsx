@@ -29,9 +29,9 @@ export default function CostControl() {
   ];
 
   return (
-    <section className="py-12 md:py-32 bg-background border-b border-border">
-      <Container>
-        <SectionCard>
+    <section className="py-12 md:py-24 bg-background border-b border-border">
+      <SectionCard>
+        <Container>
           <SectionHeading
             eyebrow={t("pricingPage.costEyebrow")}
             title={t("pricingPage.costTitle")}
@@ -45,13 +45,10 @@ export default function CostControl() {
               return (
                 <div
                   key={idx}
-                  className="relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-3xl p-8 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 flex flex-col group overflow-hidden translate-y-0 hover:-translate-y-2"
+                  className="relative shadow-sm bg-card/80 backdrop-blur-xl border border-border/60 rounded-3xl p-8 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 flex flex-col group overflow-hidden translate-y-0 hover:-translate-y-2"
                 >
-                  {/* Hover Gradient Background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
                   <div className="relative z-10 flex flex-col items-start">
-                    <div className="mb-6 p-4 rounded-2xl bg-blue-50  border border-primary/20 transition-all duration-500 group-hover:scale-110 shadow-sm group-hover:shadow-primary/10">
+                    <div className="mb-6 p-4 rounded-2xl bg-blue-50 border border-primary/20 transition-all duration-500 group-hover:scale-110 shadow-sm group-hover:shadow-primary/10">
                       <Icon className="w-7 h-7 text-primary transition-colors duration-300" />
                     </div>
 
@@ -66,8 +63,8 @@ export default function CostControl() {
               );
             })}
           </div>
-        </SectionCard>
-      </Container>
+        </Container>
+      </SectionCard>
     </section>
   );
 }
