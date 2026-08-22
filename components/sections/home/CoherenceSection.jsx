@@ -47,7 +47,7 @@ export default function CoherenceSection() {
         />
 
         {/* Workspace Interface Window */}
-        <div className="max-w-7xl mx-auto bg-card rounded-3xl border border-border shadow-lg shadow-black/5 overflow-hidden flex flex-col group">
+        <div className="max-w-7xl mx-auto bg-card rounded-xl border border-border shadow-lg shadow-black/5 overflow-hidden flex flex-col group">
           {/* Mac-style Window Header */}
           <div className="h-12 bg-muted/50 border-b border-border flex items-center px-5 justify-between">
             <div className="flex items-center gap-2">
@@ -79,7 +79,7 @@ export default function CoherenceSection() {
                 </span>
               </div>
 
-              <div className="gemini-card rounded-2xl p-6 relative group-hover:-translate-y-1 transition-transform duration-500 flex-1">
+              <div className="gemini-card rounded-xl p-6 relative group-hover:-translate-y-1 transition-transform duration-500 flex-1">
                 <div className="absolute -top-3 -right-3 bg-primary text-primary-foreground rounded-full p-1 shadow-md">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
@@ -103,7 +103,7 @@ export default function CoherenceSection() {
                 </span>
               </div>
 
-              <div className="gemini-card rounded-2xl p-6 font-mono relative overflow-hidden group-hover:-translate-y-1 transition-transform duration-500 delay-75 flex-1">
+              <div className="gemini-card rounded-xl p-6 font-mono relative overflow-hidden group-hover:-translate-y-1 transition-transform duration-500 delay-75 flex-1">
                 {/* Subtle frosted glass tint for diff */}
                 <div className="absolute inset-0 bg-white/40 pointer-events-none"></div>
 
@@ -125,7 +125,7 @@ export default function CoherenceSection() {
 
           {/* Inline Alert Panel */}
           <div className="border-t border-border bg-card p-6 lg:px-12 lg:py-8">
-            <div className="gemini-card rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+            <div className="gemini-card rounded-xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
               <div className="flex items-start sm:items-center gap-4">
                 <div className="p-2.5 bg-white/60 rounded-xl border border-white/60 text-muted-foreground shrink-0">
                   <AlertCircle className="w-5 h-5" />

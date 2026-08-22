@@ -45,7 +45,7 @@ export default function HowItWorksSection() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 relative z-10">
             {/* STEP 1: Connect */}
             <div className="relative group">
-              <div className="gemini-card rounded-3xl overflow-hidden hover:-translate-y-1 transition-transform duration-500 flex flex-col h-full">
+              <div className="gemini-card rounded-xl overflow-hidden hover:-translate-y-1 transition-transform duration-500 flex flex-col h-full">
                 {/* Visual Container */}
                 <div className="h-[240px] bg-white/40 border-b border-white/40 flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,60,173,0.05)_0%,transparent_70%)]"></div>
@@ -96,7 +96,7 @@ export default function HowItWorksSection() {
 
             {/* STEP 2: Review */}
             <div className="relative group">
-              <div className="gemini-card rounded-3xl overflow-hidden hover:-translate-y-1 transition-transform duration-500 flex flex-col h-full">
+              <div className="gemini-card rounded-xl overflow-hidden hover:-translate-y-1 transition-transform duration-500 flex flex-col h-full">
                 {/* Visual Container */}
                 <div className="h-[240px] bg-white/40 border-b border-white/40 flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,60,173,0.05)_0%,transparent_70%)]"></div>
@@ -170,7 +170,7 @@ export default function HowItWorksSection() {
 
             {/* STEP 3: Change */}
             <div className="relative group">
-              <div className="gemini-card rounded-3xl overflow-hidden hover:-translate-y-1 transition-transform duration-500 flex flex-col h-full">
+              <div className="gemini-card rounded-xl overflow-hidden hover:-translate-y-1 transition-transform duration-500 flex flex-col h-full">
                 {/* Visual Container */}
                 <div className="h-[240px] bg-white/40 border-b border-white/40 flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,60,173,0.05)_0%,transparent_70%)]"></div>

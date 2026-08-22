@@ -33,18 +33,18 @@ export default function ValueSection() {
           {/* Left Column (Clarity & Compatibility) */}
           <div className="lg:col-span-8 flex flex-col gap-6">
             {/* Card 1: Clarity */}
-            <div className="flex-1 gemini-card rounded-3xl overflow-hidden flex flex-col group">
+            <div className="flex-1 gemini-card rounded-xl overflow-hidden flex flex-col group">
               {/* Large Visual Canvas */}
               <div className="h-64 sm:h-80 bg-white/40 relative overflow-hidden flex flex-col items-center justify-center p-6 border-b border-white/40">
                 <div className="relative w-full max-w-lg h-full flex items-center justify-center">
                   {/* Background Nodes */}
-                  <div className="absolute top-[20%] left-[20%] p-3 bg-primary/10 text-primary rounded-2xl border border-primary/20 opacity-60 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-700 delay-100 z-10">
+                  <div className="absolute top-[20%] left-[20%] p-3 bg-primary/10 text-primary rounded-xl border border-primary/20 opacity-60 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-700 delay-100 z-10">
                     <Database className="w-6 h-6" />
                   </div>
-                  <div className="absolute bottom-[20%] left-[35%] p-3 bg-muted text-muted-foreground rounded-2xl border border-border opacity-60 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-700 delay-200 z-10">
+                  <div className="absolute bottom-[20%] left-[35%] p-3 bg-muted text-muted-foreground rounded-xl border border-border opacity-60 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-700 delay-200 z-10">
                     <Layout className="w-6 h-6" />
                   </div>
-                  <div className="absolute top-[30%] right-[25%] p-3 bg-primary/10 text-primary rounded-2xl border border-primary/20 opacity-60 group-hover:opacity-100 group-hover:-translate-x-2 transition-all duration-700 delay-300 z-10">
+                  <div className="absolute top-[30%] right-[25%] p-3 bg-primary/10 text-primary rounded-xl border border-primary/20 opacity-60 group-hover:opacity-100 group-hover:-translate-x-2 transition-all duration-700 delay-300 z-10">
                     <Network className="w-6 h-6" />
                   </div>
 
@@ -105,7 +105,7 @@ export default function ValueSection() {
               </div>
             </div>
 
-            <div className="gemini-card rounded-3xl p-8 flex flex-col items-center text-center justify-center gap-8 relative overflow-hidden group">
+            <div className="gemini-card rounded-xl p-8 flex flex-col items-center text-center justify-center gap-8 relative overflow-hidden group">
               {/* Subtle background gradient */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
 
@@ -132,7 +132,7 @@ export default function ValueSection() {
           {/* Cards 2 & 3: Coherence & Control (Right Column) */}
           <div className="lg:col-span-4 flex flex-col gap-6">
             {/* Card 2: Coherence */}
-            <div className="flex-1 gemini-card rounded-3xl overflow-hidden flex flex-col group">
+            <div className="flex-1 gemini-card rounded-xl overflow-hidden flex flex-col group">
               <div className="h-40 bg-white/40 relative overflow-hidden flex items-center justify-center p-4 border-b border-white/40">
                 <div className="flex items-center gap-4 relative z-10">
                   <div className="p-3 bg-muted border border-border rounded-xl text-muted-foreground group-hover:-translate-x-2 transition-transform duration-500">
@@ -166,7 +166,7 @@ export default function ValueSection() {
             </div>
 
             {/* Card 3: Control */}
-            <div className="flex-1 gemini-card rounded-3xl overflow-hidden flex flex-col group">
+            <div className="flex-1 gemini-card rounded-xl overflow-hidden flex flex-col group">
               <div className="h-40 bg-white/40 relative overflow-hidden flex items-center justify-center p-4 border-b border-white/40">
                 <div className="flex flex-col gap-3 w-36">
                   <div className="flex items-center justify-between p-2.5 bg-muted border border-border rounded-lg group-hover:-translate-x-1 transition-transform duration-500">

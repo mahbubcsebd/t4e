@@ -56,7 +56,7 @@ export default function PersistentContextSection() {
               <div className="hidden md:block absolute top-[40px] h-[128px] left-1/2 border-l-2 border-dashed border-border -translate-x-1/2 z-0"></div>
 
               {/* Card 1: Cursor */}
-              <div className="w-[260px] md:w-[200px] gemini-card rounded-2xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-[260px] md:w-[200px] gemini-card rounded-xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                   <SiCursor className="w-5 h-5" />
                 </div>
@@ -66,7 +66,7 @@ export default function PersistentContextSection() {
               </div>
 
               {/* Card 2: Windsurf */}
-              <div className="w-[260px] md:w-[200px] gemini-card rounded-2xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-[260px] md:w-[200px] gemini-card rounded-xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                   <SiWindsurf className="w-5 h-5" />
                 </div>
@@ -112,7 +112,7 @@ export default function PersistentContextSection() {
               </div>
 
               {/* Bottom Node (MCP Clients) */}
-              <div className="w-[260px] md:w-[200px] gemini-card rounded-2xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-[260px] md:w-[200px] gemini-card rounded-xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                   <Network className="w-5 h-5" />
                 </div>
@@ -128,7 +128,7 @@ export default function PersistentContextSection() {
               <div className="hidden md:block absolute top-[40px] h-[128px] left-1/2 border-l-2 border-dashed border-border -translate-x-1/2 z-0"></div>
 
               {/* Card 3: Claude */}
-              <div className="w-[260px] md:w-[200px] gemini-card rounded-2xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-[260px] md:w-[200px] gemini-card rounded-xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                   <SiClaude className="w-5 h-5" />
                 </div>
@@ -138,7 +138,7 @@ export default function PersistentContextSection() {
               </div>
 
               {/* Card 4: Codex / GPT */}
-              <div className="w-[260px] md:w-[200px] gemini-card rounded-2xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
+              <div className="w-[260px] md:w-[200px] gemini-card rounded-xl p-3 hover:border-primary/40 transition-all group flex items-center justify-center gap-3 relative z-10 h-[80px]">
                 <div className="p-2.5 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                   <TbBrandOpenai className="w-5 h-5" />
                 </div>
