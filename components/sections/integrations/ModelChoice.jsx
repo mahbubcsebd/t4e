@@ -13,7 +13,7 @@ export default function ModelChoice() {
   return (
     <section className="py-12 md:py-32 bg-background border-b border-border">
       <Container>
-        <SectionCard glowPosition="reverse">
+        <SectionCard>
           <SectionHeading
             eyebrow={t("integrationsPage.modelsEyebrow")}
             title={t("integrationsPage.modelsTitle")}

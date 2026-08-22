@@ -14,8 +14,10 @@ export default function CtaSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-12 md:py-32 bg-background" id="register">
-      <Container className="max-w-3xl text-center">
+    <section className="p-5" id="register">
+      <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
+        
+        <div className="bg-card rounded-xl p-8 md:p-12 w-full relative z-10 border border-border/50"><div className="max-w-3xl text-center mx-auto w-full">
         <SectionHeading 
           eyebrow={t("nav.startFree")}
           title={t("cta.title")}
@@ -23,7 +25,7 @@ export default function CtaSection() {
           className="mb-10 max-w-none"
           titleClassName="text-3xl sm:text-muted-foregroundxl md:text-muted-foregroundxl leading-[1.1] mb-5"
           subtitleClassName="max-w-xl mx-auto"
-          eyebrowClassName="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6 shadow-sm"
+          eyebrowClassName="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6"
         />
 
         {/* CTA Button */}
@@ -37,7 +39,9 @@ export default function CtaSection() {
         <p className="text-xs text-muted-foreground mt-4 font-medium">
           No credit card required · Free to start
         </p>
-      </Container>
+        </div>
+        </div>
+      </div>
     </section>
   );
 }

@@ -20,13 +20,12 @@ export default function ProductModelSection() {
 
   return (
     <section
-      className="py-12 md:py-32 bg-background border-b border-border overflow-hidden relative"
+      className="p-5"
       id="product"
     >
-      {/* Subtle Grid Background */}
-      <div className="absolute inset-0 bg-card"></div>
-
-      <Container className="relative z-10">
+      <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
+        
+        <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
         {/* Editorial Header */}
         <SectionHeading
           eyebrow={t("productModel.eyebrow")}
@@ -35,12 +34,12 @@ export default function ProductModelSection() {
         />
 
         {/* The Blueprint Architecture Visual */}
-        <div className="relative max-w-5xl mx-auto mt-10">
+        <div className="relative w-full mt-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch relative z-10">
             {/* Left Column (Perspectives 1 & 3) */}
             <div className="lg:col-span-4 flex flex-col justify-between gap-6 lg:gap-16 relative z-10 order-2 lg:order-1">
               {/* Perspective 1: Engineering */}
-              <div className="bg-card border border-border rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+              <div className="gemini-card rounded-xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                 {/* Connecting Line to Center */}
                 <div className="absolute -right-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-primary transition-colors duration-500 origin-left"></div>
 
@@ -60,7 +59,7 @@ export default function ProductModelSection() {
               </div>
 
               {/* Perspective 3: Operations */}
-              <div className="bg-card border border-border rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+              <div className="gemini-card rounded-xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                 {/* Connecting Line to Center */}
                 <div className="absolute -right-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-primary transition-colors duration-500 origin-left"></div>
 
@@ -84,11 +83,11 @@ export default function ProductModelSection() {
             <div className="lg:col-span-4 flex justify-center relative z-20 order-1 lg:order-2 mb-8 lg:mb-0">
               <div className="relative w-full max-w-sm h-full flex flex-col">
                 {/* Glowing Background Effect */}
-                <div className="absolute inset-0 bg-primary blur-2xl opacity-10 rounded-[40px]"></div>
+                <div className="absolute inset-0 bg-primary blur-2xl opacity-10 rounded-xl"></div>
 
-                <div className="bg-card border-[1.5px] border-primary/30 rounded-[32px] p-8 shadow-sm relative overflow-hidden group flex-1 flex flex-col items-center justify-center min-h-[280px]">
+                <div className="gemini-card rounded-xl p-8 relative overflow-hidden group flex-1 flex flex-col items-center justify-center min-h-[280px]">
                   <div className="relative z-10 flex flex-col items-center text-center">
-                    <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center shadow-lg shadow-primary/25 mb-6 group-hover:scale-105 transition-transform duration-500">
+                    <div className="w-20 h-20 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/25 mb-6 group-hover:scale-105 transition-transform duration-500">
                       <Layers className="w-10 h-10 text-white" />
                     </div>
 
@@ -115,7 +114,7 @@ export default function ProductModelSection() {
             {/* Right Column (Perspectives 2 & 4) */}
             <div className="lg:col-span-4 flex flex-col justify-between gap-6 lg:gap-16 relative z-10 order-3">
               {/* Perspective 2: Product */}
-              <div className="bg-card border border-border rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+              <div className="gemini-card rounded-xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                 {/* Connecting Line to Center */}
                 <div className="absolute -left-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-primary transition-colors duration-500 origin-right"></div>
 
@@ -135,7 +134,7 @@ export default function ProductModelSection() {
               </div>
 
               {/* Perspective 4: Business */}
-              <div className="bg-card border border-border rounded-2xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+              <div className="gemini-card rounded-xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                 {/* Connecting Line to Center */}
                 <div className="absolute -left-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-primary transition-colors duration-500 origin-right"></div>
 
@@ -156,7 +155,8 @@ export default function ProductModelSection() {
             </div>
           </div>
         </div>
-      </Container>
+        </div>
+      </div>
     </section>
   );
 }

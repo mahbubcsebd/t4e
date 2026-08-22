@@ -22,10 +22,12 @@ export default function HowItWorksSection() {
 
   return (
     <section
-      className="py-12 md:py-32 bg-background border-b border-border relative overflow-hidden"
+      className="p-5"
       id="how-it-works"
     >
-      <Container className="relative z-10">
+      <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
+        
+        <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
         {/* Editorial Header */}
         <SectionHeading 
           eyebrow={t("howItWorks.eyebrow")}
@@ -43,9 +45,9 @@ export default function HowItWorksSection() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 relative z-10">
             {/* STEP 1: Connect */}
             <div className="relative group">
-              <div className="bg-card border border-border rounded-3xl overflow-hidden hover:border-primary/40 transition-all duration-500 flex flex-col h-full">
+              <div className="gemini-card rounded-xl overflow-hidden hover:-translate-y-1 transition-transform duration-500 flex flex-col h-full">
                 {/* Visual Container */}
-                <div className="h-[240px] bg-muted/10 border-b border-border flex items-center justify-center p-6 relative overflow-hidden">
+                <div className="h-[240px] bg-white/40 border-b border-white/40 flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,60,173,0.05)_0%,transparent_70%)]"></div>
 
                   {/* Connect Micro UI */}
@@ -71,7 +73,7 @@ export default function HowItWorksSection() {
                           github.com/org/repo
                         </span>
                       </div>
-                      <div className="w-full h-8 bg-primary rounded-lg flex items-center justify-center text-[10px] font-bold text-primary-foreground tracking-wide shadow-sm shadow-primary/20">
+                      <div className="w-full h-8 bg-primary rounded-lg flex items-center justify-center text-[10px] font-bold text-primary-foreground tracking-wide shadow-primary/20">
                         CONNECT
                       </div>
                     </div>
@@ -94,9 +96,9 @@ export default function HowItWorksSection() {
 
             {/* STEP 2: Review */}
             <div className="relative group">
-              <div className="bg-card border border-border rounded-3xl overflow-hidden hover:border-primary/40 transition-all duration-500 flex flex-col h-full">
+              <div className="gemini-card rounded-xl overflow-hidden hover:-translate-y-1 transition-transform duration-500 flex flex-col h-full">
                 {/* Visual Container */}
-                <div className="h-[240px] bg-muted/10 border-b border-border flex items-center justify-center p-6 relative overflow-hidden">
+                <div className="h-[240px] bg-white/40 border-b border-white/40 flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,60,173,0.05)_0%,transparent_70%)]"></div>
 
                   {/* Review Micro UI (Node Graph) */}
@@ -124,26 +126,26 @@ export default function HowItWorksSection() {
                     </svg>
 
                     {/* Top Node */}
-                    <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card border border-primary rounded-xl p-2.5 shadow-sm z-10 flex items-center justify-center">
+                    <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card border border-primary rounded-xl p-2.5 z-10 flex items-center justify-center">
                       <Network className="w-6 h-6 text-primary" />
                       {/* Checkmark Badge */}
-                      <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-primary rounded-full border-2 border-card flex items-center justify-center shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                      <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-primary rounded-full border-2 border-card flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                         <Check className="w-3 h-3 text-primary-foreground" strokeWidth={3} />
                       </div>
                     </div>
 
                     {/* Left Node */}
-                    <div className="absolute top-[65%] left-[25%] -translate-x-1/2 -translate-y-1/2 bg-card border border-border rounded-lg p-2 shadow-sm z-10">
+                    <div className="absolute top-[65%] left-[25%] -translate-x-1/2 -translate-y-1/2 bg-card border border-border rounded-lg p-2 z-10">
                       <div className="w-4 h-4 rounded bg-muted-foreground/10"></div>
                     </div>
 
                     {/* Right Node */}
-                    <div className="absolute top-[65%] left-[75%] -translate-x-1/2 -translate-y-1/2 bg-card border border-border rounded-lg p-2 shadow-sm z-10">
+                    <div className="absolute top-[65%] left-[75%] -translate-x-1/2 -translate-y-1/2 bg-card border border-border rounded-lg p-2 z-10">
                       <div className="w-4 h-4 rounded bg-muted-foreground/10"></div>
                     </div>
 
                     {/* Validation Alert */}
-                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-max bg-primary/10 border border-primary/30 rounded-full py-1.5 px-4 flex items-center justify-center gap-1.5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-max bg-primary/10 border border-primary/30 rounded-full py-1.5 px-4 flex items-center justify-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
                       <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
                       <span className="text-[9px] font-bold text-blue-700 tracking-wider">
                         MAP VALIDATED
@@ -168,9 +170,9 @@ export default function HowItWorksSection() {
 
             {/* STEP 3: Change */}
             <div className="relative group">
-              <div className="bg-card border border-border rounded-3xl overflow-hidden hover:border-primary/40 transition-all duration-500 flex flex-col h-full">
+              <div className="gemini-card rounded-xl overflow-hidden hover:-translate-y-1 transition-transform duration-500 flex flex-col h-full">
                 {/* Visual Container */}
-                <div className="h-[240px] bg-muted/10 border-b border-border flex items-center justify-center p-6 relative overflow-hidden">
+                <div className="h-[240px] bg-white/40 border-b border-white/40 flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,60,173,0.05)_0%,transparent_70%)]"></div>
 
                   {/* Change Micro UI (Agent Interface) */}
@@ -227,7 +229,8 @@ export default function HowItWorksSection() {
             </div>
           </div>
         </div>
-      </Container>
+        </div>
+      </div>
 
       {/* Keyframes for the line animation */}
       <style

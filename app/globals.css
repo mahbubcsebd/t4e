@@ -124,3 +124,8 @@ button {
 ::-webkit-scrollbar-thumb:hover {
   background: #2563eb;
 }
+
+/* Solid soft color card matching Cursor */
+.gemini-card {
+  @apply bg-card border border-border/80 shadow-sm;
+}
