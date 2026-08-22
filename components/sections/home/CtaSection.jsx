@@ -17,7 +17,7 @@ export default function CtaSection() {
     <section className="p-5" id="register">
       <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
         
-        <div className="max-w-3xl text-center relative z-10 mx-auto w-full">
+        <div className="bg-card rounded-xl p-8 md:p-12 w-full relative z-10 border border-border/50"><div className="max-w-3xl text-center mx-auto w-full">
         <SectionHeading 
           eyebrow={t("nav.startFree")}
           title={t("cta.title")}
@@ -39,6 +39,7 @@ export default function CtaSection() {
         <p className="text-xs text-muted-foreground mt-4 font-medium">
           No credit card required · Free to start
         </p>
+        </div>
         </div>
       </div>
     </section>

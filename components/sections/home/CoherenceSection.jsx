@@ -31,7 +31,7 @@ export default function CoherenceSection() {
     >
       <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
         
-        <div className="relative z-10 w-full">
+        <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
         <SectionHeading
           align="split"
           eyebrow={t('coherence.eyebrow')}
