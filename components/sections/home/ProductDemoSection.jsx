@@ -13,7 +13,7 @@ export default function ProductDemoSection() {
 
   return (
     <section className="p-5" id="resources">
-      <div className="bg-slate-100 dark:bg-slate-800/40 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5 transition-colors duration-300">
+      <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5 transition-colors duration-300">
         <div className="w-full">
           {/* Clean card matching other sections */}
           <div className="gemini-card rounded-xl p-8 sm:p-16 flex flex-col items-center justify-center gap-8 overflow-hidden relative text-center w-full">

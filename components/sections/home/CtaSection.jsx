@@ -11,7 +11,7 @@ export default function CtaSection() {
 
   return (
     <section className="py-8 md:py-12 lg:py-16 px-5" id="register">
-      <div className="bg-slate-100 dark:bg-slate-800/40 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
+      <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
         <div className="bg-card rounded-xl p-8 md:p-12 w-full relative z-10 border border-border/50">
           <div className="max-w-3xl text-center mx-auto w-full">
             <SectionHeading
