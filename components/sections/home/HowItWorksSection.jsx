@@ -25,9 +25,9 @@ export default function HowItWorksSection() {
       className="p-5"
       id="how-it-works"
     >
-      <div className="bg-card rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto py-8 md:py-12">
+      <div className="bg-card rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
         <div className="absolute inset-0 bg-background z-0 pointer-events-none"></div>
-        <Container className="relative z-10">
+        <div className="relative z-10 w-full">
         {/* Editorial Header */}
         <SectionHeading 
           eyebrow={t("howItWorks.eyebrow")}
@@ -229,7 +229,7 @@ export default function HowItWorksSection() {
             </div>
           </div>
         </div>
-        </Container>
+        </div>
       </div>
 
       {/* Keyframes for the line animation */}

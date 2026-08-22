@@ -34,9 +34,9 @@ export default function HeroSection() {
 
   return (
     <section className="p-5">
-      <div className="bg-card rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto py-8 md:py-12 transition-colors duration-300">
-        <Container>
-        <div className="flex flex-col items-center text-center max-w-5xl mx-auto mb-12 lg:mb-16 pt-8">
+      <div className="bg-card rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5 transition-colors duration-300">
+        <div className="w-full">
+        <div className="flex flex-col items-center text-center w-full mb-12 lg:mb-16 pt-8">
           {/* Eyebrow */}
           <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wide mb-6 border border-primary/30">
             {t("hero.eyebrow")}
@@ -80,7 +80,7 @@ export default function HeroSection() {
         </div>
 
         {/* The Massive Visual Block */}
-        <div className="w-full max-w-5xl mx-auto">
+        <div className="w-full w-full">
           <div className="rounded-3xl border border-[#b8d9f8]/60 shadow-[0_8px_40px_rgba(100,149,237,0.12)] p-4 sm:p-6 md:p-8" style={{ background: 'linear-gradient(135deg, #c7dff7 0%, #dbeeff 40%, #eaf5ff 70%, #f0f8ff 100%)' }}>
             <div className="flex flex-col justify-between min-h-[460px] relative z-10 w-full">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-border pb-3 sm:pb-5 mb-4 sm:mb-8 relative z-10">
@@ -397,7 +397,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-        </Container>
+        </div>
       </div>
 
       <VideoModal

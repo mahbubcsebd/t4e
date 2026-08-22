@@ -23,9 +23,9 @@ export default function ProductModelSection() {
       className="p-5"
       id="product"
     >
-      <div className="bg-card rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto py-8 md:py-12">
+      <div className="bg-card rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
         <div className="absolute inset-0 bg-card z-0 pointer-events-none"></div>
-        <Container className="relative z-10">
+        <div className="relative z-10 w-full">
         {/* Editorial Header */}
         <SectionHeading
           eyebrow={t("productModel.eyebrow")}
@@ -34,7 +34,7 @@ export default function ProductModelSection() {
         />
 
         {/* The Blueprint Architecture Visual */}
-        <div className="relative max-w-5xl mx-auto mt-10">
+        <div className="relative w-full mt-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch relative z-10">
             {/* Left Column (Perspectives 1 & 3) */}
             <div className="lg:col-span-4 flex flex-col justify-between gap-6 lg:gap-16 relative z-10 order-2 lg:order-1">
@@ -155,7 +155,7 @@ export default function ProductModelSection() {
             </div>
           </div>
         </div>
-        </Container>
+        </div>
       </div>
     </section>
   );
