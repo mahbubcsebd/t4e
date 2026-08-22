@@ -37,9 +37,9 @@ export default function ProblemSection() {
         {/* The System Canvas Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
           {/* Block 01 - Context Resets (Left) */}
-          <div className="lg:col-span-7 bg-card rounded-3xl border border-border shadow-sm overflow-hidden flex flex-col group">
+          <div className="lg:col-span-7 gemini-card rounded-3xl overflow-hidden flex flex-col group">
             {/* Visual Canvas */}
-            <div className="h-64 sm:h-80 bg-muted border-b border-border relative overflow-hidden flex items-center justify-center p-6">
+            <div className="h-64 sm:h-80 bg-white/40 border-b border-white/40 relative overflow-hidden flex items-center justify-center p-6">
               <div className="relative w-full max-w-sm aspect-video flex items-center justify-center">
                 {/* Central AI Node */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-card rounded-2xl shadow-lg border border-border flex items-center justify-center z-20 group-hover:scale-105 transition-transform duration-500">
@@ -124,9 +124,9 @@ export default function ProblemSection() {
           </div>
 
           {/* Block 02 - Knowledge lives in different places (Right) */}
-          <div className="lg:col-span-5 bg-card rounded-3xl border border-border shadow-sm overflow-hidden flex flex-col group">
+          <div className="lg:col-span-5 gemini-card rounded-3xl overflow-hidden flex flex-col group">
             {/* Visual Canvas */}
-            <div className="h-64 sm:h-80 bg-muted border-b border-border relative p-6 flex flex-col items-center justify-center gap-5 overflow-hidden">
+            <div className="h-64 sm:h-80 bg-white/40 border-b border-white/40 relative p-6 flex flex-col items-center justify-center gap-5 overflow-hidden">
               {/* Vertical Alignment Guide */}
               <div className="absolute top-8 bottom-8 left-1/2 -translate-x-1/2 w-px border-l border-dashed border-border z-0 opacity-50"></div>
 
@@ -187,9 +187,9 @@ export default function ProblemSection() {
           </div>
 
           {/* Block 03 - Impact appears late (Bottom Full Width) */}
-          <div className="lg:col-span-12 bg-card rounded-3xl border border-border shadow-sm overflow-hidden grid lg:grid-cols-12 group">
+          <div className="lg:col-span-12 gemini-card rounded-3xl overflow-hidden grid lg:grid-cols-12 group">
             {/* Content (Left side on desktop) */}
-            <div className="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-border order-2 lg:order-1">
+            <div className="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/40 order-2 lg:order-1">
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-xs font-mono font-medium text-slate-400">
                   03
@@ -208,7 +208,7 @@ export default function ProblemSection() {
             </div>
 
             {/* Visual Canvas (Right side on desktop) */}
-            <div className="lg:col-span-7 h-auto min-h-64 lg:h-auto bg-muted relative p-6 sm:p-10 flex items-center justify-center order-1 lg:order-2 overflow-hidden">
+            <div className="lg:col-span-7 h-auto min-h-64 lg:h-auto bg-white/40 relative p-6 sm:p-10 flex items-center justify-center order-1 lg:order-2 overflow-hidden">
               <div className="w-full max-w-md relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 sm:gap-0">
                 {/* Connecting Line Mobile */}
                 <div className="sm:hidden absolute left-[36px] top-[40px] bottom-[24px] border-l-2 border-dashed border-border z-0"></div>

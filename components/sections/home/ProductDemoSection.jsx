@@ -22,7 +22,7 @@ export default function ProductDemoSection() {
     >
       <Container>
         {/* Clean card matching other sections */}
-        <div className="bg-card rounded-3xl border border-border shadow-sm p-8 sm:p-16 flex flex-col items-center justify-center gap-8 overflow-hidden relative text-center max-w-5xl mx-auto">
+        <div className="gemini-card rounded-3xl p-8 sm:p-16 flex flex-col items-center justify-center gap-8 overflow-hidden relative text-center max-w-5xl mx-auto">
           {/* Subtle background watermark */}
           <div className="absolute right-0 bottom-0 text-muted-foreground/[0.05] text-[180px] font-black leading-none select-none pointer-events-none overflow-hidden z-0">
             T4E

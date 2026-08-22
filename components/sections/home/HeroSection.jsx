@@ -33,7 +33,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="py-12 md:py-18 lg:py-20 border-b border-border overflow-hidden bg-[#f4f7fb] dark:bg-background transition-colors duration-300">
+    <section className="py-12 md:py-18 lg:py-20 border-b border-border overflow-hidden bg-background dark:bg-background transition-colors duration-300">
       <Container>
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto mb-12 lg:mb-16 pt-8">
           {/* Eyebrow */}
@@ -80,10 +80,10 @@ export default function HeroSection() {
 
         {/* The Massive Visual Block */}
         <div className="w-full max-w-5xl mx-auto">
-          <SectionCard className="p-2 sm:p-3 md:p-4" glowPosition="reverse">
-            <div className="rounded-2xl border border-border bg-card p-4 sm:p-8 flex flex-col justify-between min-h-[460px] relative overflow-hidden shadow-sm">
+          <div className="rounded-3xl border border-[#b8d9f8]/60 shadow-[0_8px_40px_rgba(100,149,237,0.12)] p-4 sm:p-6 md:p-8" style={{ background: 'linear-gradient(135deg, #c7dff7 0%, #dbeeff 40%, #eaf5ff 70%, #f0f8ff 100%)' }}>
+            <div className="flex flex-col justify-between min-h-[460px] relative z-10 w-full">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-border pb-3 sm:pb-5 mb-4 sm:mb-8 relative z-10">
-                <div className="flex items-center bg-muted p-1 sm:p-1.5 rounded-xl border border-border w-full sm:w-auto overflow-x-auto hide-scrollbar">
+                <div className="flex items-center bg-[#f0f4f9] p-1 sm:p-1.5 rounded-xl border border-border/50 w-full sm:w-auto overflow-x-auto hide-scrollbar">
                   <button
                     onClick={() => setActiveScene(1)}
                     style={{ WebkitTapHighlightColor: "transparent" }}
@@ -139,7 +139,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Stage diagram */}
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-0 items-center bg-muted/50 p-4 sm:p-8 rounded-2xl border border-border relative max-w-4xl mx-auto w-full">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-0 items-center bg-[#f0f4f9] p-4 sm:p-8 rounded-2xl border border-border/40 shadow-sm relative max-w-4xl mx-auto w-full dark:bg-card/50 dark:border-border">
                       <motion.div
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -282,7 +282,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Stage diagram */}
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-0 items-center bg-muted/50 p-4 sm:p-8 rounded-2xl border border-border relative max-w-4xl mx-auto w-full">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-0 items-center bg-[#f0f4f9] p-4 sm:p-8 rounded-2xl border border-border/40 shadow-sm relative max-w-4xl mx-auto w-full dark:bg-card/50 dark:border-border">
                       <motion.div
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -394,7 +394,7 @@ export default function HeroSection() {
                 )}
               </AnimatePresence>
             </div>
-          </SectionCard>
+          </div>
         </div>
       </Container>
 
