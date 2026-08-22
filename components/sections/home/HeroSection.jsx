@@ -70,7 +70,7 @@ export default function HeroSection() {
 
         {/* The Massive Visual Block */}
         <div className="pb-8 md:pb-12 lg:pb-16 px-5 pt-4">
-          <div className="bg-black/[0.05] dark:bg-white/[0.02] rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
+          <div className="bg-slate-100 dark:bg-slate-800/40 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
             <div className="w-full">
               <div className="gemini-card rounded-xl p-4 sm:p-6 md:p-8">
                 <div className="flex flex-col justify-between min-h-[460px] relative z-10 w-full">

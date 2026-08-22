@@ -19,7 +19,7 @@ export default function ProblemSection() {
 
   return (
     <section className="py-8 md:py-12 lg:py-16 px-5">
-      <div className="bg-black/[0.05] dark:bg-white/[0.02] rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
+      <div className="bg-slate-100 dark:bg-slate-800/40 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
         <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
           {/* Editorial Header */}
           <SectionHeading
