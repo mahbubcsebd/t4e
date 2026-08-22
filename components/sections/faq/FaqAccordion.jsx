@@ -60,7 +60,7 @@ export default function FaqAccordion() {
 
       <Container>
         {/* FAQ List */}
-        <SectionCard glowPosition="default" className=" mx-auto !p-4 sm:!p-8">
+        <SectionCard className=" mx-auto !p-4 sm:!p-8">
           <div className="space-y-4 relative z-10">
             {items.map((item, idx) => {
               const isOpen = openIndex === idx;

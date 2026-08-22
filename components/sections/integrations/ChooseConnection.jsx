@@ -49,7 +49,7 @@ export default function ChooseConnection() {
   return (
     <section className="py-12 md:py-32 bg-background border-b border-border">
       <Container>
-        <SectionCard glowPosition="default">
+        <SectionCard>
           <SectionHeading
             eyebrow={t("integrationsPage.chooseEyebrow")}
             title={t("integrationsPage.chooseTitle")}
@@ -62,7 +62,7 @@ export default function ChooseConnection() {
               return (
                 <div
                   key={idx}
-                  className="relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-3xl p-8 sm:p-10 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 flex flex-col justify-between group overflow-hidden"
+                  className="relative bg-[#F7F7F4] backdrop-blur-xl border border-border/60 rounded-3xl p-8 sm:p-10 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 flex flex-col justify-between group overflow-hidden"
                 >
                   {/* Hover Gradient Background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

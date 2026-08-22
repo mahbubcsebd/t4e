@@ -60,7 +60,7 @@ export default function PricingTiers() {
   return (
     <section className="py-12 md:py-32 bg-background border-b border-border">
       <Container>
-        <SectionCard glowPosition="none" className="!p-4 sm:!p-8 md:!p-10">
+        <SectionCard className="!p-4 sm:!p-8 md:!p-10">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 items-stretch">
             {plans.map((plan, idx) => (
               <div
@@ -81,7 +81,9 @@ export default function PricingTiers() {
                 )}
 
                 <div className="relative z-10">
-                  <span className={`text-sm font-semibold block mb-4 ${plan.featured ? "text-primary" : "text-muted-foreground group-hover:text-primary transition-colors"}`}>
+                  <span
+                    className={`text-sm font-semibold block mb-4 ${plan.featured ? "text-primary" : "text-muted-foreground group-hover:text-primary transition-colors"}`}
+                  >
                     {plan.tag}
                   </span>
 
@@ -103,10 +105,14 @@ export default function PricingTiers() {
                   <ul className="space-y-3 mb-8 pt-6 border-t text-xs border-border/50 text-muted-foreground font-medium">
                     {plan.list.map((item, i) => (
                       <li key={i} className="flex items-start gap-3 group/item">
-                        <div className={`mt-0.5 flex items-center justify-center w-4 h-4 rounded-full shrink-0 transition-colors ${plan.featured ? "bg-primary/20 text-primary" : "bg-muted border border-border group-hover/item:bg-primary/10 group-hover/item:border-primary/30 text-primary/70 group-hover/item:text-primary"}`}>
+                        <div
+                          className={`mt-0.5 flex items-center justify-center w-4 h-4 rounded-full shrink-0 transition-colors ${plan.featured ? "bg-primary/20 text-primary" : "bg-muted border border-border group-hover/item:bg-primary/10 group-hover/item:border-primary/30 text-primary/70 group-hover/item:text-primary"}`}
+                        >
                           <Check className="w-2.5 h-2.5" strokeWidth={3} />
                         </div>
-                        <span className={`leading-tight transition-colors ${plan.featured ? "text-foreground" : "group-hover/item:text-foreground"}`}>
+                        <span
+                          className={`leading-tight transition-colors ${plan.featured ? "text-foreground" : "group-hover/item:text-foreground"}`}
+                        >
                           {item}
                         </span>
                       </li>

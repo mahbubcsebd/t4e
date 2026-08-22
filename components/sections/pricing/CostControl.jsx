@@ -31,7 +31,7 @@ export default function CostControl() {
   return (
     <section className="py-12 md:py-32 bg-background border-b border-border">
       <Container>
-        <SectionCard glowPosition="default">
+        <SectionCard>
           <SectionHeading
             eyebrow={t("pricingPage.costEyebrow")}
             title={t("pricingPage.costTitle")}
