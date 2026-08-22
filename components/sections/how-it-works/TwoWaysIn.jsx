@@ -36,7 +36,7 @@ export default function TwoWaysIn() {
 
           <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 lg:gap-10 max-w-6xl mx-auto relative z-10">
             {/* Path 1: Code to Design */}
-            <div className="flex-1 shadow-sm relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-[2rem] p-8 sm:p-10 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 flex flex-col justify-between group overflow-hidden">
+            <div className="flex-1 shadow-sm relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-xl p-8 sm:p-10 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 flex flex-col justify-between group overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="relative z-10 flex flex-col h-full">
@@ -102,7 +102,7 @@ export default function TwoWaysIn() {
             </div>
 
             {/* Path 2: Design to Code */}
-            <div className="flex-1 shadow-sm relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-[2rem] p-8 sm:p-10 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 flex flex-col justify-between group overflow-hidden">
+            <div className="flex-1 shadow-sm relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-xl p-8 sm:p-10 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 flex flex-col justify-between group overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="relative z-10 flex flex-col h-full">
