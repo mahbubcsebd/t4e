@@ -20,7 +20,7 @@ export default function ProductDemoSection() {
       className="px-4 sm:px-6 md:px-8 py-6"
       id="resources"
     >
-      <div className="bg-card rounded-[40px] border border-border shadow-sm overflow-hidden relative max-w-[1400px] mx-auto py-12 md:py-20 transition-colors duration-300">
+      <div className="bg-card rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto py-8 md:py-12 transition-colors duration-300">
         <Container>
         {/* Clean card matching other sections */}
         <div className="gemini-card rounded-3xl p-8 sm:p-16 flex flex-col items-center justify-center gap-8 overflow-hidden relative text-center max-w-5xl mx-auto">

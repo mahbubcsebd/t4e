@@ -15,7 +15,7 @@ export default function CtaSection() {
 
   return (
     <section className="px-4 sm:px-6 md:px-8 pb-12 pt-6" id="register">
-      <div className="bg-card rounded-[40px] border border-border shadow-sm overflow-hidden relative max-w-[1400px] mx-auto py-12 md:py-32">
+      <div className="bg-card rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto py-8 md:py-12">
         <div className="absolute inset-0 bg-background z-0 pointer-events-none"></div>
         <Container className="max-w-3xl text-center relative z-10">
         <SectionHeading 
@@ -25,7 +25,7 @@ export default function CtaSection() {
           className="mb-10 max-w-none"
           titleClassName="text-3xl sm:text-muted-foregroundxl md:text-muted-foregroundxl leading-[1.1] mb-5"
           subtitleClassName="max-w-xl mx-auto"
-          eyebrowClassName="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6 shadow-sm"
+          eyebrowClassName="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6"
         />
 
         {/* CTA Button */}

@@ -22,7 +22,7 @@ export default function ProblemSection() {
 
   return (
     <section className="px-4 sm:px-6 md:px-8 py-6">
-      <div className="bg-card rounded-[40px] border border-border shadow-sm overflow-hidden relative max-w-[1400px] mx-auto py-12 md:py-32">
+      <div className="bg-card rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto py-8 md:py-12">
         <div className="absolute inset-0 bg-background z-0 pointer-events-none"></div>
         <Container className="relative z-10">
         {/* Editorial Header */}
@@ -87,16 +87,16 @@ export default function ProblemSection() {
                 </svg>
 
                 {/* Floating Fragments */}
-                <div className="absolute top-[10%] left-[10%] bg-card p-3 rounded-xl border border-border shadow-sm z-10 opacity-70 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-500">
+                <div className="absolute top-[10%] left-[10%] bg-card p-3 rounded-xl border border-border z-10 opacity-70 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-500">
                   <FileCode className="w-5 h-5 text-slate-400" />
                 </div>
-                <div className="absolute top-[15%] right-[15%] bg-card p-3 rounded-xl border border-border shadow-sm z-10 opacity-60 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-500 delay-75">
+                <div className="absolute top-[15%] right-[15%] bg-card p-3 rounded-xl border border-border z-10 opacity-60 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-500 delay-75">
                   <Database className="w-5 h-5 text-slate-400" />
                 </div>
-                <div className="absolute bottom-[10%] left-[15%] bg-card p-3 rounded-xl border border-border shadow-sm z-10 opacity-50 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-500 delay-100">
+                <div className="absolute bottom-[10%] left-[15%] bg-card p-3 rounded-xl border border-border z-10 opacity-50 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-500 delay-100">
                   <Workflow className="w-5 h-5 text-slate-400" />
                 </div>
-                <div className="absolute bottom-[15%] right-[20%] bg-card p-3 rounded-xl border border-border shadow-sm z-10 opacity-80 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-500 delay-150">
+                <div className="absolute bottom-[15%] right-[20%] bg-card p-3 rounded-xl border border-border z-10 opacity-80 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-500 delay-150">
                   <LayoutTemplate className="w-5 h-5 text-slate-400" />
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function ProblemSection() {
               <div className="absolute top-8 bottom-8 left-1/2 -translate-x-1/2 w-px border-l border-dashed border-border z-0 opacity-50"></div>
 
               {/* Layers */}
-              <div className="w-full max-w-[220px] bg-card border border-border rounded-xl p-3 flex items-center justify-between shadow-sm relative z-30 -translate-x-4 group-hover:-translate-x-6 transition-transform duration-500">
+              <div className="w-full max-w-[220px] bg-card border border-border rounded-xl p-3 flex items-center justify-between relative z-30 -translate-x-4 group-hover:-translate-x-6 transition-transform duration-500">
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-blue-50 rounded-lg text-primary border border-primary/20">
                     <FileCode className="w-4 h-4" />
@@ -140,7 +140,7 @@ export default function ProblemSection() {
                 <div className="w-1.5 h-1.5 rounded-full bg-primary absolute -right-3 top-1/2 -translate-y-1/2 ring-4 ring-white"></div>
               </div>
 
-              <div className="w-full max-w-[220px] bg-card border border-border rounded-xl p-3 flex items-center justify-between shadow-sm relative z-20 translate-x-3 group-hover:translate-x-5 transition-transform duration-500 delay-75">
+              <div className="w-full max-w-[220px] bg-card border border-border rounded-xl p-3 flex items-center justify-between relative z-20 translate-x-3 group-hover:translate-x-5 transition-transform duration-500 delay-75">
                 <div className="w-1.5 h-1.5 rounded-full bg-primary absolute -left-3 top-1/2 -translate-y-1/2 ring-4 ring-white"></div>
                 <div className="flex items-center gap-3 ml-1">
                   <div className="p-2 bg-muted rounded-lg text-muted-foreground border border-border">
@@ -152,7 +152,7 @@ export default function ProblemSection() {
                 </div>
               </div>
 
-              <div className="w-full max-w-[220px] bg-card border border-border rounded-xl p-3 flex items-center justify-between shadow-sm relative z-10 -translate-x-2 group-hover:-translate-x-4 transition-transform duration-500 delay-150">
+              <div className="w-full max-w-[220px] bg-card border border-border rounded-xl p-3 flex items-center justify-between relative z-10 -translate-x-2 group-hover:-translate-x-4 transition-transform duration-500 delay-150">
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-muted rounded-lg text-muted-foreground border border-border">
                     <Users className="w-4 h-4" />
@@ -213,7 +213,7 @@ export default function ProblemSection() {
                 <div className="sm:hidden absolute left-[36px] top-[40px] bottom-[24px] border-l-2 border-dashed border-border z-0"></div>
 
                 {/* Local Change Node */}
-                <div className="relative z-10 flex flex-row sm:flex-col items-center gap-4 sm:gap-3 bg-card sm:bg-transparent p-3 sm:p-0 rounded-xl sm:rounded-none border border-border sm:border-none shadow-sm sm:shadow-none w-full sm:w-auto shrink-0 md:translate-x-[20px]">
+                <div className="relative z-10 flex flex-row sm:flex-col items-center gap-4 sm:gap-3 bg-card sm:bg-transparent p-3 sm:p-0 rounded-xl sm:rounded-none border border-border sm:border-none sm:shadow-none w-full sm:w-auto shrink-0 md:translate-x-[20px]">
                   <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-card border-[3px] border-primary shadow-md flex items-center justify-center relative shrink-0 group-hover:scale-110 transition-transform duration-500 md:mt-[30px]">
                     <div
                       className="absolute inset-0 rounded-full bg-primary/30 animate-ping"
@@ -236,7 +236,7 @@ export default function ProblemSection() {
                   <div className="hidden sm:block absolute -left-[24px] top-1/2 bottom-[24px] border-l-2 border-b-2 border-dashed border-border rounded-bl-2xl w-[24px] z-0"></div>
                   <div className="hidden sm:block absolute -left-[24px] top-1/2 -translate-y-[1px] w-[24px] border-t-2 border-dashed border-border z-0"></div>
 
-                  <div className="bg-card border border-border rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-75 z-10">
+                  <div className="bg-card border border-border rounded-xl px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-75 z-10">
                     {/* Mobile Card connecting line */}
                     <div className="sm:hidden absolute -left-[28px] top-1/2 -translate-y-[1px] w-[28px] border-t-2 border-dashed border-border z-0"></div>
                     <div className="w-2 h-2 rounded-full bg-primary absolute -left-1 top-1/2 -translate-y-1/2 z-20"></div>
@@ -246,7 +246,7 @@ export default function ProblemSection() {
                     </span>
                   </div>
 
-                  <div className="bg-card border border-border rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-150 z-10">
+                  <div className="bg-card border border-border rounded-xl px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-150 z-10">
                     <div className="sm:hidden absolute -left-[28px] top-1/2 -translate-y-[1px] w-[28px] border-t-2 border-dashed border-border z-0"></div>
                     <div className="w-2 h-2 rounded-full bg-muted0 absolute -left-1 top-1/2 -translate-y-1/2 z-20"></div>
                     <Database className="w-4 h-4 text-gray-500" />
@@ -255,7 +255,7 @@ export default function ProblemSection() {
                     </span>
                   </div>
 
-                  <div className="bg-card border border-border rounded-xl shadow-sm px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-200 z-10">
+                  <div className="bg-card border border-border rounded-xl px-4 py-3 flex items-center gap-3 w-full sm:w-48 relative group-hover:translate-x-2 transition-transform duration-500 delay-200 z-10">
                     <div className="sm:hidden absolute -left-[28px] top-1/2 -translate-y-[1px] w-[28px] border-t-2 border-dashed border-border z-0"></div>
                     <div className="w-2 h-2 rounded-full bg-slate-400 absolute -left-1 top-1/2 -translate-y-1/2 z-20"></div>
                     <LayoutTemplate className="w-4 h-4 text-muted-foreground" />

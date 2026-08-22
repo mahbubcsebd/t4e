@@ -23,7 +23,7 @@ export default function ProductModelSection() {
       className="px-4 sm:px-6 md:px-8 py-6"
       id="product"
     >
-      <div className="bg-card rounded-[40px] border border-border shadow-sm overflow-hidden relative max-w-[1400px] mx-auto py-12 md:py-32">
+      <div className="bg-card rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto py-8 md:py-12">
         <div className="absolute inset-0 bg-card z-0 pointer-events-none"></div>
         <Container className="relative z-10">
         {/* Editorial Header */}
@@ -83,7 +83,7 @@ export default function ProductModelSection() {
             <div className="lg:col-span-4 flex justify-center relative z-20 order-1 lg:order-2 mb-8 lg:mb-0">
               <div className="relative w-full max-w-sm h-full flex flex-col">
                 {/* Glowing Background Effect */}
-                <div className="absolute inset-0 bg-primary blur-2xl opacity-10 rounded-[40px]"></div>
+                <div className="absolute inset-0 bg-primary blur-2xl opacity-10 rounded-xl"></div>
 
                 <div className="gemini-card rounded-[32px] p-8 relative overflow-hidden group flex-1 flex flex-col items-center justify-center min-h-[280px]">
                   <div className="relative z-10 flex flex-col items-center text-center">

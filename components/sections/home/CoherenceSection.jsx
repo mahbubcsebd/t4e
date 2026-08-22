@@ -29,7 +29,7 @@ export default function CoherenceSection() {
       className="px-4 sm:px-6 md:px-8 py-6"
       id="code-to-design"
     >
-      <div className="bg-card rounded-[40px] border border-border shadow-sm overflow-hidden relative max-w-[1400px] mx-auto py-12 md:py-32">
+      <div className="bg-card rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto py-8 md:py-12">
         <div className="absolute inset-0 bg-background z-0 pointer-events-none"></div>
         <Container className="relative z-10">
         <SectionHeading
@@ -64,7 +64,7 @@ export default function CoherenceSection() {
           {/* Split View Comparison */}
           <div className="flex flex-col lg:flex-row relative items-stretch">
             {/* Center VS Divider on Desktop */}
-            <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-card border border-border rounded-full items-center justify-center z-20 shadow-sm text-[10px] font-medium text-muted-foreground">
+            <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-card border border-border rounded-full items-center justify-center z-20 text-[10px] font-medium text-muted-foreground">
               VS
             </div>
 
@@ -127,7 +127,7 @@ export default function CoherenceSection() {
           <div className="border-t border-border bg-card p-6 lg:px-12 lg:py-8">
             <div className="gemini-card rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
               <div className="flex items-start sm:items-center gap-4">
-                <div className="p-2.5 bg-white/60 rounded-xl shadow-sm border border-white/60 text-muted-foreground shrink-0">
+                <div className="p-2.5 bg-white/60 rounded-xl border border-white/60 text-muted-foreground shrink-0">
                   <AlertCircle className="w-5 h-5" />
                 </div>
                 <div>
@@ -139,7 +139,7 @@ export default function CoherenceSection() {
                   </strong>
                 </div>
               </div>
-              <div className="bg-white/80 border border-white/60 text-foreground text-[11px] font-medium px-4 py-2.5 rounded-lg whitespace-nowrap shadow-sm flex items-center gap-2 hover:bg-foreground hover:text-background transition-colors cursor-pointer">
+              <div className="bg-white/80 border border-white/60 text-foreground text-[11px] font-medium px-4 py-2.5 rounded-lg whitespace-nowrap flex items-center gap-2 hover:bg-foreground hover:text-background transition-colors cursor-pointer">
                 {t('coherence.alertDesc')}
                 <ArrowRight className="w-3 h-3" />
               </div>
@@ -153,7 +153,7 @@ export default function CoherenceSection() {
 
             <div className="flex flex-col gap-6 relative z-10">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-card rounded-lg border border-border shadow-sm text-primary">
+                <div className="p-2 bg-card rounded-lg border border-border text-primary">
                   <Workflow className="w-4 h-4" />
                 </div>
                 <div>

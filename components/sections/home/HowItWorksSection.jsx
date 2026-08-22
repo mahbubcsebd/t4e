@@ -25,7 +25,7 @@ export default function HowItWorksSection() {
       className="px-4 sm:px-6 md:px-8 py-6"
       id="how-it-works"
     >
-      <div className="bg-card rounded-[40px] border border-border shadow-sm overflow-hidden relative max-w-[1400px] mx-auto py-12 md:py-32">
+      <div className="bg-card rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto py-8 md:py-12">
         <div className="absolute inset-0 bg-background z-0 pointer-events-none"></div>
         <Container className="relative z-10">
         {/* Editorial Header */}
@@ -73,7 +73,7 @@ export default function HowItWorksSection() {
                           github.com/org/repo
                         </span>
                       </div>
-                      <div className="w-full h-8 bg-primary rounded-lg flex items-center justify-center text-[10px] font-bold text-primary-foreground tracking-wide shadow-sm shadow-primary/20">
+                      <div className="w-full h-8 bg-primary rounded-lg flex items-center justify-center text-[10px] font-bold text-primary-foreground tracking-wide shadow-primary/20">
                         CONNECT
                       </div>
                     </div>
@@ -126,26 +126,26 @@ export default function HowItWorksSection() {
                     </svg>
 
                     {/* Top Node */}
-                    <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card border border-primary rounded-xl p-2.5 shadow-sm z-10 flex items-center justify-center">
+                    <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card border border-primary rounded-xl p-2.5 z-10 flex items-center justify-center">
                       <Network className="w-6 h-6 text-primary" />
                       {/* Checkmark Badge */}
-                      <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-primary rounded-full border-2 border-card flex items-center justify-center shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                      <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-primary rounded-full border-2 border-card flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                         <Check className="w-3 h-3 text-primary-foreground" strokeWidth={3} />
                       </div>
                     </div>
 
                     {/* Left Node */}
-                    <div className="absolute top-[65%] left-[25%] -translate-x-1/2 -translate-y-1/2 bg-card border border-border rounded-lg p-2 shadow-sm z-10">
+                    <div className="absolute top-[65%] left-[25%] -translate-x-1/2 -translate-y-1/2 bg-card border border-border rounded-lg p-2 z-10">
                       <div className="w-4 h-4 rounded bg-muted-foreground/10"></div>
                     </div>
 
                     {/* Right Node */}
-                    <div className="absolute top-[65%] left-[75%] -translate-x-1/2 -translate-y-1/2 bg-card border border-border rounded-lg p-2 shadow-sm z-10">
+                    <div className="absolute top-[65%] left-[75%] -translate-x-1/2 -translate-y-1/2 bg-card border border-border rounded-lg p-2 z-10">
                       <div className="w-4 h-4 rounded bg-muted-foreground/10"></div>
                     </div>
 
                     {/* Validation Alert */}
-                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-max bg-primary/10 border border-primary/30 rounded-full py-1.5 px-4 flex items-center justify-center gap-1.5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-max bg-primary/10 border border-primary/30 rounded-full py-1.5 px-4 flex items-center justify-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
                       <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
                       <span className="text-[9px] font-bold text-blue-700 tracking-wider">
                         MAP VALIDATED

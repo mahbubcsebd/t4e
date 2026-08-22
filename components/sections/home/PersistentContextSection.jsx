@@ -15,7 +15,7 @@ export default function PersistentContextSection() {
 
   return (
     <section className="px-4 sm:px-6 md:px-8 py-6">
-      <div className="bg-card rounded-[40px] border border-border shadow-sm overflow-hidden relative max-w-[1400px] mx-auto py-12 md:py-32">
+      <div className="bg-card rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto py-8 md:py-12">
         <div className="absolute inset-0 bg-background z-0 pointer-events-none"></div>
         <Container className="relative z-10">
         {/* Editorial Header */}
@@ -100,12 +100,12 @@ export default function PersistentContextSection() {
 
                 {/* Flow indicators (Desktop) */}
                 <div className="hidden md:block absolute -left-[3.5rem] top-1/2 -translate-y-1/2 z-30">
-                  <div className="px-1.5 py-1 bg-card border border-border rounded-md shadow-sm flex items-center">
+                  <div className="px-1.5 py-1 bg-card border border-border rounded-md flex items-center">
                     <ArrowRight className="w-3.5 h-3.5 text-muted-foreground rotate-180" />
                   </div>
                 </div>
                 <div className="hidden md:block absolute -right-[3.5rem] top-1/2 -translate-y-1/2 z-30">
-                  <div className="px-1.5 py-1 bg-card border border-border rounded-md shadow-sm flex items-center">
+                  <div className="px-1.5 py-1 bg-card border border-border rounded-md flex items-center">
                     <ArrowRight className="w-3.5 h-3.5 text-muted-foreground" />
                   </div>
                 </div>
