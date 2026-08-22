@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import CodingToolPills from '@/components/ui/CodingToolPills';
-import { useLanguage } from '@/context/LanguageContext';
+import CodingToolPills from "@/components/ui/CodingToolPills";
+import SectionCard from "@/components/layout/SectionCard";
+import { useLanguage } from "@/context/LanguageContext";
 import {
   CheckCircle2,
   Database,
@@ -15,14 +16,14 @@ import {
   SlidersHorizontal,
   Terminal,
   ToggleRight,
-} from 'lucide-react';
+} from "lucide-react";
 
 export default function ValueSection() {
   const { t } = useLanguage();
 
   return (
     <section className="py-8 md:py-12 lg:py-16 px-5">
-      <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
+      <SectionCard className="max-w-[1400px] mx-auto">
         <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
           {/* Bento Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -89,14 +90,14 @@ export default function ValueSection() {
                       <Eye className="w-4 h-4 text-primary" />
                     </div>
                     <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest">
-                      {t('values.card1Tag')}
+                      {t("values.card1Tag")}
                     </span>
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-4 tracking-tight">
-                    {t('values.card1Title')}
+                    {t("values.card1Title")}
                   </h3>
                   <p className="text-muted-foreground text-sm sm:text-base leading-relaxed max-w-xl">
-                    {t('values.card1Desc')}
+                    {t("values.card1Desc")}
                   </p>
                 </div>
               </div>
@@ -111,10 +112,10 @@ export default function ValueSection() {
                   </div>
                   <div>
                     <strong className="text-xl sm:text-2xl font-medium text-foreground block mb-2 tracking-tight">
-                      {t('values.compatTitle')}
+                      {t("values.compatTitle")}
                     </strong>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      {t('values.compatDesc')}
+                      {t("values.compatDesc")}
                     </p>
                   </div>
                 </div>
@@ -149,14 +150,14 @@ export default function ValueSection() {
                       <ShieldCheck className="w-4 h-4 text-primary" />
                     </div>
                     <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest">
-                      {t('values.card2Tag')}
+                      {t("values.card2Tag")}
                     </span>
                   </div>
                   <h3 className="text-lg sm:text-xl font-extrabold text-foreground mb-2 tracking-tight">
-                    {t('values.card2Title')}
+                    {t("values.card2Title")}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    {t('values.card2Desc')}
+                    {t("values.card2Desc")}
                   </p>
                 </div>
               </div>
@@ -181,21 +182,21 @@ export default function ValueSection() {
                       <SlidersHorizontal className="w-4 h-4 text-primary" />
                     </div>
                     <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest">
-                      {t('values.card3Tag')}
+                      {t("values.card3Tag")}
                     </span>
                   </div>
                   <h3 className="text-lg sm:text-xl font-extrabold text-foreground mb-2 tracking-tight">
-                    {t('values.card3Title')}
+                    {t("values.card3Title")}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    {t('values.card3Desc')}
+                    {t("values.card3Desc")}
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </SectionCard>
     </section>
   );
 }

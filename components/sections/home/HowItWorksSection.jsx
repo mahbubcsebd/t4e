@@ -1,28 +1,29 @@
-'use client';
+"use client";
 
-import SectionHeading from '@/components/layout/SectionHeading';
+import SectionHeading from "@/components/layout/SectionHeading";
+import SectionCard from "@/components/layout/SectionCard";
 
-import { useLanguage } from '@/context/LanguageContext';
+import { useLanguage } from "@/context/LanguageContext";
 import {
   Check,
   CheckCircle2,
   GitBranch,
   Network,
   Sparkles,
-} from 'lucide-react';
-import { SiGithub } from 'react-icons/si';
+} from "lucide-react";
+import { SiGithub } from "react-icons/si";
 
 export default function HowItWorksSection() {
   const { t } = useLanguage();
 
   return (
     <section className="p-5" id="how-it-works">
-      <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
+      <SectionCard className="max-w-[1400px] mx-auto">
         <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
           {/* Editorial Header */}
           <SectionHeading
-            eyebrow={t('howItWorks.eyebrow')}
-            title={t('howItWorks.title')}
+            eyebrow={t("howItWorks.eyebrow")}
+            title={t("howItWorks.title")}
           />
 
           {/* Workflow Pipeline */}
@@ -73,13 +74,13 @@ export default function HowItWorksSection() {
                   {/* Content */}
                   <div className="p-6 md:p-8 flex flex-col flex-1">
                     <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest mb-3">
-                      {t('howItWorks.step1Num')}
+                      {t("howItWorks.step1Num")}
                     </span>
                     <h3 className="text-xl font-bold text-foreground mb-3">
-                      {t('howItWorks.step1Title')}
+                      {t("howItWorks.step1Title")}
                     </h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      {t('howItWorks.step1Desc')}
+                      {t("howItWorks.step1Desc")}
                     </p>
                   </div>
                 </div>
@@ -150,13 +151,13 @@ export default function HowItWorksSection() {
                   {/* Content */}
                   <div className="p-6 md:p-8 flex flex-col flex-1">
                     <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest mb-3">
-                      {t('howItWorks.step2Num')}
+                      {t("howItWorks.step2Num")}
                     </span>
                     <h3 className="text-xl font-bold text-foreground mb-3">
-                      {t('howItWorks.step2Title')}
+                      {t("howItWorks.step2Title")}
                     </h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      {t('howItWorks.step2Desc')}
+                      {t("howItWorks.step2Desc")}
                     </p>
                   </div>
                 </div>
@@ -210,13 +211,13 @@ export default function HowItWorksSection() {
                   {/* Content */}
                   <div className="p-6 md:p-8 flex flex-col flex-1">
                     <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest mb-3">
-                      {t('howItWorks.step3Num')}
+                      {t("howItWorks.step3Num")}
                     </span>
                     <h3 className="text-xl font-bold text-foreground mb-3">
-                      {t('howItWorks.step3Title')}
+                      {t("howItWorks.step3Title")}
                     </h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      {t('howItWorks.step3Desc')}
+                      {t("howItWorks.step3Desc")}
                     </p>
                   </div>
                 </div>
@@ -224,7 +225,7 @@ export default function HowItWorksSection() {
             </div>
           </div>
         </div>
-      </div>
+      </SectionCard>
 
       {/* Keyframes for the line animation */}
       <style

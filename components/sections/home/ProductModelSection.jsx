@@ -1,8 +1,9 @@
-'use client';
+"use client";
 
-import SectionHeading from '@/components/layout/SectionHeading';
+import SectionHeading from "@/components/layout/SectionHeading";
+import SectionCard from "@/components/layout/SectionCard";
 
-import { useLanguage } from '@/context/LanguageContext';
+import { useLanguage } from "@/context/LanguageContext";
 import {
   Cpu,
   Database,
@@ -10,20 +11,20 @@ import {
   Layout,
   RefreshCw,
   Workflow,
-} from 'lucide-react';
+} from "lucide-react";
 
 export default function ProductModelSection() {
   const { t } = useLanguage();
 
   return (
     <section className="p-5" id="product">
-      <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
+      <SectionCard className="max-w-[1400px] mx-auto">
         <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
           {/* Editorial Header */}
           <SectionHeading
-            eyebrow={t('productModel.eyebrow')}
-            title={t('productModel.title')}
-            subtitle={t('productModel.subtitle')}
+            eyebrow={t("productModel.eyebrow")}
+            title={t("productModel.title")}
+            subtitle={t("productModel.subtitle")}
           />
 
           {/* The Blueprint Architecture Visual */}
@@ -42,10 +43,10 @@ export default function ProductModelSection() {
                     </div>
                     <div>
                       <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest block mb-1">
-                        {t('productModel.persp1Tag')}
+                        {t("productModel.persp1Tag")}
                       </span>
                       <h3 className="text-sm font-bold text-foreground leading-snug">
-                        {t('productModel.persp1Title')}
+                        {t("productModel.persp1Title")}
                       </h3>
                     </div>
                   </div>
@@ -62,10 +63,10 @@ export default function ProductModelSection() {
                     </div>
                     <div>
                       <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest block mb-1">
-                        {t('productModel.persp3Tag')}
+                        {t("productModel.persp3Tag")}
                       </span>
                       <h3 className="text-sm font-bold text-foreground leading-snug">
-                        {t('productModel.persp3Title')}
+                        {t("productModel.persp3Title")}
                       </h3>
                     </div>
                   </div>
@@ -85,17 +86,17 @@ export default function ProductModelSection() {
                       </div>
 
                       <span className="inline-block px-3 py-1 bg-card text-primary border border-primary/30 rounded-md text-[10px] font-extrabold uppercase tracking-widest mb-3">
-                        {t('productModel.centerTag')}
+                        {t("productModel.centerTag")}
                       </span>
 
                       <h3 className="text-xl sm:text-2xl font-extrabold text-foreground tracking-tight mb-5">
-                        {t('productModel.centerTitle')}
+                        {t("productModel.centerTitle")}
                       </h3>
 
                       <div className="flex items-center justify-center gap-2 text-[11px] font-medium text-primary bg-blue-50 px-3 py-1.5 rounded-full border border-primary/20">
                         <RefreshCw
                           className="w-3.5 h-3.5 animate-spin-slow"
-                          style={{ animationDuration: '4s' }}
+                          style={{ animationDuration: "4s" }}
                         />
                         Real-time Sync
                       </div>
@@ -117,10 +118,10 @@ export default function ProductModelSection() {
                     </div>
                     <div>
                       <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest block mb-1">
-                        {t('productModel.persp2Tag')}
+                        {t("productModel.persp2Tag")}
                       </span>
                       <h3 className="text-sm font-bold text-foreground leading-snug">
-                        {t('productModel.persp2Title')}
+                        {t("productModel.persp2Title")}
                       </h3>
                     </div>
                   </div>
@@ -137,10 +138,10 @@ export default function ProductModelSection() {
                     </div>
                     <div>
                       <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest block mb-1">
-                        {t('productModel.persp4Tag')}
+                        {t("productModel.persp4Tag")}
                       </span>
                       <h3 className="text-sm font-bold text-foreground leading-snug">
-                        {t('productModel.persp4Title')}
+                        {t("productModel.persp4Title")}
                       </h3>
                     </div>
                   </div>
@@ -149,7 +150,7 @@ export default function ProductModelSection() {
             </div>
           </div>
         </div>
-      </div>
+      </SectionCard>
     </section>
   );
 }

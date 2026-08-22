@@ -1,19 +1,20 @@
-'use client';
+"use client";
 
-import VideoModal from '@/components/ui/VideoModal';
-import { Button } from '@/components/ui/button';
-import { useLanguage } from '@/context/LanguageContext';
-import { Play } from 'lucide-react';
-import { useState } from 'react';
+import VideoModal from "@/components/ui/VideoModal";
+import SectionCard from "@/components/layout/SectionCard";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/context/LanguageContext";
+import { Play } from "lucide-react";
+import { useState } from "react";
 
 export default function ProductDemoSection() {
   const { t } = useLanguage();
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [videoId, setVideoId] = useState('');
+  const [videoId, setVideoId] = useState("");
 
   return (
     <section className="p-5" id="resources">
-      <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5 transition-colors duration-300">
+      <SectionCard className="max-w-[1400px] mx-auto">
         <div className="w-full">
           {/* Clean card matching other sections */}
           <div className="gemini-card rounded-xl p-8 sm:p-16 flex flex-col items-center justify-center gap-8 overflow-hidden relative text-center w-full">
@@ -24,13 +25,13 @@ export default function ProductDemoSection() {
 
             <div className="relative z-10 flex flex-col items-center max-w-2xl">
               <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wide mb-6 border border-primary/20">
-                {t('demo.eyebrow')}
+                {t("demo.eyebrow")}
               </span>
               <h2 className="text-3xl md:text-muted-foregroundxl font-extrabold text-foreground mb-4 tracking-tight">
-                {t('demo.title')}
+                {t("demo.title")}
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                {t('demo.subtitle')}
+                {t("demo.subtitle")}
               </p>
 
               {/* Buttons */}
@@ -38,29 +39,29 @@ export default function ProductDemoSection() {
                 <Button
                   className="w-full sm:w-auto"
                   onClick={() => {
-                    setVideoId('FY68DuwOf4Q');
+                    setVideoId("FY68DuwOf4Q");
                     setIsVideoOpen(true);
                   }}
                 >
                   <Play className="w-5 h-5 fill-current" />
-                  {t('demo.btnCodeToDesign')}
+                  {t("demo.btnCodeToDesign")}
                 </Button>
                 <Button
                   variant="outline"
                   className="w-full sm:w-auto"
                   onClick={() => {
-                    setVideoId('Lq-vza9_CzI');
+                    setVideoId("Lq-vza9_CzI");
                     setIsVideoOpen(true);
                   }}
                 >
                   <Play className="w-5 h-5 fill-current" />
-                  {t('demo.btnDesignToCode')}
+                  {t("demo.btnDesignToCode")}
                 </Button>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </SectionCard>
 
       <VideoModal
         isOpen={isVideoOpen}

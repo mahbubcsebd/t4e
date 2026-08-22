@@ -1,28 +1,29 @@
-'use client';
+"use client";
 
-import SectionHeading from '@/components/layout/SectionHeading';
+import SectionHeading from "@/components/layout/SectionHeading";
+import SectionCard from "@/components/layout/SectionCard";
 
-import { useLanguage } from '@/context/LanguageContext';
-import { ArrowRight, Database, Network } from 'lucide-react';
-import React from 'react';
-import { SiClaude, SiCursor, SiWindsurf } from 'react-icons/si';
-import { TbBrandOpenai } from 'react-icons/tb';
+import { useLanguage } from "@/context/LanguageContext";
+import { ArrowRight, Database, Network } from "lucide-react";
+import React from "react";
+import { SiClaude, SiCursor, SiWindsurf } from "react-icons/si";
+import { TbBrandOpenai } from "react-icons/tb";
 
 export default function PersistentContextSection() {
   const { t } = useLanguage();
 
   return (
     <section className="py-8 md:py-12 lg:py-16 px-5">
-      <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
+      <SectionCard className="max-w-[1400px] mx-auto">
         <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
           {/* Editorial Header */}
           <SectionHeading
             align="split"
-            eyebrow={t('persistent.eyebrow')}
+            eyebrow={t("persistent.eyebrow")}
             title={
               <>
-                {t('persistent.title')
-                  .split('. ')
+                {t("persistent.title")
+                  .split(". ")
                   .map((sentence, i, arr) => (
                     <React.Fragment key={i}>
                       {i === 0 ? (
@@ -34,7 +35,7 @@ export default function PersistentContextSection() {
                   ))}
               </>
             }
-            subtitle={t('persistent.subtitle')}
+            subtitle={t("persistent.subtitle")}
           />
 
           {/* Central Brain Visualization */}
@@ -147,7 +148,7 @@ export default function PersistentContextSection() {
             </div>
           </div>
         </div>
-      </div>
+      </SectionCard>
     </section>
   );
 }

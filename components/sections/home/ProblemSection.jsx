@@ -1,8 +1,9 @@
-'use client';
+"use client";
 
-import SectionHeading from '@/components/layout/SectionHeading';
+import SectionHeading from "@/components/layout/SectionHeading";
+import SectionCard from "@/components/layout/SectionCard";
 
-import { useLanguage } from '@/context/LanguageContext';
+import { useLanguage } from "@/context/LanguageContext";
 import {
   Bot,
   Database,
@@ -12,19 +13,19 @@ import {
   Network,
   Users,
   Workflow,
-} from 'lucide-react';
+} from "lucide-react";
 
 export default function ProblemSection() {
   const { t } = useLanguage();
 
   return (
     <section className="py-8 md:py-12 lg:py-16 px-5">
-      <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
+      <SectionCard className="max-w-[1400px] mx-auto">
         <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
           {/* Editorial Header */}
           <SectionHeading
-            eyebrow={t('problem.eyebrow')}
-            title={t('problem.title')}
+            eyebrow={t("problem.eyebrow")}
+            title={t("problem.title")}
             className="max-w-[700px] mx-auto mb-10 md:mb-14"
             eyebrowClassName="mb-3"
           />
@@ -46,7 +47,7 @@ export default function ProblemSection() {
                     viewBox="0 0 400 200"
                     preserveAspectRatio="none"
                     className="absolute inset-0 w-full h-full text-gray-200 z-0 opacity-60"
-                    style={{ strokeDasharray: '4,4' }}
+                    style={{ strokeDasharray: "4,4" }}
                   >
                     <line
                       x1="80"
@@ -106,14 +107,14 @@ export default function ProblemSection() {
                   </span>
                   <span className="h-[1px] w-8 bg-gray-200"></span>
                   <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
-                    {t('problem.card1Tag')}
+                    {t("problem.card1Tag")}
                   </span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-extrabold text-foreground mb-3 tracking-tight">
-                  {t('problem.card1Title')}
+                  {t("problem.card1Title")}
                 </h3>
                 <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                  {t('problem.card1Desc')}
+                  {t("problem.card1Desc")}
                 </p>
               </div>
             </div>
@@ -171,14 +172,14 @@ export default function ProblemSection() {
                   </span>
                   <span className="h-[1px] w-8 bg-gray-200"></span>
                   <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
-                    {t('problem.card2Tag')}
+                    {t("problem.card2Tag")}
                   </span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-extrabold text-foreground mb-3 tracking-tight">
-                  {t('problem.card2Title')}
+                  {t("problem.card2Title")}
                 </h3>
                 <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                  {t('problem.card2Desc')}
+                  {t("problem.card2Desc")}
                 </p>
               </div>
             </div>
@@ -193,14 +194,14 @@ export default function ProblemSection() {
                   </span>
                   <span className="h-[1px] w-8 bg-gray-200"></span>
                   <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
-                    {t('problem.card3Tag')}
+                    {t("problem.card3Tag")}
                   </span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-extrabold text-foreground mb-3 tracking-tight">
-                  {t('problem.card3Title')}
+                  {t("problem.card3Title")}
                 </h3>
                 <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                  {t('problem.card3Desc')}
+                  {t("problem.card3Desc")}
                 </p>
               </div>
 
@@ -215,7 +216,7 @@ export default function ProblemSection() {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-card border-[3px] border-primary shadow-md flex items-center justify-center relative shrink-0 group-hover:scale-110 transition-transform duration-500 md:mt-[30px]">
                       <div
                         className="absolute inset-0 rounded-full bg-primary/30 animate-ping"
-                        style={{ animationDuration: '3s' }}
+                        style={{ animationDuration: "3s" }}
                       ></div>
                       <GitPullRequest className="w-5 h-5 text-primary" />
                     </div>
@@ -267,7 +268,7 @@ export default function ProblemSection() {
             </div>
           </div>
         </div>
-      </div>
+      </SectionCard>
     </section>
   );
 }
