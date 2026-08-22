@@ -67,53 +67,53 @@ export default function CoherenceSection() {
                 </div>
 
                 {/* Left: Approved Intent */}
-                <div className="flex-1 p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-border bg-gradient-to-br from-primary/10 to-transparent flex flex-col">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="p-2 bg-primary/20 text-primary rounded-lg">
+                <div className="flex-1 p-5 sm:p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-border bg-gradient-to-br from-primary/10 to-transparent flex flex-col">
+                  <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                    <div className="p-2 bg-primary/20 text-primary rounded-lg shrink-0">
                       <FileText className="w-4 h-4" />
                     </div>
-                    <span className="text-[10px] font-semibold text-primary uppercase tracking-widest">
+                    <span className="text-[10px] font-semibold text-primary uppercase tracking-widest leading-tight">
                       {t("coherence.approvedTag")}
                     </span>
                   </div>
 
-                  <div className="gemini-card rounded-xl p-6 relative group-hover:-translate-y-1 transition-transform duration-500 flex-1">
+                  <div className="gemini-card rounded-xl p-5 sm:p-6 relative group-hover:-translate-y-1 transition-transform duration-500 flex-1">
                     <div className="absolute -top-3 -right-3 bg-primary text-primary-foreground rounded-full p-1 shadow-md">
                       <CheckCircle2 className="w-4 h-4" />
                     </div>
-                    <strong className="text-lg sm:text-xl font-medium text-foreground block mb-3 leading-snug">
+                    <strong className="text-base sm:text-lg lg:text-xl font-medium text-foreground block mb-3 leading-snug">
                       "{t("coherence.approvedTitle")}"
                     </strong>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed break-words">
                       {t("coherence.approvedDesc")}
                     </p>
                   </div>
                 </div>
 
                 {/* Right: Proposed Implementation (Light Theme) */}
-                <div className="flex-1 p-8 lg:p-12 bg-gradient-to-bl from-muted/40 to-transparent flex flex-col">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="p-2 bg-muted text-muted-foreground rounded-lg">
+                <div className="flex-1 p-5 sm:p-8 lg:p-12 bg-gradient-to-bl from-muted/40 to-transparent flex flex-col">
+                  <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                    <div className="p-2 bg-muted text-muted-foreground rounded-lg shrink-0">
                       <GitPullRequest className="w-4 h-4" />
                     </div>
-                    <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-widest">
+                    <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-widest leading-tight">
                       {t("coherence.proposedTag")}
                     </span>
                   </div>
 
-                  <div className="gemini-card rounded-xl p-6 font-mono relative overflow-hidden group-hover:-translate-y-1 transition-transform duration-500 delay-75 flex-1">
+                  <div className="gemini-card rounded-xl p-5 sm:p-6 font-mono relative overflow-hidden group-hover:-translate-y-1 transition-transform duration-500 delay-75 flex-1">
                     {/* Subtle frosted glass tint for diff */}
                     <div className="absolute inset-0 bg-white/40 pointer-events-none"></div>
 
-                    <div className="flex items-center gap-4 text-[11px] text-muted-foreground mb-3 tracking-wider uppercase font-sans font-medium">
+                    <div className="flex items-center gap-2 sm:gap-4 text-[10px] sm:text-[11px] text-muted-foreground mb-3 tracking-wider uppercase font-sans font-medium break-all">
                       <span>src/config/policy.ts</span>
                     </div>
 
-                    <div className="relative pl-4 border-l-2 border-border text-sm">
-                      <strong className="text-foreground block mb-3 leading-relaxed">
+                    <div className="relative pl-3 sm:pl-4 border-l-2 border-border text-xs sm:text-sm">
+                      <strong className="text-foreground block mb-2 sm:mb-3 leading-relaxed">
                         {t("coherence.proposedTitle")}
                       </strong>
-                      <p className="text-muted-foreground font-sans text-xs">
+                      <p className="text-muted-foreground font-sans text-[10px] sm:text-xs">
                         // {t("coherence.proposedDesc")}
                       </p>
                     </div>
@@ -122,56 +122,56 @@ export default function CoherenceSection() {
               </div>
 
               {/* Inline Alert Panel */}
-              <div className="border-t border-border bg-card p-6 lg:px-12 lg:py-8">
-                <div className="gemini-card rounded-xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
-                  <div className="flex items-start sm:items-center gap-4">
-                    <div className="p-2.5 bg-white/60 rounded-xl border border-white/60 text-muted-foreground shrink-0">
-                      <AlertCircle className="w-5 h-5" />
+              <div className="border-t border-border bg-card p-4 sm:p-6 lg:px-12 lg:py-8">
+                <div className="gemini-card rounded-xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-5">
+                  <div className="flex items-start sm:items-center gap-3 sm:gap-4 w-full">
+                    <div className="p-2 sm:p-2.5 bg-white/60 rounded-xl border border-white/60 text-muted-foreground shrink-0 mt-0.5 sm:mt-0">
+                      <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
-                    <div>
-                      <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-widest block mb-1">
+                    <div className="flex-1">
+                      <span className="text-[9px] sm:text-[10px] font-medium text-muted-foreground uppercase tracking-widest block mb-1">
                         {t("coherence.alertTag")}
                       </span>
-                      <strong className="text-sm sm:text-base font-medium text-foreground block">
+                      <strong className="text-xs sm:text-sm md:text-base font-medium text-foreground block">
                         {t("coherence.alertTitle")}
                       </strong>
                     </div>
                   </div>
-                  <div className="bg-white/80 border border-white/60 text-foreground text-[11px] font-medium px-4 py-2.5 rounded-lg whitespace-nowrap flex items-center gap-2 hover:bg-foreground hover:text-background transition-colors cursor-pointer">
-                    {t("coherence.alertDesc")}
-                    <ArrowRight className="w-3 h-3" />
+                  <div className="w-full sm:w-auto bg-white/80 border border-white/60 text-foreground text-[10px] sm:text-[11px] font-medium px-4 py-2.5 rounded-lg flex items-center justify-center gap-2 hover:bg-foreground hover:text-background transition-colors cursor-pointer shrink-0">
+                    <span className="truncate">{t("coherence.alertDesc")}</span>
+                    <ArrowRight className="w-3 h-3 shrink-0" />
                   </div>
                 </div>
               </div>
 
               {/* Impact Graph Footer (Redesigned) */}
-              <div className="bg-muted/20 border-t border-border p-8 lg:p-12 relative overflow-hidden">
+              <div className="bg-muted/20 border-t border-border p-5 sm:p-8 lg:p-12 relative overflow-hidden">
                 {/* Soft background glow */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
 
-                <div className="flex flex-col gap-6 relative z-10">
+                <div className="flex flex-col gap-4 sm:gap-6 relative z-10">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 bg-card rounded-lg border border-border text-primary">
+                    <div className="p-2 bg-card rounded-lg border border-border text-primary shrink-0">
                       <Workflow className="w-4 h-4" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest block mb-0.5">
+                      <span className="text-[9px] sm:text-[10px] font-semibold text-muted-foreground uppercase tracking-widest block mb-0.5">
                         {t("coherence.impactTag")}
                       </span>
-                      <strong className="text-sm font-medium text-foreground">
+                      <strong className="text-xs sm:text-sm font-medium text-foreground">
                         {t("coherence.impactTitle")}
                       </strong>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+                  <div className="flex flex-wrap gap-2 sm:gap-3">
                     {impactNodes.map((node, i) => (
                       <div
                         key={i}
-                        className="bg-card border border-border rounded-full p-3 pr-4 flex items-center gap-3 hover:border-primary transition-all cursor-default group/node justify-center"
+                        className="bg-card border border-border rounded-full p-2 px-3 sm:p-3 sm:pr-4 flex items-center gap-2 sm:gap-3 hover:border-primary transition-all cursor-default group/node"
                       >
-                        <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(37,99,235,0.6)]"></div>
-                        <span className="text-xs font-semibold text-foreground leading-tight">
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 shrink-0 rounded-full bg-primary shadow-[0_0_8px_rgba(37,99,235,0.6)]"></div>
+                        <span className="text-[10px] sm:text-xs font-semibold text-foreground leading-tight whitespace-nowrap">
                           {node}
                         </span>
                       </div>
