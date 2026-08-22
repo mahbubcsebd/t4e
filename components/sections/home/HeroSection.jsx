@@ -396,9 +396,10 @@ export default function HeroSection() {
                 )}
               </AnimatePresence>
             </div>
-            </div>
           </div>
         </div>
+        </div>
+      </div>
       </div>
 
       <VideoModal
