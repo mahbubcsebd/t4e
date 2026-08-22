@@ -165,7 +165,7 @@ export default function Header() {
             width={180}
             height={41}
             className={`w-auto object-contain invert dark:invert-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-              scrolled ? "h-8" : "h-[34px]"
+              scrolled ? "h-10" : "h-[46px]"
             }`}
             priority
           />
@@ -496,7 +496,9 @@ export default function Header() {
                 className="flex items-center justify-between text-[15px] font-semibold text-[#314865] w-full text-left py-2.5"
               >
                 <span>{t("nav.product", "Product")}</span>
-                <motion.div animate={{ rotate: mobileHowItWorksOpen ? 180 : 0 }}>
+                <motion.div
+                  animate={{ rotate: mobileHowItWorksOpen ? 180 : 0 }}
+                >
                   <ChevronDown className="w-4 h-4" />
                 </motion.div>
               </button>
@@ -510,13 +512,25 @@ export default function Header() {
                     className="overflow-hidden"
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
-                      <Link href="/how-it-works" onClick={() => setMobileMenuOpen(false)} className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors">
+                      <Link
+                        href="/how-it-works"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
                         {t("nav.howItWorks")}
                       </Link>
-                      <Link href="/code-to-design" onClick={() => setMobileMenuOpen(false)} className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors">
+                      <Link
+                        href="/code-to-design"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
                         {t("nav.codeToDesign")}
                       </Link>
-                      <Link href="/design-to-code" onClick={() => setMobileMenuOpen(false)} className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors">
+                      <Link
+                        href="/design-to-code"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
                         {t("nav.designToCode")}
                       </Link>
                     </div>
@@ -526,7 +540,11 @@ export default function Header() {
             </div>
 
             <div className="py-1">
-              <Link href="/integrations" onClick={() => setMobileMenuOpen(false)} className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5">
+              <Link
+                href="/integrations"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
+              >
                 {t("nav.integrations")}
               </Link>
             </div>
@@ -551,13 +569,25 @@ export default function Header() {
                     className="overflow-hidden"
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
-                      <Link href="/resources" onClick={() => setMobileMenuOpen(false)} className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors">
+                      <Link
+                        href="/resources"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
                         {t("nav.resourceLibrary")}
                       </Link>
-                      <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors">
+                      <Link
+                        href="/blog"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
                         {t("nav.blog")}
                       </Link>
-                      <Link href="/faq" onClick={() => setMobileMenuOpen(false)} className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors">
+                      <Link
+                        href="/faq"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
                         FAQ
                       </Link>
                     </div>
@@ -587,7 +617,14 @@ export default function Header() {
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       {docsLinks.map((doc, idx) => (
-                        <a key={idx} href={doc.href} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-between text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors">
+                        <a
+                          key={idx}
+                          href={doc.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="flex items-center justify-between text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
+                        >
                           <span>{doc.title}</span>
                           <ExternalLink className="w-3 h-3 opacity-50" />
                         </a>
@@ -599,19 +636,32 @@ export default function Header() {
             </div>
 
             <div className="py-1 mb-2">
-              <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5">
+              <Link
+                href="/pricing"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
+              >
                 {t("nav.pricing")}
               </Link>
             </div>
 
             <div className="pt-2 pb-2 grid grid-cols-2 gap-2">
               <Button asChild variant="outline" className="w-full text-center">
-                <a href="https://portal.think4ever.com/#/login" onClick={() => setMobileMenuOpen(false)}>
+                <a
+                  href="https://portal.think4ever.com/#/login"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
                   {t("nav.signIn")}
                 </a>
               </Button>
-              <Button asChild className="w-full text-center bg-[#093cad] hover:bg-[#093cad]/90 text-white">
-                <a href="https://portal.think4ever.com/#/register" onClick={() => setMobileMenuOpen(false)}>
+              <Button
+                asChild
+                className="w-full text-center bg-[#093cad] hover:bg-[#093cad]/90 text-white"
+              >
+                <a
+                  href="https://portal.think4ever.com/#/register"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
                   {t("nav.startFree")}
                 </a>
               </Button>
