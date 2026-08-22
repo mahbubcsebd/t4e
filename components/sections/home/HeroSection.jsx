@@ -79,7 +79,7 @@ export default function HeroSection() {
         </div>
 
         {/* The Massive Visual Block */}
-        <div className="p-5">
+        <div className="pb-8 md:pb-12 lg:pb-16 px-5 pt-4">
           <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
             <div className="w-full">
               <div className="gemini-card rounded-xl p-4 sm:p-6 md:p-8">
