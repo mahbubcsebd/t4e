@@ -26,7 +26,7 @@ export default function CoherenceSection() {
   ];
 
   return (
-    <section className="p-5" id="code-to-design">
+    <section className="py-8 md:py-12 lg:py-16" id="code-to-design">
       <SectionCard className="max-w-[1400px] mx-auto">
         <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
           <SectionHeading
