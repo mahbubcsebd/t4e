@@ -153,7 +153,7 @@ export default function Header() {
       }`}
     >
       <div
-        className={`max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        className={`max-w-[1440px] mx-auto px-5 flex items-center justify-between gap-4 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           scrolled ? "h-16" : "h-[76px]"
         }`}
       >
