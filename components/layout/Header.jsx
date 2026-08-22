@@ -164,7 +164,7 @@ export default function Header() {
             alt="Think4Ever"
             width={180}
             height={41}
-            className={`w-auto object-contain invert dark:invert-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            className={`w-auto object-contain transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               scrolled ? "h-10" : "h-[46px]"
             }`}
             priority
@@ -569,13 +569,7 @@ export default function Header() {
                     className="overflow-hidden"
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
-                      <Link
-                        href="/resources"
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        {t("nav.resourceLibrary")}
-                      </Link>
+                      {/* Resource Library link removed per request */}
                       <Link
                         href="/blog"
                         onClick={() => setMobileMenuOpen(false)}

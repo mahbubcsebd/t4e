@@ -67,7 +67,7 @@ export default function FaqAccordion() {
               return (
                 <div
                   key={idx}
-                  className={`bg-card/80 backdrop-blur-sm border rounded-2xl overflow-hidden transition-all duration-300 ${
+                  className={`bg-card/80 backdrop-blur-sm border rounded-xl overflow-hidden transition-all duration-300 ${
                     isOpen
                       ? "border-primary/40 shadow-primary/5"
                       : "border-border/60 hover:border-primary/30 hover:shadow-md hover:shadow-primary/5"
@@ -75,11 +75,11 @@ export default function FaqAccordion() {
                 >
                   <button
                     onClick={() => toggleItem(idx)}
-                    className="group w-full px-4 py-4 text-left flex items-center justify-between gap-4 font-medium text-base text-foreground hover:text-primary transition-colors"
+                    className="group w-full px-4 py-4 text-left flex items-center justify-between gap-4 font-medium text-sm sm:text-base text-foreground hover:text-primary transition-colors"
                   >
                     <span>{item.q}</span>
                     <div
-                      className={`flex items-center justify-center w-8 h-8 rounded-full transition-colors ${isOpen ? "bg-primary text-primary-foreground" : "bg-primary/10 text-primary group-hover:bg-primary/20"}`}
+                      className={`flex shrink-0 items-center justify-center min-w-8 h-8 rounded-full transition-colors ${isOpen ? "bg-primary text-primary-foreground" : "bg-primary/10 text-primary group-hover:bg-primary/20"}`}
                     >
                       <ChevronDown
                         className={`w-4 h-4 shrink-0 transition-transform duration-300 ${

@@ -65,7 +65,7 @@ export default function PricingTiers() {
             {plans.map((plan, idx) => (
               <div
                 key={idx}
-                className={`relative rounded-3xl p-6 flex flex-col justify-between transition-all duration-500 group hover:-translate-y-2 shadow-sm ${
+                className={`relative rounded-xl p-6 flex flex-col justify-between transition-all duration-500 group hover:-translate-y-2 shadow-sm ${
                   plan.featured
                     ? "bg-card border-2 border-primary/40 shadow-2xl shadow-primary/10"
                     : "bg-card/60 backdrop-blur-sm border border-border/60 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5"

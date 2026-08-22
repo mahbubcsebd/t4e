@@ -11,7 +11,7 @@ export default function CtaSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-8 md:py-12 lg:py-16 px-5" id="register">
+    <section className="py-8 md:py-12 lg:py-16" id="register">
       <SectionCard className="max-w-[1400px] mx-auto">
         <div className="bg-card rounded-xl p-8 md:p-12 w-full relative z-10 border border-border/50">
           <div className="max-w-3xl text-center mx-auto w-full">
