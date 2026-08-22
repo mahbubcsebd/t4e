@@ -25,7 +25,7 @@ export default function HowItWorksSection() {
       className="p-5"
       id="how-it-works"
     >
-      <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
+      <div className="bg-black/[0.02] dark:bg-white/[0.02] rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
         
         <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
         {/* Editorial Header */}
