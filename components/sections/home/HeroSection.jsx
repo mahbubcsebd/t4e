@@ -33,7 +33,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="py-12 md:py-18 lg:py-20 transition-colors duration-300">
+    <section className="pt-12 md:pt-18 lg:pt-20 pb-0 transition-colors duration-300">
       <div className="w-full">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto px-4 sm:px-6 mb-12 lg:mb-16 pt-8">
           {/* Eyebrow */}
