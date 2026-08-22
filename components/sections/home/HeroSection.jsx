@@ -82,7 +82,7 @@ export default function HeroSection() {
         <div className="p-5">
           <div className="bg-card rounded-xl border border-border overflow-hidden relative max-w-[1400px] mx-auto p-4 md:p-5">
             <div className="w-full">
-              <div className="rounded-xl border border-[#b8d9f8]/60 shadow-[0_8px_40px_rgba(100,149,237,0.12)] p-4 sm:p-6 md:p-8" style={{ background: 'linear-gradient(135deg, #c7dff7 0%, #dbeeff 40%, #eaf5ff 70%, #f0f8ff 100%)' }}>
+              <div className="gemini-card rounded-xl p-4 sm:p-6 md:p-8">
                 <div className="flex flex-col justify-between min-h-[460px] relative z-10 w-full">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-border pb-3 sm:pb-5 mb-4 sm:mb-8 relative z-10">
                 <div className="flex items-center bg-[#f0f4f9] p-1 sm:p-1.5 rounded-xl border border-border/50 w-full sm:w-auto overflow-x-auto hide-scrollbar">

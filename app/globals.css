@@ -125,9 +125,7 @@ button {
   background: #2563eb;
 }
 
-/* Gemini-style gradient card */
+/* Solid soft color card matching Cursor */
 .gemini-card {
-  background: linear-gradient(135deg, #c7dff7 0%, #dbeeff 40%, #eaf5ff 70%, #f0f8ff 100%);
-  border: 1px solid rgba(184, 217, 248, 0.6);
-  box-shadow: 0 8px 40px rgba(100, 149, 237, 0.12);
+  @apply bg-slate-50 dark:bg-slate-900/40 border border-border/80 shadow-sm;
 }
