@@ -127,5 +127,5 @@ button {
 
 /* Solid soft color card matching Cursor */
 .gemini-card {
-  @apply bg-slate-50 dark:bg-slate-900/40 border border-border/80 shadow-sm;
+  @apply bg-card border border-border/80 shadow-sm;
 }
