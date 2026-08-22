@@ -21,11 +21,10 @@ export default function ProblemSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-12 md:py-32 bg-background relative overflow-hidden border-b border-border">
-      {/* Background canvas elements */}
-      <div className="absolute inset-0 bg-background"></div>
-
-      <Container className="relative z-10">
+    <section className="px-4 sm:px-6 md:px-8 py-6">
+      <div className="bg-card rounded-[40px] border border-border shadow-sm overflow-hidden relative max-w-[1400px] mx-auto py-12 md:py-32">
+        <div className="absolute inset-0 bg-background z-0 pointer-events-none"></div>
+        <Container className="relative z-10">
         {/* Editorial Header */}
         <SectionHeading
           eyebrow={t("problem.eyebrow")}
@@ -269,7 +268,8 @@ export default function ProblemSection() {
             </div>
           </div>
         </div>
-      </Container>
+        </Container>
+      </div>
     </section>
   );
 }

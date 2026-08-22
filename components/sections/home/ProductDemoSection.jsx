@@ -17,10 +17,11 @@ export default function ProductDemoSection() {
 
   return (
     <section
-      className="py-20 md:py-28 bg-background border-b border-border transition-colors duration-300"
+      className="px-4 sm:px-6 md:px-8 py-6"
       id="resources"
     >
-      <Container>
+      <div className="bg-card rounded-[40px] border border-border shadow-sm overflow-hidden relative max-w-[1400px] mx-auto py-12 md:py-20 transition-colors duration-300">
+        <Container>
         {/* Clean card matching other sections */}
         <div className="gemini-card rounded-3xl p-8 sm:p-16 flex flex-col items-center justify-center gap-8 overflow-hidden relative text-center max-w-5xl mx-auto">
           {/* Subtle background watermark */}
@@ -65,7 +66,8 @@ export default function ProductDemoSection() {
             </div>
           </div>
         </div>
-      </Container>
+        </Container>
+      </div>
 
       <VideoModal
         isOpen={isVideoOpen}

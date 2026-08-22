@@ -26,10 +26,12 @@ export default function CoherenceSection() {
 
   return (
     <section
-      className="py-12 md:py-32 bg-background border-b border-border overflow-hidden relative"
+      className="px-4 sm:px-6 md:px-8 py-6"
       id="code-to-design"
     >
-      <Container className="relative z-10">
+      <div className="bg-card rounded-[40px] border border-border shadow-sm overflow-hidden relative max-w-[1400px] mx-auto py-12 md:py-32">
+        <div className="absolute inset-0 bg-background z-0 pointer-events-none"></div>
+        <Container className="relative z-10">
         <SectionHeading
           align="split"
           eyebrow={t('coherence.eyebrow')}
@@ -180,7 +182,8 @@ export default function CoherenceSection() {
             </div>
           </div>
         </div>
-      </Container>
+        </Container>
+      </div>
     </section>
   );
 }

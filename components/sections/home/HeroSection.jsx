@@ -33,8 +33,9 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="py-12 md:py-18 lg:py-20 border-b border-border overflow-hidden bg-background dark:bg-background transition-colors duration-300">
-      <Container>
+    <section className="px-4 sm:px-6 md:px-8 py-6">
+      <div className="bg-card rounded-[40px] border border-border shadow-sm overflow-hidden relative max-w-[1400px] mx-auto py-12 md:py-18 lg:py-20 transition-colors duration-300">
+        <Container>
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto mb-12 lg:mb-16 pt-8">
           {/* Eyebrow */}
           <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wide mb-6 border border-primary/30">
@@ -396,7 +397,8 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-      </Container>
+        </Container>
+      </div>
 
       <VideoModal
         isOpen={isVideoOpen}
