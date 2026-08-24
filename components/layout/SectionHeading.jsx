@@ -36,7 +36,7 @@ export default function SectionHeading({
           )}
           <h2
             className={cn(
-              "text-2xl sm:text-3xl md:text-[44px] font-extrabold text-foreground tracking-tight leading-[1.2]",
+              "text-2xl sm:text-3xl md:text-[42px] font-extrabold text-foreground tracking-tight leading-[1.2]",
               titleClassName,
             )}
           >
@@ -82,7 +82,7 @@ export default function SectionHeading({
         )}
         <h2
           className={cn(
-            "max-w-[500px] text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-4",
+            "max-w-[500px] text-2xl sm:text-3xl md:text-[42px] font-extrabold text-foreground tracking-tight mb-4",
             titleClassName,
           )}
         >
@@ -125,7 +125,7 @@ export default function SectionHeading({
       )}
       <h2
         className={cn(
-          "text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-4",
+          "text-2xl sm:text-3xl md:text-[42px] font-extrabold text-foreground tracking-tight mb-4",
           titleClassName,
         )}
       >
