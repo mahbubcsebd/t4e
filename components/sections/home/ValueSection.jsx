@@ -166,26 +166,26 @@ export default function ValueSection() {
           </div>
 
           {/* Compatibility (Coding Tools) - Full Width Below */}
-          <div className="mt-6 gemini-card rounded-xl p-8 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden group border border-border/50">
+          <div className="mt-6 gemini-card rounded-xl p-8 sm:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-16 relative overflow-hidden group border border-border/50">
             {/* Subtle background gradient */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-50/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
 
-            <div className="flex flex-col items-start gap-4 relative z-10 lg:w-1/3">
-              <div className="p-3 bg-primary text-background rounded-xl shadow-md shrink-0 group-hover:scale-110 transition-transform duration-500 mb-1">
-                <Terminal className="w-5 h-5" />
+            <div className="flex flex-col items-start gap-4 relative z-10 w-full lg:w-1/2">
+              <div className="p-3.5 bg-primary text-background rounded-xl shadow-md shrink-0 group-hover:scale-110 transition-transform duration-500 mb-1">
+                <Terminal className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
-                <strong className="text-xl font-medium text-foreground block mb-2 tracking-tight">
+                <strong className="text-xl sm:text-2xl font-bold text-foreground block mb-2 sm:mb-3 tracking-tight">
                   {t("values.compatTitle")}
                 </strong>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-lg">
                   {t("values.compatDesc")}
                 </p>
               </div>
             </div>
 
-            <div className="relative z-10 w-full lg:w-2/3 overflow-hidden flex items-center justify-end">
-              <CodingToolPills variant="light" className="justify-center lg:justify-end" />
+            <div className="relative z-10 w-full lg:w-1/2 flex items-center justify-center lg:justify-end">
+              <CodingToolPills variant="light" className="justify-center lg:justify-end gap-3 sm:gap-4" />
             </div>
           </div>
         </div>
