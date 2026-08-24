@@ -134,7 +134,7 @@ export default function SectionHeading({
       {subtitle && (
         <p
           className={cn(
-            "text-base text-muted-foreground leading-relaxed",
+            "text-lg text-muted-foreground leading-relaxed",
             subtitleClassName,
           )}
         >

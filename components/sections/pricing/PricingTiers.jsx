@@ -98,7 +98,7 @@ export default function PricingTiers() {
                     )}
                   </div>
 
-                  <p className="text-sm mb-8 leading-relaxed text-muted-foreground">
+                  <p className="text-base mb-8 leading-relaxed text-muted-foreground">
                     {plan.desc}
                   </p>
 

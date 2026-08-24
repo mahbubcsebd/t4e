@@ -39,7 +39,6 @@ export const BlogRecommendations = ({ posts, currentPostId }) => {
                 <span>{recommended.date}</span>
                 <span className="text-primary font-bold text-sm flex items-center gap-1.5 group-hover:translate-x-1 transition-transform duration-300">
                   {t("blogPage.readMore")}
-                  <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
             </div>

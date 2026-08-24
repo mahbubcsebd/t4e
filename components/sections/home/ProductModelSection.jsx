@@ -35,7 +35,7 @@ export default function ProductModelSection() {
                 {/* Perspective 1: Engineering */}
                 <div className="gemini-card rounded-xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                   {/* Connecting Line to Center */}
-                  <div className="absolute -right-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-primary transition-colors duration-500 origin-left"></div>
+                  <div className="absolute -right-[120px] top-1/2 w-[120px] border-t-2 border-dotted border-border/80 hidden lg:block z-[-1]"></div>
 
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-blue-50 rounded-xl text-primary border border-primary/20 shrink-0">
@@ -55,7 +55,7 @@ export default function ProductModelSection() {
                 {/* Perspective 3: Operations */}
                 <div className="gemini-card rounded-xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                   {/* Connecting Line to Center */}
-                  <div className="absolute -right-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-primary transition-colors duration-500 origin-left"></div>
+                  <div className="absolute -right-[120px] top-1/2 w-[120px] border-t-2 border-dotted border-border/80 hidden lg:block z-[-1]"></div>
 
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-blue-50 rounded-xl text-primary border border-primary/20 shrink-0">
@@ -110,7 +110,7 @@ export default function ProductModelSection() {
                 {/* Perspective 2: Product */}
                 <div className="gemini-card rounded-xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                   {/* Connecting Line to Center */}
-                  <div className="absolute -left-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-primary transition-colors duration-500 origin-right"></div>
+                  <div className="absolute -left-[120px] top-1/2 w-[120px] border-t-2 border-dotted border-border/80 hidden lg:block z-[-1]"></div>
 
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-blue-50 rounded-xl text-primary border border-primary/20 shrink-0">
@@ -130,7 +130,7 @@ export default function ProductModelSection() {
                 {/* Perspective 4: Business */}
                 <div className="gemini-card rounded-xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                   {/* Connecting Line to Center */}
-                  <div className="absolute -left-8 top-1/2 w-8 h-[2px] bg-gray-200 hidden lg:block group-hover:bg-primary transition-colors duration-500 origin-right"></div>
+                  <div className="absolute -left-[120px] top-1/2 w-[120px] border-t-2 border-dotted border-border/80 hidden lg:block z-[-1]"></div>
 
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-blue-50 rounded-xl text-primary border border-primary/20 shrink-0">

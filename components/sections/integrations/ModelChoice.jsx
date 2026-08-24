@@ -23,7 +23,7 @@ export default function ModelChoice() {
 
           <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 lg:gap-10 max-w-5xl mx-auto relative z-10 bg-white">
             {/* Card 1 */}
-            <div className="flex-1 shadow-sm relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-[2rem] p-8 sm:p-10 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 flex flex-col items-center text-center group overflow-hidden translate-y-0 hover:-translate-y-2">
+            <div className="flex-1 shadow-sm relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-xl p-8 sm:p-10 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 flex flex-col items-center text-center group overflow-hidden translate-y-0 hover:-translate-y-2">
               {/* Hover Gradient Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -37,7 +37,7 @@ export default function ModelChoice() {
                 <h3 className="text-2xl font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                   {t("integrationsPage.model1Title")}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/90 transition-colors duration-300 max-w-[300px]">
+                <p className="text-base text-muted-foreground leading-relaxed group-hover:text-foreground/90 transition-colors duration-300 max-w-[300px]">
                   {t("integrationsPage.model1Desc")}
                 </p>
               </div>
@@ -64,7 +64,7 @@ export default function ModelChoice() {
             </div>
 
             {/* Card 2 */}
-            <div className="flex-1 shadow-sm relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-[2rem] p-8 sm:p-10 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 flex flex-col items-center text-center group overflow-hidden translate-y-0 hover:-translate-y-2">
+            <div className="flex-1 shadow-sm relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-xl p-8 sm:p-10 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 flex flex-col items-center text-center group overflow-hidden translate-y-0 hover:-translate-y-2">
               <div className="relative z-10 flex flex-col items-center">
                 <div className="mb-6 p-5 rounded-full bg-blue-50  border border-primary/20 shadow-[0_0_30px_rgba(var(--primary),0.15)] group-hover:shadow-[0_0_40px_rgba(var(--primary),0.3)] transition-all duration-500 group-hover:scale-110">
                   <Cpu className="w-10 h-10 text-primary" />
@@ -75,7 +75,7 @@ export default function ModelChoice() {
                 <h3 className="text-2xl font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                   {t("integrationsPage.model2Title")}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/90 transition-colors duration-300 max-w-[300px]">
+                <p className="text-base text-muted-foreground leading-relaxed group-hover:text-foreground/90 transition-colors duration-300 max-w-[300px]">
                   {t("integrationsPage.model2Desc")}
                 </p>
               </div>

@@ -52,7 +52,7 @@ export default function TwoWaysIn() {
                 <h3 className="text-xl sm:text-2xl font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                   {t("howItWorksPage.path1Title")}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-8 flex-grow group-hover:text-foreground/90 transition-colors duration-300">
+                <p className="text-base text-muted-foreground leading-relaxed mb-8 flex-grow group-hover:text-foreground/90 transition-colors duration-300">
                   {t("howItWorksPage.path1Desc")}
                 </p>
 
@@ -118,7 +118,7 @@ export default function TwoWaysIn() {
                 <h3 className="text-xl sm:text-2xl font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                   {t("howItWorksPage.path2Title")}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-8 flex-grow group-hover:text-foreground/90 transition-colors duration-300">
+                <p className="text-base text-muted-foreground leading-relaxed mb-8 flex-grow group-hover:text-foreground/90 transition-colors duration-300">
                   {t("howItWorksPage.path2Desc")}
                 </p>
 

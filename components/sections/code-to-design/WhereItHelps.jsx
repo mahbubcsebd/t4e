@@ -70,7 +70,7 @@ export default function WhereItHelps() {
                     <h3 className="text-xl font-bold text-foreground mb-3 leading-snug group-hover:text-primary transition-colors duration-300">
                       {c.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
+                    <p className="text-base text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
                       {c.desc}
                     </p>
                   </div>

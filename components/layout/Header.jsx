@@ -366,7 +366,7 @@ export default function Header() {
             </button>
 
             <div
-              className={`absolute right-0 top-full mt-1 w-36 bg-popover rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-border py-2 z-50 transition-all duration-200 ${
+              className={`absolute right-0 top-full mt-1 w-36 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-border py-2 z-50 transition-all duration-200 ${
                 langDropdownOpen
                   ? "opacity-100 visible translate-y-0"
                   : "opacity-0 invisible -translate-y-2"
