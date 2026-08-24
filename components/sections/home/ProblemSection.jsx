@@ -87,7 +87,7 @@ export default function ProblemSection() {
               <div className="min-h-[280px] bg-slate-50/50 border-b border-border/50 relative p-6 flex flex-col items-center justify-center overflow-hidden">
                 <div className="flex flex-col gap-4 relative z-10 w-full max-w-[200px]">
                   {/* Vertical line connecting them */}
-                  <div className="absolute left-[24px] top-[24px] bottom-[24px] w-[2px] bg-gradient-to-b from-blue-200 via-indigo-200 to-slate-200 z-0"></div>
+                  <div className="absolute left-[29px] top-[24px] bottom-[24px] w-[2px] bg-gradient-to-b from-blue-200 via-indigo-200 to-slate-200 z-0"></div>
                   
                   {/* Layer 1: Code */}
                   <div className="bg-card border border-border rounded-xl p-3 flex items-center gap-3 relative z-10 shadow-sm group-hover:translate-x-2 transition-transform duration-500">
