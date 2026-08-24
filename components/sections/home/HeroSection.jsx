@@ -2,6 +2,7 @@
 
 import VideoModal from "@/components/ui/VideoModal";
 import SectionCard from "@/components/layout/SectionCard";
+import CodingToolPills from "@/components/ui/CodingToolPills";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
 import { AnimatePresence, motion } from "framer-motion";
@@ -33,7 +34,7 @@ export default function HeroSection() {
           </span>
 
           {/* Main Headline */}
-          <h1 className="text-muted-foregroundxl sm:text-muted-foregroundxl text-[32px] leading-[38px] md:text-[56px] lg:text-[64px] font-extrabold tracking-tight text-foreground md:leading-[1.05] mb-6">
+          <h1 className="text-[32px] leading-[38px] md:text-[56px] lg:text-[64px] font-extrabold tracking-tight text-foreground md:leading-[1.05] mb-6">
             {t("hero.titlePrefix")}
             <br className="hidden md:block" />
             <span className="text-primary"> {t("hero.titleHighlight")}</span>
@@ -61,6 +62,14 @@ export default function HeroSection() {
             >
               {t("hero.ctaSecondary")}
             </Button>
+          </div>
+
+          {/* Integrations */}
+          <div className="mt-4 md:mt-6 flex flex-col items-center pt-6 border-t border-border/40 w-full max-w-2xl mx-auto">
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-4">
+              Integrations
+            </span>
+            <CodingToolPills variant="light" />
           </div>
         </div>
 

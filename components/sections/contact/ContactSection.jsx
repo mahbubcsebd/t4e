@@ -19,9 +19,9 @@ export default function ContactSection() {
           <span className="inline-block text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-3">
             {t("contact.eyebrow")}
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-6">
+          <h2 className="max-w-[800px] mx-auto text-[32px] leading-[38px] md:text-[56px] lg:text-[64px] font-extrabold text-foreground tracking-tight md:leading-[1.05] mb-6">
             {t("contact.titlePrefix")}
-            <span className="text-gradient decoration-[#07A7E1]/30">
+            <span className="text-primary">
               {t("contact.titleHighlight")}
             </span>
           </h2>

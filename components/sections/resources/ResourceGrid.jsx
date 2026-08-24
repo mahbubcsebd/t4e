@@ -22,9 +22,9 @@ export default function ResourceGrid() {
           <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
             {t("resourcesPage.heroEyebrow")}
           </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-4">
+          <h1 className="max-w-[800px] mx-auto text-[32px] leading-[38px] md:text-[56px] lg:text-[64px] font-extrabold text-foreground tracking-tight md:leading-[1.05] mb-4">
             {t("resourcesPage.heroTitlePrefix")}
-            <span className="text-gradient decoration-[#07A7E1]/30">
+            <span className="text-primary">
               {t("resourcesPage.heroTitleHighlight")}
             </span>
           </h1>

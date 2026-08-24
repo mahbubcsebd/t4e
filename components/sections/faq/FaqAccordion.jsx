@@ -30,9 +30,9 @@ export default function FaqAccordion() {
             {t("faqPage.heroEyebrow")}
           </span>
 
-          <h1 className="max-w-[550px] mx-auto text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-6">
+          <h1 className="max-w-[800px] mx-auto text-[32px] leading-[38px] md:text-[56px] lg:text-[64px] font-extrabold text-foreground tracking-tight md:leading-[1.05] mb-6">
             {t("faqPage.heroTitlePrefix")}
-            <span className="text-primary decoration-[#07A7E1]/30">
+            <span className="text-primary">
               {t("faqPage.heroTitleHighlight")}
             </span>
           </h1>
