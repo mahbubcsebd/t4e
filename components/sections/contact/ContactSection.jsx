@@ -12,7 +12,7 @@ export default function ContactSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-8 md:py-12 lg:py-16" id="contact">
+    <section className="py-12 md:py-16 lg:py-24 bg-background border-b border-border" id="contact">
       <SectionCard>
         <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
           <div className="text-center">
