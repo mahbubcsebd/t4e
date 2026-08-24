@@ -18,7 +18,7 @@ export default function HowItWorksSection() {
 
   return (
     <section className="py-8 md:py-12 lg:py-16" id="how-it-works">
-      <SectionCard className="max-w-[1400px] mx-auto">
+      <SectionCard className="max-w-[1600px] mx-auto">
         <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
           {/* Editorial Header */}
           <SectionHeading
@@ -29,17 +29,17 @@ export default function HowItWorksSection() {
           {/* Workflow Pipeline */}
           <div className="relative">
             {/* Horizontal connection line (Desktop) */}
-            <div className="hidden lg:block absolute top-[120px] left-[15%] right-[15%] border-t-2 border-dashed border-border z-0">
+            <div className="hidden lg:block absolute top-[90px] left-[15%] right-[15%] border-t-2 border-dashed border-border z-0">
               {/* Animated particle moving across */}
               <div className="absolute top-[-5px] left-0 w-2 h-2 rounded-full bg-primary shadow-[0_0_12px_#093cad] animate-[slide_4s_ease-in-out_infinite]"></div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-6 relative z-10">
               {/* STEP 1: Connect */}
               <div className="relative group">
                 <div className="gemini-card rounded-xl overflow-hidden hover:-translate-y-1 transition-transform duration-500 flex flex-col h-full">
                   {/* Visual Container */}
-                  <div className="h-[240px] bg-white/40 border-b border-white/40 flex items-center justify-center p-6 relative overflow-hidden">
+                  <div className="h-[180px] bg-white/40 border-b border-white/40 flex items-center justify-center p-4 relative overflow-hidden">
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,60,173,0.05)_0%,transparent_70%)]"></div>
 
                     {/* Connect Micro UI */}
@@ -72,8 +72,8 @@ export default function HowItWorksSection() {
                     </div>
                   </div>
                   {/* Content */}
-                  <div className="p-6 md:p-8 flex flex-col flex-1">
-                    <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest mb-3">
+                  <div className="p-5 md:p-6 flex flex-col flex-1">
+                    <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest mb-2">
                       {t("howItWorks.step1Num")}
                     </span>
                     <h3 className="text-xl font-bold text-foreground mb-3">
@@ -90,7 +90,7 @@ export default function HowItWorksSection() {
               <div className="relative group">
                 <div className="gemini-card rounded-xl overflow-hidden hover:-translate-y-1 transition-transform duration-500 flex flex-col h-full">
                   {/* Visual Container */}
-                  <div className="h-[240px] bg-white/40 border-b border-white/40 flex items-center justify-center p-6 relative overflow-hidden">
+                  <div className="h-[180px] bg-white/40 border-b border-white/40 flex items-center justify-center p-4 relative overflow-hidden">
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,60,173,0.05)_0%,transparent_70%)]"></div>
 
                     {/* Review Micro UI (Node Graph) */}
@@ -149,8 +149,8 @@ export default function HowItWorksSection() {
                     </div>
                   </div>
                   {/* Content */}
-                  <div className="p-6 md:p-8 flex flex-col flex-1">
-                    <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest mb-3">
+                  <div className="p-5 md:p-6 flex flex-col flex-1">
+                    <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest mb-2">
                       {t("howItWorks.step2Num")}
                     </span>
                     <h3 className="text-xl font-bold text-foreground mb-3">
@@ -167,7 +167,7 @@ export default function HowItWorksSection() {
               <div className="relative group">
                 <div className="gemini-card rounded-xl overflow-hidden hover:-translate-y-1 transition-transform duration-500 flex flex-col h-full">
                   {/* Visual Container */}
-                  <div className="h-[240px] bg-white/40 border-b border-white/40 flex items-center justify-center p-6 relative overflow-hidden">
+                  <div className="h-[180px] bg-white/40 border-b border-white/40 flex items-center justify-center p-4 relative overflow-hidden">
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,60,173,0.05)_0%,transparent_70%)]"></div>
 
                     {/* Change Micro UI (Agent Interface) */}
@@ -209,8 +209,8 @@ export default function HowItWorksSection() {
                     </div>
                   </div>
                   {/* Content */}
-                  <div className="p-6 md:p-8 flex flex-col flex-1">
-                    <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest mb-3">
+                  <div className="p-5 md:p-6 flex flex-col flex-1">
+                    <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest mb-2">
                       {t("howItWorks.step3Num")}
                     </span>
                     <h3 className="text-xl font-bold text-foreground mb-3">

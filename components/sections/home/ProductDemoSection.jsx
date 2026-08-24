@@ -14,7 +14,7 @@ export default function ProductDemoSection() {
 
   return (
     <section className="py-8 md:py-12 lg:py-16" id="resources">
-      <SectionCard className="max-w-[1400px] mx-auto">
+      <SectionCard className="max-w-[1600px] mx-auto">
         <div className="w-full">
           {/* Clean card matching other sections */}
           <div className="gemini-card rounded-xl p-8 sm:p-16 flex flex-col items-center justify-center gap-8 overflow-hidden relative text-center w-full">

@@ -11,10 +11,10 @@ const tools = [
   { name: "MCP Clients", icon: Network },
 ];
 
-export default function CodingToolPills({ variant = "light" }) {
+export default function CodingToolPills({ variant = "light", className = "" }) {
   if (variant === "dark") {
     return (
-      <div className="flex flex-wrap justify-center items-center gap-4 max-w-4xl mx-auto">
+      <div className={`flex flex-wrap items-center gap-4 max-w-4xl mx-auto ${className || "justify-center"}`}>
         {tools.map((tool, i) => (
           <div
             key={i}
@@ -32,7 +32,7 @@ export default function CodingToolPills({ variant = "light" }) {
 
   // default 'light'
   return (
-    <div className="flex flex-wrap items-center justify-center gap-3">
+    <div className={`flex flex-wrap items-center gap-3 ${className || "justify-center"}`}>
       {tools.map((tool, i) => (
         <div
           key={i}
