@@ -56,6 +56,7 @@ export default function CoherenceSection() {
                   <div className="w-3 h-3 rounded-full bg-border group-hover:bg-rose-400 transition-colors"></div>
                   <div className="w-3 h-3 rounded-full bg-border group-hover:bg-amber-400 transition-colors delay-75"></div>
                   <div className="w-3 h-3 rounded-full bg-border group-hover:bg-emerald-400 transition-colors delay-150"></div>
+                </div>
                 <div className="w-12"></div> {/* Spacer for centering */}
               </div>
 
