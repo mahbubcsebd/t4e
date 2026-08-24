@@ -25,32 +25,32 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="pt-12 md:pt-18 lg:pt-20 pb-0 transition-colors duration-300">
+    <section className="pt-8 lg:pt-10 pb-0 transition-colors duration-300">
       <div className="w-full">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 mb-12 lg:mb-16 pt-8">
-          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 mb-8 lg:mb-10 pt-4">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-10">
             
             {/* Left Column: Hero Text */}
             <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left w-full max-w-2xl mx-auto lg:max-w-none">
               {/* Eyebrow */}
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wide mb-6 border border-primary/30">
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wide mb-4 border border-primary/30">
                 {t("hero.eyebrow")}
               </span>
 
               {/* Main Headline */}
-              <h1 className="text-[36px] leading-[1.1] md:text-[56px] lg:text-[68px] font-extrabold tracking-tight text-foreground mb-6">
+              <h1 className="text-[32px] leading-[1.1] md:text-[48px] lg:text-[52px] xl:text-[58px] font-extrabold tracking-tight text-foreground mb-4">
                 {t("hero.titlePrefix")}
                 <br className="hidden md:block" />
                 <span className="text-primary"> {t("hero.titleHighlight")}</span>
               </h1>
 
               {/* Subtitle */}
-              <p className="max-w-[600px] text-lg sm:text-xl text-muted-foreground/90 font-normal leading-relaxed mb-10">
+              <p className="max-w-[600px] text-base sm:text-lg text-muted-foreground/90 font-normal leading-relaxed mb-6">
                 {t("hero.subtitle")}
               </p>
 
               {/* Hero CTAs */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 w-full sm:w-auto mb-6">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 w-full sm:w-auto mb-4">
                 <Button asChild className="w-full sm:w-auto">
                   <Link href="https://portal.think4ever.com/#/register">
                     {t("hero.ctaPrimary")}
@@ -69,9 +69,9 @@ export default function HeroSection() {
               </div>
 
               {/* Integrations */}
-              <div className="mt-10 pt-6 flex flex-col items-center lg:items-start w-full">
-                <div className="w-12 h-[1px] bg-border mb-6"></div>
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-4">
+              <div className="mt-6 pt-4 flex flex-col items-center lg:items-start w-full">
+                <div className="w-12 h-[1px] bg-border mb-4"></div>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-3">
                   Integrations
                 </span>
                 <CodingToolPills variant="light" className="justify-center lg:justify-start" />
@@ -79,13 +79,13 @@ export default function HeroSection() {
             </div>
 
             {/* Right Column: The Visual Block */}
-            <div className="flex-[1.2] w-full mt-10 lg:mt-0">
+            <div className="flex-[1.2] w-full mt-8 lg:mt-0">
               <SectionCard className="w-full">
                 <div className="w-full">
-                  <div className="gemini-card rounded-xl p-4 sm:p-6 md:p-8">
+                  <div className="gemini-card rounded-xl p-4 sm:p-5">
                     <div className="flex flex-col justify-between relative z-10 w-full">
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-border pb-3 sm:pb-5 mb-4 sm:mb-8 relative z-10">
-                        <div className="flex items-center bg-[#f0f4f9] p-1 sm:p-1.5 rounded-xl border border-border/50 w-full sm:w-auto overflow-x-auto hide-scrollbar">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-border pb-3 sm:pb-4 mb-4 relative z-10">
+                        <div className="flex items-center bg-[#f0f4f9] p-1 rounded-xl border border-border/50 w-full sm:w-auto overflow-x-auto hide-scrollbar">
                       <button
                         onClick={() => setActiveScene(1)}
                         style={{ WebkitTapHighlightColor: "transparent" }}
@@ -132,17 +132,17 @@ export default function HeroSection() {
                       }}
                       transition={{ duration: 0.4 }}
                     >
-                        <div className="text-center mb-8">
-                          <span className="inline-block text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                        <div className="text-center mb-4">
+                          <span className="inline-block text-[10px] sm:text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                             {t("hero.cardOneBadge")}
                           </span>
-                          <h3 className="text-2xl font-bold text-foreground mt-3">
+                          <h3 className="text-lg sm:text-xl font-bold text-foreground mt-2">
                             {t("hero.cardOneTitle")}
                           </h3>
                         </div>
 
                         {/* Stage diagram */}
-                        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-0 items-center bg-[#f0f4f9] p-4 sm:p-8 rounded-xl border border-border/40 relative max-w-4xl mx-auto w-full dark:bg-card/50 dark:border-border">
+                        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-2 md:gap-0 items-center bg-[#f0f4f9] p-4 sm:p-5 rounded-xl border border-border/40 relative max-w-4xl mx-auto w-full dark:bg-card/50 dark:border-border">
                           <motion.div
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -170,7 +170,7 @@ export default function HeroSection() {
                           </motion.div>
 
                           {/* Central Interactive Play Button Connection */}
-                          <div className="flex items-center justify-center relative py-4 md:py-0 md:px-8 w-full md:w-32 h-full">
+                          <div className="flex items-center justify-center relative py-3 md:py-0 md:px-4 w-full md:w-24 h-full">
                             <motion.div
                               initial={{ scaleX: 0, opacity: 0 }}
                               animate={{ scaleX: 1, opacity: 1 }}
@@ -216,11 +216,11 @@ export default function HeroSection() {
                                 setVideoId("FY68DuwOf4Q");
                                 setIsVideoOpen(true);
                               }}
-                              className="relative z-20 group flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-primary rounded-full shadow-lg border-4 border-background hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
+                              className="relative z-20 group flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-full shadow-lg border-4 border-background hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
                               aria-label={t("hero.watchDemo")}
                             >
                               <Play
-                                className="w-4 h-4 sm:w-6 sm:h-6 text-white ml-1"
+                                className="w-3 h-3 sm:w-4 sm:h-4 text-white ml-1"
                                 fill="currentColor"
                               />
                             </motion.button>
@@ -262,7 +262,7 @@ export default function HeroSection() {
                           </motion.div>
                         </div>
 
-                        <div className="mt-8 flex justify-center text-[13px] font-medium text-muted-foreground">
+                        <div className="mt-4 flex justify-center text-[12px] sm:text-[13px] font-medium text-muted-foreground">
                           <span>{t("hero.cardOneFooter")}</span>
                         </div>
                     </motion.div>
@@ -277,17 +277,17 @@ export default function HeroSection() {
                       }}
                       transition={{ duration: 0.4 }}
                     >
-                        <div className="text-center mb-8">
-                          <span className="inline-block text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                        <div className="text-center mb-4">
+                          <span className="inline-block text-[10px] sm:text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                             {t("hero.cardTwoBadge")}
                           </span>
-                          <h3 className="text-2xl font-bold text-foreground mt-3">
+                          <h3 className="text-lg sm:text-xl font-bold text-foreground mt-2">
                             {t("hero.cardTwoTitle")}
                           </h3>
                         </div>
 
                         {/* Stage diagram */}
-                        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-0 items-center bg-[#f0f4f9] p-4 sm:p-8 rounded-xl border border-border/40 relative max-w-4xl mx-auto w-full dark:bg-card/50 dark:border-border">
+                        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-2 md:gap-0 items-center bg-[#f0f4f9] p-4 sm:p-5 rounded-xl border border-border/40 relative max-w-4xl mx-auto w-full dark:bg-card/50 dark:border-border">
                           <motion.div
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -310,7 +310,7 @@ export default function HeroSection() {
                           </motion.div>
 
                           {/* Central Interactive Play Button Connection */}
-                          <div className="flex items-center justify-center relative py-4 md:py-0 md:px-8 w-full md:w-32 h-full">
+                          <div className="flex items-center justify-center relative py-3 md:py-0 md:px-4 w-full md:w-24 h-full">
                             <motion.div
                               initial={{ scaleX: 0, opacity: 0 }}
                               animate={{ scaleX: 1, opacity: 1 }}
@@ -356,11 +356,11 @@ export default function HeroSection() {
                                 setVideoId("Lq-vza9_CzI");
                                 setIsVideoOpen(true);
                               }}
-                              className="relative z-20 group flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-primary rounded-full shadow-lg border-4 border-background hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
+                              className="relative z-20 group flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-full shadow-lg border-4 border-background hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
                               aria-label={t("hero.watchDemo")}
                             >
                               <Play
-                                className="w-4 h-4 sm:w-6 sm:h-6 text-white ml-1"
+                                className="w-3 h-3 sm:w-4 sm:h-4 text-white ml-1"
                                 fill="currentColor"
                               />
                             </motion.button>
@@ -392,7 +392,7 @@ export default function HeroSection() {
                           </motion.div>
                         </div>
 
-                        <div className="mt-8 flex justify-center text-[13px] font-medium text-muted-foreground">
+                        <div className="mt-4 flex justify-center text-[12px] sm:text-[13px] font-medium text-muted-foreground">
                           <span>{t("hero.cardTwoFooter")}</span>
                         </div>
                     </motion.div>
