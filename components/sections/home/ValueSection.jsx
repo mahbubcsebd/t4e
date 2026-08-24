@@ -25,10 +25,8 @@ export default function ValueSection() {
     <section className="py-8 md:py-12 lg:py-16">
       <SectionCard className="max-w-[1600px] mx-auto">
         <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
-          {/* Bento Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            {/* Left Column (Clarity & Compatibility) */}
-            <div className="lg:col-span-8 flex flex-col gap-6">
+          {/* 3 Column Grid for Core Values */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Card 1: Clarity */}
               <div className="flex-1 gemini-card rounded-xl overflow-hidden flex flex-col group">
                 {/* Large Visual Canvas */}
@@ -101,33 +99,6 @@ export default function ValueSection() {
                   </p>
                 </div>
               </div>
-
-              <div className="gemini-card rounded-xl p-8 flex flex-col items-center text-center justify-center gap-8 relative overflow-hidden group">
-                {/* Subtle background gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-
-                <div className="flex flex-col items-center gap-4 relative z-10 w-full max-w-xl">
-                  <div className="p-4 bg-primary text-background rounded-xl shadow-xl shadow-black/10 shrink-0 group-hover:scale-110 transition-transform duration-500 mb-2">
-                    <Terminal className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <strong className="text-xl sm:text-2xl font-medium text-foreground block mb-2 tracking-tight">
-                      {t("values.compatTitle")}
-                    </strong>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {t("values.compatDesc")}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="relative z-10 w-full overflow-x-auto hide-scrollbar pb-2 xl:pb-0">
-                  <CodingToolPills variant="light" />
-                </div>
-              </div>
-            </div>
-
-            {/* Cards 2 & 3: Coherence & Control (Right Column) */}
-            <div className="lg:col-span-4 flex flex-col gap-6">
               {/* Card 2: Coherence */}
               <div className="flex-1 gemini-card rounded-xl overflow-hidden flex flex-col group">
                 <div className="h-40 bg-white/40 relative overflow-hidden flex items-center justify-center p-4 border-b border-white/40">
@@ -193,6 +164,29 @@ export default function ValueSection() {
                   </p>
                 </div>
               </div>
+          </div>
+
+          {/* Compatibility (Coding Tools) - Full Width Below */}
+          <div className="mt-6 gemini-card rounded-xl p-8 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden group border border-border/50">
+            {/* Subtle background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+
+            <div className="flex flex-col items-start gap-4 relative z-10 lg:w-1/3">
+              <div className="p-3 bg-primary text-background rounded-xl shadow-md shrink-0 group-hover:scale-110 transition-transform duration-500 mb-1">
+                <Terminal className="w-5 h-5" />
+              </div>
+              <div>
+                <strong className="text-xl font-medium text-foreground block mb-2 tracking-tight">
+                  {t("values.compatTitle")}
+                </strong>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {t("values.compatDesc")}
+                </p>
+              </div>
+            </div>
+
+            <div className="relative z-10 w-full lg:w-2/3 overflow-hidden flex items-center justify-end">
+              <CodingToolPills variant="light" className="justify-center lg:justify-end" />
             </div>
           </div>
         </div>

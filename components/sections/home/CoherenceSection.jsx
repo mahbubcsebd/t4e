@@ -56,10 +56,6 @@ export default function CoherenceSection() {
                   <div className="w-3 h-3 rounded-full bg-border group-hover:bg-rose-400 transition-colors"></div>
                   <div className="w-3 h-3 rounded-full bg-border group-hover:bg-amber-400 transition-colors delay-75"></div>
                   <div className="w-3 h-3 rounded-full bg-border group-hover:bg-emerald-400 transition-colors delay-150"></div>
-                </div>
-                <div className="text-[10px] font-semibold text-muted-foreground font-mono tracking-wider">
-                  coherence-engine.ts
-                </div>
                 <div className="w-12"></div> {/* Spacer for centering */}
               </div>
 
@@ -99,33 +95,33 @@ export default function CoherenceSection() {
                   </div>
                 </div>
 
-                {/* Right: Proposed Implementation (Light Theme) */}
-                <div className="flex-1 p-5 sm:p-8 lg:p-12 bg-gradient-to-bl from-muted/40 to-transparent flex flex-col">
+                {/* Right: Proposed Implementation (Error Theme) */}
+                <div className="flex-1 p-5 sm:p-8 lg:p-12 bg-gradient-to-bl from-red-50 to-transparent flex flex-col border-t lg:border-t-0 border-border lg:border-none">
                   <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                    <div className="p-2 bg-muted text-muted-foreground rounded-lg shrink-0">
+                    <div className="p-2 bg-red-100 text-red-600 rounded-lg shrink-0 border border-red-200">
                       <GitPullRequest className="w-4 h-4" />
                     </div>
-                    <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-widest leading-tight">
+                    <span className="text-[10px] font-bold text-red-600 uppercase tracking-widest leading-tight">
                       {t("coherence.proposedTag")}
                     </span>
                   </div>
 
-                  <div className="gemini-card rounded-xl p-5 sm:p-6 font-mono relative group-hover:-translate-y-1 transition-transform duration-500 delay-75 flex-1 border !border-red-500 shadow-sm shadow-red-500/5">
+                  <div className="gemini-card bg-red-50/50 rounded-xl p-5 sm:p-6 font-mono relative group-hover:-translate-y-1 transition-transform duration-500 delay-75 flex-1 border !border-red-500 shadow-sm shadow-red-500/10">
                     <div className="absolute -top-3 -right-3 bg-white text-red-500 border-2 border-red-500 rounded-full p-0.5 shadow-md z-20">
                       <X className="w-3.5 h-3.5" strokeWidth={3} />
                     </div>
                     {/* Subtle frosted glass tint for diff */}
                     <div className="absolute inset-0 bg-white/40 pointer-events-none rounded-xl"></div>
 
-                    <div className="flex items-center gap-2 sm:gap-4 text-[10px] sm:text-[11px] text-muted-foreground mb-3 tracking-wider uppercase font-sans font-medium break-all">
+                    <div className="flex items-center gap-2 sm:gap-4 text-[10px] sm:text-[11px] text-red-700/70 mb-3 tracking-wider uppercase font-sans font-medium break-all">
                       <span>src/config/policy.ts</span>
                     </div>
 
-                    <div className="relative pl-3 sm:pl-4 border-l-2 border-border text-xs sm:text-sm">
-                      <strong className="text-foreground block mb-2 sm:mb-3 leading-relaxed">
+                    <div className="relative pl-3 sm:pl-4 border-l-2 border-red-300 text-xs sm:text-sm">
+                      <strong className="text-red-900 block mb-2 sm:mb-3 leading-relaxed">
                         {t("coherence.proposedTitle")}
                       </strong>
-                      <p className="text-muted-foreground font-sans text-[10px] sm:text-xs">
+                      <p className="text-red-700/80 font-sans text-[10px] sm:text-xs">
                         // {t("coherence.proposedDesc")}
                       </p>
                     </div>
