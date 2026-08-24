@@ -69,7 +69,7 @@ export default function HeroSection() {
           <SectionCard className="max-w-[1400px] mx-auto">
             <div className="w-full">
               <div className="gemini-card rounded-xl p-4 sm:p-6 md:p-8">
-                <div className="flex flex-col justify-between h-[850px] sm:h-[700px] md:h-[600px] lg:h-[550px] relative z-10 w-full">
+                <div className="flex flex-col justify-between relative z-10 w-full">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-border pb-3 sm:pb-5 mb-4 sm:mb-8 relative z-10">
                     <div className="flex items-center bg-[#f0f4f9] p-1 sm:p-1.5 rounded-xl border border-border/50 w-full sm:w-auto overflow-x-auto hide-scrollbar">
                       <button
@@ -106,17 +106,18 @@ export default function HeroSection() {
                     </div>
                   </div>
 
-                  {/* Animated Content Scene */}
-                  <AnimatePresence mode="wait">
-                    {activeScene === 1 ? (
-                      <motion.div
-                        key="scene1"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="flex-1 flex flex-col justify-between relative z-10"
-                      >
+                  {/* Animated Content Scene (Grid Stack for Auto Height) */}
+                  <div className="grid w-full relative">
+                    <motion.div
+                      className="col-start-1 row-start-1 flex-1 flex flex-col justify-between relative z-10"
+                      initial={false}
+                      animate={{ 
+                        opacity: activeScene === 1 ? 1 : 0, 
+                        pointerEvents: activeScene === 1 ? "auto" : "none",
+                        zIndex: activeScene === 1 ? 20 : 0
+                      }}
+                      transition={{ duration: 0.4 }}
+                    >
                         <div className="text-center mb-8">
                           <span className="inline-block text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                             {t("hero.cardOneBadge")}
@@ -250,16 +251,18 @@ export default function HeroSection() {
                         <div className="mt-8 flex justify-center text-[13px] font-medium text-muted-foreground">
                           <span>{t("hero.cardOneFooter")}</span>
                         </div>
-                      </motion.div>
-                    ) : (
-                      <motion.div
-                        key="scene2"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="flex-1 flex flex-col justify-between relative z-10"
-                      >
+                    </motion.div>
+
+                    <motion.div
+                      className="col-start-1 row-start-1 flex-1 flex flex-col justify-between relative z-10"
+                      initial={false}
+                      animate={{ 
+                        opacity: activeScene === 2 ? 1 : 0, 
+                        pointerEvents: activeScene === 2 ? "auto" : "none",
+                        zIndex: activeScene === 2 ? 20 : 0
+                      }}
+                      transition={{ duration: 0.4 }}
+                    >
                         <div className="text-center mb-8">
                           <span className="inline-block text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                             {t("hero.cardTwoBadge")}
@@ -378,9 +381,8 @@ export default function HeroSection() {
                         <div className="mt-8 flex justify-center text-[13px] font-medium text-muted-foreground">
                           <span>{t("hero.cardTwoFooter")}</span>
                         </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                    </motion.div>
+                  </div>
                 </div>
               </div>
             </div>
