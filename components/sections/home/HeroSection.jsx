@@ -2,6 +2,7 @@
 
 import VideoModal from "@/components/ui/VideoModal";
 import SectionCard from "@/components/layout/SectionCard";
+import CodingToolPills from "@/components/ui/CodingToolPills";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
 import { AnimatePresence, motion } from "framer-motion";
@@ -33,7 +34,7 @@ export default function HeroSection() {
           </span>
 
           {/* Main Headline */}
-          <h1 className="text-muted-foregroundxl sm:text-muted-foregroundxl text-[32px] leading-[38px] md:text-[56px] lg:text-[64px] font-extrabold tracking-tight text-foreground md:leading-[1.05] mb-6">
+          <h1 className="text-[32px] leading-[38px] md:text-[56px] lg:text-[64px] font-extrabold tracking-tight text-foreground md:leading-[1.05] mb-6">
             {t("hero.titlePrefix")}
             <br className="hidden md:block" />
             <span className="text-primary"> {t("hero.titleHighlight")}</span>
@@ -63,10 +64,13 @@ export default function HeroSection() {
             </Button>
           </div>
 
-          {/* Micro guarantee */}
-          <p className="text-xs font-medium text-muted-foreground">
-            {t("hero.micro")}
-          </p>
+          {/* Integrations */}
+          <div className="mt-4 md:mt-6 flex flex-col items-center pt-6 border-t border-border/40 w-full max-w-2xl mx-auto">
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-4">
+              Integrations
+            </span>
+            <CodingToolPills variant="light" />
+          </div>
         </div>
 
         {/* The Massive Visual Block */}
@@ -74,7 +78,7 @@ export default function HeroSection() {
           <SectionCard className="max-w-[1400px] mx-auto">
             <div className="w-full">
               <div className="gemini-card rounded-xl p-4 sm:p-6 md:p-8">
-                <div className="flex flex-col justify-between min-h-[460px] relative z-10 w-full">
+                <div className="flex flex-col justify-between relative z-10 w-full">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-border pb-3 sm:pb-5 mb-4 sm:mb-8 relative z-10">
                     <div className="flex items-center bg-[#f0f4f9] p-1 sm:p-1.5 rounded-xl border border-border/50 w-full sm:w-auto overflow-x-auto hide-scrollbar">
                       <button
@@ -111,17 +115,18 @@ export default function HeroSection() {
                     </div>
                   </div>
 
-                  {/* Animated Content Scene */}
-                  <AnimatePresence mode="wait">
-                    {activeScene === 1 ? (
-                      <motion.div
-                        key="scene1"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="flex-1 flex flex-col justify-between relative z-10"
-                      >
+                  {/* Animated Content Scene (Grid Stack for Auto Height) */}
+                  <div className="grid w-full relative">
+                    <motion.div
+                      className="col-start-1 row-start-1 flex-1 flex flex-col justify-between relative z-10"
+                      initial={false}
+                      animate={{ 
+                        opacity: activeScene === 1 ? 1 : 0, 
+                        pointerEvents: activeScene === 1 ? "auto" : "none",
+                        zIndex: activeScene === 1 ? 20 : 0
+                      }}
+                      transition={{ duration: 0.4 }}
+                    >
                         <div className="text-center mb-8">
                           <span className="inline-block text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                             {t("hero.cardOneBadge")}
@@ -255,16 +260,18 @@ export default function HeroSection() {
                         <div className="mt-8 flex justify-center text-[13px] font-medium text-muted-foreground">
                           <span>{t("hero.cardOneFooter")}</span>
                         </div>
-                      </motion.div>
-                    ) : (
-                      <motion.div
-                        key="scene2"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="flex-1 flex flex-col justify-between relative z-10"
-                      >
+                    </motion.div>
+
+                    <motion.div
+                      className="col-start-1 row-start-1 flex-1 flex flex-col justify-between relative z-10"
+                      initial={false}
+                      animate={{ 
+                        opacity: activeScene === 2 ? 1 : 0, 
+                        pointerEvents: activeScene === 2 ? "auto" : "none",
+                        zIndex: activeScene === 2 ? 20 : 0
+                      }}
+                      transition={{ duration: 0.4 }}
+                    >
                         <div className="text-center mb-8">
                           <span className="inline-block text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                             {t("hero.cardTwoBadge")}
@@ -383,9 +390,8 @@ export default function HeroSection() {
                         <div className="mt-8 flex justify-center text-[13px] font-medium text-muted-foreground">
                           <span>{t("hero.cardTwoFooter")}</span>
                         </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                    </motion.div>
+                  </div>
                 </div>
               </div>
             </div>
