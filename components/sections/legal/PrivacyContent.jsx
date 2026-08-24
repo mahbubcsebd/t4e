@@ -14,13 +14,13 @@ export default function PrivacyContent() {
           <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
             {t("privacyPolicyPage.heroEyebrow")}
           </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-tight mb-4">
+          <h1 className="max-w-[750px] mx-auto text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-6">
             {t("privacyPolicyPage.heroTitlePrefix")}
-            <span className="text-gradient decoration-[#07A7E1]/30">
+            <span className="text-primary decoration-[#07A7E1]/30">
               {t("privacyPolicyPage.heroTitleHighlight")}
             </span>
           </h1>
-          <p className="text-base text-muted-foreground mb-6">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
             {t("privacyPolicyPage.heroSubtitle")}
           </p>
 
