@@ -35,10 +35,6 @@ export default function CtaSection() {
               </Link>
             </Button>
 
-            {/* Trust micro-copy */}
-            <p className="text-xs text-muted-foreground mt-4 font-medium">
-              No credit card required · Free to start
-            </p>
           </div>
         </div>
       </SectionCard>

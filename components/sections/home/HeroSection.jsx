@@ -62,11 +62,6 @@ export default function HeroSection() {
               {t("hero.ctaSecondary")}
             </Button>
           </div>
-
-          {/* Micro guarantee */}
-          <p className="text-xs font-medium text-muted-foreground">
-            {t("hero.micro")}
-          </p>
         </div>
 
         {/* The Massive Visual Block */}
