@@ -26,18 +26,18 @@ export default function FaqAccordion() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         {/* Hero Section embedded */}
         <div className="text-center">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#e7f7fc] text-[#0679a4] text-xs font-bold uppercase tracking-wider mb-4 border border-[#07A7E1]/20">
+          <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
             {t("faqPage.heroEyebrow")}
           </span>
 
-          <h1 className="max-w-[800px] mx-auto text-[32px] leading-[38px] md:text-[56px] lg:text-[64px] font-extrabold text-foreground tracking-tight md:leading-[1.05] mb-6">
+          <h1 className="max-w-[650px] mx-auto text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-6">
             {t("faqPage.heroTitlePrefix")}
-            <span className="text-primary">
+            <span className="text-primary decoration-[#07A7E1]/30">
               {t("faqPage.heroTitleHighlight")}
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed mb-8">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
             {t("faqPage.heroSubtitle")}
           </p>
 

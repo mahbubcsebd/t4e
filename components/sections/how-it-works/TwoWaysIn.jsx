@@ -24,7 +24,7 @@ export default function TwoWaysIn() {
   ];
 
   return (
-    <section className="py-12 md:py-24 border-b border-border">
+    <section className="py-12 md:py-24 bg-background border-b border-border">
       <SectionCard>
         <Container>
           <SectionHeading

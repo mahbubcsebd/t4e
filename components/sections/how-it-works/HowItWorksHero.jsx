@@ -9,7 +9,7 @@ export default function HowItWorksHero() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-white via-[#f7fafe] to-white border-b border-border text-center">
+    <section className="bg-background py-16 md:py-20 border-b border-border text-center">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <span className="inline-block text-xs font-bold  text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
           {t("howItWorksPage.heroEyebrow")}
