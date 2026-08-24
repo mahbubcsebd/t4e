@@ -69,8 +69,8 @@ export default function HeroSection() {
               </div>
 
               {/* Integrations */}
-              <div className="mt-6 pt-4 flex flex-col items-center lg:items-start w-full">
-                <div className="w-12 h-[1px] bg-border mb-4"></div>
+              <div className="mt-8 flex flex-col items-center lg:items-start w-full">
+                <div className="w-full h-[1px] bg-border/50 mb-5"></div>
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-3">
                   Integrations
                 </span>
