@@ -399,8 +399,10 @@ export default function HeroSection() {
                     </motion.div>
                   </div>
                 </div>
-              </SectionCard>
+              </div>
             </div>
+          </SectionCard>
+        </div>
           </div>
         </div>
       </div>
