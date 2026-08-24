@@ -79,10 +79,10 @@ export default function HeroSection() {
             </div>
 
             {/* Right Column: The Visual Block */}
-            <div className="flex-[1.15] w-full mt-8 lg:mt-0">
-              <div className="w-full bg-[#e6f2ff] border border-[#b3d9ff] rounded-3xl p-4 sm:p-6 lg:p-8 shadow-[0_0_40px_rgba(14,165,233,0.15)]">
+            <div className="flex-[1.3] w-full mt-8 lg:mt-0">
+              <div className="w-full bg-[#e6f2ff] border border-[#b3d9ff] rounded-3xl p-3 md:p-5 lg:p-6 shadow-[0_0_40px_rgba(14,165,233,0.15)]">
                 <div className="w-full">
-                  <div className="gemini-card rounded-xl p-4 sm:p-5 border border-border/50">
+                  <div className="gemini-card rounded-2xl p-3 md:p-4 border border-border/50">
                     <div className="flex flex-col justify-between relative z-10 w-full">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-border pb-3 sm:pb-4 mb-4 relative z-10">
                         <div className="flex items-center bg-[#f0f4f9] p-1 rounded-xl border border-border/50 w-full sm:w-auto overflow-x-auto hide-scrollbar">
@@ -142,7 +142,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Stage diagram */}
-                        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-2 md:gap-0 items-center bg-[#f0f4f9] p-4 sm:p-5 rounded-xl border border-border/40 relative max-w-4xl mx-auto w-full dark:bg-card/50 dark:border-border">
+                        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-2 md:gap-0 items-center bg-[#f0f4f9] p-3 md:p-4 rounded-xl border border-border/40 relative max-w-4xl mx-auto w-full dark:bg-card/50 dark:border-border">
                           <motion.div
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -151,7 +151,7 @@ export default function HeroSection() {
                               delay: 0.1,
                               ease: "easeOut",
                             }}
-                            className="bg-card p-4 sm:p-6 rounded-xl border border-border relative z-10"
+                            className="bg-card p-4 sm:p-5 rounded-xl border border-border relative z-10 w-full h-full flex flex-col justify-center"
                           >
                             <div className="flex items-center gap-1 mb-2">
                               <Code2 className="w-4 h-4 text-muted-foreground" />
@@ -234,7 +234,7 @@ export default function HeroSection() {
                               delay: 0.7,
                               ease: "easeOut",
                             }}
-                            className="bg-card p-4 sm:p-6 rounded-xl border border-border relative z-10"
+                            className="bg-card p-4 sm:p-5 rounded-xl border border-border relative z-10 w-full h-full flex flex-col justify-center"
                           >
                             <div className="flex items-center gap-1 mb-2">
                               <LayoutTemplate className="w-4 h-4 text-muted-foreground" />
@@ -287,7 +287,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Stage diagram */}
-                        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-2 md:gap-0 items-center bg-[#f0f4f9] p-4 sm:p-5 rounded-xl border border-border/40 relative max-w-4xl mx-auto w-full dark:bg-card/50 dark:border-border">
+                        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-2 md:gap-0 items-center bg-[#f0f4f9] p-3 md:p-4 rounded-xl border border-border/40 relative max-w-4xl mx-auto w-full dark:bg-card/50 dark:border-border">
                           <motion.div
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -296,7 +296,7 @@ export default function HeroSection() {
                               delay: 0.1,
                               ease: "easeOut",
                             }}
-                            className="bg-card p-4 sm:p-6 rounded-xl border border-border relative z-10 h-full flex flex-col justify-center"
+                            className="bg-card p-4 sm:p-5 rounded-xl border border-border relative z-10 h-full flex flex-col justify-center w-full"
                           >
                             <div className="flex items-center gap-1 mb-2">
                               <Box className="w-4 h-4 text-muted-foreground" />
@@ -374,7 +374,7 @@ export default function HeroSection() {
                               delay: 0.7,
                               ease: "easeOut",
                             }}
-                            className="bg-card p-4 sm:p-6 rounded-xl border border-border relative z-10 h-full flex flex-col justify-center"
+                            className="bg-card p-4 sm:p-5 rounded-xl border border-border relative z-10 h-full flex flex-col justify-center w-full"
                           >
                             <div className="flex items-center gap-1 mb-2">
                               <Code2 className="w-4 h-4 text-muted-foreground" />
