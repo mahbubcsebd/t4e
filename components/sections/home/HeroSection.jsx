@@ -27,60 +27,66 @@ export default function HeroSection() {
   return (
     <section className="pt-12 md:pt-18 lg:pt-20 pb-0 transition-colors duration-300">
       <div className="w-full">
-        <div className="flex flex-col items-center text-center max-w-5xl mx-auto px-4 sm:px-6 mb-12 lg:mb-16 pt-8">
-          {/* Eyebrow */}
-          <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wide mb-6 border border-primary/30">
-            {t("hero.eyebrow")}
-          </span>
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 mb-12 lg:mb-16 pt-8">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
+            
+            {/* Left Column: Hero Text */}
+            <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left w-full max-w-2xl mx-auto lg:max-w-none">
+              {/* Eyebrow */}
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wide mb-6 border border-primary/30">
+                {t("hero.eyebrow")}
+              </span>
 
-          {/* Main Headline */}
-          <h1 className="text-[32px] leading-[38px] md:text-[56px] lg:text-[64px] font-extrabold tracking-tight text-foreground md:leading-[1.05] mb-6">
-            {t("hero.titlePrefix")}
-            <br className="hidden md:block" />
-            <span className="text-primary"> {t("hero.titleHighlight")}</span>
-          </h1>
+              {/* Main Headline */}
+              <h1 className="text-[32px] leading-[38px] md:text-[56px] lg:text-[64px] font-extrabold tracking-tight text-foreground md:leading-[1.05] mb-6">
+                {t("hero.titlePrefix")}
+                <br className="hidden md:block" />
+                <span className="text-primary"> {t("hero.titleHighlight")}</span>
+              </h1>
 
-          {/* Subtitle */}
-          <p className="max-w-[800px] text-lg sm:text-xl text-muted-foreground font-normal leading-relaxed mb-8">
-            {t("hero.subtitle")}
-          </p>
+              {/* Subtitle */}
+              <p className="max-w-[800px] text-lg sm:text-xl text-muted-foreground font-normal leading-relaxed mb-8">
+                {t("hero.subtitle")}
+              </p>
 
-          {/* Hero CTAs */}
-          <div className="flex flex-wrap items-center justify-center gap-4 w-full sm:w-auto mb-6">
-            <Button asChild className="w-full sm:w-auto">
-              <Link href="https://portal.think4ever.com/#/register">
-                {t("hero.ctaPrimary")}
-              </Link>
-            </Button>
-            <Button
-              variant="outline"
-              className="w-full sm:w-auto"
-              onClick={() => {
-                setVideoId("FY68DuwOf4Q");
-                setIsVideoOpen(true);
-              }}
-            >
-              {t("hero.ctaSecondary")}
-            </Button>
-          </div>
+              {/* Hero CTAs */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 w-full sm:w-auto mb-6">
+                <Button asChild className="w-full sm:w-auto">
+                  <Link href="https://portal.think4ever.com/#/register">
+                    {t("hero.ctaPrimary")}
+                  </Link>
+                </Button>
+                <Button
+                  variant="outline"
+                  className="w-full sm:w-auto"
+                  onClick={() => {
+                    setVideoId("FY68DuwOf4Q");
+                    setIsVideoOpen(true);
+                  }}
+                >
+                  {t("hero.ctaSecondary")}
+                </Button>
+              </div>
 
-          {/* Integrations */}
-          <div className="mt-4 md:mt-6 flex flex-col items-center pt-6 border-t border-border/40 w-full max-w-2xl mx-auto">
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-4">
-              Integrations
-            </span>
-            <CodingToolPills variant="light" />
-          </div>
-        </div>
+              {/* Integrations */}
+              <div className="mt-8 pt-8 border-t border-border/40 w-full flex flex-col items-center lg:items-start">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-4">
+                  Integrations
+                </span>
+                <div className="w-full max-w-md">
+                  <CodingToolPills variant="light" />
+                </div>
+              </div>
+            </div>
 
-        {/* The Massive Visual Block */}
-        <div className="pb-8 md:pb-12 lg:pb-16 pt-4">
-          <SectionCard className="max-w-[1400px] mx-auto">
-            <div className="w-full">
-              <div className="gemini-card rounded-xl p-4 sm:p-6 md:p-8">
-                <div className="flex flex-col justify-between relative z-10 w-full">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-border pb-3 sm:pb-5 mb-4 sm:mb-8 relative z-10">
-                    <div className="flex items-center bg-[#f0f4f9] p-1 sm:p-1.5 rounded-xl border border-border/50 w-full sm:w-auto overflow-x-auto hide-scrollbar">
+            {/* Right Column: The Visual Block */}
+            <div className="flex-[1.2] w-full mt-10 lg:mt-0">
+              <SectionCard className="w-full">
+                <div className="w-full">
+                  <div className="gemini-card rounded-xl p-4 sm:p-6 md:p-8">
+                    <div className="flex flex-col justify-between relative z-10 w-full">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-border pb-3 sm:pb-5 mb-4 sm:mb-8 relative z-10">
+                        <div className="flex items-center bg-[#f0f4f9] p-1 sm:p-1.5 rounded-xl border border-border/50 w-full sm:w-auto overflow-x-auto hide-scrollbar">
                       <button
                         onClick={() => setActiveScene(1)}
                         style={{ WebkitTapHighlightColor: "transparent" }}
@@ -393,12 +399,11 @@ export default function HeroSection() {
                     </motion.div>
                   </div>
                 </div>
-              </div>
+              </SectionCard>
             </div>
-          </SectionCard>
+          </div>
         </div>
       </div>
-
       <VideoModal
         isOpen={isVideoOpen}
         onClose={() => setIsVideoOpen(false)}
