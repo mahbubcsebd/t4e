@@ -131,7 +131,7 @@ export default function BlogGridSection() {
                       </Link>
                     </h3>
 
-                    <p className="text-sm text-muted-foreground mb-8 leading-relaxed line-clamp-3 group-hover:text-foreground/80 transition-colors duration-300">
+                    <p className="text-base text-muted-foreground mb-8 leading-relaxed line-clamp-3 group-hover:text-foreground/80 transition-colors duration-300">
                       {art.desc}
                     </p>
                   </div>
@@ -142,7 +142,6 @@ export default function BlogGridSection() {
                     </span>
                     <span className="text-primary font-bold text-sm flex items-center gap-1.5 group-hover:translate-x-1 transition-transform duration-300">
                       {t("blogPage.readMore")}
-                      <ArrowRight className="w-4 h-4" />
                     </span>
                   </div>
                 </div>

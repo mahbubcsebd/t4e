@@ -79,7 +79,7 @@ export default function HeroSection() {
             </div>
 
             {/* Right Column: The Visual Block */}
-            <div className="flex-[1.3] w-full mt-8 lg:mt-0">
+            <div className="flex-1 w-full mt-8 lg:mt-0">
               <div className="w-full bg-[#e6f2ff] border border-[#b3d9ff] rounded-3xl p-3 md:p-5 lg:p-6 shadow-[0_0_40px_rgba(14,165,233,0.15)]">
                 <div className="w-full">
                   <div className="gemini-card rounded-2xl p-3 md:p-4 border border-border/50">

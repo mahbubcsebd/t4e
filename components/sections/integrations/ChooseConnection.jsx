@@ -62,7 +62,7 @@ export default function ChooseConnection() {
               return (
                 <div
                   key={idx}
-                  className="relative shadow-sm backdrop-blur-xl border border-border/60 rounded-3xl p-8 sm:p-10 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 flex flex-col justify-between group overflow-hidden"
+                  className="relative shadow-sm backdrop-blur-xl border border-border/60 rounded-xl p-8 sm:p-10 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 flex flex-col justify-between group overflow-hidden"
                 >
                   <div className="relative z-10">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
@@ -76,7 +76,7 @@ export default function ChooseConnection() {
                     <h3 className="text-xl font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                       {c.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-8 group-hover:text-foreground/90 transition-colors duration-300">
+                    <p className="text-base text-muted-foreground leading-relaxed mb-8 group-hover:text-foreground/90 transition-colors duration-300">
                       {c.desc}
                     </p>
                   </div>
