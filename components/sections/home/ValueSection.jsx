@@ -30,28 +30,28 @@ export default function ValueSection() {
               <div className="flex-1 gemini-card rounded-xl overflow-hidden flex flex-col group">
                 {/* Visual Canvas */}
                 <div className="h-56 sm:h-64 bg-white/40 relative overflow-hidden flex flex-col items-center justify-center p-6 border-b border-white/40">
-                  <div className="relative w-full max-w-lg h-full flex items-center justify-center">
+                  <div className="relative w-full max-w-[260px] h-full flex items-center justify-center">
                     {/* Background Nodes */}
-                    <div className="absolute top-[20%] left-[20%] p-2.5 sm:p-3.5 bg-primary/10 text-primary rounded-xl border border-primary/20 opacity-60 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-700 delay-100 z-10">
-                      <Database className="w-6 h-6 sm:w-8 sm:h-8" />
+                    <div className="absolute top-2 left-2 p-2.5 bg-primary/10 text-primary rounded-xl border border-primary/20 opacity-60 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-700 delay-100 z-10">
+                      <Database className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
-                    <div className="absolute bottom-[20%] left-[35%] p-2.5 sm:p-3.5 bg-muted text-muted-foreground rounded-xl border border-border opacity-60 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-700 delay-200 z-10">
-                      <Layout className="w-6 h-6 sm:w-8 sm:h-8" />
+                    <div className="absolute bottom-2 left-[15%] p-2.5 bg-muted text-muted-foreground rounded-xl border border-border opacity-60 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-700 delay-200 z-10">
+                      <Layout className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
-                    <div className="absolute top-[30%] right-[25%] p-2.5 sm:p-3.5 bg-primary/10 text-primary rounded-xl border border-primary/20 opacity-60 group-hover:opacity-100 group-hover:-translate-x-2 transition-all duration-700 delay-300 z-10">
-                      <Network className="w-6 h-6 sm:w-8 sm:h-8" />
+                    <div className="absolute top-[20%] right-2 p-2.5 bg-primary/10 text-primary rounded-xl border border-primary/20 opacity-60 group-hover:opacity-100 group-hover:-translate-x-2 transition-all duration-700 delay-300 z-10">
+                      <Network className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
 
                     {/* Center Magnifying Glass / Focus */}
-                    <div className="relative z-20 w-16 h-16 sm:w-20 sm:h-20 bg-card/90 backdrop-blur-md rounded-full shadow-md shadow-primary/25 border-4 border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <div className="relative z-20 w-16 h-16 sm:w-20 sm:h-20 bg-card/90 backdrop-blur-md rounded-full shadow-lg shadow-primary/20 border-[3px] border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
                       <Search className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                     </div>
 
                     {/* Connecting lines that fade in */}
                     <svg className="absolute inset-0 w-full h-full text-slate-300 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
                       <line
-                        x1="30%"
-                        y1="30%"
+                        x1="12%"
+                        y1="12%"
                         x2="50%"
                         y2="50%"
                         stroke="currentColor"
@@ -59,8 +59,8 @@ export default function ValueSection() {
                         strokeDasharray="4,4"
                       />
                       <line
-                        x1="40%"
-                        y1="70%"
+                        x1="25%"
+                        y1="85%"
                         x2="50%"
                         y2="50%"
                         stroke="currentColor"
@@ -68,8 +68,8 @@ export default function ValueSection() {
                         strokeDasharray="4,4"
                       />
                       <line
-                        x1="70%"
-                        y1="40%"
+                        x1="88%"
+                        y1="28%"
                         x2="50%"
                         y2="50%"
                         stroke="currentColor"
