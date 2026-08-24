@@ -38,14 +38,14 @@ export default function HeroSection() {
               </span>
 
               {/* Main Headline */}
-              <h1 className="text-[32px] leading-[38px] md:text-[56px] lg:text-[64px] font-extrabold tracking-tight text-foreground md:leading-[1.05] mb-6">
+              <h1 className="text-[36px] leading-[1.1] md:text-[56px] lg:text-[68px] font-extrabold tracking-tight text-foreground mb-6">
                 {t("hero.titlePrefix")}
                 <br className="hidden md:block" />
                 <span className="text-primary"> {t("hero.titleHighlight")}</span>
               </h1>
 
               {/* Subtitle */}
-              <p className="max-w-[800px] text-lg sm:text-xl text-muted-foreground font-normal leading-relaxed mb-8">
+              <p className="max-w-[600px] text-lg sm:text-xl text-muted-foreground/90 font-normal leading-relaxed mb-10">
                 {t("hero.subtitle")}
               </p>
 
@@ -69,13 +69,12 @@ export default function HeroSection() {
               </div>
 
               {/* Integrations */}
-              <div className="mt-8 pt-8 border-t border-border/40 w-full flex flex-col items-center lg:items-start">
+              <div className="mt-10 pt-6 flex flex-col items-center lg:items-start w-full">
+                <div className="w-12 h-[1px] bg-border mb-6"></div>
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-4">
                   Integrations
                 </span>
-                <div className="w-full max-w-md">
-                  <CodingToolPills variant="light" />
-                </div>
+                <CodingToolPills variant="light" className="justify-center lg:justify-start" />
               </div>
             </div>
 
