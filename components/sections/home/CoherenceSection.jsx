@@ -64,9 +64,6 @@ export default function CoherenceSection() {
               <div className="flex flex-col lg:flex-row relative items-stretch">
                 {/* Center VS Divider on Desktop */}
                 <div className="hidden lg:flex flex-col items-center justify-center gap-1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                  <div className="w-8 h-8 bg-card border border-border rounded-full flex items-center justify-center text-[10px] font-medium text-muted-foreground shadow-sm">
-                    VS
-                  </div>
                   <div className="text-xl font-bold text-red-500 leading-none">
                     ≠
                   </div>

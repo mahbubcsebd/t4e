@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { Button } from "@/components/ui/button";
 
 // --- Custom Select Component ---
 function CustomSelect({ options, value, onChange, placeholder, error }) {
@@ -162,7 +163,7 @@ export default function ContactForm() {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex-1 bg-card border border-border rounded-2xl p-6 sm:p-10 shadow-sm"
+      className="flex-1 gemini-card rounded-xl p-6 sm:p-10"
     >
       <form onSubmit={handleSubmit} className="space-y-5" noValidate>
         <div>
@@ -348,13 +349,13 @@ export default function ContactForm() {
           <InputError error={errors.agreed} />
         </div>
 
-        <button
+        <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full h-12 mt-4 bg-gradient-to-r from-[#093cad] to-[#07A7E1] hover:opacity-90 disabled:opacity-70 text-white rounded-xl font-bold text-[15px] shadow-[0_8px_20px_rgba(7,167,225,0.25)] transition-all active:scale-[0.98] flex items-center justify-center"
+          className="w-full h-12 mt-4 text-[15px]"
         >
           {isSubmitting ? t("contact.submittingBtn") : t("contact.submitBtn")}
-        </button>
+        </Button>
       </form>
     </motion.div>
   );

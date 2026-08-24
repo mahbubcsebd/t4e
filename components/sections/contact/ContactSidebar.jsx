@@ -16,7 +16,7 @@ export default function ContactSidebar() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-        className="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-sm"
+        className="gemini-card rounded-xl p-6 sm:p-8"
       >
         <h3 className="text-base font-bold text-foreground mb-6 border-b border-border/50 pb-4">
           {t("contact.officeTitle")}
@@ -48,7 +48,7 @@ export default function ContactSidebar() {
               </h4>
               <a
                 href={`mailto:${t("contact.emailAddress")}`}
-                className="text-xs sm:text-sm text-[#07A7E1] font-semibold hover:text-[#093cad] transition-colors"
+                className="text-xs sm:text-sm text-primary font-semibold hover:text-[#093cad] transition-colors"
               >
                 {t("contact.emailAddress")}
               </a>
