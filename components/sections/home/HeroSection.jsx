@@ -69,7 +69,7 @@ export default function HeroSection() {
           <SectionCard className="max-w-[1400px] mx-auto">
             <div className="w-full">
               <div className="gemini-card rounded-xl p-4 sm:p-6 md:p-8">
-                <div className="flex flex-col justify-between min-h-[700px] sm:min-h-[600px] md:min-h-[520px] relative z-10 w-full">
+                <div className="flex flex-col justify-between h-[850px] sm:h-[700px] md:h-[600px] lg:h-[550px] relative z-10 w-full">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-border pb-3 sm:pb-5 mb-4 sm:mb-8 relative z-10">
                     <div className="flex items-center bg-[#f0f4f9] p-1 sm:p-1.5 rounded-xl border border-border/50 w-full sm:w-auto overflow-x-auto hide-scrollbar">
                       <button
