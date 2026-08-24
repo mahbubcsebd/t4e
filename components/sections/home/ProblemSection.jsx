@@ -35,7 +35,7 @@ export default function ProblemSection() {
             {/* Block 01 - Context Resets (Left) */}
             <div className="gemini-card rounded-xl overflow-hidden flex flex-col group">
               {/* Visual Canvas */}
-              <div className="h-56 bg-white/40 border-b border-white/40 relative overflow-hidden flex items-center justify-center p-6">
+              <div className="min-h-[280px] bg-white/40 border-b border-white/40 relative overflow-hidden flex items-center justify-center p-6">
                 <div className="relative w-full max-w-sm aspect-video flex items-center justify-center">
                   {/* Central AI Node */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-card rounded-xl shadow-lg border border-border flex items-center justify-center z-20 group-hover:scale-105 transition-transform duration-500">
@@ -118,7 +118,7 @@ export default function ProblemSection() {
             {/* Block 02 - Knowledge lives in different places (Center) */}
             <div className="gemini-card rounded-xl overflow-hidden flex flex-col group">
               {/* Visual Canvas */}
-              <div className="h-56 bg-white/40 border-b border-white/40 relative p-6 flex flex-col items-center justify-center gap-4 overflow-hidden">
+              <div className="min-h-[280px] bg-white/40 border-b border-white/40 relative p-6 flex flex-col items-center justify-center gap-4 overflow-hidden">
                 {/* Vertical Alignment Guide */}
                 <div className="absolute top-6 bottom-6 left-1/2 -translate-x-[1px] w-[2px] border-l-2 border-dashed border-border z-0 opacity-50"></div>
 
@@ -182,7 +182,7 @@ export default function ProblemSection() {
             {/* Block 03 - Impact appears late (Right) */}
             <div className="gemini-card rounded-xl overflow-hidden flex flex-col group">
               {/* Visual Canvas (Moved to Top for Consistency) */}
-              <div className="h-56 bg-white/40 border-b border-white/40 relative p-6 flex flex-col items-center justify-center overflow-hidden">
+              <div className="min-h-[280px] bg-white/40 border-b border-white/40 relative p-6 flex flex-col items-center justify-center overflow-hidden">
                 <div className="w-full max-w-sm relative flex flex-col items-center justify-center gap-8">
                   {/* Connecting Line Mobile */}
                   <div className="absolute top-[40px] bottom-[24px] border-l-2 border-dashed border-border z-0"></div>
