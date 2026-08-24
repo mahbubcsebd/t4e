@@ -79,10 +79,10 @@ export default function HeroSection() {
             </div>
 
             {/* Right Column: The Visual Block */}
-            <div className="flex-[1.2] w-full mt-8 lg:mt-0">
-              <SectionCard className="w-full">
+            <div className="flex-[1.15] w-full mt-8 lg:mt-0">
+              <div className="w-full bg-[#e6f2ff] border border-[#b3d9ff] rounded-3xl p-4 sm:p-6 lg:p-8 shadow-[0_0_40px_rgba(14,165,233,0.15)]">
                 <div className="w-full">
-                  <div className="gemini-card rounded-xl p-4 sm:p-5">
+                  <div className="gemini-card rounded-xl p-4 sm:p-5 border border-border/50">
                     <div className="flex flex-col justify-between relative z-10 w-full">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-border pb-3 sm:pb-4 mb-4 relative z-10">
                         <div className="flex items-center bg-[#f0f4f9] p-1 rounded-xl border border-border/50 w-full sm:w-auto overflow-x-auto hide-scrollbar">
@@ -400,7 +400,7 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
-          </SectionCard>
+          </div>
         </div>
           </div>
         </div>
