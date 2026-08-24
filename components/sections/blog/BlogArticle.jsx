@@ -44,7 +44,7 @@ export const BlogArticle = ({ post }) => {
   }, [localizedPost.content, zoomedImgSrc]);
 
   return (
-    <article className="relative rounded-xl p-8 sm:p-12 lg:p-16 shadow-sm border border-border/60 overflow-hidden">
+    <article className="relative rounded-xl p-5 sm:p-10 lg:p-16 shadow-sm border border-border/60 overflow-hidden">
       <div className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 25 }}

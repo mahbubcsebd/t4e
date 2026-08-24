@@ -14,8 +14,8 @@ export const BlogRecommendations = ({ posts, currentPostId }) => {
     .map((p) => getLocalizedPost(p, language));
 
   return (
-    <div className="mt-20 border-t border-border/60 pt-16">
-      <h3 className="text-2xl font-bold text-foreground mb-8 text-center sm:text-left">
+    <div className="mt-10 sm:mt-20 border-t border-border/60 pt-8 sm:pt-16">
+      <h3 className="text-2xl font-bold text-foreground mb-8 text-left">
         {t("blogPage.recommendedReading")}
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
