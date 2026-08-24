@@ -110,12 +110,12 @@ export default function CoherenceSection() {
                     </span>
                   </div>
 
-                  <div className="gemini-card rounded-xl p-5 sm:p-6 font-mono relative overflow-hidden group-hover:-translate-y-1 transition-transform duration-500 delay-75 flex-1 border !border-red-500 shadow-sm shadow-red-500/5">
+                  <div className="gemini-card rounded-xl p-5 sm:p-6 font-mono relative group-hover:-translate-y-1 transition-transform duration-500 delay-75 flex-1 border !border-red-500 shadow-sm shadow-red-500/5">
                     <div className="absolute -top-3 -right-3 bg-white text-red-500 border-2 border-red-500 rounded-full p-0.5 shadow-md z-20">
                       <X className="w-3.5 h-3.5" strokeWidth={3} />
                     </div>
                     {/* Subtle frosted glass tint for diff */}
-                    <div className="absolute inset-0 bg-white/40 pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-white/40 pointer-events-none rounded-xl"></div>
 
                     <div className="flex items-center gap-2 sm:gap-4 text-[10px] sm:text-[11px] text-muted-foreground mb-3 tracking-wider uppercase font-sans font-medium break-all">
                       <span>src/config/policy.ts</span>
@@ -149,9 +149,8 @@ export default function CoherenceSection() {
                       </strong>
                     </div>
                   </div>
-                  <div className="w-full sm:w-auto bg-white/80 border border-white/60 text-foreground text-[10px] sm:text-[11px] font-medium px-4 py-2.5 rounded-lg flex items-center justify-center gap-2 transition-colors cursor-pointer shrink-0">
+                  <div className="w-full sm:w-auto bg-white/80 border border-white/60 text-foreground text-[10px] sm:text-[11px] font-medium px-4 py-2.5 rounded-lg flex items-center justify-center gap-2 transition-colors shrink-0">
                     <span className="truncate">{t("coherence.alertDesc")}</span>
-                    <AlertOctagon className="w-4 h-4 shrink-0 fill-red-500 text-white" />
                   </div>
                 </div>
               </div>
