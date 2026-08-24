@@ -235,8 +235,6 @@ export default function ProblemSection() {
                   {t("problem.card3Desc")}
                 </p>
               </div>
-
-              </div>
             </div>
           </div>
         </div>
