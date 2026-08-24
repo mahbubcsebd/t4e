@@ -35,14 +35,14 @@ export default function ValueSection() {
                 <div className="h-64 sm:h-80 bg-white/40 relative overflow-hidden flex flex-col items-center justify-center p-6 border-b border-white/40">
                   <div className="relative w-full max-w-lg h-full flex items-center justify-center">
                     {/* Background Nodes */}
-                    <div className="absolute top-[20%] left-[20%] p-3 bg-primary/10 text-primary rounded-xl border border-primary/20 opacity-60 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-700 delay-100 z-10">
-                      <Database className="w-6 h-6" />
+                    <div className="absolute top-[20%] left-[20%] p-4 bg-primary/10 text-primary rounded-xl border border-primary/20 opacity-60 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-700 delay-100 z-10">
+                      <Database className="w-10 h-10" />
                     </div>
-                    <div className="absolute bottom-[20%] left-[35%] p-3 bg-muted text-muted-foreground rounded-xl border border-border opacity-60 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-700 delay-200 z-10">
-                      <Layout className="w-6 h-6" />
+                    <div className="absolute bottom-[20%] left-[35%] p-4 bg-muted text-muted-foreground rounded-xl border border-border opacity-60 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-700 delay-200 z-10">
+                      <Layout className="w-10 h-10" />
                     </div>
-                    <div className="absolute top-[30%] right-[25%] p-3 bg-primary/10 text-primary rounded-xl border border-primary/20 opacity-60 group-hover:opacity-100 group-hover:-translate-x-2 transition-all duration-700 delay-300 z-10">
-                      <Network className="w-6 h-6" />
+                    <div className="absolute top-[30%] right-[25%] p-4 bg-primary/10 text-primary rounded-xl border border-primary/20 opacity-60 group-hover:opacity-100 group-hover:-translate-x-2 transition-all duration-700 delay-300 z-10">
+                      <Network className="w-10 h-10" />
                     </div>
 
                     {/* Center Magnifying Glass / Focus */}
@@ -86,8 +86,8 @@ export default function ValueSection() {
                 {/* Content */}
                 <div className="p-8 sm:p-10 flex-1 bg-transparent">
                   <div className="flex items-center gap-3 mb-5">
-                    <div className="p-2 bg-card rounded-lg border border-border">
-                      <Eye className="w-4 h-4 text-primary" />
+                    <div className="p-3 bg-card rounded-lg border border-border">
+                      <Eye className="w-6 h-6 text-primary" />
                     </div>
                     <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest">
                       {t("values.card1Tag")}
@@ -146,8 +146,8 @@ export default function ValueSection() {
                 </div>
                 <div className="p-6 sm:p-8 flex-1 bg-transparent">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-card rounded-lg border border-border">
-                      <ShieldCheck className="w-4 h-4 text-primary" />
+                    <div className="p-3 bg-card rounded-lg border border-border">
+                      <ShieldCheck className="w-6 h-6 text-primary" />
                     </div>
                     <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest">
                       {t("values.card2Tag")}
@@ -178,8 +178,8 @@ export default function ValueSection() {
                 </div>
                 <div className="p-6 sm:p-8 flex-1 bg-transparent">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-card rounded-lg border border-border">
-                      <SlidersHorizontal className="w-4 h-4 text-primary" />
+                    <div className="p-3 bg-card rounded-lg border border-border">
+                      <SlidersHorizontal className="w-6 h-6 text-primary" />
                     </div>
                     <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest">
                       {t("values.card3Tag")}
