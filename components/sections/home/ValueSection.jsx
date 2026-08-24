@@ -23,7 +23,7 @@ export default function ValueSection() {
 
   return (
     <section className="py-8 md:py-12 lg:py-16">
-      <SectionCard className="max-w-[1400px] mx-auto">
+      <SectionCard className="max-w-[1600px] mx-auto">
         <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
           {/* Bento Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">

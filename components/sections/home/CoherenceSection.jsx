@@ -31,7 +31,7 @@ export default function CoherenceSection() {
 
   return (
     <section className="py-8 md:py-12 lg:py-16" id="code-to-design">
-      <SectionCard className="max-w-[1400px] mx-auto">
+      <SectionCard className="max-w-[1600px] mx-auto">
         <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
           <SectionHeading
             align="split"
@@ -49,7 +49,7 @@ export default function CoherenceSection() {
 
           {/* Workspace Interface Window */}
           <Container>
-            <div className="max-w-7xl mx-auto bg-card rounded-xl border border-border shadow-lg shadow-black/5 overflow-hidden flex flex-col group">
+            <div className="max-w-[1600px] mx-auto bg-card rounded-xl border border-border shadow-lg shadow-black/5 overflow-hidden flex flex-col group">
               {/* Mac-style Window Header */}
               <div className="h-12 bg-muted/50 border-b border-border flex items-center px-5 justify-between">
                 <div className="flex items-center gap-2">
