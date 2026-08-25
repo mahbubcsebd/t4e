@@ -36,17 +36,18 @@ export default function Header() {
   const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
   const [mobileDocsOpen, setMobileDocsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const langDropdownRef = useRef(null);
+  const desktopLangDropdownRef = useRef(null);
+  const mobileLangDropdownRef = useRef(null);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     const handleClickOutside = (event) => {
-      if (
-        langDropdownRef.current &&
-        !langDropdownRef.current.contains(event.target)
-      ) {
+      const isOutsideDesktop = desktopLangDropdownRef.current && !desktopLangDropdownRef.current.contains(event.target);
+      const isOutsideMobile = mobileLangDropdownRef.current && !mobileLangDropdownRef.current.contains(event.target);
+      
+      if (isOutsideDesktop && isOutsideMobile) {
         setLangDropdownOpen(false);
       }
     };
@@ -353,7 +354,7 @@ export default function Header() {
         {/* Right Action Items */}
         <div className="hidden lg:flex items-center gap-3 shrink-0">
           {/* Language Selector Dropdown */}
-          <div className="relative" ref={langDropdownRef}>
+          <div className="relative" ref={desktopLangDropdownRef}>
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
               className="flex items-center gap-1.5 text-[15px] font-medium text-foreground hover:text-primary transition-colors py-2"
@@ -420,7 +421,7 @@ export default function Header() {
 
         {/* Mobile Menu Toggle */}
         <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
-          <div className="relative">
+          <div className="relative" ref={mobileLangDropdownRef}>
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
               className="flex items-center gap-1 text-[14px] font-medium text-foreground hover:text-primary transition-colors py-2"
