@@ -21,7 +21,7 @@ export default function ProblemSection() {
   return (
     <section className="py-8 md:py-12 lg:py-16">
       <SectionCard className="max-w-[1600px] mx-auto">
-        <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
+        <div className="bg-card rounded-xl p-4 sm:p-8 md:p-10 w-full relative z-10 border border-border/50">
           {/* Editorial Header */}
           <SectionHeading
             eyebrow={t("problem.eyebrow")}
@@ -35,7 +35,7 @@ export default function ProblemSection() {
             {/* Block 01 - Context Resets (Left) */}
             <div className="gemini-card rounded-xl overflow-hidden flex flex-col group">
               {/* Visual Canvas */}
-              <div className="min-h-[280px] bg-slate-50/50 border-b border-border/50 relative overflow-hidden flex items-center justify-center p-6">
+              <div className="min-h-[200px] md:min-h-[280px] bg-slate-50/50 border-b border-border/50 relative overflow-hidden flex items-center justify-center p-6">
                 <div className="relative w-full aspect-square max-w-[200px] flex items-center justify-center">
                   {/* Circle dashed border */}
                   <div className="absolute inset-4 rounded-full border-2 border-dashed border-border/70 group-hover:rotate-12 transition-transform duration-1000 z-0"></div>
@@ -66,8 +66,8 @@ export default function ProblemSection() {
               </div>
 
               {/* Content */}
-              <div className="p-8 sm:p-10 flex-1">
-                <div className="flex items-center gap-3 mb-5">
+              <div className="p-8 sm:p-10 flex-1 flex flex-col items-center text-center md:items-start md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-5">
                   <span className="text-[10px] font-bold text-primary uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
                     {t("problem.card1Tag")}
                   </span>
@@ -84,7 +84,7 @@ export default function ProblemSection() {
             {/* Block 02 - Knowledge lives in different places (Center) */}
             <div className="gemini-card rounded-xl overflow-hidden flex flex-col group">
               {/* Visual Canvas */}
-              <div className="min-h-[280px] bg-slate-50/50 border-b border-border/50 relative p-6 flex flex-col items-center justify-center overflow-hidden">
+              <div className="min-h-[200px] md:min-h-[280px] bg-slate-50/50 border-b border-border/50 relative p-6 flex flex-col items-center justify-center overflow-hidden">
                 <div className="flex flex-col gap-4 relative z-10 w-full max-w-[200px]">
                   {/* Vertical line connecting them */}
                   <div className="absolute left-[28px] top-[24px] bottom-[24px] w-0 border-l-2 border-dotted border-slate-300 z-0"></div>
@@ -116,8 +116,8 @@ export default function ProblemSection() {
               </div>
 
               {/* Content */}
-              <div className="p-8 sm:p-10 flex-1">
-                <div className="flex items-center gap-3 mb-5">
+              <div className="p-8 sm:p-10 flex-1 flex flex-col items-center text-center md:items-start md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-5">
                   <span className="text-[10px] font-bold text-primary uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
                     {t("problem.card2Tag")}
                   </span>
@@ -134,7 +134,7 @@ export default function ProblemSection() {
             {/* Block 03 - Impact appears late (Right) */}
             <div className="gemini-card rounded-xl overflow-hidden flex flex-col group">
               {/* Visual Canvas */}
-              <div className="min-h-[280px] bg-slate-50/50 border-b border-border/50 relative p-6 flex flex-col items-center justify-center overflow-hidden">
+              <div className="min-h-[200px] md:min-h-[280px] bg-slate-50/50 border-b border-border/50 relative p-6 flex flex-col items-center justify-center overflow-hidden">
                 <div className="w-full max-w-xs relative flex flex-col items-center justify-center gap-0">
                   
                   {/* Local Change Node */}
@@ -172,8 +172,8 @@ export default function ProblemSection() {
               </div>
 
               {/* Content */}
-              <div className="p-8 sm:p-10 flex-1">
-                <div className="flex items-center gap-3 mb-5">
+              <div className="p-8 sm:p-10 flex-1 flex flex-col items-center text-center md:items-start md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-5">
                   <span className="text-[10px] font-bold text-primary uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
                     {t("problem.card3Tag")}
                   </span>
