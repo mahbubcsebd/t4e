@@ -488,7 +488,7 @@ export default function Header() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden bg-popover border-b border-border px-6 py-4 flex flex-col gap-0 overflow-hidden"
+            className="lg:hidden bg-popover border-b border-border px-6 py-4 flex flex-col gap-0 max-h-[calc(100vh-80px)] overflow-y-auto"
           >
             <div className="flex flex-col gap-0">
               <button
