@@ -17,7 +17,7 @@ export default function ProductDemoSection() {
       <SectionCard className="max-w-[1600px] mx-auto">
         <div className="w-full">
           {/* Clean card matching other sections */}
-          <div className="gemini-card rounded-xl p-8 sm:p-16 flex flex-col items-center justify-center gap-8 overflow-hidden relative text-center w-full">
+          <div className="gemini-card rounded-xl p-4 sm:p-16 flex flex-col items-center justify-center gap-8 overflow-hidden relative text-center w-full">
             {/* Subtle background watermark */}
             <div className="absolute right-0 bottom-0 text-muted-foreground/[0.05] text-[180px] font-black leading-none select-none pointer-events-none overflow-hidden z-0">
               T4E

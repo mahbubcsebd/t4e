@@ -16,11 +16,11 @@ export default function SectionHeading({
     return (
       <div
         className={cn(
-          "flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-12 mb-8 md:mb-16",
+          "flex flex-col items-center text-center md:flex-row md:items-center md:text-left justify-between gap-6 md:gap-12 mb-8 md:mb-16",
           className,
         )}
       >
-        <div className="flex flex-col items-start max-w-xl">
+        <div className="flex flex-col items-center md:items-start max-w-xl">
           {eyebrow && (
             <span
               className={cn(
@@ -44,7 +44,7 @@ export default function SectionHeading({
           </h2>
         </div>
         {subtitle && (
-          <div className="max-w-md">
+          <div className="max-w-md w-full">
             <p
               className={cn(
                 "text-base sm:text-lg text-muted-foreground leading-relaxed",

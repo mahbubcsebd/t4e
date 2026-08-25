@@ -15,7 +15,7 @@ export default function PersistentContextSection() {
   return (
     <section className="py-8 md:py-12 lg:py-16">
       <SectionCard className="max-w-[1600px] mx-auto">
-        <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
+        <div className="bg-card rounded-xl p-3 sm:p-8 md:p-10 w-full relative z-10 border border-border/50">
           {/* Editorial Header */}
           <SectionHeading
             align="split"

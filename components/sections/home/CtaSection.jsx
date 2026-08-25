@@ -13,7 +13,7 @@ export default function CtaSection() {
   return (
     <section className="py-8 md:py-12 lg:py-16" id="register">
       <SectionCard className="max-w-[1600px] mx-auto">
-        <div className="bg-card rounded-xl p-8 md:p-12 w-full relative z-10 border border-border/50">
+        <div className="bg-card rounded-xl p-3 sm:p-8 md:p-12 w-full relative z-10 border border-border/50">
           <div className="max-w-3xl text-center mx-auto w-full">
             <SectionHeading
               eyebrow={t("nav.startFree")}
@@ -26,14 +26,17 @@ export default function CtaSection() {
             />
 
             {/* CTA Button */}
-            <Button
-              asChild
-              className="px-10 py-4 text-base shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/25 hover:-translate-y-0.5"
-            >
-              <Link href="https://portal.think4ever.com/#/register">
-                {t("cta.btn")}
-              </Link>
-            </Button>
+            <div className="flex justify-center w-full">
+              <Button
+                asChild
+                size="lg"
+                className="w-full sm:w-auto max-w-xs sm:max-w-none shadow-md shadow-primary/25"
+              >
+                <Link href="https://portal.think4ever.com/#/register">
+                  {t("cta.btn")}
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </SectionCard>
