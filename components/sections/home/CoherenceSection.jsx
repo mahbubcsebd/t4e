@@ -81,7 +81,7 @@ export default function CoherenceSection() {
                   </div>
 
                   <div className="gemini-card rounded-xl p-3 sm:p-6 relative group-hover:-translate-y-1 transition-transform duration-500 flex-1 border !border-primary shadow-sm shadow-primary/5">
-                    <div className="absolute -top-3 -right-3 bg-white text-primary rounded-full p-0.5 shadow-md z-20">
+                    <div className="absolute -top-2.5 -right-1 sm:-top-3 sm:-right-3 bg-white text-primary rounded-full p-0.5 shadow-md z-20">
                       <CheckCircle2 className="w-5 h-5 fill-primary text-white" />
                     </div>
                     <strong className="text-base sm:text-lg lg:text-xl font-medium text-foreground block mb-3 leading-snug">
@@ -105,7 +105,7 @@ export default function CoherenceSection() {
                   </div>
 
                   <div className="gemini-card bg-red-50/50 rounded-xl p-3 sm:p-6 font-mono relative group-hover:-translate-y-1 transition-transform duration-500 delay-75 flex-1 border !border-red-500 shadow-sm shadow-red-500/10">
-                    <div className="absolute -top-3 -right-3 bg-white text-red-500 border-2 border-red-500 rounded-full p-0.5 shadow-md z-20">
+                    <div className="absolute -top-2.5 -right-1 sm:-top-3 sm:-right-3 bg-white text-red-500 border-2 border-red-500 rounded-full p-0.5 shadow-md z-20">
                       <X className="w-3.5 h-3.5" strokeWidth={3} />
                     </div>
                     {/* Subtle frosted glass tint for diff */}
