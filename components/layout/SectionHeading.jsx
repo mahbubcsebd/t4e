@@ -82,7 +82,7 @@ export default function SectionHeading({
         )}
         <h2
           className={cn(
-            "max-w-[500px] text-2xl sm:text-3xl md:text-[42px] font-extrabold text-foreground tracking-tight mb-4",
+            "max-w-[500px] mx-auto lg:mx-0 text-2xl sm:text-3xl md:text-[42px] font-extrabold text-foreground tracking-tight mb-4",
             titleClassName,
           )}
         >
@@ -91,7 +91,7 @@ export default function SectionHeading({
         {subtitle && (
           <p
             className={cn(
-              "max-w-[500px] text-sm sm:text-base text-muted-foreground leading-relaxed",
+              "max-w-[500px] mx-auto lg:mx-0 text-sm sm:text-base text-muted-foreground leading-relaxed",
               subtitleClassName,
             )}
           >
