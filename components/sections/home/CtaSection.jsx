@@ -29,7 +29,8 @@ export default function CtaSection() {
             <div className="flex justify-center w-full">
               <Button
                 asChild
-                className="w-full sm:w-auto max-w-xs sm:max-w-none px-6 sm:px-10 py-4 text-base shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/25 hover:-translate-y-0.5"
+                size="lg"
+                className="w-full sm:w-auto max-w-xs sm:max-w-none shadow-md shadow-primary/25"
               >
                 <Link href="https://portal.think4ever.com/#/register">
                   {t("cta.btn")}
