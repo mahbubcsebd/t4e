@@ -5,7 +5,7 @@ export default function Container({ children, className, ...props }) {
   return (
     <div
       className={cn(
-        "max-w-full mx-auto p-4 sm:p-6 lg:p-8 bg-white rounded-xl",
+        "max-w-full mx-auto p-1.5 sm:p-6 lg:p-8 bg-white rounded-xl",
         className,
       )}
       {...props}

@@ -32,7 +32,7 @@ export default function CoherenceSection() {
   return (
     <section className="py-8 md:py-12 lg:py-16" id="code-to-design">
       <SectionCard className="max-w-[1600px] mx-auto">
-        <div className="bg-card rounded-xl p-4 sm:p-8 md:p-10 w-full relative z-10 border border-border/50">
+        <div className="bg-card rounded-xl p-3 sm:p-8 md:p-10 w-full relative z-10 border border-border/50">
           <SectionHeading
             align="split"
             eyebrow={t("coherence.eyebrow")}
@@ -70,7 +70,7 @@ export default function CoherenceSection() {
                 </div>
 
                 {/* Left: Approved Intent */}
-                <div className="flex-grow flex-1 p-4 sm:p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-border bg-gradient-to-br from-primary/10 to-transparent flex flex-col">
+                <div className="flex-grow flex-1 p-2 sm:p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-border bg-gradient-to-br from-primary/10 to-transparent flex flex-col">
                   <div className="flex items-center gap-3 mb-4 sm:mb-6">
                     <div className="p-2 bg-primary/20 text-primary rounded-lg shrink-0">
                       <FileText className="w-4 h-4" />
@@ -80,7 +80,7 @@ export default function CoherenceSection() {
                     </span>
                   </div>
 
-                  <div className="gemini-card rounded-xl p-4 sm:p-6 relative group-hover:-translate-y-1 transition-transform duration-500 flex-1 border !border-primary shadow-sm shadow-primary/5">
+                  <div className="gemini-card rounded-xl p-3 sm:p-6 relative group-hover:-translate-y-1 transition-transform duration-500 flex-1 border !border-primary shadow-sm shadow-primary/5">
                     <div className="absolute -top-3 -right-3 bg-white text-primary rounded-full p-0.5 shadow-md z-20">
                       <CheckCircle2 className="w-5 h-5 fill-primary text-white" />
                     </div>
@@ -94,7 +94,7 @@ export default function CoherenceSection() {
                 </div>
 
                 {/* Right: Proposed Implementation (Error Theme) */}
-                <div className="flex-grow flex-1 p-4 sm:p-8 lg:p-12 bg-gradient-to-bl from-red-50 to-transparent flex flex-col border-t lg:border-t-0 border-border lg:border-none">
+                <div className="flex-grow flex-1 p-2 sm:p-8 lg:p-12 bg-gradient-to-bl from-red-50 to-transparent flex flex-col border-t lg:border-t-0 border-border lg:border-none">
                   <div className="flex items-center gap-3 mb-4 sm:mb-6">
                     <div className="p-2 bg-red-100 text-red-600 rounded-lg shrink-0 border border-red-200">
                       <GitPullRequest className="w-4 h-4" />
@@ -104,7 +104,7 @@ export default function CoherenceSection() {
                     </span>
                   </div>
 
-                  <div className="gemini-card bg-red-50/50 rounded-xl p-4 sm:p-6 font-mono relative group-hover:-translate-y-1 transition-transform duration-500 delay-75 flex-1 border !border-red-500 shadow-sm shadow-red-500/10">
+                  <div className="gemini-card bg-red-50/50 rounded-xl p-3 sm:p-6 font-mono relative group-hover:-translate-y-1 transition-transform duration-500 delay-75 flex-1 border !border-red-500 shadow-sm shadow-red-500/10">
                     <div className="absolute -top-3 -right-3 bg-white text-red-500 border-2 border-red-500 rounded-full p-0.5 shadow-md z-20">
                       <X className="w-3.5 h-3.5" strokeWidth={3} />
                     </div>
