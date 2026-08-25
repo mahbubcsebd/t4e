@@ -1,34 +1,39 @@
-"use client";
+'use client';
 
-import React from "react";
-import { useLanguage } from "@/context/LanguageContext";
-import { CheckCircle2, ArrowRight, ArrowDown, FolderTree, Blocks } from "lucide-react";
-import SectionCard from "@/components/layout/SectionCard";
-import Container from "@/components/layout/Container";
-import SectionHeading from "@/components/layout/SectionHeading";
+import Container from '@/components/layout/Container';
+import SectionCard from '@/components/layout/SectionCard';
+import SectionHeading from '@/components/layout/SectionHeading';
+import { useLanguage } from '@/context/LanguageContext';
+import {
+  ArrowDown,
+  ArrowRight,
+  Blocks,
+  CheckCircle2,
+  FolderTree,
+} from 'lucide-react';
 
 export default function SeeSystem() {
   const { t } = useLanguage();
 
-  const seeSystemList = t("codeToDesignPage.seeSystemList") || [
-    "Architecture and service boundaries",
-    "Dependencies and data movement",
-    "Business workflows and rules",
-    "Change impact across the system",
+  const seeSystemList = t('codeToDesignPage.seeSystemList') || [
+    'Architecture and service boundaries',
+    'Dependencies and data movement',
+    'Business workflows and rules',
+    'Change impact across the system',
   ];
 
   return (
     <section className="py-12 md:py-24 border-b border-border bg-background">
       <SectionCard>
         <Container>
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
             {/* Left Column Copy */}
             <div className="order-1 md:order-1">
               <SectionHeading
                 align="left"
-                eyebrow={t("codeToDesignPage.seeSystemEyebrow")}
-                title={t("codeToDesignPage.seeSystemTitle")}
-                subtitle={t("codeToDesignPage.seeSystemSubtitle")}
+                eyebrow={t('codeToDesignPage.seeSystemEyebrow')}
+                title={t('codeToDesignPage.seeSystemTitle')}
+                subtitle={t('codeToDesignPage.seeSystemSubtitle')}
                 className="mb-8"
               />
 
@@ -109,7 +114,7 @@ export default function SeeSystem() {
                   </div>
 
                   <div className="flex flex-wrap gap-2 mt-auto">
-                    {["Booking", "Payments", "Refund rule", "UI"].map(
+                    {['Booking', 'Payments', 'Refund rule', 'UI'].map(
                       (tag, i) => (
                         <span
                           key={i}

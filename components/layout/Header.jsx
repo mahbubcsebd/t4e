@@ -433,7 +433,7 @@ export default function Header() {
             </button>
 
             {langDropdownOpen && (
-              <div className="absolute right-0 top-full mt-1 w-36 bg-popover rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-border py-1.5 z-50 animate-in fade-in slide-in-from-top-2">
+              <div className="absolute right-0 top-full mt-1 w-36 bg-card rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-border py-1.5 z-50 animate-in fade-in slide-in-from-top-2">
                 {availableLanguages
                   .filter((l) => !l.hidden)
                   .map((lang) => (
@@ -488,7 +488,7 @@ export default function Header() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden bg-popover border-b border-border px-6 py-4 flex flex-col gap-0 max-h-[calc(100vh-80px)] overflow-y-auto"
+            className="lg:hidden bg-card border-b border-border px-6 py-4 flex flex-col gap-0 max-h-[calc(100vh-80px)] overflow-y-auto"
           >
             <div className="flex flex-col gap-0">
               <button

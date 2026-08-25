@@ -1,36 +1,35 @@
-"use client";
+'use client';
 
-import React from "react";
-import { useLanguage } from "@/context/LanguageContext";
-import { CheckCircle2, ShieldAlert } from "lucide-react";
-import SectionCard from "@/components/layout/SectionCard";
-import Container from "@/components/layout/Container";
-import SectionHeading from "@/components/layout/SectionHeading";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import Container from '@/components/layout/Container';
+import SectionCard from '@/components/layout/SectionCard';
+import SectionHeading from '@/components/layout/SectionHeading';
+import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/context/LanguageContext';
+import { CheckCircle2 } from 'lucide-react';
+import Link from 'next/link';
 
 export default function EnterpriseEvaluation() {
   const { t } = useLanguage();
 
-  const evalList = t("securityPage.evalList") || [
-    "Repository and project access",
-    "Model-provider data flows",
-    "Deployment topology",
-    "Usage controls and support",
+  const evalList = t('securityPage.evalList') || [
+    'Repository and project access',
+    'Model-provider data flows',
+    'Deployment topology',
+    'Usage controls and support',
   ];
 
   return (
     <section className="py-12 md:py-24 border-b border-border">
       <SectionCard>
         <Container>
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
             {/* Left Column */}
             <div>
               <SectionHeading
                 align="left"
-                eyebrow={t("securityPage.evalEyebrow")}
-                title={t("securityPage.evalTitle")}
-                subtitle={t("securityPage.evalSubtitle")}
+                eyebrow={t('securityPage.evalEyebrow')}
+                title={t('securityPage.evalTitle')}
+                subtitle={t('securityPage.evalSubtitle')}
                 className="mb-8"
               />
 
@@ -57,11 +56,11 @@ export default function EnterpriseEvaluation() {
                 </span>
 
                 <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
-                  {t("securityPage.reviewTitle")}
+                  {t('securityPage.reviewTitle')}
                 </h3>
 
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-8">
-                  {t("securityPage.reviewDesc")}
+                  {t('securityPage.reviewDesc')}
                 </p>
 
                 <Button
