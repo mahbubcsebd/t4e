@@ -32,7 +32,7 @@ export default function CoherenceSection() {
   return (
     <section className="py-8 md:py-12 lg:py-16" id="code-to-design">
       <SectionCard className="max-w-[1600px] mx-auto">
-        <div className="bg-card rounded-xl p-3 sm:p-8 md:p-10 w-full relative z-10 border border-border/50">
+        <div className="bg-card rounded-xl py-6 px-3.5 sm:p-8 md:p-10 w-full relative z-10 border border-border/50">
           <SectionHeading
             align="split"
             eyebrow={t("coherence.eyebrow")}

@@ -59,7 +59,7 @@ export default function FaqAccordion() {
       </div>
 
       {/* FAQ List */}
-      <SectionCard className=" mx-auto !p-4 sm:!p-8">
+      <SectionCard className="max-w-[1600px] mx-auto">
         <Container>
           <div className="space-y-4 relative z-10">
             {items.map((item, idx) => {
