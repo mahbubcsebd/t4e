@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { ThemeProvider } from "@/components/theme-provider";
+import Script from "next/script";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable} h-full antialiased scroll-smooth`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col font-sans bg-background text-foreground transition-colors duration-300">
+        <Script src="/t4e-analytics.js" strategy="afterInteractive" />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
