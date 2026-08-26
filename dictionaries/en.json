@@ -73,7 +73,7 @@
   },
   "problem": {
     "eyebrow": "The context gap",
-    "title": "AI writes code faster than your team can understand it. Every sprint, the gap grows.",
+    "title": "AI writes code faster than your team can understand it. With every sprint, the gap grows.",
     "card1Tag": "Context resets",
     "card1Title": "Every task starts from fragments",
     "card1Desc": "Each agent session reconstructs only part of the system.",
