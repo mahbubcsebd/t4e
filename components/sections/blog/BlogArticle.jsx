@@ -78,21 +78,23 @@ export const BlogArticle = ({ post }) => {
         </motion.div>
 
         {/* Featured Image */}
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-          className="mb-12 relative aspect-[2/1] overflow-hidden rounded-2xl border border-border/80 shadow-md group"
-        >
-          <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
-          <ZoomableImage
-            src={localizedPost.image}
-            alt={localizedPost.title}
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
-            priority
-          />
-        </motion.div>
+        {!post.noThumb && (
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+            className="mb-12 relative aspect-[2/1] overflow-hidden rounded-2xl border border-border/80 shadow-md group"
+          >
+            <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+            <ZoomableImage
+              src={localizedPost.image}
+              alt={localizedPost.title}
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              priority
+            />
+          </motion.div>
+        )}
 
         {/* Article Content */}
         <motion.div

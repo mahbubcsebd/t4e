@@ -2686,6 +2686,7 @@ export const BLOG_POSTS = [
     slug: "think4ever-multimodal-routing-whitepaper",
     type: "White paper",
     cat: "whitepaper",
+    noThumb: true,
     date: "August 26, 2026",
     readTime: "8 min read",
     title: "Think4Ever Multi-Modal Routing WhitePaper",
