@@ -170,7 +170,7 @@ export default function ValueSection() {
             {/* Subtle background gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-50/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
 
-            <div className="flex flex-col items-start gap-4 relative z-10 w-full lg:w-1/2">
+            <div className="flex flex-col items-start gap-4 relative z-10 w-full lg:w-[40%]">
               <div className="p-3.5 bg-primary text-background rounded-xl shadow-md shrink-0 group-hover:scale-110 transition-transform duration-500 mb-1">
                 <Terminal className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
@@ -184,10 +184,10 @@ export default function ValueSection() {
               </div>
             </div>
 
-            <div className="relative z-10 w-full lg:w-1/2 flex items-center justify-center lg:justify-end">
+            <div className="relative z-10 w-full lg:w-[50%] flex items-center justify-center lg:justify-center">
               <CodingToolPills
                 variant="light"
-                className="justify-center lg:justify-end gap-3 sm:gap-4"
+                className="justify-center lg:justify-end gap-2 sm:gap-2.5"
               />
             </div>
           </div>

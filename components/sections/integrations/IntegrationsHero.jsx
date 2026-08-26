@@ -3,7 +3,7 @@
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
-import { ZoomableImage } from "@/components/ZoomableImage";
+import CodingToolPills from "@/components/ui/CodingToolPills";
 
 export default function IntegrationsHero() {
   const { t } = useLanguage();
@@ -42,20 +42,12 @@ export default function IntegrationsHero() {
           </a> */}
         </div>
 
-        {/* MCP Integrations Screenshot */}
-        <div className="mt-12 flex justify-center">
-          <div className="relative group max-w-[340px] w-full overflow-hidden rounded-2xl border border-border/80 bg-slate-50 dark:bg-card p-2.5 shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-300 hover:shadow-[0_20px_50px_rgba(7,167,225,0.15)] hover:border-primary/30">
-            <div className="rounded-xl overflow-hidden border border-border/50">
-              <ZoomableImage
-                src="/images/claude.jpeg"
-                alt="Think4Ever MCP Integrations Portal Screenshot"
-                width={367}
-                height={496}
-                className="w-full h-auto object-cover select-none"
-                priority
-              />
-            </div>
-          </div>
+        <div className="pt-8 mt-8 mb-6 border-t border-border/50 max-w-4xl mx-auto">
+          <CodingToolPills
+            variant="light"
+            className="justify-center"
+            allTools={true}
+          />
         </div>
       </div>
     </section>
