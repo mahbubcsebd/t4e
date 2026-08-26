@@ -14,7 +14,7 @@ export default function ContactSection() {
   return (
     <section className="py-12 md:py-16 lg:py-24 bg-background border-b border-border" id="contact">
       <SectionCard>
-        <div className="bg-card rounded-xl p-6 md:p-10 w-full relative z-10 border border-border/50">
+        <Container className="w-full relative z-10 border border-border/50">
           <div className="text-center">
             <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
               {t("contact.eyebrow")}
@@ -32,15 +32,15 @@ export default function ContactSection() {
             </p>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start justify-between">
-            <div className="w-full lg:flex-1">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch justify-between">
+            <div className="w-full lg:w-1/2 flex">
               <ContactForm />
             </div>
-            <div className="w-full lg:w-auto">
+            <div className="w-full lg:w-1/2 flex">
               <ContactSidebar />
             </div>
           </div>
-        </div>
+        </Container>
       </SectionCard>
     </section>
   );

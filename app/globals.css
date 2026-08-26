@@ -11,6 +11,8 @@
   --brand-blue: #093cad;
   --primary: #093cad;
   --primary-foreground: #ffffff;
+  --popover: #ffffff;
+  --popover-foreground: #09090d;
 }
 
 .dark {
@@ -24,6 +26,8 @@
   --brand-blue: #093cad;
   --primary: #093cad;
   --primary-foreground: #ffffff;
+  --popover: #13161b;
+  --popover-foreground: #ffffff;
 }
 
 @theme {
@@ -38,6 +42,8 @@
   --color-brand-blue: var(--brand-blue);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
 }
 
 html {

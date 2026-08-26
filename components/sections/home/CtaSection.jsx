@@ -2,6 +2,7 @@
 
 import SectionHeading from "@/components/layout/SectionHeading";
 import SectionCard from "@/components/layout/SectionCard";
+import Container from "@/components/layout/Container";
 
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
@@ -12,8 +13,8 @@ export default function CtaSection() {
 
   return (
     <section className="py-8 md:py-12 lg:py-16" id="register">
-      <SectionCard className="max-w-[1600px] mx-auto">
-        <div className="bg-card rounded-xl p-3 sm:p-8 md:p-12 w-full relative z-10 border border-border/50">
+      <SectionCard>
+        <Container className="w-full relative z-10 border border-border/50">
           <div className="max-w-3xl text-center mx-auto w-full">
             <SectionHeading
               eyebrow={t("nav.startFree")}
@@ -38,7 +39,7 @@ export default function CtaSection() {
               </Button>
             </div>
           </div>
-        </div>
+        </Container>
       </SectionCard>
     </section>
   );

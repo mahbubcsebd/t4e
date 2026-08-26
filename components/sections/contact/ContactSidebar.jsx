@@ -9,14 +9,14 @@ export default function ContactSidebar() {
   const { t } = useLanguage();
 
   return (
-    <div className="w-full lg:w-[360px] space-y-6">
+    <div className="w-full space-y-6 flex flex-col h-full">
       {/* Office Information */}
       <motion.div
         initial={{ opacity: 0, x: 20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-        className="gemini-card rounded-xl p-6 sm:p-8"
+        className="gemini-card rounded-xl p-6 sm:p-8 flex-1 flex flex-col justify-center"
       >
         <h3 className="text-base font-bold text-foreground mb-6 border-b border-border/50 pb-4">
           {t("contact.officeTitle")}

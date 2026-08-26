@@ -63,7 +63,7 @@ export default function SectionHeading({
     return (
       <div
         className={cn(
-          "max-w-2xl text-center lg:text-left relative z-10",
+          "max-w-2xl text-left relative z-10",
           className,
         )}
       >

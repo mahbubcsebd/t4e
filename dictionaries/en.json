@@ -41,7 +41,7 @@
     }
   },
   "hero": {
-    "eyebrow": "For teams building complex software with AI",
+    "eyebrow": "For teams living with legacy code, AI-generated code creates blind spots no one can see.",
     "titlePrefix": "Understand the system. ",
     "titleHighlight": "Change it with confidence.",
     "subtitle": "Turn a codebase into a shared, reviewable system map in minutes—then keep every change aligned with business intent.",
@@ -49,13 +49,13 @@
     "ctaSecondary": "Watch the demo ↗",
     "micro": "No credit card · Keep your existing coding tools",
     "cardOneBadge": "CODE → DESIGN",
-    "cardOneTitle": "Understand and visualize your code.",
+    "cardOneTitle": "Understand and Visualize your System",
     "cardOneRepoTag": "EXISTING PROJECT",
     "cardOneRepoName": "appointment-platform",
     "cardOneBlueprintTag": "LIVING BLUEPRINT",
     "cardOneBlueprintName": "The connected system",
     "cardTwoBadge": "DESIGN → CODE",
-    "cardTwoTitle": "Build code faithful to business intent.",
+    "cardTwoTitle": "Build Systems faithful to business intent.",
     "cardTwoIntentTag": "APPROVED OBJECTIVE",
     "cardTwoIntentName": "Refunds remain reviewable and customer-visible.",
     "cardTwoImplTag": "IMPLEMENTATION",
@@ -73,7 +73,7 @@
   },
   "problem": {
     "eyebrow": "The context gap",
-    "title": "AI can write code. It cannot preserve the full context behind it.",
+    "title": "AI writes code faster than your team can understand it. Every sprint, the gap grows.",
     "card1Tag": "Context resets",
     "card1Title": "Every task starts from fragments",
     "card1Desc": "Each agent session reconstructs only part of the system.",
@@ -162,8 +162,8 @@
     "btnDesignToCode": "Design → Code"
   },
   "cta": {
-    "title": "See the system behind your code.",
-    "subtitle": "Analyze one real project and review what every future change must preserve.",
+    "title": "Upload the codebase you're afraid of.",
+    "subtitle": "In minutes you'll see how it actually works - and what every change would touch.",
     "btn": "Analyze a project →"
   },
   "footer": {
@@ -188,7 +188,7 @@
     "explorePath1": "Explore Code to Design",
     "explorePath2": "Explore Design to Code",
     "path1Tag": "Code → Design",
-    "path1Title": "Analyze existing code",
+    "path1Title": "Analyze existing project",
     "path1Desc": "Connect a repository or upload a project. Think4Ever maps structure, dependencies, workflows and rules.",
     "path1Pills": ["architecture", "dependencies", "business flows"],
     "path2Tag": "Design → Code",
@@ -212,7 +212,7 @@
   },
   "codeToDesignPage": {
     "heroEyebrow": "Code → Design",
-    "heroTitlePrefix": "Understand an unfamiliar codebase ",
+    "heroTitlePrefix": "Understand an unfamiliar project ",
     "heroTitleHighlight": "in minutes.",
     "heroSubtitle": "Turn files into a shared system map—architecture, workflows, dependencies and business rules—before anyone changes the code.",
     "heroCtaPrimary": "Start free →",
@@ -227,7 +227,7 @@
       "Change impact across the system"
     ],
     "whereHelpsEyebrow": "Where it helps",
-    "whereHelpsTitle": "Know what a change affects before you make it.",
+    "whereHelpsTitle": "Understand the impact of a change before making it.",
     "card1Tag": "Onboarding",
     "card1Title": "Get oriented faster",
     "card1Desc": "Give engineers a system map instead of another round of repository archaeology.",
@@ -319,8 +319,8 @@
   },
   "pricingPage": {
     "heroEyebrow": "Pricing",
-    "heroTitlePrefix": "Prove value on ",
-    "heroTitleHighlight": "one real project.",
+    "heroTitlePrefix": "Start with the project ",
+    "heroTitleHighlight": "you're afraid to touch",
     "heroSubtitle": "Analyze a system, review the blueprint and see change impact before adding team capacity or deployment controls.",
     "heroCtaPrimary": "Start free →",
     "heroMicro": "No credit card required for the free plan",
@@ -546,7 +546,7 @@
     "step1Sub": "Choose the fastest path to a useful system view. You can switch paths later.",
     "path1Badge": "Recommended",
     "path1Tag": "Code → Understanding",
-    "path1Title": "Analyze existing code",
+    "path1Title": "Analyze existing project",
     "path1Desc": "Turn a project into a visual, reviewable map of the system.",
     "path1Cta": "Analyze a project →",
     "path2Tag": "Intent → System design",

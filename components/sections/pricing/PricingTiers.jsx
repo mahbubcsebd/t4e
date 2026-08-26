@@ -59,7 +59,7 @@ export default function PricingTiers() {
 
   return (
     <section className="py-12 md:py-24 border-b border-border">
-      <SectionCard className="!p-4 sm:!p-8 md:!p-10">
+      <SectionCard>
         <Container>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 items-stretch">
             {plans.map((plan, idx) => (

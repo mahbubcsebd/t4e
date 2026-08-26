@@ -1,39 +1,38 @@
-"use client";
+'use client';
 
-import React from "react";
-import { useLanguage } from "@/context/LanguageContext";
-import { CheckCircle2, AlertTriangle, ShieldAlert } from "lucide-react";
-import SectionCard from "@/components/layout/SectionCard";
-import Container from "@/components/layout/Container";
-import SectionHeading from "@/components/layout/SectionHeading";
+import Container from '@/components/layout/Container';
+import SectionCard from '@/components/layout/SectionCard';
+import SectionHeading from '@/components/layout/SectionHeading';
+import { useLanguage } from '@/context/LanguageContext';
+import { AlertTriangle, CheckCircle2 } from 'lucide-react';
 
 export default function ControlPoint() {
   const { t } = useLanguage();
 
-  const controlList = t("howItWorksPage.controlList") || [
-    "Make hidden assumptions visible",
-    "Resolve conflicts between intent and implementation",
-    "Give coding agents grounded context",
+  const controlList = t('howItWorksPage.controlList') || [
+    'Make hidden assumptions visible',
+    'Resolve conflicts between intent and implementation',
+    'Give coding agents grounded context',
   ];
 
-  const proofPills = t("howItWorksPage.proofPills") || [
-    "Human decision",
-    "Updated criteria",
-    "Agent context",
+  const proofPills = t('howItWorksPage.proofPills') || [
+    'Human decision',
+    'Updated criteria',
+    'Agent context',
   ];
 
   return (
     <section className="py-12 md:py-24 bg-background border-b border-border">
       <SectionCard>
         <Container>
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
             {/* Left Column Copy */}
             <div>
               <SectionHeading
                 align="left"
-                eyebrow={t("howItWorksPage.controlEyebrow")}
-                title={t("howItWorksPage.controlTitle")}
-                subtitle={t("howItWorksPage.controlSubtitle")}
+                eyebrow={t('howItWorksPage.controlEyebrow')}
+                title={t('howItWorksPage.controlTitle')}
+                subtitle={t('howItWorksPage.controlSubtitle')}
                 className="mb-8"
               />
 
@@ -58,10 +57,10 @@ export default function ControlPoint() {
                 {/* Approved Rule */}
                 <div className="bg-white border border-primary/20 rounded-xl p-5 mb-4 shadow-sm group-hover:border-primary/40 transition-colors duration-300">
                   <span className="text-[10px] font-extrabold text-primary bg-primary/10 px-3 py-1 rounded-full uppercase tracking-wider block mb-3 w-max">
-                    {t("howItWorksPage.approvedTag")}
+                    {t('howItWorksPage.approvedTag')}
                   </span>
                   <h4 className="text-sm font-bold text-foreground">
-                    {t("howItWorksPage.approvedRule")}
+                    {t('howItWorksPage.approvedRule')}
                   </h4>
                 </div>
 
@@ -71,7 +70,7 @@ export default function ControlPoint() {
                     <AlertTriangle className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
                   </div>
                   <span className="text-foreground text-xs font-semibold leading-relaxed mt-0.5">
-                    {t("howItWorksPage.divergence")}
+                    {t('howItWorksPage.divergence')}
                   </span>
                 </div>
 

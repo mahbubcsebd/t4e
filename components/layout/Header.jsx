@@ -36,17 +36,18 @@ export default function Header() {
   const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
   const [mobileDocsOpen, setMobileDocsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const langDropdownRef = useRef(null);
+  const desktopLangDropdownRef = useRef(null);
+  const mobileLangDropdownRef = useRef(null);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     const handleClickOutside = (event) => {
-      if (
-        langDropdownRef.current &&
-        !langDropdownRef.current.contains(event.target)
-      ) {
+      const isOutsideDesktop = desktopLangDropdownRef.current && !desktopLangDropdownRef.current.contains(event.target);
+      const isOutsideMobile = mobileLangDropdownRef.current && !mobileLangDropdownRef.current.contains(event.target);
+      
+      if (isOutsideDesktop && isOutsideMobile) {
         setLangDropdownOpen(false);
       }
     };
@@ -353,7 +354,7 @@ export default function Header() {
         {/* Right Action Items */}
         <div className="hidden lg:flex items-center gap-3 shrink-0">
           {/* Language Selector Dropdown */}
-          <div className="relative" ref={langDropdownRef}>
+          <div className="relative" ref={desktopLangDropdownRef}>
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
               className="flex items-center gap-1.5 text-[15px] font-medium text-foreground hover:text-primary transition-colors py-2"
@@ -420,7 +421,7 @@ export default function Header() {
 
         {/* Mobile Menu Toggle */}
         <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
-          <div className="relative">
+          <div className="relative" ref={mobileLangDropdownRef}>
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
               className="flex items-center gap-1 text-[14px] font-medium text-foreground hover:text-primary transition-colors py-2"
@@ -433,7 +434,7 @@ export default function Header() {
             </button>
 
             {langDropdownOpen && (
-              <div className="absolute right-0 top-full mt-1 w-36 bg-popover rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-border py-1.5 z-50 animate-in fade-in slide-in-from-top-2">
+              <div className="absolute right-0 top-full mt-1 w-36 bg-card rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-border py-1.5 z-50 animate-in fade-in slide-in-from-top-2">
                 {availableLanguages
                   .filter((l) => !l.hidden)
                   .map((lang) => (
@@ -488,7 +489,7 @@ export default function Header() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden bg-popover border-b border-border px-6 py-4 flex flex-col gap-0 overflow-hidden"
+            className="lg:hidden bg-card border-b border-border px-6 py-4 flex flex-col gap-0 max-h-[calc(100vh-80px)] overflow-y-auto"
           >
             <div className="flex flex-col gap-0">
               <button

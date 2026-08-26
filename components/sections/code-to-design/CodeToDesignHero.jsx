@@ -34,15 +34,15 @@ export default function CodeToDesignHero() {
               {t("nav.startFree")}
             </a>
           </Button>
-          <button
+          <Button
+            variant="outline"
             onClick={() => {
               setVideoId("FY68DuwOf4Q");
               setIsVideoOpen(true);
             }}
-            className="btn-alt text-sm py-3 px-6"
           >
             <span>{t("codeToDesignPage.heroCtaSecondary")}</span>
-          </button>
+          </Button>
         </div>
       </div>
 
