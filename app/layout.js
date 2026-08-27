@@ -21,20 +21,13 @@ export const metadata = {
     title: "Turn Code Into a Living System Map | Think4Ever",
     description: "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.",
     type: "website",
-    images: [
-      {
-        url: "/images/og-card.png",
-        width: 1200,
-        height: 630,
-        alt: "Think4Ever Preview",
-      },
-    ],
+    url: "https://think4ever.com",
+    siteName: "Think4Ever",
   },
   twitter: {
     card: "summary_large_image",
     title: "Turn Code Into a Living System Map | Think4Ever",
     description: "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.",
-    images: ["/images/og-card.png"],
   },
 };
 

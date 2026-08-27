@@ -77,7 +77,7 @@ export default function ResourceGrid() {
                         setVideoId("FY68DuwOf4Q");
                         setIsVideoOpen(true);
                       }}
-                      className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-primary bg-primary/5 hover:bg-primary/10 px-4 py-2.5 rounded-lg transition-colors focus:outline-none w-max border border-primary/20"
+                      className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-primary bg-primary/5 hover:bg-primary/10 px-4 py-2.5 rounded-full transition-colors focus:outline-none w-max border border-primary/20"
                     >
                       <Play className="w-4 h-4 fill-current" />
                       <span>{t("resourcesPage.video1Link")}</span>
@@ -106,7 +106,7 @@ export default function ResourceGrid() {
                         setVideoId("Lq-vza9_CzI");
                         setIsVideoOpen(true);
                       }}
-                      className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-primary bg-primary/5 hover:bg-primary/10 px-4 py-2.5 rounded-lg transition-colors focus:outline-none w-max border border-primary/20"
+                      className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-primary bg-primary/5 hover:bg-primary/10 px-4 py-2.5 rounded-full transition-colors focus:outline-none w-max border border-primary/20"
                     >
                       <Play className="w-4 h-4 fill-current" />
                       <span>{t("resourcesPage.video2Link")}</span>
@@ -134,7 +134,7 @@ export default function ResourceGrid() {
 
                   <div className="relative z-10 flex flex-col h-full">
                     <div>
-                      <span className="text-[10px] font-extrabold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-4 border border-indigo-200">
+                      <span className="text-[10px] font-extrabold text-primary bg-primary/10 px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-4 border border-indigo-200">
                         {t("resourcesPage.guide1Type")}
                       </span>
                       <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
@@ -160,7 +160,7 @@ export default function ResourceGrid() {
 
                   <div className="relative z-10 flex flex-col h-full">
                     <div>
-                      <span className="text-[10px] font-extrabold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-4 border border-indigo-200">
+                      <span className="text-[10px] font-extrabold text-primary bg-primary/10 px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-4 border border-indigo-200">
                         {t("resourcesPage.guide2Type")}
                       </span>
                       <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">

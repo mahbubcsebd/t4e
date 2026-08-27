@@ -149,7 +149,7 @@ export default function HeroSection() {
                           {/* Stage diagram */}
                           <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-2 md:gap-0 items-center bg-[#f0f4f9] p-3 md:p-4 rounded-xl border border-border/40 relative max-w-4xl mx-auto w-full dark:bg-card/50 dark:border-border">
                             <motion.div
-                              initial={{ opacity: 0, x: -10 }}
+                              initial={false}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{
                                 duration: 0.5,
@@ -177,7 +177,7 @@ export default function HeroSection() {
                             {/* Central Interactive Play Button Connection */}
                             <div className="flex items-center justify-center relative py-3 md:py-0 md:px-4 w-full md:w-24 h-full">
                               <motion.div
-                                initial={{ scaleX: 0, opacity: 0 }}
+                                initial={false}
                                 animate={{ scaleX: 1, opacity: 1 }}
                                 transition={{
                                   duration: 0.6,
@@ -192,7 +192,7 @@ export default function HeroSection() {
                               </motion.div>
 
                               <motion.div
-                                initial={{ scaleY: 0, opacity: 0 }}
+                                initial={false}
                                 animate={{ scaleY: 1, opacity: 1 }}
                                 transition={{
                                   duration: 0.6,
@@ -208,7 +208,7 @@ export default function HeroSection() {
 
                               {/* The Play Button */}
                               <motion.button
-                                initial={{ scale: 0.65, opacity: 0 }}
+                                initial={false}
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{
                                   duration: 0.5,
@@ -232,7 +232,7 @@ export default function HeroSection() {
                             </div>
 
                             <motion.div
-                              initial={{ opacity: 0, x: 10 }}
+                              initial={false}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{
                                 duration: 0.5,
@@ -294,7 +294,7 @@ export default function HeroSection() {
                           {/* Stage diagram */}
                           <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-2 md:gap-0 items-center bg-[#f0f4f9] p-3 md:p-4 rounded-xl border border-border/40 relative max-w-4xl mx-auto w-full dark:bg-card/50 dark:border-border">
                             <motion.div
-                              initial={{ opacity: 0, x: -10 }}
+                              initial={false}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{
                                 duration: 0.5,
@@ -317,7 +317,7 @@ export default function HeroSection() {
                             {/* Central Interactive Play Button Connection */}
                             <div className="flex items-center justify-center relative py-3 md:py-0 md:px-4 w-full md:w-24 h-full">
                               <motion.div
-                                initial={{ scaleX: 0, opacity: 0 }}
+                                initial={false}
                                 animate={{ scaleX: 1, opacity: 1 }}
                                 transition={{
                                   duration: 0.6,
@@ -332,7 +332,7 @@ export default function HeroSection() {
                               </motion.div>
 
                               <motion.div
-                                initial={{ scaleY: 0, opacity: 0 }}
+                                initial={false}
                                 animate={{ scaleY: 1, opacity: 1 }}
                                 transition={{
                                   duration: 0.6,
@@ -348,7 +348,7 @@ export default function HeroSection() {
 
                               {/* The Play Button */}
                               <motion.button
-                                initial={{ scale: 0.65, opacity: 0 }}
+                                initial={false}
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{
                                   duration: 0.5,
@@ -372,7 +372,7 @@ export default function HeroSection() {
                             </div>
 
                             <motion.div
-                              initial={{ opacity: 0, x: 10 }}
+                              initial={false}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{
                                 duration: 0.5,
