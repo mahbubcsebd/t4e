@@ -157,11 +157,19 @@
     "path1Tag": "Code → Ontwerp",
     "path1Title": "Analyseer bestaande code",
     "path1Desc": "Koppel een repository of upload een project. Think4Ever brengt structuur, afhankelijkheden en regels in kaart.",
-    "path1Pills": ["architectuur", "afhankelijkheden", "bedrijfstromen"],
+    "path1Pills": [
+      "architectuur",
+      "afhankelijkheden",
+      "bedrijfstromen"
+    ],
     "path2Tag": "Ontwerp → Code",
     "path2Title": "Definieer een nieuw systeem",
     "path2Desc": "Leg doelstellingen, rollen, werkstromen, regels en acceptatiecriteria vast vóór de code.",
-    "path2Pills": ["zakelijke bedoeling", "beslissingen", "acceptatiecriteria"],
+    "path2Pills": [
+      "zakelijke bedoeling",
+      "beslissingen",
+      "acceptatiecriteria"
+    ],
     "controlEyebrow": "Het controlepunt",
     "controlTitle": "Keur bedoeling goed. Zie impact vóór uitvoering.",
     "controlSubtitle": "Vergelijk voorgestelde implementatie met goedgekeurde regels en bekijk wat het nog meer beïnvloedt.",
@@ -259,7 +267,11 @@
     "card1Tag": "Think MCP",
     "card1Title": "Systeemcontext via MCP",
     "card1Desc": "Stel de beoordeelde blauwdruk beschikbaar aan ondersteunde MCP-clients voordat ze code plannen of wijzigen.",
-    "card1List": ["Claude Code", "Codex", "Cursor en Windsurf"],
+    "card1List": [
+      "Claude Code",
+      "Codex",
+      "Cursor en Windsurf"
+    ],
     "card2Tag": "VS Code",
     "card2Title": "Begrip in de editor",
     "card2Desc": "Breng de systeemkaart dichter bij het ontwikkelwerk via de Think4Ever-extensie.",
@@ -547,7 +559,9 @@
     "emailVal": "info@think4ever.com",
     "successTitle": "Bedankt voor je bericht!",
     "successMsg": "We hebben je bericht ontvangen en nemen zo snel mogelijk contact met je op.",
-    "okay": "Oké"
+    "okay": "Oké",
+    "metaTitle": "Neem contact op - Think4Ever",
+    "metaDesc": "Neem contact op met Think4Ever om codebegrip, levende blauwdrukken, wijzigingsimpactanalyse en gedeelde context voor mensen en coderingsagenten te bespreken."
   },
   "privacyPolicyPage": {
     "heroEyebrow": "Juridisch & Privacy",
@@ -607,5 +621,9 @@
       "mcp": "Think MCP",
       "whitepaper": "Whitepaper"
     }
+  },
+  "layout": {
+    "metaTitle": "Verander code in een levende systeemkaart | Think4Ever",
+    "metaDesc": "Verander bestaande code in een levende systeemblauwdruk. Beoordeel de bedrijfsintentie, bekijk de impact van wijzigingen en geef elke codeeragent de systeemcontext die deze nodig heeft."
   }
 }

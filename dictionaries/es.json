@@ -190,7 +190,11 @@
     "path1Tag": "Código → Diseño",
     "path1Title": "Analizar código existente",
     "path1Desc": "Conecte un repositorio o suba un proyecto. Think4Ever mapea estructura, dependencias, flujos y reglas.",
-    "path1Pills": ["arquitectura", "dependencias", "flujos de negocio"],
+    "path1Pills": [
+      "arquitectura",
+      "dependencias",
+      "flujos de negocio"
+    ],
     "path2Tag": "Diseño → Código",
     "path2Title": "Definir un nuevo sistema",
     "path2Desc": "Capture objetivos, roles, flujos de trabajo y criterios de aceptación antes del código.",
@@ -296,7 +300,11 @@
     "card1Tag": "Think MCP",
     "card1Title": "Contexto del sistema a través de MCP",
     "card1Desc": "Exponga el plano revisado a clientes MCP compatibles antes de que planifiquen o cambien código.",
-    "card1List": ["Claude Code", "Codex", "Cursor y Windsurf"],
+    "card1List": [
+      "Claude Code",
+      "Codex",
+      "Cursor y Windsurf"
+    ],
     "card2Tag": "VS Code",
     "card2Title": "Comprensión en el editor",
     "card2Desc": "Acerque el mapa del sistema al trabajo de desarrollo a través de la extensión Think4Ever.",
@@ -589,7 +597,9 @@
     "emailVal": "info@think4ever.com",
     "successTitle": "¡Gracias por contactarnos!",
     "successMsg": "Hemos recibido su mensaje y nos pondremos en contacto con usted en breve.",
-    "okay": "Aceptar"
+    "okay": "Aceptar",
+    "metaTitle": "Contáctenos - Think4Ever",
+    "metaDesc": "Comuníquese con Think4Ever para discutir la comprensión del código, los planos vivos, el análisis del impacto de los cambios y el contexto compartido para personas y agentes de codificación."
   },
   "privacyPolicyPage": {
     "heroEyebrow": "Legal y Privacidad",
@@ -699,7 +709,12 @@
         "Integradores de Sistemas / Consultores",
         "Empresas y Negocios Medianos"
       ],
-      "size": ["1 - 10", "11 - 50", "51 - 200", "500+"],
+      "size": [
+        "1 - 10",
+        "11 - 50",
+        "51 - 200",
+        "500+"
+      ],
       "needs": [
         "Modificar y arreglar el código existente",
         "Diseñar la arquitectura adecuada desde el principio",
@@ -716,5 +731,9 @@
     "successTitle": "¡Gracias por contactarnos!",
     "successMsg": "Hemos recibido su mensaje y nos pondremos en contacto con usted en breve.",
     "okay": "Aceptar"
+  },
+  "layout": {
+    "metaTitle": "Convierta el código en un mapa de sistema vivo | Think4Ever",
+    "metaDesc": "Convierta el código existente en un plano de sistema vivo. Revise la intención comercial, vea el impacto de los cambios y brinde a cada agente de codificación el contexto del sistema que necesita."
   }
 }

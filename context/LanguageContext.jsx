@@ -25,6 +25,10 @@ export function LanguageProvider({ children }) {
     }
   }, []);
 
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
+
   const setLanguage = (lang) => {
     if (dictionaries[lang]) {
       setLanguageState(lang);
