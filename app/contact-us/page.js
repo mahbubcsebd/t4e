@@ -4,7 +4,8 @@ import ContactSection from "@/components/sections/contact/ContactSection";
 
 export const metadata = {
   title: "Contact Us - Think4Ever",
-  description: "Get in touch with the Think4Ever team. We're here to help you revolutionize your software development life cycle with multi-agent SDLC.",
+  description:
+    "Contact Think4Ever to discuss code understanding, living blueprints, change-impact analysis and shared context for people and coding agents.",
 };
 
 export default function ContactPage() {

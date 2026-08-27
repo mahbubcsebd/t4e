@@ -190,11 +190,7 @@
     "path1Tag": "Código → Diseño",
     "path1Title": "Analizar código existente",
     "path1Desc": "Conecte un repositorio o suba un proyecto. Think4Ever mapea estructura, dependencias, flujos y reglas.",
-    "path1Pills": [
-      "arquitectura",
-      "dependencias",
-      "flujos de negocio"
-    ],
+    "path1Pills": ["arquitectura", "dependencias", "flujos de negocio"],
     "path2Tag": "Diseño → Código",
     "path2Title": "Definir un nuevo sistema",
     "path2Desc": "Capture objetivos, roles, flujos de trabajo y criterios de aceptación antes del código.",
@@ -249,7 +245,7 @@
     "card3Tag": "Preparación de agentes",
     "card3Title": "Entregue el sistema a los agentes",
     "card3Desc": "Lleve el contexto del sistema revisado al agente de código que su equipo ya utiliza.",
-    "quote": "“La comprensión generada se vuelve útil cuando el equipo puede inspeccionarla, corregirla y usarla para guiar el siguiente cambio.”",
+    "quote": "La comprensión generada se vuelve útil cuando el equipo puede inspeccionarla, corregirla y usarla para guiar el siguiente cambio.",
     "proofPills": [
       "Acceso al repositorio de revisión",
       "Revisión humana",
@@ -300,11 +296,7 @@
     "card1Tag": "Think MCP",
     "card1Title": "Contexto del sistema a través de MCP",
     "card1Desc": "Exponga el plano revisado a clientes MCP compatibles antes de que planifiquen o cambien código.",
-    "card1List": [
-      "Claude Code",
-      "Codex",
-      "Cursor y Windsurf"
-    ],
+    "card1List": ["Claude Code", "Codex", "Cursor y Windsurf"],
     "card2Tag": "VS Code",
     "card2Title": "Comprensión en el editor",
     "card2Desc": "Acerque el mapa del sistema al trabajo de desarrollo a través de la extensión Think4Ever.",
@@ -707,12 +699,7 @@
         "Integradores de Sistemas / Consultores",
         "Empresas y Negocios Medianos"
       ],
-      "size": [
-        "1 - 10",
-        "11 - 50",
-        "51 - 200",
-        "500+"
-      ],
+      "size": ["1 - 10", "11 - 50", "51 - 200", "500+"],
       "needs": [
         "Modificar y arreglar el código existente",
         "Diseñar la arquitectura adecuada desde el principio",

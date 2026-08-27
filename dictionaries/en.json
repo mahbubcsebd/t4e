@@ -51,13 +51,13 @@
     "ctaSecondary": "Watch the demo ↗",
     "micro": "No credit card · Keep your existing coding tools",
     "cardOneBadge": "CODE → DESIGN",
-    "cardOneTitle": "Understand and Visualize your System",
+    "cardOneTitle": "Understand and visualize your system.",
     "cardOneRepoTag": "EXISTING PROJECT",
     "cardOneRepoName": "appointment-platform",
     "cardOneBlueprintTag": "LIVING BLUEPRINT",
     "cardOneBlueprintName": "The connected system",
     "cardTwoBadge": "DESIGN → CODE",
-    "cardTwoTitle": "Build Systems faithful to business intent.",
+    "cardTwoTitle": "Build systems faithful to business intent.",
     "cardTwoIntentTag": "APPROVED OBJECTIVE",
     "cardTwoIntentName": "Refunds remain reviewable and customer-visible.",
     "cardTwoImplTag": "IMPLEMENTATION",
@@ -165,7 +165,7 @@
   },
   "cta": {
     "title": "Upload the codebase you're afraid of.",
-    "subtitle": "In minutes you'll see how it actually works - and what every change would touch.",
+    "subtitle": "In minutes you'll see how it actually works—and what every change would touch.",
     "btn": "Analyze a project →"
   },
   "footer": {
@@ -192,19 +192,11 @@
     "path1Tag": "Code → Design",
     "path1Title": "Analyze existing project",
     "path1Desc": "Connect a repository or upload a project. Think4Ever maps structure, dependencies, workflows and rules.",
-    "path1Pills": [
-      "architecture",
-      "dependencies",
-      "business flows"
-    ],
+    "path1Pills": ["architecture", "dependencies", "business flows"],
     "path2Tag": "Design → Code",
     "path2Title": "Define a new system",
     "path2Desc": "Capture objectives, roles, workflows, rules and acceptance criteria before code.",
-    "path2Pills": [
-      "business intent",
-      "decisions",
-      "acceptance criteria"
-    ],
+    "path2Pills": ["business intent", "decisions", "acceptance criteria"],
     "controlEyebrow": "The control point",
     "controlTitle": "Approve intent. See impact before execution.",
     "controlSubtitle": "Compare proposed implementation with approved rules and reveal what else the change affects.",
@@ -216,11 +208,7 @@
     "approvedTag": "Approved business rule",
     "approvedRule": "Refunds require review within 24 hours",
     "divergence": "Implementation proposes 48 hours — review required",
-    "proofPills": [
-      "Human decision",
-      "Updated criteria",
-      "Agent context"
-    ],
+    "proofPills": ["Human decision", "Updated criteria", "Agent context"],
     "ctaTitle": "Start with one real project.",
     "ctaSubtitle": "See the system behind the code before you ask an agent to change it."
   },
@@ -251,7 +239,7 @@
     "card3Tag": "Agent readiness",
     "card3Title": "Give agents the system",
     "card3Desc": "Carry reviewed system context into the coding agent your team already uses.",
-    "quote": "“Generated understanding becomes useful when the team can inspect it, correct it and use it to guide the next change.”",
+    "quote": "Generated understanding becomes useful when the team can inspect it, correct it and use it to guide the next change.",
     "proofPills": [
       "Review repository access",
       "Human review",
@@ -302,11 +290,7 @@
     "card1Tag": "Think MCP",
     "card1Title": "System context through MCP",
     "card1Desc": "Expose the reviewed blueprint to supported MCP clients before they plan or change code.",
-    "card1List": [
-      "Claude Code",
-      "Codex",
-      "Cursor and Windsurf"
-    ],
+    "card1List": ["Claude Code", "Codex", "Cursor and Windsurf"],
     "card2Tag": "VS Code",
     "card2Title": "Understanding in the editor",
     "card2Desc": "Bring the system map closer to development work through the Think4Ever extension.",
@@ -709,12 +693,7 @@
         "Systems Integrators / Consultants",
         "Enterprise & Mid-size Business"
       ],
-      "size": [
-        "1 - 10",
-        "11 - 50",
-        "51 - 200",
-        "500+"
-      ],
+      "size": ["1 - 10", "11 - 50", "51 - 200", "500+"],
       "needs": [
         "Amend and fix existing code",
         "Design the right architecture upfront",

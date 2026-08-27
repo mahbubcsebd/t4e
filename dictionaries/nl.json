@@ -157,19 +157,11 @@
     "path1Tag": "Code → Ontwerp",
     "path1Title": "Analyseer bestaande code",
     "path1Desc": "Koppel een repository of upload een project. Think4Ever brengt structuur, afhankelijkheden en regels in kaart.",
-    "path1Pills": [
-      "architectuur",
-      "afhankelijkheden",
-      "bedrijfstromen"
-    ],
+    "path1Pills": ["architectuur", "afhankelijkheden", "bedrijfstromen"],
     "path2Tag": "Ontwerp → Code",
     "path2Title": "Definieer een nieuw systeem",
     "path2Desc": "Leg doelstellingen, rollen, werkstromen, regels en acceptatiecriteria vast vóór de code.",
-    "path2Pills": [
-      "zakelijke bedoeling",
-      "beslissingen",
-      "acceptatiecriteria"
-    ],
+    "path2Pills": ["zakelijke bedoeling", "beslissingen", "acceptatiecriteria"],
     "controlEyebrow": "Het controlepunt",
     "controlTitle": "Keur bedoeling goed. Zie impact vóór uitvoering.",
     "controlSubtitle": "Vergelijk voorgestelde implementatie met goedgekeurde regels en bekijk wat het nog meer beïnvloedt.",
@@ -216,7 +208,7 @@
     "card3Tag": "Gereedheid voor agents",
     "card3Title": "Geef agents het systeem",
     "card3Desc": "Neem beoordeelde systeemcontext mee naar de coderingsagent die je team al gebruikt.",
-    "quote": "“Gegenereerd begrip wordt pas nuttig wanneer het team het kan inspecteren, corrigeren en gebruiken om de volgende wijziging te sturen.”",
+    "quote": "Gegenereerd begrip wordt pas nuttig wanneer het team het kan inspecteren, corrigeren en gebruiken om de volgende wijziging te sturen.",
     "proofPills": [
       "Beoordeel repository-toegang",
       "Menselijke beoordeling",
@@ -267,11 +259,7 @@
     "card1Tag": "Think MCP",
     "card1Title": "Systeemcontext via MCP",
     "card1Desc": "Stel de beoordeelde blauwdruk beschikbaar aan ondersteunde MCP-clients voordat ze code plannen of wijzigen.",
-    "card1List": [
-      "Claude Code",
-      "Codex",
-      "Cursor en Windsurf"
-    ],
+    "card1List": ["Claude Code", "Codex", "Cursor en Windsurf"],
     "card2Tag": "VS Code",
     "card2Title": "Begrip in de editor",
     "card2Desc": "Breng de systeemkaart dichter bij het ontwikkelwerk via de Think4Ever-extensie.",
