@@ -16,11 +16,11 @@ export default function ResourceGrid() {
 
   return (
     <section
-      className="py-12 md:py-24 bg-background border-b border-border"
+      className="pt-12 md:pt-16 pb-8 md:pb-12 bg-background border-b border-border"
       id="resources"
     >
       {/* Hero Banner (Outside SectionCard) */}
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8 md:mb-12">
         <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
           {t("resourcesPage.heroEyebrow")}
         </span>

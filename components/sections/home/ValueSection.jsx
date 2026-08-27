@@ -23,9 +23,9 @@ export default function ValueSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-8 md:py-12 lg:py-16">
+    <section className="py-4 md:py-8 lg:py-12">
       <SectionCard className="max-w-[1600px] mx-auto">
-        <div className="bg-card rounded-xl py-6 px-3.5 sm:p-8 md:p-10 w-full relative z-10 border border-border/50">
+        <div className="bg-card rounded-xl p-5 sm:p-8 md:p-10 w-full relative z-10 border border-border/50">
           {/* 3 Column Grid for Core Values */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex-1 gemini-card rounded-xl overflow-hidden flex flex-col group">

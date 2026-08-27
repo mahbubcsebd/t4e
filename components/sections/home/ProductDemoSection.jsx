@@ -13,7 +13,7 @@ export default function ProductDemoSection() {
   const [videoId, setVideoId] = useState("");
 
   return (
-    <section className="py-8 md:py-12 lg:py-16" id="resources">
+    <section className="py-4 md:py-8 lg:py-12" id="resources">
       <SectionCard className="max-w-[1600px] mx-auto">
         <div className="w-full">
           {/* Clean card matching other sections */}
