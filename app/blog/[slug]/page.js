@@ -18,6 +18,7 @@ export async function generateMetadata(props) {
   return {
     title: `${post.title} | Think4Ever Blog`,
     description: post.desc || post.description,
+    alternates: { canonical: `/blog/${slug}/` },
   };
 }
 

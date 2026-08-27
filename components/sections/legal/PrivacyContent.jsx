@@ -7,7 +7,7 @@ export default function PrivacyContent() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 md:py-20 bg-card border-b border-border">
+    <section className="pt-12 md:pt-16 pb-8 md:pb-12 bg-card border-b border-border">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">

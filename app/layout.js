@@ -11,13 +11,14 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Legacy code and AI-generated code turned your product into a black box. think4Ever turns it into a living map of your system - in minutes",
+  metadataBase: new URL("https://think4ever.com"),
+  title: "Turn Code Into a Living System Map | Think4Ever",
   description: "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.",
   icons: {
     icon: "/images/favicon.ico",
   },
   openGraph: {
-    title: "Legacy code and AI-generated code turned your product into a black box. think4Ever turns it into a living map of your system - in minutes",
+    title: "Turn Code Into a Living System Map | Think4Ever",
     description: "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.",
     type: "website",
     images: [
@@ -31,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Legacy code and AI-generated code turned your product into a black box. think4Ever turns it into a living map of your system - in minutes",
+    title: "Turn Code Into a Living System Map | Think4Ever",
     description: "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.",
     images: ["/images/og-card.png"],
   },

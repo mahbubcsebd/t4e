@@ -1,3 +1,4 @@
+export const metadata = { alternates: { canonical: '/onboarding/' } };
 "use client";
 
 import React, { useState } from "react";
@@ -208,3 +209,4 @@ export default function OnboardingPage() {
     </div>
   );
 }
+

@@ -1,3 +1,4 @@
+export const metadata = { alternates: { canonical: '/register/' } };
 "use client";
 
 import React, { useState } from "react";
@@ -249,3 +250,4 @@ export default function RegisterPage() {
     </div>
   );
 }
+
