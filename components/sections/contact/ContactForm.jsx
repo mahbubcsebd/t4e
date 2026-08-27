@@ -5,15 +5,28 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Check, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
+import { GlobalSuccessPopup } from "@/components/ui/GlobalSuccessPopup";
 
 // --- Custom Select Component ---
-function CustomSelect({ options, value, onChange, placeholder, error }) {
+function CustomSelect({
+  options,
+  value,
+  onChange,
+  placeholder,
+  error,
+  id,
+  name,
+  required,
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (containerRef.current && !containerRef.current.contains(event.target)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target)
+      ) {
         setIsOpen(false);
       }
     };
@@ -25,9 +38,13 @@ function CustomSelect({ options, value, onChange, placeholder, error }) {
     <div className="relative w-full" ref={containerRef}>
       <button
         type="button"
+        id={id}
+        name={name}
         onClick={() => setIsOpen(!isOpen)}
         className={`w-full h-11 px-3 text-sm border bg-card rounded-xl shadow-sm outline-none text-left flex items-center justify-between transition-all ${
-          error ? "border-rose-400 focus:ring-rose-200" : "border-border hover:border-[#07A7E1] focus:ring-2 focus:ring-[#07A7E1]/20 focus:border-[#07A7E1]"
+          error
+            ? "border-rose-400 focus:ring-rose-200"
+            : "border-border hover:border-[#07A7E1] focus:ring-2 focus:ring-[#07A7E1]/20 focus:border-[#07A7E1]"
         } ${value ? "text-foreground" : "text-muted-foreground"}`}
       >
         <span className="truncate">{value || placeholder}</span>
@@ -53,7 +70,9 @@ function CustomSelect({ options, value, onChange, placeholder, error }) {
                   setIsOpen(false);
                 }}
                 className={`w-full text-left px-4 py-2.5 text-sm transition-colors ${
-                  value === opt ? "bg-[#f2f7fd] text-[#093cad] font-semibold" : "text-muted-foreground hover:bg-[#f7fafe] hover:text-foreground"
+                  value === opt
+                    ? "bg-[#f2f7fd] text-[#093cad] font-semibold"
+                    : "text-muted-foreground hover:bg-[#f7fafe] hover:text-foreground"
                 }`}
               >
                 {opt}
@@ -62,16 +81,35 @@ function CustomSelect({ options, value, onChange, placeholder, error }) {
           </motion.div>
         )}
       </AnimatePresence>
-      {error && <p className="text-[11px] text-rose-500 font-bold mt-1.5 ml-1">{error}</p>}
+      {error && (
+        <p className="text-[11px] text-rose-500 font-bold mt-1.5 ml-1">
+          {error}
+        </p>
+      )}
     </div>
   );
 }
 
+const InputError = ({ error }) => {
+  if (!error) return null;
+  return (
+    <p className="text-[11px] text-rose-500 font-bold mt-1.5 ml-1">{error}</p>
+  );
+};
+
 // --- Main Form Component ---
 export default function ContactForm() {
   const { t } = useLanguage();
+    // Translation helpers
+    // Handle both contact and contactPage namespaces (for Dutch)
+    const tContact = (key) => {
+      const val1 = t(`contact.${key}`);
+      const val2 = t(`contactPage.${key}`);
+      return val1 && !val1.includes('contact.') ? val1 : val2;
+    };
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const [formData, setFormData] = useState({
     segment: "",
     firstName: "",
@@ -81,9 +119,9 @@ export default function ContactForm() {
     companySize: "",
     userRole: "",
     interests: "",
-    agreed: false
+    agreed: false,
   });
-  
+
   const [selectedNeeds, setSelectedNeeds] = useState([]);
   const [errors, setErrors] = useState({});
 
@@ -100,10 +138,10 @@ export default function ContactForm() {
   };
 
   const handleChange = (field, value) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
     // Clear error when user interacts
     if (errors[field]) {
-      setErrors(prev => {
+      setErrors((prev) => {
         const newErrs = { ...prev };
         delete newErrs[field];
         return newErrs;
@@ -113,25 +151,110 @@ export default function ContactForm() {
 
   const validate = () => {
     const newErrors = {};
-    const reqMsg = t("contact.requiredError");
-    
-    if (!formData.segment) newErrors.segment = reqMsg;
-    if (!formData.firstName) newErrors.firstName = reqMsg;
-    if (!formData.lastName) newErrors.lastName = reqMsg;
-    if (!formData.email) newErrors.email = reqMsg;
-    if (!formData.companyName) newErrors.companyName = reqMsg;
-    if (!formData.companySize) newErrors.companySize = reqMsg;
-    if (!formData.userRole) newErrors.userRole = reqMsg;
-    if (!formData.agreed) newErrors.agreed = reqMsg;
-    
+
+    // Translation helpers
+    // Handle both contact and contactPage namespaces (for Dutch)
+    const tContact = (key) => {
+      const val1 = t(`contact.${key}`);
+      const val2 = t(`contactPage.${key}`);
+      return val1 && !val1.includes("contact.") ? val1 : val2;
+    };
+
+    const reqSuffix = tContact("requiredSuffix") || "is required";
+    const invalidEmail =
+      tContact("invalidEmail") || "Please enter a valid email address";
+    const minLength = tContact("minLength") || "must be at least";
+    const maxLength = tContact("maxLength") || "cannot exceed";
+    const chars = tContact("characters") || "characters";
+
+    const checkRequired = (field, labelKey) => {
+      if (
+        !formData[field] ||
+        (typeof formData[field] === "string" && !formData[field].trim())
+      ) {
+        newErrors[field] = `${tContact(labelKey)} ${reqSuffix}`;
+        return false;
+      }
+      return true;
+    };
+
+    const checkLength = (field, labelKey, min, max) => {
+      if (!formData[field]) return true; // Handled by required
+      const len = formData[field].trim().length;
+      if (len < min) {
+        newErrors[field] = `${tContact(labelKey)} ${minLength} ${min} ${chars}`;
+        return false;
+      }
+      if (len > max) {
+        newErrors[field] = `${tContact(labelKey)} ${maxLength} ${max} ${chars}`;
+        return false;
+      }
+      return true;
+    };
+
+    // Segment
+    checkRequired("segment", "segmentLabel");
+
+    // First Name
+    if (checkRequired("firstName", "firstNameLabel")) {
+      checkLength("firstName", "firstNameLabel", 2, 50);
+    }
+
+    // Last Name
+    if (checkRequired("lastName", "lastNameLabel")) {
+      checkLength("lastName", "lastNameLabel", 2, 50);
+    }
+
+    // Email
+    if (checkRequired("email", "emailLabel")) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email.trim())) {
+        newErrors.email = invalidEmail;
+      } else {
+        checkLength("email", "emailLabel", 5, 100);
+      }
+    }
+
+    // Company Name
+    if (checkRequired("companyName", "companyLabel")) {
+      checkLength("companyName", "companyLabel", 2, 100);
+    }
+
+    // Company Size
+    checkRequired("companySize", "sizeLabel");
+
+    // User Role
+    if (checkRequired("userRole", "roleLabel")) {
+      checkLength("userRole", "roleLabel", 2, 50);
+    }
+
+    // Interests
+    if (formData.interests && formData.interests.trim().length > 0) {
+      checkLength("interests", "interestsLabel", 0, 1000);
+    }
+
+    // Agreed
+    if (!formData.agreed) {
+      newErrors.agreed = tContact("requiredError") || "This field is required";
+    }
+
     setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) {
+      const firstErrorKey = Object.keys(newErrors)[0];
+      const element = document.getElementById(firstErrorKey);
+      if (element) {
+        element.focus();
+      }
+    }
+
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!validate()) return;
-    
+
     setIsSubmitting(true);
     // Simulate submission since no endpoint is available
     setTimeout(() => {
@@ -145,16 +268,11 @@ export default function ContactForm() {
         companySize: "",
         userRole: "",
         interests: "",
-        agreed: false
+        agreed: false,
       });
       setSelectedNeeds([]);
-      alert("Form submitted successfully!");
+      setIsSubmitted(true);
     }, 1500);
-  };
-
-  const InputError = ({ error }) => {
-    if (!error) return null;
-    return <p className="text-[11px] text-rose-500 font-bold mt-1.5 ml-1">{error}</p>;
   };
 
   return (
@@ -167,13 +285,19 @@ export default function ContactForm() {
     >
       <form onSubmit={handleSubmit} className="space-y-5" noValidate>
         <div>
-          <label className="block text-[13px] font-bold text-foreground mb-1.5">
+          <label
+            htmlFor="segment"
+            className="block text-[13px] font-bold text-foreground mb-1.5"
+          >
             {t("contact.segmentLabel")} <span className="text-rose-500">*</span>
           </label>
-          <CustomSelect 
-            options={segmentOptions} 
-            value={formData.segment} 
-            onChange={(val) => handleChange("segment", val)} 
+          <CustomSelect
+            id="segment"
+            name="segment"
+            required={true}
+            options={segmentOptions}
+            value={formData.segment}
+            onChange={(val) => handleChange("segment", val)}
             placeholder={t("contact.segmentPlaceholder")}
             error={errors.segment}
           />
@@ -181,31 +305,51 @@ export default function ContactForm() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div>
-            <label className="block text-[13px] font-bold text-foreground mb-1.5">
-              {t("contact.firstNameLabel")} <span className="text-rose-500">*</span>
+            <label
+              htmlFor="firstName"
+              className="block text-[13px] font-bold text-foreground mb-1.5"
+            >
+              {t("contact.firstNameLabel")}{" "}
+              <span className="text-rose-500">*</span>
             </label>
             <input
+              id="firstName"
+              name="firstName"
+              required
+              aria-required="true"
               type="text"
               value={formData.firstName}
               onChange={(e) => handleChange("firstName", e.target.value)}
               placeholder={t("contact.firstNamePlaceholder")}
               className={`w-full h-11 px-3 text-sm bg-card border rounded-xl shadow-sm outline-none text-foreground transition-all ${
-                errors.firstName ? "border-rose-400 focus:ring-rose-200" : "border-border hover:border-[#07A7E1] focus:ring-2 focus:ring-[#07A7E1]/20 focus:border-[#07A7E1]"
+                errors.firstName
+                  ? "border-rose-400 focus:ring-rose-200"
+                  : "border-border hover:border-[#07A7E1] focus:ring-2 focus:ring-[#07A7E1]/20 focus:border-[#07A7E1]"
               }`}
             />
             <InputError error={errors.firstName} />
           </div>
           <div>
-            <label className="block text-[13px] font-bold text-foreground mb-1.5">
-              {t("contact.lastNameLabel")} <span className="text-rose-500">*</span>
+            <label
+              htmlFor="lastName"
+              className="block text-[13px] font-bold text-foreground mb-1.5"
+            >
+              {t("contact.lastNameLabel")}{" "}
+              <span className="text-rose-500">*</span>
             </label>
             <input
+              id="lastName"
+              name="lastName"
+              required
+              aria-required="true"
               type="text"
               value={formData.lastName}
               onChange={(e) => handleChange("lastName", e.target.value)}
               placeholder={t("contact.lastNamePlaceholder")}
               className={`w-full h-11 px-3 text-sm bg-card border rounded-xl shadow-sm outline-none text-foreground transition-all ${
-                errors.lastName ? "border-rose-400 focus:ring-rose-200" : "border-border hover:border-[#07A7E1] focus:ring-2 focus:ring-[#07A7E1]/20 focus:border-[#07A7E1]"
+                errors.lastName
+                  ? "border-rose-400 focus:ring-rose-200"
+                  : "border-border hover:border-[#07A7E1] focus:ring-2 focus:ring-[#07A7E1]/20 focus:border-[#07A7E1]"
               }`}
             />
             <InputError error={errors.lastName} />
@@ -213,16 +357,25 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label className="block text-[13px] font-bold text-foreground mb-1.5">
+          <label
+            htmlFor="email"
+            className="block text-[13px] font-bold text-foreground mb-1.5"
+          >
             {t("contact.emailLabel")} <span className="text-rose-500">*</span>
           </label>
           <input
+            id="email"
+            name="email"
+            required
+            aria-required="true"
             type="email"
             value={formData.email}
             onChange={(e) => handleChange("email", e.target.value)}
             placeholder={t("contact.emailPlaceholder")}
             className={`w-full h-11 px-3 text-sm bg-card border rounded-xl shadow-sm outline-none text-foreground transition-all ${
-                errors.email ? "border-rose-400 focus:ring-rose-200" : "border-border hover:border-[#07A7E1] focus:ring-2 focus:ring-[#07A7E1]/20 focus:border-[#07A7E1]"
+              errors.email
+                ? "border-rose-400 focus:ring-rose-200"
+                : "border-border hover:border-[#07A7E1] focus:ring-2 focus:ring-[#07A7E1]/20 focus:border-[#07A7E1]"
             }`}
           />
           <InputError error={errors.email} />
@@ -230,28 +383,44 @@ export default function ContactForm() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div>
-            <label className="block text-[13px] font-bold text-foreground mb-1.5">
-              {t("contact.companyLabel")} <span className="text-rose-500">*</span>
+            <label
+              htmlFor="companyName"
+              className="block text-[13px] font-bold text-foreground mb-1.5"
+            >
+              {t("contact.companyLabel")}{" "}
+              <span className="text-rose-500">*</span>
             </label>
             <input
+              id="companyName"
+              name="companyName"
+              required
+              aria-required="true"
               type="text"
               value={formData.companyName}
               onChange={(e) => handleChange("companyName", e.target.value)}
               placeholder={t("contact.companyPlaceholder")}
               className={`w-full h-11 px-3 text-sm bg-card border rounded-xl shadow-sm outline-none text-foreground transition-all ${
-                errors.companyName ? "border-rose-400 focus:ring-rose-200" : "border-border hover:border-[#07A7E1] focus:ring-2 focus:ring-[#07A7E1]/20 focus:border-[#07A7E1]"
+                errors.companyName
+                  ? "border-rose-400 focus:ring-rose-200"
+                  : "border-border hover:border-[#07A7E1] focus:ring-2 focus:ring-[#07A7E1]/20 focus:border-[#07A7E1]"
               }`}
             />
             <InputError error={errors.companyName} />
           </div>
           <div>
-            <label className="block text-[13px] font-bold text-foreground mb-1.5">
+            <label
+              htmlFor="companySize"
+              className="block text-[13px] font-bold text-foreground mb-1.5"
+            >
               {t("contact.sizeLabel")} <span className="text-rose-500">*</span>
             </label>
-            <CustomSelect 
-              options={companySizeOptions} 
-              value={formData.companySize} 
-              onChange={(val) => handleChange("companySize", val)} 
+            <CustomSelect
+              id="companySize"
+              name="companySize"
+              required={true}
+              options={companySizeOptions}
+              value={formData.companySize}
+              onChange={(val) => handleChange("companySize", val)}
               placeholder={t("contact.sizePlaceholder")}
               error={errors.companySize}
             />
@@ -259,16 +428,25 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label className="block text-[13px] font-bold text-foreground mb-1.5">
+          <label
+            htmlFor="userRole"
+            className="block text-[13px] font-bold text-foreground mb-1.5"
+          >
             {t("contact.roleLabel")} <span className="text-rose-500">*</span>
           </label>
           <input
+            id="userRole"
+            name="userRole"
+            required
+            aria-required="true"
             type="text"
             value={formData.userRole}
             onChange={(e) => handleChange("userRole", e.target.value)}
             placeholder={t("contact.rolePlaceholder")}
             className={`w-full h-11 px-3 text-sm bg-card border rounded-xl shadow-sm outline-none text-foreground transition-all ${
-                errors.userRole ? "border-rose-400 focus:ring-rose-200" : "border-border hover:border-[#07A7E1] focus:ring-2 focus:ring-[#07A7E1]/20 focus:border-[#07A7E1]"
+              errors.userRole
+                ? "border-rose-400 focus:ring-rose-200"
+                : "border-border hover:border-[#07A7E1] focus:ring-2 focus:ring-[#07A7E1]/20 focus:border-[#07A7E1]"
             }`}
           />
           <InputError error={errors.userRole} />
@@ -281,8 +459,10 @@ export default function ContactForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {primaryNeedOptions.map((option, idx) => {
               const isChecked = selectedNeeds.includes(option);
+              const needId = `need-${idx}`;
               return (
                 <label
+                  htmlFor={needId}
                   key={idx}
                   className={`flex items-center gap-3 p-3 border rounded-xl cursor-pointer transition-all ${
                     isChecked
@@ -292,6 +472,8 @@ export default function ContactForm() {
                 >
                   <div className="relative flex items-center shrink-0">
                     <input
+                      id={needId}
+                      name={`need-${idx}`}
                       type="checkbox"
                       checked={isChecked}
                       onChange={() => handleNeedChange(option)}
@@ -309,10 +491,15 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label className="block text-[13px] font-bold text-foreground mb-1.5">
+          <label
+            htmlFor="interests"
+            className="block text-[13px] font-bold text-foreground mb-1.5"
+          >
             {t("contact.interestsLabel")}
           </label>
           <textarea
+            id="interests"
+            name="interests"
             value={formData.interests}
             onChange={(e) => handleChange("interests", e.target.value)}
             placeholder={t("contact.interestsPlaceholder")}
@@ -328,9 +515,16 @@ export default function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2 pt-2">
-          <label className="flex items-center gap-3 cursor-pointer group">
+          <label
+            htmlFor="agreed"
+            className="flex items-center gap-3 cursor-pointer group"
+          >
             <div className="relative flex items-center shrink-0">
               <input
+                id="agreed"
+                name="agreed"
+                required
+                aria-required="true"
                 type="checkbox"
                 checked={formData.agreed}
                 onChange={(e) => handleChange("agreed", e.target.checked)}
@@ -340,7 +534,10 @@ export default function ContactForm() {
             </div>
             <span className="text-xs text-muted-foreground font-semibold select-none leading-relaxed">
               {t("contact.agreementPrefix")}{" "}
-              <a href="#" className="text-[#07A7E1] hover:text-[#093cad] underline decoration-transparent hover:decoration-[#093cad] transition-all">
+              <a
+                href="/privacy-policy/"
+                className="text-primary hover:text-[#093cad] underline decoration-transparent hover:decoration-[#093cad] transition-all"
+              >
                 {t("contact.privacyPolicy")}
               </a>{" "}
               {t("contact.agreementSuffix")}
@@ -357,6 +554,12 @@ export default function ContactForm() {
           {isSubmitting ? t("contact.submittingBtn") : t("contact.submitBtn")}
         </Button>
       </form>
+      <GlobalSuccessPopup 
+        isOpen={isSubmitted}
+        onClose={setIsSubmitted}
+        title={tContact("successTitle") || "Thank you for reaching out!"}
+        message={tContact("successMsg") || "We have received your message and will get back to you shortly."}
+      />
     </motion.div>
   );
 }

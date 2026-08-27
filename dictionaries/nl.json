@@ -97,7 +97,13 @@
     "alertDesc": "Los de beslissing op vóór uitvoering.",
     "impactTag": "IMPACT VAN WIJZIGING",
     "impactTitle": "Beïnvloed door deze wijziging",
-    "nodes": ["Terugbetalingsbeleid", "Betalings-API", "Klant-UI", "Meldingen", "Acceptatietests"]
+    "nodes": [
+      "Terugbetalingsbeleid",
+      "Betalings-API",
+      "Klant-UI",
+      "Meldingen",
+      "Acceptatietests"
+    ]
   },
   "persistent": {
     "eyebrow": "Permanente context voor mensen en agents",
@@ -151,11 +157,19 @@
     "path1Tag": "Code → Ontwerp",
     "path1Title": "Analyseer bestaande code",
     "path1Desc": "Koppel een repository of upload een project. Think4Ever brengt structuur, afhankelijkheden en regels in kaart.",
-    "path1Pills": ["architectuur", "afhankelijkheden", "bedrijfstromen"],
+    "path1Pills": [
+      "architectuur",
+      "afhankelijkheden",
+      "bedrijfstromen"
+    ],
     "path2Tag": "Ontwerp → Code",
     "path2Title": "Definieer een nieuw systeem",
     "path2Desc": "Leg doelstellingen, rollen, werkstromen, regels en acceptatiecriteria vast vóór de code.",
-    "path2Pills": ["zakelijke bedoeling", "beslissingen", "acceptatiecriteria"],
+    "path2Pills": [
+      "zakelijke bedoeling",
+      "beslissingen",
+      "acceptatiecriteria"
+    ],
     "controlEyebrow": "Het controlepunt",
     "controlTitle": "Keur bedoeling goed. Zie impact vóór uitvoering.",
     "controlSubtitle": "Vergelijk voorgestelde implementatie met goedgekeurde regels en bekijk wat het nog meer beïnvloedt.",
@@ -167,7 +181,11 @@
     "approvedTag": "Goedgekeurde zakelijke regel",
     "approvedRule": "Terugbetalingen vereisen beoordeling binnen 24 uur",
     "divergence": "Implementatie stelt 48 uur voor — beoordeling vereist",
-    "proofPills": ["Menselijke beslissing", "Bijgewerkte criteria", "Agent-context"],
+    "proofPills": [
+      "Menselijke beslissing",
+      "Bijgewerkte criteria",
+      "Agent-context"
+    ],
     "ctaTitle": "Start met één echt project.",
     "ctaSubtitle": "Zie het systeem achter de code voordat je een agent vraagt het te wijzigen."
   },
@@ -199,7 +217,11 @@
     "card3Title": "Geef agents het systeem",
     "card3Desc": "Neem beoordeelde systeemcontext mee naar de coderingsagent die je team al gebruikt.",
     "quote": "“Gegenereerd begrip wordt pas nuttig wanneer het team het kan inspecteren, corrigeren en gebruiken om de volgende wijziging te sturen.”",
-    "proofPills": ["Beoordeel repository-toegang", "Menselijke beoordeling", "Behoud je editor en stack"],
+    "proofPills": [
+      "Beoordeel repository-toegang",
+      "Menselijke beoordeling",
+      "Behoud je editor en stack"
+    ],
     "ctaTitle": "Stop met gissen hoe het project werkt.",
     "ctaSubtitle": "Koppel één echt project en bekijk het systeem achter de code."
   },
@@ -245,15 +267,27 @@
     "card1Tag": "Think MCP",
     "card1Title": "Systeemcontext via MCP",
     "card1Desc": "Stel de beoordeelde blauwdruk beschikbaar aan ondersteunde MCP-clients voordat ze code plannen of wijzigen.",
-    "card1List": ["Claude Code", "Codex", "Cursor en Windsurf"],
+    "card1List": [
+      "Claude Code",
+      "Codex",
+      "Cursor en Windsurf"
+    ],
     "card2Tag": "VS Code",
     "card2Title": "Begrip in de editor",
     "card2Desc": "Breng de systeemkaart dichter bij het ontwikkelwerk via de Think4Ever-extensie.",
-    "card2List": ["Blijf in de bestaande editor", "Gebruik beoordeelde context", "Vermijd vervanging van werkstromen"],
+    "card2List": [
+      "Blijf in de bestaande editor",
+      "Gebruik beoordeelde context",
+      "Vermijd vervanging van werkstromen"
+    ],
     "card3Tag": "Think API",
     "card3Title": "Verbind je werkstroom",
     "card3Desc": "Gebruik Think4Ever-API's en integratiepunten om projecten, tools en bedrijfsprocessen te verbinden.",
-    "card3List": ["Aangepaste werkstromen", "Projectsystemen", "Enterprise-integratie"],
+    "card3List": [
+      "Aangepaste werkstromen",
+      "Projectsystemen",
+      "Enterprise-integratie"
+    ],
     "modelsEyebrow": "Modelkeuze",
     "modelsTitle": "Kies modellen zonder het systeem te verliezen.",
     "modelsSubtitle": "Houd beoordeelde context onafhankelijk van een model; gebruik geavanceerde of open-weight modellen waar ze passen.",
@@ -276,24 +310,40 @@
     "plan1Tag": "Think Free",
     "plan1Price": "$0",
     "plan1Desc": "Verken Think4Ever met één project.",
-    "plan1List": ["500 orchestratie-credits", "1 project", "Neem je eigen sleutels mee"],
+    "plan1List": [
+      "500 orchestratie-credits",
+      "1 project",
+      "Neem je eigen sleutels mee"
+    ],
     "plan1Btn": "Gratis starten",
     "plan2Tag": "Think New",
     "plan2Price": "$25",
     "plan2Period": "/ maand",
     "plan2Desc": "Voor individuele bouwers die actieve projecten beheren.",
-    "plan2List": ["2.000 credits per maand", "Tot 3 projecten", "Neem je eigen sleutels mee"],
+    "plan2List": [
+      "2.000 credits per maand",
+      "Tot 3 projecten",
+      "Neem je eigen sleutels mee"
+    ],
     "plan2Btn": "Gratis starten",
     "plan3Tag": "Think Big",
     "plan3Price": "$250",
     "plan3Period": "/ maand",
     "plan3Desc": "Voor een team dat projecten en gebruik deelt.",
-    "plan3List": ["Tot 5 gebruikers", "Tot 5 projecten", "Teamgebruikscontroles"],
+    "plan3List": [
+      "Tot 5 gebruikers",
+      "Tot 5 projecten",
+      "Teamgebruikscontroles"
+    ],
     "plan3Btn": "Neem contact op met verkoop",
     "plan4Tag": "Think Blue",
     "plan4Price": "Aangepast",
     "plan4Desc": "Voor enterprise-implementatie en governance-behoeften.",
-    "plan4List": ["Prive-implementatie-opties", "Aangepaste gebruikscontroles", "Toegewijde ondersteuning"],
+    "plan4List": [
+      "Prive-implementatie-opties",
+      "Aangepaste gebruikscontroles",
+      "Toegewijde ondersteuning"
+    ],
     "plan4Btn": "Neem contact op met verkoop",
     "costEyebrow": "Kostenbeheersing",
     "costTitle": "Beheers modelkeuze zonder context te verliezen.",
@@ -426,7 +476,12 @@
     "evalEyebrow": "Enterprise-evaluatie",
     "evalTitle": "Evalueer de omgeving rondom je code.",
     "evalSubtitle": "Evalueer repository-toegang, modelproviders en implementatie-omgevingen voor je vereisten.",
-    "evalList": ["Repository- en projecttoegang", "Modelprovider gegevensstromen", "Implementatietopologie", "Gebruikscontroles en ondersteuning"],
+    "evalList": [
+      "Repository- en projecttoegang",
+      "Modelprovider gegevensstromen",
+      "Implementatietopologie",
+      "Gebruikscontroles en ondersteuning"
+    ],
     "reviewTitle": "Breng je vereisten naar het team.",
     "reviewDesc": "Bespreek repository-toegang, modelproviders en gegevensverwerking vóór de uitrol.",
     "ctaTitle": "Moet je Think4Ever evalueren?",
@@ -491,11 +546,20 @@
     "agree": "Ik ga akkoord met het Privacybeleid en geef toestemming om gecontacteerd te worden.",
     "btnSubmit": "Neem contact op",
     "sending": "Verzenden...",
+    "requiredError": "Dit veld is verplicht",
+    "requiredSuffix": "is vereist",
+    "invalidEmail": "Voer een geldig e-mailadres in",
+    "minLength": "moet minimaal",
+    "maxLength": "mag maximaal",
+    "characters": "tekens bevatten",
     "officeInfo": "Kantoorinformatie",
     "hq": "Hoofdkantoor",
     "hqAddress": "161 Bay Street, 27th Floor\nToronto, ON M5J2S1",
     "emailTitle": "E-mail",
-    "emailVal": "info@think4ever.com"
+    "emailVal": "info@think4ever.com",
+    "successTitle": "Bedankt voor je bericht!",
+    "successMsg": "We hebben je bericht ontvangen en nemen zo snel mogelijk contact met je op.",
+    "okay": "Oké"
   },
   "privacyPolicyPage": {
     "heroEyebrow": "Juridisch & Privacy",

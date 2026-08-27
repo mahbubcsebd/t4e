@@ -192,11 +192,19 @@
     "path1Tag": "Code → Design",
     "path1Title": "Analyze existing project",
     "path1Desc": "Connect a repository or upload a project. Think4Ever maps structure, dependencies, workflows and rules.",
-    "path1Pills": ["architecture", "dependencies", "business flows"],
+    "path1Pills": [
+      "architecture",
+      "dependencies",
+      "business flows"
+    ],
     "path2Tag": "Design → Code",
     "path2Title": "Define a new system",
     "path2Desc": "Capture objectives, roles, workflows, rules and acceptance criteria before code.",
-    "path2Pills": ["business intent", "decisions", "acceptance criteria"],
+    "path2Pills": [
+      "business intent",
+      "decisions",
+      "acceptance criteria"
+    ],
     "controlEyebrow": "The control point",
     "controlTitle": "Approve intent. See impact before execution.",
     "controlSubtitle": "Compare proposed implementation with approved rules and reveal what else the change affects.",
@@ -208,7 +216,11 @@
     "approvedTag": "Approved business rule",
     "approvedRule": "Refunds require review within 24 hours",
     "divergence": "Implementation proposes 48 hours — review required",
-    "proofPills": ["Human decision", "Updated criteria", "Agent context"],
+    "proofPills": [
+      "Human decision",
+      "Updated criteria",
+      "Agent context"
+    ],
     "ctaTitle": "Start with one real project.",
     "ctaSubtitle": "See the system behind the code before you ask an agent to change it."
   },
@@ -290,7 +302,11 @@
     "card1Tag": "Think MCP",
     "card1Title": "System context through MCP",
     "card1Desc": "Expose the reviewed blueprint to supported MCP clients before they plan or change code.",
-    "card1List": ["Claude Code", "Codex", "Cursor and Windsurf"],
+    "card1List": [
+      "Claude Code",
+      "Codex",
+      "Cursor and Windsurf"
+    ],
     "card2Tag": "VS Code",
     "card2Title": "Understanding in the editor",
     "card2Desc": "Bring the system map closer to development work through the Think4Ever extension.",
@@ -580,7 +596,10 @@
     "hq": "Headquarters",
     "hqAddress": "161 Bay Street, 27th Floor\nToronto, ON M5J2S1",
     "emailTitle": "Email",
-    "emailVal": "info@think4ever.com"
+    "emailVal": "info@think4ever.com",
+    "successTitle": "Thank you for reaching out!",
+    "successMsg": "We have received your message and will get back to you shortly.",
+    "okay": "Okay"
   },
   "privacyPolicyPage": {
     "heroEyebrow": "Legal & Privacy",
@@ -626,17 +645,18 @@
     "sec6Text": "For any questions regarding these Terms, please contact us at info@think4ever.com."
   },
   "blogPage": {
-    "heroEyebrow": "Blog & Insights",
-    "heroTitlePrefix": "Latest Articles & ",
-    "heroTitleHighlight": "Insights",
-    "heroSubtitle": "Stay up to date with the latest architectural frameworks, agentic workflows, and updates from Think4Ever.",
-    "readMore": "Read full article →",
-    "backToBlog": "← Back to articles",
+    "heroEyebrow": "Engineering & Architecture",
+    "heroTitlePrefix": "Insights, Frameworks & ",
+    "heroTitleHighlight": "White Papers",
+    "heroSubtitle": "Explore deep-dive technical articles, architectural patterns, and engineering guides for building software with AI.",
     "searchPlaceholder": "Search articles...",
+    "readMore": "Read Article →",
+    "backToArticles": "Back to Articles",
+    "recommendedReading": "Recommended Reading",
     "categories": {
-      "all": "All",
+      "all": "All Articles",
       "architecture": "Architecture",
-      "mcp": "MCP & Agents",
+      "mcp": "Think MCP",
       "whitepaper": "White Paper"
     }
   },
@@ -670,6 +690,11 @@
     "submitBtn": "Submit",
     "submittingBtn": "Sending...",
     "requiredError": "This field is required",
+    "requiredSuffix": "is required",
+    "invalidEmail": "Please enter a valid email address",
+    "minLength": "must be at least",
+    "maxLength": "cannot exceed",
+    "characters": "characters",
     "officeTitle": "Office Information",
     "hqLabel": "Headquarters",
     "hqAddress": "161 Bay Street, 27th Floor",
@@ -684,9 +709,14 @@
         "Systems Integrators / Consultants",
         "Enterprise & Mid-size Business"
       ],
-      "size": ["1 - 10", "11 - 50", "51 - 200", "500+"],
+      "size": [
+        "1 - 10",
+        "11 - 50",
+        "51 - 200",
+        "500+"
+      ],
       "needs": [
-        "Ammend and fix existing code",
+        "Amend and fix existing code",
         "Design the right architecture upfront",
         "Simplify SDLC stack with fewer tools",
         "Build AI agents or automation workflows",
@@ -697,22 +727,9 @@
         "Modernize legacy systems safely",
         "Evaluate Think4Ever for future use"
       ]
-    }
-  },
-  "blogPage": {
-    "heroEyebrow": "Engineering & Architecture",
-    "heroTitlePrefix": "Insights, Frameworks & ",
-    "heroTitleHighlight": "White Papers",
-    "heroSubtitle": "Explore deep-dive technical articles, architectural patterns, and engineering guides for building software with AI.",
-    "searchPlaceholder": "Search articles...",
-    "readMore": "Read Article →",
-    "backToArticles": "Back to Articles",
-    "recommendedReading": "Recommended Reading",
-    "categories": {
-      "all": "All Articles",
-      "architecture": "Architecture",
-      "mcp": "Think MCP",
-      "whitepaper": "White Paper"
-    }
+    },
+    "successTitle": "Thank you for reaching out!",
+    "successMsg": "We have received your message and will get back to you shortly.",
+    "okay": "Okay"
   }
 }

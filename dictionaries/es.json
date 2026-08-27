@@ -190,7 +190,11 @@
     "path1Tag": "Código → Diseño",
     "path1Title": "Analizar código existente",
     "path1Desc": "Conecte un repositorio o suba un proyecto. Think4Ever mapea estructura, dependencias, flujos y reglas.",
-    "path1Pills": ["arquitectura", "dependencias", "flujos de negocio"],
+    "path1Pills": [
+      "arquitectura",
+      "dependencias",
+      "flujos de negocio"
+    ],
     "path2Tag": "Diseño → Código",
     "path2Title": "Definir un nuevo sistema",
     "path2Desc": "Capture objetivos, roles, flujos de trabajo y criterios de aceptación antes del código.",
@@ -296,7 +300,11 @@
     "card1Tag": "Think MCP",
     "card1Title": "Contexto del sistema a través de MCP",
     "card1Desc": "Exponga el plano revisado a clientes MCP compatibles antes de que planifiquen o cambien código.",
-    "card1List": ["Claude Code", "Codex", "Cursor y Windsurf"],
+    "card1List": [
+      "Claude Code",
+      "Codex",
+      "Cursor y Windsurf"
+    ],
     "card2Tag": "VS Code",
     "card2Title": "Comprensión en el editor",
     "card2Desc": "Acerque el mapa del sistema al trabajo de desarrollo a través de la extensión Think4Ever.",
@@ -586,7 +594,10 @@
     "hq": "Sede central",
     "hqAddress": "161 Bay Street, 27th Floor\nToronto, ON M5J2S1",
     "emailTitle": "Correo electrónico",
-    "emailVal": "info@think4ever.com"
+    "emailVal": "info@think4ever.com",
+    "successTitle": "¡Gracias por contactarnos!",
+    "successMsg": "Hemos recibido su mensaje y nos pondremos en contacto con usted en breve.",
+    "okay": "Aceptar"
   },
   "privacyPolicyPage": {
     "heroEyebrow": "Legal y Privacidad",
@@ -632,18 +643,19 @@
     "sec6Text": "Para cualquier pregunta sobre estos Términos, contáctenos en info@think4ever.com."
   },
   "blogPage": {
-    "heroEyebrow": "Blog e Ideas",
-    "heroTitlePrefix": "Últimos artículos e ",
-    "heroTitleHighlight": "Ideas",
-    "heroSubtitle": "Manténgase al día con los últimos marcos arquitectónicos, flujos de agentes y actualizaciones de Think4Ever.",
-    "readMore": "Leer artículo completo →",
-    "backToBlog": "← Volver a artículos",
+    "heroEyebrow": "Ingeniería y Arquitectura",
+    "heroTitlePrefix": "Artículos, Marcos y ",
+    "heroTitleHighlight": "Libros Blancos",
+    "heroSubtitle": "Explore artículos técnicos detallados, patrones arquitectónicos y guías de ingeniería para crear software con IA.",
     "searchPlaceholder": "Buscar artículos...",
+    "readMore": "Leer artículo →",
+    "backToArticles": "Volver a artículos",
+    "recommendedReading": "Lecturas recomendadas",
     "categories": {
-      "all": "Todos",
+      "all": "Todos los artículos",
       "architecture": "Arquitectura",
-      "mcp": "MCP y Agentes",
-      "whitepaper": "Documento Técnico"
+      "mcp": "Think MCP",
+      "whitepaper": "Libro Blanco"
     }
   },
   "contact": {
@@ -676,6 +688,11 @@
     "submitBtn": "Enviar",
     "submittingBtn": "Enviando...",
     "requiredError": "Este campo es obligatorio",
+    "requiredSuffix": "es obligatorio",
+    "invalidEmail": "Ingrese un correo electrónico válido",
+    "minLength": "debe tener al menos",
+    "maxLength": "no puede exceder",
+    "characters": "caracteres",
     "officeTitle": "Información de la Oficina",
     "hqLabel": "Sede Central",
     "hqAddress": "161 Bay Street, Piso 27",
@@ -690,7 +707,12 @@
         "Integradores de Sistemas / Consultores",
         "Empresas y Negocios Medianos"
       ],
-      "size": ["1 - 10", "11 - 50", "51 - 200", "500+"],
+      "size": [
+        "1 - 10",
+        "11 - 50",
+        "51 - 200",
+        "500+"
+      ],
       "needs": [
         "Modificar y arreglar el código existente",
         "Diseñar la arquitectura adecuada desde el principio",
@@ -703,22 +725,9 @@
         "Modernizar los sistemas heredados de forma segura",
         "Evaluar Think4Ever para uso futuro"
       ]
-    }
-  },
-  "blogPage": {
-    "heroEyebrow": "Ingeniería y Arquitectura",
-    "heroTitlePrefix": "Artículos, Marcos y ",
-    "heroTitleHighlight": "Libros Blancos",
-    "heroSubtitle": "Explore artículos técnicos detallados, patrones arquitectónicos y guías de ingeniería para crear software con IA.",
-    "searchPlaceholder": "Buscar artículos...",
-    "readMore": "Leer artículo →",
-    "backToArticles": "Volver a artículos",
-    "recommendedReading": "Lecturas recomendadas",
-    "categories": {
-      "all": "Todos los artículos",
-      "architecture": "Arquitectura",
-      "mcp": "Think MCP",
-      "whitepaper": "Libro Blanco"
-    }
+    },
+    "successTitle": "¡Gracias por contactarnos!",
+    "successMsg": "Hemos recibido su mensaje y nos pondremos en contacto con usted en breve.",
+    "okay": "Aceptar"
   }
 }

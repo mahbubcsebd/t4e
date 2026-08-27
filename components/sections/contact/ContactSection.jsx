@@ -32,11 +32,11 @@ export default function ContactSection() {
             </p>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch justify-between">
-            <div className="w-full lg:w-1/2 flex">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start justify-between">
+            <div className="w-full lg:w-1/2">
               <ContactForm />
             </div>
-            <div className="w-full lg:w-1/2 flex">
+            <div className="w-full lg:w-1/2">
               <ContactSidebar />
             </div>
           </div>
