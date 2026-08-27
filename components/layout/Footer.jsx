@@ -100,12 +100,12 @@ export default function Footer() {
                 {t("nav.resources")}
               </h4>
               <Link
-                href="/resources"
+                href="/resources/"
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
-                {t("nav.resourceLibrary") === "nav.resourceLibrary"
-                  ? "Resource Library"
-                  : t("nav.resourceLibrary")}
+                {t("nav.library") === "nav.library"
+                  ? "Library"
+                  : t("nav.library")}
               </Link>
               <Link
                 href="/blog"

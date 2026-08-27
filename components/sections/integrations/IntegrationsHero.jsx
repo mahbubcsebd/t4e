@@ -9,7 +9,7 @@ export default function IntegrationsHero() {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-background py-16 md:py-20 border-b border-border text-center">
+    <section className="bg-background pt-16 pb-8 md:pt-20 md:pb-10 border-b border-border text-center">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
           {t("integrationsPage.heroEyebrow")}
@@ -42,7 +42,7 @@ export default function IntegrationsHero() {
           </a> */}
         </div>
 
-        <div className="pt-8 mt-8 mb-6 border-t border-border/50 max-w-4xl mx-auto">
+        <div className="pt-8 mt-8 border-t border-border/50 max-w-4xl mx-auto">
           <CodingToolPills
             variant="light"
             className="justify-center"

@@ -11,6 +11,8 @@
     "resources": "Recursos",
     "resourceLibrary": "Biblioteca de recursos",
     "resourceLibraryDesc": "Explora nuestra colección de recursos.",
+    "library": "Biblioteca",
+    "libraryDesc": "Explora nuestra colección de recursos.",
     "blog": "Blog",
     "blogDesc": "Lee las últimas noticias y artículos.",
     "docs": "Docs",

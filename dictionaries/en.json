@@ -10,6 +10,8 @@
     "integrations": "Integrations",
     "resources": "Resources",
     "resourceLibrary": "Resource library",
+    "library": "Library",
+    "libraryDesc": "Explore our collection of resources.",
     "resourceLibraryDesc": "Explore our collection of resources.",
     "blog": "Blog",
     "blogDesc": "Read the latest news and articles.",
