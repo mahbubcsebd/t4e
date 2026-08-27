@@ -42,7 +42,7 @@ export default function IntegrationsHero() {
           </a> */}
         </div>
 
-        <div className="pt-8 mt-8 border-t border-border/50 max-w-4xl mx-auto">
+        <div className="pt-6 mt-6 border-t border-border/50 max-w-4xl mx-auto">
           <CodingToolPills
             variant="light"
             className="justify-center"

@@ -3,8 +3,8 @@
     "product": "Product",
     "howItWorks": "Hoe het werkt",
     "howItWorksDesc": "Verbinden, Beoordelen, Wijzigen",
-    "codeToDesign": "Code → Ontwerp",
-    "designToCode": "Ontwerp → Code",
+    "codeToDesign": "Code â†’ Ontwerp",
+    "designToCode": "Ontwerp â†’ Code",
     "integrations": "Integraties",
     "resources": "Bronmateriaal",
     "resourceLibrary": "Kennisbank",
@@ -22,23 +22,23 @@
     "eyebrow": "Voor teams die complexe software bouwen met AI",
     "titlePrefix": "Begrijp het systeem. ",
     "titleHighlight": "Wijzig het met vertrouwen.",
-    "subtitle": "Transformeer een codebase binnen enkele minuten in een gedeelde, controleerbare systeemkaart—en houd elke wijziging afgestemd op het zakelijke doel.",
-    "ctaPrimary": "Analyseer een project →",
-    "ctaSecondary": "Bekijk de demo ↗",
-    "micro": "Geen creditcard nodig · Behoud je bestaande coderingstools",
-    "cardOneBadge": "CODE → ONTWERP",
+    "subtitle": "Transformeer een codebase binnen enkele minuten in een gedeelde, controleerbare systeemkaartâ€”en houd elke wijziging afgestemd op het zakelijke doel.",
+    "ctaPrimary": "Analyseer een project â†’",
+    "ctaSecondary": "Bekijk de demo â†—",
+    "micro": "Geen creditcard nodig Â· Behoud je bestaande coderingstools",
+    "cardOneBadge": "CODE â†’ ONTWERP",
     "cardOneTitle": "Begrijp en visualiseer je code.",
     "cardOneRepoTag": "BESTAAND PROJECT",
     "cardOneRepoName": "appointment-platform",
     "cardOneBlueprintTag": "LEVENDE BLAUWDRUK",
     "cardOneBlueprintName": "Het verbonden systeem",
-    "cardTwoBadge": "ONTWERP → CODE",
+    "cardTwoBadge": "ONTWERP â†’ CODE",
     "cardTwoTitle": "Bouw code die getrouw is aan de zakelijke bedoeling.",
     "cardTwoIntentTag": "GOEDGEKEURD DOEL",
     "cardTwoIntentName": "Terugbetalingen blijven controleerbaar en zichtbaar voor de klant.",
     "cardTwoImplTag": "IMPLEMENTATIE",
     "cardTwoImplName": "Regel, werkstroom en acceptatiecriteria",
-    "cardTwoStatus": "✓ doel behouden"
+    "cardTwoStatus": "âœ“ doel behouden"
   },
   "problem": {
     "eyebrow": "De context-kloof",
@@ -51,12 +51,12 @@
     "card2Desc": "Code, werkstromen en zakelijke beslissingen groeien uit elkaar.",
     "card3Tag": "Impact verschijnt laat",
     "card3Title": "Een lokale wijziging wordt een systeemwijziging",
-    "card3Desc": "Één beslissing kan API's, gegevens, werkstromen, UI en tests veranderen."
+    "card3Desc": "Ã‰Ã©n beslissing kan API's, gegevens, werkstromen, UI en tests veranderen."
   },
   "productModel": {
     "eyebrow": "De levende blauwdruk",
-    "title": "Eén systeem. Elk perspectief.",
-    "subtitle": "Architectuur voor engineering. Werkstromen voor operaties. Zakelijke regels voor product. Eén verbonden model eronder.",
+    "title": "EÃ©n systeem. Elk perspectief.",
+    "subtitle": "Architectuur voor engineering. Werkstromen voor operaties. Zakelijke regels voor product. EÃ©n verbonden model eronder.",
     "persp1Tag": "ENGINEERING",
     "persp1Title": "Architectuur en afhankelijkheden",
     "persp2Tag": "PRODUCT",
@@ -84,8 +84,8 @@
   "coherence": {
     "eyebrow": "Coherentie in actie",
     "titlePrefix": "Keur bedoeling goed. ",
-    "titleHighlight": "Zie impact vóór uitvoering.",
-    "subtitle": "Zie wanneer een voorgestelde wijziging in strijd is met een goedgekeurde regel—en wat het nog meer beïnvloedt.",
+    "titleHighlight": "Zie impact vÃ³Ã³r uitvoering.",
+    "subtitle": "Zie wanneer een voorgestelde wijziging in strijd is met een goedgekeurde regelâ€”en wat het nog meer beÃ¯nvloedt.",
     "approvedTag": "GOEDGEKEURDE ZAKELIJKE BEDOELING",
     "approvedTitle": "Terugbetalingsverzoeken blijven 24 uur lang controleerbaar.",
     "approvedDesc": "Zichtbare status voor de klant en handmatige beoordeling moeten worden behouden.",
@@ -94,9 +94,9 @@
     "proposedDesc": "De voorgestelde wijziging komt niet langer overeen met de goedgekeurde regel.",
     "alertTag": "COHERENTIE-CONTROLE",
     "alertTitle": "Deze wijziging is in strijd met de goedgekeurde bedoeling.",
-    "alertDesc": "Los de beslissing op vóór uitvoering.",
+    "alertDesc": "Los de beslissing op vÃ³Ã³r uitvoering.",
     "impactTag": "IMPACT VAN WIJZIGING",
-    "impactTitle": "Beïnvloed door deze wijziging",
+    "impactTitle": "BeÃ¯nvloed door deze wijziging",
     "nodes": [
       "Terugbetalingsbeleid",
       "Betalings-API",
@@ -127,13 +127,13 @@
     "eyebrow": "Bekijk het product",
     "title": "Zie Think4Ever in beide richtingen werken.",
     "subtitle": "Zie hoe een bestaand project een inspecteerbaar systeemmodel wordt, en zie vervolgens hoe goedgekeurde bedoeling de implementatie leidt.",
-    "btnCodeToDesign": "Code → Ontwerp ↗",
-    "btnDesignToCode": "Ontwerp → Code ↗"
+    "btnCodeToDesign": "Code â†’ Ontwerp â†—",
+    "btnDesignToCode": "Ontwerp â†’ Code â†—"
   },
   "cta": {
     "title": "Zie het systeem achter je code.",
-    "subtitle": "Analyseer één echt project en beoordeel wat elke toekomstige wijziging moet behouden.",
-    "btn": "Analyseer een project →"
+    "subtitle": "Analyseer Ã©Ã©n echt project en beoordeel wat elke toekomstige wijziging moet behouden.",
+    "btn": "Analyseer een project â†’"
   },
   "footer": {
     "privacy": "Privacy",
@@ -141,20 +141,20 @@
     "contact": "Contact",
     "faq": "Veelgestelde vragen",
     "trust": "Vertrouwen & Beveiliging",
-    "copyright": "© 2026 Think4Ever™"
+    "copyright": "Â© 2026 Think4Everâ„¢"
   },
   "howItWorksPage": {
     "heroEyebrow": "Hoe het werkt",
     "heroTitlePrefix": "Van code naar gedeeld begrip ",
     "heroTitleHighlight": "naar coherente wijziging.",
-    "heroSubtitle": "Koppel een bestaand project of definieer wat er gebouwd moet worden. Bekijk één systeemkaart en wijzig deze met gedeelde context.",
-    "heroCtaPrimary": "Gratis starten →",
-    "heroCtaSecondary": "Verken Code → Ontwerp",
-    "heroMicro": "Geen creditcard nodig · Behoud je editor, stack en coderingstools",
+    "heroSubtitle": "Koppel een bestaand project of definieer wat er gebouwd moet worden. Bekijk Ã©Ã©n systeemkaart en wijzig deze met gedeelde context.",
+    "heroCtaPrimary": "Gratis starten â†’",
+    "heroCtaSecondary": "Verken Code â†’ Ontwerp",
+    "heroMicro": "Geen creditcard nodig Â· Behoud je editor, stack en coderingstools",
     "twoWaysEyebrow": "Twee manieren om te starten",
     "twoWaysTitle": "Start vanuit code of bedoeling.",
-    "twoWaysSubtitle": "Beide paden komen samen op één levende blauwdruk: gedeelde context voor mensen en agents.",
-    "path1Tag": "Code → Ontwerp",
+    "twoWaysSubtitle": "Beide paden komen samen op Ã©Ã©n levende blauwdruk: gedeelde context voor mensen en agents.",
+    "path1Tag": "Code â†’ Ontwerp",
     "path1Title": "Analyseer bestaande code",
     "path1Desc": "Koppel een repository of upload een project. Think4Ever brengt structuur, afhankelijkheden en regels in kaart.",
     "path1Pills": [
@@ -162,17 +162,17 @@
       "afhankelijkheden",
       "bedrijfstromen"
     ],
-    "path2Tag": "Ontwerp → Code",
+    "path2Tag": "Ontwerp â†’ Code",
     "path2Title": "Definieer een nieuw systeem",
-    "path2Desc": "Leg doelstellingen, rollen, werkstromen, regels en acceptatiecriteria vast vóór de code.",
+    "path2Desc": "Leg doelstellingen, rollen, werkstromen, regels en acceptatiecriteria vast vÃ³Ã³r de code.",
     "path2Pills": [
       "zakelijke bedoeling",
       "beslissingen",
       "acceptatiecriteria"
     ],
     "controlEyebrow": "Het controlepunt",
-    "controlTitle": "Keur bedoeling goed. Zie impact vóór uitvoering.",
-    "controlSubtitle": "Vergelijk voorgestelde implementatie met goedgekeurde regels en bekijk wat het nog meer beïnvloedt.",
+    "controlTitle": "Keur bedoeling goed. Zie impact vÃ³Ã³r uitvoering.",
+    "controlSubtitle": "Vergelijk voorgestelde implementatie met goedgekeurde regels en bekijk wat het nog meer beÃ¯nvloedt.",
     "controlList": [
       "Maak verborgen aannames zichtbaar",
       "Los conflicten op tussen bedoeling en implementatie",
@@ -180,25 +180,25 @@
     ],
     "approvedTag": "Goedgekeurde zakelijke regel",
     "approvedRule": "Terugbetalingen vereisen beoordeling binnen 24 uur",
-    "divergence": "Implementatie stelt 48 uur voor — beoordeling vereist",
+    "divergence": "Implementatie stelt 48 uur voor â€” beoordeling vereist",
     "proofPills": [
       "Menselijke beslissing",
       "Bijgewerkte criteria",
       "Agent-context"
     ],
-    "ctaTitle": "Start met één echt project.",
+    "ctaTitle": "Start met Ã©Ã©n echt project.",
     "ctaSubtitle": "Zie het systeem achter de code voordat je een agent vraagt het te wijzigen."
   },
   "codeToDesignPage": {
-    "heroEyebrow": "Code → Ontwerp",
+    "heroEyebrow": "Code â†’ Ontwerp",
     "heroTitlePrefix": "Begrijp een onbekende codebase ",
     "heroTitleHighlight": "binnen enkele minuten.",
-    "heroSubtitle": "Zet bestanden om in een gedeelde systeemkaart—architectuur, werkstromen, afhankelijkheden en zakelijke regels—voordat iemand de code wijzigt.",
-    "heroCtaPrimary": "Gratis starten →",
-    "heroCtaSecondary": "Bekijk productdemo ↗",
+    "heroSubtitle": "Zet bestanden om in een gedeelde systeemkaartâ€”architectuur, werkstromen, afhankelijkheden en zakelijke regelsâ€”voordat iemand de code wijzigt.",
+    "heroCtaPrimary": "Gratis starten â†’",
+    "heroCtaSecondary": "Bekijk productdemo â†—",
     "seeSystemEyebrow": "Zie het systeem",
-    "seeSystemTitle": "Zie het systeem—niet zomaar een samenvatting van code.",
-    "seeSystemSubtitle": "Think4Ever verbindt de structuur en het gedrag die verspreid zijn over de repository in één controleerbaar model.",
+    "seeSystemTitle": "Zie het systeemâ€”niet zomaar een samenvatting van code.",
+    "seeSystemSubtitle": "Think4Ever verbindt de structuur en het gedrag die verspreid zijn over de repository in Ã©Ã©n controleerbaar model.",
     "seeSystemList": [
       "Architectuur en servicegrenzen",
       "Afhankelijkheden en gegevensverplaatsing",
@@ -206,9 +206,9 @@
       "Impact van wijzigingen over het hele systeem"
     ],
     "whereHelpsEyebrow": "Waar het helpt",
-    "whereHelpsTitle": "Weet wat een wijziging beïnvloedt voordat je deze doorvoert.",
+    "whereHelpsTitle": "Weet wat een wijziging beÃ¯nvloedt voordat je deze doorvoert.",
     "card1Tag": "Inwerken",
-    "card1Title": "Oriëteer sneller",
+    "card1Title": "OriÃ«teer sneller",
     "card1Desc": "Geef engineers een systeemkaart in plaats van weer een ronde van repository-archeologie.",
     "card2Tag": "Modernisering",
     "card2Title": "Onthul systeembrede impact",
@@ -223,15 +223,15 @@
       "Behoud je editor en stack"
     ],
     "ctaTitle": "Stop met gissen hoe het project werkt.",
-    "ctaSubtitle": "Koppel één echt project en bekijk het systeem achter de code."
+    "ctaSubtitle": "Koppel Ã©Ã©n echt project en bekijk het systeem achter de code."
   },
   "designToCodePage": {
-    "heroEyebrow": "Ontwerp → Code",
+    "heroEyebrow": "Ontwerp â†’ Code",
     "heroTitlePrefix": "Zet goedgekeurde bedoeling om in ",
     "heroTitleHighlight": "een coherente implementatie.",
     "heroSubtitle": "Definieer wat waar moet zijn, beoordeel het met de verantwoordelijken en bouw vervolgens met gedeelde context.",
-    "heroCtaPrimary": "Gratis starten →",
-    "heroCtaSecondary": "Bekijk productdemo ↗",
+    "heroCtaPrimary": "Gratis starten â†’",
+    "heroCtaSecondary": "Bekijk productdemo â†—",
     "coherenceEyebrow": "Coherentie",
     "coherenceTitle": "Agents hebben meer nodig dan een prompt.",
     "coherenceSubtitle": "Geef ze goedgekeurde regels, relaties en acceptatiecriteria voordat de implementatie begint.",
@@ -239,7 +239,7 @@
       "Beoordeel doelstellingen en zakelijke regels",
       "Maak architectuurbeslissingen expliciet",
       "Koppel acceptatiecriteria aan implementatie",
-      "Los divergentie op vóór uitvoering"
+      "Los divergentie op vÃ³Ã³r uitvoering"
     ],
     "handoffEyebrow": "Een beoordeelde overdracht",
     "handoffTitle": "Keur het systeem goed. Bouw in de tool die je kiest.",
@@ -260,8 +260,8 @@
     "heroTitlePrefix": "Geef elke coderingsagent ",
     "heroTitleHighlight": "dezelfde systeemcontext.",
     "heroSubtitle": "Houd begrip stabiel terwijl agents, modellen en editors veranderen.",
-    "heroCtaPrimary": "Gratis starten →",
-    "heroCtaSecondary": "Bekijk integratiegidsen ↗",
+    "heroCtaPrimary": "Gratis starten â†’",
+    "heroCtaSecondary": "Bekijk integratiegidsen â†—",
     "chooseEyebrow": "Kies de verbinding",
     "chooseTitle": "Context moet langer meegaan dan de agentsessie.",
     "card1Tag": "Think MCP",
@@ -303,13 +303,13 @@
   "pricingPage": {
     "heroEyebrow": "Prijzen",
     "heroTitlePrefix": "Bewijs waarde op ",
-    "heroTitleHighlight": "één echt project.",
+    "heroTitleHighlight": "Ã©Ã©n echt project.",
     "heroSubtitle": "Analyseer een systeem, beoordeel de blauwdruk en zie de impact van wijzigingen voordat je teamcapaciteit of implementatiecontroles toevoegt.",
-    "heroCtaPrimary": "Gratis starten →",
+    "heroCtaPrimary": "Gratis starten â†’",
     "heroMicro": "Geen creditcard nodig voor het gratis abonnement",
     "plan1Tag": "Think Free",
     "plan1Price": "$0",
-    "plan1Desc": "Verken Think4Ever met één project.",
+    "plan1Desc": "Verken Think4Ever met Ã©Ã©n project.",
     "plan1List": [
       "500 orchestratie-credits",
       "1 project",
@@ -347,21 +347,21 @@
     "plan4Btn": "Neem contact op met verkoop",
     "costEyebrow": "Kostenbeheersing",
     "costTitle": "Beheers modelkeuze zonder context te verliezen.",
-    "costSubtitle": "Houd de blauwdruk onafhankelijk van één provider. Breng ondersteunde sleutels mee en bewaar duur redeneren voor werk dat het nodig heeft.",
+    "costSubtitle": "Houd de blauwdruk onafhankelijk van Ã©Ã©n provider. Breng ondersteunde sleutels mee en bewaar duur redeneren voor werk dat het nodig heeft.",
     "card1Title": "Orchestratie-credits",
     "card1Desc": "Abonnementen bevatten een vergoeding voor Think4Ever-orchestratie. Gebruik hangt af van het uitgevoerde werk.",
     "card2Title": "Neem je eigen sleutels mee",
-    "card2Desc": "Gebruik ondersteunde provider-referenties waar beschikbaar in plaats van al het modelgebruik in één bundel te dwingen.",
+    "card2Desc": "Gebruik ondersteunde provider-referenties waar beschikbaar in plaats van al het modelgebruik in Ã©Ã©n bundel te dwingen.",
     "card3Title": "Enterprise-controles",
     "card3Desc": "Bespreek prive-implementatie, aangepaste gebruikscontroles en ondersteuningsvereisten met Think4Ever.",
-    "ctaTitle": "Probeer het product vóór het verkoopgesprek.",
+    "ctaTitle": "Probeer het product vÃ³Ã³r het verkoopgesprek.",
     "ctaSubtitle": "Start gratis. Neem pas contact op met het team wanneer je implementatie- of governance-behoeften dit vereisen."
   },
   "faqPage": {
     "heroEyebrow": "Veelgestelde vragen",
     "heroTitlePrefix": "Antwoorden ",
     "heroTitleHighlight": "voordat je een project koppelt.",
-    "heroSubtitle": "Hoe Think4Ever gedeeld systeembegrip creëert en dit meeneemt naar AI-gestuurde wijzigingen.",
+    "heroSubtitle": "Hoe Think4Ever gedeeld systeembegrip creÃ«ert en dit meeneemt naar AI-gestuurde wijzigingen.",
     "heroCtaPrimary": "Gratis starten",
     "heroCtaSecondary": "Zie hoe het werkt",
     "items": [
@@ -370,12 +370,12 @@
         "a": "Een levende blauwdruk is een permanente, controleerbare systeemkaart. Het verbindt architectuur, afhankelijkheden, werkstromen, regels en acceptatiecriteria."
       },
       {
-        "q": "Wat betekent Code → Ontwerp?",
-        "a": "Code → Ontwerp begint met een bestaand project. Think4Ever analyseert de structuur en presenteert het systeem als een inspecteerbaar model."
+        "q": "Wat betekent Code â†’ Ontwerp?",
+        "a": "Code â†’ Ontwerp begint met een bestaand project. Think4Ever analyseert de structuur en presenteert het systeem als een inspecteerbaar model."
       },
       {
-        "q": "Wat betekent Ontwerp → Code?",
-        "a": "“Ontwerp” betekent systeemontwerp—niet alleen interface-ontwerp. Het omvat architectuur, werkstromen, gegevens en regels."
+        "q": "Wat betekent Ontwerp â†’ Code?",
+        "a": "â€œOntwerpâ€ betekent systeemontwerpâ€”niet alleen interface-ontwerp. Het omvat architectuur, werkstromen, gegevens en regels."
       },
       {
         "q": "Vervangt Think4Ever Claude Code, Codex, Cursor of Windsurf?",
@@ -383,11 +383,11 @@
       },
       {
         "q": "Hoe helpt Think4Ever bij impactanalyse van wijzigingen?",
-        "a": "De blauwdruk verbindt onderdelen en regels zodat teams zien wat een voorgestelde wijziging beïnvloedt vóór uitvoering."
+        "a": "De blauwdruk verbindt onderdelen en regels zodat teams zien wat een voorgestelde wijziging beÃ¯nvloedt vÃ³Ã³r uitvoering."
       },
       {
         "q": "Hoe behoudt Think4Ever zakelijke bedoeling?",
-        "a": "Teams keuren regels en criteria goed en vergelijken de voorgestelde implementatie met die bedoeling vóór uitvoering."
+        "a": "Teams keuren regels en criteria goed en vergelijken de voorgestelde implementatie met die bedoeling vÃ³Ã³r uitvoering."
       },
       {
         "q": "Wat is Think MCP?",
@@ -395,69 +395,69 @@
       },
       {
         "q": "Kan ik starten met een bestaande repository?",
-        "a": "Ja. De Code → Ontwerp werkstroom is specifiek bedoeld voor het begrijpen van een bestaand project."
+        "a": "Ja. De Code â†’ Ontwerp werkstroom is specifiek bedoeld voor het begrijpen van een bestaand project."
       },
       {
         "q": "Kan ik beginnen met een nieuwe doelstelling?",
-        "a": "Ja. De Ontwerp → Code werkstroom begint met het systeem dat gebouwd moet worden."
+        "a": "Ja. De Ontwerp â†’ Code werkstroom begint met het systeem dat gebouwd moet worden."
       },
       {
         "q": "Hoe evalueer ik beveiligings- en implementatievereisten?",
         "a": "Toegang en gegevensstromen verschillen per omgeving. Bekijk het overzicht Vertrouwen & Beveiliging."
       }
     ],
-    "ctaTitle": "Start met één echt project.",
+    "ctaTitle": "Start met Ã©Ã©n echt project.",
     "ctaSubtitle": "Koppel een bestaande repository of begin met de doelstelling voor een nieuw systeem."
   },
   "resourcesPage": {
     "heroEyebrow": "Bronmateriaal",
     "heroTitlePrefix": "Begrijp het systeem ",
     "heroTitleHighlight": "achter de code.",
-    "heroSubtitle": "Zie hoe code een gedeeld systeembegrip wordt—en hoe die context AI-gestuurde wijzigingen verbeteren.",
+    "heroSubtitle": "Zie hoe code een gedeeld systeembegrip wordtâ€”en hoe die context AI-gestuurde wijzigingen verbeteren.",
     "videosEyebrow": "Productvideo's",
     "videosTitle": "Bekijk het product in beide richtingen werken.",
-    "videosSubtitle": "Echte productdemonstraties—geen conceptuele functiebeloftes.",
-    "video1Type": "Productdemo · Code → Ontwerp",
+    "videosSubtitle": "Echte productdemonstratiesâ€”geen conceptuele functiebeloftes.",
+    "video1Type": "Productdemo Â· Code â†’ Ontwerp",
     "video1Title": "Begrijp en visualiseer een bestaand project",
     "video1Desc": "Zie hoe Think4Ever code gebruikt en de systeemstructuur erachter laat zien.",
-    "video1Link": "Bekijk video ↗",
-    "video2Type": "Productdemo · Ontwerp → Code",
+    "video1Link": "Bekijk video â†—",
+    "video2Type": "Productdemo Â· Ontwerp â†’ Code",
     "video2Title": "Bouw vanuit een ontworpen systeem",
     "video2Desc": "Zie zakelijke bedoeling en systeemontwerp naar implementatie bewegen.",
-    "video2Link": "Bekijk video ↗",
+    "video2Link": "Bekijk video â†—",
     "thinkingEyebrow": "Uitgelichte inzichten",
     "thinkingTitle": "Verken het operationele model.",
     "guide1Type": "Whitepaper",
-    "guide1Title": "Think Design: Het AI-coderingsharnas opnieuw definiëren voor enterprise softwareontwikkeling",
+    "guide1Title": "Think Design: Het AI-coderingsharnas opnieuw definiÃ«ren voor enterprise softwareontwikkeling",
     "guide1Desc": "Een kader om verder te gaan dan prompts en te bewegen naar gestructureerde context.",
-    "guide1Link": "Lees de whitepaper ↗",
+    "guide1Link": "Lees de whitepaper â†—",
     "guide2Type": "MCP & agent-ecosystemen",
-    "guide2Title": "Één spec, elke agent",
+    "guide2Title": "Ã‰Ã©n spec, elke agent",
     "guide2Desc": "Hoe Think4Ever en MCP een consistent systeemmodel kunnen bieden voor coderingsagents.",
-    "guide2Link": "Lees het artikel ↗",
+    "guide2Link": "Lees het artikel â†—",
     "perspEyebrow": "Engineering-perspectieven",
     "perspTitle": "Wijzig complexe software zonder context te verliezen.",
     "card1Type": "Perspectief",
     "card1Title": "Think4Ever vs. vibe coding",
     "card1Desc": "Waarom systeembedoeling, beoordeling en coherentie van belang zijn wanneer generatie eenvoudig wordt.",
-    "card1Link": "Lees artikel ↗",
+    "card1Link": "Lees artikel â†—",
     "card2Type": "Architectuur",
     "card2Title": "Architectuur-eerst agentische ontwikkeling",
     "card2Desc": "Gebruik expliciete systeemstructuur om agentische implementatie te leiden.",
-    "card2Link": "Lees artikel ↗",
+    "card2Link": "Lees artikel â†—",
     "card3Type": "Aan de slag",
     "card3Title": "Hoe Think4Ever werkt",
     "card3Desc": "Verbind of beschrijf, beoordeel de blauwdruk en bouw met gedeelde context.",
-    "card3Link": "Verken de werkstroom →",
+    "card3Link": "Verken de werkstroom â†’",
     "ctaTitle": "Klaar om van lezen naar zien te gaan?",
-    "ctaSubtitle": "Start met één echt project en inspecteer het systeem achter de code."
+    "ctaSubtitle": "Start met Ã©Ã©n echt project en inspecteer het systeem achter de code."
   },
   "securityPage": {
     "heroEyebrow": "Vertrouwen & Beveiliging",
     "heroTitlePrefix": "Beheers wat agents weten ",
     "heroTitleHighlight": "voordat ze code wijzigen.",
-    "heroSubtitle": "Beperk repository-toegang, beoordeel de systeemkaart en behoud een menselijk beslispunt vóór uitvoering.",
-    "heroCtaPrimary": "Bespreek enterprise-behoeften →",
+    "heroSubtitle": "Beperk repository-toegang, beoordeel de systeemkaart en behoud een menselijk beslispunt vÃ³Ã³r uitvoering.",
+    "heroCtaPrimary": "Bespreek enterprise-behoeften â†’",
     "heroCtaSecondary": "Gratis starten",
     "principlesEyebrow": "Operationele principes",
     "principlesTitle": "Beheer context, toegang en uitvoering.",
@@ -465,7 +465,7 @@
     "card1Title": "Beoordeel repository-toegang",
     "card1Desc": "Maak projecttoegang een expliciete stap en koppel alleen de benodigde bronnen.",
     "card2Tag": "Beoordeling",
-    "card2Title": "Keur bedoeling goed vóór uitvoering",
+    "card2Title": "Keur bedoeling goed vÃ³Ã³r uitvoering",
     "card2Desc": "Beoordeel en corrigeer de blauwdruk voordat het agent context wordt.",
     "card3Tag": "Keuze",
     "card3Title": "Houd toolkeuze gescheiden van context",
@@ -483,7 +483,7 @@
       "Gebruikscontroles en ondersteuning"
     ],
     "reviewTitle": "Breng je vereisten naar het team.",
-    "reviewDesc": "Bespreek repository-toegang, modelproviders en gegevensverwerking vóór de uitrol.",
+    "reviewDesc": "Bespreek repository-toegang, modelproviders en gegevensverwerking vÃ³Ã³r de uitrol.",
     "ctaTitle": "Moet je Think4Ever evalueren?",
     "ctaSubtitle": "Breng je implementatie-, model- en governance-vereisten naar het team."
   },
@@ -494,7 +494,7 @@
     "benefit1Title": "Analyseer een bestaand project",
     "benefit1Desc": "Koppel GitHub, upload een ZIP of probeer een voorbeeld zonder code te delen.",
     "benefit2Title": "Start vanuit zakelijke bedoeling",
-    "benefit2Desc": "Definieer wat waar moet zijn en beoordeel het systeem vóór de implementatie.",
+    "benefit2Desc": "Definieer wat waar moet zijn en beoordeel het systeem vÃ³Ã³r de implementatie.",
     "benefit3Title": "Codeer in de tool die je kiest",
     "benefit3Desc": "Neem goedgekeurde context mee naar Claude Code, Codex, Cursor en andere MCP-clients.",
     "cardTitle": "Maak je account aan",
@@ -517,14 +517,14 @@
     "step1Title": "Wat moet je begrijpen of wijzigen?",
     "step1Sub": "Kies het snelste pad naar een nuttige systeemweergave. Je kunt later van pad wisselen.",
     "path1Badge": "Aanbevolen",
-    "path1Tag": "Code → Begrip",
+    "path1Tag": "Code â†’ Begrip",
     "path1Title": "Analyseer bestaande code",
     "path1Desc": "Zet een project om in een visuele, controleerbare kaart van het systeem.",
-    "path1Cta": "Analyseer een project →",
-    "path2Tag": "Bedoeling → Systeemontwerp",
+    "path1Cta": "Analyseer een project â†’",
+    "path2Tag": "Bedoeling â†’ Systeemontwerp",
     "path2Title": "Ontwerp vanuit bedoeling",
-    "path2Desc": "Definieer wat waar moet zijn en beoordeel het systeem vóór de implementatie.",
-    "path2Cta": "Ontwerp een systeem →",
+    "path2Desc": "Definieer wat waar moet zijn en beoordeel het systeem vÃ³Ã³r de implementatie.",
+    "path2Cta": "Ontwerp een systeem â†’",
     "back": "Terug",
     "continue": "Doorgaan"
   },
@@ -541,7 +541,7 @@
     "companySize": "Bedrijfsgrootte",
     "role": "Jouw rol",
     "primaryNeed": "Belangrijkste behoefte (maximaal 5)",
-    "interests": "Waarin ben je het meest geïnteresseerd?",
+    "interests": "Waarin ben je het meest geÃ¯nteresseerd?",
     "interestsPlaceholder": "Vertel ons over jouw specifieke casus, uitdagingen of functies die je graag wilt zien...",
     "agree": "Ik ga akkoord met het Privacybeleid en geef toestemming om gecontacteerd te worden.",
     "btnSubmit": "Neem contact op",
@@ -559,7 +559,7 @@
     "emailVal": "info@think4ever.com",
     "successTitle": "Bedankt voor je bericht!",
     "successMsg": "We hebben je bericht ontvangen en nemen zo snel mogelijk contact met je op.",
-    "okay": "Oké",
+    "okay": "OkÃ©",
     "metaTitle": "Neem contact op - Think4Ever",
     "metaDesc": "Neem contact op met Think4Ever om codebegrip, levende blauwdrukken, wijzigingsimpactanalyse en gedeelde context voor mensen en coderingsagenten te bespreken."
   },
@@ -612,7 +612,7 @@
     "heroTitleHighlight": "Whitepapers",
     "heroSubtitle": "Ontdek diepgaande technische artikelen, architectuurpatronen en engineeringgidsen voor het bouwen van software met AI.",
     "searchPlaceholder": "Artikelen zoeken...",
-    "readMore": "Lees artikel →",
+    "readMore": "Lees artikel â†’",
     "backToArticles": "Terug naar artikelen",
     "recommendedReading": "Aanbevolen lectuur",
     "categories": {
@@ -625,5 +625,12 @@
   "layout": {
     "metaTitle": "Verander code in een levende systeemkaart | Think4Ever",
     "metaDesc": "Verander bestaande code in een levende systeemblauwdruk. Beoordeel de bedrijfsintentie, bekijk de impact van wijzigingen en geef elke codeeragent de systeemcontext die deze nodig heeft."
+  },
+  "notFoundPage": {
+    "eyebrow": "Fout 404",
+    "title": "Pagina niet gevonden",
+    "description": "De pagina die u zoekt bestaat niet of is verplaatst. Laten we u terugbrengen naar het bouwen en begrijpen van uw codebase.",
+    "ctaPrimary": "Analyseer een project",
+    "ctaSecondary": "Keer terug naar home"
   }
 }
