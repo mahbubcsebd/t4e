@@ -83,7 +83,7 @@ export default function Header() {
 
   const resourcesLinks = [
     {
-      title: t("nav.library") === "nav.library" ? "Library" : t("nav.library"),
+      title: t("nav.library") === "nav.library" ? "Resource Library" : t("nav.library"),
       desc: t("nav.libraryDesc") === "nav.libraryDesc" ? "Explore our collection of resources." : t("nav.libraryDesc"),
       href: localizeHref("/resources/"),
       icon: <Puzzle className="w-4 h-4 text-primary" />,

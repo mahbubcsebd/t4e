@@ -12,12 +12,12 @@ hideThumbnail: true
 <div class="space-y-8 text-gray-600">
 
 <section>
-<h1 class="text-3xl font-bold text-gray-900 mb-6">Code Visualization for Real Codebases: Maps, Graphs and Architecture Views</h1>
+<h1 class="text-2xl font-bold text-gray-900 mb-6">Code Visualization for Real Codebases: Maps, Graphs and Architecture Views</h1>
 <p class="text-lg mb-6">How to choose the right view for understanding, changing and explaining a software system.</p>
 
 <div class="bg-[#f0f4ff] border border-[#d2e0ff] rounded-lg p-5 md:p-6 my-8">
   <div class="text-[#1b30a7] text-xs font-bold uppercase tracking-wider mb-2">DIRECT ANSWER</div>
-  <p class="text-gray-900 font-bold text-[15px] md:text-base leading-relaxed m-0">Code visualization turns the structure, dependencies and behavior of a software system into views people can inspect. For a real codebase, the best visualization is rarely one giant graph. It is a set of connected views—such as a structure map, dependency graph, runtime trace and architecture view—chosen for the question the team needs to answer.</p>
+  <p class="text-gray-900 font-medium text-[15px] md:text-base leading-relaxed m-0">Code visualization turns the structure, dependencies and behavior of a software system into views people can inspect. For a real codebase, the best visualization is rarely one giant graph. It is a set of connected views—such as a structure map, dependency graph, runtime trace and architecture view—chosen for the question the team needs to answer.</p>
 </div>
 
 <p>Here, “code visualization” means visualizing an existing software codebase. It does not mean an algorithm-learning tool that animates a short code sample, and it is not shorthand for Visual Studio Code.</p>

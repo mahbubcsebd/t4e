@@ -109,7 +109,7 @@ export default function Footer() {
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {t("nav.library") === "nav.library"
-                  ? "Library"
+                  ? "Resource Library"
                   : t("nav.library")}
               </Link>
               <Link

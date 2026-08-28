@@ -12,12 +12,12 @@ hideThumbnail: true
 <div class="space-y-8 text-gray-600">
 
 <section>
-<h1 class="text-3xl font-bold text-gray-900 mb-6">Visualización de Código para Bases de Código Reales: Mapas, Gráficos y Vistas de Arquitectura</h1>
+<h1 class="text-2xl font-bold text-gray-900 mb-6">Visualización de Código para Bases de Código Reales: Mapas, Gráficos y Vistas de Arquitectura</h1>
 <p class="text-lg mb-6">Cómo elegir la vista correcta para comprender, cambiar y explicar un sistema de software.</p>
 
 <div class="bg-[#f0f4ff] border border-[#d2e0ff] rounded-lg p-5 md:p-6 my-8">
   <div class="text-[#1b30a7] text-xs font-bold uppercase tracking-wider mb-2">RESPUESTA DIRECTA</div>
-  <p class="text-gray-900 font-bold text-[15px] md:text-base leading-relaxed m-0">La visualización de código convierte la estructura, las dependencias y el comportamiento de un sistema de software en vistas que las personas pueden inspeccionar. Para una base de código real, la mejor visualización rara vez es un gráfico gigante. Es un conjunto de vistas conectadas —como un mapa de estructura, gráfico de dependencias, seguimiento en tiempo de ejecución y vista de arquitectura— elegidas según la pregunta que el equipo necesita responder.</p>
+  <p class="text-gray-900 font-medium text-[15px] md:text-base leading-relaxed m-0">La visualización de código convierte la estructura, las dependencias y el comportamiento de un sistema de software en vistas que las personas pueden inspeccionar. Para una base de código real, la mejor visualización rara vez es un gráfico gigante. Es un conjunto de vistas conectadas —como un mapa de estructura, gráfico de dependencias, seguimiento en tiempo de ejecución y vista de arquitectura— elegidas según la pregunta que el equipo necesita responder.</p>
 </div>
 
 <p>Aquí, "visualización de código" significa visualizar una base de código de software existente. No significa una herramienta de aprendizaje de algoritmos que anima una breve muestra de código, y no es una abreviatura de Visual Studio Code.</p>
