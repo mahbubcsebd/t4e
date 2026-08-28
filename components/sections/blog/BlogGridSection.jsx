@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Search, BookOpen, Layers, Sparkles, ArrowRight } from "lucide-react";
-import { BLOG_POSTS, getLocalizedPost } from "@/lib/blogData";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
 
@@ -17,20 +16,27 @@ const getCategoryIcon = (cat) => {
   return <Sparkles className="w-5 h-5 text-primary" />;
 };
 
-export default function BlogGridSection() {
+export default function BlogGridSection({ posts }) {
   const { t, language } = useLanguage();
   const [search, setSearch] = useState("");
   const [selectedCat, setSelectedCat] = useState("all");
 
-  const localizedPosts = BLOG_POSTS.map((art) =>
-    getLocalizedPost(art, language),
-  );
+  const getCategoryId = (categoryStr) => {
+    if (!categoryStr) return "";
+    const str = categoryStr.toLowerCase();
+    if (str.includes("whitepaper") || str.includes("white paper") || str.includes("libro blanco") || str.includes("whitepaper")) return "whitepaper";
+    if (str.includes("architecture") || str.includes("arquitectura") || str.includes("architectuur")) return "architecture";
+    if (str.includes("mcp")) return "mcp";
+    return "";
+  };
 
-  const filtered = localizedPosts.filter((art) => {
-    const matchCat = selectedCat === "all" || art.cat === selectedCat;
+  const filtered = (posts || []).filter((art) => {
+    const catId = art.cat || getCategoryId(art.category) || (art.type ? getCategoryId(art.type) : "");
+    const matchCat = selectedCat === "all" || catId === selectedCat;
     const matchSearch =
       (art.title && art.title.toLowerCase().includes(search.toLowerCase())) ||
-      (art.desc && art.desc.toLowerCase().includes(search.toLowerCase()));
+      (art.desc && art.desc.toLowerCase().includes(search.toLowerCase())) ||
+      (art.description && art.description.toLowerCase().includes(search.toLowerCase()));
     return matchCat && matchSearch;
   });
 
@@ -124,7 +130,7 @@ export default function BlogGridSection() {
 
                     <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors duration-300">
                       <Link
-                        href={`/blog/${art.slug}`}
+                        href={art.lang && art.lang !== 'en' ? `/${art.lang}/blog/${art.slug}/` : `/blog/${art.slug}/`}
                         className="before:absolute before:inset-0"
                       >
                         {art.title}
@@ -132,7 +138,7 @@ export default function BlogGridSection() {
                     </h3>
 
                     <p className="text-base text-muted-foreground mb-8 leading-relaxed line-clamp-3 group-hover:text-foreground/80 transition-colors duration-300">
-                      {art.desc}
+                      {art.desc || art.description}
                     </p>
                   </div>
 

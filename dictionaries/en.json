@@ -682,7 +682,7 @@
     "sizePlaceholder": "Select size",
     "roleLabel": "Your Role",
     "rolePlaceholder": "e.g., CTO, VP Engineering",
-    "needsLabel": "Primary Need (ranked up to 5)",
+    "needsLabel": "Primary Need (select up to 5)",
     "interestsLabel": "What are you most interested in?",
     "interestsPlaceholder": "Tell us about your specific use case, challenges, or what features you'd like to see...",
     "thankYou": "Thank you for helping us understand your business need.",
@@ -706,7 +706,7 @@
     "options": {
       "segment": [
         "Independent Developers",
-        "Start ups & New Ventures",
+        "Startups & New Ventures",
         "Software & SaaS",
         "Systems Integrators / Consultants",
         "Enterprise & Mid-size Business"

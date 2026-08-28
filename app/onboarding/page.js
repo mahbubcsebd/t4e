@@ -1,4 +1,3 @@
-export const metadata = { alternates: { canonical: '/onboarding/' } };
 "use client";
 
 import React, { useState } from "react";

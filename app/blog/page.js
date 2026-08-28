@@ -1,6 +1,7 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import BlogGridSection from "@/components/sections/blog/BlogGridSection";
+import { getAllPosts } from "@/lib/markdown";
 
 export const metadata = {
   title: "Think4Ever Blog — Articles, Frameworks and AI Engineering Insights",
@@ -8,11 +9,13 @@ export const metadata = {
 };
 
 export default function BlogPage() {
+  const posts = getAllPosts('en');
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
       <main className="flex-grow">
-        <BlogGridSection />
+        <BlogGridSection posts={posts} currentLang="en" />
       </main>
       <Footer />
     </div>

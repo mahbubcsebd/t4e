@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import { usePathname, useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import {
   ChevronDown,
@@ -27,6 +28,19 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const { t, language, setLanguage, availableLanguages } = useLanguage();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleLanguageChange = (newLangCode) => {
+    setLanguage(newLangCode);
+    setLangDropdownOpen(false);
+
+    if (pathname && (pathname.startsWith('/blog') || pathname.startsWith('/es/blog') || pathname.startsWith('/nl/blog'))) {
+      const newPath = newLangCode === 'en' ? '/blog' : `/${newLangCode}/blog`;
+      router.push(newPath);
+    }
+  };
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
@@ -372,10 +386,7 @@ export default function Header() {
                 .map((lang) => (
                   <button
                     key={lang.code}
-                    onClick={() => {
-                      setLanguage(lang.code);
-                      setLangDropdownOpen(false);
-                    }}
+                    onClick={() => handleLanguageChange(lang.code)}
                     className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
                       language === lang.code
                         ? "text-primary font-bold bg-primary/10"
@@ -434,10 +445,7 @@ export default function Header() {
                   .map((lang) => (
                     <button
                       key={lang.code}
-                      onClick={() => {
-                        setLanguage(lang.code);
-                        setLangDropdownOpen(false);
-                      }}
+                      onClick={() => handleLanguageChange(lang.code)}
                       className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
                         language === lang.code
                           ? "text-primary font-bold bg-primary/10"

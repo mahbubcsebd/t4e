@@ -680,7 +680,7 @@
     "sizePlaceholder": "Seleccione el tamaño",
     "roleLabel": "Su Rol",
     "rolePlaceholder": "ej., CTO, VP de Ingeniería",
-    "needsLabel": "Necesidad Principal (clasifique hasta 5)",
+    "needsLabel": "Necesidad Principal (seleccione hasta 5)",
     "interestsLabel": "¿En qué está más interesado?",
     "interestsPlaceholder": "Cuéntenos sobre su caso de uso específico, desafíos o qué características le gustaría ver...",
     "thankYou": "Gracias por ayudarnos a comprender sus necesidades comerciales.",

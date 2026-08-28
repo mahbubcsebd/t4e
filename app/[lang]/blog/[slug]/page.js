@@ -10,30 +10,47 @@ import Container from "@/components/layout/Container";
 
 export async function generateMetadata(props) {
   const params = await props.params;
-  const { slug } = params;
-  const post = getPostBySlug(slug, 'en');
-
+  const { lang, slug } = params;
+  
+  if (lang !== 'es' && lang !== 'nl') return {};
+  
+  const post = getPostBySlug(slug, lang);
   if (!post) return {};
 
   return {
     title: `${post.title} | Think4Ever Blog`,
     description: post.desc || post.description,
-    alternates: { canonical: `/blog/${slug}/` },
+    alternates: { canonical: `/${lang}/blog/${slug}/` },
   };
 }
 
 export async function generateStaticParams() {
-  const posts = getAllPosts('en');
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
+  const langs = ['es', 'nl'];
+  const params = [];
+  
+  for (const lang of langs) {
+    const posts = getAllPosts(lang);
+    for (const post of posts) {
+      params.push({
+        lang,
+        slug: post.slug,
+      });
+    }
+  }
+  
+  return params;
 }
 
-export default async function BlogDetailPage(props) {
+export default async function TranslatedBlogDetailPage(props) {
   const params = await props.params;
-  const { slug } = params;
-  const post = getPostBySlug(slug, 'en');
-  const allPosts = getAllPosts('en');
+  const { lang, slug } = params;
+
+  if (lang !== 'es' && lang !== 'nl') {
+    notFound();
+  }
+
+  const post = getPostBySlug(slug, lang);
+  const allPosts = getAllPosts(lang);
 
   if (!post) {
     notFound();
@@ -46,7 +63,7 @@ export default async function BlogDetailPage(props) {
         <SectionCard>
           <Container className="mx-auto">
             <BlogDetailNav />
-            <BlogArticle post={post} currentLang="en" />
+            <BlogArticle post={post} currentLang={lang} />
             <BlogRecommendations posts={allPosts} currentPostId={post.id} />
           </Container>
         </SectionCard>
