@@ -1997,7 +1997,7 @@ export const BLOG_POSTS = [
               <p>Coding agents are completely limited by their context window. Think4Ever stores the product blueprint as a permanent, machine-readable structure encompassing concepts, design contracts, user flows, named business rules, ERDs, API contracts, UI designs, and roles/access matrixes. Because every tool in the environment connects to that exact spec over MCP, tool lock-in is broken.</p>
               <div class="bg-blue-50/50 border-l-4 border-primary p-4 rounded-r-xl my-4">
                 <span class="block text-[10px] font-bold text-primary uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
-                <p class="text-sm italic text-gray-700">"Read the active think4ever concept before doing anything else, and treat it as the source of truth for this session."</p>
+                <p class="text-sm italic text-gray-700">"Read the active Think4Ever concept before doing anything else, and treat it as the source of truth for this session."</p>
               </div>
             </div>
 
@@ -2006,7 +2006,7 @@ export const BLOG_POSTS = [
               <p>Developers no longer burn the first 20 minutes of every coding session re-describing data models, endpoints, or design rules to their chat assistants. The client fetches these parameters programmatically on startup.</p>
               <div class="bg-blue-50/50 border-l-4 border-primary p-4 rounded-r-xl my-4">
                 <span class="block text-[10px] font-bold text-primary uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
-                <p class="text-sm italic text-gray-700">"Load my project context from think4ever — concept, data objects, api contracts, and design rules — instead of asking me to describe it."</p>
+                <p class="text-sm italic text-gray-700">"Load my project context from Think4Ever — concept, data objects, api contracts, and design rules — instead of asking me to describe it."</p>
               </div>
             </div>
 
@@ -2015,7 +2015,7 @@ export const BLOG_POSTS = [
               <p>The task lifecycle is fully democratized across tools. Sub-agents can list, pick up, update, and close project tasks natively from inside any connected interface, keeping team status perfectly synchronized regardless of whether a developer is working inside a terminal or a visual IDE workspace.</p>
               <div class="bg-blue-50/50 border-l-4 border-primary p-4 rounded-r-xl my-4">
                 <span class="block text-[10px] font-bold text-primary uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
-                <p class="text-sm italic text-gray-700">"List my open think4ever tasks and start the highest-priority one."</p>
+                <p class="text-sm italic text-gray-700">"List my open Think4Ever tasks and start the highest-priority one."</p>
               </div>
             </div>
 
