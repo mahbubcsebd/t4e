@@ -19,7 +19,7 @@ export default function EnterpriseEvaluation() {
   ];
 
   return (
-    <section className="py-12 md:py-24 border-b border-border">
+    <section className="py-4 md:py-6 lg:py-8 border-b border-border">
       <SectionCard>
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">

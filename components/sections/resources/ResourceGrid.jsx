@@ -15,8 +15,7 @@ export default function ResourceGrid() {
   const [videoId, setVideoId] = useState("");
 
   return (
-    <section
-      className="pt-12 md:pt-16 pb-8 md:pb-12 bg-background border-b border-border"
+    <section className="py-4 md:py-6 lg:py-8 bg-background border-b border-border"
       id="resources"
     >
       {/* Hero Banner (Outside SectionCard) */}

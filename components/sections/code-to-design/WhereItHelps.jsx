@@ -38,7 +38,7 @@ export default function WhereItHelps() {
   ];
 
   return (
-    <section className="py-12 md:py-24 border-b border-border bg-background">
+    <section className="py-4 md:py-6 lg:py-8 border-b border-border bg-background">
       <SectionCard>
         <Container>
           <SectionHeading

@@ -11,7 +11,7 @@ export default function DesignToCodeHero() {
   const [videoId, setVideoId] = useState("");
 
   return (
-    <section className="pt-12 md:pt-16 pb-8 md:pb-12 bg-gradient-to-b bg-background border-b border-border text-center">
+    <section className="pt-8 lg:pt-12 pb-4 lg:pb-8 bg-gradient-to-b bg-background border-b border-border text-center">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <span className="inline-block px-3 py-1 rounded-full bg-[#eaf0fb] text-[#093cad] text-xs font-bold uppercase tracking-wider mb-4 border border-[#093cad]/20">
           {t("designToCodePage.heroEyebrow")}

@@ -43,7 +43,7 @@ export default function BlogGridSection({ posts }) {
   return (
     <>
       {/* Blog Hero Section */}
-      <section className="bg-background py-16 md:py-20 border-b border-border text-center">
+      <section className="py-4 md:py-6 lg:py-8 bg-background border-b border-border text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
             {t("blogPage.heroEyebrow")}
@@ -63,7 +63,7 @@ export default function BlogGridSection({ posts }) {
       </section>
 
       {/* Grid Content Section */}
-      <section className="py-12 md:py-24 bg-background">
+      <section className="py-4 md:py-6 lg:py-8 bg-background">
         <SectionCard>
           <Container>
             {/* Filter & Search Controls */}

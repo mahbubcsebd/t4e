@@ -58,7 +58,7 @@ export default function PricingTiers() {
   ];
 
   return (
-    <section className="py-12 md:py-24 border-b border-border">
+    <section className="py-4 md:py-6 lg:py-8 border-b border-border">
       <SectionCard>
         <Container>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 items-stretch">
