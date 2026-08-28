@@ -175,6 +175,8 @@
     "copyright": "© 2026 Think4Ever™"
   },
   "howItWorksPage": {
+    "metaTitle": "Cómo funciona Think4Ever — Del código o intención a un plano vivo",
+    "metaDesc": "Comience con código existente o un objetivo de negocio. Revise un plano vivo, luego desarrolle con contexto de sistema compartido en Think4Ever o su agente de código.",
     "heroEyebrow": "Cómo funciona",
     "heroTitlePrefix": "Del código a la comprensión compartida ",
     "heroTitleHighlight": "al cambio coherente.",
@@ -190,11 +192,7 @@
     "path1Tag": "Código → Diseño",
     "path1Title": "Analizar código existente",
     "path1Desc": "Conecte un repositorio o suba un proyecto. Think4Ever mapea estructura, dependencias, flujos y reglas.",
-    "path1Pills": [
-      "arquitectura",
-      "dependencias",
-      "flujos de negocio"
-    ],
+    "path1Pills": ["arquitectura", "dependencias", "flujos de negocio"],
     "path2Tag": "Diseño → Código",
     "path2Title": "Definir un nuevo sistema",
     "path2Desc": "Capture objetivos, roles, flujos de trabajo y criterios de aceptación antes del código.",
@@ -223,6 +221,8 @@
     "ctaSubtitle": "Vea el sistema detrás del código antes de pedirle a un agente que lo cambie."
   },
   "codeToDesignPage": {
+    "metaTitle": "De Código a Diseño — Entienda y Visualice su Software | Think4Ever",
+    "metaDesc": "Convierta un proyecto de software existente en un plano vivo y revisable de la arquitectura, dependencias, flujos de trabajo y reglas de negocio.",
     "heroEyebrow": "Código → Diseño",
     "heroTitlePrefix": "Comprenda una base de código desconocida ",
     "heroTitleHighlight": "en minutos.",
@@ -259,6 +259,8 @@
     "ctaSubtitle": "Conecte un proyecto real y revise el sistema detrás del código."
   },
   "designToCodePage": {
+    "metaTitle": "De Diseño a Código — Cree Software Fiel a la Intención del Negocio | Think4Ever",
+    "metaDesc": "Convierta objetivos de negocio, arquitectura, flujos de trabajo y reglas aprobadas en contexto de implementación compartido para Think4Ever o su agente de código.",
     "heroEyebrow": "Diseño → Código",
     "heroTitlePrefix": "Convierta la intención aprobada en ",
     "heroTitleHighlight": "una implementación coherente.",
@@ -289,6 +291,8 @@
     "ctaSubtitle": "Empiece con el objetivo. Revise el plano. Luego construya."
   },
   "integrationsPage": {
+    "metaTitle": "Integraciones — Think4Ever MCP, Agentes de Código y Herramientas para Desarrolladores",
+    "metaDesc": "Lleve el contexto del sistema de Think4Ever revisado a Claude Code, Codex, Cursor, Windsurf y otras herramientas compatibles con MCP.",
     "heroEyebrow": "Integraciones",
     "heroTitlePrefix": "Ofrezca a cada agente de código ",
     "heroTitleHighlight": "el mismo contexto de sistema.",
@@ -300,11 +304,7 @@
     "card1Tag": "Think MCP",
     "card1Title": "Contexto del sistema a través de MCP",
     "card1Desc": "Exponga el plano revisado a clientes MCP compatibles antes de que planifiquen o cambien código.",
-    "card1List": [
-      "Claude Code",
-      "Codex",
-      "Cursor y Windsurf"
-    ],
+    "card1List": ["Claude Code", "Codex", "Cursor y Windsurf"],
     "card2Tag": "VS Code",
     "card2Title": "Comprensión en el editor",
     "card2Desc": "Acerque el mapa del sistema al trabajo de desarrollo a través de la extensión Think4Ever.",
@@ -334,6 +334,8 @@
     "ctaSubtitle": "Conecte un proyecto, revise el plano y llévelo a su flujo de código."
   },
   "pricingPage": {
+    "metaTitle": "Precios de Think4Ever — Comience Gratis, Escale con su Equipo",
+    "metaDesc": "Comience Think4Ever gratis con un proyecto. Agregue proyectos, créditos de orquestación, controles de equipo y despliegue privado a medida que escala.",
     "heroEyebrow": "Precios",
     "heroTitlePrefix": "Demuestre valor en ",
     "heroTitleHighlight": "un proyecto real.",
@@ -402,6 +404,8 @@
     "ctaSubtitle": "Comience gratis. Contacte al equipo solo cuando sus necesidades de gobernanza lo requieran."
   },
   "faqPage": {
+    "metaTitle": "Preguntas Frecuentes Think4Ever — Planos Vivos, Comprensión de Código y MCP",
+    "metaDesc": "Respuestas sobre planos vivos de Think4Ever, de Código a Diseño, de Diseño a Código, análisis de impacto de cambios, agentes de codificación, MCP y cómo empezar.",
     "heroEyebrow": "Preguntas frecuentes",
     "heroTitlePrefix": "Respuestas ",
     "heroTitleHighlight": "antes de conectar un proyecto.",
@@ -454,6 +458,8 @@
     "ctaSubtitle": "Conecte un repositorio existente o comience con el objetivo de un nuevo sistema."
   },
   "resourcesPage": {
+    "metaTitle": "Recursos Think4Ever — Videos de Productos, Libros Blancos y Guías",
+    "metaDesc": "Demostraciones de productos, libros blancos y orientación práctica para comprender el software, diseñar sistemas y desarrollar con contexto compartido.",
     "heroEyebrow": "Recursos",
     "heroTitlePrefix": "Comprenda el sistema ",
     "heroTitleHighlight": "detrás del código.",
@@ -497,6 +503,8 @@
     "ctaSubtitle": "Comience con un proyecto real e inspeccione el sistema detrás del código."
   },
   "securityPage": {
+    "metaTitle": "Confianza y Seguridad Think4Ever — Contexto Controlado para el Desarrollo Agéntico",
+    "metaDesc": "Revise el acceso a los repositorios, mantenga a los humanos en el bucle de decisión, elija sus herramientas de codificación y discuta el despliegue privado para entornos empresariales.",
     "heroEyebrow": "Confianza y seguridad",
     "heroTitlePrefix": "Controle lo que los agentes saben ",
     "heroTitleHighlight": "antes de cambiar el código.",
@@ -602,6 +610,8 @@
     "metaDesc": "Comuníquese con Think4Ever para discutir la comprensión del código, los planos vivos, el análisis del impacto de los cambios y el contexto compartido para personas y agentes de codificación."
   },
   "privacyPolicyPage": {
+    "metaTitle": "Política de Privacidad - Think4Ever",
+    "metaDesc": "Conozca cómo Think4Ever recopila, utiliza, divulga y protege su información personal.",
     "heroEyebrow": "Legal y Privacidad",
     "heroTitlePrefix": "Política de privacidad de ",
     "heroTitleHighlight": "Think4Ever",
@@ -625,6 +635,8 @@
     "sec5Text": "Si tiene preguntas o dudas sobre esta Política de Privacidad, contáctenos en info@think4ever.com."
   },
   "termsPage": {
+    "metaTitle": "Términos y Condiciones - Think4Ever",
+    "metaDesc": "Términos y Condiciones que rigen el uso de las plataformas y servicios de Think4Ever.",
     "heroEyebrow": "Términos Legales",
     "heroTitlePrefix": "Términos y Condiciones de ",
     "heroTitleHighlight": "Think4Ever",
@@ -709,12 +721,7 @@
         "Integradores de Sistemas / Consultores",
         "Empresas y Negocios Medianos"
       ],
-      "size": [
-        "1 - 10",
-        "11 - 50",
-        "51 - 200",
-        "500+"
-      ],
+      "size": ["1 - 10", "11 - 50", "51 - 200", "500+"],
       "needs": [
         "Modificar y arreglar el código existente",
         "Diseñar la arquitectura adecuada desde el principio",

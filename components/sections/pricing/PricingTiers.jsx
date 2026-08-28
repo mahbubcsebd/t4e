@@ -123,7 +123,7 @@ export default function PricingTiers() {
                 <div className="relative z-10 mt-auto">
                   <Link
                     href={plan.href}
-                    className={`flex w-full items-center justify-center rounded-xl text-sm font-bold py-3.5 transition-all duration-300 ${
+                    className={`flex w-full items-center justify-center rounded-full text-sm font-bold py-3.5 transition-all duration-300 ${
                       plan.featured
                         ? "bg-primary text-white shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5"
                         : "bg-muted text-foreground border border-border/50 hover:bg-primary/10 hover:border-primary/20 hover:text-primary"

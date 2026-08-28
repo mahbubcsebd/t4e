@@ -144,6 +144,8 @@
     "copyright": "© 2026 Think4Ever™"
   },
   "howItWorksPage": {
+    "metaTitle": "Hoe Think4Ever werkt — Van code of intentie naar een levende blauwdruk",
+    "metaDesc": "Begin met bestaande code of een zakelijk doel. Bekijk een levende blauwdruk en bouw vervolgens met gedeelde systeemcontext in Think4Ever of uw coderingsagent.",
     "heroEyebrow": "Hoe het werkt",
     "heroTitlePrefix": "Van code naar gedeeld begrip ",
     "heroTitleHighlight": "naar coherente wijziging.",
@@ -157,19 +159,11 @@
     "path1Tag": "Code → Ontwerp",
     "path1Title": "Analyseer bestaande code",
     "path1Desc": "Koppel een repository of upload een project. Think4Ever brengt structuur, afhankelijkheden en regels in kaart.",
-    "path1Pills": [
-      "architectuur",
-      "afhankelijkheden",
-      "bedrijfstromen"
-    ],
+    "path1Pills": ["architectuur", "afhankelijkheden", "bedrijfstromen"],
     "path2Tag": "Ontwerp → Code",
     "path2Title": "Definieer een nieuw systeem",
     "path2Desc": "Leg doelstellingen, rollen, werkstromen, regels en acceptatiecriteria vast vóór de code.",
-    "path2Pills": [
-      "zakelijke bedoeling",
-      "beslissingen",
-      "acceptatiecriteria"
-    ],
+    "path2Pills": ["zakelijke bedoeling", "beslissingen", "acceptatiecriteria"],
     "controlEyebrow": "Het controlepunt",
     "controlTitle": "Keur bedoeling goed. Zie impact vóór uitvoering.",
     "controlSubtitle": "Vergelijk voorgestelde implementatie met goedgekeurde regels en bekijk wat het nog meer beïnvloedt.",
@@ -190,6 +184,8 @@
     "ctaSubtitle": "Zie het systeem achter de code voordat je een agent vraagt het te wijzigen."
   },
   "codeToDesignPage": {
+    "metaTitle": "Code naar Ontwerp — Begrijp en Visualiseer uw Software | Think4Ever",
+    "metaDesc": "Verander een bestaand softwareproject in een levende, controleerbare blauwdruk van architectuur, afhankelijkheden, workflows en bedrijfsregels.",
     "heroEyebrow": "Code → Ontwerp",
     "heroTitlePrefix": "Begrijp een onbekende codebase ",
     "heroTitleHighlight": "binnen enkele minuten.",
@@ -226,6 +222,8 @@
     "ctaSubtitle": "Koppel één echt project en bekijk het systeem achter de code."
   },
   "designToCodePage": {
+    "metaTitle": "Ontwerp naar Code — Bouw Software Trouw aan Bedrijfsintentie | Think4Ever",
+    "metaDesc": "Zet goedgekeurde bedrijfsdoelstellingen, architectuur, workflows en regels om in gedeelde implementatiecontext voor Think4Ever of uw coderingsagent.",
     "heroEyebrow": "Ontwerp → Code",
     "heroTitlePrefix": "Zet goedgekeurde bedoeling om in ",
     "heroTitleHighlight": "een coherente implementatie.",
@@ -256,6 +254,8 @@
     "ctaSubtitle": "Start met de doelstelling. Beoordeel de blauwdruk. Bouw vervolgens."
   },
   "integrationsPage": {
+    "metaTitle": "Integraties — Think4Ever MCP, Codeeragenten en Ontwikkelingstools",
+    "metaDesc": "Neem beoordeelde Think4Ever systeemcontext mee in Claude Code, Codex, Cursor, Windsurf en andere MCP-compatibele tools.",
     "heroEyebrow": "Integraties",
     "heroTitlePrefix": "Geef elke coderingsagent ",
     "heroTitleHighlight": "dezelfde systeemcontext.",
@@ -267,11 +267,7 @@
     "card1Tag": "Think MCP",
     "card1Title": "Systeemcontext via MCP",
     "card1Desc": "Stel de beoordeelde blauwdruk beschikbaar aan ondersteunde MCP-clients voordat ze code plannen of wijzigen.",
-    "card1List": [
-      "Claude Code",
-      "Codex",
-      "Cursor en Windsurf"
-    ],
+    "card1List": ["Claude Code", "Codex", "Cursor en Windsurf"],
     "card2Tag": "VS Code",
     "card2Title": "Begrip in de editor",
     "card2Desc": "Breng de systeemkaart dichter bij het ontwikkelwerk via de Think4Ever-extensie.",
@@ -301,6 +297,8 @@
     "ctaSubtitle": "Koppel een project, beoordeel de blauwdruk en neem deze mee naar je coderingswerkstroom."
   },
   "pricingPage": {
+    "metaTitle": "Think4Ever Prijzen — Begin Gratis, Schaal met uw Team",
+    "metaDesc": "Begin Think4Ever gratis met één project. Voeg projecten, orkestratiekredieten, teamcontroles en privé-implementatie toe naarmate u groeit.",
     "heroEyebrow": "Prijzen",
     "heroTitlePrefix": "Bewijs waarde op ",
     "heroTitleHighlight": "één echt project.",
@@ -358,6 +356,8 @@
     "ctaSubtitle": "Start gratis. Neem pas contact op met het team wanneer je implementatie- of governance-behoeften dit vereisen."
   },
   "faqPage": {
+    "metaTitle": "Think4Ever FAQ — Levende Blauwdrukken, Code Begrip en MCP",
+    "metaDesc": "Antwoorden over Think4Ever levende blauwdrukken, Code naar Ontwerp, Ontwerp naar Code, veranderingsimpactanalyse, codeeragenten, MCP en aan de slag gaan.",
     "heroEyebrow": "Veelgestelde vragen",
     "heroTitlePrefix": "Antwoorden ",
     "heroTitleHighlight": "voordat je een project koppelt.",
@@ -410,6 +410,8 @@
     "ctaSubtitle": "Koppel een bestaande repository of begin met de doelstelling voor een nieuw systeem."
   },
   "resourcesPage": {
+    "metaTitle": "Think4Ever Bronnen — Productvideo's, Whitepapers en Gidsen",
+    "metaDesc": "Productdemonstraties, whitepapers en praktische begeleiding voor het begrijpen van software, het ontwerpen van systemen en het bouwen met gedeelde context.",
     "heroEyebrow": "Bronmateriaal",
     "heroTitlePrefix": "Begrijp het systeem ",
     "heroTitleHighlight": "achter de code.",
@@ -453,6 +455,8 @@
     "ctaSubtitle": "Start met één echt project en inspecteer het systeem achter de code."
   },
   "securityPage": {
+    "metaTitle": "Think4Ever Vertrouwen & Beveiliging — Gecontroleerde Context voor Agentische Ontwikkeling",
+    "metaDesc": "Bekijk repository-toegang, houd mensen in de beslissingslus, kies uw coderingstools en bespreek privé-implementatie voor bedrijfsomgevingen.",
     "heroEyebrow": "Vertrouwen & Beveiliging",
     "heroTitlePrefix": "Beheers wat agents weten ",
     "heroTitleHighlight": "voordat ze code wijzigen.",
@@ -488,6 +492,8 @@
     "ctaSubtitle": "Breng je implementatie-, model- en governance-vereisten naar het team."
   },
   "registerPage": {
+    "metaTitle": "Account aanmaken - Think4Ever",
+    "metaDesc": "Maak uw Think4Ever-account aan om te beginnen met het analyseren van bestaande projecten of het ontwerpen van nieuwe systemen met gedeelde context.",
     "title": "Zie het systeem ",
     "titleHighlight": "voordat AI het wijzigt.",
     "subtitle": "Maak een account aan, analyseer vervolgens een project of start vanuit zakelijke bedoeling.",
@@ -513,6 +519,8 @@
     "signIn": "Inloggen"
   },
   "onboardingPage": {
+    "metaTitle": "Aan de slag met Think4Ever",
+    "metaDesc": "Kies uw pad: analyseer bestaande code voor begrip of ontwerp een nieuw systeem op basis van zakelijke bedoeling.",
     "kicker": "Welkom bij Think4Ever",
     "step1Title": "Wat moet je begrijpen of wijzigen?",
     "step1Sub": "Kies het snelste pad naar een nuttige systeemweergave. Je kunt later van pad wisselen.",
@@ -564,6 +572,8 @@
     "metaDesc": "Neem contact op met Think4Ever om codebegrip, levende blauwdrukken, wijzigingsimpactanalyse en gedeelde context voor mensen en coderingsagenten te bespreken."
   },
   "privacyPolicyPage": {
+    "metaTitle": "Privacybeleid - Think4Ever",
+    "metaDesc": "Lees hoe Think4Ever uw persoonlijke informatie verzamelt, gebruikt, openbaar maakt en beschermt.",
     "heroEyebrow": "Juridisch & Privacy",
     "heroTitlePrefix": "Think4Ever ",
     "heroTitleHighlight": "Privacybeleid",
@@ -587,6 +597,8 @@
     "sec5Text": "Als je vragen of zorgen hebt over dit Privacybeleid, neem dan contact met ons op via info@think4ever.com."
   },
   "termsPage": {
+    "metaTitle": "Algemene Voorwaarden - Think4Ever",
+    "metaDesc": "Algemene Voorwaarden voor het gebruik van Think4Ever platforms en diensten.",
     "heroEyebrow": "Juridische Voorwaarden",
     "heroTitlePrefix": "Think4Ever ",
     "heroTitleHighlight": "Algemene Voorwaarden",
