@@ -3,6 +3,7 @@ import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { ThemeProvider } from "@/components/theme-provider";
 import Script from "next/script";
+import MetaUpdater from "@/components/layout/MetaUpdater";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <LanguageProvider>
+            <MetaUpdater />
             {children}
           </LanguageProvider>
         </ThemeProvider>
