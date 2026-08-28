@@ -112,9 +112,10 @@ export default function BlogGridSection({ posts }) {
             {/* Grid of Articles */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 relative z-10">
               {filtered.map((art, idx) => (
-                <div
+                <Link
                   key={idx}
-                  className="bg-card/80 backdrop-blur-xl border border-border/60 rounded-xl p-8 hover:-translate-y-2 shadow-sm hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/50 transition-all duration-500 flex flex-col justify-between group overflow-hidden relative"
+                  href={art.lang && art.lang !== 'en' ? `/${art.lang}/blog/${art.slug}/` : `/blog/${art.slug}/`}
+                  className="bg-card/80 backdrop-blur-xl border border-border/60 rounded-xl p-8 hover:-translate-y-2 shadow-sm hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/50 transition-all duration-500 flex flex-col justify-between group overflow-hidden relative block"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -129,12 +130,7 @@ export default function BlogGridSection({ posts }) {
                     </div>
 
                     <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors duration-300">
-                      <Link
-                        href={art.lang && art.lang !== 'en' ? `/${art.lang}/blog/${art.slug}/` : `/blog/${art.slug}/`}
-                        className="before:absolute before:inset-0"
-                      >
-                        {art.title}
-                      </Link>
+                      {art.title}
                     </h3>
 
                     <p className="text-base text-muted-foreground mb-8 leading-relaxed line-clamp-3 group-hover:text-foreground/80 transition-colors duration-300">
@@ -150,7 +146,7 @@ export default function BlogGridSection({ posts }) {
                       {t("blogPage.readMore")}
                     </span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
 
