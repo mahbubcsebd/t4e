@@ -4,10 +4,10 @@ description: "This white paper outlines the economic and technical advantages of
 date: "August 26, 2026"
 readTime: "8 min read"
 category: "White paper"
-author: "Sunil Kishen"
+author: "Think4Ever"
 image: "/images/blog/blog-5-thumbnail.jpg"
+hideThumbnail: true
 ---
-
 
 <div class="space-y-6 text-gray-900">
 <section>
@@ -71,4 +71,3 @@ image: "/images/blog/blog-5-thumbnail.jpg"
 <p class="mt-8">Strategic Architecture Review • Think4Ever Platform</p>
 </section>
 </div>
-

@@ -1,7 +1,7 @@
 ---
 title: "Code Visualization for Real Codebases"
 description: "Learn how structure maps, dependency graphs, runtime traces and architecture views help teams understand and change real codebases safely."
-date: "August 26, 2026"
+date: "2026-08-26"
 readTime: "12 min read"
 category: "Engineering & architecture"
 author: "Think4Ever"

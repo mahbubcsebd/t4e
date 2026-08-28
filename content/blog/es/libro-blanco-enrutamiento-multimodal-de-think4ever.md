@@ -4,10 +4,10 @@ description: "Este documento técnico describe las ventajas económicas y técni
 date: "10 de agosto de 2026"
 readTime: "8 min de lectura"
 category: "Libro blanco"
-author: "Sunil Kishen"
+author: "Think4Ever"
 image: "/images/blog/blog-5-thumbnail.jpg"
+hideThumbnail: true
 ---
-
 
 <div class="space-y-6 text-gray-900">
 <section>
@@ -71,4 +71,3 @@ image: "/images/blog/blog-5-thumbnail.jpg"
 <p class="mt-8">Revisión de Arquitectura Estratégica • Plataforma Think4Ever</p>
 </section>
 </div>
-

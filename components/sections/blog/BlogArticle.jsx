@@ -76,7 +76,7 @@ export const BlogArticle = ({ post, currentLang }) => {
         </motion.div>
 
         {/* Featured Image */}
-        {!post.noThumb && post.image && (
+        {!post.hideThumbnail && post.image && (
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
