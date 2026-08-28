@@ -12,7 +12,9 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://think4ever.com"),
+  metadataBase: process.env.NEXT_PUBLIC_VERCEL_URL 
+    ? new URL(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}`) 
+    : new URL("https://think4ever.com"),
   title: "Turn Code Into a Living System Map | Think4Ever",
   description: "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.",
   icons: {
@@ -26,7 +28,7 @@ export const metadata = {
     siteName: "Think4Ever",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "/images/opengraph-image.png",
         width: 1200,
         height: 1200,
         alt: "Think4Ever",
@@ -37,7 +39,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Turn Code Into a Living System Map | Think4Ever",
     description: "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.",
-    images: ["/opengraph-image.png"],
+    images: ["/images/opengraph-image.png"],
   },
 };
 
