@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import Link from "next/link";
 
 export const BlogArticle = ({ post, currentLang }) => {
   const [zoomedImgSrc, setZoomedImgSrc] = useState(null);
@@ -101,7 +102,21 @@ export const BlogArticle = ({ post, currentLang }) => {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
           className="prose max-w-none prose-headings:text-foreground prose-headings:font-bold prose-p:text-[16px] prose-p:leading-loose prose-p:text-muted-foreground prose-strong:text-foreground prose-strong:font-bold prose-th:text-foreground prose-a:text-primary prose-a:font-semibold hover:prose-a:text-primary/80 prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:text-foreground prose-blockquote:font-medium prose-blockquote:not-italic"
         >
-          <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+          <ReactMarkdown 
+            rehypePlugins={[rehypeRaw]}
+            components={{
+              a: ({ node, ...props }) => {
+                const href = props.href || "";
+                if (href.startsWith("/")) {
+                  const localizeHref = (path) => currentLang === "en" ? path : `/${currentLang}${path}`;
+                  return (
+                    <Link href={localizeHref(href)} {...props} />
+                  );
+                }
+                return <a {...props} />;
+              }
+            }}
+          >
             {post.content}
           </ReactMarkdown>
         </motion.div>

@@ -185,6 +185,12 @@ image: "/images/blog/blog-2-thumbnail.jpg"
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">Samenvatting</h2>
 <p>De toekomst van agentische ontwikkeling gaat niet over snelheid, maar over het handhaven van stabiele systemen. Door het "denken" naar de architectuurlaag te verplaatsen, stelt Think4Ever teams in staat om complexe, enterprise-grade applicaties te bouwen die bestand zijn tegen de chaos van geautomatiseerde codegeneratie.</p>
+
+<div class="mt-8 p-6 bg-gray-50 rounded-xl border border-gray-100">
+  <p class="text-gray-900 font-medium m-0">
+    <strong class="text-[#1b30a7]">Gerelateerd lezen:</strong> Ontdek de vijf kritieke weergaven voor <a href="/blog/code-visualization-real-codebases/" class="text-[#1b30a7] hover:underline font-bold">het begrijpen van afhankelijkheden voordat u een wijziging aanbrengt</a>, om ervoor te zorgen dat de architectonische integriteit nooit in gevaar komt.
+  </p>
+</div>
 </section>
 </div>
 

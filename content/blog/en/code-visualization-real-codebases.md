@@ -209,7 +209,7 @@ hideThumbnail: true
 <section>
 <h2 class="text-2xl font-bold text-[#1b30a7] mb-4">Start with the system, not the diagram</h2>
 <p class="mb-4">A structure map, dependency graph, runtime trace and architecture view each reveal a different part of a codebase. The strongest approach combines them around the decision the team needs to make—and connects implementation evidence with the intent the system is expected to preserve.</p>
-<p>See how Think4Ever can <a href="https://think4ever.com/code-to-design/" class="text-[#1b30a7] hover:underline font-medium">turn an existing project into a shared, reviewable system map</a> before the next change begins.</p>
+<p>See how Think4Ever can <a href="/code-to-design/" class="text-[#1b30a7] hover:underline font-medium">turn an existing project into a shared, reviewable system map</a> before the next change begins.</p>
 </section>
 
 </div>

@@ -10,7 +10,9 @@ import SectionCard from "@/components/layout/SectionCard";
 import SectionHeading from "@/components/layout/SectionHeading";
 
 export default function TwoWaysIn() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const localizeHref = (href) => language === "en" ? href : `/${language}${href}`;
 
   const path1Pills = t("howItWorksPage.path1Pills") || [
     "architecture",
@@ -70,7 +72,7 @@ export default function TwoWaysIn() {
 
                   <div className="mt-2 mb-2 sm:mb-0">
                     <Link
-                      href="/blog/code-visualization-real-codebases/"
+                      href={localizeHref("/blog/code-visualization-real-codebases/")}
                       className="inline-flex items-start gap-1.5 text-primary font-bold hover:text-primary/80 transition-colors text-[13px] group leading-tight"
                     >
                       <span className="flex-1">{t('howItWorksPage.path1BlogLink') || 'See the five views engineers need before changing a codebase'}</span>

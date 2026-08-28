@@ -10,7 +10,10 @@ import Container from "@/components/layout/Container";
 import SectionHeading from "@/components/layout/SectionHeading";
 
 export default function ResourceGrid() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  
+  const localizeHref = (href) => language === "en" ? href : `/${language}${href}`;
+
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [videoId, setVideoId] = useState("");
 
@@ -144,7 +147,7 @@ export default function ResourceGrid() {
                       </p>
                     </div>
                     <Link
-                      href="/blog/think-design-redefining-ai-coding-harness/"
+                      href={localizeHref("/blog/think-design-redefining-ai-coding-harness/")}
                       className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-primary/80 transition-colors w-max"
                     >
                       <BookOpen className="w-4 h-4" />
@@ -170,7 +173,7 @@ export default function ResourceGrid() {
                       </p>
                     </div>
                     <Link
-                      href="/blog/one-spec-every-agent-think4ever-mcp/"
+                      href={localizeHref("/blog/one-spec-every-agent-think4ever-mcp/")}
                       className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-primary/80 transition-colors w-max"
                     >
                       <Layers className="w-4 h-4" />
@@ -209,7 +212,7 @@ export default function ResourceGrid() {
                       </p>
                     </div>
                     <Link
-                      href="/blog/think4ever-approach-vs-vibe-coding/"
+                      href={localizeHref("/blog/think4ever-approach-vs-vibe-coding/")}
                       className="mt-auto text-sm font-bold text-primary hover:text-primary/80 transition-colors"
                     >
                       {t("resourcesPage.card1Link")}
@@ -233,7 +236,7 @@ export default function ResourceGrid() {
                       </p>
                     </div>
                     <Link
-                      href="/blog/architecture-first-agentic-development-with-think4ever/"
+                      href={localizeHref("/blog/architecture-first-agentic-development-with-think4ever/")}
                       className="mt-auto text-sm font-bold text-primary hover:text-primary/80 transition-colors"
                     >
                       {t("resourcesPage.card2Link")}
@@ -257,7 +260,7 @@ export default function ResourceGrid() {
                       </p>
                     </div>
                     <Link
-                      href="/how-it-works"
+                      href={localizeHref("/how-it-works")}
                       className="mt-auto text-sm font-bold text-primary hover:text-primary/80 transition-colors"
                     >
                       {t("resourcesPage.card3Link")}
@@ -281,7 +284,7 @@ export default function ResourceGrid() {
                       </p>
                     </div>
                     <Link
-                      href="/blog/code-visualization-real-codebases/"
+                      href={localizeHref("/blog/code-visualization-real-codebases/")}
                       className="mt-auto text-sm font-bold text-primary hover:text-primary/80 transition-colors"
                     >
                       {t("resourcesPage.card4Link")}

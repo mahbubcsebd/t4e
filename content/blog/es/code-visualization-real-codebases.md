@@ -209,7 +209,7 @@ hideThumbnail: true
 <section>
 <h2 class="text-2xl font-bold text-[#1b30a7] mb-4">Comience con el sistema, no con el diagrama</h2>
 <p class="mb-4">Un mapa de estructura, gráfico de dependencias, seguimiento en tiempo de ejecución y vista de arquitectura revelan una parte diferente de una base de código. El enfoque más sólido los combina en torno a la decisión que el equipo debe tomar, y conecta la evidencia de implementación con la intención que se espera que el sistema preserve.</p>
-<p>Vea cómo Think4Ever puede <a href="https://think4ever.com/es/code-to-design/" class="text-[#1b30a7] hover:underline font-medium">convertir un proyecto existente en un mapa de sistema compartido y revisable</a> antes de que comience el próximo cambio.</p>
+<p>Vea cómo Think4Ever puede <a href="/code-to-design/" class="text-[#1b30a7] hover:underline font-medium">convertir un proyecto existente en un mapa de sistema compartido y revisable</a> antes de que comience el próximo cambio.</p>
 </section>
 
 </div>
