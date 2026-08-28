@@ -11,9 +11,9 @@ import Container from "@/components/layout/Container";
 export async function generateMetadata(props) {
   const params = await props.params;
   const { lang, slug } = params;
-  
-  if (lang !== 'es' && lang !== 'nl') return {};
-  
+
+  if (lang !== "es" && lang !== "nl") return {};
+
   const post = getPostBySlug(slug, lang);
   if (!post) return {};
 
@@ -25,9 +25,9 @@ export async function generateMetadata(props) {
 }
 
 export async function generateStaticParams() {
-  const langs = ['es', 'nl'];
+  const langs = ["es", "nl"];
   const params = [];
-  
+
   for (const lang of langs) {
     const posts = getAllPosts(lang);
     for (const post of posts) {
@@ -37,7 +37,7 @@ export async function generateStaticParams() {
       });
     }
   }
-  
+
   return params;
 }
 
@@ -45,7 +45,7 @@ export default async function TranslatedBlogDetailPage(props) {
   const params = await props.params;
   const { lang, slug } = params;
 
-  if (lang !== 'es' && lang !== 'nl') {
+  if (lang !== "es" && lang !== "nl") {
     notFound();
   }
 
@@ -59,7 +59,7 @@ export default async function TranslatedBlogDetailPage(props) {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
-      <main className="flex-grow bg-background py-12 md:py-24 relative z-10">
+      <main className="flex-grow bg-background py-8 md:py-12 relative z-10">
         <SectionCard>
           <Container className="mx-auto">
             <BlogDetailNav />

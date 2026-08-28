@@ -193,6 +193,7 @@
     "path1Title": "Analizar código existente",
     "path1Desc": "Conecte un repositorio o suba un proyecto. Think4Ever mapea estructura, dependencias, flujos y reglas.",
     "path1Pills": ["arquitectura", "dependencias", "flujos de negocio"],
+    "path1BlogLink": "Vea las cinco vistas que los ingenieros necesitan antes de cambiar una base de código",
     "path2Tag": "Diseño → Código",
     "path2Title": "Definir un nuevo sistema",
     "path2Desc": "Capture objetivos, roles, flujos de trabajo y criterios de aceptación antes del código.",
@@ -232,6 +233,7 @@
     "seeSystemEyebrow": "Vea el sistema",
     "seeSystemTitle": "Vea el sistema, no otro resumen de código.",
     "seeSystemSubtitle": "Think4Ever conecta la estructura y el comportamiento dispersos en el repositorio en un modelo revisable.",
+    "seeSystemLinkText": "Aprenda lo que debe mostrar una visualización efectiva de bases de código",
     "seeSystemList": [
       "Arquitectura y límites de servicio",
       "Dependencias y movimiento de datos",
@@ -499,6 +501,10 @@
     "card3Title": "Cómo funciona Think4Ever",
     "card3Desc": "Conecte o describa, revise el plano y construya con contexto compartido.",
     "card3Link": "Explorar el flujo de trabajo →",
+    "card4Type": "Ingeniería y arquitectura",
+    "card4Title": "Visualización de Código para Bases de Código Reales",
+    "card4Desc": "Cinco vistas que los ingenieros necesitan para entender un sistema complejo antes de cambiarlo.",
+    "card4Link": "Leer guía ↗",
     "ctaTitle": "¿Listo para pasar de la lectura a la acción?",
     "ctaSubtitle": "Comience con un proyecto real e inspeccione el sistema detrás del código."
   },

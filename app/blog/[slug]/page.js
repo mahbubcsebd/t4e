@@ -11,7 +11,7 @@ import Container from "@/components/layout/Container";
 export async function generateMetadata(props) {
   const params = await props.params;
   const { slug } = params;
-  const post = getPostBySlug(slug, 'en');
+  const post = getPostBySlug(slug, "en");
 
   if (!post) return {};
 
@@ -23,7 +23,7 @@ export async function generateMetadata(props) {
 }
 
 export async function generateStaticParams() {
-  const posts = getAllPosts('en');
+  const posts = getAllPosts("en");
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -32,8 +32,8 @@ export async function generateStaticParams() {
 export default async function BlogDetailPage(props) {
   const params = await props.params;
   const { slug } = params;
-  const post = getPostBySlug(slug, 'en');
-  const allPosts = getAllPosts('en');
+  const post = getPostBySlug(slug, "en");
+  const allPosts = getAllPosts("en");
 
   if (!post) {
     notFound();
@@ -42,7 +42,7 @@ export default async function BlogDetailPage(props) {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
-      <main className="flex-grow bg-background py-12 md:py-24 relative z-10">
+      <main className="flex-grow bg-background py-8 md:py-12 relative z-10">
         <SectionCard>
           <Container className="mx-auto">
             <BlogDetailNav />

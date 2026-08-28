@@ -160,6 +160,7 @@
     "path1Title": "Analyseer bestaande code",
     "path1Desc": "Koppel een repository of upload een project. Think4Ever brengt structuur, afhankelijkheden en regels in kaart.",
     "path1Pills": ["architectuur", "afhankelijkheden", "bedrijfstromen"],
+    "path1BlogLink": "Bekijk de vijf weergaven die engineers nodig hebben voordat ze een codebase wijzigen",
     "path2Tag": "Ontwerp → Code",
     "path2Title": "Definieer een nieuw systeem",
     "path2Desc": "Leg doelstellingen, rollen, werkstromen, regels en acceptatiecriteria vast vóór de code.",
@@ -195,6 +196,7 @@
     "seeSystemEyebrow": "Zie het systeem",
     "seeSystemTitle": "Zie het systeem—niet zomaar een samenvatting van code.",
     "seeSystemSubtitle": "Think4Ever verbindt de structuur en het gedrag die verspreid zijn over de repository in één controleerbaar model.",
+    "seeSystemLinkText": "Leer wat effectieve codevisualisatie moet tonen",
     "seeSystemList": [
       "Architectuur en servicegrenzen",
       "Afhankelijkheden en gegevensverplaatsing",
@@ -451,6 +453,10 @@
     "card3Title": "Hoe Think4Ever werkt",
     "card3Desc": "Verbind of beschrijf, beoordeel de blauwdruk en bouw met gedeelde context.",
     "card3Link": "Verken de werkstroom →",
+    "card4Type": "Techniek & architectuur",
+    "card4Title": "Codevisualisatie voor echte codebases",
+    "card4Desc": "Vijf weergaven die engineers nodig hebben om een complex systeem te begrijpen voordat ze het wijzigen.",
+    "card4Link": "Lees de gids ↗",
     "ctaTitle": "Klaar om van lezen naar zien te gaan?",
     "ctaSubtitle": "Start met één echt project en inspecteer het systeem achter de code."
   },

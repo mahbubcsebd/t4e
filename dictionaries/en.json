@@ -193,6 +193,7 @@
     "path1Title": "Analyze existing project",
     "path1Desc": "Connect a repository or upload a project. Think4Ever maps structure, dependencies, workflows and rules.",
     "path1Pills": ["architecture", "dependencies", "business flows"],
+    "path1BlogLink": "See the five views engineers need before changing a codebase",
     "path2Tag": "Design → Code",
     "path2Title": "Define a new system",
     "path2Desc": "Capture objectives, roles, workflows, rules and acceptance criteria before code.",
@@ -224,6 +225,7 @@
     "seeSystemEyebrow": "See the system",
     "seeSystemTitle": "See the system—not another code summary.",
     "seeSystemSubtitle": "Think4Ever connects the structure and behavior scattered across the repository into one reviewable model.",
+    "seeSystemLinkText": "Learn what effective codebase visualization should show",
     "seeSystemList": [
       "Architecture and service boundaries",
       "Dependencies and data movement",
@@ -491,6 +493,10 @@
     "card3Title": "How Think4Ever works",
     "card3Desc": "Connect or describe, review the blueprint, and build with shared context.",
     "card3Link": "Explore the workflow →",
+    "card4Type": "Engineering & Architecture",
+    "card4Title": "Code Visualization for Real Codebases",
+    "card4Desc": "Five views engineers need to understand a complex system before changing it.",
+    "card4Link": "Read Guide ↗",
     "ctaTitle": "Ready to move from reading to seeing?",
     "ctaSubtitle": "Start with one real project and inspect the system behind the code."
   },

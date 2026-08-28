@@ -192,7 +192,7 @@ export default function ResourceGrid() {
                 </h2>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-2 gap-6">
                 {/* Perspective 1 */}
                 <div className="shadow-sm relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-xl p-6 sm:p-8 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 flex flex-col justify-between group overflow-hidden translate-y-0 hover:-translate-y-1">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -264,6 +264,31 @@ export default function ResourceGrid() {
                     </Link>
                   </div>
                 </div>
+
+                {/* Perspective 4 */}
+                <div className="shadow-sm relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-xl p-6 sm:p-8 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 flex flex-col justify-between group overflow-hidden translate-y-0 hover:-translate-y-1">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative z-10 flex flex-col h-full">
+                    <div>
+                      <span className="text-[10px] font-extrabold text-primary bg-primary/10 px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-4 border border-primary/20">
+                        {t("resourcesPage.card4Type")}
+                      </span>
+                      <h3 className="text-base font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                        {t("resourcesPage.card4Title")}
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                        {t("resourcesPage.card4Desc")}
+                      </p>
+                    </div>
+                    <Link
+                      href="/blog/code-visualization-real-codebases/"
+                      className="mt-auto text-sm font-bold text-primary hover:text-primary/80 transition-colors"
+                    >
+                      {t("resourcesPage.card4Link")}
+                    </Link>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
