@@ -2076,9 +2076,9 @@ export const BLOG_POSTS = [
                 <p class="text-primary font-semibold"><span class="text-gray-400">$</span> claude-code "Scaffold out our room checking and reservation microservices."</p>
                 <div class="text-gray-600 space-y-1 pl-4 border-l-2 border-gray-200">
                   <p class="text-zinc-500">"Connecting to Think4Ever via Model Context Protocol... Exchanging handshake... Ready."</p>
-                  <p class="text-zinc-500">"Invoking think4ever.get_data_model() to inspect database constraints..."</p>
+                  <p class="text-zinc-500">"Invoking Think4Ever.get_data_model() to inspect database constraints..."</p>
                   <p class="text-zinc-500">"Retrieved: ERD with 23 entities. Explicitly preserving structural rule: stay 1:1 folio and detecting sensitive-field flags on financial attributes."</p>
-                  <p class="text-zinc-500">"Invoking think4ever.get_business_rules() to extract validation barriers..."</p>
+                  <p class="text-zinc-500">"Invoking Think4Ever.get_business_rules() to extract validation barriers..."</p>
                   <p class="text-zinc-800 font-medium">"Enforcing backend logic constraint: rule_room_clean_for_checkin. Writing microservice handlers strictly bound to these specifications. I am executing a defined schema, not inventing one."</p>
                 </div>
               </div>
@@ -2092,7 +2092,7 @@ export const BLOG_POSTS = [
               <div class="space-y-3 text-sm font-mono bg-white border border-gray-100 rounded-lg p-4 break-words overflow-x-auto">
                 <p class="text-primary font-semibold"><span class="text-gray-400">AI Chat:</span> @think4ever-mcp Generate the frontend administration screens for our operational dashboard.</p>
                 <div class="text-gray-600 space-y-1 pl-4 border-l-2 border-gray-200">
-                  <p class="text-zinc-500">"Querying Think4Ever MCP Server: think4ever.get_ui_screens(module: 'admin')..."</p>
+                  <p class="text-zinc-500">"Querying Think4Ever MCP Server: Think4Ever.get_ui_screens(module: 'admin')..."</p>
                   <p class="text-zinc-500">"Successfully parsed 21 fully structured layout definitions containing pre-mapped dataRefs and flowRefs."</p>
                   <p class="text-zinc-500">"Applying system design constraints: Fetching global semantic color palettes (mapping state.dirty directly to warning styles, state.out_of_order to error components)."</p>
                   <p class="text-zinc-800 font-medium">"Materializing user interfaces locally. Navigation boundaries, color hierarchies, and asset access roles correspond exactly to the data model built by Claude Code in the terminal session."</p>

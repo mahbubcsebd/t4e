@@ -49,6 +49,7 @@ export default function TermsContent() {
               <h2 className="text-2xl font-bold text-foreground mb-3">
                 {t("termsPage.sec2Title")}
               </h2>
+              {/* TODO: [FLAG FOR LEGAL REVIEW] Outdated autonomous-development description in termsPage.sec2Text */}
               <p>{t("termsPage.sec2Text")}</p>
             </div>
 
@@ -56,6 +57,7 @@ export default function TermsContent() {
               <h2 className="text-2xl font-bold text-foreground mb-3">
                 {t("termsPage.sec3Title")}
               </h2>
+              {/* TODO: [FLAG FOR LEGAL REVIEW] Outdated autonomous-development description in termsPage.sec3Text */}
               <p>{t("termsPage.sec3Text")}</p>
             </div>
 
