@@ -2024,7 +2024,7 @@ export const BLOG_POSTS = [
               <p>When local test suites fail or runtime bugs appear mid-session, the executing agent directly pings the MCP gateway to file an issue block equipped with complete architectural context, preventing debugging logs from evaporating when the immediate chat finishes.</p>
               <div class="bg-blue-50/50 border-l-4 border-primary p-4 rounded-r-xl my-4">
                 <span class="block text-[10px] font-bold text-primary uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
-                <p class="text-sm italic text-gray-700">"Create a think4ever issue for this failing test with the stack trace and your root-cause analysis."</p>
+                <p class="text-sm italic text-gray-700">"Create a Think4Ever issue for this failing test with the stack trace and your root-cause analysis."</p>
               </div>
             </div>
 
@@ -2033,7 +2033,7 @@ export const BLOG_POSTS = [
               <p>When an engineer executes a structural refactor, the agent doesn't just update the local files—it updates the underlying blueprints inside Think4Ever, ensuring documentation natively tracks code changes dynamically.</p>
               <div class="bg-blue-50/50 border-l-4 border-primary p-4 rounded-r-xl my-4">
                 <span class="block text-[10px] font-bold text-primary uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
-                <p class="text-sm italic text-gray-700">"I split the billing module in two — update the think4ever concept and requirements to match."</p>
+                <p class="text-sm italic text-gray-700">"I split the billing module in two — update the Think4Ever concept and requirements to match."</p>
               </div>
             </div>
 
@@ -2042,7 +2042,7 @@ export const BLOG_POSTS = [
               <p>Product knowledge remains localized inside Think4Ever instead of being fragmented across disjointed vendor chat history logs. Engineering teams can swap out their agent stack mid-project without losing context momentum.</p>
               <div class="bg-blue-50/50 border-l-4 border-primary p-4 rounded-r-xl my-4">
                 <span class="block text-[10px] font-bold text-primary uppercase tracking-wider mb-1">Standard Client Interoperation Prompt Pattern</span>
-                <p class="text-sm italic text-gray-700">"You're new to this project — read everything in think4ever and continue where the previous agent stopped."</p>
+                <p class="text-sm italic text-gray-700">"You're new to this project — read everything in Think4Ever and continue where the previous agent stopped."</p>
               </div>
             </div>
           </div>
