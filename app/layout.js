@@ -24,11 +24,20 @@ export const metadata = {
     type: "website",
     url: "https://think4ever.com",
     siteName: "Think4Ever",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 1200,
+        alt: "Think4Ever",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Turn Code Into a Living System Map | Think4Ever",
     description: "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.",
+    images: ["/opengraph-image.png"],
   },
 };
 
