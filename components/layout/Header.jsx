@@ -167,7 +167,7 @@ export default function Header() {
         }`}
       >
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0">
+        <Link href={localizeHref("/")} className="flex items-center gap-2 shrink-0">
           <Image
             src="/images/think4ever-logo.png"
             alt="Think4Ever"

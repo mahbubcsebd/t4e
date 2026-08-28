@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="md:col-span-4 lg:col-span-5 flex flex-col items-start gap-5">
-            <Link href="/" className="mb-1">
+            <Link href={localizeHref("/")} className="mb-1">
               <Image
                 src="/images/think4ever-logo.png"
                 alt="Think4Ever"
