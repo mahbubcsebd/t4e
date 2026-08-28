@@ -733,8 +733,8 @@
     "okay": "Aceptar"
   },
   "layout": {
-    "metaTitle": "Convierta el código en un mapa de sistema vivo | Think4Ever",
-    "metaDesc": "Convierta el código existente en un plano de sistema vivo. Revise la intención comercial, vea el impacto de los cambios y brinde a cada agente de codificación el contexto del sistema que necesita."
+    "metaTitle": "Convierta su código en un mapa de sistema vivo | Think4Ever",
+    "metaDesc": "Convierta el código existente en un plano vivo del sistema. Revise la intención comercial, vea el impacto de los cambios y proporcione a cada agente de codificación el contexto del sistema que necesita."
   },
   "notFoundPage": {
     "eyebrow": "Error 404",
@@ -742,5 +742,9 @@
     "description": "La página que buscas no existe o ha sido movida. Volvamos a construir y entender tu código fuente.",
     "ctaPrimary": "Analizar un proyecto",
     "ctaSecondary": "Volver al inicio"
+  },
+  "contactUsPage": {
+    "metaTitle": "Contáctenos - Think4Ever",
+    "metaDesc": "Comuníquese con Think4Ever para analizar la comprensión del código, planos vivos, análisis de impacto de cambios y contexto compartido para personas y agentes de codificación."
   }
 }

@@ -176,7 +176,7 @@ export default function Footer() {
           <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-muted border border-border">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-semibold text-foreground/70 dark:text-foreground/80">
-              Think4Ever Inc.
+              Think4Ever Global Inc.
             </span>
           </div>
         </div>

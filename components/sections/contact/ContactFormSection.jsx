@@ -1,13 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { MapPin, Mail, Check } from "lucide-react";
+import { MapPin, Mail, Check, AlertCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function ContactFormSection() {
   const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState({});
+  const fieldRefs = useRef({});
 
   const [form, setForm] = useState({
     segment: "",
@@ -31,7 +34,7 @@ export default function ContactFormSection() {
   ];
 
   const primaryNeedOptions = [
-    "Ammend and fix existing code",
+    "Amend and fix existing code",
     "Design the right architecture upfront",
     "Simplify SDLC stack with fewer tools",
     "Build AI agents or automation workflows",
@@ -50,14 +53,44 @@ export default function ContactFormSection() {
     }
   };
 
+  const validateForm = () => {
+    const newErrors = {};
+    if (!form.segment) newErrors.segment = "Please select your segment.";
+    if (!form.firstName) newErrors.firstName = "First name is required.";
+    if (!form.lastName) newErrors.lastName = "Last name is required.";
+    if (!form.email) {
+      newErrors.email = "Email address is required.";
+    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+    if (!form.companyName) newErrors.companyName = "Company name is required.";
+    if (!form.companySize) newErrors.companySize = "Please select your company size.";
+    if (!form.role) newErrors.role = "Role is required.";
+    if (!form.agree) newErrors.agree = "You must agree to the privacy policy.";
+
+    setErrors(newErrors);
+
+    const firstErrorKey = Object.keys(newErrors)[0];
+    if (firstErrorKey && fieldRefs.current[firstErrorKey]) {
+      fieldRefs.current[firstErrorKey].focus();
+    }
+
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
+    
     setIsSubmitting(true);
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
+      setErrors({});
     }, 1000);
   };
+
+  const hasErrors = Object.keys(errors).length > 0;
 
   return (
     <section className="py-16 md:py-20 bg-card border-b border-border">
@@ -95,18 +128,33 @@ export default function ContactFormSection() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} noValidate className="space-y-6">
+                
+                {hasErrors && (
+                  <div className="p-4 rounded-xl bg-red-50 border border-red-100 flex items-start gap-3">
+                    <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-sm font-bold text-red-800">Please correct the errors below.</p>
+                      <p className="text-xs text-red-600 mt-1">Some required fields are missing or invalid.</p>
+                    </div>
+                  </div>
+                )}
+
                 <div>
-                  <label className="block text-xs font-bold text-foreground mb-1.5">
-                    {t("contactPage.segment")} *
+                  <label htmlFor="segment" className="block text-xs font-bold text-foreground mb-1.5">
+                    {t("contactPage.segment")} <span className="text-red-500">*</span>
                   </label>
                   <select
+                    id="segment"
+                    name="segment"
                     required
+                    aria-required="true"
+                    ref={(el) => (fieldRefs.current.segment = el)}
                     value={form.segment}
                     onChange={(e) =>
                       setForm({ ...form, segment: e.target.value })
                     }
-                    className="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:border-[#093cad] bg-card"
+                    className={`w-full px-4 py-3 rounded-xl border text-sm focus:outline-none bg-card transition-colors ${errors.segment ? 'border-red-400 focus:border-red-500' : 'border-border focus:border-[#093cad]'}`}
                   >
                     <option value="">Select your segment</option>
                     {segmentOptions.map((opt, i) => (
@@ -115,86 +163,111 @@ export default function ContactFormSection() {
                       </option>
                     ))}
                   </select>
+                  {errors.segment && <p className="text-xs text-red-500 font-semibold mt-1.5">{errors.segment}</p>}
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-foreground mb-1.5">
-                      {t("contactPage.firstName")} *
+                    <label htmlFor="firstName" className="block text-xs font-bold text-foreground mb-1.5">
+                      {t("contactPage.firstName")} <span className="text-red-500">*</span>
                     </label>
                     <input
+                      id="firstName"
+                      name="firstName"
                       type="text"
                       required
+                      aria-required="true"
+                      ref={(el) => (fieldRefs.current.firstName = el)}
                       placeholder="First name"
                       value={form.firstName}
                       onChange={(e) =>
                         setForm({ ...form, firstName: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:border-[#093cad] bg-card"
+                      className={`w-full px-4 py-3 rounded-xl border text-sm focus:outline-none bg-card transition-colors ${errors.firstName ? 'border-red-400 focus:border-red-500' : 'border-border focus:border-[#093cad]'}`}
                     />
+                    {errors.firstName && <p className="text-xs text-red-500 font-semibold mt-1.5">{errors.firstName}</p>}
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-foreground mb-1.5">
-                      {t("contactPage.lastName")} *
+                    <label htmlFor="lastName" className="block text-xs font-bold text-foreground mb-1.5">
+                      {t("contactPage.lastName")} <span className="text-red-500">*</span>
                     </label>
                     <input
+                      id="lastName"
+                      name="lastName"
                       type="text"
                       required
+                      aria-required="true"
+                      ref={(el) => (fieldRefs.current.lastName = el)}
                       placeholder="Last name"
                       value={form.lastName}
                       onChange={(e) =>
                         setForm({ ...form, lastName: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:border-[#093cad] bg-card"
+                      className={`w-full px-4 py-3 rounded-xl border text-sm focus:outline-none bg-card transition-colors ${errors.lastName ? 'border-red-400 focus:border-red-500' : 'border-border focus:border-[#093cad]'}`}
                     />
+                    {errors.lastName && <p className="text-xs text-red-500 font-semibold mt-1.5">{errors.lastName}</p>}
                   </div>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-foreground mb-1.5">
-                      {t("contactPage.email")} *
+                    <label htmlFor="email" className="block text-xs font-bold text-foreground mb-1.5">
+                      {t("contactPage.email")} <span className="text-red-500">*</span>
                     </label>
                     <input
+                      id="email"
+                      name="email"
                       type="email"
                       required
+                      aria-required="true"
+                      ref={(el) => (fieldRefs.current.email = el)}
                       placeholder="you@company.com"
                       value={form.email}
                       onChange={(e) =>
                         setForm({ ...form, email: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:border-[#093cad] bg-card"
+                      className={`w-full px-4 py-3 rounded-xl border text-sm focus:outline-none bg-card transition-colors ${errors.email ? 'border-red-400 focus:border-red-500' : 'border-border focus:border-[#093cad]'}`}
                     />
+                    {errors.email && <p className="text-xs text-red-500 font-semibold mt-1.5">{errors.email}</p>}
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-foreground mb-1.5">
-                      {t("contactPage.companyName")} *
+                    <label htmlFor="companyName" className="block text-xs font-bold text-foreground mb-1.5">
+                      {t("contactPage.companyName")} <span className="text-red-500">*</span>
                     </label>
                     <input
+                      id="companyName"
+                      name="companyName"
                       type="text"
                       required
+                      aria-required="true"
+                      ref={(el) => (fieldRefs.current.companyName = el)}
                       placeholder="Your company"
                       value={form.companyName}
                       onChange={(e) =>
                         setForm({ ...form, companyName: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:border-[#093cad] bg-card"
+                      className={`w-full px-4 py-3 rounded-xl border text-sm focus:outline-none bg-card transition-colors ${errors.companyName ? 'border-red-400 focus:border-red-500' : 'border-border focus:border-[#093cad]'}`}
                     />
+                    {errors.companyName && <p className="text-xs text-red-500 font-semibold mt-1.5">{errors.companyName}</p>}
                   </div>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-foreground mb-1.5">
-                      {t("contactPage.companySize")} *
+                    <label htmlFor="companySize" className="block text-xs font-bold text-foreground mb-1.5">
+                      {t("contactPage.companySize")} <span className="text-red-500">*</span>
                     </label>
                     <select
+                      id="companySize"
+                      name="companySize"
                       required
+                      aria-required="true"
+                      ref={(el) => (fieldRefs.current.companySize = el)}
                       value={form.companySize}
                       onChange={(e) =>
                         setForm({ ...form, companySize: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:border-[#093cad] bg-card"
+                      className={`w-full px-4 py-3 rounded-xl border text-sm focus:outline-none bg-card transition-colors ${errors.companySize ? 'border-red-400 focus:border-red-500' : 'border-border focus:border-[#093cad]'}`}
                     >
                       <option value="">Select size</option>
                       <option value="1-10">1 - 10</option>
@@ -202,21 +275,27 @@ export default function ContactFormSection() {
                       <option value="51-200">51 - 200</option>
                       <option value="500+">500+</option>
                     </select>
+                    {errors.companySize && <p className="text-xs text-red-500 font-semibold mt-1.5">{errors.companySize}</p>}
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-foreground mb-1.5">
-                      {t("contactPage.role")} *
+                    <label htmlFor="role" className="block text-xs font-bold text-foreground mb-1.5">
+                      {t("contactPage.role")} <span className="text-red-500">*</span>
                     </label>
                     <input
+                      id="role"
+                      name="role"
                       type="text"
                       required
+                      aria-required="true"
+                      ref={(el) => (fieldRefs.current.role = el)}
                       placeholder="e.g., CTO, VP Engineering"
                       value={form.role}
                       onChange={(e) =>
                         setForm({ ...form, role: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:border-[#093cad] bg-card"
+                      className={`w-full px-4 py-3 rounded-xl border text-sm focus:outline-none bg-card transition-colors ${errors.role ? 'border-red-400 focus:border-red-500' : 'border-border focus:border-[#093cad]'}`}
                     />
+                    {errors.role && <p className="text-xs text-red-500 font-semibold mt-1.5">{errors.role}</p>}
                   </div>
                 </div>
 
@@ -249,10 +328,12 @@ export default function ContactFormSection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-foreground mb-1.5">
+                  <label htmlFor="interests" className="block text-xs font-bold text-foreground mb-1.5">
                     {t("contactPage.interests")}
                   </label>
                   <textarea
+                    id="interests"
+                    name="interests"
                     rows={4}
                     placeholder={t("contactPage.interestsPlaceholder")}
                     value={form.interests}
@@ -263,20 +344,27 @@ export default function ContactFormSection() {
                   ></textarea>
                 </div>
 
-                <label className="flex items-start gap-2.5 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    required
-                    checked={form.agree}
-                    onChange={(e) =>
-                      setForm({ ...form, agree: e.target.checked })
-                    }
-                    className="mt-0.5 rounded border-border text-[#093cad]"
-                  />
-                  <span className="text-xs text-muted-foreground font-semibold">
-                    {t("contactPage.agree")}
-                  </span>
-                </label>
+                <div className="flex flex-col gap-1.5">
+                  <label htmlFor="agree" className="flex items-start gap-2.5 cursor-pointer">
+                    <input
+                      id="agree"
+                      name="agree"
+                      type="checkbox"
+                      required
+                      aria-required="true"
+                      ref={(el) => (fieldRefs.current.agree = el)}
+                      checked={form.agree}
+                      onChange={(e) =>
+                        setForm({ ...form, agree: e.target.checked })
+                      }
+                      className="mt-0.5 rounded border-border text-[#093cad]"
+                    />
+                    <span className="text-xs text-muted-foreground font-semibold">
+                      I agree to the <Link href="/privacy-policy/" className="text-[#093cad] hover:underline">Privacy Policy</Link>
+                    </span>
+                  </label>
+                  {errors.agree && <p className="text-xs text-red-500 font-semibold">{errors.agree}</p>}
+                </div>
 
                 <button
                   type="submit"

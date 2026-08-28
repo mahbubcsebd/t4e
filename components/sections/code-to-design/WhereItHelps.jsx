@@ -83,7 +83,7 @@ export default function WhereItHelps() {
           <div className="relative z-10 bg-white border border-border/60 rounded-xl p-8 sm:p-12 max-w-4xl mx-auto text-center shadow-sm hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/40 transition-all duration-500 group overflow-hidden">
             <div className="relative z-10">
               <blockquote className="text-lg sm:text-xl font-medium text-foreground mb-8 leading-relaxed">
-                "{t("codeToDesignPage.quote")}"
+                {t("codeToDesignPage.quote")}
               </blockquote>
 
               <div className="flex flex-wrap justify-center gap-3">
