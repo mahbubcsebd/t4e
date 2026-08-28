@@ -1,4 +1,4 @@
-import Page, { metadata as fallbackMetadata } from '../../design-to-code/page';
+import Page, { fallbackMetadata } from '../../design-to-code/page';
 import { getLocalizedMetadata } from '@/lib/metadata';
 
 export async function generateMetadata({ params }) {

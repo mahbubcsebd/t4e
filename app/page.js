@@ -1,4 +1,5 @@
-export const metadata = { alternates: { canonical: '/' } };
+import { getLocalizedMetadata } from '@/lib/metadata';
+
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/home/HeroSection";
@@ -31,3 +32,10 @@ export default function Home() {
   );
 }
 
+
+
+export const fallbackMetadata = { alternates: { canonical: '/' } };
+
+export async function generateMetadata() {
+  return getLocalizedMetadata('en', 'home', fallbackMetadata);
+}

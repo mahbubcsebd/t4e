@@ -1,4 +1,4 @@
-import Page, { metadata as fallbackMetadata } from '../../privacy-policy/page';
+import Page, { fallbackMetadata } from '../../privacy-policy/page';
 import { getLocalizedMetadata } from '@/lib/metadata';
 
 export async function generateMetadata({ params }) {

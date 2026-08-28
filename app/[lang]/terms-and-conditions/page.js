@@ -1,4 +1,4 @@
-import Page, { metadata as fallbackMetadata } from '../../terms-and-conditions/page';
+import Page, { fallbackMetadata } from '../../terms-and-conditions/page';
 import { getLocalizedMetadata } from '@/lib/metadata';
 
 export async function generateMetadata({ params }) {

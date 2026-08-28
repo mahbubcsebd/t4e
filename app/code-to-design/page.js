@@ -1,3 +1,4 @@
+import { getLocalizedMetadata } from '@/lib/metadata';
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CodeToDesignHero from "@/components/sections/code-to-design/CodeToDesignHero";
@@ -5,10 +6,7 @@ import SeeSystem from "@/components/sections/code-to-design/SeeSystem";
 import WhereItHelps from "@/components/sections/code-to-design/WhereItHelps";
 import CtaSection from "@/components/sections/home/CtaSection";
 
-export const metadata = {
-  title: "Code to Design — Understand and Visualize Your Software | Think4Ever",
-  description: "Turn an existing software project into a living, reviewable blueprint of architecture, dependencies, workflows and business rules.",
-};
+
 
 export default function CodeToDesignPage() {
   return (
@@ -23,4 +21,14 @@ export default function CodeToDesignPage() {
       <Footer />
     </div>
   );
+}
+
+
+export const fallbackMetadata = {
+  title: "Code to Design — Understand and Visualize Your Software | Think4Ever",
+  description: "Turn an existing software project into a living, reviewable blueprint of architecture, dependencies, workflows and business rules.",
+};
+
+export async function generateMetadata() {
+  return getLocalizedMetadata('en', 'code-to-design', fallbackMetadata);
 }

@@ -1,3 +1,4 @@
+import { getLocalizedMetadata } from '@/lib/metadata';
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import DesignToCodeHero from "@/components/sections/design-to-code/DesignToCodeHero";
@@ -6,10 +7,7 @@ import ReviewedHandoff from "@/components/sections/design-to-code/ReviewedHandof
 import PersistentContextSection from "@/components/sections/home/PersistentContextSection";
 import CtaSection from "@/components/sections/home/CtaSection";
 
-export const metadata = {
-  title: "Design to Code — Build Software Faithful to Business Intent | Think4Ever",
-  description: "Turn approved business objectives, architecture, workflows and rules into shared implementation context for Think4Ever or your coding agent.",
-};
+
 
 export default function DesignToCodePage() {
   return (
@@ -25,4 +23,14 @@ export default function DesignToCodePage() {
       <Footer />
     </div>
   );
+}
+
+
+export const fallbackMetadata = {
+  title: "Design to Code — Build Software Faithful to Business Intent | Think4Ever",
+  description: "Turn approved business objectives, architecture, workflows and rules into shared implementation context for Think4Ever or your coding agent.",
+};
+
+export async function generateMetadata() {
+  return getLocalizedMetadata('en', 'design-to-code', fallbackMetadata);
 }

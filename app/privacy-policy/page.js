@@ -1,11 +1,9 @@
+import { getLocalizedMetadata } from '@/lib/metadata';
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PrivacyContent from "@/components/sections/legal/PrivacyContent";
 
-export const metadata = {
-  title: "Privacy Policy - Think4Ever",
-  description: "Learn how Think4Ever collects, uses, discloses, and protects your personal information.",
-};
+
 
 export default function PrivacyPolicyPage() {
   return (
@@ -17,4 +15,14 @@ export default function PrivacyPolicyPage() {
       <Footer />
     </div>
   );
+}
+
+
+export const fallbackMetadata = {
+  title: "Privacy Policy - Think4Ever",
+  description: "Learn how Think4Ever collects, uses, discloses, and protects your personal information.",
+};
+
+export async function generateMetadata() {
+  return getLocalizedMetadata('en', 'privacy-policy', fallbackMetadata);
 }

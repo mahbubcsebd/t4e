@@ -1,11 +1,9 @@
+import { getLocalizedMetadata } from '@/lib/metadata';
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import TermsContent from "@/components/sections/legal/TermsContent";
 
-export const metadata = {
-  title: "Terms and Conditions - Think4Ever Global Inc.",
-  description: "Terms and Conditions governing the use of Think4Ever platforms and services.",
-};
+
 
 export default function TermsAndConditionsPage() {
   return (
@@ -17,4 +15,14 @@ export default function TermsAndConditionsPage() {
       <Footer />
     </div>
   );
+}
+
+
+export const fallbackMetadata = {
+  title: "Terms and Conditions - Think4Ever Global Inc.",
+  description: "Terms and Conditions governing the use of Think4Ever platforms and services.",
+};
+
+export async function generateMetadata() {
+  return getLocalizedMetadata('en', 'terms-and-conditions', fallbackMetadata);
 }
