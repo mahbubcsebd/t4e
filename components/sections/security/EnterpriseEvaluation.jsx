@@ -65,7 +65,7 @@ export default function EnterpriseEvaluation() {
 
                 <Button
                   asChild
-                  className="w-full text-sm py-5 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/25 hover:-translate-y-0.5 transition-all"
+                  className="w-full text-sm shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/25 hover:-translate-y-0.5 transition-all"
                 >
                   <Link href="/contact-us/">Contact Think4Ever</Link>
                 </Button>
