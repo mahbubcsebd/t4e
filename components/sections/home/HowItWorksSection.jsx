@@ -17,7 +17,7 @@ export default function HowItWorksSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-4 md:py-6 lg:py-8 " id="how-it-works">
+    <section className="py-6 md:py-8 lg:py-12 " id="how-it-works">
       <SectionCard className="max-w-[1600px] mx-auto">
         <div className="bg-card rounded-xl p-5 sm:p-8 md:p-10 w-full relative z-10 border border-border/50">
           {/* Editorial Header */}

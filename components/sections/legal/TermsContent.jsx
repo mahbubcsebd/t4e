@@ -9,7 +9,7 @@ export default function TermsContent() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-4 md:py-6 lg:py-8 bg-background border-b border-border">
+    <section className="py-6 md:py-8 lg:py-12 bg-background border-b border-border">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 md:mb-14">
         {/* Header */}
         <div className="text-center mb-8">

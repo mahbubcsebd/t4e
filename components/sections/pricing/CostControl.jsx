@@ -29,7 +29,7 @@ export default function CostControl() {
   ];
 
   return (
-    <section className="py-4 md:py-6 lg:py-8 border-b border-border">
+    <section className="py-6 md:py-8 lg:py-12 border-b border-border">
       <SectionCard>
         <Container>
           <SectionHeading
