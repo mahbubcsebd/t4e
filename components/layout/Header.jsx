@@ -34,11 +34,11 @@ export default function Header() {
   const handleLanguageChange = (newLangCode) => {
     setLanguage(newLangCode);
     setLangDropdownOpen(false);
+  };
 
-    if (pathname && (pathname.startsWith('/blog') || pathname.startsWith('/es/blog') || pathname.startsWith('/nl/blog'))) {
-      const newPath = newLangCode === 'en' ? '/blog' : `/${newLangCode}/blog`;
-      router.push(newPath);
-    }
+  const localizeHref = (href) => {
+    if (language === 'en' || !href.startsWith('/')) return href;
+    return `/${language}${href}`;
   };
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -85,19 +85,19 @@ export default function Header() {
     {
       title: t("nav.library") === "nav.library" ? "Library" : t("nav.library"),
       desc: t("nav.libraryDesc") === "nav.libraryDesc" ? "Explore our collection of resources." : t("nav.libraryDesc"),
-      href: "/resources/",
+      href: localizeHref("/resources/"),
       icon: <Puzzle className="w-4 h-4 text-primary" />,
     },
     {
       title: t("nav.blog") === "nav.blog" ? "Blog" : t("nav.blog"),
       desc: t("nav.blogDesc", "Read the latest news and articles."),
-      href: "/blog",
+      href: localizeHref("/blog"),
       icon: <Globe className="w-4 h-4 text-primary" />,
     },
     {
       title: t("nav.faq", "FAQ"),
       desc: t("nav.faqDesc", "Frequently asked questions."),
-      href: "/faq",
+      href: localizeHref("/faq"),
       icon: <Settings className="w-4 h-4 text-slate-600" />,
     },
   ];
@@ -203,7 +203,7 @@ export default function Header() {
               }`}
             >
               <Link
-                href="/how-it-works"
+                href={localizeHref("/how-it-works")}
                 className="flex items-start gap-3 px-4 py-3 hover:bg-muted group/item transition-colors"
               >
                 <div className="p-1.5 rounded-lg bg-muted border border-border group-hover/item:bg-card shrink-0">
@@ -219,7 +219,7 @@ export default function Header() {
                 </div>
               </Link>
               <Link
-                href="/code-to-design"
+                href={localizeHref("/code-to-design")}
                 className="flex items-start gap-3 px-4 py-3 hover:bg-muted group/item transition-colors"
               >
                 <div className="p-1.5 rounded-lg bg-muted border border-border group-hover/item:bg-card shrink-0">
@@ -238,7 +238,7 @@ export default function Header() {
                 </div>
               </Link>
               <Link
-                href="/design-to-code"
+                href={localizeHref("/design-to-code")}
                 className="flex items-start gap-3 px-4 py-3 hover:bg-muted group/item transition-colors"
               >
                 <div className="p-1.5 rounded-lg bg-muted border border-border group-hover/item:bg-card shrink-0">
@@ -256,7 +256,7 @@ export default function Header() {
             </div>
           </div>
           <Link
-            href="/integrations"
+            href={localizeHref("/integrations")}
             className="hover:text-foreground transition-colors whitespace-nowrap"
           >
             {t("nav.integrations")}
@@ -352,7 +352,7 @@ export default function Header() {
           </div>
 
           <Link
-            href="/pricing"
+            href={localizeHref("/pricing")}
             className="hover:text-foreground transition-colors whitespace-nowrap"
           >
             {t("nav.pricing")}
@@ -516,21 +516,21 @@ export default function Header() {
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       <Link
-                        href="/how-it-works"
+                        href={localizeHref("/how-it-works")}
                         onClick={() => setMobileMenuOpen(false)}
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                       >
                         {t("nav.howItWorks")}
                       </Link>
                       <Link
-                        href="/code-to-design"
+                        href={localizeHref("/code-to-design")}
                         onClick={() => setMobileMenuOpen(false)}
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                       >
                         {t("nav.codeToDesign")}
                       </Link>
                       <Link
-                        href="/design-to-code"
+                        href={localizeHref("/design-to-code")}
                         onClick={() => setMobileMenuOpen(false)}
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                       >
@@ -544,7 +544,7 @@ export default function Header() {
 
             <div className="py-1">
               <Link
-                href="/integrations"
+                href={localizeHref("/integrations")}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
               >
@@ -634,7 +634,7 @@ export default function Header() {
 
             <div className="py-1 mb-2">
               <Link
-                href="/pricing"
+                href={localizeHref("/pricing")}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
               >

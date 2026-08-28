@@ -7,7 +7,12 @@ import { useLanguage } from "@/context/LanguageContext";
 import { FaYoutube, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const localizeHref = (href) => {
+    if (language === 'en' || !href.startsWith('/')) return href;
+    return `/${language}${href}`;
+  };
 
   return (
     <footer className="bg-background border-t border-border pt-16 pb-8 relative overflow-hidden">
@@ -63,31 +68,31 @@ export default function Footer() {
                 {t("nav.product")}
               </h4>
               <Link
-                href="/how-it-works"
+                href={localizeHref("/how-it-works")}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {t("nav.howItWorks")}
               </Link>
               <Link
-                href="/code-to-design"
+                href={localizeHref("/code-to-design")}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {t("nav.codeToDesign")}
               </Link>
               <Link
-                href="/design-to-code"
+                href={localizeHref("/design-to-code")}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {t("nav.designToCode")}
               </Link>
               <Link
-                href="/integrations"
+                href={localizeHref("/integrations")}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {t("nav.integrations")}
               </Link>
               <Link
-                href="/pricing"
+                href={localizeHref("/pricing")}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {t("nav.pricing")}
@@ -100,7 +105,7 @@ export default function Footer() {
                 {t("nav.resources")}
               </h4>
               <Link
-                href="/resources/"
+                href={localizeHref("/resources/")}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {t("nav.library") === "nav.library"
@@ -108,13 +113,13 @@ export default function Footer() {
                   : t("nav.library")}
               </Link>
               <Link
-                href="/blog"
+                href={localizeHref("/blog")}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {t("nav.blog")}
               </Link>
               <Link
-                href="/faq"
+                href={localizeHref("/faq")}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {t("footer.faq")}
@@ -128,7 +133,7 @@ export default function Footer() {
                 {t("nav.docs")}
               </a>
               <Link
-                href="/security"
+                href={localizeHref("/security")}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {t("footer.trust")}
@@ -141,19 +146,19 @@ export default function Footer() {
                 Legal & Privacy
               </h4>
               <Link
-                href="/contact-us"
+                href={localizeHref("/contact-us")}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {t("footer.contact")}
               </Link>
               <Link
-                href="/privacy-policy"
+                href={localizeHref("/privacy-policy")}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {t("footer.privacy")}
               </Link>
               <Link
-                href="/terms-and-conditions"
+                href={localizeHref("/terms-and-conditions")}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {t("footer.terms")}

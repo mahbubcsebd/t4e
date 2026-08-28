@@ -9,6 +9,8 @@ const dictionaries = { en, es, nl };
 
 const LanguageContext = createContext();
 
+import { usePathname, useRouter } from "next/navigation";
+
 export const availableLanguages = [
   { code: "en", name: "English", flag: "🇺🇸" },
   { code: "es", name: "Español", flag: "🇪🇸" },
@@ -16,24 +18,41 @@ export const availableLanguages = [
 ];
 
 export function LanguageProvider({ children }) {
-  const [language, setLanguageState] = useState("en");
+  const pathname = usePathname();
+  const router = useRouter();
 
-  useEffect(() => {
-    const saved = localStorage.getItem("think4ever_lang");
-    if (saved && dictionaries[saved]) {
-      setLanguageState(saved);
+  let language = "en";
+  if (pathname) {
+    const segments = pathname.split("/").filter(Boolean);
+    if (segments.length > 0 && dictionaries[segments[0]] && segments[0] !== "en") {
+      language = segments[0];
     }
-  }, []);
+  }
 
   useEffect(() => {
     document.documentElement.lang = language;
   }, [language]);
 
   const setLanguage = (lang) => {
-    if (dictionaries[lang]) {
-      setLanguageState(lang);
-      localStorage.setItem("think4ever_lang", lang);
+    if (!dictionaries[lang]) return;
+    localStorage.setItem("think4ever_lang", lang);
+    
+    if (lang === language) return;
+    
+    let newPathname = pathname || "/";
+    
+    // If currently on a translated route, strip the prefix
+    if (language !== "en") {
+      // replace only the first occurrence which is the language prefix
+      newPathname = newPathname.replace(`/${language}`, "") || "/";
     }
+    
+    // If going to a translated route, add the prefix
+    if (lang !== "en") {
+      newPathname = `/${lang}${newPathname === "/" ? "" : newPathname}`;
+    }
+    
+    router.push(newPathname);
   };
 
   // Helper to fetch nested key, e.g. t('nav.product')
