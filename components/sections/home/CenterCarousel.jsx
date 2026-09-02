@@ -9,17 +9,14 @@ import Image from "next/image";
 export default function CenterCarousel({ items }) {
   const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
   const autoplayRef = useRef(null);
 
   const startAutoplay = useCallback(() => {
     if (autoplayRef.current) clearInterval(autoplayRef.current);
     autoplayRef.current = setInterval(() => {
-      if (!isHovered) {
-        setCurrentIndex((prev) => (prev + 1) % items.length);
-      }
+      setCurrentIndex((prev) => (prev + 1) % items.length);
     }, 5000);
-  }, [items.length, isHovered]);
+  }, [items.length]);
 
   useEffect(() => {
     startAutoplay();
@@ -46,17 +43,9 @@ export default function CenterCarousel({ items }) {
   if (!items || items.length === 0) return null;
 
   return (
-    <div
-      className="relative z-10 flex flex-col items-center text-center w-full h-full justify-between"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <div className="relative z-10 flex flex-col items-center text-center w-full h-full justify-between">
       {/* Static Top Elements */}
       <div className="flex flex-col items-center w-full">
-        {/* <div className="w-20 h-20 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/25 mb-6 group-hover:scale-105 transition-transform duration-500 shrink-0">
-          <Layers className="w-10 h-10 text-white" />
-        </div> */}
-
         <span className="inline-block px-3 py-1 bg-card text-primary border border-primary/30 rounded-md text-[10px] font-extrabold uppercase tracking-widest mb-6 shrink-0">
           {t("productModel.centerTag") || "UNIVERSAL META-MODEL"}
         </span>
@@ -87,7 +76,7 @@ export default function CenterCarousel({ items }) {
       </div>
 
       {/* Image Carousel Area - Fully Rounded (Circle) */}
-      <div className="relative mt-auto pt-5 pb-3 w-full flex justify-center items-center">
+      <div className="relative mt-auto pt-5 pb-3 w-full flex justify-center items-center group">
         <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden shadow-lg border-[6px] border-[#aaccff] bg-muted shrink-0 group-hover:border-primary/60 group-hover:shadow-primary/20 transition-all duration-700">
           {/* Removed mode="wait" to allow true crossfading without blanking */}
           <AnimatePresence>
@@ -129,20 +118,20 @@ export default function CenterCarousel({ items }) {
           </AnimatePresence>
         </div>
 
-        {/* Navigation Arrows (Positioned outside the circle) */}
+        {/* Navigation Arrows (Always visible on mobile, hover on desktop) */}
         <button
           onClick={handlePrev}
-          className="absolute left-0 sm:-left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/90 backdrop-blur-md border border-border shadow-lg text-foreground flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 z-20"
+          className="absolute -left-4 sm:-left-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-background/90 backdrop-blur-md border border-border shadow-lg text-foreground flex items-center justify-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 z-20"
           aria-label="Previous image"
         >
-          <ChevronLeft className="w-5 h-5" />
+          <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-0 sm:-right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/90 backdrop-blur-md border border-border shadow-lg text-foreground flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 z-20"
+          className="absolute -right-4 sm:-right-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-background/90 backdrop-blur-md border border-border shadow-lg text-foreground flex items-center justify-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 z-20"
           aria-label="Next image"
         >
-          <ChevronRight className="w-5 h-5" />
+          <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
       </div>
 
