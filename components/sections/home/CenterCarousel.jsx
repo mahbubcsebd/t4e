@@ -61,7 +61,7 @@ export default function CenterCarousel({ items }) {
               transition={{ duration: 0.5, ease: "easeOut" }}
               className="absolute inset-x-0 top-0 flex flex-col items-center w-full"
             >
-              <h3 className="flex items-center justify-center gap-2 text-xl sm:text-2xl font-extrabold text-foreground tracking-tight mb-3 px-2">
+              <h3 className="flex items-center justify-center gap-2 text-xl font-semibold text-foreground tracking-tight mb-3 px-2">
                 {items[currentIndex].icon && (
                   <span className="shrink-0">{items[currentIndex].icon}</span>
                 )}
