@@ -11,7 +11,90 @@ import {
   Layout,
   RefreshCw,
   Workflow,
+  Monitor,
+  Route,
+  Shield,
+  ClipboardCheck,
+  Plug,
+  FileText,
+  Network,
+  Activity,
+  Zap,
 } from "lucide-react";
+import CenterCarousel from "./CenterCarousel";
+
+const carouselItems = [
+  {
+    title: "Screens & Navigation",
+    description:
+      "Every screen of your application on one visual map, with the navigation paths between them. Click any screen later to refine it or design its UI.",
+    image: "/images/carousel/screens-navigation.png",
+    icon: <Monitor className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "Business Flows",
+    description:
+      "Step-by-step flows showing how work moves through your app — bookings, approvals, escalations — so everyone agrees on the process before it is built.",
+    image: "/images/carousel/business-flows.png",
+    icon: <Route className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "Data Objects",
+    description:
+      "Your complete data model: every entity with its fields and the relationships between objects. This later becomes the real database.",
+    image: "/images/carousel/data-objects.png",
+    icon: <Database className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "Roles & Permissions",
+    description:
+      "Who can see and do what — every user role with its access rights, mapped to screens and actions.",
+    image: "/images/carousel/roles-permission.png",
+    icon: <Shield className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "Business Rules",
+    description:
+      "The policies and constraints your application enforces automatically — validations, limits, calculations and conditions.",
+    image: "/images/carousel/business-rules.png",
+    icon: <ClipboardCheck className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "Integrations",
+    description:
+      "The external systems your app talks to — payments, email, messaging, third-party APIs — and where each one connects.",
+    image: "/images/carousel/integrations.png",
+    icon: <Plug className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "Functional Architecture",
+    description:
+      "A one-poster overview document of the whole solution, built automatically right after your concept — ready to share with your team.",
+    image: "/images/carousel/functional-architecture.png",
+    icon: <FileText className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "API Endpoints",
+    description:
+      "The service contract: every API endpoint with its method, path, request and response — the bridge between your screens and your data.",
+    image: "/images/carousel/api-endpoints.png",
+    icon: <Network className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "State & Lifecycle",
+    description:
+      "How key objects move between states — a booking from requested to confirmed to completed — with the transitions and who can trigger them.",
+    image: "/images/carousel/state-lifecycle.png",
+    icon: <Activity className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "Events & Jobs",
+    description:
+      "The background machinery: scheduled jobs, notifications and event-driven reactions that keep the app running without anyone clicking.",
+    image: "/images/carousel/events-jobs.png",
+    icon: <Zap className="w-5 h-5 text-primary" />,
+  },
+];
 
 export default function ProductModelSection() {
   const { t } = useLanguage();
@@ -29,7 +112,7 @@ export default function ProductModelSection() {
 
           {/* The Blueprint Architecture Visual */}
           <div className="relative w-full mt-10">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10">
               {/* Left Column (Perspectives 1 & 3) */}
               <div className="lg:col-span-4 flex flex-col justify-between gap-6 lg:gap-16 relative z-10 order-2 lg:order-1">
                 {/* Perspective 1: Engineering */}
@@ -79,28 +162,8 @@ export default function ProductModelSection() {
                   {/* Glowing Background Effect */}
                   <div className="absolute inset-0 bg-primary blur-2xl opacity-10 rounded-xl"></div>
 
-                  <div className="gemini-card rounded-xl p-8 relative overflow-hidden group flex-1 flex flex-col items-center justify-center min-h-[280px]">
-                    <div className="relative z-10 flex flex-col items-center text-center">
-                      <div className="w-20 h-20 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/25 mb-6 group-hover:scale-105 transition-transform duration-500">
-                        <Layers className="w-10 h-10 text-white" />
-                      </div>
-
-                      <span className="inline-block px-3 py-1 bg-card text-primary border border-primary/30 rounded-md text-[10px] font-extrabold uppercase tracking-widest mb-3">
-                        {t("productModel.centerTag")}
-                      </span>
-
-                      <h3 className="text-xl sm:text-2xl font-extrabold text-foreground tracking-tight mb-5">
-                        {t("productModel.centerTitle")}
-                      </h3>
-
-                      <div className="flex items-center justify-center gap-2 text-[11px] font-medium text-primary bg-blue-50 px-3 py-1.5 rounded-full border border-primary/20">
-                        <RefreshCw
-                          className="w-3.5 h-3.5 animate-spin-slow"
-                          style={{ animationDuration: "4s" }}
-                        />
-                        Real-time Sync
-                      </div>
-                    </div>
+                  <div className="gemini-card rounded-xl p-8 relative overflow-hidden group flex-1 flex flex-col items-center justify-center min-h-[400px]">
+                    <CenterCarousel items={carouselItems} />
                   </div>
                 </div>
               </div>
