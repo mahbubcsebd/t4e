@@ -53,9 +53,9 @@ export default function CenterCarousel({ items }) {
     >
       {/* Static Top Elements */}
       <div className="flex flex-col items-center w-full">
-        <div className="w-20 h-20 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/25 mb-6 group-hover:scale-105 transition-transform duration-500 shrink-0">
+        {/* <div className="w-20 h-20 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/25 mb-6 group-hover:scale-105 transition-transform duration-500 shrink-0">
           <Layers className="w-10 h-10 text-white" />
-        </div>
+        </div> */}
 
         <span className="inline-block px-3 py-1 bg-card text-primary border border-primary/30 rounded-md text-[10px] font-extrabold uppercase tracking-widest mb-6 shrink-0">
           {t("productModel.centerTag") || "UNIVERSAL META-MODEL"}
@@ -87,8 +87,8 @@ export default function CenterCarousel({ items }) {
       </div>
 
       {/* Image Carousel Area - Fully Rounded (Circle) */}
-      <div className="relative mt-auto pt-4 pb-2 w-full flex justify-center items-center">
-        <div className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-full overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] border-[8px] border-background bg-muted shrink-0 ring-1 ring-border/40 group-hover:shadow-[0_20px_50px_-12px_rgba(var(--primary),0.3)] transition-shadow duration-700">
+      <div className="relative mt-auto pt-5 pb-3 w-full flex justify-center items-center">
+        <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden shadow-lg border-[6px] border-[#aaccff] bg-muted shrink-0 group-hover:border-primary/60 group-hover:shadow-primary/20 transition-all duration-700">
           {/* Removed mode="wait" to allow true crossfading without blanking */}
           <AnimatePresence>
             <motion.div
@@ -99,14 +99,20 @@ export default function CenterCarousel({ items }) {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
             >
-              {/* The wrapper slowly zooms in while active */}
+              {/* Hardware acceleration and anti-aliasing fixes to prevent the "waving" / shimmering effect during slow zoom */}
               <motion.div
-                className="w-full h-full relative"
-                initial={{ scale: 1 }}
-                animate={{ scale: 1.2 }}
+                className="w-full h-full relative origin-center"
+                initial={{ scale: 1.6, z: 0, rotationZ: 0.01 }}
+                animate={{ scale: 2.0, z: 0, rotationZ: 0.01 }}
                 transition={{
                   duration: 12,
                   ease: "linear",
+                }}
+                style={{
+                  willChange: "transform",
+                  backfaceVisibility: "hidden",
+                  WebkitBackfaceVisibility: "hidden",
+                  transformStyle: "preserve-3d",
                 }}
               >
                 <Image
@@ -114,8 +120,8 @@ export default function CenterCarousel({ items }) {
                   alt={items[currentIndex].title}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 256px, 256px"
-                  quality={90}
+                  sizes="(max-width: 768px) 400px, 400px"
+                  quality={65}
                   priority={currentIndex === 0}
                 />
               </motion.div>
