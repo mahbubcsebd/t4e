@@ -94,6 +94,65 @@ const carouselItems = [
     image: "/images/carousel/events-jobs.png",
     icon: <Zap className="w-5 h-5 text-primary" />,
   },
+  {
+    title: "Requirements",
+    description:
+      "Define your MVP (Minimum Viable Product) features and user roles.",
+    image: "/images/carousel/requirements.png",
+    icon: <ClipboardCheck className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "Concept",
+    description:
+      "Breaks your requirements down into individual Concept Blocks.",
+    image: "/images/carousel/concept.png",
+    icon: <Layers className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "UI Designs",
+    description:
+      "View and interact with generated UI designs for your concepts.",
+    image: "/images/carousel/ui-design.png",
+    icon: <Layout className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "Concept Summary",
+    description: "High level view of the System",
+    image: "/images/carousel/concept-summery.png",
+    icon: <FileText className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "Environment & Config",
+    description: "Environment and Configuration parameters of the System",
+    image: "/images/carousel/environment-config.png",
+    icon: <RefreshCw className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "Requirements Documents",
+    description: "Manage requirements documentation for your project.",
+    image: "/images/carousel/requirements-documents.png",
+    icon: <FileText className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "MCP Connect & Tools",
+    description:
+      "Connect AI clients to this platform over the Model Context Protocol",
+    image: "/images/carousel/mcp-connects.png",
+    icon: <Plug className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "MCP — Tools & Test",
+    description:
+      "Connect AI clients to this platform over the Model Context Protocol",
+    image: "/images/carousel/mcp-tools.png",
+    icon: <Zap className="w-5 h-5 text-primary" />,
+  },
+  {
+    title: "Project Structure Map",
+    description: "Holistic view of the entire Project",
+    image: "/images/carousel/structure-analysis.png",
+    icon: <Workflow className="w-5 h-5 text-primary" />,
+  },
 ];
 
 export default function ProductModelSection() {

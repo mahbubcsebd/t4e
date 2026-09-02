@@ -76,7 +76,7 @@ export default function CenterCarousel({ items }) {
       </div>
 
       {/* Image Carousel Area - Fully Rounded (Circle) */}
-      <div className="relative mt-auto pt-5 pb-3 w-full flex justify-center items-center group">
+      <div className="relative mt-auto pt-5 pb-0 w-full flex justify-center items-center group">
         <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden shadow-lg border-[6px] border-[#aaccff] bg-muted shrink-0 group-hover:border-primary/60 group-hover:shadow-primary/20 transition-all duration-700">
           {/* Removed mode="wait" to allow true crossfading without blanking */}
           <AnimatePresence>
@@ -117,38 +117,6 @@ export default function CenterCarousel({ items }) {
             </motion.div>
           </AnimatePresence>
         </div>
-
-        {/* Navigation Arrows (Always visible on mobile, hover on desktop) */}
-        <button
-          onClick={handlePrev}
-          className="absolute -left-4 sm:-left-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-background/90 backdrop-blur-md border border-border shadow-lg text-foreground flex items-center justify-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 z-20"
-          aria-label="Previous image"
-        >
-          <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
-        </button>
-        <button
-          onClick={handleNext}
-          className="absolute -right-4 sm:-right-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-background/90 backdrop-blur-md border border-border shadow-lg text-foreground flex items-center justify-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 z-20"
-          aria-label="Next image"
-        >
-          <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
-        </button>
-      </div>
-
-      {/* Pagination Indicators */}
-      <div className="flex items-center justify-center gap-2 mt-4 h-[8px] shrink-0">
-        {items.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => goToIndex(idx)}
-            className={`transition-all duration-500 rounded-full ${
-              idx === currentIndex
-                ? "w-8 h-2 bg-primary shadow-[0_0_10px_rgba(var(--primary),0.5)]"
-                : "w-2 h-2 bg-border hover:bg-primary/50"
-            }`}
-            aria-label={`Go to slide ${idx + 1}`}
-          />
-        ))}
       </div>
     </div>
   );
