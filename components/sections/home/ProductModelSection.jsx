@@ -128,7 +128,7 @@ const carouselItems = [
     icon: <RefreshCw className="w-5 h-5 text-primary" />,
   },
   {
-    title: "Requirements Documents",
+    title: "Software Documentation",
     description: "Manage requirements documentation for your project.",
     image: "/images/carousel/requirements-documents.png",
     icon: <FileText className="w-5 h-5 text-primary" />,
