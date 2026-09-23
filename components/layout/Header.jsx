@@ -256,6 +256,12 @@ export default function Header() {
             </div>
           </div>
           <Link
+            href={localizeHref("/marketplace")}
+            className="hover:text-foreground transition-colors whitespace-nowrap"
+          >
+            {t("nav.marketplace") === "nav.marketplace" ? "Marketplace" : t("nav.marketplace")}
+          </Link>
+          <Link
             href={localizeHref("/integrations")}
             className="hover:text-foreground transition-colors whitespace-nowrap"
           >
@@ -543,6 +549,13 @@ export default function Header() {
             </div>
 
             <div className="py-1">
+              <Link
+                href={localizeHref("/marketplace")}
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
+              >
+                {t("nav.marketplace") === "nav.marketplace" ? "Marketplace" : t("nav.marketplace")}
+              </Link>
               <Link
                 href={localizeHref("/integrations")}
                 onClick={() => setMobileMenuOpen(false)}
