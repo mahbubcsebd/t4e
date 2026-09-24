@@ -431,7 +431,7 @@ export default function Header() {
           </Button>
 
           {/* Start free button */}
-          <Button asChild className="shadow-md shadow-primary/25">
+          <Button asChild>
             <a href="https://portal.think4ever.com/#/register">
               {t("nav.startFree")}
             </a>
@@ -681,10 +681,7 @@ export default function Header() {
                   {t("nav.signIn")}
                 </a>
               </Button>
-              <Button
-                asChild
-                className="w-full text-center bg-[#093cad] hover:bg-[#093cad]/90 text-white"
-              >
+              <Button asChild className="w-full text-center">
                 <a
                   href="https://portal.think4ever.com/#/register"
                   onClick={() => setMobileMenuOpen(false)}
