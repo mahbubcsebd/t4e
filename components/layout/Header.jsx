@@ -86,19 +86,19 @@ export default function Header() {
       title: t("nav.library") === "nav.library" ? "Resource Library" : t("nav.library"),
       desc: t("nav.libraryDesc") === "nav.libraryDesc" ? "Explore our collection of resources." : t("nav.libraryDesc"),
       href: localizeHref("/resources/"),
-      icon: <Puzzle className="w-4 h-4 text-primary" />,
+      icon: <Puzzle className="w-4 h-4 text-foreground" />,
     },
     {
       title: t("nav.blog") === "nav.blog" ? "Blog" : t("nav.blog"),
       desc: t("nav.blogDesc", "Read the latest news and articles."),
       href: localizeHref("/blog"),
-      icon: <Globe className="w-4 h-4 text-primary" />,
+      icon: <Globe className="w-4 h-4 text-foreground" />,
     },
     {
       title: t("nav.faq", "FAQ"),
       desc: t("nav.faqDesc", "Frequently asked questions."),
       href: localizeHref("/faq"),
-      icon: <Settings className="w-4 h-4 text-slate-600" />,
+      icon: <Settings className="w-4 h-4 text-foreground" />,
     },
   ];
 
@@ -107,49 +107,49 @@ export default function Header() {
       title: t("nav.docsMenu.onboardingTitle", "Customer Onboarding"),
       desc: t("nav.docsMenu.onboardingDesc", "Get started with Think4Ever."),
       href: "https://think4ever.com/docs/onboarding.html",
-      icon: <Rocket className="w-4 h-4 text-primary" />,
+      icon: <Rocket className="w-4 h-4 text-foreground" />,
     },
     {
       title: t("nav.docsMenu.designerTitle", "Think4Ever Designer"),
       desc: t("nav.docsMenu.designerDesc", "Learn how to map systems."),
       href: "https://think4ever.com/docs/manual_introduction.html",
-      icon: <Palette className="w-4 h-4 text-primary" />,
+      icon: <Palette className="w-4 h-4 text-foreground" />,
     },
     {
       title: t("nav.docsMenu.developerTitle", "Think4Ever Developer"),
       desc: t("nav.docsMenu.developerDesc", "Technical guide for developers."),
       href: "https://think4ever.com/docs/dev/start_new_project.html",
-      icon: <Code className="w-4 h-4 text-indigo-600" />,
+      icon: <Code className="w-4 h-4 text-foreground" />,
     },
     {
       title: t("nav.docsMenu.portalTitle", "Think4Ever Portal"),
       desc: t("nav.docsMenu.portalDesc", "Manage team dashboard."),
       href: "https://think4ever.com/docs/portal/dashboard.html",
-      icon: <Users className="w-4 h-4 text-primary" />,
+      icon: <Users className="w-4 h-4 text-foreground" />,
     },
     {
       title: t("nav.docsMenu.reverseEngTitle", "Reverse Engineering"),
       desc: t("nav.docsMenu.reverseEngDesc", "Reverse engineer codebases."),
       href: "https://think4ever.com/docs/reverse_engineering.html",
-      icon: <Settings className="w-4 h-4 text-slate-600" />,
+      icon: <Settings className="w-4 h-4 text-foreground" />,
     },
     {
       title: t("nav.docsMenu.mcpTitle", "Think MCP"),
       desc: t("nav.docsMenu.mcpDesc", "Claude Code, Codex, and Cursor."),
       href: "https://think4ever.com/docs/manual_think_mcp.html",
-      icon: <Puzzle className="w-4 h-4 text-amber-500" />,
+      icon: <Puzzle className="w-4 h-4 text-foreground" />,
     },
     {
       title: t("nav.docsMenu.vscodeTitle", "VS Code Plugin"),
       desc: t("nav.docsMenu.vscodeDesc", "Access T4E inside VS Code."),
       href: "https://think4ever.com/docs/dev/vs_code_integration.html",
-      icon: <Code className="w-4 h-4 text-primary" />,
+      icon: <Code className="w-4 h-4 text-foreground" />,
     },
     {
       title: t("nav.docsMenu.apiTitle", "Think API"),
       desc: t("nav.docsMenu.apiDesc", "Programmatically manage tokens."),
       href: "https://think4ever.com/docs/manual_think_api.html",
-      icon: <Terminal className="w-4 h-4 text-emerald-600" />,
+      icon: <Terminal className="w-4 h-4 text-foreground" />,
     },
   ];
 
@@ -167,7 +167,7 @@ export default function Header() {
         }`}
       >
         {/* Brand Logo */}
-        <Link href={localizeHref("/")} className="flex items-center gap-2 shrink-0">
+        <Link href={localizeHref("/")} className="flex items-center gap-2 shrink-0" aria-label="Think4Ever Home">
           <Image
             src="/images/think4ever-logo.png"
             alt="Think4Ever"
@@ -191,9 +191,10 @@ export default function Header() {
               onClick={() => setHowItWorksOpen(!howItWorksOpen)}
               onMouseEnter={() => setHowItWorksOpen(true)}
               className="flex items-center gap-1 hover:text-foreground transition-colors py-2 whitespace-nowrap"
+              aria-label="Toggle Product menu"
             >
               <span>{t("nav.product", "Product")}</span>
-              <ChevronDown className="w-4 h-4 text-primary group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-4 h-4 text-foreground group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-0 w-64 bg-card rounded-2xl shadow-2xl border border-border py-2 transition-all duration-200 z-50 ${
@@ -207,7 +208,7 @@ export default function Header() {
                 className="flex items-start gap-3 px-4 py-3 hover:bg-muted group/item transition-colors"
               >
                 <div className="p-1.5 rounded-lg bg-muted border border-border group-hover/item:bg-card shrink-0">
-                  <Play className="w-4 h-4 text-primary" />
+                  <Play className="w-4 h-4 text-foreground" />
                 </div>
                 <div>
                   <div className="text-xs font-bold text-foreground group-hover/item:text-primary">
@@ -223,7 +224,7 @@ export default function Header() {
                 className="flex items-start gap-3 px-4 py-3 hover:bg-muted group/item transition-colors"
               >
                 <div className="p-1.5 rounded-lg bg-muted border border-border group-hover/item:bg-card shrink-0">
-                  <Code className="w-4 h-4 text-primary" />
+                  <Code className="w-4 h-4 text-foreground" />
                 </div>
                 <div>
                   <div className="text-xs font-bold text-foreground group-hover/item:text-primary">
@@ -242,7 +243,7 @@ export default function Header() {
                 className="flex items-start gap-3 px-4 py-3 hover:bg-muted group/item transition-colors"
               >
                 <div className="p-1.5 rounded-lg bg-muted border border-border group-hover/item:bg-card shrink-0">
-                  <Palette className="w-4 h-4 text-primary" />
+                  <Palette className="w-4 h-4 text-foreground" />
                 </div>
                 <div>
                   <div className="text-xs font-bold text-foreground group-hover/item:text-primary">
@@ -277,9 +278,10 @@ export default function Header() {
               onClick={() => setResourcesOpen(!resourcesOpen)}
               onMouseEnter={() => setResourcesOpen(true)}
               className="flex items-center gap-1 hover:text-foreground transition-colors py-2 whitespace-nowrap"
+              aria-label="Toggle Resources menu"
             >
               <span>{t("nav.resources")}</span>
-              <ChevronDown className="w-4 h-4 text-primary group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-4 h-4 text-foreground group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-1/2 -translate-x-1/2 w-[260px] bg-card rounded-2xl shadow-2xl border border-border p-2 transition-all duration-200 z-50 grid grid-cols-1 gap-1 ${
@@ -292,7 +294,7 @@ export default function Header() {
                 <Link
                   key={idx}
                   href={res.href}
-                  className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-primary/10 group/item transition-colors"
+                  className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-muted group/item transition-colors"
                 >
                   <div className="p-1.5 rounded-lg bg-muted border border-border/50 group-hover/item:bg-popover shrink-0 mt-0.5">
                     {res.icon}
@@ -319,11 +321,12 @@ export default function Header() {
               onClick={() => setDocsOpen(!docsOpen)}
               onMouseEnter={() => setDocsOpen(true)}
               className="flex items-center gap-1 hover:text-foreground transition-colors py-2 whitespace-nowrap"
+              aria-label="Toggle Docs menu"
             >
               <span>
                 {t("nav.docs") === "nav.docs" ? "Docs" : t("nav.docs")}
               </span>
-              <ChevronDown className="w-4 h-4 text-primary group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-4 h-4 text-foreground group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-1/2 -translate-x-1/2 w-[540px] bg-card rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
@@ -338,7 +341,7 @@ export default function Header() {
                   href={doc.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-primary/10 group/item transition-colors"
+                  className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-muted group/item transition-colors"
                 >
                   <div className="p-1.5 rounded-lg bg-muted border border-border/50 group-hover/item:bg-popover shrink-0 mt-0.5">
                     {doc.icon}
@@ -372,11 +375,12 @@ export default function Header() {
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
               className="flex items-center gap-1.5 text-[15px] font-medium text-foreground hover:text-primary transition-colors py-2"
+              aria-label="Select language"
             >
-              <Globe className="w-4 h-4 text-primary" />
+              <Globe className="w-4 h-4 text-foreground" />
               <span className="uppercase">{currentLang.code}</span>
               <ChevronDown
-                className={`w-3.5 h-3.5 text-muted-foreground transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
+                className={`w-3.5 h-3.5 text-foreground transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
               />
             </button>
 
@@ -395,14 +399,18 @@ export default function Header() {
                     onClick={() => handleLanguageChange(lang.code)}
                     className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
                       language === lang.code
-                        ? "text-primary font-bold bg-primary/10"
-                        : "text-muted-foreground font-medium hover:text-primary hover:bg-muted"
+                        ? "text-foreground font-bold bg-muted"
+                        : "text-muted-foreground font-medium hover:text-foreground hover:bg-muted"
                     }`}
+                    aria-label={`Change language to ${lang.name}`}
                   >
                     <div className="flex items-center gap-2">
-                      <img
+                      <Image
                         src={`https://flagcdn.com/w20/${lang.code === "en" ? "us" : lang.code}.png`}
                         alt={lang.name}
+                        width={18}
+                        height={13}
+                        unoptimized
                         className="w-[18px] h-auto shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
                       />
                       <span>{lang.name}</span>
@@ -436,11 +444,12 @@ export default function Header() {
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
               className="flex items-center gap-1 text-[14px] font-medium text-foreground hover:text-primary transition-colors py-2"
+              aria-label="Select language"
             >
-              <Globe className="w-4 h-4 text-primary" />
+              <Globe className="w-4 h-4 text-foreground" />
               <span className="uppercase">{currentLang.code}</span>
               <ChevronDown
-                className={`w-3.5 h-3.5 text-muted-foreground transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
+                className={`w-3.5 h-3.5 text-foreground transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
               />
             </button>
 
@@ -454,14 +463,18 @@ export default function Header() {
                       onClick={() => handleLanguageChange(lang.code)}
                       className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
                         language === lang.code
-                          ? "text-primary font-bold bg-primary/10"
+                          ? "text-foreground font-bold bg-muted"
                           : "text-muted-foreground font-medium hover:bg-muted"
                       }`}
+                      aria-label={`Change language to ${lang.name}`}
                     >
                       <div className="flex items-center gap-2">
-                        <img
+                        <Image
                           src={`https://flagcdn.com/w20/${lang.code === "en" ? "us" : lang.code}.png`}
                           alt={lang.name}
+                          width={18}
+                          height={13}
+                          unoptimized
                           className="w-[18px] h-auto rounded-sm shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
                         />
                         <span>{lang.name}</span>
@@ -480,6 +493,7 @@ export default function Header() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 text-foreground hover:text-primary transition-colors"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {mobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -503,6 +517,7 @@ export default function Header() {
               <button
                 onClick={() => setMobileHowItWorksOpen(!mobileHowItWorksOpen)}
                 className="flex items-center justify-between text-[15px] font-semibold text-[#314865] w-full text-left py-2.5"
+                aria-label="Toggle mobile Product menu"
               >
                 <span>{t("nav.product", "Product")}</span>
                 <motion.div
@@ -569,6 +584,7 @@ export default function Header() {
               <button
                 onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)}
                 className="flex items-center justify-between text-[15px] font-semibold text-[#314865] w-full text-left py-2.5"
+                aria-label="Toggle mobile Resources menu"
               >
                 <span>{t("nav.resources")}</span>
                 <motion.div animate={{ rotate: mobileResourcesOpen ? 180 : 0 }}>
@@ -610,6 +626,7 @@ export default function Header() {
               <button
                 onClick={() => setMobileDocsOpen(!mobileDocsOpen)}
                 className="flex items-center justify-between text-[15px] font-semibold text-[#314865] w-full text-left py-2.5"
+                aria-label="Toggle mobile Docs menu"
               >
                 <span>{t("nav.docs")}</span>
                 <motion.div animate={{ rotate: mobileDocsOpen ? 180 : 0 }}>

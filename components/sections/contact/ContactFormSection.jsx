@@ -97,7 +97,7 @@ export default function ContactFormSection() {
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Title Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
+          <span className="inline-block text-xs font-bold text-foreground bg-muted px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
             {t("contactPage.heroEyebrow")}
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight mb-4">
@@ -132,7 +132,7 @@ export default function ContactFormSection() {
                 
                 {hasErrors && (
                   <div className="p-4 rounded-xl bg-red-50 border border-red-100 flex items-start gap-3">
-                    <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                    <AlertCircle className="w-5 h-5 text-foreground shrink-0 mt-0.5" />
                     <div>
                       <p className="text-sm font-bold text-red-800">Please correct the errors below.</p>
                       <p className="text-xs text-red-600 mt-1">Some required fields are missing or invalid.</p>
@@ -319,7 +319,7 @@ export default function ContactFormSection() {
                         >
                           <span>{opt}</span>
                           {isSelected && (
-                            <Check className="w-4 h-4 text-[#093cad] shrink-0" />
+                            <Check className="w-4 h-4 text-foreground] shrink-0" />
                           )}
                         </button>
                       );

@@ -37,7 +37,7 @@ export default function CoherencePrompt() {
                     key={idx}
                     className="flex items-start gap-3 text-sm sm:text-base font-semibold text-foreground"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-foreground shrink-0 mt-0.5" />
                     <span className="leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -53,10 +53,10 @@ export default function CoherencePrompt() {
                 <div className="col-span-1 md:col-span-5 bg-white border border-border/80 rounded-xl p-5 shadow-sm group-hover:border-primary/30 transition-colors duration-300 h-full flex flex-col justify-between">
                   <div>
                     <div className="flex items-center gap-2 mb-3 pb-3 border-b border-border/50">
-                      <div className="p-1.5 bg-primary/10 rounded-lg">
-                        <Target className="w-4 h-4 text-primary" />
+                      <div className="p-1.5 bg-muted rounded-lg">
+                        <Target className="w-4 h-4 text-foreground" />
                       </div>
-                      <small className="text-[9px] font-extrabold text-primary uppercase block leading-none">
+                      <small className="text-[9px] font-extrabold text-foreground uppercase block leading-none">
                         Approved Objective
                       </small>
                     </div>
@@ -66,7 +66,7 @@ export default function CoherencePrompt() {
                     </strong>
                   </div>
 
-                  <span className="inline-flex w-max items-center gap-1.5 bg-primary/10 text-primary border border-primary/20 text-[9px] font-bold px-2.5 py-1 rounded-md shadow-sm">
+                  <span className="inline-flex w-max items-center gap-1.5 bg-muted text-foreground border border-border text-[9px] font-bold px-2.5 py-1 rounded-md shadow-sm">
                     Approved blueprint
                   </span>
                 </div>
@@ -83,7 +83,7 @@ export default function CoherencePrompt() {
                       <div className="p-1.5 bg-primary rounded-lg">
                         <Layers className="w-4 h-4 text-white" />
                       </div>
-                      <small className="text-[9px] font-extrabold text-primary uppercase block leading-none">
+                      <small className="text-[9px] font-extrabold text-foreground uppercase block leading-none">
                         Implementation Context
                       </small>
                     </div>

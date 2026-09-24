@@ -43,10 +43,10 @@ export default function TwoWaysIn() {
 
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
-                  <div className="p-4 rounded-2xl bg-blue-50 border border-primary/20 transition-all duration-300 group-hover:scale-110 shadow-sm group-hover:shadow-primary/10 w-fit">
-                    <Code2 className="w-6 h-6 text-primary transition-colors duration-300" />
+                  <div className="p-4 rounded-2xl bg-muted border border-border transition-all duration-300 group-hover:scale-110 shadow-sm group-hover:shadow-primary/10 w-fit">
+                    <Code2 className="w-6 h-6 text-foreground transition-colors duration-300" />
                   </div>
-                  <span className="text-[10px] font-extrabold text-primary bg-blue-50 px-4 py-1.5 rounded-full uppercase tracking-[0.2em] border border-primary/20 group-hover:border-primary/40 transition-all duration-300 self-start sm:self-auto">
+                  <span className="text-[10px] font-extrabold text-foreground bg-muted px-4 py-1.5 rounded-full uppercase tracking-[0.2em] border border-border group-hover:border-border transition-all duration-300 self-start sm:self-auto">
                     {t("howItWorksPage.path1Tag")}
                   </span>
                 </div>
@@ -120,10 +120,10 @@ export default function TwoWaysIn() {
 
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
-                  <div className="p-4 rounded-2xl bg-blue-50 border border-primary/20 transition-all duration-300 group-hover:scale-110 shadow-sm group-hover:shadow-primary/10 w-fit">
-                    <Sparkles className="w-6 h-6 text-primary transition-colors duration-300" />
+                  <div className="p-4 rounded-2xl bg-muted border border-border transition-all duration-300 group-hover:scale-110 shadow-sm group-hover:shadow-primary/10 w-fit">
+                    <Sparkles className="w-6 h-6 text-foreground transition-colors duration-300" />
                   </div>
-                  <span className="text-[10px] font-extrabold text-primary bg-blue-50 px-4 py-1.5 rounded-full uppercase tracking-[0.2em] border border-primary/20 group-hover:border-primary/40 transition-all duration-300 self-start sm:self-auto">
+                  <span className="text-[10px] font-extrabold text-foreground bg-muted px-4 py-1.5 rounded-full uppercase tracking-[0.2em] border border-border group-hover:border-border transition-all duration-300 self-start sm:self-auto">
                     {t("howItWorksPage.path2Tag")}
                   </span>
                 </div>

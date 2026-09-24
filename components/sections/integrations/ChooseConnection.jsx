@@ -66,10 +66,10 @@ export default function ChooseConnection() {
                 >
                   <div className="relative z-10">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
-                      <div className="p-4 rounded-2xl bg-blue-50 border border-primary/20 transition-all duration-300 group-hover:scale-110 shadow-sm group-hover:shadow-primary/10 w-fit">
-                        <Icon className="w-6 h-6 text-primary transition-colors duration-300" />
+                      <div className="p-4 rounded-2xl bg-muted border border-border transition-all duration-300 group-hover:scale-110 shadow-sm group-hover:shadow-primary/10 w-fit">
+                        <Icon className="w-6 h-6 text-foreground transition-colors duration-300" />
                       </div>
-                      <span className="text-[10px] font-extrabold text-primary bg-blue-50  px-3 py-1.5 rounded-full uppercase tracking-[0.2em] transition-all duration-300 self-start sm:self-auto border border-primary/20 group-hover:border-primary/40">
+                      <span className="text-[10px] font-extrabold text-foreground bg-muted  px-3 py-1.5 rounded-full uppercase tracking-[0.2em] transition-all duration-300 self-start sm:self-auto border border-border group-hover:border-border">
                         {c.tag}
                       </span>
                     </div>
@@ -87,7 +87,7 @@ export default function ChooseConnection() {
                         key={i}
                         className="flex items-center gap-3 group/item"
                       >
-                        <div className="flex items-center justify-center w-5 h-5 rounded-full bg-muted border border-border group-hover/item:bg-primary/10 group-hover/item:border-primary/30 transition-all duration-300">
+                        <div className="flex items-center justify-center w-5 h-5 rounded-full bg-muted border border-border group-hover/item:bg-muted group-hover/item:border-border transition-all duration-300">
                           <div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover/item:bg-primary transition-all duration-300 group-hover/item:scale-125"></div>
                         </div>
                         <span className="group-hover/item:text-foreground transition-colors duration-300">

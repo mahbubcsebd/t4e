@@ -12,19 +12,19 @@ export default function WhereItHelps() {
 
   const cards = [
     {
-      icon: <Compass className="w-6 h-6 text-primary" />,
+      icon: <Compass className="w-6 h-6 text-foreground" />,
       tag: t("codeToDesignPage.card1Tag"),
       title: t("codeToDesignPage.card1Title"),
       desc: t("codeToDesignPage.card1Desc"),
     },
     {
-      icon: <RefreshCw className="w-6 h-6 text-primary" />,
+      icon: <RefreshCw className="w-6 h-6 text-foreground" />,
       tag: t("codeToDesignPage.card2Tag"),
       title: t("codeToDesignPage.card2Title"),
       desc: t("codeToDesignPage.card2Desc"),
     },
     {
-      icon: <Bot className="w-6 h-6 text-primary" />,
+      icon: <Bot className="w-6 h-6 text-foreground" />,
       tag: t("codeToDesignPage.card3Tag"),
       title: t("codeToDesignPage.card3Title"),
       desc: t("codeToDesignPage.card3Desc"),
@@ -58,10 +58,10 @@ export default function WhereItHelps() {
 
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="flex items-center justify-between mb-8">
-                    <div className="p-3 rounded-2xl bg-primary/10 border border-primary/20 group-hover:scale-110 transition-transform duration-500">
+                    <div className="p-3 rounded-2xl bg-muted border border-border group-hover:scale-110 transition-transform duration-500">
                       {c.icon}
                     </div>
-                    <span className="text-[10px] font-extrabold text-primary uppercase tracking-wider bg-primary/5 px-3 py-1.5 rounded-full border border-primary/20">
+                    <span className="text-[10px] font-extrabold text-foreground uppercase tracking-wider bg-primary/5 px-3 py-1.5 rounded-full border border-primary/20">
                       {c.tag}
                     </span>
                   </div>
@@ -92,7 +92,7 @@ export default function WhereItHelps() {
                     key={i}
                     className="flex items-center gap-1.5 text-xs font-bold text-foreground bg-white px-4 py-2 rounded-xl border border-border/80 shadow-sm group-hover:border-primary/30 transition-colors duration-300"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
+                    <CheckCircle2 className="w-4 h-4 text-foreground" />
                     {pill}
                   </span>
                 ))}

@@ -1,12 +1,14 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function SectionHeading({
   align = "center",
   eyebrow,
   title,
+  highlightText,
   subtitle,
-  animatePulse = false,
+  animatePulse = true,
   className,
   titleClassName,
   subtitleClassName,
@@ -22,17 +24,9 @@ export default function SectionHeading({
       >
         <div className="flex flex-col items-center md:items-start max-w-xl">
           {eyebrow && (
-            <span
-              className={cn(
-                "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-primary/20",
-                eyebrowClassName,
-              )}
-            >
-              {animatePulse && (
-                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-              )}
+            <Eyebrow className={eyebrowClassName} animatePulse={animatePulse}>
               {eyebrow}
-            </span>
+            </Eyebrow>
           )}
           <h2
             className={cn(
@@ -40,7 +34,8 @@ export default function SectionHeading({
               titleClassName,
             )}
           >
-            {title}
+            {title}{" "}
+            {highlightText && <span className="text-primary">{highlightText}</span>}
           </h2>
         </div>
         {subtitle && (
@@ -68,17 +63,9 @@ export default function SectionHeading({
         )}
       >
         {eyebrow && (
-          <span
-            className={cn(
-              "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-primary/20",
-              eyebrowClassName,
-            )}
-          >
-            {animatePulse && (
-              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-            )}
+          <Eyebrow className={eyebrowClassName} animatePulse={animatePulse}>
             {eyebrow}
-          </span>
+          </Eyebrow>
         )}
         <h2
           className={cn(
@@ -86,7 +73,8 @@ export default function SectionHeading({
             titleClassName,
           )}
         >
-          {title}
+          {title}{" "}
+          {highlightText && <span className="text-primary">{highlightText}</span>}
         </h2>
         {subtitle && (
           <p
@@ -111,17 +99,9 @@ export default function SectionHeading({
       )}
     >
       {eyebrow && (
-        <span
-          className={cn(
-            "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-primary/20",
-            eyebrowClassName,
-          )}
-        >
-          {animatePulse && (
-            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-          )}
+        <Eyebrow className={eyebrowClassName} animatePulse={animatePulse}>
           {eyebrow}
-        </span>
+        </Eyebrow>
       )}
       <h2
         className={cn(
@@ -129,7 +109,8 @@ export default function SectionHeading({
           titleClassName,
         )}
       >
-        {title}
+        {title}{" "}
+        {highlightText && <span className="text-primary">{highlightText}</span>}
       </h2>
       {subtitle && (
         <p

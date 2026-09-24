@@ -51,7 +51,7 @@ export const BlogArticle = ({ post, currentLang }) => {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           className="mb-10 text-center sm:text-left"
         >
-          <span className="inline-block px-3 py-1.5 bg-primary/10 border border-primary/20 text-primary text-[10px] font-extrabold tracking-widest rounded-full mb-6 uppercase shadow-sm">
+          <span className="inline-block px-3 py-1.5 bg-muted border border-border text-foreground text-[10px] font-extrabold tracking-widest rounded-full mb-6 uppercase shadow-sm">
             {post.category}
           </span>
           <h1 className="text-3xl sm:text-3xl md:text-4xl font-extrabold text-foreground leading-[1.15] tracking-tight mb-8">
@@ -61,7 +61,7 @@ export const BlogArticle = ({ post, currentLang }) => {
           {/* Meta */}
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-8 gap-y-4 text-[13px] text-muted-foreground font-medium">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-bold shadow-sm">
+              <div className="w-10 h-10 rounded-full bg-muted border border-border flex items-center justify-center text-foreground font-bold shadow-sm">
                 {post.author ? post.author.charAt(0) : "T"}
               </div>
               <span className="text-foreground font-bold">
@@ -84,7 +84,7 @@ export const BlogArticle = ({ post, currentLang }) => {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
             className="mb-12 relative aspect-[2/1] overflow-hidden rounded-2xl border border-border/80 shadow-md group"
           >
-            <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-muted opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
             <ZoomableImage
               src={post.image}
               alt={post.title}

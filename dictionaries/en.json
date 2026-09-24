@@ -75,7 +75,7 @@
   },
   "problem": {
     "eyebrow": "The context gap",
-    "title": "AI writes code faster than your team can understand it. With every sprint, the gap grows.",
+    "title": "AI writes code faster than your team can understand it. With every sprint,",
     "card1Tag": "Context resets",
     "card1Title": "Every task starts from fragments",
     "card1Desc": "Each agent session reconstructs only part of the system.",
@@ -84,11 +84,12 @@
     "card2Desc": "Code, workflows and business decisions drift apart.",
     "card3Tag": "Impact appears late",
     "card3Title": "A local change becomes a system change",
-    "card3Desc": "One decision can alter APIs, data, workflows, UI and tests."
+    "card3Desc": "One decision can alter APIs, data, workflows, UI and tests.",
+    "titleHighlight": "the gap grows."
   },
   "productModel": {
     "eyebrow": "The living blueprint",
-    "title": "One system. Every perspective.",
+    "title": "One system.",
     "subtitle": "Architecture for engineering. Workflows for operations. Business rules for product. One connected model underneath.",
     "persp1Tag": "ENGINEERING",
     "persp1Title": "Architecture and dependencies",
@@ -99,7 +100,8 @@
     "persp4Tag": "ARCHITECTURE & DATA",
     "persp4Title": "Services, APIs and information flows",
     "centerTag": "LIVING BLUEPRINT",
-    "centerTitle": "Shared context that stays with the system."
+    "centerTitle": "Shared context that stays with the system.",
+    "titleHighlight": "Every perspective."
   },
   "values": {
     "card1Tag": "Clarity",
@@ -145,7 +147,7 @@
   },
   "howItWorks": {
     "eyebrow": "How it works",
-    "title": "Connect. Review. Change.",
+    "title": "Connect. Review.",
     "step1Num": "STEP 1",
     "step1Title": "Connect",
     "step1Desc": "Link a repository or upload a project.",
@@ -154,14 +156,16 @@
     "step2Desc": "Validate the system map with the people who know it.",
     "step3Num": "STEP 3",
     "step3Title": "Change",
-    "step3Desc": "Build in Think4Ever or carry approved context into your coding agent."
+    "step3Desc": "Build in Think4Ever or carry approved context into your coding agent.",
+    "titleHighlight": "Change."
   },
   "demo": {
     "eyebrow": "See the product",
-    "title": "Watch Think4Ever work in both directions.",
+    "title": "Watch Think4Ever work in",
     "subtitle": "See an existing project become an inspectable system model, then see reviewed system intent guide implementation.",
     "btnCodeToDesign": "Code → Design",
-    "btnDesignToCode": "Design → Code"
+    "btnDesignToCode": "Design → Code",
+    "titleHighlight": "both directions."
   },
   "cta": {
     "title": "Upload the codebase you're afraid of.",
@@ -192,12 +196,20 @@
     "path1Tag": "Code → Design",
     "path1Title": "Analyze existing project",
     "path1Desc": "Connect a repository or upload a project. Think4Ever maps structure, dependencies, workflows and rules.",
-    "path1Pills": ["architecture", "dependencies", "business flows"],
+    "path1Pills": [
+      "architecture",
+      "dependencies",
+      "business flows"
+    ],
     "path1BlogLink": "See the five views engineers need before changing a codebase",
     "path2Tag": "Design → Code",
     "path2Title": "Define a new system",
     "path2Desc": "Capture objectives, roles, workflows, rules and acceptance criteria before code.",
-    "path2Pills": ["business intent", "decisions", "acceptance criteria"],
+    "path2Pills": [
+      "business intent",
+      "decisions",
+      "acceptance criteria"
+    ],
     "controlEyebrow": "The control point",
     "controlTitle": "Approve intent. See impact before execution.",
     "controlSubtitle": "Compare proposed implementation with approved rules and reveal what else the change affects.",
@@ -209,7 +221,11 @@
     "approvedTag": "Approved business rule",
     "approvedRule": "Refunds require review within 24 hours",
     "divergence": "Implementation proposes 48 hours — review required",
-    "proofPills": ["Human decision", "Updated criteria", "Agent context"],
+    "proofPills": [
+      "Human decision",
+      "Updated criteria",
+      "Agent context"
+    ],
     "ctaTitle": "Start with one real project.",
     "ctaSubtitle": "See the system behind the code before you ask an agent to change it."
   },
@@ -298,7 +314,11 @@
     "card1Tag": "Think MCP",
     "card1Title": "System context through MCP",
     "card1Desc": "Expose the reviewed blueprint to supported MCP clients before they plan or change code.",
-    "card1List": ["Claude Code", "Codex", "Cursor and Windsurf"],
+    "card1List": [
+      "Claude Code",
+      "Codex",
+      "Cursor and Windsurf"
+    ],
     "card2Tag": "VS Code",
     "card2Title": "Understanding in the editor",
     "card2Desc": "Bring the system map closer to development work through the Think4Ever extension.",
@@ -723,7 +743,12 @@
         "Systems Integrators / Consultants",
         "Enterprise & Mid-size Business"
       ],
-      "size": ["1 - 10", "11 - 50", "51 - 200", "500+"],
+      "size": [
+        "1 - 10",
+        "11 - 50",
+        "51 - 200",
+        "500+"
+      ],
       "needs": [
         "Amend and fix existing code",
         "Design the right architecture upfront",

@@ -15,19 +15,19 @@ export default function ReviewedHandoff() {
       num: t("designToCodePage.step1Num"),
       title: t("designToCodePage.step1Title"),
       desc: t("designToCodePage.step1Desc"),
-      icon: <Target className="w-8 h-8 text-primary relative z-10" />,
+      icon: <Target className="w-8 h-8 text-foreground relative z-10" />,
     },
     {
       num: t("designToCodePage.step2Num"),
       title: t("designToCodePage.step2Title"),
       desc: t("designToCodePage.step2Desc"),
-      icon: <CheckSquare className="w-8 h-8 text-primary relative z-10" />,
+      icon: <CheckSquare className="w-8 h-8 text-foreground relative z-10" />,
     },
     {
       num: t("designToCodePage.step3Num"),
       title: t("designToCodePage.step3Title"),
       desc: t("designToCodePage.step3Desc"),
-      icon: <Sparkles className="w-8 h-8 text-primary relative z-10" />,
+      icon: <Sparkles className="w-8 h-8 text-foreground relative z-10" />,
     },
   ];
 
@@ -58,7 +58,7 @@ export default function ReviewedHandoff() {
                   {/* Top Visual Area */}
                   <div className="h-[180px] bg-white border-b border-border/40 flex items-center justify-center relative overflow-hidden">
                     {/* Number Badge */}
-                    <span className="absolute top-6 left-6 text-[10px] font-extrabold text-primary bg-primary/10 px-3 py-1.5 rounded-full uppercase tracking-wider border border-primary/20 shadow-sm">
+                    <span className="absolute top-6 left-6 text-[10px] font-extrabold text-foreground bg-muted px-3 py-1.5 rounded-full uppercase tracking-wider border border-border shadow-sm">
                       {s.num}
                     </span>
 

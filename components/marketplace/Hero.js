@@ -2,10 +2,13 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import MarketplaceContainer from '@/components/marketplace/ui/MarketplaceContainer';
+
+import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function MarketplaceHero() {
   const containerVariants = {
@@ -48,9 +51,9 @@ export default function MarketplaceHero() {
             {/* Eyebrow badge — exact home pattern */}
             <motion.span
               variants={itemVariants}
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wide mb-4 border border-primary/30"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-muted text-foreground text-xs font-bold tracking-wide mb-4 border border-border"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               Talent Network Marketplace
             </motion.span>
 
@@ -97,10 +100,13 @@ export default function MarketplaceHero() {
             <motion.div variants={itemVariants} className="flex items-center gap-3 mb-0">
               <div className="flex -space-x-2.5">
                 {[11, 32, 47].map((img, i) => (
-                  <img
+                  <Image
                     key={i}
                     src={`https://i.pravatar.cc/100?img=${img}`}
                     alt={`User ${i + 1}`}
+                    width={36}
+                    height={36}
+                    unoptimized
                     className="w-9 h-9 rounded-full border-2 border-background object-cover"
                   />
                 ))}
@@ -142,10 +148,13 @@ export default function MarketplaceHero() {
           >
             {/* Hero Image */}
             <div className="relative w-full aspect-[4/3] lg:aspect-[3/2] bg-muted overflow-hidden shadow-2xl shadow-primary/10 rounded-tr-[60px] rounded-bl-[60px] rounded-tl-2xl rounded-br-2xl">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2850&auto=format&fit=crop"
                 alt="Team collaboration at Think4Ever Marketplace"
-                className="w-full h-full object-cover"
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent mix-blend-multiply" />
             </div>
@@ -157,11 +166,11 @@ export default function MarketplaceHero() {
               transition={{ duration: 0.8, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="absolute -bottom-5 -left-4 sm:-left-6 lg:-left-8 bg-card border border-border shadow-2xl shadow-black/10 rounded-2xl p-4 sm:p-5 w-[240px] sm:w-[280px] z-20"
             >
-              <Quote className="w-5 h-5 text-primary/15 absolute top-4 right-4" />
+              <Quote className="w-5 h-5 text-foreground absolute top-4 right-4" />
 
               <div className="flex gap-0.5 mb-3">
                 {[1, 2, 3, 4, 5].map((s) => (
-                  <Star key={s} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                  <Star key={s} className="w-3.5 h-3.5 fill-amber-400 text-foreground" />
                 ))}
               </div>
 
@@ -171,9 +180,12 @@ export default function MarketplaceHero() {
               </p>
 
               <div className="flex items-center gap-2.5 pt-3 border-t border-border/40">
-                <img
+                <Image
                   src="https://i.pravatar.cc/100?img=5"
                   alt="Sarah Jenkins"
+                  width={32}
+                  height={32}
+                  unoptimized
                   className="w-8 h-8 rounded-full border-2 border-border object-cover"
                 />
                 <div>

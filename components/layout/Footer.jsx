@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="md:col-span-4 lg:col-span-5 flex flex-col items-start gap-5">
-            <Link href={localizeHref("/")} className="mb-1">
+            <Link href={localizeHref("/")} className="mb-1" aria-label="Think4Ever Home">
               <Image
                 src="/images/think4ever-logo.png"
                 alt="Think4Ever"
@@ -45,7 +45,8 @@ export default function Footer() {
                 href="https://www.youtube.com/@Think4EverInc"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-muted border border-border flex items-center justify-center text-foreground/70 dark:text-foreground/80 hover:text-primary hover:bg-primary/10 hover:border-primary transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-muted border border-border flex items-center justify-center text-foreground/70 dark:text-foreground/80 hover:text-foreground hover:bg-muted hover:border-primary transition-all duration-300"
+                aria-label="Visit our YouTube channel"
               >
                 <FaYoutube className="w-5 h-5" />
               </a>
@@ -53,7 +54,8 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/think4ever-global-inc/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-muted border border-border flex items-center justify-center text-foreground/70 dark:text-foreground/80 hover:text-primary hover:bg-primary/10 hover:border-primary transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-muted border border-border flex items-center justify-center text-foreground/70 dark:text-foreground/80 hover:text-foreground hover:bg-muted hover:border-primary transition-all duration-300"
+                aria-label="Visit our LinkedIn page"
               >
                 <FaLinkedinIn className="w-5 h-5" />
               </a>
@@ -174,7 +176,7 @@ export default function Footer() {
           </p>
           {/* Gradient badge */}
           <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-muted border border-border">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+            <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-semibold text-foreground/70 dark:text-foreground/80">
               Think4Ever Global Inc.
             </span>

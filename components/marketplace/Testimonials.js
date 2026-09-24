@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Star, Quote } from 'lucide-react';
 import MarketplaceSectionHeader from '@/components/marketplace/ui/MarketplaceSectionHeader';
 import SectionCard from '@/components/layout/SectionCard';
@@ -114,7 +115,7 @@ export default function MarketplaceTestimonials() {
                 className="group relative flex flex-col justify-between h-full p-6 lg:p-8 rounded-2xl bg-background border border-border/60 shadow-sm hover:shadow-md transition-all duration-300"
               >
                 {/* Decorative Quote Icon */}
-                <Quote className="absolute top-6 right-6 w-8 h-8 text-primary/10 rotate-180 transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
+                <Quote className="absolute top-6 right-6 w-8 h-8 text-foreground rotate-180 transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
 
                 <div className="relative z-10">
                   {/* Rating */}
@@ -122,7 +123,7 @@ export default function MarketplaceTestimonials() {
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star
                         key={i}
-                        className="w-4 h-4 fill-amber-400 text-amber-400"
+                        className="w-4 h-4 fill-amber-400 text-foreground"
                       />
                     ))}
                   </div>
@@ -135,9 +136,12 @@ export default function MarketplaceTestimonials() {
 
                 {/* Author Info */}
                 <div className="flex items-center gap-3 mt-auto pt-5 border-t border-border/50">
-                  <img
+                  <Image
                     src={testimonial.avatar}
                     alt={testimonial.name}
+                    width={40}
+                    height={40}
+                    unoptimized
                     className="w-10 h-10 rounded-full object-cover"
                   />
                   <div>

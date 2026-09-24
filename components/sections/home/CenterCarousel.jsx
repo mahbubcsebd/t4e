@@ -46,7 +46,7 @@ export default function CenterCarousel({ items }) {
     <div className="relative z-10 flex flex-col items-center text-center w-full h-full justify-between">
       {/* Static Top Elements */}
       <div className="flex flex-col items-center w-full">
-        <span className="inline-block px-3 py-1 bg-card text-primary border border-primary/30 rounded-md text-[10px] font-extrabold uppercase tracking-widest mb-6 shrink-0">
+        <span className="inline-block px-3 py-1 bg-card text-foreground border border-primary/30 rounded-md text-[10px] font-extrabold uppercase tracking-widest mb-6 shrink-0">
           {t("productModel.centerTag") || "UNIVERSAL META-MODEL"}
         </span>
 

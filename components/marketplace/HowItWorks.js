@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import SectionCard from '@/components/layout/SectionCard';
 import MarketplaceSection from '@/components/marketplace/ui/MarketplaceSection';
+import Eyebrow from "@/components/ui/Eyebrow";
 
 const tabData = {
   hiring: [
@@ -72,9 +73,9 @@ export default function MarketplaceHowItWorks() {
         {/* Header and Tabs */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-8 md:mb-14 gap-8">
           <div>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-primary/20">
-              Platform Guide
-            </span>
+            <Eyebrow className="mb-4">
+        Platform Guide
+      </Eyebrow>
             <h2 className="text-2xl sm:text-3xl md:text-[42px] font-extrabold tracking-tight text-foreground mb-4">
               How it <span className="text-primary">works</span>
             </h2>
@@ -93,6 +94,7 @@ export default function MarketplaceHowItWorks() {
                   ? 'bg-background shadow-sm text-foreground'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
+              aria-label="View Hiring guide"
             >
               For hiring
             </button>
@@ -103,6 +105,7 @@ export default function MarketplaceHowItWorks() {
                   ? 'bg-background shadow-sm text-foreground'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
+              aria-label="View Finding Work guide"
             >
               For finding work
             </button>
@@ -132,7 +135,7 @@ export default function MarketplaceHowItWorks() {
                       {index + 1}
                     </div>
 
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                    <div className="w-14 h-14 rounded-xl bg-muted flex items-center justify-center mb-6 text-foreground group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-500">
                       <Icon className="w-7 h-7" strokeWidth={1.5} />
                     </div>
 

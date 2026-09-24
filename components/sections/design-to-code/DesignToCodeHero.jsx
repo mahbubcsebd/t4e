@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
 import VideoModal from "@/components/ui/VideoModal";
+import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function DesignToCodeHero() {
   const { t } = useLanguage();
@@ -13,9 +14,9 @@ export default function DesignToCodeHero() {
   return (
     <section className="pt-8 lg:pt-12 pb-4 lg:pb-8 bg-gradient-to-b bg-background border-b border-border text-center">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <span className="inline-block px-3 py-1 rounded-full bg-[#eaf0fb] text-[#093cad] text-xs font-bold uppercase tracking-wider mb-4 border border-[#093cad]/20">
-          {t("designToCodePage.heroEyebrow")}
-        </span>
+        <Eyebrow className="mb-4">
+        {t("designToCodePage.heroEyebrow")}
+      </Eyebrow>
 
         <h1 className="max-w-[700px] mx-auto text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-6">
           {t("designToCodePage.heroTitlePrefix")}

@@ -2,12 +2,14 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2, Users, Star, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SectionCard from '@/components/layout/SectionCard';
 import MarketplaceSection from '@/components/marketplace/ui/MarketplaceSection';
 import MarketplaceContainer from '@/components/marketplace/ui/MarketplaceContainer';
+import Eyebrow from "@/components/ui/Eyebrow";
 
 const stats = [
   { value: '10K+', label: 'Companies hiring', icon: Users },
@@ -45,10 +47,9 @@ export default function MarketplaceCta() {
 
               <div className="relative z-10 max-w-md">
                 {/* Eyebrow */}
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-primary/20">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                  Get started today
-                </span>
+                <Eyebrow className="mb-4">
+        Get started today
+      </Eyebrow>
 
                 {/* Heading */}
                 <h2 className="text-2xl sm:text-3xl md:text-[42px] font-extrabold tracking-tight text-foreground leading-[1.1] mb-4">
@@ -66,7 +67,7 @@ export default function MarketplaceCta() {
                 <ul className="space-y-2 mb-7">
                   {guarantees.map((item) => (
                     <li key={item} className="flex items-center gap-2.5 text-sm text-foreground/80">
-                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-foreground shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -105,8 +106,8 @@ export default function MarketplaceCta() {
                       transition={{ duration: 0.5, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                       className="flex flex-col items-center text-center p-3 sm:p-4 rounded-xl bg-card border border-border/60 shadow-sm"
                     >
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center mb-2.5">
-                        <Icon className="w-4 h-4 text-primary" />
+                      <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center mb-2.5">
+                        <Icon className="w-4 h-4 text-foreground" />
                       </div>
                       <span className="text-xl sm:text-2xl font-extrabold text-foreground tracking-tight">{value}</span>
                       <span className="text-[11px] text-muted-foreground mt-1 leading-tight text-center">{label}</span>
@@ -121,10 +122,13 @@ export default function MarketplaceCta() {
                 <div className="flex items-start gap-3">
                   <div className="flex -space-x-2.5 shrink-0 mt-0.5">
                     {[11, 32, 47, 68].map((img, i) => (
-                      <img
+                      <Image
                         key={i}
                         src={`https://i.pravatar.cc/100?img=${img}`}
                         alt={`Customer ${i + 1}`}
+                        width={32}
+                        height={32}
+                        unoptimized
                         className="w-8 h-8 rounded-full border-2 border-card object-cover"
                       />
                     ))}
@@ -132,7 +136,7 @@ export default function MarketplaceCta() {
                   <div>
                     <div className="flex gap-0.5 mb-1.5">
                       {[1, 2, 3, 4, 5].map((s) => (
-                        <Star key={s} className="w-3 h-3 fill-amber-400 text-amber-400" />
+                        <Star key={s} className="w-3 h-3 fill-amber-400 text-foreground" />
                       ))}
                     </div>
                     <p className="text-sm text-foreground/80 leading-snug font-medium">

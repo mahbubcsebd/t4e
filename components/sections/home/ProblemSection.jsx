@@ -26,6 +26,7 @@ export default function ProblemSection() {
           <SectionHeading
             eyebrow={t("problem.eyebrow")}
             title={t("problem.title")}
+            highlightText={t("problem.titleHighlight")}
             className="max-w-[700px] mx-auto mb-10 md:mb-14"
             eyebrowClassName="mb-3"
           />
@@ -42,25 +43,25 @@ export default function ProblemSection() {
                   
                   {/* Center Bot */}
                   <div className="w-16 h-16 bg-card rounded-full border border-primary/30 shadow-lg shadow-primary/10 flex items-center justify-center relative z-20 group-hover:scale-110 transition-transform duration-500">
-                    <div className="absolute inset-0 rounded-full bg-primary/10 animate-ping" style={{ animationDuration: "3s" }}></div>
-                    <Bot className="w-7 h-7 text-primary relative z-10" />
+                    <div className="absolute inset-0 rounded-full bg-muted animate-ping" style={{ animationDuration: "3s" }}></div>
+                    <Bot className="w-7 h-7 text-foreground relative z-10" />
                   </div>
                   
                   {/* Floating elements */}
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card p-2.5 rounded-lg border border-border shadow-sm z-10 group-hover:-translate-y-2 transition-transform duration-500">
-                    <FileCode className="w-5 h-5 text-slate-400" />
+                    <FileCode className="w-5 h-5 text-foreground" />
                   </div>
                   
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-card p-2.5 rounded-lg border border-border shadow-sm z-10 group-hover:translate-y-2 transition-transform duration-500">
-                    <LayoutTemplate className="w-5 h-5 text-slate-400" />
+                    <LayoutTemplate className="w-5 h-5 text-foreground" />
                   </div>
                   
                   <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-card p-2.5 rounded-lg border border-border shadow-sm z-10 group-hover:-translate-x-2 transition-transform duration-500">
-                    <Database className="w-5 h-5 text-slate-400" />
+                    <Database className="w-5 h-5 text-foreground" />
                   </div>
                   
                   <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 bg-card p-2.5 rounded-lg border border-border shadow-sm z-10 group-hover:translate-x-2 transition-transform duration-500">
-                    <Workflow className="w-5 h-5 text-slate-400" />
+                    <Workflow className="w-5 h-5 text-foreground" />
                   </div>
                 </div>
               </div>
@@ -68,7 +69,7 @@ export default function ProblemSection() {
               {/* Content */}
               <div className="p-8 sm:p-10 flex-1 flex flex-col items-center text-center md:items-start md:text-left">
                 <div className="flex items-center justify-center md:justify-start gap-3 mb-5">
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
+                  <span className="text-[10px] font-bold text-foreground uppercase tracking-widest bg-muted px-3 py-1 rounded-full border border-border">
                     {t("problem.card1Tag")}
                   </span>
                 </div>
@@ -91,7 +92,7 @@ export default function ProblemSection() {
                   
                   {/* Layer 1: Code */}
                   <div className="bg-card border border-border rounded-xl p-3 flex items-center gap-3 relative z-10 shadow-sm group-hover:translate-x-2 transition-transform duration-500">
-                    <div className="p-2 bg-blue-50 text-primary rounded-lg border border-primary/20 shrink-0">
+                    <div className="p-2 bg-muted text-foreground rounded-lg border border-border shrink-0">
                       <FileCode className="w-4 h-4" />
                     </div>
                     <span className="text-xs font-bold text-foreground">Code</span>
@@ -118,7 +119,7 @@ export default function ProblemSection() {
               {/* Content */}
               <div className="p-8 sm:p-10 flex-1 flex flex-col items-center text-center md:items-start md:text-left">
                 <div className="flex items-center justify-center md:justify-start gap-3 mb-5">
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
+                  <span className="text-[10px] font-bold text-foreground uppercase tracking-widest bg-muted px-3 py-1 rounded-full border border-border">
                     {t("problem.card2Tag")}
                   </span>
                 </div>
@@ -157,15 +158,15 @@ export default function ProblemSection() {
                   {/* Cascading Impact Nodes */}
                   <div className="relative z-10 flex flex-row justify-between items-center w-full max-w-[210px] shrink-0">
                     <div className="bg-card border border-border rounded-xl p-3 flex items-center justify-center relative group-hover:translate-y-2 transition-transform duration-500 shadow-sm">
-                      <Network className="w-5 h-5 text-primary" />
+                      <Network className="w-5 h-5 text-foreground" />
                     </div>
 
                     <div className="bg-card border border-border rounded-xl p-3 flex items-center justify-center relative group-hover:translate-y-2 transition-transform duration-500 delay-75 shadow-sm">
-                      <Database className="w-5 h-5 text-indigo-500" />
+                      <Database className="w-5 h-5 text-foreground" />
                     </div>
 
                     <div className="bg-card border border-border rounded-xl p-3 flex items-center justify-center relative group-hover:translate-y-2 transition-transform duration-500 delay-150 shadow-sm">
-                      <LayoutTemplate className="w-5 h-5 text-slate-500" />
+                      <LayoutTemplate className="w-5 h-5 text-foreground" />
                     </div>
                   </div>
                 </div>
@@ -174,7 +175,7 @@ export default function ProblemSection() {
               {/* Content */}
               <div className="p-8 sm:p-10 flex-1 flex flex-col items-center text-center md:items-start md:text-left">
                 <div className="flex items-center justify-center md:justify-start gap-3 mb-5">
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
+                  <span className="text-[10px] font-bold text-foreground uppercase tracking-widest bg-muted px-3 py-1 rounded-full border border-border">
                     {t("problem.card3Tag")}
                   </span>
                 </div>

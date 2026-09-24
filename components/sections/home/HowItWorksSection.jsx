@@ -24,6 +24,7 @@ export default function HowItWorksSection() {
           <SectionHeading
             eyebrow={t("howItWorks.eyebrow")}
             title={t("howItWorks.title")}
+            highlightText={t("howItWorks.titleHighlight")}
           />
 
           {/* Workflow Pipeline */}
@@ -51,7 +52,7 @@ export default function HowItWorksSection() {
                       </div>
                       <div className="p-4 space-y-4">
                         <div className="flex items-center gap-3">
-                          <div className="p-2.5 bg-primary/10 rounded-lg text-primary">
+                          <div className="p-2.5 bg-muted rounded-lg text-foreground">
                             <GitBranch className="w-5 h-5" />
                           </div>
                           <div className="flex-1">
@@ -65,7 +66,7 @@ export default function HowItWorksSection() {
                             github.com/org/repo
                           </span>
                         </div>
-                        <div className="w-full h-9 bg-primary rounded-lg flex items-center justify-center text-[11px] font-bold text-primary-foreground tracking-wide shadow-primary/20">
+                        <div className="w-full h-9 bg-primary rounded-lg flex items-center justify-center text-[11px] font-bold text-foreground-foreground tracking-wide shadow-primary/20">
                           CONNECT
                         </div>
                       </div>
@@ -73,7 +74,7 @@ export default function HowItWorksSection() {
                   </div>
                   {/* Content */}
                   <div className="p-5 md:p-6 flex flex-col flex-1">
-                    <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest mb-2">
+                    <span className="text-[10px] font-extrabold text-foreground uppercase tracking-widest mb-2">
                       {t("howItWorks.step1Num")}
                     </span>
                     <h3 className="text-xl font-bold text-foreground mb-3">
@@ -119,11 +120,11 @@ export default function HowItWorksSection() {
 
                       {/* Top Node */}
                       <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card border border-primary rounded-xl p-3 z-10 flex items-center justify-center">
-                        <Network className="w-6 h-6 text-primary" />
+                        <Network className="w-6 h-6 text-foreground" />
                         {/* Checkmark Badge */}
                         <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-primary rounded-full border-2 border-card flex items-center justify-center">
                           <Check
-                            className="w-3 h-3 text-primary-foreground"
+                            className="w-3 h-3 text-foreground"
                             strokeWidth={3}
                           />
                         </div>
@@ -140,8 +141,8 @@ export default function HowItWorksSection() {
                       </div>
 
                       {/* Validation Alert */}
-                      <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-max bg-primary/10 border border-primary/30 rounded-full py-1.5 px-4 flex items-center justify-center gap-1.5">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
+                      <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-max bg-muted border border-border rounded-full py-1.5 px-4 flex items-center justify-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-foreground" />
                         <span className="text-[10px] font-bold text-blue-700 tracking-wider">
                           MAP VALIDATED
                         </span>
@@ -150,7 +151,7 @@ export default function HowItWorksSection() {
                   </div>
                   {/* Content */}
                   <div className="p-5 md:p-6 flex flex-col flex-1">
-                    <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest mb-2">
+                    <span className="text-[10px] font-extrabold text-foreground uppercase tracking-widest mb-2">
                       {t("howItWorks.step2Num")}
                     </span>
                     <h3 className="text-xl font-bold text-foreground mb-3">
@@ -179,14 +180,14 @@ export default function HowItWorksSection() {
                           <div className="w-2 h-2 rounded-full bg-muted-foreground/30"></div>
                         </div>
                         <div className="flex items-center gap-1.5">
-                          <Sparkles className="w-3.5 h-3.5 text-primary" />
+                          <Sparkles className="w-3.5 h-3.5 text-foreground" />
                           <span className="text-[9px] text-muted-foreground font-bold tracking-wider">
                             Think4Ever
                           </span>
                         </div>
                       </div>
                       <div className="p-4">
-                        <div className="bg-primary/10 border border-primary/30 rounded-lg p-2.5 mb-3 relative">
+                        <div className="bg-muted border border-border rounded-lg p-2.5 mb-3 relative">
                           <span className="text-[11px] text-primary font-medium leading-relaxed block">
                             "Implement checkout based on the validated map."
                           </span>
@@ -194,7 +195,7 @@ export default function HowItWorksSection() {
                         <div className="flex items-center gap-2.5 mt-3">
                           <div className="w-4 h-4 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
                             <Check
-                              className="w-2.5 h-2.5 text-primary"
+                              className="w-2.5 h-2.5 text-foreground"
                               strokeWidth={3}
                             />
                           </div>
@@ -210,7 +211,7 @@ export default function HowItWorksSection() {
                   </div>
                   {/* Content */}
                   <div className="p-5 md:p-6 flex flex-col flex-1">
-                    <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest mb-2">
+                    <span className="text-[10px] font-extrabold text-foreground uppercase tracking-widest mb-2">
                       {t("howItWorks.step3Num")}
                     </span>
                     <h3 className="text-xl font-bold text-foreground mb-3">

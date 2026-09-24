@@ -48,8 +48,8 @@ export default function CostControl() {
                   className="relative shadow-sm bg-card/80 backdrop-blur-xl border border-border/60 rounded-xl p-8 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 flex flex-col group overflow-hidden translate-y-0 hover:-translate-y-2"
                 >
                   <div className="relative z-10 flex flex-col items-start">
-                    <div className="mb-6 p-4 rounded-2xl bg-blue-50 border border-primary/20 transition-all duration-500 group-hover:scale-110 shadow-sm group-hover:shadow-primary/10">
-                      <Icon className="w-7 h-7 text-primary transition-colors duration-300" />
+                    <div className="mb-6 p-4 rounded-2xl bg-muted border border-border transition-all duration-500 group-hover:scale-110 shadow-sm group-hover:shadow-primary/10">
+                      <Icon className="w-7 h-7 text-foreground transition-colors duration-300" />
                     </div>
 
                     <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">

@@ -16,7 +16,7 @@ export default function ContactSection() {
       <SectionCard>
         <Container className="w-full relative z-10 border border-border/50">
           <div className="text-center">
-            <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
+            <span className="inline-block text-xs font-bold text-foreground bg-muted px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
               {t("contact.eyebrow")}
             </span>
 

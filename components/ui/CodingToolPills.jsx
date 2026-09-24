@@ -67,7 +67,7 @@ export default function CodingToolPills({ variant = "light", className = "", all
             key={i}
             className="group relative z-0 hover:z-10 transition-all duration-300 hover:scale-110"
           >
-            <div className="flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-card border border-border shadow-md text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:shadow-primary/25 group-hover:border-primary">
+            <div className="flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-card border border-border shadow-md text-foreground transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:shadow-primary/25 group-hover:border-primary">
               <tool.icon className="w-5 h-5 sm:w-7 sm:h-7 drop-shadow-sm" />
             </div>
             {/* Premium Tooltip */}
@@ -92,7 +92,7 @@ export default function CodingToolPills({ variant = "light", className = "", all
           className="group flex items-center gap-2.5 bg-card border border-border hover:border-primary/50 text-foreground text-[13px] font-semibold pr-4 pl-1.5 py-1.5 rounded-full transition-all duration-300 cursor-default shadow-sm"
         >
           <div className="flex items-center justify-center w-7 h-7 rounded-full bg-muted border border-border group-hover:scale-110 transition-transform duration-300">
-            <tool.icon className="w-[15px] h-[15px] text-primary" />
+            <tool.icon className="w-[15px] h-[15px] text-foreground" />
           </div>
           <span className="tracking-wide">{tool.name}</span>
         </div>

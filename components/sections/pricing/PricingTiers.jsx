@@ -106,7 +106,7 @@ export default function PricingTiers() {
                     {plan.list.map((item, i) => (
                       <li key={i} className="flex items-start gap-3 group/item">
                         <div
-                          className={`mt-0.5 flex items-center justify-center w-4 h-4 rounded-full shrink-0 transition-colors ${plan.featured ? "bg-primary/20 text-primary" : "bg-muted border border-border group-hover/item:bg-primary/10 group-hover/item:border-primary/30 text-primary/70 group-hover/item:text-primary"}`}
+                          className={`mt-0.5 flex items-center justify-center w-4 h-4 rounded-full shrink-0 transition-colors ${plan.featured ? "bg-primary/20 text-foreground" : "bg-muted border border-border group-hover/item:bg-muted group-hover/item:border-border text-foreground/70 group-hover/item:text-foreground"}`}
                         >
                           <Check className="w-2.5 h-2.5" strokeWidth={3} />
                         </div>
@@ -126,7 +126,7 @@ export default function PricingTiers() {
                     className={`flex w-full items-center justify-center rounded-full text-sm font-bold py-3.5 transition-all duration-300 ${
                       plan.featured
                         ? "bg-primary text-white shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5"
-                        : "bg-muted text-foreground border border-border/50 hover:bg-primary/10 hover:border-primary/20 hover:text-primary"
+                        : "bg-muted text-foreground border border-border/50 hover:bg-muted hover:border-border hover:text-foreground"
                     }`}
                   >
                     <span>{plan.btnText}</span>

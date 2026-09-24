@@ -251,10 +251,10 @@ export default function MarketplaceExpertise() {
                 >
                   <div className="flex justify-between items-start">
                     <Icon
-                      className="w-6 h-6 text-[#0033a0] transition-transform duration-300 group-hover:scale-110"
+                      className="w-6 h-6 text-foreground transition-transform duration-300 group-hover:scale-110"
                       strokeWidth={1.5}
                     />
-                    <ArrowRight className="w-4 h-4 text-[#0033a0] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                    <ArrowRight className="w-4 h-4 text-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                   </div>
 
                   <h3 className="text-[15px] font-medium text-foreground transition-colors duration-300 pr-4 leading-tight">
@@ -267,7 +267,7 @@ export default function MarketplaceExpertise() {
             {/* Explore More Card */}
             <motion.div
               variants={cardVariants}
-              className="group relative p-6 h-[140px] rounded-xl bg-[#0033a0] text-white hover:bg-[#002780] transition-colors duration-300 cursor-pointer flex flex-col justify-between shadow-md"
+              className="group relative p-6 h-[140px] rounded-xl bg-brand-blue text-white hover:bg-brand-blue/90 transition-colors duration-300 cursor-pointer flex flex-col justify-between shadow-md"
             >
               <div className="flex justify-between items-start">
                 <Sparkles className="w-6 h-6 text-white/90" strokeWidth={1.5} />
@@ -300,7 +300,7 @@ export default function MarketplaceExpertise() {
             <>
               <DialogHeader className="p-0 text-left pr-6 md:pr-0">
                 <div className="flex items-start md:items-center gap-4 md:gap-5">
-                  <div className="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-xl bg-background border border-border/60 flex items-center justify-center text-[#0033a0] shadow-sm mt-1 md:mt-0">
+                  <div className="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-xl bg-background border border-border/60 flex items-center justify-center text-foreground shadow-sm mt-1 md:mt-0">
                     <selectedCategory.icon className="w-6 h-6 md:w-7 md:h-7" strokeWidth={1.5} />
                   </div>
                   <div>
@@ -319,9 +319,9 @@ export default function MarketplaceExpertise() {
                   {selectedCategory.subcategories.map((sub, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center px-4 py-3 md:px-5 md:py-4 rounded-lg border border-border/60 bg-background hover:border-[#0033a0]/40 hover:shadow-sm transition-all duration-300 cursor-pointer group"
+                      className="flex items-center px-4 py-3 md:px-5 md:py-4 rounded-lg border border-border/60 bg-background hover:border-primary/40 hover:shadow-sm transition-all duration-300 cursor-pointer group"
                     >
-                      <span className="text-[14px] md:text-[14.5px] font-normal text-foreground/80 group-hover:text-[#0033a0] transition-colors duration-200">
+                      <span className="text-[14px] md:text-[14.5px] font-normal text-foreground/80 group-hover:text-primary transition-colors duration-200">
                         {sub}
                       </span>
                     </div>

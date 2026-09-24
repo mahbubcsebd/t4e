@@ -68,20 +68,21 @@ function FaqItem({ item, openId, toggleFaq }) {
         onClick={() => toggleFaq(item.id)}
         className="w-full flex items-center justify-between py-5 md:py-6 text-left cursor-pointer group"
         aria-expanded={isOpen}
+        aria-label={isOpen ? "Collapse question: " + item.question : "Expand question: " + item.question}
       >
         <span
           className={`font-medium text-base md:text-lg pr-6 transition-colors duration-300 ${
             isOpen
               ? 'text-foreground'
-              : 'text-foreground/80 group-hover:text-foreground'
+              : 'text-foreground group-hover:text-primary'
           }`}
         >
           {item.question}
         </span>
         <div
           className={`flex items-center justify-center shrink-0 w-8 h-8 rounded-full bg-secondary/50 text-foreground transition-all duration-300 ${
-            isOpen 
-              ? 'bg-primary text-primary-foreground rotate-45' 
+            isOpen
+              ? 'bg-primary text-foreground rotate-45'
               : 'group-hover:bg-secondary'
           }`}
         >
@@ -97,7 +98,7 @@ function FaqItem({ item, openId, toggleFaq }) {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
           >
-            <div className="pb-6 text-[15px] md:text-base text-muted-foreground leading-relaxed md:pr-14">
+            <div className="pb-6 text-[15px] md:text-base text-foreground/80 leading-relaxed md:pr-14">
               {item.answer}
             </div>
           </motion.div>
