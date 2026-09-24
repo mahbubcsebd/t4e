@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Box, CheckCircle2, Code2, LayoutTemplate, Play } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function HeroSection() {
   const { t } = useLanguage();
@@ -32,9 +33,9 @@ export default function HeroSection() {
             {/* Left Column: Hero Text */}
             <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left w-full max-w-2xl mx-auto lg:max-w-none">
               {/* Eyebrow */}
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wide mb-4 border border-primary/30">
+              <Eyebrow className="mb-4" uppercase={false}>
                 {t("hero.eyebrow")}
-              </span>
+              </Eyebrow>
 
               {/* Main Headline */}
               <h1 className="text-[32px] leading-[1.1] md:text-[48px] lg:text-[52px] font-extrabold tracking-tight text-foreground mb-4">
@@ -47,7 +48,7 @@ export default function HeroSection() {
               </h1>
 
               {/* Subtitle */}
-              <p className="max-w-[600px] text-base sm:text-lg text-muted-foreground/90 font-normal leading-relaxed mb-6">
+              <p className="max-w-[600px] text-base sm:text-lg text-foreground/80 font-normal leading-relaxed mb-6">
                 {t("hero.subtitle")}
               </p>
 
@@ -73,9 +74,9 @@ export default function HeroSection() {
               {/* Integrations */}
               <div className="mt-8 flex flex-col items-center lg:items-start w-full">
                 <div className="w-full h-[1px] bg-border/50 mb-5"></div>
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-3">
-                  Integrations
-                </span>
+                <Eyebrow className="mb-4">
+        Integrations
+      </Eyebrow>
                 <CodingToolPills
                   variant="light"
                   className="justify-center lg:justify-start"
@@ -138,7 +139,7 @@ export default function HeroSection() {
                           transition={{ duration: 0.4 }}
                         >
                           <div className="text-center mb-4">
-                            <span className="inline-block text-[10px] sm:text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                            <span className="inline-block text-[10px] sm:text-[11px] font-medium text-foreground bg-muted px-2.5 py-1 rounded-full uppercase tracking-wider">
                               {t("hero.cardOneBadge")}
                             </span>
                             <h3 className="text-lg sm:text-xl font-bold text-foreground mt-2">
@@ -159,7 +160,7 @@ export default function HeroSection() {
                               className="bg-card p-4 sm:p-5 rounded-xl border border-border relative z-10 w-full h-full flex flex-col justify-center"
                             >
                               <div className="flex items-center gap-1 mb-2">
-                                <Code2 className="w-4 h-4 text-muted-foreground" />
+                                <Code2 className="w-4 h-4 text-foreground" />
                                 <small className="text-[9px] sm:text-[10px] font-bold text-muted-foreground block uppercase tracking-wider">
                                   {t("hero.cardOneRepoTag")}
                                 </small>
@@ -221,11 +222,11 @@ export default function HeroSection() {
                                   setVideoId("FY68DuwOf4Q");
                                   setIsVideoOpen(true);
                                 }}
-                                className="relative z-20 group flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-full shadow-lg border-4 border-background hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
+                                className="relative z-20 group flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-card rounded-full shadow-lg border-2 border-border hover:border-primary/50 hover:scale-105 transition-all duration-300 outline-none focus:outline-none shrink-0"
                                 aria-label={t("hero.watchDemo")}
                               >
                                 <Play
-                                  className="w-3 h-3 sm:w-4 sm:h-4 text-white ml-1"
+                                  className="w-3 h-3 sm:w-4 sm:h-4 text-foreground group-hover:text-primary transition-colors ml-1"
                                   fill="currentColor"
                                 />
                               </motion.button>
@@ -242,7 +243,7 @@ export default function HeroSection() {
                               className="bg-card p-4 sm:p-5 rounded-xl border border-border relative z-10 w-full h-full flex flex-col justify-center"
                             >
                               <div className="flex items-center gap-1 mb-2">
-                                <LayoutTemplate className="w-4 h-4 text-muted-foreground" />
+                                <LayoutTemplate className="w-4 h-4 text-foreground" />
                                 <small className="text-[9px] sm:text-[10px] font-bold text-muted-foreground block uppercase tracking-wider">
                                   {t("hero.cardOneBlueprintTag")}
                                 </small>
@@ -283,7 +284,7 @@ export default function HeroSection() {
                           transition={{ duration: 0.4 }}
                         >
                           <div className="text-center mb-4">
-                            <span className="inline-block text-[10px] sm:text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                            <span className="inline-block text-[10px] sm:text-[11px] font-medium text-foreground bg-muted px-2.5 py-1 rounded-full uppercase tracking-wider">
                               {t("hero.cardTwoBadge")}
                             </span>
                             <h3 className="text-lg sm:text-xl font-bold text-foreground mt-2">
@@ -304,7 +305,7 @@ export default function HeroSection() {
                               className="bg-card p-4 sm:p-5 rounded-xl border border-border relative z-10 h-full flex flex-col justify-center w-full"
                             >
                               <div className="flex items-center gap-1 mb-2">
-                                <Box className="w-4 h-4 text-muted-foreground" />
+                                <Box className="w-4 h-4 text-foreground" />
                                 <small className="text-[9px] sm:text-[10px] font-bold text-muted-foreground block uppercase tracking-wider">
                                   {t("hero.cardTwoIntentTag")}
                                 </small>
@@ -361,11 +362,11 @@ export default function HeroSection() {
                                   setVideoId("Lq-vza9_CzI");
                                   setIsVideoOpen(true);
                                 }}
-                                className="relative z-20 group flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-full shadow-lg border-4 border-background hover:scale-105 transition-transform duration-300 outline-none focus:outline-none shrink-0"
+                                className="relative z-20 group flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-card rounded-full shadow-lg border-2 border-border hover:border-primary/50 hover:scale-105 transition-all duration-300 outline-none focus:outline-none shrink-0"
                                 aria-label={t("hero.watchDemo")}
                               >
                                 <Play
-                                  className="w-3 h-3 sm:w-4 sm:h-4 text-white ml-1"
+                                  className="w-3 h-3 sm:w-4 sm:h-4 text-foreground group-hover:text-primary transition-colors ml-1"
                                   fill="currentColor"
                                 />
                               </motion.button>
@@ -382,7 +383,7 @@ export default function HeroSection() {
                               className="bg-card p-4 sm:p-5 rounded-xl border border-border relative z-10 h-full flex flex-col justify-center w-full"
                             >
                               <div className="flex items-center gap-1 mb-2">
-                                <Code2 className="w-4 h-4 text-muted-foreground" />
+                                <Code2 className="w-4 h-4 text-foreground" />
                                 <small className="text-[9px] sm:text-[10px] font-bold text-muted-foreground block uppercase tracking-wider">
                                   {t("hero.cardTwoImplTag")}
                                 </small>
@@ -391,7 +392,7 @@ export default function HeroSection() {
                                 {t("hero.cardTwoImplName")}
                               </b>
                               <span className="mt-4 inline-flex items-center gap-2 bg-muted text-muted-foreground text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-md w-fit border border-border whitespace-nowrap">
-                                <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600" />{" "}
+                                <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-foreground" />{" "}
                                 {t("hero.cardTwoStatus")}
                               </span>
                             </motion.div>

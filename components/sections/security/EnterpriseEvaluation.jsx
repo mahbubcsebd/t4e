@@ -39,7 +39,7 @@ export default function EnterpriseEvaluation() {
                     key={idx}
                     className="flex items-start gap-3 text-sm sm:text-base font-semibold text-foreground"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-foreground shrink-0 mt-0.5" />
                     <span className="leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -51,7 +51,7 @@ export default function EnterpriseEvaluation() {
               <div className="absolute inset-0 bg-gradient-to-bl from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="relative z-10 flex flex-col items-start">
-                <span className="text-[10px] font-extrabold text-primary bg-primary/10 px-3 py-1 rounded-full uppercase tracking-wider block mb-4 border border-primary/20">
+                <span className="text-[10px] font-extrabold text-foreground bg-muted px-3 py-1 rounded-full uppercase tracking-wider block mb-4 border border-border">
                   Security Review
                 </span>
 

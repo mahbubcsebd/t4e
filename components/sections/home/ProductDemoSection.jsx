@@ -7,6 +7,8 @@ import { useLanguage } from "@/context/LanguageContext";
 import { Play } from "lucide-react";
 import { useState } from "react";
 
+import Eyebrow from "@/components/ui/Eyebrow";
+
 export default function ProductDemoSection() {
   const { t } = useLanguage();
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -24,11 +26,13 @@ export default function ProductDemoSection() {
             </div>
 
             <div className="relative z-10 flex flex-col items-center max-w-2xl">
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wide mb-6 border border-primary/20">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-muted text-foreground text-xs font-bold tracking-wide mb-6 border border-border">
+                <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                 {t("demo.eyebrow")}
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-[42px] md:text-muted-foregroundxl font-extrabold text-foreground mb-4 tracking-tight">
-                {t("demo.title")}
+                {t("demo.title")}{" "}
+                <span className="text-primary">{t("demo.titleHighlight")}</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
                 {t("demo.subtitle")}

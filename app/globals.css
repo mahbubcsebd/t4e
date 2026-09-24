@@ -2,17 +2,17 @@
 
 :root {
   --background: #fafafa;
-  --foreground: #09090d;
+  --foreground: #0B1B3A; /* Ink */
   --card: #ffffff;
-  --card-foreground: #09090d;
+  --card-foreground: #0B1B3A;
   --border: #e5e7eb;
-  --muted: #f3f4f6;
-  --muted-foreground: #6b7280;
-  --brand-blue: #093cad;
-  --primary: #093cad;
-  --primary-foreground: #ffffff;
+  --muted: #F4F6FA; /* Fog */
+  --muted-foreground: #3A5690; /* Deep blue */
+  --brand-blue: #1D63E0;
+  --primary: #FF7A1A;
+  --primary-foreground: #0B1B3A; /* Ink */
   --popover: #ffffff;
-  --popover-foreground: #09090d;
+  --popover-foreground: #0B1B3A;
 }
 
 .dark {
@@ -23,15 +23,15 @@
   --border: rgba(255, 255, 255, 0.04);
   --muted: #1c2028;
   --muted-foreground: #94a3b8;
-  --brand-blue: #093cad;
-  --primary: #093cad;
-  --primary-foreground: #ffffff;
+  --brand-blue: #1D63E0;
+  --primary: #FF7A1A;
+  --primary-foreground: #0B1B3A;
   --popover: #13161b;
   --popover-foreground: #ffffff;
 }
 
 @theme {
-  --font-sans: var(--font-poppins), sans-serif;
+  --font-sans: var(--font-dm-sans), sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -59,12 +59,12 @@ body {
 
 /* Few global improvements (Might need to delete later) */
 
-h1 {
-  font-weight: 600;
+h1, h2 {
+  font-weight: 700; /* Bold (Headline) */
 }
 
-h2, h3, h4, h5, h6 {
-  font-weight: 500;
+h3, h4, h5, h6 {
+  font-weight: 500; /* Medium (Subhead) */
 }
 
 .header-nav a,
@@ -72,15 +72,15 @@ h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-/* Accent blue text */
+/* Accent brand text */
 .text-gradient {
-  color: #2563eb;
+  color: #FF7A1A;
 }
 
 .btn-primary {
-  background: #2563eb;
-  color: #ffffff;
-  font-weight: 600;
+  background: #FF7A1A;
+  color: #0B1B3A; /* Ink */
+  font-weight: 700;
   border-radius: 9999px;
   padding: 10px 24px;
   display: inline-flex;
@@ -90,14 +90,14 @@ h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
-  background: #1d4ed8;
+  background: #e66a15;
 }
 
 .btn-alt {
   background: #ffffff;
-  color: #09090d;
+  color: #0B1B3A;
   border: 1.5px solid #e5e7eb;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 9999px;
   padding: 10px 24px;
   display: inline-flex;
@@ -109,6 +109,12 @@ h2, h3, h4, h5, h6 {
 .btn-alt:hover {
   border-color: #9ca3af;
   background: #f9fafb;
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #FF7A1A 0%, #ff5a00 100%);
+  color: #0B1B3A; /* Ink */
+  font-weight: 700;
 }
 
 button {
@@ -127,7 +133,7 @@ button {
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+  background: #FF7A1A;
 }
 
 /* Solid soft color card matching Cursor */
@@ -142,4 +148,9 @@ button:focus-visible,
 [tabindex="0"]:focus-visible {
   outline: 2px solid var(--primary) !important;
   outline-offset: 2px !important;
+}
+
+/* Iconography Guidelines */
+svg.lucide {
+  stroke-width: 1.8px !important;
 }

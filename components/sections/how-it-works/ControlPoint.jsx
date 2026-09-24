@@ -42,7 +42,7 @@ export default function ControlPoint() {
                     key={idx}
                     className="flex items-start gap-3 text-sm sm:text-base font-semibold text-foreground"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-foreground shrink-0 mt-0.5" />
                     <span className="leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -56,7 +56,7 @@ export default function ControlPoint() {
               <div className="relative z-10">
                 {/* Approved Rule */}
                 <div className="bg-white border border-primary/20 rounded-xl p-5 mb-4 shadow-sm group-hover:border-primary/40 transition-colors duration-300">
-                  <span className="text-[10px] font-extrabold text-primary bg-primary/10 px-3 py-1 rounded-full uppercase tracking-wider block mb-3 w-max">
+                  <span className="text-[10px] font-extrabold text-foreground bg-muted px-3 py-1 rounded-full uppercase tracking-wider block mb-3 w-max">
                     {t('howItWorksPage.approvedTag')}
                   </span>
                   <h4 className="text-sm font-bold text-foreground">
@@ -67,7 +67,7 @@ export default function ControlPoint() {
                 {/* Divergence Alert */}
                 <div className="bg-slate-50 border border-border/80 rounded-xl p-4 mb-6 flex items-start gap-3 shadow-sm group-hover:border-primary/30 transition-colors duration-300">
                   <div className="p-1.5 bg-white border border-border/80 rounded-full shrink-0 shadow-sm">
-                    <AlertTriangle className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+                    <AlertTriangle className="w-4 h-4 text-foreground group-hover:text-foreground transition-colors duration-300" />
                   </div>
                   <span className="text-foreground text-xs font-semibold leading-relaxed mt-0.5">
                     {t('howItWorksPage.divergence')}
@@ -81,7 +81,7 @@ export default function ControlPoint() {
                       key={i}
                       className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider bg-white border border-border/80 text-muted-foreground px-3 py-1.5 rounded-md shadow-sm"
                     >
-                      <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-foreground" />
                       {pill}
                     </span>
                   ))}

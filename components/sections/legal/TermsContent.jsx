@@ -4,6 +4,7 @@ import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
+import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function TermsContent() {
   const { t } = useLanguage();
@@ -13,9 +14,9 @@ export default function TermsContent() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 md:mb-14">
         {/* Header */}
         <div className="text-center mb-8">
-          <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
-            {t("termsPage.heroEyebrow")}
-          </span>
+          <Eyebrow className="mb-4">
+        {t("termsPage.heroEyebrow")}
+      </Eyebrow>
           <h1 className="max-w-[750px] mx-auto text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-6">
             {t("termsPage.heroTitlePrefix")}
             <span className="text-primary decoration-[#07A7E1]/30">

@@ -75,7 +75,7 @@ export default function CoherenceSection() {
                     <div className="p-2 bg-primary/20 text-primary rounded-lg shrink-0">
                       <FileText className="w-4 h-4" />
                     </div>
-                    <span className="text-[10px] font-semibold text-primary uppercase tracking-widest leading-tight">
+                    <span className="text-[10px] font-semibold text-foreground uppercase tracking-widest leading-tight">
                       {t("coherence.approvedTag")}
                     </span>
                   </div>
@@ -152,7 +152,7 @@ export default function CoherenceSection() {
               {/* Impact Graph Footer (Redesigned) */}
               <div className="bg-muted/20 border-t border-border p-5 sm:p-8 lg:p-12 relative overflow-hidden">
                 {/* Soft background glow */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
+                <div className="absolute top-0 right-0 w-64 h-64 bg-muted rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
 
                 <div className="flex flex-col gap-4 sm:gap-6 relative z-10">
                   <div className="flex items-center gap-3">

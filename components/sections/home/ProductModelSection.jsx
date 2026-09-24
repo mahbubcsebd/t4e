@@ -29,129 +29,129 @@ const carouselItems = [
     description:
       "Every screen of your application on one visual map, with the navigation paths between them. Click any screen later to refine it or design its UI.",
     image: "/images/carousel/screens-navigation.png",
-    icon: <Monitor className="w-5 h-5 text-primary" />,
+    icon: <Monitor className="w-5 h-5 text-foreground" />,
   },
   {
     title: "Business Flows",
     description:
       "Step-by-step flows showing how work moves through your app — bookings, approvals, escalations — so everyone agrees on the process before it is built.",
     image: "/images/carousel/business-flows.png",
-    icon: <Route className="w-5 h-5 text-primary" />,
+    icon: <Route className="w-5 h-5 text-foreground" />,
   },
   {
     title: "Data Objects",
     description:
       "Your complete data model: every entity with its fields and the relationships between objects. This later becomes the real database.",
     image: "/images/carousel/data-objects.png",
-    icon: <Database className="w-5 h-5 text-primary" />,
+    icon: <Database className="w-5 h-5 text-foreground" />,
   },
   {
     title: "Roles & Permissions",
     description:
       "Who can see and do what — every user role with its access rights, mapped to screens and actions.",
     image: "/images/carousel/roles-permission.png",
-    icon: <Shield className="w-5 h-5 text-primary" />,
+    icon: <Shield className="w-5 h-5 text-foreground" />,
   },
   {
     title: "Business Rules",
     description:
       "The policies and constraints your application enforces automatically — validations, limits, calculations and conditions.",
     image: "/images/carousel/business-rules.png",
-    icon: <ClipboardCheck className="w-5 h-5 text-primary" />,
+    icon: <ClipboardCheck className="w-5 h-5 text-foreground" />,
   },
   {
     title: "Integrations",
     description:
       "The external systems your app talks to — payments, email, messaging, third-party APIs — and where each one connects.",
     image: "/images/carousel/integrations.png",
-    icon: <Plug className="w-5 h-5 text-primary" />,
+    icon: <Plug className="w-5 h-5 text-foreground" />,
   },
   {
     title: "Functional Architecture",
     description:
       "A one-poster overview document of the whole solution, built automatically right after your concept — ready to share with your team.",
     image: "/images/carousel/functional-architecture.png",
-    icon: <FileText className="w-5 h-5 text-primary" />,
+    icon: <FileText className="w-5 h-5 text-foreground" />,
   },
   {
     title: "API Endpoints",
     description:
       "The service contract: every API endpoint with its method, path, request and response — the bridge between your screens and your data.",
     image: "/images/carousel/api-endpoints.png",
-    icon: <Network className="w-5 h-5 text-primary" />,
+    icon: <Network className="w-5 h-5 text-foreground" />,
   },
   {
     title: "State & Lifecycle",
     description:
       "How key objects move between states — a booking from requested to confirmed to completed — with the transitions and who can trigger them.",
     image: "/images/carousel/state-lifecycle.png",
-    icon: <Activity className="w-5 h-5 text-primary" />,
+    icon: <Activity className="w-5 h-5 text-foreground" />,
   },
   {
     title: "Events & Jobs",
     description:
       "The background machinery: scheduled jobs, notifications and event-driven reactions that keep the app running without anyone clicking.",
     image: "/images/carousel/events-jobs.png",
-    icon: <Zap className="w-5 h-5 text-primary" />,
+    icon: <Zap className="w-5 h-5 text-foreground" />,
   },
   {
     title: "Requirements",
     description:
       "Define your MVP (Minimum Viable Product) features and user roles.",
     image: "/images/carousel/requirements.png",
-    icon: <ClipboardCheck className="w-5 h-5 text-primary" />,
+    icon: <ClipboardCheck className="w-5 h-5 text-foreground" />,
   },
   {
     title: "Concept",
     description:
       "Breaks your requirements down into individual Concept Blocks.",
     image: "/images/carousel/concept.png",
-    icon: <Layers className="w-5 h-5 text-primary" />,
+    icon: <Layers className="w-5 h-5 text-foreground" />,
   },
   {
     title: "UI Designs",
     description:
       "View and interact with generated UI designs for your concepts.",
     image: "/images/carousel/ui-design.png",
-    icon: <Layout className="w-5 h-5 text-primary" />,
+    icon: <Layout className="w-5 h-5 text-foreground" />,
   },
   {
     title: "Concept Summary",
     description: "High level view of the System",
     image: "/images/carousel/concept-summery.png",
-    icon: <FileText className="w-5 h-5 text-primary" />,
+    icon: <FileText className="w-5 h-5 text-foreground" />,
   },
   {
     title: "Environment & Config",
     description: "Environment and Configuration parameters of the System",
     image: "/images/carousel/environment-config.png",
-    icon: <RefreshCw className="w-5 h-5 text-primary" />,
+    icon: <RefreshCw className="w-5 h-5 text-foreground" />,
   },
   {
     title: "Software Documentation",
     description: "Manage requirements documentation for your project.",
     image: "/images/carousel/requirements-documents.png",
-    icon: <FileText className="w-5 h-5 text-primary" />,
+    icon: <FileText className="w-5 h-5 text-foreground" />,
   },
   {
     title: "MCP Connect & Tools",
     description:
       "Connect AI clients to this platform over the Model Context Protocol",
     image: "/images/carousel/mcp-connects.png",
-    icon: <Plug className="w-5 h-5 text-primary" />,
+    icon: <Plug className="w-5 h-5 text-foreground" />,
   },
   {
     title: "MCP — Tools & Test",
     description:
       "Connect AI clients to this platform over the Model Context Protocol",
     image: "/images/carousel/mcp-tools.png",
-    icon: <Zap className="w-5 h-5 text-primary" />,
+    icon: <Zap className="w-5 h-5 text-foreground" />,
   },
   {
     title: "Project Structure Map",
     description: "Holistic view of the entire Project",
     image: "/images/carousel/structure-analysis.png",
-    icon: <Workflow className="w-5 h-5 text-primary" />,
+    icon: <Workflow className="w-5 h-5 text-foreground" />,
   },
 ];
 
@@ -166,6 +166,7 @@ export default function ProductModelSection() {
           <SectionHeading
             eyebrow={t("productModel.eyebrow")}
             title={t("productModel.title")}
+            highlightText={t("productModel.titleHighlight")}
             subtitle={t("productModel.subtitle")}
           />
 
@@ -180,11 +181,11 @@ export default function ProductModelSection() {
                   <div className="absolute -right-[120px] top-1/2 w-[120px] border-t-2 border-dotted border-border/80 hidden lg:block z-[-1]"></div>
 
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-blue-50 rounded-xl text-primary border border-primary/20 shrink-0">
+                    <div className="p-3 bg-muted rounded-xl text-foreground border border-border shrink-0">
                       <Cpu className="w-5 h-5" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest block mb-1">
+                      <span className="text-[10px] font-extrabold text-foreground uppercase tracking-widest block mb-1">
                         {t("productModel.persp1Tag")}
                       </span>
                       <h3 className="text-sm font-bold text-foreground leading-snug">
@@ -200,11 +201,11 @@ export default function ProductModelSection() {
                   <div className="absolute -right-[120px] top-1/2 w-[120px] border-t-2 border-dotted border-border/80 hidden lg:block z-[-1]"></div>
 
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-blue-50 rounded-xl text-primary border border-primary/20 shrink-0">
+                    <div className="p-3 bg-muted rounded-xl text-foreground border border-border shrink-0">
                       <Workflow className="w-5 h-5" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest block mb-1">
+                      <span className="text-[10px] font-extrabold text-foreground uppercase tracking-widest block mb-1">
                         {t("productModel.persp3Tag")}
                       </span>
                       <h3 className="text-sm font-bold text-foreground leading-snug">
@@ -235,11 +236,11 @@ export default function ProductModelSection() {
                   <div className="absolute -left-[120px] top-1/2 w-[120px] border-t-2 border-dotted border-border/80 hidden lg:block z-[-1]"></div>
 
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-blue-50 rounded-xl text-primary border border-primary/20 shrink-0">
+                    <div className="p-3 bg-muted rounded-xl text-foreground border border-border shrink-0">
                       <Layout className="w-5 h-5" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest block mb-1">
+                      <span className="text-[10px] font-extrabold text-foreground uppercase tracking-widest block mb-1">
                         {t("productModel.persp2Tag")}
                       </span>
                       <h3 className="text-sm font-bold text-foreground leading-snug">
@@ -255,11 +256,11 @@ export default function ProductModelSection() {
                   <div className="absolute -left-[120px] top-1/2 w-[120px] border-t-2 border-dotted border-border/80 hidden lg:block z-[-1]"></div>
 
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-blue-50 rounded-xl text-primary border border-primary/20 shrink-0">
+                    <div className="p-3 bg-muted rounded-xl text-foreground border border-border shrink-0">
                       <Database className="w-5 h-5" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-extrabold text-primary uppercase tracking-widest block mb-1">
+                      <span className="text-[10px] font-extrabold text-foreground uppercase tracking-widest block mb-1">
                         {t("productModel.persp4Tag")}
                       </span>
                       <h3 className="text-sm font-bold text-foreground leading-snug">

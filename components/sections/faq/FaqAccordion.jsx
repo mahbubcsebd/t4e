@@ -7,6 +7,7 @@ import { ChevronDown } from "lucide-react";
 import Container from "@/components/layout/Container";
 import SectionCard from "@/components/layout/SectionCard";
 import { Button } from "@/components/ui/button";
+import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function FaqAccordion() {
   const { t } = useLanguage();
@@ -25,9 +26,9 @@ export default function FaqAccordion() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         {/* Hero Section embedded */}
         <div className="text-center">
-          <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
-            {t("faqPage.heroEyebrow")}
-          </span>
+          <Eyebrow className="mb-4">
+        {t("faqPage.heroEyebrow")}
+      </Eyebrow>
 
           <h1 className="max-w-[650px] mx-auto text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-6">
             {t("faqPage.heroTitlePrefix")}
@@ -75,10 +76,12 @@ export default function FaqAccordion() {
                   <button
                     onClick={() => toggleItem(idx)}
                     className="group w-full px-4 py-4 text-left flex items-center justify-between gap-4 font-medium text-sm sm:text-base text-foreground hover:text-primary transition-colors"
+                    aria-expanded={isOpen}
+                    aria-label={isOpen ? "Collapse question: " + item.q : "Expand question: " + item.q}
                   >
                     <span>{item.q}</span>
                     <div
-                      className={`flex shrink-0 items-center justify-center min-w-8 h-8 rounded-full transition-colors ${isOpen ? "bg-primary text-primary-foreground" : "bg-primary/10 text-primary group-hover:bg-primary/20"}`}
+                      className={`flex shrink-0 items-center justify-center min-w-8 h-8 rounded-full transition-colors ${isOpen ? "bg-primary text-foreground-foreground" : "bg-muted text-foreground group-hover:bg-primary/20"}`}
                     >
                       <ChevronDown
                         className={`w-4 h-4 shrink-0 transition-transform duration-300 ${

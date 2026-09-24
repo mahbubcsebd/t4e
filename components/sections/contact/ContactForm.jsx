@@ -49,7 +49,7 @@ function CustomSelect({
       >
         <span className="truncate">{value || placeholder}</span>
         <ChevronDown
-          className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+          className={`w-4 h-4 text-foreground transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
       <AnimatePresence>

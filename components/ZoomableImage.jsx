@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 export function ZoomableImage({
   src,
@@ -39,9 +39,9 @@ export function ZoomableImage({
         <DialogContent
           className="max-w-[95vw] md:max-w-5xl bg-transparent border-0 ring-0 shadow-none p-0 flex items-center justify-center focus:outline-none z-[100]"
           showCloseButton={false}
-          aria-describedby={undefined}
         >
           <DialogTitle className="sr-only">{alt}</DialogTitle>
+          <DialogDescription className="sr-only">Zoomed image</DialogDescription>
           <div className="relative max-w-fit max-h-[85vh] mx-auto flex justify-center items-start">
             {/* Custom Close Button Outside of the Image (relative to tight image boundary) */}
             <button

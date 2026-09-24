@@ -30,8 +30,7 @@ export default function CtaSection() {
             <div className="flex justify-center w-full">
               <Button
                 asChild
-                size="lg"
-                className="w-full sm:w-auto max-w-xs sm:max-w-none shadow-md shadow-primary/25"
+                className="w-full sm:w-auto max-w-xs sm:max-w-none"
               >
                 <Link href="https://portal.think4ever.com/#/register">
                   {t("cta.btn")}

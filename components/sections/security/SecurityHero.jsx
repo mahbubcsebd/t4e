@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
+import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function SecurityHero() {
   const { t } = useLanguage();
@@ -11,9 +12,9 @@ export default function SecurityHero() {
   return (
     <section className="pt-8 lg:pt-12 pb-4 lg:pb-8 bg-background border-b border-border text-center">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
-          {t("securityPage.heroEyebrow")}
-        </span>
+        <Eyebrow className="mb-4">
+        {t("securityPage.heroEyebrow")}
+      </Eyebrow>
 
         <h1 className="max-w-[750px] mx-auto text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-6">
           {t("securityPage.heroTitlePrefix")}

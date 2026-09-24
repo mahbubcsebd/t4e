@@ -28,7 +28,7 @@ export const BlogRecommendations = ({ posts, currentPostId }) => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="relative z-10 flex flex-col h-full">
-                <span className="inline-block self-start text-[9px] font-extrabold text-primary bg-primary/10 border border-primary/20 px-3 py-1.5 rounded-full uppercase tracking-widest mb-6 shadow-sm">
+                <span className="inline-block self-start text-[9px] font-extrabold text-foreground bg-muted border border-border px-3 py-1.5 rounded-full uppercase tracking-widest mb-6 shadow-sm">
                   {recommended.category}
                 </span>
                 <h4 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300 leading-snug mb-6">

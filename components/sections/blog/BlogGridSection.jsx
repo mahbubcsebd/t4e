@@ -6,14 +6,15 @@ import { useLanguage } from "@/context/LanguageContext";
 import { Search, BookOpen, Layers, Sparkles, ArrowRight } from "lucide-react";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
+import Eyebrow from "@/components/ui/Eyebrow";
 
 const getCategoryIcon = (cat) => {
-  if (cat === "mcp") return <Layers className="w-5 h-5 text-primary" />;
+  if (cat === "mcp") return <Layers className="w-5 h-5 text-foreground" />;
   if (cat === "whitepaper")
-    return <BookOpen className="w-5 h-5 text-primary" />;
+    return <BookOpen className="w-5 h-5 text-foreground" />;
   if (cat === "architecture")
-    return <BookOpen className="w-5 h-5 text-primary" />;
-  return <Sparkles className="w-5 h-5 text-primary" />;
+    return <BookOpen className="w-5 h-5 text-foreground" />;
+  return <Sparkles className="w-5 h-5 text-foreground" />;
 };
 
 export default function BlogGridSection({ posts }) {
@@ -45,9 +46,9 @@ export default function BlogGridSection({ posts }) {
       {/* Blog Hero Section */}
       <section className="py-6 md:py-8 lg:py-12 bg-background border-b border-border text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider mb-4">
-            {t("blogPage.heroEyebrow")}
-          </span>
+          <Eyebrow className="mb-4">
+        {t("blogPage.heroEyebrow")}
+      </Eyebrow>
 
           <h1 className="max-w-[650px] mx-auto text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-6">
             {t("blogPage.heroTitlePrefix")}
@@ -105,7 +106,7 @@ export default function BlogGridSection({ posts }) {
                   onChange={(e) => setSearch(e.target.value)}
                   className="w-full pl-11 pr-5 py-3.5 rounded-xl border border-border/80 bg-white/50 backdrop-blur-sm text-sm focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all shadow-sm placeholder:text-muted-foreground/60"
                 />
-                <Search className="w-5 h-5 text-muted-foreground absolute left-4 top-3.5 group-focus-within:text-primary transition-colors" />
+                <Search className="w-5 h-5 text-foreground absolute left-4 top-3.5 group-focus-within:text-foreground transition-colors" />
               </div>
             </div>
 
@@ -121,7 +122,7 @@ export default function BlogGridSection({ posts }) {
 
                   <div className="relative z-10 flex flex-col flex-grow">
                     <div className="flex items-center justify-between mb-8">
-                      <span className="text-[9px] font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20 shadow-sm">
+                      <span className="text-[9px] font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full bg-muted text-foreground border border-border shadow-sm">
                         {art.type || art.category}
                       </span>
                       <div className="p-2.5 rounded-xl bg-white border border-border/80 shadow-sm group-hover:scale-110 group-hover:border-primary/40 transition-transform duration-500">
