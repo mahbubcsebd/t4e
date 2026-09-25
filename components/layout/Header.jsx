@@ -92,7 +92,7 @@ export default function Header() {
       title: t("nav.blog") === "nav.blog" ? "Blog" : t("nav.blog"),
       desc: t("nav.blogDesc", "Read the latest news and articles."),
       href: localizeHref("/blog"),
-      icon: <Globe className="w-4 h-4 text-white/90" />,
+      icon: <Globe className="w-4 h-4 text-white" />,
     },
     {
       title: t("nav.faq", "FAQ"),
@@ -258,13 +258,13 @@ export default function Header() {
           </div>
           <Link
             href={localizeHref("/marketplace")}
-            className="hover:text-foreground transition-colors whitespace-nowrap"
+            className="hover:text-white transition-colors whitespace-nowrap"
           >
             {t("nav.marketplace") === "nav.marketplace" ? "Marketplace" : t("nav.marketplace")}
           </Link>
           <Link
             href={localizeHref("/integrations")}
-            className="hover:text-foreground transition-colors whitespace-nowrap"
+            className="hover:text-white transition-colors whitespace-nowrap"
           >
             {t("nav.integrations")}
           </Link>
@@ -362,7 +362,7 @@ export default function Header() {
 
           <Link
             href={localizeHref("/pricing")}
-            className="hover:text-foreground transition-colors whitespace-nowrap"
+            className="hover:text-white transition-colors whitespace-nowrap"
           >
             {t("nav.pricing")}
           </Link>
@@ -377,10 +377,10 @@ export default function Header() {
               className="flex items-center gap-1.5 text-[15px] font-medium text-white/90 hover:text-white transition-colors py-2"
               aria-label="Select language"
             >
-              <Globe className="w-4 h-4 text-white/80 group-hover:text-white" />
+              <Globe className="w-4 h-4 text-white" />
               <span className="uppercase text-white font-semibold">{currentLang.code}</span>
               <ChevronDown
-                className={`w-3.5 h-3.5 text-foreground transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
+                className={`w-3.5 h-3.5 text-white/90 transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
               />
             </button>
 
@@ -449,7 +449,7 @@ export default function Header() {
               <Globe className="w-4 h-4 text-white/90" />
               <span className="uppercase">{currentLang.code}</span>
               <ChevronDown
-                className={`w-3.5 h-3.5 text-foreground transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
+                className={`w-3.5 h-3.5 text-white/90 transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
               />
             </button>
 
