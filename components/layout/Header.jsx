@@ -424,14 +424,14 @@ export default function Header() {
           </div>
 
           {/* Sign in text link */}
-          <Button asChild variant="ghost">
+          <Button asChild variant="ghost" className="text-white hover:text-white hover:bg-white/10 font-medium">
             <a href="https://portal.think4ever.com/#/login">
               {t("nav.signIn")}
             </a>
           </Button>
 
           {/* Start free button */}
-          <Button asChild>
+          <Button asChild className="bg-white text-[#093cad] hover:bg-gray-100 shadow-none font-bold">
             <a href="https://portal.think4ever.com/#/register">
               {t("nav.startFree")}
             </a>
