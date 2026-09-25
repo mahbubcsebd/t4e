@@ -92,7 +92,7 @@ export default function Header() {
       title: t("nav.blog") === "nav.blog" ? "Blog" : t("nav.blog"),
       desc: t("nav.blogDesc", "Read the latest news and articles."),
       href: localizeHref("/blog"),
-      icon: <Globe className="w-4 h-4 text-foreground" />,
+      icon: <Globe className="w-4 h-4 text-white" />,
     },
     {
       title: t("nav.faq", "FAQ"),
@@ -157,8 +157,8 @@ export default function Header() {
     <header
       className={`sticky top-0 z-[100] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] border-b ${
         scrolled
-          ? "bg-background/95 backdrop-blur-xl border-border shadow-sm dark:shadow-none"
-          : "bg-background border-transparent shadow-none"
+          ? "bg-[#093cad]/95 backdrop-blur-xl border-white/10 shadow-lg"
+          : "bg-[#093cad] border-transparent shadow-none"
       }`}
     >
       <div
@@ -173,7 +173,7 @@ export default function Header() {
             alt="Think4Ever"
             width={180}
             height={41}
-            className={`w-auto object-contain transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            className={`w-auto object-contain brightness-0 invert transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               scrolled ? "h-10" : "h-[46px]"
             }`}
             priority
@@ -181,7 +181,7 @@ export default function Header() {
         </Link>
 
         {/* Center Desktop Menu Items */}
-        <nav className="header-nav hidden lg:flex items-center gap-6 xl:gap-7 text-[15px] font-semibold text-muted-foreground">
+        <nav className="header-nav hidden lg:flex items-center gap-6 xl:gap-7 text-[15px] font-semibold text-white/80">
           {/* Product Dropdown */}
           <div
             className="relative group"
@@ -190,11 +190,11 @@ export default function Header() {
             <button
               onClick={() => setHowItWorksOpen(!howItWorksOpen)}
               onMouseEnter={() => setHowItWorksOpen(true)}
-              className="flex items-center gap-1 hover:text-foreground transition-colors py-2 whitespace-nowrap"
+              className="flex items-center gap-1 hover:text-white transition-colors py-2 whitespace-nowrap"
               aria-label="Toggle Product menu"
             >
               <span>{t("nav.product", "Product")}</span>
-              <ChevronDown className="w-4 h-4 text-foreground group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-0 w-64 bg-card rounded-2xl shadow-2xl border border-border py-2 transition-all duration-200 z-50 ${
@@ -258,13 +258,13 @@ export default function Header() {
           </div>
           <Link
             href={localizeHref("/marketplace")}
-            className="hover:text-foreground transition-colors whitespace-nowrap"
+            className="hover:text-white transition-colors whitespace-nowrap"
           >
             {t("nav.marketplace") === "nav.marketplace" ? "Marketplace" : t("nav.marketplace")}
           </Link>
           <Link
             href={localizeHref("/integrations")}
-            className="hover:text-foreground transition-colors whitespace-nowrap"
+            className="hover:text-white transition-colors whitespace-nowrap"
           >
             {t("nav.integrations")}
           </Link>
@@ -277,11 +277,11 @@ export default function Header() {
             <button
               onClick={() => setResourcesOpen(!resourcesOpen)}
               onMouseEnter={() => setResourcesOpen(true)}
-              className="flex items-center gap-1 hover:text-foreground transition-colors py-2 whitespace-nowrap"
+              className="flex items-center gap-1 hover:text-white transition-colors py-2 whitespace-nowrap"
               aria-label="Toggle Resources menu"
             >
               <span>{t("nav.resources")}</span>
-              <ChevronDown className="w-4 h-4 text-foreground group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-1/2 -translate-x-1/2 w-[260px] bg-card rounded-2xl shadow-2xl border border-border p-2 transition-all duration-200 z-50 grid grid-cols-1 gap-1 ${
@@ -320,13 +320,13 @@ export default function Header() {
             <button
               onClick={() => setDocsOpen(!docsOpen)}
               onMouseEnter={() => setDocsOpen(true)}
-              className="flex items-center gap-1 hover:text-foreground transition-colors py-2 whitespace-nowrap"
+              className="flex items-center gap-1 hover:text-white transition-colors py-2 whitespace-nowrap"
               aria-label="Toggle Docs menu"
             >
               <span>
                 {t("nav.docs") === "nav.docs" ? "Docs" : t("nav.docs")}
               </span>
-              <ChevronDown className="w-4 h-4 text-foreground group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-1/2 -translate-x-1/2 w-[540px] bg-card rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
@@ -362,7 +362,7 @@ export default function Header() {
 
           <Link
             href={localizeHref("/pricing")}
-            className="hover:text-foreground transition-colors whitespace-nowrap"
+            className="hover:text-white transition-colors whitespace-nowrap"
           >
             {t("nav.pricing")}
           </Link>
@@ -374,13 +374,13 @@ export default function Header() {
           <div className="relative" ref={desktopLangDropdownRef}>
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              className="flex items-center gap-1.5 text-[15px] font-medium text-foreground hover:text-primary transition-colors py-2"
+              className="flex items-center gap-1.5 text-[15px] font-medium text-white/90 hover:text-white transition-colors py-2"
               aria-label="Select language"
             >
-              <Globe className="w-4 h-4 text-foreground" />
-              <span className="uppercase">{currentLang.code}</span>
+              <Globe className="w-4 h-4 text-white" />
+              <span className="uppercase text-white font-semibold">{currentLang.code}</span>
               <ChevronDown
-                className={`w-3.5 h-3.5 text-foreground transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
+                className={`w-3.5 h-3.5 text-white/90 transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
               />
             </button>
 
@@ -424,14 +424,14 @@ export default function Header() {
           </div>
 
           {/* Sign in text link */}
-          <Button asChild variant="ghost">
+          <Button asChild variant="ghost" className="text-white hover:text-white hover:bg-white/10 font-medium">
             <a href="https://portal.think4ever.com/#/login">
               {t("nav.signIn")}
             </a>
           </Button>
 
           {/* Start free button */}
-          <Button asChild>
+          <Button asChild className="bg-white text-[#093cad] hover:bg-gray-100 shadow-none font-bold">
             <a href="https://portal.think4ever.com/#/register">
               {t("nav.startFree")}
             </a>
@@ -443,13 +443,13 @@ export default function Header() {
           <div className="relative" ref={mobileLangDropdownRef}>
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              className="flex items-center gap-1 text-[14px] font-medium text-foreground hover:text-primary transition-colors py-2"
+              className="flex items-center gap-1 text-[14px] font-medium text-white/90 hover:text-white transition-colors py-2"
               aria-label="Select language"
             >
-              <Globe className="w-4 h-4 text-foreground" />
+              <Globe className="w-4 h-4 text-white/90" />
               <span className="uppercase">{currentLang.code}</span>
               <ChevronDown
-                className={`w-3.5 h-3.5 text-foreground transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
+                className={`w-3.5 h-3.5 text-white/90 transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
               />
             </button>
 
@@ -492,7 +492,7 @@ export default function Header() {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-foreground hover:text-primary transition-colors"
+            className="p-2 text-white hover:text-white/80 transition-colors"
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {mobileMenuOpen ? (
