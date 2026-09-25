@@ -6,6 +6,7 @@ readTime: "7 min read"
 category: "Production"
 author: "Sunil Kishen"
 image: "/images/blog/blog-5-img-1.jpg"
+hideThumbnail: true
 ---
 
 <div class="space-y-8 text-gray-600">
@@ -48,7 +49,7 @@ image: "/images/blog/blog-5-img-1.jpg"
 <figure class="my-10">
 <div class="w-full overflow-hidden rounded-xl border border-gray-100 shadow-sm">
 <img src="/images/blog/blog-5-img-1.jpg" alt="Production hardening is selected from the Think4Ever onboarding screen." class="w-full h-auto" />
-
+</div>
 <figcaption class="mt-4 text-center text-sm italic text-gray-500">Figure 1. Production hardening is selected from the Think4Ever onboarding screen.</figcaption>
 </figure>
 
