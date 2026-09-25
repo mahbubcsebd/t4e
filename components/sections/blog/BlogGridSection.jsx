@@ -130,20 +130,20 @@ export default function BlogGridSection({ posts }) {
                       </div>
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 leading-tight line-clamp-2 group-hover:text-primary transition-colors duration-300" title={art.title}>
                       {art.title}
                     </h3>
 
-                    <p className="text-base text-muted-foreground mb-8 leading-relaxed line-clamp-3 group-hover:text-foreground/80 transition-colors duration-300">
+                    <p className="text-base text-muted-foreground mb-8 leading-relaxed line-clamp-3 group-hover:text-foreground/80 transition-colors duration-300" title={art.desc || art.description}>
                       {art.desc || art.description}
                     </p>
                   </div>
 
-                  <div className="relative z-10 flex items-center justify-between pt-5 border-t border-border/60 mt-auto">
-                    <span className="text-xs font-semibold text-muted-foreground/80">
+                  <div className="relative z-10 flex items-center justify-between gap-3 pt-5 border-t border-border/60 mt-auto">
+                    <span className="text-xs font-semibold text-muted-foreground/80 max-w-[60%] truncate">
                       {art.date} • {art.readTime}
                     </span>
-                    <span className="text-primary font-bold text-sm flex items-center gap-1.5 group-hover:translate-x-1 transition-transform duration-300">
+                    <span className="text-primary font-bold text-sm flex items-center gap-1.5 shrink-0 whitespace-nowrap group-hover:translate-x-1 transition-transform duration-300">
                       {t("blogPage.readMore")}
                     </span>
                   </div>

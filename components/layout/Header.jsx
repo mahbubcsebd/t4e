@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Think4EverLogo from "@/components/layout/Think4EverLogo";
 import { useLanguage } from "@/context/LanguageContext";
 import { usePathname, useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
@@ -92,7 +93,7 @@ export default function Header() {
       title: t("nav.blog") === "nav.blog" ? "Blog" : t("nav.blog"),
       desc: t("nav.blogDesc", "Read the latest news and articles."),
       href: localizeHref("/blog"),
-      icon: <Globe className="w-4 h-4 text-white" />,
+      icon: <Globe className="w-4 h-4 text-foreground" />,
     },
     {
       title: t("nav.faq", "FAQ"),
@@ -168,15 +169,10 @@ export default function Header() {
       >
         {/* Brand Logo */}
         <Link href={localizeHref("/")} className="flex items-center gap-2 shrink-0" aria-label="Think4Ever Home">
-          <Image
-            src="/images/think4ever-logo.png"
-            alt="Think4Ever"
-            width={180}
-            height={41}
-            className={`w-auto object-contain brightness-0 invert transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-              scrolled ? "h-10" : "h-[46px]"
-            }`}
-            priority
+          <Think4EverLogo
+            height={scrolled ? 32 : 38}
+            animate={true}
+            className="transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
           />
         </Link>
 
@@ -377,7 +373,7 @@ export default function Header() {
               className="flex items-center gap-1.5 text-[15px] font-medium text-white/90 hover:text-white transition-colors py-2"
               aria-label="Select language"
             >
-              <Globe className="w-4 h-4 text-white" />
+              <Globe className="w-4 h-4 text-white/90" />
               <span className="uppercase text-white font-semibold">{currentLang.code}</span>
               <ChevronDown
                 className={`w-3.5 h-3.5 text-white/90 transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
