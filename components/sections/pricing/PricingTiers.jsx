@@ -125,7 +125,7 @@ export default function PricingTiers() {
                     href={plan.href}
                     className={`flex w-full items-center justify-center rounded-full text-sm font-bold py-3.5 transition-all duration-300 ${
                       plan.featured
-                        ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5"
+                        ? "bg-[#093cad] text-white shadow-lg shadow-[#093cad]/25 hover:shadow-xl hover:shadow-[#093cad]/40 hover:-translate-y-0.5"
                         : "bg-muted text-foreground border border-border/50 hover:bg-muted hover:border-border hover:text-foreground"
                     }`}
                   >
