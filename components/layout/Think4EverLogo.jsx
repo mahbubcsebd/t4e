@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 /**
  * Think4Ever Animated Logo — Reversed (dark bg) lockup
@@ -23,107 +23,113 @@ import { useEffect, useState } from "react";
  *  4          → #FF7A1A (DM Sans Black — always orange)
  */
 
+// Animation stage schedule (ms from mount)
+const STAGE_SCHEDULE = [
+  [1, 60],    // bars start entering immediately
+  [2, 380],   // close in
+  [3, 680],   // settle
+  [4, 950],   // dots light up
+  [5, 1250],  // wordmark lands
+];
+
+const BAR_EASING = "cubic-bezier(0.22, 1, 0.36, 1)";
+const DOT_EASING = "cubic-bezier(0.34, 1.56, 0.64, 1)";
+const FONT = "var(--font-dm-sans), 'DM Sans', sans-serif";
+
 export default function Think4EverLogo({
   height = 36,
   animate = true,
   className = "",
 }) {
-  // stage 0 = hidden, 1-5 = animation stages, 5 = fully visible
+  // stage 0 = hidden, 1–5 = animation stages
   const [stage, setStage] = useState(animate ? 0 : 5);
 
   useEffect(() => {
     if (!animate) return;
-    // Staggered stage advances (ms from mount)
-    const schedule = [
-      [1, 60],   // stage 1: bars start entering immediately
-      [2, 380],  // stage 2: close in
-      [3, 680],  // stage 3: settle
-      [4, 950],  // stage 4: dots light up
-      [5, 1250], // stage 5: wordmark lands
-    ];
-    const timers = schedule.map(([s, delay]) =>
+    const timers = STAGE_SCHEDULE.map(([s, delay]) =>
       setTimeout(() => setStage(s), delay)
     );
     return () => timers.forEach(clearTimeout);
   }, [animate]);
 
-  // ─── Proportion system (all derived from x = bar height) ───────────────────
-  const x = height * 0.41;   // bar height
-  const barW = x * 3.16;     // bar length
-  const barH = x;
-  const offsetX = x * 0.92;  // horizontal offset: bottom bar sits 0.92x to the left
-  const gapY = x * 0.32;     // vertical gap between bars
-  const dotD = x * 0.40;     // dot diameter
-  const ringD = x * 0.64;    // white ring diameter
-  const rFlat = x * 0.16;    // flat-end small corner radius
-  const rPill = barH / 2;    // rounded-end full pill radius
+  // All proportions derived from x = bar height (Living Blueprint slide 009)
+  const dims = useMemo(() => {
+    const x = height * 0.41;
+    const barW = x * 3.16;
+    const barH = x;
+    const offsetX = x * 0.92;
+    const gapY = x * 0.32;
+    const dotD = x * 0.40;
+    const ringD = x * 0.64;
+    const rFlat = x * 0.16;
+    const rPill = barH / 2;
 
-  // Symbol bounding box: top bar is offset right by offsetX
-  const symW = barW + offsetX;
-  const symH = barH + gapY + barH;
+    return {
+      x, barW, barH, offsetX, gapY, dotD, ringD, rFlat, rPill,
+      symW: barW + offsetX,
+      symH: barH + gapY + barH,
+      topX: offsetX, topY: 0,
+      botX: 0,       botY: barH + gapY,
+      topDotCX: offsetX + barW - rPill,
+      topDotCY: barH / 2,
+      botDotCX: barW - rPill,
+      botDotCY: barH + gapY + barH / 2,
+      wordGap: x * 0.63,
+      wordFS: x * 1.56,
+    };
+  }, [height]);
 
-  // Bar positions (top bar shifted right, bottom bar at left edge)
-  const topX = offsetX;
-  const topY = 0;
-  const botX = 0;
-  const botY = barH + gapY;
+  const {
+    barW, barH, offsetX, dotD, ringD, rFlat, rPill,
+    symW, symH, topX, topY, botX, botY,
+    topDotCX, topDotCY, botDotCX, botDotCY,
+    wordGap, wordFS,
+  } = dims;
 
-  // Dot centers on rounded (right) ends
-  const topDotCX = topX + barW - rPill;
-  const topDotCY = topY + barH / 2;
-  const botDotCX = botX + barW - rPill;
-  const botDotCY = botY + barH / 2;
-
-  // ─── Animation state ────────────────────────────────────────────────────────
-  // Bars arrive from opposite sides → stage 1 means "mid-travel", stage 3+ = settled
-  const topSlide = stage < 3 ? (stage < 1 ? -barW - offsetX : -barW * 0.35) : 0;
+  const topSlide = stage < 3 ? (stage < 1 ? -(barW + offsetX) : -barW * 0.35) : 0;
   const botSlide = stage < 3 ? (stage < 1 ? barW + offsetX : barW * 0.35) : 0;
   const dotsVisible = stage >= 4;
   const wordmarkVisible = stage >= 5;
 
-  const barEasing = "cubic-bezier(0.22, 1, 0.36, 1)";
-  const barDur = stage === 1 ? "0.32s" : "0.36s";
+  // Longer duration for the settling move (stage 2→3) vs. arrive (0→1)
+  const barDuration = stage <= 2 ? "0.32s" : "0.36s";
+  const barTransition = `transform ${barDuration} ${BAR_EASING}`;
 
-  // Wordmark dimensions
-  const wordGap = x * 0.63;  // space between symbol and name
-  const wordFS = x * 1.56;   // font-size = wordmark height
+  const wordmarkStyle = {
+    fontFamily: FONT,
+    fontSize: wordFS,
+    letterSpacing: "-0.01em",
+    lineHeight: 1,
+  };
 
   return (
     <div
       className={`flex items-center select-none ${className}`}
       style={{ height, overflow: "visible" }}
-      aria-label="Think4Ever"
       role="img"
+      aria-label="Think4Ever"
     >
-      {/* ── Symbol ─────────────────────────────────────────────────────────── */}
+      {/* ── Symbol SVG ─────────────────────────────────────────────────────── */}
       <svg
         width={symW}
         height={symH}
         viewBox={`0 0 ${symW} ${symH}`}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
         style={{ overflow: "visible", flexShrink: 0 }}
       >
-        {/* Top bar group — white, slides in from LEFT */}
-        <g
-          style={{
-            transform: `translateX(${topSlide}px)`,
-            transition: `transform ${barDur} ${barEasing}`,
-          }}
-        >
-          {/* Full pill rect */}
+        {/* Top bar — white, arrives from LEFT */}
+        <g style={{ transform: `translateX(${topSlide}px)`, transition: barTransition }}>
+          {/* Full pill */}
           <rect x={topX} y={topY} width={barW} height={barH} rx={rPill} ry={rPill} fill="#FFFFFF" />
           {/* Left-end flat override (small radius) */}
           <rect x={topX} y={topY} width={rPill + rFlat} height={barH} rx={rFlat} ry={rFlat} fill="#FFFFFF" />
-
-          {/* White ring */}
+          {/* White ring around dot */}
           <circle
             cx={topDotCX} cy={topDotCY} r={ringD / 2}
             fill="#FFFFFF"
-            style={{
-              opacity: dotsVisible ? 1 : 0,
-              transition: "opacity 0.2s ease",
-            }}
+            style={{ opacity: dotsVisible ? 1 : 0, transition: "opacity 0.2s ease" }}
           />
           {/* Orange dot */}
           <circle
@@ -133,31 +139,22 @@ export default function Think4EverLogo({
               opacity: dotsVisible ? 1 : 0,
               transform: dotsVisible ? "scale(1)" : "scale(0)",
               transformOrigin: `${topDotCX}px ${topDotCY}px`,
-              transition: "opacity 0.25s ease 0.05s, transform 0.3s cubic-bezier(0.34,1.56,0.64,1) 0.05s",
+              transition: `opacity 0.25s ease 0.05s, transform 0.3s ${DOT_EASING} 0.05s`,
             }}
           />
         </g>
 
-        {/* Bottom bar group — deep blue, slides in from RIGHT */}
-        <g
-          style={{
-            transform: `translateX(${botSlide}px)`,
-            transition: `transform ${barDur} ${barEasing}`,
-          }}
-        >
-          {/* Full pill rect */}
+        {/* Bottom bar — deep blue, arrives from RIGHT */}
+        <g style={{ transform: `translateX(${botSlide}px)`, transition: barTransition }}>
+          {/* Full pill */}
           <rect x={botX} y={botY} width={barW} height={barH} rx={rPill} ry={rPill} fill="#3A5690" />
           {/* Left-end flat override */}
           <rect x={botX} y={botY} width={rPill + rFlat} height={barH} rx={rFlat} ry={rFlat} fill="#3A5690" />
-
-          {/* Deep blue ring (blends, creates the "air" effect) */}
+          {/* Ink ring (creates "air" effect on dark bar) */}
           <circle
             cx={botDotCX} cy={botDotCY} r={ringD / 2}
             fill="#0B1B3A"
-            style={{
-              opacity: dotsVisible ? 1 : 0,
-              transition: "opacity 0.2s ease",
-            }}
+            style={{ opacity: dotsVisible ? 1 : 0, transition: "opacity 0.2s ease" }}
           />
           {/* Ink dot */}
           <circle
@@ -167,7 +164,7 @@ export default function Think4EverLogo({
               opacity: dotsVisible ? 1 : 0,
               transform: dotsVisible ? "scale(1)" : "scale(0)",
               transformOrigin: `${botDotCX}px ${botDotCY}px`,
-              transition: "opacity 0.25s ease 0.08s, transform 0.3s cubic-bezier(0.34,1.56,0.64,1) 0.08s",
+              transition: `opacity 0.25s ease 0.08s, transform 0.3s ${DOT_EASING} 0.08s`,
             }}
           />
         </g>
@@ -175,6 +172,7 @@ export default function Think4EverLogo({
 
       {/* ── Wordmark ────────────────────────────────────────────────────────── */}
       <div
+        aria-hidden="true"
         style={{
           marginLeft: wordGap,
           opacity: wordmarkVisible ? 1 : 0,
@@ -182,19 +180,12 @@ export default function Think4EverLogo({
           transition: "opacity 0.3s ease, transform 0.35s cubic-bezier(0.22,1,0.36,1)",
           display: "flex",
           alignItems: "baseline",
-          lineHeight: 1,
           flexShrink: 0,
         }}
       >
-        <span style={{ fontFamily: "var(--font-dm-sans), 'DM Sans', sans-serif", fontWeight: 400, fontSize: wordFS, color: "#FFFFFF", letterSpacing: "-0.01em" }}>
-          think
-        </span>
-        <span style={{ fontFamily: "var(--font-dm-sans), 'DM Sans', sans-serif", fontWeight: 900, fontSize: wordFS, color: "#FF7A1A", letterSpacing: "-0.01em" }}>
-          4
-        </span>
-        <span style={{ fontFamily: "var(--font-dm-sans), 'DM Sans', sans-serif", fontWeight: 400, fontSize: wordFS, color: "#FFFFFF", letterSpacing: "-0.01em" }}>
-          ever
-        </span>
+        <span style={{ ...wordmarkStyle, fontWeight: 400, color: "#FFFFFF" }}>think</span>
+        <span style={{ ...wordmarkStyle, fontWeight: 900, color: "#FF7A1A" }}>4</span>
+        <span style={{ ...wordmarkStyle, fontWeight: 400, color: "#FFFFFF" }}>ever</span>
       </div>
     </div>
   );

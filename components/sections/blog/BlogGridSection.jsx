@@ -3,33 +3,32 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { Search, BookOpen, Layers, Sparkles, ArrowRight } from "lucide-react";
+import { Search, BookOpen, Layers, Sparkles } from "lucide-react";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 
 const getCategoryIcon = (cat) => {
   if (cat === "mcp") return <Layers className="w-5 h-5 text-foreground" />;
-  if (cat === "whitepaper")
-    return <BookOpen className="w-5 h-5 text-foreground" />;
-  if (cat === "architecture")
+  if (cat === "whitepaper" || cat === "architecture")
     return <BookOpen className="w-5 h-5 text-foreground" />;
   return <Sparkles className="w-5 h-5 text-foreground" />;
+};
+
+// Moved outside component — pure function, no need to recreate on every render
+const getCategoryId = (categoryStr) => {
+  if (!categoryStr) return "";
+  const str = categoryStr.toLowerCase();
+  if (str.includes("whitepaper") || str.includes("white paper") || str.includes("libro blanco")) return "whitepaper";
+  if (str.includes("architecture") || str.includes("arquitectura") || str.includes("architectuur")) return "architecture";
+  if (str.includes("mcp")) return "mcp";
+  return "";
 };
 
 export default function BlogGridSection({ posts }) {
   const { t, language } = useLanguage();
   const [search, setSearch] = useState("");
   const [selectedCat, setSelectedCat] = useState("all");
-
-  const getCategoryId = (categoryStr) => {
-    if (!categoryStr) return "";
-    const str = categoryStr.toLowerCase();
-    if (str.includes("whitepaper") || str.includes("white paper") || str.includes("libro blanco") || str.includes("whitepaper")) return "whitepaper";
-    if (str.includes("architecture") || str.includes("arquitectura") || str.includes("architectuur")) return "architecture";
-    if (str.includes("mcp")) return "mcp";
-    return "";
-  };
 
   const filtered = (posts || []).filter((art) => {
     const catId = art.cat || getCategoryId(art.category) || (art.type ? getCategoryId(art.type) : "");
@@ -112,9 +111,9 @@ export default function BlogGridSection({ posts }) {
 
             {/* Grid of Articles */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 relative z-10">
-              {filtered.map((art, idx) => (
+              {filtered.map((art) => (
                 <Link
-                  key={idx}
+                  key={art.slug}
                   href={art.lang && art.lang !== 'en' ? `/${art.lang}/blog/${art.slug}/` : `/blog/${art.slug}/`}
                   className="bg-card/80 backdrop-blur-xl border border-border/60 rounded-xl p-8 hover:-translate-y-2 shadow-sm hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/50 transition-all duration-500 flex flex-col justify-between group overflow-hidden relative block"
                 >
@@ -154,7 +153,7 @@ export default function BlogGridSection({ posts }) {
             {filtered.length === 0 && (
               <div className="text-center py-20 relative z-10 bg-white/50 border border-border/60 rounded-[2rem] backdrop-blur-sm">
                 <p className="text-lg text-muted-foreground">
-                  No articles found matching your criteria.
+                  {t("blogPage.noResults", "No articles found matching your criteria.")}
                 </p>
               </div>
             )}
