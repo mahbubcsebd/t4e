@@ -374,11 +374,11 @@ export default function Header() {
           <div className="relative" ref={desktopLangDropdownRef}>
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              className="flex items-center gap-1.5 text-[15px] font-medium text-foreground hover:text-primary transition-colors py-2"
+              className="flex items-center gap-1.5 text-[15px] font-medium text-white/90 hover:text-white transition-colors py-2"
               aria-label="Select language"
             >
               <Globe className="w-4 h-4 text-white/80 group-hover:text-white" />
-              <span className="uppercase text-white">{currentLang.code}</span>
+              <span className="uppercase text-white font-semibold">{currentLang.code}</span>
               <ChevronDown
                 className={`w-3.5 h-3.5 text-foreground transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
               />
