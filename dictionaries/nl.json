@@ -1,6 +1,7 @@
 {
   "nav": {
     "product": "Product",
+    "marketplace": "Marketplace",
     "howItWorks": "Hoe het werkt",
     "howItWorksDesc": "Verbinden, Beoordelen, Wijzigen",
     "codeToDesign": "Code → Ontwerp",

@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Think4EverLogo from "@/components/layout/Think4EverLogo";
 import { useLanguage } from "@/context/LanguageContext";
-import { usePathname, useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import {
   ChevronDown,
@@ -21,17 +20,12 @@ import {
   Puzzle,
   Terminal,
   Play,
-  Sun,
-  Moon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const { t, language, setLanguage, availableLanguages } = useLanguage();
-  const pathname = usePathname();
-  const router = useRouter();
-
   const handleLanguageChange = (newLangCode) => {
     setLanguage(newLangCode);
     setLangDropdownOpen(false);
@@ -53,7 +47,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const desktopLangDropdownRef = useRef(null);
   const mobileLangDropdownRef = useRef(null);
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -84,13 +78,13 @@ export default function Header() {
 
   const resourcesLinks = [
     {
-      title: t("nav.library") === "nav.library" ? "Resource Library" : t("nav.library"),
-      desc: t("nav.libraryDesc") === "nav.libraryDesc" ? "Explore our collection of resources." : t("nav.libraryDesc"),
+      title: t("nav.library", "Resource Library"),
+      desc: t("nav.libraryDesc", "Explore our collection of resources."),
       href: localizeHref("/resources/"),
       icon: <Puzzle className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t("nav.blog") === "nav.blog" ? "Blog" : t("nav.blog"),
+      title: t("nav.blog", "Blog"),
       desc: t("nav.blogDesc", "Read the latest news and articles."),
       href: localizeHref("/blog"),
       icon: <Globe className="w-4 h-4 text-foreground" />,
@@ -171,7 +165,7 @@ export default function Header() {
         <Link href={localizeHref("/")} className="flex items-center gap-2 shrink-0" aria-label="Think4Ever Home">
           <Think4EverLogo
             height={scrolled ? 32 : 38}
-            animate={true}
+            animate
             className="transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
           />
         </Link>
@@ -256,7 +250,7 @@ export default function Header() {
             href={localizeHref("/marketplace")}
             className="hover:text-white transition-colors whitespace-nowrap"
           >
-            {t("nav.marketplace") === "nav.marketplace" ? "Marketplace" : t("nav.marketplace")}
+            {t("nav.marketplace", "Marketplace")}
           </Link>
           <Link
             href={localizeHref("/integrations")}
@@ -320,7 +314,7 @@ export default function Header() {
               aria-label="Toggle Docs menu"
             >
               <span>
-                {t("nav.docs") === "nav.docs" ? "Docs" : t("nav.docs")}
+                {t("nav.docs", "Docs")}
               </span>
               <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
             </button>
@@ -565,7 +559,7 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
               >
-                {t("nav.marketplace") === "nav.marketplace" ? "Marketplace" : t("nav.marketplace")}
+                {t("nav.marketplace", "Marketplace")}
               </Link>
               <Link
                 href={localizeHref("/integrations")}
