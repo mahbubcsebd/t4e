@@ -16,19 +16,19 @@ const getCategoryIcon = (cat) => {
   return <Sparkles className="w-5 h-5 text-primary" />;
 };
 
+const getCategoryId = (categoryStr) => {
+  if (!categoryStr) return "";
+  const str = categoryStr.toLowerCase();
+  if (str.includes("whitepaper") || str.includes("white paper") || str.includes("libro blanco") || str.includes("whitepaper")) return "whitepaper";
+  if (str.includes("architecture") || str.includes("arquitectura") || str.includes("architectuur")) return "architecture";
+  if (str.includes("mcp")) return "mcp";
+  return "";
+};
+
 export default function BlogGridSection({ posts }) {
   const { t, language } = useLanguage();
   const [search, setSearch] = useState("");
   const [selectedCat, setSelectedCat] = useState("all");
-
-  const getCategoryId = (categoryStr) => {
-    if (!categoryStr) return "";
-    const str = categoryStr.toLowerCase();
-    if (str.includes("whitepaper") || str.includes("white paper") || str.includes("libro blanco") || str.includes("whitepaper")) return "whitepaper";
-    if (str.includes("architecture") || str.includes("arquitectura") || str.includes("architectuur")) return "architecture";
-    if (str.includes("mcp")) return "mcp";
-    return "";
-  };
 
   const filtered = (posts || []).filter((art) => {
     const catId = art.cat || getCategoryId(art.category) || (art.type ? getCategoryId(art.type) : "");
@@ -111,9 +111,9 @@ export default function BlogGridSection({ posts }) {
 
             {/* Grid of Articles */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 relative z-10">
-              {filtered.map((art, idx) => (
+              {filtered.map((art) => (
                 <Link
-                  key={idx}
+                  key={art.slug}
                   href={art.lang && art.lang !== 'en' ? `/${art.lang}/blog/${art.slug}/` : `/blog/${art.slug}/`}
                   className="bg-card/80 backdrop-blur-xl border border-border/60 rounded-xl p-8 hover:-translate-y-2 shadow-sm hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/50 transition-all duration-500 flex flex-col justify-between group overflow-hidden relative block"
                 >
@@ -129,20 +129,20 @@ export default function BlogGridSection({ posts }) {
                       </div>
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 leading-tight line-clamp-2 group-hover:text-primary transition-colors duration-300" title={art.title}>
                       {art.title}
                     </h3>
 
-                    <p className="text-base text-muted-foreground mb-8 leading-relaxed line-clamp-3 group-hover:text-foreground/80 transition-colors duration-300">
+                    <p className="text-base text-muted-foreground mb-8 leading-relaxed line-clamp-3 group-hover:text-foreground/80 transition-colors duration-300" title={art.desc || art.description}>
                       {art.desc || art.description}
                     </p>
                   </div>
 
-                  <div className="relative z-10 flex items-center justify-between pt-5 border-t border-border/60 mt-auto">
-                    <span className="text-xs font-semibold text-muted-foreground/80">
+                  <div className="relative z-10 flex items-center justify-between gap-3 pt-5 border-t border-border/60 mt-auto">
+                    <span className="text-xs font-semibold text-muted-foreground/80 max-w-[60%] truncate">
                       {art.date} • {art.readTime}
                     </span>
-                    <span className="text-primary font-bold text-sm flex items-center gap-1.5 group-hover:translate-x-1 transition-transform duration-300">
+                    <span className="text-primary font-bold text-sm flex items-center gap-1.5 shrink-0 whitespace-nowrap group-hover:translate-x-1 transition-transform duration-300">
                       {t("blogPage.readMore")}
                     </span>
                   </div>
@@ -153,7 +153,7 @@ export default function BlogGridSection({ posts }) {
             {filtered.length === 0 && (
               <div className="text-center py-20 relative z-10 bg-white/50 border border-border/60 rounded-[2rem] backdrop-blur-sm">
                 <p className="text-lg text-muted-foreground">
-                  No articles found matching your criteria.
+                  {t("blogPage.noResults", "No articles found matching your criteria.")}
                 </p>
               </div>
             )}

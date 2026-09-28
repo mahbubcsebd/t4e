@@ -1,6 +1,7 @@
 {
   "nav": {
     "product": "Producto",
+    "marketplace": "Marketplace",
     "howItWorks": "Cómo funciona",
     "howItWorksDesc": "Conectar, Revisar, Cambiar",
     "codeToDesign": "Código → Diseño",
