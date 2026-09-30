@@ -29,9 +29,9 @@ export const metadata = {
     siteName: 'Think4Ever',
     images: [
       {
-        url: '/images/opengraph-image.jpg',
+        url: 'https://think4ever.com/images/og-card.png',
         width: 1200,
-        height: 630,
+        height: 1200,
         alt: 'Think4Ever',
       },
     ],
@@ -41,7 +41,7 @@ export const metadata = {
     title: 'Turn Code Into a Living System Map | Think4Ever',
     description:
       'Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.',
-    images: ['/images/opengraph-image.jpg'],
+    images: ['https://think4ever.com/images/og-card.png'],
   },
 };
 
