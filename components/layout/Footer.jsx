@@ -29,10 +29,10 @@ export default function Footer() {
           <div className="md:col-span-4 lg:col-span-5 flex flex-col items-start gap-5">
             <Link href={localizeHref("/")} className="mb-1" aria-label="Think4Ever Home">
               <Image
-                src="/images/think4ever-logo.png"
+                src="/images/think4ever-logo-dark.jpeg"
                 alt="Think4Ever"
-                width={180}
-                height={41}
+                width={220}
+                height={50}
                 className="h-10 w-auto object-contain"
               />
             </Link>

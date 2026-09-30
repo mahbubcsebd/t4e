@@ -62,67 +62,46 @@ export default function CoherenceSection() {
 
               {/* Split View Comparison */}
               <div className="flex flex-col lg:flex-row relative items-stretch">
-                {/* Center VS Divider on Desktop */}
-                <div className="hidden lg:flex flex-col items-center justify-center gap-1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                  <div className="text-xl font-bold text-red-500 leading-none">
-                    ≠
-                  </div>
-                </div>
 
-                {/* Left: Approved Intent */}
-                <div className="flex-grow flex-1 p-2 sm:p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-border bg-gradient-to-br from-primary/10 to-transparent flex flex-col">
+                {/* Left: Approved Intent - Brand Blue */}
+                <div className="flex-grow flex-1 p-2 sm:p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-border bg-blue-50/30 flex flex-col">
                   <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                    <div className="p-2 bg-primary/20 text-primary rounded-lg shrink-0">
+                    <div className="p-2 rounded-lg shrink-0" style={{background: '#1D63E010', color: '#1D63E0'}}>
                       <FileText className="w-4 h-4" />
                     </div>
-                    <span className="text-[10px] font-semibold text-foreground uppercase tracking-widest leading-tight">
+                    <span className="text-[10px] font-semibold uppercase tracking-widest leading-tight" style={{color: '#1D63E0'}}>
                       {t("coherence.approvedTag")}
                     </span>
                   </div>
 
-                  <div className="gemini-card rounded-xl p-3 sm:p-6 relative group-hover:-translate-y-1 transition-transform duration-500 flex-1 border !border-primary shadow-sm shadow-primary/5">
-                    <div className="absolute -top-2.5 -right-1 sm:-top-3 sm:-right-3 bg-white text-primary rounded-full p-0.5 shadow-md z-20">
-                      <CheckCircle2 className="w-5 h-5 fill-primary text-white" />
+                  <div className="rounded-xl p-3 sm:p-6 relative group-hover:-translate-y-1 transition-transform duration-500 flex-1 border bg-white shadow-sm" style={{borderColor: '#1D63E0'}}>
+                    <div className="absolute -top-2.5 -right-1 sm:-top-3 sm:-right-3 bg-white rounded-full p-0.5 shadow-md z-20">
+                      <CheckCircle2 className="w-5 h-5" style={{fill: '#1D63E0', color: 'white'}} />
                     </div>
-                    <strong className="text-base sm:text-lg lg:text-xl font-medium text-foreground block mb-3 leading-snug">
-                      "{t("coherence.approvedTitle")}"
+                    <strong className="text-base sm:text-lg lg:text-xl font-semibold text-foreground block leading-snug">
+                      {t("coherence.approvedTitle")}
                     </strong>
-                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed break-words">
-                      {t("coherence.approvedDesc")}
-                    </p>
                   </div>
                 </div>
 
-                {/* Right: Proposed Implementation (Error Theme) */}
-                <div className="flex-grow flex-1 p-2 sm:p-8 lg:p-12 bg-gradient-to-bl from-red-50 to-transparent flex flex-col border-t lg:border-t-0 border-border lg:border-none">
+                {/* Right: Proposed Implementation - Brand Orange */}
+                <div className="flex-grow flex-1 p-2 sm:p-8 lg:p-12 flex flex-col border-t lg:border-t-0 border-border lg:border-none" style={{background: '#FF7A1A08'}}>
                   <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                    <div className="p-2 bg-red-100 text-red-600 rounded-lg shrink-0 border border-red-200">
+                    <div className="p-2 rounded-lg shrink-0" style={{background: '#FF7A1A15', color: '#FF7A1A'}}>
                       <GitPullRequest className="w-4 h-4" />
                     </div>
-                    <span className="text-[10px] font-bold text-red-600 uppercase tracking-widest leading-tight">
+                    <span className="text-[10px] font-bold uppercase tracking-widest leading-tight" style={{color: '#FF7A1A'}}>
                       {t("coherence.proposedTag")}
                     </span>
                   </div>
 
-                  <div className="gemini-card bg-red-50/50 rounded-xl p-3 sm:p-6 font-mono relative group-hover:-translate-y-1 transition-transform duration-500 delay-75 flex-1 border !border-red-500 shadow-sm shadow-red-500/10">
-                    <div className="absolute -top-2.5 -right-1 sm:-top-3 sm:-right-3 bg-white text-red-500 border-2 border-red-500 rounded-full p-0.5 shadow-md z-20">
-                      <X className="w-3.5 h-3.5" strokeWidth={3} />
+                  <div className="rounded-xl p-3 sm:p-6 relative group-hover:-translate-y-1 transition-transform duration-500 delay-75 flex-1 border bg-white shadow-sm" style={{borderColor: '#FF7A1A'}}>
+                    <div className="absolute -top-2.5 -right-1 sm:-top-3 sm:-right-3 bg-white border-2 rounded-full p-0.5 shadow-md z-20" style={{borderColor: '#FF7A1A'}}>
+                      <X className="w-3.5 h-3.5" strokeWidth={3} style={{color: '#FF7A1A'}} />
                     </div>
-                    {/* Subtle frosted glass tint for diff */}
-                    <div className="absolute inset-0 bg-white/40 pointer-events-none rounded-xl"></div>
-
-                    <div className="flex items-center gap-2 sm:gap-4 text-[10px] sm:text-[11px] text-red-700/70 mb-3 tracking-wider uppercase font-sans font-medium break-all">
-                      <span>src/config/policy.ts</span>
-                    </div>
-
-                    <div className="relative pl-3 sm:pl-4 border-l-2 border-red-300 text-xs sm:text-sm">
-                      <strong className="text-red-900 block mb-2 sm:mb-3 leading-relaxed">
-                        {t("coherence.proposedTitle")}
-                      </strong>
-                      <p className="text-red-600/80 font-mono text-[10px] sm:text-xs leading-relaxed mt-1.5">
-                        // {t("coherence.proposedDesc")}
-                      </p>
-                    </div>
+                    <strong className="text-base sm:text-lg lg:text-xl font-semibold text-foreground block leading-snug">
+                      {t("coherence.proposedTitle")}
+                    </strong>
                   </div>
                 </div>
               </div>
