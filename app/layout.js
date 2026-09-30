@@ -1,51 +1,57 @@
-import { Poppins } from "next/font/google";
-import "./globals.css";
-import { LanguageProvider } from "@/context/LanguageContext";
-import { ThemeProvider } from "@/components/theme-provider";
-import Script from "next/script";
-
+import { ThemeProvider } from '@/components/theme-provider';
+import { LanguageProvider } from '@/context/LanguageContext';
+import { Poppins } from 'next/font/google';
+import Script from 'next/script';
+import './globals.css';
 
 const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: '--font-poppins',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata = {
-  metadataBase: process.env.NEXT_PUBLIC_VERCEL_URL 
-    ? new URL(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}`) 
-    : new URL("https://think4ever.com"),
-  title: "Turn Code Into a Living System Map | Think4Ever",
-  description: "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.",
+  metadataBase: process.env.NEXT_PUBLIC_VERCEL_URL
+    ? new URL(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}`)
+    : new URL('https://think4ever.com'),
+  title: 'Turn Code Into a Living System Map | Think4Ever',
+  description:
+    'Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.',
   icons: {
-    icon: "/images/favicon.ico",
+    icon: '/images/favicon.ico',
   },
   openGraph: {
-    title: "Turn Code Into a Living System Map | Think4Ever",
-    description: "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.",
-    type: "website",
-    url: "https://think4ever.com",
-    siteName: "Think4Ever",
+    title: 'Turn Code Into a Living System Map | Think4Ever',
+    description:
+      'Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.',
+    type: 'website',
+    url: 'https://think4ever.com',
+    siteName: 'Think4Ever',
     images: [
       {
-        url: "/images/og-card.png",
+        url: 'https://think4ever.com/images/og-card.png',
         width: 1200,
         height: 1200,
-        alt: "Think4Ever",
+        alt: 'Think4Ever',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Turn Code Into a Living System Map | Think4Ever",
-    description: "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.",
-    images: ["/images/og-card.png"],
+    card: 'summary_large_image',
+    title: 'Turn Code Into a Living System Map | Think4Ever',
+    description:
+      'Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.',
+    images: ['https://think4ever.com/images/og-card.png'],
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${poppins.variable} h-full antialiased scroll-smooth`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${poppins.variable} h-full antialiased scroll-smooth`}
+      suppressHydrationWarning
+    >
       <body className="min-h-full flex flex-col font-sans bg-background text-foreground transition-colors duration-300">
         <Script src="/t4e-analytics.js" strategy="afterInteractive" />
         <ThemeProvider
@@ -54,10 +60,7 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <LanguageProvider>
-
-            {children}
-          </LanguageProvider>
+          <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
