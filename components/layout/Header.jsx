@@ -1,28 +1,27 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import Think4EverLogo from "@/components/layout/Think4EverLogo";
-import { useLanguage } from "@/context/LanguageContext";
-import { useTheme } from "next-themes";
+import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/context/LanguageContext';
+import { AnimatePresence, motion } from 'framer-motion';
 import {
   ChevronDown,
+  Code,
+  ExternalLink,
   Globe,
   Menu,
-  X,
-  ExternalLink,
-  Rocket,
   Palette,
-  Code,
-  Users,
-  Settings,
-  Puzzle,
-  Terminal,
   Play,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
+  Puzzle,
+  Rocket,
+  Settings,
+  Terminal,
+  Users,
+  X,
+} from 'lucide-react';
+import { useTheme } from 'next-themes';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Header() {
   const { t, language, setLanguage, availableLanguages } = useLanguage();
@@ -53,23 +52,27 @@ export default function Header() {
   useEffect(() => {
     setMounted(true);
     const handleClickOutside = (event) => {
-      const isOutsideDesktop = desktopLangDropdownRef.current && !desktopLangDropdownRef.current.contains(event.target);
-      const isOutsideMobile = mobileLangDropdownRef.current && !mobileLangDropdownRef.current.contains(event.target);
-      
+      const isOutsideDesktop =
+        desktopLangDropdownRef.current &&
+        !desktopLangDropdownRef.current.contains(event.target);
+      const isOutsideMobile =
+        mobileLangDropdownRef.current &&
+        !mobileLangDropdownRef.current.contains(event.target);
+
       if (isOutsideDesktop && isOutsideMobile) {
         setLangDropdownOpen(false);
       }
     };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const currentLang =
@@ -78,72 +81,72 @@ export default function Header() {
 
   const resourcesLinks = [
     {
-      title: t("nav.library", "Resource Library"),
-      desc: t("nav.libraryDesc", "Explore our collection of resources."),
-      href: localizeHref("/resources/"),
+      title: t('nav.library', 'Resource Library'),
+      desc: t('nav.libraryDesc', 'Explore our collection of resources.'),
+      href: localizeHref('/resources/'),
       icon: <Puzzle className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t("nav.blog", "Blog"),
-      desc: t("nav.blogDesc", "Read the latest news and articles."),
-      href: localizeHref("/blog"),
+      title: t('nav.blog', 'Blog'),
+      desc: t('nav.blogDesc', 'Read the latest news and articles.'),
+      href: localizeHref('/blog'),
       icon: <Globe className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t("nav.faq", "FAQ"),
-      desc: t("nav.faqDesc", "Frequently asked questions."),
-      href: localizeHref("/faq"),
+      title: t('nav.faq', 'FAQ'),
+      desc: t('nav.faqDesc', 'Frequently asked questions.'),
+      href: localizeHref('/faq'),
       icon: <Settings className="w-4 h-4 text-foreground" />,
     },
   ];
 
   const docsLinks = [
     {
-      title: t("nav.docsMenu.onboardingTitle", "Customer Onboarding"),
-      desc: t("nav.docsMenu.onboardingDesc", "Get started with Think4Ever."),
-      href: "https://think4ever.com/docs/onboarding.html",
+      title: t('nav.docsMenu.onboardingTitle', 'Customer Onboarding'),
+      desc: t('nav.docsMenu.onboardingDesc', 'Get started with Think4Ever.'),
+      href: 'https://think4ever.com/docs/onboarding.html',
       icon: <Rocket className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t("nav.docsMenu.designerTitle", "Think4Ever Designer"),
-      desc: t("nav.docsMenu.designerDesc", "Learn how to map systems."),
-      href: "https://think4ever.com/docs/manual_introduction.html",
+      title: t('nav.docsMenu.designerTitle', 'Think4Ever Designer'),
+      desc: t('nav.docsMenu.designerDesc', 'Learn how to map systems.'),
+      href: 'https://think4ever.com/docs/manual_introduction.html',
       icon: <Palette className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t("nav.docsMenu.developerTitle", "Think4Ever Developer"),
-      desc: t("nav.docsMenu.developerDesc", "Technical guide for developers."),
-      href: "https://think4ever.com/docs/dev/start_new_project.html",
+      title: t('nav.docsMenu.developerTitle', 'Think4Ever Developer'),
+      desc: t('nav.docsMenu.developerDesc', 'Technical guide for developers.'),
+      href: 'https://think4ever.com/docs/dev/start_new_project.html',
       icon: <Code className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t("nav.docsMenu.portalTitle", "Think4Ever Portal"),
-      desc: t("nav.docsMenu.portalDesc", "Manage team dashboard."),
-      href: "https://think4ever.com/docs/portal/dashboard.html",
+      title: t('nav.docsMenu.portalTitle', 'Think4Ever Portal'),
+      desc: t('nav.docsMenu.portalDesc', 'Manage team dashboard.'),
+      href: 'https://think4ever.com/docs/portal/dashboard.html',
       icon: <Users className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t("nav.docsMenu.reverseEngTitle", "Reverse Engineering"),
-      desc: t("nav.docsMenu.reverseEngDesc", "Reverse engineer codebases."),
-      href: "https://think4ever.com/docs/reverse_engineering.html",
+      title: t('nav.docsMenu.reverseEngTitle', 'Reverse Engineering'),
+      desc: t('nav.docsMenu.reverseEngDesc', 'Reverse engineer codebases.'),
+      href: 'https://think4ever.com/docs/reverse_engineering.html',
       icon: <Settings className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t("nav.docsMenu.mcpTitle", "Think MCP"),
-      desc: t("nav.docsMenu.mcpDesc", "Claude Code, Codex, and Cursor."),
-      href: "https://think4ever.com/docs/manual_think_mcp.html",
+      title: t('nav.docsMenu.mcpTitle', 'Think MCP'),
+      desc: t('nav.docsMenu.mcpDesc', 'Claude Code, Codex, and Cursor.'),
+      href: 'https://think4ever.com/docs/manual_think_mcp.html',
       icon: <Puzzle className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t("nav.docsMenu.vscodeTitle", "VS Code Plugin"),
-      desc: t("nav.docsMenu.vscodeDesc", "Access T4E inside VS Code."),
-      href: "https://think4ever.com/docs/dev/vs_code_integration.html",
+      title: t('nav.docsMenu.vscodeTitle', 'VS Code Plugin'),
+      desc: t('nav.docsMenu.vscodeDesc', 'Access T4E inside VS Code.'),
+      href: 'https://think4ever.com/docs/dev/vs_code_integration.html',
       icon: <Code className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t("nav.docsMenu.apiTitle", "Think API"),
-      desc: t("nav.docsMenu.apiDesc", "Programmatically manage tokens."),
-      href: "https://think4ever.com/docs/manual_think_api.html",
+      title: t('nav.docsMenu.apiTitle', 'Think API'),
+      desc: t('nav.docsMenu.apiDesc', 'Programmatically manage tokens.'),
+      href: 'https://think4ever.com/docs/manual_think_api.html',
       icon: <Terminal className="w-4 h-4 text-foreground" />,
     },
   ];
@@ -152,21 +155,27 @@ export default function Header() {
     <header
       className={`sticky top-0 z-[100] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] border-b ${
         scrolled
-          ? "bg-[#093cad]/95 backdrop-blur-xl border-white/10 shadow-lg"
-          : "bg-[#093cad] border-transparent shadow-none"
+          ? 'bg-[#093cad]/95 backdrop-blur-xl border-white/10 shadow-lg'
+          : 'bg-[#093cad] border-transparent shadow-none'
       }`}
     >
       <div
         className={`max-w-[1600px] mx-auto px-5 flex items-center justify-between gap-4 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          scrolled ? "h-16" : "h-[76px]"
+          scrolled ? 'h-16' : 'h-[76px]'
         }`}
       >
         {/* Brand Logo */}
-        <Link href={localizeHref("/")} className="flex items-center gap-2 shrink-0" aria-label="Think4Ever Home">
-          <Think4EverLogo
-            height={scrolled ? 32 : 38}
-            animate
-            className="transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+        <Link
+          href={localizeHref('/')}
+          className="flex items-center gap-2 shrink-0"
+          aria-label="Think4Ever Home"
+        >
+          <Image
+            src="/images/think4ever-logo.png"
+            alt="Think4Ever"
+            width={260}
+            height={80}
+            className={`w-auto object-contain transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'h-14' : 'h-16'}`}
           />
         </Link>
 
@@ -183,18 +192,18 @@ export default function Header() {
               className="flex items-center gap-1 hover:text-white transition-colors py-2 whitespace-nowrap"
               aria-label="Toggle Product menu"
             >
-              <span>{t("nav.product", "Product")}</span>
+              <span>{t('nav.product', 'Product')}</span>
               <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-0 w-64 bg-card rounded-2xl shadow-2xl border border-border py-2 transition-all duration-200 z-50 ${
                 howItWorksOpen
-                  ? "opacity-100 visible translate-y-0"
-                  : "opacity-0 invisible -translate-y-2"
+                  ? 'opacity-100 visible translate-y-0'
+                  : 'opacity-0 invisible -translate-y-2'
               }`}
             >
               <Link
-                href={localizeHref("/how-it-works")}
+                href={localizeHref('/how-it-works')}
                 className="flex items-start gap-3 px-4 py-3 hover:bg-muted group/item transition-colors"
               >
                 <div className="p-1.5 rounded-lg bg-muted border border-border group-hover/item:bg-card shrink-0">
@@ -202,15 +211,15 @@ export default function Header() {
                 </div>
                 <div>
                   <div className="text-xs font-bold text-foreground group-hover/item:text-primary">
-                    {t("nav.howItWorks")}
+                    {t('nav.howItWorks')}
                   </div>
                   <p className="text-[10px] text-muted-foreground mt-0.5">
-                    {t("nav.howItWorksDesc")}
+                    {t('nav.howItWorksDesc')}
                   </p>
                 </div>
               </Link>
               <Link
-                href={localizeHref("/code-to-design")}
+                href={localizeHref('/code-to-design')}
                 className="flex items-start gap-3 px-4 py-3 hover:bg-muted group/item transition-colors"
               >
                 <div className="p-1.5 rounded-lg bg-muted border border-border group-hover/item:bg-card shrink-0">
@@ -218,18 +227,18 @@ export default function Header() {
                 </div>
                 <div>
                   <div className="text-xs font-bold text-foreground group-hover/item:text-primary">
-                    {t("nav.codeToDesign")}
+                    {t('nav.codeToDesign')}
                   </div>
                   <p className="text-[10px] text-muted-foreground mt-0.5">
                     {t(
-                      "nav.codeToDesignDesc",
-                      "Reverse engineer code to visuals",
+                      'nav.codeToDesignDesc',
+                      'Reverse engineer code to visuals',
                     )}
                   </p>
                 </div>
               </Link>
               <Link
-                href={localizeHref("/design-to-code")}
+                href={localizeHref('/design-to-code')}
                 className="flex items-start gap-3 px-4 py-3 hover:bg-muted group/item transition-colors"
               >
                 <div className="p-1.5 rounded-lg bg-muted border border-border group-hover/item:bg-card shrink-0">
@@ -237,26 +246,26 @@ export default function Header() {
                 </div>
                 <div>
                   <div className="text-xs font-bold text-foreground group-hover/item:text-primary">
-                    {t("nav.designToCode")}
+                    {t('nav.designToCode')}
                   </div>
                   <p className="text-[10px] text-muted-foreground mt-0.5">
-                    {t("nav.designToCodeDesc", "Turn systems into actual code")}
+                    {t('nav.designToCodeDesc', 'Turn systems into actual code')}
                   </p>
                 </div>
               </Link>
             </div>
           </div>
           <Link
-            href={localizeHref("/marketplace")}
+            href={localizeHref('/marketplace')}
             className="hover:text-white transition-colors whitespace-nowrap"
           >
-            {t("nav.marketplace", "Marketplace")}
+            {t('nav.marketplace', 'Marketplace')}
           </Link>
           <Link
-            href={localizeHref("/integrations")}
+            href={localizeHref('/integrations')}
             className="hover:text-white transition-colors whitespace-nowrap"
           >
-            {t("nav.integrations")}
+            {t('nav.integrations')}
           </Link>
 
           {/* Resources Dropdown with chevron */}
@@ -270,14 +279,14 @@ export default function Header() {
               className="flex items-center gap-1 hover:text-white transition-colors py-2 whitespace-nowrap"
               aria-label="Toggle Resources menu"
             >
-              <span>{t("nav.resources")}</span>
+              <span>{t('nav.resources')}</span>
               <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-1/2 -translate-x-1/2 w-[260px] bg-card rounded-2xl shadow-2xl border border-border p-2 transition-all duration-200 z-50 grid grid-cols-1 gap-1 ${
                 resourcesOpen
-                  ? "opacity-100 visible translate-y-0"
-                  : "opacity-0 invisible -translate-y-2"
+                  ? 'opacity-100 visible translate-y-0'
+                  : 'opacity-0 invisible -translate-y-2'
               }`}
             >
               {resourcesLinks.map((res, idx) => (
@@ -313,16 +322,14 @@ export default function Header() {
               className="flex items-center gap-1 hover:text-white transition-colors py-2 whitespace-nowrap"
               aria-label="Toggle Docs menu"
             >
-              <span>
-                {t("nav.docs", "Docs")}
-              </span>
+              <span>{t('nav.docs', 'Docs')}</span>
               <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-1/2 -translate-x-1/2 w-[540px] bg-card rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
                 docsOpen
-                  ? "opacity-100 visible translate-y-0"
-                  : "opacity-0 invisible -translate-y-2"
+                  ? 'opacity-100 visible translate-y-0'
+                  : 'opacity-0 invisible -translate-y-2'
               }`}
             >
               {docsLinks.map((doc, idx) => (
@@ -351,10 +358,10 @@ export default function Header() {
           </div>
 
           <Link
-            href={localizeHref("/pricing")}
+            href={localizeHref('/pricing')}
             className="hover:text-white transition-colors whitespace-nowrap"
           >
-            {t("nav.pricing")}
+            {t('nav.pricing')}
           </Link>
         </nav>
 
@@ -368,17 +375,19 @@ export default function Header() {
               aria-label="Select language"
             >
               <Globe className="w-4 h-4 text-white/90" />
-              <span className="uppercase text-white font-semibold">{currentLang.code}</span>
+              <span className="uppercase text-white font-semibold">
+                {currentLang.code}
+              </span>
               <ChevronDown
-                className={`w-3.5 h-3.5 text-white/90 transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
+                className={`w-3.5 h-3.5 text-white/90 transition-transform duration-200 ${langDropdownOpen ? 'rotate-180' : ''}`}
               />
             </button>
 
             <div
               className={`absolute right-0 top-full mt-1 w-36 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-border py-2 z-50 transition-all duration-200 ${
                 langDropdownOpen
-                  ? "opacity-100 visible translate-y-0"
-                  : "opacity-0 invisible -translate-y-2"
+                  ? 'opacity-100 visible translate-y-0'
+                  : 'opacity-0 invisible -translate-y-2'
               }`}
             >
               {availableLanguages
@@ -389,14 +398,14 @@ export default function Header() {
                     onClick={() => handleLanguageChange(lang.code)}
                     className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
                       language === lang.code
-                        ? "text-foreground font-bold bg-muted"
-                        : "text-muted-foreground font-medium hover:text-foreground hover:bg-muted"
+                        ? 'text-foreground font-bold bg-muted'
+                        : 'text-muted-foreground font-medium hover:text-foreground hover:bg-muted'
                     }`}
                     aria-label={`Change language to ${lang.name}`}
                   >
                     <div className="flex items-center gap-2">
                       <Image
-                        src={`https://flagcdn.com/w20/${lang.code === "en" ? "us" : lang.code}.png`}
+                        src={`https://flagcdn.com/w20/${lang.code === 'en' ? 'us' : lang.code}.png`}
                         alt={lang.name}
                         width={18}
                         height={13}
@@ -414,16 +423,23 @@ export default function Header() {
           </div>
 
           {/* Sign in text link */}
-          <Button asChild variant="ghost" className="text-white hover:text-white hover:bg-white/10 font-medium">
+          <Button
+            asChild
+            variant="ghost"
+            className="text-white hover:text-white hover:bg-white/10 font-medium"
+          >
             <a href="https://portal.think4ever.com/#/login">
-              {t("nav.signIn")}
+              {t('nav.signIn')}
             </a>
           </Button>
 
           {/* Start free button */}
-          <Button asChild className="bg-white text-[#093cad] hover:bg-gray-100 shadow-none font-bold">
+          <Button
+            asChild
+            className="bg-white text-[#093cad] hover:bg-gray-100 shadow-none font-bold"
+          >
             <a href="https://portal.think4ever.com/#/register">
-              {t("nav.startFree")}
+              {t('nav.startFree')}
             </a>
           </Button>
         </div>
@@ -439,7 +455,7 @@ export default function Header() {
               <Globe className="w-4 h-4 text-white/90" />
               <span className="uppercase">{currentLang.code}</span>
               <ChevronDown
-                className={`w-3.5 h-3.5 text-white/90 transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`}
+                className={`w-3.5 h-3.5 text-white/90 transition-transform duration-200 ${langDropdownOpen ? 'rotate-180' : ''}`}
               />
             </button>
 
@@ -453,14 +469,14 @@ export default function Header() {
                       onClick={() => handleLanguageChange(lang.code)}
                       className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
                         language === lang.code
-                          ? "text-foreground font-bold bg-muted"
-                          : "text-muted-foreground font-medium hover:bg-muted"
+                          ? 'text-foreground font-bold bg-muted'
+                          : 'text-muted-foreground font-medium hover:bg-muted'
                       }`}
                       aria-label={`Change language to ${lang.name}`}
                     >
                       <div className="flex items-center gap-2">
                         <Image
-                          src={`https://flagcdn.com/w20/${lang.code === "en" ? "us" : lang.code}.png`}
+                          src={`https://flagcdn.com/w20/${lang.code === 'en' ? 'us' : lang.code}.png`}
                           alt={lang.name}
                           width={18}
                           height={13}
@@ -483,7 +499,7 @@ export default function Header() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 text-white hover:text-white/80 transition-colors"
-            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
           >
             {mobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -499,7 +515,7 @@ export default function Header() {
         {mobileMenuOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
+            animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             className="lg:hidden bg-card border-b border-border px-6 py-4 flex flex-col gap-0 max-h-[calc(100vh-80px)] overflow-y-auto"
           >
@@ -509,7 +525,7 @@ export default function Header() {
                 className="flex items-center justify-between text-[15px] font-semibold text-[#314865] w-full text-left py-2.5"
                 aria-label="Toggle mobile Product menu"
               >
-                <span>{t("nav.product", "Product")}</span>
+                <span>{t('nav.product', 'Product')}</span>
                 <motion.div
                   animate={{ rotate: mobileHowItWorksOpen ? 180 : 0 }}
                 >
@@ -520,32 +536,32 @@ export default function Header() {
                 {mobileHowItWorksOpen && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
+                    animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                    transition={{ duration: 0.2, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       <Link
-                        href={localizeHref("/how-it-works")}
+                        href={localizeHref('/how-it-works')}
                         onClick={() => setMobileMenuOpen(false)}
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                       >
-                        {t("nav.howItWorks")}
+                        {t('nav.howItWorks')}
                       </Link>
                       <Link
-                        href={localizeHref("/code-to-design")}
+                        href={localizeHref('/code-to-design')}
                         onClick={() => setMobileMenuOpen(false)}
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                       >
-                        {t("nav.codeToDesign")}
+                        {t('nav.codeToDesign')}
                       </Link>
                       <Link
-                        href={localizeHref("/design-to-code")}
+                        href={localizeHref('/design-to-code')}
                         onClick={() => setMobileMenuOpen(false)}
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                       >
-                        {t("nav.designToCode")}
+                        {t('nav.designToCode')}
                       </Link>
                     </div>
                   </motion.div>
@@ -555,18 +571,18 @@ export default function Header() {
 
             <div className="py-1">
               <Link
-                href={localizeHref("/marketplace")}
+                href={localizeHref('/marketplace')}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
               >
-                {t("nav.marketplace", "Marketplace")}
+                {t('nav.marketplace', 'Marketplace')}
               </Link>
               <Link
-                href={localizeHref("/integrations")}
+                href={localizeHref('/integrations')}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
               >
-                {t("nav.integrations")}
+                {t('nav.integrations')}
               </Link>
             </div>
 
@@ -576,7 +592,7 @@ export default function Header() {
                 className="flex items-center justify-between text-[15px] font-semibold text-[#314865] w-full text-left py-2.5"
                 aria-label="Toggle mobile Resources menu"
               >
-                <span>{t("nav.resources")}</span>
+                <span>{t('nav.resources')}</span>
                 <motion.div animate={{ rotate: mobileResourcesOpen ? 180 : 0 }}>
                   <ChevronDown className="w-4 h-4" />
                 </motion.div>
@@ -585,9 +601,9 @@ export default function Header() {
                 {mobileResourcesOpen && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
+                    animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                    transition={{ duration: 0.2, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
@@ -597,7 +613,7 @@ export default function Header() {
                         onClick={() => setMobileMenuOpen(false)}
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                       >
-                        {t("nav.blog")}
+                        {t('nav.blog')}
                       </Link>
                       <Link
                         href="/faq"
@@ -618,7 +634,7 @@ export default function Header() {
                 className="flex items-center justify-between text-[15px] font-semibold text-[#314865] w-full text-left py-2.5"
                 aria-label="Toggle mobile Docs menu"
               >
-                <span>{t("nav.docs")}</span>
+                <span>{t('nav.docs')}</span>
                 <motion.div animate={{ rotate: mobileDocsOpen ? 180 : 0 }}>
                   <ChevronDown className="w-4 h-4" />
                 </motion.div>
@@ -627,9 +643,9 @@ export default function Header() {
                 {mobileDocsOpen && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
+                    animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                    transition={{ duration: 0.2, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
@@ -654,11 +670,11 @@ export default function Header() {
 
             <div className="py-1 mb-2">
               <Link
-                href={localizeHref("/pricing")}
+                href={localizeHref('/pricing')}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
               >
-                {t("nav.pricing")}
+                {t('nav.pricing')}
               </Link>
             </div>
 
@@ -668,7 +684,7 @@ export default function Header() {
                   href="https://portal.think4ever.com/#/login"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {t("nav.signIn")}
+                  {t('nav.signIn')}
                 </a>
               </Button>
               <Button asChild className="w-full text-center">
@@ -676,7 +692,7 @@ export default function Header() {
                   href="https://portal.think4ever.com/#/register"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {t("nav.startFree")}
+                  {t('nav.startFree')}
                 </a>
               </Button>
             </div>
