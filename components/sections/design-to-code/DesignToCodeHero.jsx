@@ -14,9 +14,7 @@ export default function DesignToCodeHero() {
   return (
     <section className="pt-8 lg:pt-12 pb-4 lg:pb-8 bg-gradient-to-b bg-background border-b border-border text-center">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Eyebrow className="mb-4">
-        {t("designToCodePage.heroEyebrow")}
-      </Eyebrow>
+        <Eyebrow className="mb-4">{t("designToCodePage.heroEyebrow")}</Eyebrow>
 
         <h1 className="max-w-[700px] mx-auto text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-6">
           {t("designToCodePage.heroTitlePrefix")}
@@ -37,7 +35,7 @@ export default function DesignToCodeHero() {
           </Button>
           <button
             onClick={() => {
-              setVideoId("Lq-vza9_CzI");
+              setVideoId("2R5KiUT2RZU");
               setIsVideoOpen(true);
             }}
             className="btn-alt text-sm py-3 px-6"
