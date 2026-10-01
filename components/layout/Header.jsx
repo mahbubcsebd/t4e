@@ -354,7 +354,7 @@ export default function Header() {
               <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
             </button>
             <div
-              className={`absolute top-full left-1/2 -translate-x-1/2 w-[540px] bg-card rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
+              className={`absolute top-full left-1/2 -translate-x-1/2 w-[590px] bg-card rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
                 docsOpen
                   ? 'opacity-100 visible translate-y-0'
                   : 'opacity-0 invisible -translate-y-2'
