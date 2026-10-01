@@ -46,6 +46,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${dmSans.variable} h-full antialiased scroll-smooth`} suppressHydrationWarning>
+      <head>
+        <meta name="google" content="notranslate" />
+      </head>
       <body className="min-h-full flex flex-col font-sans bg-background text-foreground transition-colors duration-300">
         <Script src="/t4e-analytics.js" strategy="lazyOnload" />
         <ThemeProvider

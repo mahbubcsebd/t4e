@@ -129,14 +129,14 @@ export default function Footer() {
               >
                 {t('footer.faq')}
               </Link>
-              <a
+              {/* <a
                 href="https://think4ever.com/docs/onboarding.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {t('nav.docs')}
-              </a>
+              </a> */}
               <Link
                 href={localizeHref('/security')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
