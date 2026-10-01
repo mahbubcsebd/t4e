@@ -17,6 +17,10 @@ import {
   Terminal,
   Users,
   X,
+  Briefcase,
+  FolderPlus,
+  Shield,
+  Store,
 } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
@@ -103,51 +107,75 @@ export default function Header() {
   const docsLinks = [
     {
       title: t('nav.docsMenu.onboardingTitle', 'Customer Onboarding'),
-      desc: t('nav.docsMenu.onboardingDesc', 'Get started with Think4Ever.'),
+      desc: t('nav.docsMenu.onboardingDesc', '1 - Get Started with Think4ever.'),
       href: 'https://think4ever.com/docs/onboarding.html',
       icon: <Rocket className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t('nav.docsMenu.designerTitle', 'Think4Ever Designer'),
-      desc: t('nav.docsMenu.designerDesc', 'Learn how to map systems.'),
+      title: t('nav.docsMenu.designerTitle', 'Think4ever Designer'),
+      desc: t('nav.docsMenu.designerDesc', '7 - Learn how to map systems.'),
       href: 'https://think4ever.com/docs/manual_introduction.html',
       icon: <Palette className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t('nav.docsMenu.developerTitle', 'Think4Ever Developer'),
-      desc: t('nav.docsMenu.developerDesc', 'Technical guide for developers.'),
+      title: t('nav.docsMenu.workspaceTitle', 'Customer Workspace'),
+      desc: t('nav.docsMenu.workspaceDesc', '2 - Managing your Workspace'),
+      href: 'https://think4ever.com/docs/portal/workspace.html',
+      icon: <Briefcase className="w-4 h-4 text-foreground" />,
+    },
+    {
+      title: t('nav.docsMenu.developerTitle', 'Think4ever Developer'),
+      desc: t('nav.docsMenu.developerDesc', '8 - Technical guide for developers.'),
       href: 'https://think4ever.com/docs/dev/start_new_project.html',
       icon: <Code className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t('nav.docsMenu.portalTitle', 'Think4Ever Portal'),
-      desc: t('nav.docsMenu.portalDesc', 'Manage team dashboard.'),
-      href: 'https://think4ever.com/docs/portal/dashboard.html',
-      icon: <Users className="w-4 h-4 text-foreground" />,
-    },
-    {
-      title: t('nav.docsMenu.reverseEngTitle', 'Reverse Engineering'),
-      desc: t('nav.docsMenu.reverseEngDesc', 'Reverse engineer codebases.'),
-      href: 'https://think4ever.com/docs/reverse_engineering.html',
-      icon: <Settings className="w-4 h-4 text-foreground" />,
+      title: t('nav.docsMenu.createProjectTitle', 'Build a New Project'),
+      desc: t('nav.docsMenu.createProjectDesc', '3 - Create your new project.'),
+      href: 'https://think4ever.com/docs/manual_create_project.html',
+      icon: <FolderPlus className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.docsMenu.mcpTitle', 'Think MCP'),
-      desc: t('nav.docsMenu.mcpDesc', 'Claude Code, Codex, and Cursor.'),
+      desc: t('nav.docsMenu.mcpDesc', '9 - Claude, Codex and Cursor.'),
       href: 'https://think4ever.com/docs/manual_think_mcp.html',
       icon: <Puzzle className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t('nav.docsMenu.vscodeTitle', 'VS Code Plugin'),
-      desc: t('nav.docsMenu.vscodeDesc', 'Access T4E inside VS Code.'),
-      href: 'https://think4ever.com/docs/dev/vs_code_integration.html',
-      icon: <Code className="w-4 h-4 text-foreground" />,
+      title: t('nav.docsMenu.reverseEngTitle', 'Reverse Engineering an existing Project'),
+      desc: t('nav.docsMenu.reverseEngDesc', '4 - Import your existing codebase.'),
+      href: 'https://think4ever.com/docs/reverse_engineering.html',
+      icon: <Settings className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.docsMenu.apiTitle', 'Think API'),
-      desc: t('nav.docsMenu.apiDesc', 'Programmatically manage tokens.'),
+      desc: t('nav.docsMenu.apiDesc', '10 - Programmatically manage tokens.'),
       href: 'https://think4ever.com/docs/manual_think_api.html',
       icon: <Terminal className="w-4 h-4 text-foreground" />,
+    },
+    {
+      title: t('nav.docsMenu.productionHardeningTitle', 'Production Hardening'),
+      desc: t('nav.docsMenu.productionHardeningDesc', "5 - Assess your project's production readiness."),
+      href: 'https://think4ever.com/docs/manual_production_hardening.html',
+      icon: <Shield className="w-4 h-4 text-foreground" />,
+    },
+    {
+      title: t('nav.docsMenu.portalTitle', 'Think4ever Portal'),
+      desc: t('nav.docsMenu.portalDesc', '11 - Manage your team dashboard'),
+      href: 'https://think4ever.com/docs/portal/dashboard.html',
+      icon: <Users className="w-4 h-4 text-foreground" />,
+    },
+    {
+      title: t('nav.docsMenu.marketplaceTitle', 'Marketplace'),
+      desc: t('nav.docsMenu.marketplaceDesc', '6 - Find freelancers, hire, or get hired.'),
+      href: 'https://think4ever.com/docs/portal/marketplace.html',
+      icon: <Store className="w-4 h-4 text-foreground" />,
+    },
+    {
+      title: t('nav.docsMenu.vscodeTitle', 'VS Code Plugin'),
+      desc: t('nav.docsMenu.vscodeDesc', '12 - Access T4E inside VS Code.'),
+      href: 'https://think4ever.com/docs/dev/vs_code_integration.html',
+      icon: <Code className="w-4 h-4 text-foreground" />,
     },
   ];
 
@@ -255,12 +283,12 @@ export default function Header() {
               </Link>
             </div>
           </div>
-          <Link
+          {/* <Link
             href={localizeHref('/marketplace')}
             className="hover:text-white transition-colors whitespace-nowrap"
           >
             {t('nav.marketplace', 'Marketplace')}
-          </Link>
+          </Link> */}
           <Link
             href={localizeHref('/integrations')}
             className="hover:text-white transition-colors whitespace-nowrap"
@@ -375,7 +403,7 @@ export default function Header() {
               aria-label="Select language"
             >
               <Globe className="w-4 h-4 text-white/90" />
-              <span className="uppercase text-white font-semibold">
+              <span className="uppercase text-white font-semibold" translate="no">
                 {currentLang.code}
               </span>
               <ChevronDown
@@ -412,7 +440,7 @@ export default function Header() {
                         unoptimized
                         className="w-[18px] h-auto shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
                       />
-                      <span>{lang.name}</span>
+                      <span translate="no">{lang.name}</span>
                     </div>
                     {language === lang.code && (
                       <span className="text-primary text-xs">✓</span>
@@ -483,7 +511,7 @@ export default function Header() {
                           unoptimized
                           className="w-[18px] h-auto rounded-sm shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
                         />
-                        <span>{lang.name}</span>
+                        <span translate="no">{lang.name}</span>
                       </div>
                       {language === lang.code && (
                         <span className="text-primary font-bold text-xs">
@@ -570,13 +598,13 @@ export default function Header() {
             </div>
 
             <div className="py-1">
-              <Link
+              {/* <Link
                 href={localizeHref('/marketplace')}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
               >
                 {t('nav.marketplace', 'Marketplace')}
-              </Link>
+              </Link> */}
               <Link
                 href={localizeHref('/integrations')}
                 onClick={() => setMobileMenuOpen(false)}

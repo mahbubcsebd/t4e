@@ -28,7 +28,7 @@ export const metadata = {
     siteName: "Think4Ever",
     images: [
       {
-        url: "https://think4ever.com/images/og-card.png",
+        url: "https://think4ever.com/images/opengraph-image.jpg",
         width: 1200,
         height: 1200,
         alt: "Think4Ever",
@@ -39,13 +39,16 @@ export const metadata = {
     card: "summary_large_image",
     title: "Turn Code Into a Living System Map | Think4Ever",
     description: "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.",
-    images: ["https://think4ever.com/images/og-card.png"],
+    images: ["https://think4ever.com/images/opengraph-image.jpg"],
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${dmSans.variable} h-full antialiased scroll-smooth`} suppressHydrationWarning>
+      <head>
+        <meta name="google" content="notranslate" />
+      </head>
       <body className="min-h-full flex flex-col font-sans bg-background text-foreground transition-colors duration-300">
         <Script src="/t4e-analytics.js" strategy="lazyOnload" />
         <ThemeProvider

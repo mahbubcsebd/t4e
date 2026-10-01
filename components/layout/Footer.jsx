@@ -1,10 +1,9 @@
-"use client";
+'use client';
 
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { useLanguage } from "@/context/LanguageContext";
-import { FaYoutube, FaLinkedinIn } from "react-icons/fa";
+import { useLanguage } from '@/context/LanguageContext';
+import Image from 'next/image';
+import Link from 'next/link';
+import { FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 
 export default function Footer() {
   const { t, language } = useLanguage();
@@ -27,9 +26,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="md:col-span-4 lg:col-span-5 flex flex-col items-start gap-5">
-            <Link href={localizeHref("/")} className="mb-1" aria-label="Think4Ever Home">
+            <Link
+              href={localizeHref('/')}
+              className="mb-1"
+              aria-label="Think4Ever Home"
+            >
               <Image
-                src="/images/think4ever-logo-dark.jpeg"
+                src="/images/think4ever-logo-dark.png"
                 alt="Think4Ever"
                 width={220}
                 height={50}
@@ -37,7 +40,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-foreground/70 dark:text-foreground/80 text-sm leading-relaxed max-w-sm">
-              {t("hero.subtitle")}
+              {t('hero.subtitle')}
             </p>
             {/* Social icons */}
             <div className="flex items-center gap-3 mt-1">
@@ -67,78 +70,78 @@ export default function Footer() {
             {/* Product Column */}
             <div className="flex flex-col gap-3 text-sm">
               <h4 className="text-foreground font-bold uppercase tracking-wider text-xs mb-2">
-                {t("nav.product")}
+                {t('nav.product')}
               </h4>
               <Link
-                href={localizeHref("/how-it-works")}
+                href={localizeHref('/how-it-works')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
-                {t("nav.howItWorks")}
+                {t('nav.howItWorks')}
               </Link>
               <Link
-                href={localizeHref("/code-to-design")}
+                href={localizeHref('/code-to-design')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
-                {t("nav.codeToDesign")}
+                {t('nav.codeToDesign')}
               </Link>
               <Link
-                href={localizeHref("/design-to-code")}
+                href={localizeHref('/design-to-code')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
-                {t("nav.designToCode")}
+                {t('nav.designToCode')}
               </Link>
               <Link
-                href={localizeHref("/integrations")}
+                href={localizeHref('/integrations')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
-                {t("nav.integrations")}
+                {t('nav.integrations')}
               </Link>
               <Link
-                href={localizeHref("/pricing")}
+                href={localizeHref('/pricing')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
-                {t("nav.pricing")}
+                {t('nav.pricing')}
               </Link>
             </div>
 
             {/* Resources Column */}
             <div className="flex flex-col gap-3 text-sm">
               <h4 className="text-foreground font-bold uppercase tracking-wider text-xs mb-2">
-                {t("nav.resources")}
+                {t('nav.resources')}
               </h4>
               <Link
-                href={localizeHref("/resources/")}
+                href={localizeHref('/resources/')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
-                {t("nav.library") === "nav.library"
-                  ? "Resource Library"
-                  : t("nav.library")}
+                {t('nav.library') === 'nav.library'
+                  ? 'Resource Library'
+                  : t('nav.library')}
               </Link>
               <Link
-                href={localizeHref("/blog")}
+                href={localizeHref('/blog')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
-                {t("nav.blog")}
+                {t('nav.blog')}
               </Link>
               <Link
-                href={localizeHref("/faq")}
+                href={localizeHref('/faq')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
-                {t("footer.faq")}
+                {t('footer.faq')}
               </Link>
-              <a
+              {/* <a
                 href="https://think4ever.com/docs/onboarding.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
-                {t("nav.docs")}
-              </a>
+                {t('nav.docs')}
+              </a> */}
               <Link
-                href={localizeHref("/security")}
+                href={localizeHref('/security')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
-                {t("footer.trust")}
+                {t('footer.trust')}
               </Link>
             </div>
 
@@ -148,22 +151,22 @@ export default function Footer() {
                 Legal & Privacy
               </h4>
               <Link
-                href={localizeHref("/contact-us")}
+                href={localizeHref('/contact-us')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
-                {t("footer.contact")}
+                {t('footer.contact')}
               </Link>
               <Link
-                href={localizeHref("/privacy-policy")}
+                href={localizeHref('/privacy-policy')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
-                {t("footer.privacy")}
+                {t('footer.privacy')}
               </Link>
               <Link
-                href={localizeHref("/terms-and-conditions")}
+                href={localizeHref('/terms-and-conditions')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
-                {t("footer.terms")}
+                {t('footer.terms')}
               </Link>
             </div>
           </div>
@@ -172,7 +175,7 @@ export default function Footer() {
         {/* Bottom Footer */}
         <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-foreground/70 dark:text-foreground/50 font-medium">
-            {t("footer.copyright")}
+            {t('footer.copyright')}
           </p>
           {/* Gradient badge */}
           <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-muted border border-border">
