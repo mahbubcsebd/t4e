@@ -36,7 +36,7 @@ export default function CodeToDesignHero() {
           <Button
             variant="outline"
             onClick={() => {
-              setVideoId("tmvQc1cJXY8");
+              setVideoId("XtfgRmkqsYw");
               setIsVideoOpen(true);
             }}
           >
