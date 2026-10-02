@@ -5,7 +5,7 @@ date: "05 april 2026"
 readTime: "5 min leestijd"
 category: "Perspectief"
 author: "Sunil Kishen"
-image: "/images/blog/blog-3-thumbnail.jpg"
+image: "/images/blog/think4ever-approach-vs-vibe-coding-thumbnail.jpg"
 ---
 
 

@@ -5,7 +5,7 @@ date: "20 de marzo de 2026"
 readTime: "9 min de lectura"
 category: "Ingeniería"
 author: "Sunil Kishen"
-image: "/images/blog/blog-1-thumbnail.jpg"
+image: "/images/blog/ideas-integrated-systems-thumbnail.jpg"
 ---
 
 

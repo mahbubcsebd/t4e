@@ -5,7 +5,7 @@ date: "18 de abril de 2026"
 readTime: "8 min de lectura"
 category: "Libro blanco"
 author: "Sunil Kishen"
-image: "/images/blog/blog-5-thumbnail.jpg"
+image: "/images/blog/white-paper-think-design-thumbnail.jpg"
 ---
 
 

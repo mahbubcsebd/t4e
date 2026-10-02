@@ -5,7 +5,7 @@ date: "April 12, 2026"
 readTime: "6 min read"
 category: "MCP & agent ecosystems"
 author: "Sunil Kishen"
-image: "/images/blog/blog-4-thumbnail.jpg"
+image: "/images/blog/one-spec-every-agent-thumbnail.jpg"
 ---
 
 

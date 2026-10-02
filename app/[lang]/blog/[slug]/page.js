@@ -19,7 +19,10 @@ export async function generateMetadata(props) {
 
   const title = `${post.title} | Think4Ever Blog`;
   const description = post.desc || post.description;
-  const imageUrl = post.image || `/images/opengraph-image.jpg`;
+  const relativeImageUrl = post.image || `/images/opengraph-image.jpg`;
+  const imageUrl = relativeImageUrl.startsWith('http') 
+    ? relativeImageUrl 
+    : `https://think4ever.com${relativeImageUrl}`;
 
   return {
     title,

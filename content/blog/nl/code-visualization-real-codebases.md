@@ -5,7 +5,7 @@ date: "2026-08-26"
 readTime: "12 min read"
 category: "Engineering & architecture"
 author: "Think4Ever"
-image: "/images/blog/blog-5-thumbnail.jpg"
+image: "/images/blog/white-paper-think-design-thumbnail.jpg"
 hideThumbnail: true
 ---
 
