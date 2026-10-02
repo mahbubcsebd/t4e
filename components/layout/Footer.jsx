@@ -32,7 +32,7 @@ export default function Footer() {
               aria-label="Think4Ever Home"
             >
               <Image
-                src="/images/think4ever-logo-dark.png"
+                src="/images/t4e-dark-logo.png"
                 alt="Think4Ever"
                 width={220}
                 height={50}

@@ -217,7 +217,7 @@ export default function HeroSection() {
                                   damping: 20,
                                 }}
                                 onClick={() => {
-                                  setVideoId("tmvQc1cJXY8");
+                                  setVideoId("XtfgRmkqsYw");
                                   setIsVideoOpen(true);
                                 }}
                                 className="relative z-20 group flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-card rounded-full shadow-lg border-2 border-border hover:border-primary/50 hover:scale-105 transition-all duration-300 outline-none focus:outline-none shrink-0"
@@ -357,7 +357,7 @@ export default function HeroSection() {
                                   damping: 20,
                                 }}
                                 onClick={() => {
-                                  setVideoId("2R5KiUT2RZU");
+                                  setVideoId("4Yxbu3gZNYY");
                                   setIsVideoOpen(true);
                                 }}
                                 className="relative z-20 group flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-card rounded-full shadow-lg border-2 border-border hover:border-primary/50 hover:scale-105 transition-all duration-300 outline-none focus:outline-none shrink-0"

@@ -35,7 +35,7 @@ export default function DesignToCodeHero() {
           </Button>
           <button
             onClick={() => {
-              setVideoId("2R5KiUT2RZU");
+              setVideoId("4Yxbu3gZNYY");
               setIsVideoOpen(true);
             }}
             className="btn-alt text-sm py-3 px-6"

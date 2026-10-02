@@ -4,9 +4,11 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/LanguageContext';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
+  Briefcase,
   ChevronDown,
   Code,
   ExternalLink,
+  FolderPlus,
   Globe,
   Menu,
   Palette,
@@ -14,13 +16,11 @@ import {
   Puzzle,
   Rocket,
   Settings,
+  Shield,
+  Store,
   Terminal,
   Users,
   X,
-  Briefcase,
-  FolderPlus,
-  Shield,
-  Store,
 } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
@@ -107,7 +107,10 @@ export default function Header() {
   const docsLinks = [
     {
       title: t('nav.docsMenu.onboardingTitle', 'Customer Onboarding'),
-      desc: t('nav.docsMenu.onboardingDesc', '1 - Get Started with Think4ever.'),
+      desc: t(
+        'nav.docsMenu.onboardingDesc',
+        '1 - Get Started with Think4ever.',
+      ),
       href: 'https://think4ever.com/docs/onboarding.html',
       icon: <Rocket className="w-4 h-4 text-foreground" />,
     },
@@ -125,7 +128,10 @@ export default function Header() {
     },
     {
       title: t('nav.docsMenu.developerTitle', 'Think4ever Developer'),
-      desc: t('nav.docsMenu.developerDesc', '8 - Technical guide for developers.'),
+      desc: t(
+        'nav.docsMenu.developerDesc',
+        '8 - Technical guide for developers.',
+      ),
       href: 'https://think4ever.com/docs/dev/start_new_project.html',
       icon: <Code className="w-4 h-4 text-foreground" />,
     },
@@ -142,8 +148,14 @@ export default function Header() {
       icon: <Puzzle className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t('nav.docsMenu.reverseEngTitle', 'Reverse Engineering an existing Project'),
-      desc: t('nav.docsMenu.reverseEngDesc', '4 - Import your existing codebase.'),
+      title: t(
+        'nav.docsMenu.reverseEngTitle',
+        'Reverse Engineering an existing Project',
+      ),
+      desc: t(
+        'nav.docsMenu.reverseEngDesc',
+        '4 - Import your existing codebase.',
+      ),
       href: 'https://think4ever.com/docs/reverse_engineering.html',
       icon: <Settings className="w-4 h-4 text-foreground" />,
     },
@@ -155,7 +167,10 @@ export default function Header() {
     },
     {
       title: t('nav.docsMenu.productionHardeningTitle', 'Production Hardening'),
-      desc: t('nav.docsMenu.productionHardeningDesc', "5 - Assess your project's production readiness."),
+      desc: t(
+        'nav.docsMenu.productionHardeningDesc',
+        "5 - Assess your project's production readiness.",
+      ),
       href: 'https://think4ever.com/docs/manual_production_hardening.html',
       icon: <Shield className="w-4 h-4 text-foreground" />,
     },
@@ -167,7 +182,10 @@ export default function Header() {
     },
     {
       title: t('nav.docsMenu.marketplaceTitle', 'Marketplace'),
-      desc: t('nav.docsMenu.marketplaceDesc', '6 - Find freelancers, hire, or get hired.'),
+      desc: t(
+        'nav.docsMenu.marketplaceDesc',
+        '6 - Find freelancers, hire, or get hired.',
+      ),
       href: 'https://think4ever.com/docs/portal/marketplace.html',
       icon: <Store className="w-4 h-4 text-foreground" />,
     },
@@ -181,7 +199,7 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-[100] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] border-b ${
+      className={`sticky top-0 z-40 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] border-b ${
         scrolled
           ? 'bg-[#093cad]/95 backdrop-blur-xl border-white/10 shadow-lg'
           : 'bg-[#093cad] border-transparent shadow-none'
@@ -199,7 +217,7 @@ export default function Header() {
           aria-label="Think4Ever Home"
         >
           <Image
-            src="/images/think4ever-logo.png"
+            src="/images/t4e-logo.png"
             alt="Think4Ever"
             width={260}
             height={80}
@@ -354,7 +372,7 @@ export default function Header() {
               <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
             </button>
             <div
-              className={`absolute top-full left-1/2 -translate-x-1/2 w-[540px] bg-card rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
+              className={`absolute top-full left-1/2 -translate-x-1/2 w-[590px] bg-card rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
                 docsOpen
                   ? 'opacity-100 visible translate-y-0'
                   : 'opacity-0 invisible -translate-y-2'
@@ -374,7 +392,6 @@ export default function Header() {
                   <div>
                     <div className="text-xs font-bold text-foreground group-hover/item:text-primary flex items-center gap-1">
                       <span>{doc.title}</span>
-                      <ExternalLink className="w-3 h-3 opacity-40 group-hover/item:opacity-100" />
                     </div>
                     <p className="text-[10px] text-muted-foreground leading-snug mt-0.5">
                       {doc.desc}
@@ -403,7 +420,10 @@ export default function Header() {
               aria-label="Select language"
             >
               <Globe className="w-4 h-4 text-white/90" />
-              <span className="uppercase text-white font-semibold" translate="no">
+              <span
+                className="uppercase text-white font-semibold"
+                translate="no"
+              >
                 {currentLang.code}
               </span>
               <ChevronDown
@@ -687,7 +707,6 @@ export default function Header() {
                           className="flex items-center justify-between text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                         >
                           <span>{doc.title}</span>
-                          <ExternalLink className="w-3 h-3 opacity-50" />
                         </a>
                       ))}
                     </div>

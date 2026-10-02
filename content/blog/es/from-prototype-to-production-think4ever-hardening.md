@@ -131,6 +131,6 @@ hideThumbnail: true
 
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">Aprende más</h2>
-<p>La lista de verificación completa, detalles de puntuación, opciones de corrección, acceso a la API y manejo de datos se describen en la documentación de Production Hardening: <a href="https://think4ever.com/docs/production-hardening.html" class="text-[#f56646] hover:underline">https://think4ever.com/docs/production-hardening.html</a></p>
+<p>La lista de verificación completa, detalles de puntuación, opciones de corrección, acceso a la API y manejo de datos se describen en la documentación de Production Hardening: <a href="https://think4ever.com/docs/manual_production_hardening.html" class="text-[#f56646] hover:underline">https://think4ever.com/docs/manual_production_hardening.html</a></p>
 </section>
 </div>

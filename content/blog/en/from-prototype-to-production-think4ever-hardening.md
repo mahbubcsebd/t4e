@@ -131,6 +131,6 @@ hideThumbnail: true
 
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">Learn more</h2>
-<p>The full checklist, scoring details, fix options, API access and data handling are described in the Production Hardening documentation: <a href="https://think4ever.com/docs/production-hardening.html" class="text-[#f56646] hover:underline">https://think4ever.com/docs/production-hardening.html</a></p>
+<p>The full checklist, scoring details, fix options, API access and data handling are described in the Production Hardening documentation: <a href="https://think4ever.com/docs/manual_production_hardening.html" class="text-[#f56646] hover:underline">https://think4ever.com/docs/manual_production_hardening.html</a></p>
 </section>
 </div>

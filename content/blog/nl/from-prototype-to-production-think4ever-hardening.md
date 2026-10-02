@@ -131,6 +131,6 @@ hideThumbnail: true
 
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">Leer meer</h2>
-<p>De volledige checklist, scoringsdetails, reparatieopties, API-toegang en gegevensverwerking worden beschreven in de Production Hardening-documentatie: <a href="https://think4ever.com/docs/production-hardening.html" class="text-[#f56646] hover:underline">https://think4ever.com/docs/production-hardening.html</a></p>
+<p>De volledige checklist, scoringsdetails, reparatieopties, API-toegang en gegevensverwerking worden beschreven in de Production Hardening-documentatie: <a href="https://think4ever.com/docs/manual_production_hardening.html" class="text-[#f56646] hover:underline">https://think4ever.com/docs/manual_production_hardening.html</a></p>
 </section>
 </div>

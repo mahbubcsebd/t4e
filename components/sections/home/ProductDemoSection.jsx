@@ -20,10 +20,7 @@ export default function ProductDemoSection() {
         <div className="w-full">
           {/* Clean card matching other sections */}
           <div className="gemini-card rounded-xl p-4 sm:p-16 flex flex-col items-center justify-center gap-8 overflow-hidden relative text-center w-full">
-            {/* Subtle background watermark */}
-            <div className="absolute right-0 bottom-0 text-muted-foreground/[0.05] text-[180px] font-black leading-none select-none pointer-events-none overflow-hidden z-0">
-              T4E
-            </div>
+
 
             <div className="relative z-10 flex flex-col items-center max-w-2xl">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-muted text-foreground text-xs font-bold tracking-wide mb-6 border border-border">
