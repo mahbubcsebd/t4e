@@ -5,7 +5,7 @@ date: "20 maart 2026"
 readTime: "9 min leestijd"
 category: "Engineering"
 author: "Sunil Kishen"
-image: "/images/blog/blog-1-thumbnail.jpg"
+image: "/images/blog/ideas-integrated-systems-thumbnail.jpg"
 ---
 
 

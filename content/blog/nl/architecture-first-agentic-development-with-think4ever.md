@@ -5,7 +5,7 @@ date: "28 maart 2026"
 readTime: "7 min leestijd"
 category: "Architectuur"
 author: "Sunil Kishen"
-image: "/images/blog/blog-2-thumbnail.jpg"
+image: "/images/blog/architecture-first-agentic-development-thumbnail.jpg"
 ---
 
 

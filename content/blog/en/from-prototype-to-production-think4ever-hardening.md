@@ -5,7 +5,7 @@ date: "September 25, 2026"
 readTime: "7 min read"
 category: "Production"
 author: "Sunil Kishen"
-image: "/images/blog/blog-5-img-1.jpg"
+image: "/images/blog/from-prototype-to-production-thumbnail.jpg"
 hideThumbnail: true
 ---
 
@@ -53,7 +53,7 @@ hideThumbnail: true
 
 <figure class="my-8">
 <div class="w-full overflow-hidden rounded-xl border border-gray-100 shadow-sm">
-<img src="/images/blog/blog-5-img-1.jpg" alt="Choosing Production hardening on the onboarding screen" class="w-full h-auto" />
+<img src="/images/blog/from-prototype-to-production-thumbnail.jpg" alt="Choosing Production hardening on the onboarding screen" class="w-full h-auto" />
 </div>
 <figcaption class="mt-4 text-center text-sm italic text-gray-500">Figure 1. Choosing Production hardening on the onboarding screen.</figcaption>
 </figure>

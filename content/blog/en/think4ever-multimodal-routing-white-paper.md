@@ -5,7 +5,7 @@ date: "August 26, 2026"
 readTime: "8 min read"
 category: "White paper"
 author: "Think4Ever"
-image: "/images/blog/blog-5-thumbnail.jpg"
+image: "/images/blog/white-paper-think-design-thumbnail.jpg"
 hideThumbnail: true
 ---
 

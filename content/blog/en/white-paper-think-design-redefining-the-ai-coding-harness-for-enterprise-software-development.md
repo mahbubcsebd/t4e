@@ -5,7 +5,7 @@ date: "April 18, 2026"
 readTime: "8 min read"
 category: "White paper"
 author: "Sunil Kishen"
-image: "/images/blog/blog-5-thumbnail.jpg"
+image: "/images/blog/white-paper-think-design-thumbnail.jpg"
 ---
 
 
