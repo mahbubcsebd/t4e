@@ -17,10 +17,25 @@ export async function generateMetadata(props) {
   const post = getPostBySlug(slug, lang);
   if (!post) return {};
 
+  const title = `${post.title} | Think4Ever Blog`;
+  const description = post.desc || post.description;
+  const imageUrl = post.image || `/images/opengraph-image.jpg`;
+
   return {
-    title: `${post.title} | Think4Ever Blog`,
-    description: post.desc || post.description,
+    title,
+    description,
     alternates: { canonical: `/${lang}/blog/${slug}/` },
+    openGraph: {
+      title,
+      description,
+      images: [{ url: imageUrl }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [imageUrl],
+    },
   };
 }
 
