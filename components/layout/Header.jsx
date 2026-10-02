@@ -199,7 +199,7 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-[100] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] border-b ${
+      className={`sticky top-0 z-40 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] border-b ${
         scrolled
           ? 'bg-[#093cad]/95 backdrop-blur-xl border-white/10 shadow-lg'
           : 'bg-[#093cad] border-transparent shadow-none'
