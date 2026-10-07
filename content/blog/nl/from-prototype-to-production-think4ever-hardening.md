@@ -48,7 +48,7 @@ hideThumbnail: true
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">Hoe Het Werkt</h2>
 <ol class="list-decimal pl-6 mt-4 space-y-4">
-<li><strong>Importeren en begrijpen.</strong> Importeer een openbare GitHub-repository of een ZIP van eender welke bron. Think4Ever detecteert de stack en bouwt een conceptuele structuur van de bedrijfsstromen, rollen en gegevens van het systeem, waartegen elke controle wordt beoordeeld.</li>
+<li><strong>Importeren en begrijpen.</strong> Importeer van GitHub, GitLab, Bitbucket, Git, SVN of een Zip-bestand van eender welke bron. Think4Ever detecteert de stack en bouwt een conceptuele structuur van de bedrijfsstromen, rollen en gegevens van het systeem, waartegen elke controle wordt beoordeeld.</li>
 </ol>
 
 <figure class="my-8">

@@ -9,6 +9,7 @@ import ValueSection from "@/components/sections/home/ValueSection";
 import CoherenceSection from "@/components/sections/home/CoherenceSection";
 import PersistentContextSection from "@/components/sections/home/PersistentContextSection";
 import HowItWorksSection from "@/components/sections/home/HowItWorksSection";
+import ReviewedHandoffSection from "@/components/sections/home/ReviewedHandoffSection";
 import ProductDemoSection from "@/components/sections/home/ProductDemoSection";
 import CtaSection from "@/components/sections/home/CtaSection";
 
@@ -24,6 +25,7 @@ export default function Home() {
         <CoherenceSection />
         <PersistentContextSection />
         <HowItWorksSection />
+        <ReviewedHandoffSection />
         <ProductDemoSection />
         <CtaSection />
       </main>

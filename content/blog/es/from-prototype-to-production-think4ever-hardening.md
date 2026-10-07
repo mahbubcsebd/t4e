@@ -1,11 +1,11 @@
 ---
-title: "Del Prototipo a Producción"
-description: "Think4Ever Production Hardening: una capa de gobernanza y preparación para producción para aplicaciones generadas por IA"
-date: "25 de septiembre de 2026"
-readTime: "7 min de lectura"
-category: "Producción"
-author: "Sunil Kishen"
-image: "/images/blog/from-prototype-to-production-thumbnail.jpg"
+title: 'Del Prototipo a Producción'
+description: 'Think4Ever Production Hardening: una capa de gobernanza y preparación para producción para aplicaciones generadas por IA'
+date: '25 de septiembre de 2026'
+readTime: '7 min de lectura'
+category: 'Producción'
+author: 'Sunil Kishen'
+image: '/images/blog/from-prototype-to-production-thumbnail.jpg'
 hideThumbnail: true
 ---
 
@@ -48,12 +48,12 @@ hideThumbnail: true
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">Cómo Funciona</h2>
 <ol class="list-decimal pl-6 mt-4 space-y-4">
-<li><strong>Importar y comprender.</strong> Importe un repositorio público de GitHub o un ZIP de cualquier fuente. Think4Ever detecta la pila y construye una estructura conceptual de los flujos de negocio, roles y datos del sistema, contra la cual se califica cada verificación.</li>
+<li><strong>Importar y comprender.</strong> Importe desde GitHub, GitLab, Bitbucket, Git, SVN o un archivo Zip de cualquier fuente. Think4Ever detecta la pila y construye una estructura conceptual de los flujos de negocio, roles y datos del sistema, contra la cual se califica cada verificación.</li>
 </ol>
 
 <figure class="my-8">
 <div class="w-full overflow-hidden rounded-xl border border-gray-100 shadow-sm">
-<img src="/images/blog/from-prototype-to-production-thumbnail.jpg" alt="Elección de Production hardening en la pantalla de inicio" class="w-full h-auto" />
+<img src="/images/blog/blog-5-img-1.jpg" alt="Elección de Production hardening en la pantalla de inicio" class="w-full h-auto" />
 </div>
 <figcaption class="mt-4 text-center text-sm italic text-gray-500">Figura 1. Elección de Production hardening en la pantalla de inicio.</figcaption>
 </figure>
