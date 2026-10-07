@@ -16,7 +16,7 @@ hideThumbnail: true
 
 <p class="mt-4">De toonaangevende bouwers scannen nu op beveiligingsproblemen, maar de rest van de kloof (configuratie, betrouwbaarheid, waarneembaarheid, operaties, testen en nalevingsbewijs) blijft open en wordt groter zodra een applicatie haar platform verlaat.</p>
 
-<p class="mt-4">Think4Ever Production Hardening dicht die kloof voor elke AI-gegenereerde codebase. Het brengt de bedrijfsstromen, rollen en gegevens van het systeem in kaart en laat vervolgens één beoordelingsagent per pijler dit controleren aan de hand van een checklist van 39 punten over negen pijlers, waarbij de bestanden en regels achter elke bevinding worden vermeld. Oplossingen worden pas toegepast door de ontwikkelingsagent van Think4Ever nadat de gebruiker het plan heeft goedgekeurd, of via MCP overgedragen aan de eigen coderingsagent van het team. De beoordeling kan op elk moment opnieuw worden uitgevoerd vanuit de app, de REST API of MCP, zodat latere wijzigingen opnieuw worden gecontroleerd.</p>
+<p class="mt-4">Think4Ever <strong>Production Hardening</strong> dicht die kloof voor elke AI-gegenereerde codebase. Het brengt de bedrijfsstromen, rollen en gegevens van het systeem in kaart en laat vervolgens één beoordelingsagent per pijler dit controleren aan de hand van een checklist van 39 punten over negen pijlers, waarbij de bestanden en regels achter elke bevinding worden vermeld. Oplossingen worden pas toegepast door de ontwikkelingsagent van Think4Ever nadat de gebruiker het plan heeft goedgekeurd, of via MCP overgedragen aan de eigen coderingsagent van het team. De beoordeling kan op elk moment opnieuw worden uitgevoerd vanuit de app, de REST API of MCP, zodat latere wijzigingen opnieuw worden gecontroleerd.</p>
 </section>
 
 <section>
@@ -126,11 +126,11 @@ hideThumbnail: true
 
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">Conclusie</h2>
-<p>AI-bouwers hebben de eerste versie van een applicatie snel gemaakt. Think4Ever Production Hardening maakt de stap naar productie veilig en herhaalbaar voor elke tool die een team gebruikt, zodat teams de snelheid van AI-ondersteunde ontwikkeling behouden terwijl ze software verzenden waar ze achter kunnen staan.</p>
+<p>AI-bouwers hebben de eerste versie van een applicatie snel gemaakt. Think4Ever <strong>Production Hardening</strong> maakt de stap naar productie veilig en herhaalbaar voor elke tool die een team gebruikt, zodat teams de snelheid van AI-ondersteunde ontwikkeling behouden terwijl ze software verzenden waar ze achter kunnen staan.</p>
 </section>
 
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">Leer meer</h2>
-<p>De volledige checklist, scoringsdetails, reparatieopties, API-toegang en gegevensverwerking worden beschreven in de Production Hardening-documentatie: <a href="https://think4ever.com/docs/manual_production_hardening.html" class="text-[#f56646] hover:underline">https://think4ever.com/docs/manual_production_hardening.html</a></p>
+<p>De volledige checklist, scoringsdetails, reparatieopties, API-toegang en gegevensverwerking worden beschreven in de <strong>Production Hardening</strong>-documentatie: <a href="https://think4ever.com/docs/manual_production_hardening.html" class="text-[#f56646] hover:underline">https://think4ever.com/docs/manual_production_hardening.html</a></p>
 </section>
 </div>
