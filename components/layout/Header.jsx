@@ -25,13 +25,28 @@ import {
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
 export default function Header() {
   const { t, language, setLanguage, availableLanguages } = useLanguage();
+  const router = useRouter();
+  const pathname = usePathname();
+
   const handleLanguageChange = (newLangCode) => {
     setLanguage(newLangCode);
     setLangDropdownOpen(false);
+  };
+
+  const scrollToHandoff = (closeMenu) => {
+    if (closeMenu) closeMenu();
+    const isHome = pathname === '/' || pathname === `/${language}`;
+    if (isHome) {
+      const el = document.getElementById('reviewed-handoff');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      router.push('/#reviewed-handoff');
+    }
   };
 
   const localizeHref = (href) => {
@@ -299,6 +314,26 @@ export default function Header() {
                   </p>
                 </div>
               </Link>
+              <a
+                href="/#reviewed-handoff"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToHandoff(() => setHowItWorksOpen(false));
+                }}
+                className="flex items-start gap-3 px-4 py-3 hover:bg-muted group/item transition-colors cursor-pointer"
+              >
+                <div className="p-1.5 rounded-lg bg-muted border border-border group-hover/item:bg-card shrink-0">
+                  <Shield className="w-4 h-4 text-foreground" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-foreground group-hover/item:text-primary">
+                    Production Hardening
+                  </div>
+                  <p className="text-[10px] text-muted-foreground mt-0.5">
+                    Audit & fix AI-generated code
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
           {/* <Link
@@ -407,6 +442,12 @@ export default function Header() {
             className="hover:text-white transition-colors whitespace-nowrap"
           >
             {t('nav.pricing')}
+          </Link>
+          <Link
+            href={localizeHref('/marketplace')}
+            className="hover:text-white transition-colors whitespace-nowrap"
+          >
+            {t('nav.marketplace', 'Marketplace')}
           </Link>
         </nav>
 
@@ -611,6 +652,26 @@ export default function Header() {
                       >
                         {t('nav.designToCode')}
                       </Link>
+                      <a
+                        href="/#reviewed-handoff"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const isHome = pathname === '/' || pathname === `/${language}`;
+                          if (isHome) {
+                            setMobileMenuOpen(false);
+                            setTimeout(() => {
+                              const el = document.getElementById('reviewed-handoff');
+                              if (el) el.scrollIntoView({ behavior: 'smooth' });
+                            }, 300);
+                          } else {
+                            setMobileMenuOpen(false);
+                            router.push('/#reviewed-handoff');
+                          }
+                        }}
+                        className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                      >
+                        Production Hardening
+                      </a>
                     </div>
                   </motion.div>
                 )}
@@ -722,6 +783,16 @@ export default function Header() {
                 className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
               >
                 {t('nav.pricing')}
+              </Link>
+            </div>
+
+            <div className="py-1 mb-2">
+              <Link
+                href={localizeHref('/marketplace')}
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
+              >
+                {t('nav.marketplace', 'Marketplace')}
               </Link>
             </div>
 

@@ -1,11 +1,11 @@
 ---
-title: "From Prototype to Production"
-description: "Think4Ever Production Hardening: a production-readiness and governance layer for AI-generated applications"
-date: "September 25, 2026"
-readTime: "7 min read"
-category: "Production"
-author: "Sunil Kishen"
-image: "/images/blog/from-prototype-to-production-thumbnail.jpg"
+title: 'From Prototype to Production'
+description: 'Think4Ever Production Hardening: a production-readiness and governance layer for AI-generated applications'
+date: 'September 25, 2026'
+readTime: '7 min read'
+category: 'Production'
+author: 'Sunil Kishen'
+image: '/images/blog/from-prototype-to-production-thumbnail.jpg'
 hideThumbnail: true
 ---
 
@@ -48,12 +48,12 @@ hideThumbnail: true
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">How It Works</h2>
 <ol class="list-decimal pl-6 mt-4 space-y-4">
-<li><strong>Import and understand.</strong> Import a public GitHub repository or a ZIP from any source. Think4Ever detects the stack and builds a concept structure of the system's business flows, roles and data, which every check is graded against.</li>
+<li><strong>Import and understand.</strong> Import from GitHub, GitLab, Bitbucket, Git, SVN or a Zip file from any source. Think4Ever detects the stack and builds a concept structure of the system's business flows, roles and data, which every check is graded against.</li>
 </ol>
 
 <figure class="my-8">
 <div class="w-full overflow-hidden rounded-xl border border-gray-100 shadow-sm">
-<img src="/images/blog/from-prototype-to-production-thumbnail.jpg" alt="Choosing Production hardening on the onboarding screen" class="w-full h-auto" />
+<img src="/images/blog/blog-5-img-1.jpg" alt="Choosing Production hardening on the onboarding screen" class="w-full h-auto" />
 </div>
 <figcaption class="mt-4 text-center text-sm italic text-gray-500">Figure 1. Choosing Production hardening on the onboarding screen.</figcaption>
 </figure>
