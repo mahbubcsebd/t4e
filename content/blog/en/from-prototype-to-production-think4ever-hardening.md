@@ -16,7 +16,7 @@ hideThumbnail: true
 
 <p class="mt-4">The leading builders now scan for security issues, but the rest of the gap (configuration, reliability, observability, operations, testing and compliance evidence) remains open, and it widens once an application leaves its platform.</p>
 
-<p class="mt-4">Think4Ever Production Hardening closes that gap for any AI-generated codebase. It maps the system's business flows, roles and data, then has one reviewer agent per pillar audit it against a 39-check, nine-pillar checklist, citing the files and lines behind every finding. Fixes are applied by Think4Ever's developer agent only after the user approves its plan, or handed over MCP to the team's own coding agent. The review can be re-run at any time from the app, the REST API or MCP, so later changes are checked again.</p>
+<p class="mt-4">Think4Ever <strong>Production Hardening</strong> closes that gap for any AI-generated codebase. It maps the system's business flows, roles and data, then has one reviewer agent per pillar audit it against a 39-check, nine-pillar checklist, citing the files and lines behind every finding. Fixes are applied by Think4Ever's developer agent only after the user approves its plan, or handed over MCP to the team's own coding agent. The review can be re-run at any time from the app, the REST API or MCP, so later changes are checked again.</p>
 </section>
 
 <section>
@@ -126,11 +126,11 @@ hideThumbnail: true
 
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">Conclusion</h2>
-<p>AI builders have made the first version of an application fast. Think4Ever Production Hardening makes the step to production safe and repeatable across every tool a team uses, so teams keep the speed of AI-assisted development while shipping software they can stand behind.</p>
+<p>AI builders have made the first version of an application fast. Think4Ever <strong>Production Hardening</strong> makes the step to production safe and repeatable across every tool a team uses, so teams keep the speed of AI-assisted development while shipping software they can stand behind.</p>
 </section>
 
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">Learn more</h2>
-<p>The full checklist, scoring details, fix options, API access and data handling are described in the Production Hardening documentation: <a href="https://think4ever.com/docs/manual_production_hardening.html" class="text-[#f56646] hover:underline">https://think4ever.com/docs/manual_production_hardening.html</a></p>
+<p>The full checklist, scoring details, fix options, API access and data handling are described in the <strong>Production Hardening</strong> documentation: <a href="https://think4ever.com/docs/manual_production_hardening.html" class="text-[#f56646] hover:underline">https://think4ever.com/docs/manual_production_hardening.html</a></p>
 </section>
 </div>
