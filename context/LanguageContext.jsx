@@ -56,7 +56,7 @@ export function LanguageProvider({ children }) {
   };
 
   // Helper to fetch nested key, e.g. t('nav.product')
-  const t = (path) => {
+  const t = (path, defaultValue) => {
     const dict = dictionaries[language] || dictionaries["en"];
     const keys = path.split(".");
     let current = dict;
@@ -70,7 +70,7 @@ export function LanguageProvider({ children }) {
           if (fallback && fallback[fk] !== undefined) {
             fallback = fallback[fk];
           } else {
-            return path;
+            return defaultValue !== undefined ? defaultValue : path;
           }
         }
         return fallback;

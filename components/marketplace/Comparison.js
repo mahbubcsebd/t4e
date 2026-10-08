@@ -5,33 +5,35 @@ import MarketplaceSection from '@/components/marketplace/ui/MarketplaceSection';
 import MarketplaceSectionHeader from '@/components/marketplace/ui/MarketplaceSectionHeader';
 import SectionCard from '@/components/layout/SectionCard';
 import { CheckCircle2, XCircle } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function MarketplaceComparison() {
+  const { t } = useLanguage();
   const comparisonData = [
     {
-      feature: 'Job posts',
-      typical: 'Written by hand, often vague',
-      think4ever: 'Drafted by ThinkBrain from a short prompt, with scope, deliverables and screening questions',
+      feature: t('marketplace.comparison.f1', 'Job posts'),
+      typical: t('marketplace.comparison.t1', 'Written by hand, often vague'),
+      think4ever: t('marketplace.comparison.th1', 'Drafted by ThinkBrain from a short prompt, with scope, deliverables and screening questions'),
     },
     {
-      feature: 'Choosing a freelancer',
-      typical: 'Read every proposal yourself',
-      think4ever: 'ThinkBrain scores each proposal against your requirements',
+      feature: t('marketplace.comparison.f2', 'Choosing a freelancer'),
+      typical: t('marketplace.comparison.t2', 'Read every proposal yourself'),
+      think4ever: t('marketplace.comparison.th2', 'ThinkBrain scores each proposal against your requirements'),
     },
     {
-      feature: 'Onboarding',
-      typical: 'Days of repo sharing and environment setup',
-      think4ever: 'Instant access to the projects and tools you choose',
+      feature: t('marketplace.comparison.f3', 'Onboarding'),
+      typical: t('marketplace.comparison.t3', 'Days of repo sharing and environment setup'),
+      think4ever: t('marketplace.comparison.th3', 'Instant access to the projects and tools you choose'),
     },
     {
-      feature: 'Control',
-      typical: 'External repos, limited visibility',
-      think4ever: 'Role-based access, audit trails, work stays in your workspace',
+      feature: t('marketplace.comparison.f4', 'Control'),
+      typical: t('marketplace.comparison.t4', 'External repos, limited visibility'),
+      think4ever: t('marketplace.comparison.th4', 'Role-based access, audit trails, work stays in your workspace'),
     },
     {
-      feature: 'Pricing the work',
-      typical: 'Generic estimates',
-      think4ever: 'Freelancers set their own rate and timeline',
+      feature: t('marketplace.comparison.f5', 'Pricing the work'),
+      typical: t('marketplace.comparison.t5', 'Generic estimates'),
+      think4ever: t('marketplace.comparison.th5', 'Freelancers set their own rate and timeline'),
     },
   ];
 
@@ -39,7 +41,7 @@ export default function MarketplaceComparison() {
     <MarketplaceSection id="why-marketplace" bg="bg-background">
       <SectionCard>
         <div className="bg-card rounded-xl p-5 sm:p-8 md:p-10 border border-border/50 relative z-10">
-          <MarketplaceSectionHeader title="Why Think4Ever Marketplace" />
+          <MarketplaceSectionHeader title={t('marketplace.comparison.title', 'Why Think4Ever Marketplace')} />
 
           <div className="mt-10 overflow-x-auto rounded-xl border border-border/70">
             <table className="w-full text-left border-collapse min-w-[600px]">
@@ -47,10 +49,10 @@ export default function MarketplaceComparison() {
                 <tr className="bg-muted/50 border-b border-border/70">
                   <th className="p-4 md:p-6 font-semibold text-foreground w-1/4"></th>
                   <th className="p-4 md:p-6 font-semibold text-muted-foreground w-[37.5%] border-l border-border/70">
-                    Typical freelance marketplaces
+                    {t('marketplace.comparison.col1', 'Typical freelance marketplaces')}
                   </th>
                   <th className="p-4 md:p-6 font-bold text-primary w-[37.5%] border-l border-border/70 bg-primary/5">
-                    Think4Ever Marketplace
+                    {t('marketplace.comparison.col2', 'Think4Ever Marketplace')}
                   </th>
                 </tr>
               </thead>

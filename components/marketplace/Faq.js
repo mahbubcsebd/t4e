@@ -6,54 +6,8 @@ import { Plus, Minus } from 'lucide-react';
 import SectionCard from '@/components/layout/SectionCard';
 import MarketplaceSection from '@/components/marketplace/ui/MarketplaceSection';
 import MarketplaceSectionHeader from '@/components/marketplace/ui/MarketplaceSectionHeader';
+import { useLanguage } from '@/context/LanguageContext';
 
-const faqs = [
-  {
-    id: 1,
-    question: 'Do both clients and freelancers need a Think4Ever account?',
-    answer: 'Yes. Posting, applying, messaging and contracts all run through Think4Ever accounts. Freelancers can start on the free plan.',
-  },
-  {
-    id: 2,
-    question: 'How do I post a job?',
-    answer: 'Open the Marketplace, go to Jobs and click Post a job. Describe what you need to ThinkBrain, click Apply to form, review the details, and post. You can also attach a PRD, statement of work or designs.',
-  },
-  {
-    id: 3,
-    question: 'Can I post a job without a Think4Ever project?',
-    answer: 'Yes. Describe the work or attach your PRD and post it. Before you give a freelancer access, create a project in your workspace so their work is saved there and belongs to you.',
-  },
-  {
-    id: 4,
-    question: 'Does connecting a project to a job share it with applicants?',
-    answer: 'No. Connecting a project only lets ThinkBrain read it to write the posting and score proposals. Nobody gets access until you offer a contract with access and the freelancer accepts it.',
-  },
-  {
-    id: 5,
-    question: 'How are freelancers chosen?',
-    answer: 'ThinkBrain scores every proposal against your requirements and your connected project, and explains its score. You make the final choice.',
-  },
-  {
-    id: 6,
-    question: 'How are prices and timelines set?',
-    answer: 'By the freelancer. Freelancers know their own speed with AI coding tools, so they give their own rate and timeline rather than a generic estimate.',
-  },
-  {
-    id: 7,
-    question: 'How does payment work?',
-    answer: 'Directly between you and the freelancer. The amount on a contract is a record for both of you, not a charge.',
-  },
-  {
-    id: 8,
-    question: 'What access does a freelancer get, and when does it end?',
-    answer: 'Only the role, projects and access type you choose in the contract: a login to your workspace, a project-scoped MCP token, or both. Access is removed and tokens are revoked automatically when the contract ends or the project is completed.',
-  },
-  {
-    id: 9,
-    question: 'Can I outsource a whole project to a team?',
-    answer: 'Yes. Full-project outsourcing lets an agency or team handle design and development end to end, while you keep visibility, audit trails and control over what they can reach.',
-  },
-];
 
 
 function FaqItem({ item, openId, toggleFaq }) {
@@ -106,7 +60,56 @@ function FaqItem({ item, openId, toggleFaq }) {
 }
 
 export default function MarketplaceFaq() {
+  const { t } = useLanguage();
   const [openId, setOpenId] = useState(null);
+
+  const faqs = [
+    {
+      id: 1,
+      question: t('marketplace.faq.q1', 'Do both clients and freelancers need a Think4Ever account?'),
+      answer: t('marketplace.faq.a1', 'Yes. Posting, applying, messaging and contracts all run through Think4Ever accounts. Freelancers can start on the free plan.'),
+    },
+    {
+      id: 2,
+      question: t('marketplace.faq.q2', 'How do I post a job?'),
+      answer: t('marketplace.faq.a2', 'Open the Marketplace, go to Jobs and click Post a job. Describe what you need to ThinkBrain, click Apply to form, review the details, and post. You can also attach a PRD, statement of work or designs.'),
+    },
+    {
+      id: 3,
+      question: t('marketplace.faq.q3', 'Can I post a job without a Think4Ever project?'),
+      answer: t('marketplace.faq.a3', 'Yes. Describe the work or attach your PRD and post it. Before you give a freelancer access, create a project in your workspace so their work is saved there and belongs to you.'),
+    },
+    {
+      id: 4,
+      question: t('marketplace.faq.q4', 'Does connecting a project to a job share it with applicants?'),
+      answer: t('marketplace.faq.a4', 'No. Connecting a project only lets ThinkBrain read it to write the posting and score proposals. Nobody gets access until you offer a contract with access and the freelancer accepts it.'),
+    },
+    {
+      id: 5,
+      question: t('marketplace.faq.q5', 'How are freelancers chosen?'),
+      answer: t('marketplace.faq.a5', 'ThinkBrain scores every proposal against your requirements and your connected project, and explains its score. You make the final choice.'),
+    },
+    {
+      id: 6,
+      question: t('marketplace.faq.q6', 'How are prices and timelines set?'),
+      answer: t('marketplace.faq.a6', 'By the freelancer. Freelancers know their own speed with AI coding tools, so they give their own rate and timeline rather than a generic estimate.'),
+    },
+    {
+      id: 7,
+      question: t('marketplace.faq.q7', 'How does payment work?'),
+      answer: t('marketplace.faq.a7', 'Directly between you and the freelancer. The amount on a contract is a record for both of you, not a charge.'),
+    },
+    {
+      id: 8,
+      question: t('marketplace.faq.q8', 'What access does a freelancer get, and when does it end?'),
+      answer: t('marketplace.faq.a8', 'Only the role, projects and access type you choose in the contract: a login to your workspace, a project-scoped MCP token, or both. Access is removed and tokens are revoked automatically when the contract ends or the project is completed.'),
+    },
+    {
+      id: 9,
+      question: t('marketplace.faq.q9', 'Can I outsource a whole project to a team?'),
+      answer: t('marketplace.faq.a9', 'Yes. Full-project outsourcing lets an agency or team handle design and development end to end, while you keep visibility, audit trails and control over what they can reach.'),
+    },
+  ];
 
   const toggleFaq = (id) => {
     setOpenId(openId === id ? null : id);
@@ -125,10 +128,10 @@ export default function MarketplaceFaq() {
         <div className="bg-card rounded-xl p-6 sm:p-10 md:p-12 lg:p-16 border border-border/50 relative z-10 flex flex-col items-center">
           <div className="max-w-3xl w-full mb-8 md:mb-12">
             <MarketplaceSectionHeader
-              eyebrow="Got Questions?"
-              title="Frequently Asked"
-              highlightText="Questions"
-              description="Everything you need to know about hiring and managing world-class talent through Think4Ever Marketplace."
+              eyebrow={t('marketplace.faq.eyebrow', 'Got Questions?')}
+              title={t('marketplace.faq.title', 'Frequently Asked')}
+              highlightText={t('marketplace.faq.highlight', 'Questions')}
+              description={t('marketplace.faq.desc', 'Everything you need to know about hiring and managing world-class talent through Think4Ever Marketplace.')}
               align="center"
             />
           </div>

@@ -8,11 +8,17 @@ import MarketplaceComparison from '@/components/marketplace/Comparison';
 import MarketplaceFaq from '@/components/marketplace/Faq';
 import MarketplaceCta from '@/components/marketplace/Cta';
 
-export const metadata = {
+import { getLocalizedMetadata } from '@/lib/metadata';
+
+export const fallbackMetadata = {
   title: 'Think4Ever Marketplace: the outsourcing marketplace for the AI era',
   description:
     'Where AI-enabled freelancers and enterprises get work done. Outsource a task or a whole project, get AI-scored proposals, and give your hire exactly the projects and tools they need.',
 };
+
+export async function generateMetadata() {
+  return getLocalizedMetadata('en', 'marketplace', fallbackMetadata);
+}
 
 export default function MarketplacePage() {
   return (

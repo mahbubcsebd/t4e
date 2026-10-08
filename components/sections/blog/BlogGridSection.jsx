@@ -143,7 +143,7 @@ export default function BlogGridSection({ posts }) {
                       {art.date} • {art.readTime}
                     </span>
                     <span className="text-primary font-bold text-sm flex items-center gap-1.5 shrink-0 whitespace-nowrap group-hover:translate-x-1 transition-transform duration-300">
-                      {t("blogPage.readMore")}
+                      {art.slug && art.slug.includes("how-to") || (art.category && art.category.toLowerCase() === "tutorial") ? t("blogPage.readTutorial", "Read Tutorial →") : t("blogPage.readMore")}
                     </span>
                   </div>
                 </Link>
