@@ -61,7 +61,7 @@ export const TutorialArticle = ({ tutorial, currentLang }) => {
           </h1>
 
           {/* Meta */}
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-8 gap-y-4 text-[13px] text-muted-foreground font-medium">
+          {/* <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-8 gap-y-4 text-[13px] text-muted-foreground font-medium">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-muted border border-border flex items-center justify-center text-foreground font-bold shadow-sm">
                 {tutorial.author ? tutorial.author.charAt(0) : "T"}
@@ -77,7 +77,7 @@ export const TutorialArticle = ({ tutorial, currentLang }) => {
                 {tutorial.readTime && <span>{tutorial.readTime}</span>}
               </div>
             )}
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Featured Image */}
