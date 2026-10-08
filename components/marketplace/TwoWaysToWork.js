@@ -5,19 +5,20 @@ import { Briefcase, Building2 } from 'lucide-react';
 import SectionCard from '@/components/layout/SectionCard';
 import MarketplaceSection from '@/components/marketplace/ui/MarketplaceSection';
 import MarketplaceSectionHeader from '@/components/marketplace/ui/MarketplaceSectionHeader';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function MarketplaceTwoWays() {
+  const { t } = useLanguage();
+
   const cards = [
     {
-      title: 'Task freelancing',
-      description:
-        'Turn a backlog item, a module refactor, a custom application or any other task into a job listing, and hire a specialist for it.',
+      title: t('marketplace.twoWays.card1Title', 'Task freelancing'),
+      description: t('marketplace.twoWays.card1Desc', 'Turn a backlog item, a module refactor, a custom application or any other task into a job listing, and hire a specialist for it.'),
       icon: Briefcase,
     },
     {
-      title: 'Full-project outsourcing',
-      description:
-        'Hand an entire design and development project to an outside team or agency. You keep full visibility, audit trails and control over exactly what they can access.',
+      title: t('marketplace.twoWays.card2Title', 'Full-project outsourcing'),
+      description: t('marketplace.twoWays.card2Desc', 'Hand an entire design and development project to an outside team or agency. You keep full visibility, audit trails and control over exactly what they can access.'),
       icon: Building2,
     },
   ];
@@ -26,7 +27,10 @@ export default function MarketplaceTwoWays() {
     <MarketplaceSection id="two-ways-to-work" bg="bg-background">
       <SectionCard>
         <div className="bg-card rounded-xl p-5 sm:p-8 md:p-10 border border-border/50 relative z-10">
-          <MarketplaceSectionHeader title="Two ways" highlightText="to work" />
+          <MarketplaceSectionHeader 
+            title={t('marketplace.twoWays.title', 'Two ways')} 
+            highlightText={t('marketplace.twoWays.highlight', 'to work')} 
+          />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6 mt-8">
             {cards.map((card, idx) => (

@@ -5,6 +5,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   Briefcase,
+  BookOpen,
   ChevronDown,
   Code,
   ExternalLink,
@@ -62,6 +63,8 @@ export default function Header() {
   const [mobileHowItWorksOpen, setMobileHowItWorksOpen] = useState(false);
   const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
   const [mobileDocsOpen, setMobileDocsOpen] = useState(false);
+  const [tutorialsOpen, setTutorialsOpen] = useState(false);
+  const [mobileTutorialsOpen, setMobileTutorialsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const desktopLangDropdownRef = useRef(null);
   const mobileLangDropdownRef = useRef(null);
@@ -210,6 +213,21 @@ export default function Header() {
       href: 'https://think4ever.com/docs/dev/vs_code_integration.html',
       icon: <Code className="w-4 h-4 text-foreground" />,
     },
+  ];
+
+  const tutorialsLinks = [
+    {
+      title: 'How to use the Marketplace',
+      desc: 'Hire freelancers or find work',
+      href: '/tutorials/how-to-use-the-marketplace',
+      icon: <BookOpen className="w-4 h-4 text-foreground" />,
+    },
+    {
+      title: 'Design in Think, Code in Claude',
+      desc: 'Connect Claude Code and build your project',
+      href: '/tutorials/how-to-design-in-think',
+      icon: <Code className="w-4 h-4 text-foreground" />,
+    }
   ];
 
   return (
@@ -433,6 +451,49 @@ export default function Header() {
                     </p>
                   </div>
                 </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Tutorials Dropdown */}
+          <div
+            className="relative group"
+            onMouseLeave={() => setTutorialsOpen(false)}
+          >
+            <button
+              onClick={() => setTutorialsOpen(!tutorialsOpen)}
+              onMouseEnter={() => setTutorialsOpen(true)}
+              className="flex items-center gap-1 hover:text-white transition-colors py-2 whitespace-nowrap"
+              aria-label="Toggle Tutorials menu"
+            >
+              <span>Tutorials</span>
+              <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
+            </button>
+            <div
+              className={`absolute top-full left-1/2 -translate-x-1/2 w-[300px] bg-card rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-1 gap-2 ${
+                tutorialsOpen
+                  ? 'opacity-100 visible translate-y-0'
+                  : 'opacity-0 invisible -translate-y-2'
+              }`}
+            >
+              {tutorialsLinks.map((tut, idx) => (
+                <Link
+                  key={idx}
+                  href={localizeHref(tut.href)}
+                  className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-muted group/item transition-colors"
+                >
+                  <div className="p-1.5 rounded-lg bg-muted border border-border/50 group-hover/item:bg-popover shrink-0 mt-0.5">
+                    {tut.icon}
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-foreground group-hover/item:text-primary flex items-center gap-1">
+                      <span>{tut.title}</span>
+                    </div>
+                    <p className="text-[10px] text-muted-foreground leading-snug mt-0.5">
+                      {tut.desc}
+                    </p>
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -769,6 +830,43 @@ export default function Header() {
                         >
                           <span>{doc.title}</span>
                         </a>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <div className="flex flex-col gap-0">
+              <button
+                onClick={() => setMobileTutorialsOpen(!mobileTutorialsOpen)}
+                className="flex items-center justify-between text-[15px] font-semibold text-[#314865] w-full text-left py-2.5"
+                aria-label="Toggle mobile Tutorials menu"
+              >
+                <span>Tutorials</span>
+                <motion.div animate={{ rotate: mobileTutorialsOpen ? 180 : 0 }}>
+                  <ChevronDown className="w-4 h-4" />
+                </motion.div>
+              </button>
+              <AnimatePresence initial={false}>
+                {mobileTutorialsOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.2, ease: 'easeInOut' }}
+                    className="overflow-hidden"
+                  >
+                    <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
+                      {tutorialsLinks.map((tut, idx) => (
+                        <Link
+                          key={idx}
+                          href={localizeHref(tut.href)}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="flex items-center justify-between text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          <span>{tut.title}</span>
+                        </Link>
                       ))}
                     </div>
                   </motion.div>

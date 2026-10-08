@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import MarketplaceSectionHeader from '@/components/marketplace/ui/MarketplaceSectionHeader';
 import MarketplaceSection from '@/components/marketplace/ui/MarketplaceSection';
+import { useLanguage } from '@/context/LanguageContext';
 
 import {
   Dialog,
@@ -165,6 +166,7 @@ const categories = [
 ];
 
 export default function MarketplaceExpertise() {
+  const { t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const containerVariants = {
@@ -189,10 +191,10 @@ export default function MarketplaceExpertise() {
       <SectionCard>
         <div className="bg-card rounded-xl p-5 sm:p-8 md:p-10 border border-border/50 relative z-10">
           <MarketplaceSectionHeader
-            eyebrow="Browse Expertise"
-            title="Find freelancers for"
-            highlightText="every type of work"
-            description="Access a global network of top-tier professionals ready to execute your most critical initiatives."
+            eyebrow={t('marketplace.expertise.eyebrow', "Browse Expertise")}
+            title={t('marketplace.expertise.title', "Find freelancers for")}
+            highlightText={t('marketplace.expertise.highlight', "every type of work")}
+            description={t('marketplace.expertise.desc', "Access a global network of top-tier professionals ready to execute your most critical initiatives.")}
             align="left"
           />
 
@@ -221,7 +223,7 @@ export default function MarketplaceExpertise() {
                   </div>
 
                   <h3 className="text-[15px] font-medium text-foreground transition-colors duration-300 pr-4 leading-tight">
-                    {category.title}
+                    {t(`marketplace.expertise.cat.${category.id}`, category.title)}
                   </h3>
                 </motion.div>
               );
@@ -249,10 +251,10 @@ export default function MarketplaceExpertise() {
                   </div>
                   <div>
                     <DialogTitle className="text-xl md:text-[26px] font-semibold text-foreground tracking-tight leading-tight">
-                      {selectedCategory.title}
+                      {t(`marketplace.expertise.cat.${selectedCategory.id}`, selectedCategory.title)}
                     </DialogTitle>
                     <DialogDescription className="text-sm md:text-[15px] text-muted-foreground mt-1.5 md:mt-1">
-                      Select a specialization to find top talent
+                      {t('marketplace.expertise.modalDesc', 'Select a specialization to find top talent')}
                     </DialogDescription>
                   </div>
                 </div>
@@ -266,7 +268,7 @@ export default function MarketplaceExpertise() {
                       className="flex items-center px-4 py-3 md:px-5 md:py-4 rounded-lg border border-border/60 bg-background hover:border-primary/40 hover:shadow-sm transition-all duration-300 cursor-pointer group"
                     >
                       <span className="text-[14px] md:text-[14.5px] font-normal text-foreground/80 group-hover:text-primary transition-colors duration-200">
-                        {sub}
+                        {t(`marketplace.expertise.subs.${sub.replace(/[^a-zA-Z0-9]/g, '')}`, sub)}
                       </span>
                     </div>
                   ))}

@@ -1,11 +1,9 @@
-import Page from '../page';
+import Page, { fallbackMetadata } from '../../marketplace/page';
 import { getLocalizedMetadata } from '@/lib/metadata';
-import { metadata as layoutMetadata } from '../layout';
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;
-  return getLocalizedMetadata(lang, 'home', layoutMetadata);
+  return getLocalizedMetadata(lang, 'marketplace', fallbackMetadata);
 }
-
 
 export default Page;

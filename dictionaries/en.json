@@ -21,6 +21,8 @@
     "docs": "Docs",
     "faq": "FAQ",
     "faqDesc": "Frequently asked questions.",
+    "tutorialsBack": "Back to Tutorials",
+    "recommendedTutorials": "Recommended Tutorials",
     "pricing": "Pricing",
     "signIn": "Sign in",
     "startFree": "Start free",
@@ -694,6 +696,7 @@
     "heroSubtitle": "Explore deep-dive technical articles, architectural patterns, and engineering guides for building software with AI.",
     "searchPlaceholder": "Search articles...",
     "readMore": "Read Article →",
+    "readTutorial": "Read Tutorial →",
     "backToArticles": "Back to Articles",
     "recommendedReading": "Recommended Reading",
     "categories": {

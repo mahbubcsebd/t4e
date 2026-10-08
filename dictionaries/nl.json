@@ -15,6 +15,8 @@
     "productVideos": "Productvideo's",
     "whitePapers": "Whitepapers & gidsen",
     "docs": "Documentatie",
+    "tutorialsBack": "Terug naar Tutorials",
+    "recommendedTutorials": "Aanbevolen Tutorials",
     "pricing": "Prijzen",
     "signIn": "Inloggen",
     "startFree": "Gratis starten",
@@ -658,6 +660,7 @@
     "heroSubtitle": "Ontdek diepgaande technische artikelen, architectuurpatronen en engineeringgidsen voor het bouwen van software met AI.",
     "searchPlaceholder": "Artikelen zoeken...",
     "readMore": "Lees artikel →",
+    "readTutorial": "Lees tutorial →",
     "backToArticles": "Terug naar artikelen",
     "recommendedReading": "Aanbevolen lectuur",
     "categories": {
