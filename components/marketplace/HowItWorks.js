@@ -6,9 +6,12 @@ import {
   Briefcase,
   UserPlus,
   FileCheck,
-  CreditCard,
   Search,
   ShieldCheck,
+  FileText,
+  Star,
+  PlayCircle,
+  UserCheck
 } from 'lucide-react';
 import SectionCard from '@/components/layout/SectionCard';
 import MarketplaceSection from '@/components/marketplace/ui/MarketplaceSection';
@@ -18,47 +21,61 @@ const tabData = {
   hiring: [
     {
       id: 'h1',
-      title: 'Post a job',
+      title: 'Describe what you need',
       description:
-        'Post a job, review proposals and bring a freelancer into your workspace with a role and project you choose.',
-      icon: Briefcase,
+        'Type a short request and ThinkBrain drafts the job post, budget and screening questions for you. You can connect a Think4Ever project so the post is precise. Connecting a project doesn’t give anyone access.',
+      icon: FileText,
     },
     {
       id: 'h2',
-      title: 'Get proposals and hire',
+      title: 'Get scored proposals',
       description:
-        'Compare bids, reviews, and prior work. Interview favorites and hire the best fit for your project.',
-      icon: UserPlus,
+        'ThinkBrain scores every proposal against your requirements, so you can go straight to the best fits. Message, shortlist or decline with one click.',
+      icon: Star,
     },
     {
       id: 'h3',
-      title: 'Pay securely',
+      title: 'Offer a contract with the access you choose',
       description:
-        'Pay for work safely and securely through our platform only when you are satisfied with the outcome.',
-      icon: CreditCard,
+        'Pick the freelancer’s role, the projects they can reach, and the type of access: a login to your workspace, a project-scoped MCP token for tools like Claude Code, Codex or Cursor, or both. Work that doesn’t need your project can have no access at all.',
+      icon: FileCheck,
+    },
+    {
+      id: 'h4',
+      title: 'Get the work done in your workspace',
+      description:
+        'Everything they build stays in your project. When the contract ends, access is removed and tokens are revoked automatically.',
+      icon: ShieldCheck,
     },
   ],
   findingWork: [
     {
       id: 'w1',
-      title: 'Create your profile',
+      title: 'Sign up free',
       description:
-        'You are set up as Client & Freelancer. Keep your profile sharp so the right people find you and your skills.',
-      icon: FileCheck,
+        'A free Think4Ever account (Think Free) is all you need.',
+      icon: UserPlus,
     },
     {
       id: 'w2',
-      title: 'Browse jobs',
+      title: 'Set up your profile',
       description:
-        'Browse open jobs, send proposals and work directly inside your clients\u2019 workspaces on exciting projects.',
-      icon: Search,
+        'Add your headline, skills and experience. Clients see it next to every proposal you send.',
+      icon: UserCheck,
     },
     {
       id: 'w3',
-      title: 'Work and get paid',
+      title: 'Find a job and send a proposal',
       description:
-        'Deliver great work, build your reputation, and get paid securely on time, every time.',
-      icon: ShieldCheck,
+        'Search and filter jobs by category, budget and experience level. Send your approach, your own rate and timeline, and answers to the screening questions.',
+      icon: Search,
+    },
+    {
+      id: 'w4',
+      title: 'Accept the contract and start',
+      description:
+        'Your access is set up automatically. Work in the client’s workspace, or connect from Claude Code, Codex or Cursor with the MCP details on your contract.',
+      icon: PlayCircle,
     },
   ],
 };

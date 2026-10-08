@@ -1,17 +1,17 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import MarketplaceHero from '@/components/marketplace/Hero';
-import MarketplaceTrustedBy from '@/components/marketplace/TrustedBy';
+import MarketplaceTwoWays from '@/components/marketplace/TwoWaysToWork';
 import MarketplaceExpertise from '@/components/marketplace/Expertise';
 import MarketplaceHowItWorks from '@/components/marketplace/HowItWorks';
-import MarketplaceTestimonials from '@/components/marketplace/Testimonials';
+import MarketplaceComparison from '@/components/marketplace/Comparison';
 import MarketplaceFaq from '@/components/marketplace/Faq';
 import MarketplaceCta from '@/components/marketplace/Cta';
 
 export const metadata = {
-  title: 'Marketplace | Think4Ever — Hire Top-Tier Independent Talent',
+  title: 'Think4Ever Marketplace: the outsourcing marketplace for the AI era',
   description:
-    'Think4Ever Marketplace is a premium talent network for teams that need high-quality execution, structured workflows, and vetted professionals. Find AI developers, designers, engineers and more.',
+    'Where AI-enabled freelancers and enterprises get work done. Outsource a task or a whole project, get AI-scored proposals, and give your hire exactly the projects and tools they need.',
 };
 
 export default function MarketplacePage() {
@@ -20,10 +20,10 @@ export default function MarketplacePage() {
       <Header />
       <main className="flex-grow">
         <MarketplaceHero />
-        <MarketplaceTrustedBy />
+        <MarketplaceTwoWays />
         <MarketplaceExpertise />
         <MarketplaceHowItWorks />
-        <MarketplaceTestimonials />
+        <MarketplaceComparison />
         <MarketplaceFaq />
         <MarketplaceCta />
       </main>

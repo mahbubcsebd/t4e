@@ -10,51 +10,48 @@ import MarketplaceSectionHeader from '@/components/marketplace/ui/MarketplaceSec
 const faqs = [
   {
     id: 1,
-    question: 'How does the vetting process work?',
-    answer:
-      'Every professional in our network goes through a rigorous, multi-stage screening process. We test for technical proficiency, communication skills, and past project success. Less than 3% of applicants make it into our active marketplace.',
+    question: 'Do both clients and freelancers need a Think4Ever account?',
+    answer: 'Yes. Posting, applying, messaging and contracts all run through Think4Ever accounts. Freelancers can start on the free plan.',
   },
   {
     id: 2,
-    question: 'How quickly can I hire someone?',
-    answer:
-      'Our matching algorithm and dedicated talent managers can typically connect you with vetted, available candidates within 48 to 72 hours of your initial request.',
+    question: 'How do I post a job?',
+    answer: 'Open the Marketplace, go to Jobs and click Post a job. Describe what you need to ThinkBrain, click Apply to form, review the details, and post. You can also attach a PRD, statement of work or designs.',
   },
   {
     id: 3,
-    question: 'Can I hire a full dedicated team?',
-    answer:
-      'Absolutely. Whether you need a single specialized expert or an entire cross-functional team (including project managers, designers, and developers), we can assemble and deploy a cohesive unit tailored to your project.',
+    question: 'Can I post a job without a Think4Ever project?',
+    answer: 'Yes. Describe the work or attach your PRD and post it. Before you give a freelancer access, create a project in your workspace so their work is saved there and belongs to you.',
   },
   {
     id: 4,
-    question: "What happens if I'm not satisfied with the talent?",
-    answer:
-      "We offer a no-risk trial period. If you find that a freelancer isn't the perfect fit within the first two weeks, we will seamlessly transition them out and immediately provide a replacement at no additional cost.",
+    question: 'Does connecting a project to a job share it with applicants?',
+    answer: 'No. Connecting a project only lets ThinkBrain read it to write the posting and score proposals. Nobody gets access until you offer a contract with access and the freelancer accepts it.',
   },
   {
     id: 5,
-    question: 'How does billing and invoicing work?',
-    answer:
-      "We handle all the financial logistics. You'll receive a consolidated, transparent invoice based on clear hourly rates or agreed-upon milestones. Payments are processed securely through our enterprise platform.",
+    question: 'How are freelancers chosen?',
+    answer: 'ThinkBrain scores every proposal against your requirements and your connected project, and explains its score. You make the final choice.',
   },
   {
     id: 6,
-    question: 'Do you support enterprise compliance?',
-    answer:
-      'Yes. We take compliance seriously, managing all aspects of worker classification, NDA enforcement, and intellectual property rights assignment to ensure your enterprise is fully protected.',
+    question: 'How are prices and timelines set?',
+    answer: 'By the freelancer. Freelancers know their own speed with AI coding tools, so they give their own rate and timeline rather than a generic estimate.',
   },
   {
     id: 7,
-    question: 'Are these freelancers or full-time employees?',
-    answer:
-      'They are independent contractors and freelancers. However, many of our professionals are available for full-time, long-term engagements acting as dedicated extensions of your internal team.',
+    question: 'How does payment work?',
+    answer: 'Directly between you and the freelancer. The amount on a contract is a record for both of you, not a charge.',
   },
   {
     id: 8,
-    question: 'How is Think4Ever different from standard platforms?',
-    answer:
-      'Unlike standard platforms where you have to sift through thousands of unvetted bids, we do the heavy lifting. We only provide highly curated, top-tier talent with a focus on enterprise-grade reliability and structured delivery.',
+    question: 'What access does a freelancer get, and when does it end?',
+    answer: 'Only the role, projects and access type you choose in the contract: a login to your workspace, a project-scoped MCP token, or both. Access is removed and tokens are revoked automatically when the contract ends or the project is completed.',
+  },
+  {
+    id: 9,
+    question: 'Can I outsource a whole project to a team?',
+    answer: 'Yes. Full-project outsourcing lets an agency or team handle design and development end to end, while you keep visibility, audit trails and control over what they can reach.',
   },
 ];
 

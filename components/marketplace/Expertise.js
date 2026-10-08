@@ -147,19 +147,6 @@ const categories = [
     ],
   },
   {
-    id: 8,
-    title: 'Finance & Accounting',
-    icon: Calculator,
-    subcategories: [
-      'Accounting & Bookkeeping',
-      'Financial Planning & Analysis',
-      'Tax Preparation',
-      'Management Consulting & Analysis',
-      'Recruiting & Human Resources',
-      'Personal & Professional Coaching',
-    ],
-  },
-  {
     id: 9,
     title: 'Engineering & Architecture',
     icon: HardHat,
@@ -173,30 +160,6 @@ const categories = [
       'Chemical Engineering',
       'Physical Sciences',
       'Contract Manufacturing',
-    ],
-  },
-  {
-    id: 10,
-    title: 'Legal',
-    icon: Scale,
-    subcategories: [
-      'Corporate & Contract Law',
-      'Intellectual Property Law',
-      'International & Immigration Law',
-      'Finance & Tax Law',
-      'Public Law',
-      'Paralegal Services',
-    ],
-  },
-  {
-    id: 11,
-    title: 'Education & Training',
-    icon: GraduationCap,
-    subcategories: [
-      'Tutoring',
-      'Course Creation & Instructional Design',
-      'Career Coaching & Resume Writing',
-      'Corporate Training',
     ],
   },
 ];
@@ -264,25 +227,6 @@ export default function MarketplaceExpertise() {
               );
             })}
 
-            {/* Explore More Card */}
-            <motion.div
-              variants={cardVariants}
-              className="group relative p-6 h-[140px] rounded-xl bg-brand-blue text-white hover:bg-brand-blue/90 transition-colors duration-300 cursor-pointer flex flex-col justify-between shadow-md"
-            >
-              <div className="flex justify-between items-start">
-                <Sparkles className="w-6 h-6 text-white/90" strokeWidth={1.5} />
-                <ArrowRight className="w-4 h-4 text-white/90 group-hover:translate-x-1 transition-transform duration-300" />
-              </div>
-
-              <div>
-                <h3 className="text-base font-semibold mb-1">
-                  Explore 100+ Skills
-                </h3>
-                <p className="text-[13px] text-white/80 font-medium">
-                  View all categories
-                </p>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </SectionCard>
