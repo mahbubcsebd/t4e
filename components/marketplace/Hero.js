@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowRight, Star, Quote } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import MarketplaceContainer from '@/components/marketplace/ui/MarketplaceContainer';
 
@@ -54,7 +54,7 @@ export default function MarketplaceHero() {
               className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-muted text-foreground text-xs font-bold tracking-wide mb-4 border border-border"
             >
               <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              Talent Network Marketplace
+              Think4Ever Marketplace
             </motion.span>
 
             {/* Headline — exact home font sizes */}
@@ -62,9 +62,7 @@ export default function MarketplaceHero() {
               variants={itemVariants}
               className="text-[32px] leading-[1.1] md:text-[48px] lg:text-[52px] font-extrabold tracking-tight text-foreground mb-4"
             >
-              Hire the top tier of
-              <br className="hidden md:block" />
-              <span className="text-primary"> independent talent</span>
+              The outsourcing marketplace for the <span className="text-primary">AI era.</span>
             </motion.h1>
 
             {/* Subtitle — exact home styles */}
@@ -72,9 +70,7 @@ export default function MarketplaceHero() {
               variants={itemVariants}
               className="max-w-[600px] text-base sm:text-lg text-muted-foreground/90 font-normal leading-relaxed mb-6"
             >
-              Think4Ever Marketplace is a premium talent network built for teams
-              that need high-quality execution, structured workflows, and vetted
-              professionals—not vague promises.
+              Where AI-enabled freelancers and enterprises get work done. Outsource a single task or an entire project, right inside Think4Ever: ThinkBrain writes the job post and scores proposals, and your hire starts in your project with no repo sharing or setup.
             </motion.p>
 
             {/* CTAs — exact home pattern: default size, gap-4, mb-4, center on mobile */}
@@ -94,29 +90,6 @@ export default function MarketplaceHero() {
                   Find Work
                 </Link>
               </Button>
-            </motion.div>
-
-            {/* Social proof row */}
-            <motion.div variants={itemVariants} className="flex items-center gap-3 mb-0">
-              <div className="flex -space-x-2.5">
-                {[11, 32, 47].map((img, i) => (
-                  <Image
-                    key={i}
-                    src={`https://i.pravatar.cc/100?img=${img}`}
-                    alt={`User ${i + 1}`}
-                    width={36}
-                    height={36}
-                    unoptimized
-                    className="w-9 h-9 rounded-full border-2 border-background object-cover"
-                  />
-                ))}
-              </div>
-              <p className="text-sm font-semibold text-foreground leading-tight">
-                Trusted by{' '}
-                <span className="text-primary font-bold">10k+</span>
-                <br />
-                <span className="font-normal text-muted-foreground text-xs">companies worldwide</span>
-              </p>
             </motion.div>
 
             {/* Expertise pills — same divider + label pattern as home Integrations */}
@@ -159,56 +132,27 @@ export default function MarketplaceHero() {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent mix-blend-multiply" />
             </div>
 
-            {/* Floating Review Card */}
+            {/* Floating Features Card */}
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -bottom-5 -left-4 sm:-left-6 lg:-left-8 bg-card border border-border shadow-2xl shadow-black/10 rounded-2xl p-4 sm:p-5 w-[240px] sm:w-[280px] z-20"
+              className="absolute -bottom-5 -left-4 sm:-left-6 lg:-left-8 bg-card border border-border shadow-2xl shadow-black/10 rounded-2xl p-5 w-[260px] sm:w-[300px] z-20"
             >
-              <Quote className="w-5 h-5 text-foreground absolute top-4 right-4" />
-
-              <div className="flex gap-0.5 mb-3">
-                {[1, 2, 3, 4, 5].map((s) => (
-                  <Star key={s} className="w-3.5 h-3.5 fill-amber-400 text-foreground" />
+              <ul className="space-y-3">
+                {[
+                  "ThinkBrain writes your job post",
+                  "Proposals scored against your requirements",
+                  "Access you control, removed when the contract ends"
+                ].map((text, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                      <span className="text-primary text-[10px] font-black">✓</span>
+                    </div>
+                    <span className="text-[13px] font-medium text-foreground leading-snug">{text}</span>
+                  </li>
                 ))}
-              </div>
-
-              <p className="text-[13px] font-medium text-foreground leading-relaxed mb-4 pr-4">
-                &ldquo;Their structured talent network cut our onboarding and sourcing
-                time in half. Highly recommended.&rdquo;
-              </p>
-
-              <div className="flex items-center gap-2.5 pt-3 border-t border-border/40">
-                <Image
-                  src="https://i.pravatar.cc/100?img=5"
-                  alt="Sarah Jenkins"
-                  width={32}
-                  height={32}
-                  unoptimized
-                  className="w-8 h-8 rounded-full border-2 border-border object-cover"
-                />
-                <div>
-                  <p className="font-bold text-foreground text-[13px] leading-tight">Sarah Jenkins</p>
-                  <p className="text-[11px] text-muted-foreground mt-0.5">CTO at TechFlow</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Stats badge top-right */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -top-4 -right-2 sm:-right-4 bg-card border border-border shadow-xl rounded-2xl px-4 py-3 z-20 flex items-center gap-3"
-            >
-              <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center shrink-0">
-                <span className="text-white text-xs font-black">✓</span>
-              </div>
-              <div>
-                <p className="text-[13px] font-bold text-foreground leading-tight">Top 3% Vetted</p>
-                <p className="text-[11px] text-muted-foreground">Talent only</p>
-              </div>
+              </ul>
             </motion.div>
           </motion.div>
         </div>
