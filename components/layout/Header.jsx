@@ -134,7 +134,7 @@ export default function Header() {
     },
     {
       title: t('nav.docsMenu.designerTitle', 'Think4ever Designer'),
-      desc: t('nav.docsMenu.designerDesc', '7 - Learn how to map systems.'),
+      desc: t('nav.docsMenu.designerDesc', '6 - Learn how to map systems.'),
       href: 'https://think4ever.com/docs/manual_introduction.html',
       icon: <Palette className="w-4 h-4 text-foreground" />,
     },
@@ -148,7 +148,7 @@ export default function Header() {
       title: t('nav.docsMenu.developerTitle', 'Think4ever Developer'),
       desc: t(
         'nav.docsMenu.developerDesc',
-        '8 - Technical guide for developers.',
+        '7 - Technical guide for developers.',
       ),
       href: 'https://think4ever.com/docs/dev/start_new_project.html',
       icon: <Code className="w-4 h-4 text-foreground" />,
@@ -161,7 +161,7 @@ export default function Header() {
     },
     {
       title: t('nav.docsMenu.mcpTitle', 'Think MCP'),
-      desc: t('nav.docsMenu.mcpDesc', '9 - Claude, Codex and Cursor.'),
+      desc: t('nav.docsMenu.mcpDesc', '8 - Claude, Codex and Cursor.'),
       href: 'https://think4ever.com/docs/manual_think_mcp.html',
       icon: <Puzzle className="w-4 h-4 text-foreground" />,
     },
@@ -179,7 +179,7 @@ export default function Header() {
     },
     {
       title: t('nav.docsMenu.apiTitle', 'Think API'),
-      desc: t('nav.docsMenu.apiDesc', '10 - Programmatically manage tokens.'),
+      desc: t('nav.docsMenu.apiDesc', '9 - Programmatically manage tokens.'),
       href: 'https://think4ever.com/docs/manual_think_api.html',
       icon: <Terminal className="w-4 h-4 text-foreground" />,
     },
@@ -194,34 +194,34 @@ export default function Header() {
     },
     {
       title: t('nav.docsMenu.portalTitle', 'Think4ever Portal'),
-      desc: t('nav.docsMenu.portalDesc', '11 - Manage your team dashboard'),
+      desc: t('nav.docsMenu.portalDesc', '10 - Manage your team dashboard'),
       href: 'https://think4ever.com/docs/portal/dashboard.html',
       icon: <Users className="w-4 h-4 text-foreground" />,
     },
-    {
-      title: t('nav.docsMenu.marketplaceTitle', 'Marketplace'),
-      desc: t(
-        'nav.docsMenu.marketplaceDesc',
-        '6 - Find freelancers, hire, or get hired.',
-      ),
-      href: 'https://think4ever.com/docs/portal/marketplace.html',
-      icon: <Store className="w-4 h-4 text-foreground" />,
-    },
+    // {
+    //   title: t('nav.docsMenu.marketplaceTitle', 'Marketplace'),
+    //   desc: t(
+    //     'nav.docsMenu.marketplaceDesc',
+    //     '6 - Find freelancers, hire, or get hired.',
+    //   ),
+    //   href: 'https://think4ever.com/docs/portal/marketplace.html',
+    //   icon: <Store className="w-4 h-4 text-foreground" />,
+    // },
     {
       title: t('nav.docsMenu.vscodeTitle', 'VS Code Plugin'),
-      desc: t('nav.docsMenu.vscodeDesc', '12 - Access T4E inside VS Code.'),
+      desc: t('nav.docsMenu.vscodeDesc', '11 - Access T4E inside VS Code.'),
       href: 'https://think4ever.com/docs/dev/vs_code_integration.html',
       icon: <Code className="w-4 h-4 text-foreground" />,
     },
   ];
 
   const tutorialsLinks = [
-    {
-      title: 'How to use the Marketplace',
-      desc: 'Hire freelancers or find work',
-      href: '/tutorials/how-to-use-the-marketplace',
-      icon: <BookOpen className="w-4 h-4 text-foreground" />,
-    },
+    // {
+    //   title: 'How to use the Marketplace',
+    //   desc: 'Hire freelancers or find work',
+    //   href: '/tutorials/how-to-use-the-marketplace',
+    //   icon: <BookOpen className="w-4 h-4 text-foreground" />,
+    // },
     {
       title: 'Design in Think, Code in Claude',
       desc: 'Connect Claude Code and build your project',
@@ -504,12 +504,12 @@ export default function Header() {
           >
             {t('nav.pricing')}
           </Link>
-          <Link
+          {/* <Link
             href={localizeHref('/marketplace')}
             className="hover:text-white transition-colors whitespace-nowrap"
           >
             {t('nav.marketplace', 'Marketplace')}
-          </Link>
+          </Link> */}
         </nav>
 
         {/* Right Action Items */}
@@ -884,7 +884,7 @@ export default function Header() {
               </Link>
             </div>
 
-            <div className="py-1 mb-2">
+            {/* <div className="py-1 mb-2">
               <Link
                 href={localizeHref('/marketplace')}
                 onClick={() => setMobileMenuOpen(false)}
@@ -892,7 +892,7 @@ export default function Header() {
               >
                 {t('nav.marketplace', 'Marketplace')}
               </Link>
-            </div>
+            </div> */}
 
             <div className="pt-2 pb-2 grid grid-cols-2 gap-2">
               <Button asChild variant="outline" className="w-full text-center">
