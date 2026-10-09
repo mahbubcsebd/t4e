@@ -28,27 +28,27 @@
       "onboardingTitle": "Integración de Clientes",
       "onboardingDesc": "1 - Comience con Think4ever.",
       "designerTitle": "Think4ever Designer",
-      "designerDesc": "6 - Aprenda a mapear sistemas.",
+      "designerDesc": "7 - Aprenda a mapear sistemas.",
       "workspaceTitle": "Espacio de Trabajo",
       "workspaceDesc": "2 - Gestione su espacio de trabajo",
       "developerTitle": "Think4ever Developer",
-      "developerDesc": "7 - Guía técnica para desarrolladores.",
+      "developerDesc": "8 - Guía técnica para desarrolladores.",
       "createProjectTitle": "Construir un Nuevo Proyecto",
       "createProjectDesc": "3 - Cree su nuevo proyecto.",
       "mcpTitle": "Think MCP",
-      "mcpDesc": "8 - Claude, Codex y Cursor.",
+      "mcpDesc": "9 - Claude, Codex y Cursor.",
       "reverseEngTitle": "Ingeniería Inversa de Proyecto",
       "reverseEngDesc": "4 - Importe su base de código.",
       "apiTitle": "Think API",
-      "apiDesc": "9 - Administre tokens programáticamente.",
+      "apiDesc": "10 - Administre tokens programáticamente.",
       "productionHardeningTitle": "Endurecimiento de Producción",
       "productionHardeningDesc": "5 - Evalúe la preparación de su proyecto.",
       "portalTitle": "Think4ever Portal",
-      "portalDesc": "10 - Administre el panel de equipo",
+      "portalDesc": "11 - Administre el panel de equipo",
       "marketplaceTitle": "Mercado",
       "marketplaceDesc": "6 - Encuentre freelancers o contrate.",
       "vscodeTitle": "Plugin VS Code",
-      "vscodeDesc": "11 - Acceda a T4E desde VS Code."
+      "vscodeDesc": "12 - Acceda a T4E desde VS Code."
     },
     "tutorialsMenu": {
       "title": "Tutoriales",
@@ -59,6 +59,14 @@
       "addCoDevelopers": {
         "title": "Agregar Co-desarrolladores y Colaboradores",
         "desc": "Agregue miembros del equipo como usuarios de la empresa"
+      },
+      "turnExistingCode": {
+        "title": "Convertir el código existente en un Blueprint vivo",
+        "desc": "Analice su repositorio y cree artefactos de diseño"
+      },
+      "buildFromIntent": {
+        "title": "Construir una aplicación a partir de la intención",
+        "desc": "Comience desde un resultado comercial para crear una aplicación"
       }
     }
   },
@@ -214,7 +222,11 @@
     "path1Tag": "Código → Diseño",
     "path1Title": "Analizar código existente",
     "path1Desc": "Conecte un repositorio o suba un proyecto. Think4Ever mapea estructura, dependencias, flujos y reglas.",
-    "path1Pills": ["arquitectura", "dependencias", "flujos de negocio"],
+    "path1Pills": [
+      "arquitectura",
+      "dependencias",
+      "flujos de negocio"
+    ],
     "path1BlogLink": "Vea las cinco vistas que los ingenieros necesitan antes de cambiar una base de código",
     "path2Tag": "Diseño → Código",
     "path2Title": "Definir un nuevo sistema",
@@ -328,7 +340,11 @@
     "card1Tag": "Think MCP",
     "card1Title": "Contexto del sistema a través de MCP",
     "card1Desc": "Exponga el plano revisado a clientes MCP compatibles antes de que planifiquen o cambien código.",
-    "card1List": ["Claude Code", "Codex", "Cursor y Windsurf"],
+    "card1List": [
+      "Claude Code",
+      "Codex",
+      "Cursor y Windsurf"
+    ],
     "card2Tag": "VS Code",
     "card2Title": "Comprensión en el editor",
     "card2Desc": "Acerque el mapa del sistema al trabajo de desarrollo a través de la extensión Think4Ever.",
@@ -750,7 +766,12 @@
         "Integradores de Sistemas / Consultores",
         "Empresas y Negocios Medianos"
       ],
-      "size": ["1 - 10", "11 - 50", "51 - 200", "500+"],
+      "size": [
+        "1 - 10",
+        "11 - 50",
+        "51 - 200",
+        "500+"
+      ],
       "needs": [
         "Modificar y arreglar el código existente",
         "Diseñar la arquitectura adecuada desde el principio",

@@ -134,7 +134,7 @@ export default function Header() {
     },
     {
       title: t('nav.docsMenu.designerTitle', 'Think4ever Designer'),
-      desc: t('nav.docsMenu.designerDesc', '6 - Learn how to map systems.'),
+      desc: t('nav.docsMenu.designerDesc', '7 - Learn how to map systems.'),
       href: 'https://think4ever.com/docs/manual_introduction.html',
       icon: <Palette className="w-4 h-4 text-foreground" />,
     },
@@ -148,7 +148,7 @@ export default function Header() {
       title: t('nav.docsMenu.developerTitle', 'Think4ever Developer'),
       desc: t(
         'nav.docsMenu.developerDesc',
-        '7 - Technical guide for developers.',
+        '8 - Technical guide for developers.',
       ),
       href: 'https://think4ever.com/docs/dev/start_new_project.html',
       icon: <Code className="w-4 h-4 text-foreground" />,
@@ -161,7 +161,7 @@ export default function Header() {
     },
     {
       title: t('nav.docsMenu.mcpTitle', 'Think MCP'),
-      desc: t('nav.docsMenu.mcpDesc', '8 - Claude, Codex and Cursor.'),
+      desc: t('nav.docsMenu.mcpDesc', '9 - Claude, Codex and Cursor.'),
       href: 'https://think4ever.com/docs/manual_think_mcp.html',
       icon: <Puzzle className="w-4 h-4 text-foreground" />,
     },
@@ -179,7 +179,7 @@ export default function Header() {
     },
     {
       title: t('nav.docsMenu.apiTitle', 'Think API'),
-      desc: t('nav.docsMenu.apiDesc', '9 - Programmatically manage tokens.'),
+      desc: t('nav.docsMenu.apiDesc', '10 - Programmatically manage tokens.'),
       href: 'https://think4ever.com/docs/manual_think_api.html',
       icon: <Terminal className="w-4 h-4 text-foreground" />,
     },
@@ -194,22 +194,22 @@ export default function Header() {
     },
     {
       title: t('nav.docsMenu.portalTitle', 'Think4ever Portal'),
-      desc: t('nav.docsMenu.portalDesc', '10 - Manage your team dashboard'),
+      desc: t('nav.docsMenu.portalDesc', '11 - Manage your team dashboard'),
       href: 'https://think4ever.com/docs/portal/dashboard.html',
       icon: <Users className="w-4 h-4 text-foreground" />,
     },
-    // {
-    //   title: t('nav.docsMenu.marketplaceTitle', 'Marketplace'),
-    //   desc: t(
-    //     'nav.docsMenu.marketplaceDesc',
-    //     '6 - Find freelancers, hire, or get hired.',
-    //   ),
-    //   href: 'https://think4ever.com/docs/portal/marketplace.html',
-    //   icon: <Store className="w-4 h-4 text-foreground" />,
-    // },
+    {
+      title: t('nav.docsMenu.marketplaceTitle', 'Marketplace'),
+      desc: t(
+        'nav.docsMenu.marketplaceDesc',
+        '6 - Find freelancers, hire, or get hired.',
+      ),
+      href: 'https://think4ever.com/docs/portal/marketplace.html',
+      icon: <Store className="w-4 h-4 text-foreground" />,
+    },
     {
       title: t('nav.docsMenu.vscodeTitle', 'VS Code Plugin'),
-      desc: t('nav.docsMenu.vscodeDesc', '11 - Access T4E inside VS Code.'),
+      desc: t('nav.docsMenu.vscodeDesc', '12 - Access T4E inside VS Code.'),
       href: 'https://think4ever.com/docs/dev/vs_code_integration.html',
       icon: <Code className="w-4 h-4 text-foreground" />,
     },
@@ -233,6 +233,18 @@ export default function Header() {
       desc: t('nav.tutorialsMenu.addCoDevelopers.desc', 'Add team members as company users'),
       href: '/tutorials/add-co-developers-and-collaborators',
       icon: <Users className="w-4 h-4 text-foreground" />,
+    },
+    {
+      title: t('nav.tutorialsMenu.turnExistingCode.title', 'Turn Existing Code into a Living Blueprint'),
+      desc: t('nav.tutorialsMenu.turnExistingCode.desc', 'Analyze your repository and create design artifacts'),
+      href: '/tutorials/turn-existing-code-into-a-living-blueprint',
+      icon: <BookOpen className="w-4 h-4 text-foreground" />,
+    },
+    {
+      title: t('nav.tutorialsMenu.buildFromIntent.title', 'Build an Application from Intent'),
+      desc: t('nav.tutorialsMenu.buildFromIntent.desc', 'Start from a business outcome to build an app'),
+      href: '/tutorials/build-an-application-from-intent-in-think4ever',
+      icon: <Puzzle className="w-4 h-4 text-foreground" />,
     }
   ];
 

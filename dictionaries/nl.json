@@ -24,27 +24,27 @@
       "onboardingTitle": "Klanten Onboarding",
       "onboardingDesc": "1 - Aan de slag met Think4ever.",
       "designerTitle": "Think4ever Designer",
-      "designerDesc": "6 - Leer hoe u systemen in kaart brengt.",
+      "designerDesc": "7 - Leer hoe u systemen in kaart brengt.",
       "workspaceTitle": "Klant Werkruimte",
       "workspaceDesc": "2 - Beheer uw werkruimte",
       "developerTitle": "Think4ever Developer",
-      "developerDesc": "7 - Technische gids voor ontwikkelaars.",
+      "developerDesc": "8 - Technische gids voor ontwikkelaars.",
       "createProjectTitle": "Nieuw Project Bouwen",
       "createProjectDesc": "3 - Maak uw nieuwe project.",
       "mcpTitle": "Think MCP",
-      "mcpDesc": "8 - Claude, Codex en Cursor.",
+      "mcpDesc": "9 - Claude, Codex en Cursor.",
       "reverseEngTitle": "Reverse Engineering van Project",
       "reverseEngDesc": "4 - Importeer uw bestaande codebase.",
       "apiTitle": "Think API",
-      "apiDesc": "9 - Beheer tokens programmatisch.",
+      "apiDesc": "10 - Beheer tokens programmatisch.",
       "productionHardeningTitle": "Productie Verharding",
       "productionHardeningDesc": "5 - Beoordeel de productiegereedheid.",
       "portalTitle": "Think4ever Portal",
-      "portalDesc": "10 - Beheer uw teamdashboard",
+      "portalDesc": "11 - Beheer uw teamdashboard",
       "marketplaceTitle": "Marktplaats",
       "marketplaceDesc": "6 - Vind freelancers of huur in.",
       "vscodeTitle": "VS Code Plugin",
-      "vscodeDesc": "11 - Toegang tot T4E in VS Code."
+      "vscodeDesc": "12 - Toegang tot T4E in VS Code."
     },
     "tutorialsMenu": {
       "title": "Tutorials",
@@ -55,6 +55,14 @@
       "addCoDevelopers": {
         "title": "Co-ontwikkelaars en Medewerkers toevoegen",
         "desc": "Voeg teamleden toe als bedrijfsgebruikers"
+      },
+      "turnExistingCode": {
+        "title": "Bestaande code omzetten in een levende blauwdruk",
+        "desc": "Analyseer uw repository en maak ontwerpartifacten"
+      },
+      "buildFromIntent": {
+        "title": "Bouw een applicatie vanuit intentie",
+        "desc": "Begin met een bedrijfsresultaat om een app te bouwen"
       }
     }
   },
@@ -199,12 +207,20 @@
     "path1Tag": "Code → Ontwerp",
     "path1Title": "Analyseer bestaande code",
     "path1Desc": "Koppel een repository of upload een project. Think4Ever brengt structuur, afhankelijkheden en regels in kaart.",
-    "path1Pills": ["architectuur", "afhankelijkheden", "bedrijfstromen"],
+    "path1Pills": [
+      "architectuur",
+      "afhankelijkheden",
+      "bedrijfstromen"
+    ],
     "path1BlogLink": "Bekijk de vijf weergaven die engineers nodig hebben voordat ze een codebase wijzigen",
     "path2Tag": "Ontwerp → Code",
     "path2Title": "Definieer een nieuw systeem",
     "path2Desc": "Leg doelstellingen, rollen, werkstromen, regels en acceptatiecriteria vast vóór de code.",
-    "path2Pills": ["zakelijke bedoeling", "beslissingen", "acceptatiecriteria"],
+    "path2Pills": [
+      "zakelijke bedoeling",
+      "beslissingen",
+      "acceptatiecriteria"
+    ],
     "controlEyebrow": "Het controlepunt",
     "controlTitle": "Keur bedoeling goed. Zie impact vóór uitvoering.",
     "controlSubtitle": "Vergelijk voorgestelde implementatie met goedgekeurde regels en bekijk wat het nog meer beïnvloedt.",
@@ -309,7 +325,11 @@
     "card1Tag": "Think MCP",
     "card1Title": "Systeemcontext via MCP",
     "card1Desc": "Stel de beoordeelde blauwdruk beschikbaar aan ondersteunde MCP-clients voordat ze code plannen of wijzigen.",
-    "card1List": ["Claude Code", "Codex", "Cursor en Windsurf"],
+    "card1List": [
+      "Claude Code",
+      "Codex",
+      "Cursor en Windsurf"
+    ],
     "card2Tag": "VS Code",
     "card2Title": "Begrip in de editor",
     "card2Desc": "Breng de systeemkaart dichter bij het ontwikkelwerk via de Think4Ever-extensie.",

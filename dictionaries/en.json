@@ -30,27 +30,27 @@
       "onboardingTitle": "Customer Onboarding",
       "onboardingDesc": "1 - Get Started with Think4ever.",
       "designerTitle": "Think4ever Designer",
-      "designerDesc": "6 - Learn how to map systems.",
+      "designerDesc": "7 - Learn how to map systems.",
       "workspaceTitle": "Customer Workspace",
       "workspaceDesc": "2 - Managing your Workspace",
       "developerTitle": "Think4ever Developer",
-      "developerDesc": "7 - Technical guide for developers.",
+      "developerDesc": "8 - Technical guide for developers.",
       "createProjectTitle": "Build a New Project",
       "createProjectDesc": "3 - Create your new project.",
       "mcpTitle": "Think MCP",
-      "mcpDesc": "8 - Claude, Codex and Cursor.",
+      "mcpDesc": "9 - Claude, Codex and Cursor.",
       "reverseEngTitle": "Reverse Engineering an existing Project",
       "reverseEngDesc": "4 - Import your existing codebase.",
       "apiTitle": "Think API",
-      "apiDesc": "9 - Programmatically manage tokens.",
+      "apiDesc": "10 - Programmatically manage tokens.",
       "productionHardeningTitle": "Production Hardening",
       "productionHardeningDesc": "5 - Assess your project's production readiness.",
       "portalTitle": "Think4ever Portal",
-      "portalDesc": "10 - Manage your team dashboard",
+      "portalDesc": "11 - Manage your team dashboard",
       "marketplaceTitle": "Marketplace",
       "marketplaceDesc": "6 - Find freelancers, hire, or get hired.",
       "vscodeTitle": "VS Code Plugin",
-      "vscodeDesc": "11 - Access T4E inside VS Code."
+      "vscodeDesc": "12 - Access T4E inside VS Code."
     },
     "tutorialsMenu": {
       "title": "Tutorials",
@@ -61,6 +61,14 @@
       "addCoDevelopers": {
         "title": "Add Co-developers and Collaborators",
         "desc": "Add team members as company users"
+      },
+      "turnExistingCode": {
+        "title": "Turn Existing Code into a Living Blueprint",
+        "desc": "Analyze your repository and create design artifacts"
+      },
+      "buildFromIntent": {
+        "title": "Build an Application from Intent",
+        "desc": "Start from a business outcome to build an app"
       }
     }
   },
