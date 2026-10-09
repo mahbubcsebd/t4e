@@ -45,6 +45,17 @@
       "marketplaceDesc": "6 - Vind freelancers of huur in.",
       "vscodeTitle": "VS Code Plugin",
       "vscodeDesc": "11 - Toegang tot T4E in VS Code."
+    },
+    "tutorialsMenu": {
+      "title": "Tutorials",
+      "designInThink": {
+        "title": "Ontwerp in Think, Codeer in Claude",
+        "desc": "Verbind Claude Code en bouw je project"
+      },
+      "addCoDevelopers": {
+        "title": "Co-ontwikkelaars en Medewerkers toevoegen",
+        "desc": "Voeg teamleden toe als bedrijfsgebruikers"
+      }
     }
   },
   "hero": {

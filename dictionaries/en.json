@@ -51,6 +51,17 @@
       "marketplaceDesc": "6 - Find freelancers, hire, or get hired.",
       "vscodeTitle": "VS Code Plugin",
       "vscodeDesc": "11 - Access T4E inside VS Code."
+    },
+    "tutorialsMenu": {
+      "title": "Tutorials",
+      "designInThink": {
+        "title": "Design in Think, Code in Claude",
+        "desc": "Connect Claude Code and build your project"
+      },
+      "addCoDevelopers": {
+        "title": "Add Co-developers and Collaborators",
+        "desc": "Add team members as company users"
+      }
     }
   },
   "hero": {
