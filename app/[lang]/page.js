@@ -7,5 +7,8 @@ export async function generateMetadata({ params }) {
   return getLocalizedMetadata(lang, 'home', layoutMetadata);
 }
 
+export function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'es' }, { lang: 'nl' }];
+}
 
 export default Page;

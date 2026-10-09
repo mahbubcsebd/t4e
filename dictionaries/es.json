@@ -49,6 +49,17 @@
       "marketplaceDesc": "6 - Encuentre freelancers o contrate.",
       "vscodeTitle": "Plugin VS Code",
       "vscodeDesc": "11 - Acceda a T4E desde VS Code."
+    },
+    "tutorialsMenu": {
+      "title": "Tutoriales",
+      "designInThink": {
+        "title": "Diseñar en Think, Codificar en Claude",
+        "desc": "Conecte Claude Code y construya su proyecto"
+      },
+      "addCoDevelopers": {
+        "title": "Agregar Co-desarrolladores y Colaboradores",
+        "desc": "Agregue miembros del equipo como usuarios de la empresa"
+      }
     }
   },
   "hero": {

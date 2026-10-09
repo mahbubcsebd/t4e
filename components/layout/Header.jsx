@@ -217,16 +217,22 @@ export default function Header() {
 
   const tutorialsLinks = [
     // {
-    //   title: 'How to use the Marketplace',
-    //   desc: 'Hire freelancers or find work',
+    //   title: t('nav.tutorialsMenu.howToUseMarketplace.title', 'How to use the Marketplace'),
+    //   desc: t('nav.tutorialsMenu.howToUseMarketplace.desc', 'Hire freelancers or find work'),
     //   href: '/tutorials/how-to-use-the-marketplace',
     //   icon: <BookOpen className="w-4 h-4 text-foreground" />,
     // },
     {
-      title: 'Design in Think, Code in Claude',
-      desc: 'Connect Claude Code and build your project',
+      title: t('nav.tutorialsMenu.designInThink.title', 'Design in Think, Code in Claude'),
+      desc: t('nav.tutorialsMenu.designInThink.desc', 'Connect Claude Code and build your project'),
       href: '/tutorials/how-to-design-in-think',
       icon: <Code className="w-4 h-4 text-foreground" />,
+    },
+    {
+      title: t('nav.tutorialsMenu.addCoDevelopers.title', 'Add Co-developers and Collaborators'),
+      desc: t('nav.tutorialsMenu.addCoDevelopers.desc', 'Add team members as company users'),
+      href: '/tutorials/add-co-developers-and-collaborators',
+      icon: <Users className="w-4 h-4 text-foreground" />,
     }
   ];
 
@@ -466,7 +472,7 @@ export default function Header() {
               className="flex items-center gap-1 hover:text-white transition-colors py-2 whitespace-nowrap"
               aria-label="Toggle Tutorials menu"
             >
-              <span>Tutorials</span>
+              <span>{t('nav.tutorialsMenu.title', 'Tutorials')}</span>
               <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
             </button>
             <div
@@ -843,7 +849,7 @@ export default function Header() {
                 className="flex items-center justify-between text-[15px] font-semibold text-[#314865] w-full text-left py-2.5"
                 aria-label="Toggle mobile Tutorials menu"
               >
-                <span>Tutorials</span>
+                <span>{t('nav.tutorialsMenu.title', 'Tutorials')}</span>
                 <motion.div animate={{ rotate: mobileTutorialsOpen ? 180 : 0 }}>
                   <ChevronDown className="w-4 h-4" />
                 </motion.div>

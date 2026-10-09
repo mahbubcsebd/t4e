@@ -1,5 +1,5 @@
 export function generateStaticParams() {
-  return [{ lang: 'es' }, { lang: 'nl' }];
+  return [{ lang: 'en' }, { lang: 'es' }, { lang: 'nl' }];
 }
 
 export default function LangLayout({ children }) {
