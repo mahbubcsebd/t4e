@@ -73,7 +73,7 @@
     }
   },
   "hero": {
-    "eyebrow": "For teams living with legacy code, AI-generated code creates blind spots no one can see.",
+    "eyebrow": "Legacy code or AI Generated code creates blind spots no one can see.",
     "titlePrefix": "Understand the system. ",
     "titleHighlight": "Change it with confidence.",
     "subtitle": "Turn a codebase into a shared, reviewable system map in minutes—then keep every change aligned with business intent.",
