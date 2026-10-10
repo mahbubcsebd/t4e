@@ -71,7 +71,7 @@
     }
   },
   "hero": {
-    "eyebrow": "Para equipos que construyen software complejo con IA",
+    "eyebrow": "El código heredado o el código generado por IA crea puntos ciegos que nadie puede ver.",
     "titlePrefix": "Entiende el sistema. ",
     "titleHighlight": "Cámbialo con confianza.",
     "subtitle": "Transforma una base de código en un mapa de sistema compartido y revisable en minutos—luego mantén cada cambio alineado con la intención del negocio.",
