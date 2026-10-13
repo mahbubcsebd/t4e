@@ -469,7 +469,7 @@
       "Every member codes in parallel over MCP",
       "Priority system orchestration"
     ],
-    "plan3Btn": "Get Think Big",
+    "plan3Btn": "Contact Sales",
     "plan4Tag": "THINK BLUE",
     "plan4Name": "Think Blue",
     "plan4Price": "Custom",
@@ -523,6 +523,7 @@
       }
     ],
     "teamsEyebrow": "Think Big",
+    "teamsHeadingHighlight": "Think Big:",
     "teamsTitle": "Built for teams that work on the same system",
     "teamsSubtitle": "Separate accounts mean separate workspaces, split credits and projects nobody else can open. Think Big puts the whole team on one Living Blueprint.",
     "teamsValues": [

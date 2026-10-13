@@ -50,7 +50,7 @@ export default function PricingTiers() {
       limits: t("pricingPage.plan3Limits") || [],
       list: t("pricingPage.plan3List") || [],
       btnText: t("pricingPage.plan3Btn"),
-      href: "https://portal.think4ever.com/#/register",
+      href: "/contact-us/",
       featured: false,
       team: true,
     },
@@ -86,13 +86,7 @@ export default function PricingTiers() {
                 {/* Badge */}
                 {plan.badge && (
                   <div className="absolute -top-3.5 right-6 z-20">
-                    <span
-                      className={`text-[10px] font-extrabold uppercase px-3 py-1 rounded-full tracking-wider shadow-lg ${
-                        plan.badgeColor === "orange"
-                          ? "bg-amber-600 text-white shadow-amber-600/30"
-                          : "bg-primary text-primary-foreground shadow-primary/30"
-                      }`}
-                    >
+                    <span className="text-[10px] font-extrabold uppercase px-3 py-1 rounded-full tracking-wider shadow-lg bg-amber-600 text-white shadow-amber-600/30">
                       {plan.badge}
                     </span>
                   </div>
@@ -101,11 +95,9 @@ export default function PricingTiers() {
                 <div className="relative z-10 flex flex-col flex-grow">
                   <span
                     className={`text-sm font-bold tracking-wide block mb-3 uppercase ${
-                      plan.featured
-                        ? "text-amber-600"
-                        : plan.team
-                        ? "text-primary"
-                        : "text-muted-foreground group-hover:text-primary transition-colors"
+                      plan.featured || plan.team
+                        ? "text-[#093cad]"
+                        : "text-muted-foreground group-hover:text-[#093cad] transition-colors"
                     }`}
                   >
                     {plan.tag}
