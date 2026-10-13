@@ -1,15 +1,15 @@
+import Footer from '@/components/layout/Footer';
+import Header from '@/components/layout/Header';
+import CtaSection from '@/components/sections/home/CtaSection';
+import CostControl from '@/components/sections/pricing/CostControl';
+import PricingComparison from '@/components/sections/pricing/PricingComparison';
+import PricingFaq from '@/components/sections/pricing/PricingFaq';
+import PricingHero from '@/components/sections/pricing/PricingHero';
+import PricingHowItWorks from '@/components/sections/pricing/PricingHowItWorks';
+import PricingProjectLimits from '@/components/sections/pricing/PricingProjectLimits';
+import PricingTeams from '@/components/sections/pricing/PricingTeams';
+import PricingTiers from '@/components/sections/pricing/PricingTiers';
 import { getLocalizedMetadata } from '@/lib/metadata';
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import PricingHero from "@/components/sections/pricing/PricingHero";
-import PricingTiers from "@/components/sections/pricing/PricingTiers";
-import PricingHowItWorks from "@/components/sections/pricing/PricingHowItWorks";
-import PricingTeams from "@/components/sections/pricing/PricingTeams";
-import PricingComparison from "@/components/sections/pricing/PricingComparison";
-import PricingProjectLimits from "@/components/sections/pricing/PricingProjectLimits";
-import CostControl from "@/components/sections/pricing/CostControl";
-import PricingFaq from "@/components/sections/pricing/PricingFaq";
-import CtaSection from "@/components/sections/home/CtaSection";
 
 export default function PricingPage() {
   return (
@@ -22,8 +22,8 @@ export default function PricingPage() {
         <PricingTeams />
         <PricingComparison />
         <PricingProjectLimits />
-        <PricingFaq />
         <CostControl />
+        <PricingFaq />
         <CtaSection />
       </main>
       <Footer />
@@ -32,8 +32,9 @@ export default function PricingPage() {
 }
 
 export const fallbackMetadata = {
-  title: "Think4Ever Pricing — Start Free, Scale with Your Team",
-  description: "Think4Ever plans: start free, build solo with Think New, or bring your whole team into one workspace with Think Big. One company workspace, shared credits, and admin control.",
+  title: 'Think4Ever Pricing — Start Free, Scale with Your Team',
+  description:
+    'Think4Ever plans: start free, build solo with Think New, or bring your whole team into one workspace with Think Big. One company workspace, shared credits, and admin control.',
 };
 
 export async function generateMetadata() {
