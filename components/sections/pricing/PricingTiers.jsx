@@ -8,7 +8,12 @@ import Container from "@/components/layout/Container";
 import SectionCard from "@/components/layout/SectionCard";
 
 export default function PricingTiers() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const localizeHref = (href) => {
+    if (language === 'en' || !href.startsWith('/')) return href;
+    return `/${language}${href}`;
+  };
 
   const plans = [
     {
@@ -176,7 +181,7 @@ export default function PricingTiers() {
 
                 <div className="relative z-10 mt-auto">
                   <Link
-                    href={plan.href}
+                    href={localizeHref(plan.href)}
                     className={`flex w-full items-center justify-center rounded-full text-sm font-bold py-3.5 transition-all duration-300 ${
                       plan.featured
                         ? "bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-600/25 hover:shadow-xl hover:shadow-amber-600/40 hover:-translate-y-0.5"

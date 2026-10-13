@@ -9,8 +9,13 @@ import SectionHeading from "@/components/layout/SectionHeading";
 import SectionCard from "@/components/layout/SectionCard";
 
 export default function PricingFaq() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [openIndex, setOpenIndex] = useState(0); // first item open by default like HTML
+
+  const localizeHref = (href) => {
+    if (language === 'en' || !href.startsWith('/')) return href;
+    return `/${language}${href}`;
+  };
 
   const items = t("pricingPage.faqItems") || [
     {
@@ -108,18 +113,42 @@ export default function PricingFaq() {
                   >
                     <div className="overflow-hidden">
                       <div className="px-5 pb-5 pt-1 text-sm text-muted-foreground leading-relaxed border-t border-border/40">
-                        {item.q.includes("coding tools") ? (
+                        {idx === 7 ? (
                           <p>
-                            Yes. Claude Code, Cursor, Codex and other MCP-compatible tools
-                            can build from your Think4Ever design through the Think MCP
-                            server, on your own subscription. See{" "}
-                            <Link
-                              href="/tutorials/how-to-design-in-think/"
-                              className="text-primary font-semibold hover:underline"
-                            >
-                              How to: Design in Think, Code in Claude
-                            </Link>
-                            .
+                            {language === "es" ? (
+                              <>
+                                Sí. Claude Code, Cursor, Codex y otras herramientas compatibles con MCP pueden construir desde su diseño de Think4Ever a través del servidor Think MCP, en su propia suscripción. Consulte{" "}
+                                <Link
+                                  href={localizeHref("/tutorials/how-to-design-in-think/")}
+                                  className="text-primary font-semibold hover:underline"
+                                >
+                                  Cómo: Diseñar en Think, Codificar en Claude
+                                </Link>
+                                .
+                              </>
+                            ) : language === "nl" ? (
+                              <>
+                                Ja. Claude Code, Cursor, Codex en andere MCP-compatibele tools kunnen bouwen vanuit je Think4Ever-ontwerp via de Think MCP-server, op je eigen abonnement. Zie{" "}
+                                <Link
+                                  href={localizeHref("/tutorials/how-to-design-in-think/")}
+                                  className="text-primary font-semibold hover:underline"
+                                >
+                                  Hoe te: Ontwerpen in Think, Coderen in Claude
+                                </Link>
+                                .
+                              </>
+                            ) : (
+                              <>
+                                Yes. Claude Code, Cursor, Codex and other MCP-compatible tools can build from your Think4Ever design through the Think MCP server, on your own subscription. See{" "}
+                                <Link
+                                  href="/tutorials/how-to-design-in-think/"
+                                  className="text-primary font-semibold hover:underline"
+                                >
+                                  How to: Design in Think, Code in Claude
+                                </Link>
+                                .
+                              </>
+                            )}
                           </p>
                         ) : (
                           <p>{item.a}</p>

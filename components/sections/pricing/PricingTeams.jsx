@@ -98,47 +98,47 @@ export default function PricingTeams() {
                   {/* 8 x Think New */}
                   <div className="bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col justify-between">
                     <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300 mb-4 pb-2 border-b border-white/10">
-                      8 × Think New
+                      {t("pricingPage.teamsSideCard.col1.title", "8 × Think New")}
                     </h4>
                     <dl className="space-y-3.5 text-xs">
                       <div>
                         <dt className="text-slate-400 uppercase tracking-wider text-[10px]">
-                          Workspaces
+                          {t("pricingPage.labelWorkspaces", "Workspaces")}
                         </dt>
                         <dd className="font-bold text-sm text-white mt-0.5">
-                          8 separate
+                          {t("pricingPage.teamsSideCard.col1.workspaces", "8 separate")}
                         </dd>
                       </div>
                       <div>
                         <dt className="text-slate-400 uppercase tracking-wider text-[10px]">
-                          Credits
+                          {t("pricingPage.labelCredits", "Credits")}
                         </dt>
                         <dd className="font-bold text-sm text-white mt-0.5">
-                          16,000, split 2k
+                          {t("pricingPage.teamsSideCard.col1.credits", "16,000, split 2k")}
                         </dd>
                       </div>
                       <div>
                         <dt className="text-slate-400 uppercase tracking-wider text-[10px]">
-                          Projects
+                          {t("pricingPage.labelProjects", "Projects")}
                         </dt>
                         <dd className="font-bold text-sm text-white mt-0.5">
-                          24, locked to 1
+                          {t("pricingPage.teamsSideCard.col1.projects", "24, locked to 1")}
                         </dd>
                       </div>
                       <div>
                         <dt className="text-slate-400 uppercase tracking-wider text-[10px]">
-                          Administrator
+                          {t("pricingPage.labelAdmin", "Administrator")}
                         </dt>
                         <dd className="font-bold text-sm text-white mt-0.5">
-                          None across team
+                          {t("pricingPage.teamsSideCard.col1.admin", "None across team")}
                         </dd>
                       </div>
                       <div className="pt-2 border-t border-white/10">
                         <dt className="text-slate-400 uppercase tracking-wider text-[10px]">
-                          Price
+                          {t("pricingPage.labelPrice", "Price")}
                         </dt>
                         <dd className="font-extrabold text-base text-white mt-0.5">
-                          $200/month
+                          {t("pricingPage.teamsSideCard.col1.price", "$200/month")}
                         </dd>
                       </div>
                     </dl>
@@ -148,51 +148,51 @@ export default function PricingTeams() {
                   <div className="bg-[#1447b8]/40 border-2 border-[#548bf5]/60 rounded-xl p-5 flex flex-col justify-between shadow-lg shadow-blue-900/30">
                     <div className="flex items-center justify-between mb-4 pb-2 border-b border-[#548bf5]/30">
                       <h4 className="text-xs font-extrabold uppercase tracking-wider text-[#9cc0ff]">
-                        Think Big
+                        {t("pricingPage.plan3Name", "Think Big")}
                       </h4>
                       <span className="text-[9px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-[#3b82f6] text-white">
-                        Shared
+                        {t("pricingPage.labelShared", "Shared")}
                       </span>
                     </div>
                     <dl className="space-y-3.5 text-xs">
                       <div>
                         <dt className="text-[#9cc0ff] uppercase tracking-wider text-[10px]">
-                          Workspaces
+                          {t("pricingPage.labelWorkspaces", "Workspaces")}
                         </dt>
                         <dd className="font-bold text-sm text-white mt-0.5">
-                          1 shared
+                          {t("pricingPage.teamsSideCard.col2.workspaces", "1 shared")}
                         </dd>
                       </div>
                       <div>
                         <dt className="text-[#9cc0ff] uppercase tracking-wider text-[10px]">
-                          Credits
+                          {t("pricingPage.labelCredits", "Credits")}
                         </dt>
                         <dd className="font-bold text-sm text-white mt-0.5">
-                          20,000, pooled
+                          {t("pricingPage.teamsSideCard.col2.credits", "20,000, pooled")}
                         </dd>
                       </div>
                       <div>
                         <dt className="text-[#9cc0ff] uppercase tracking-wider text-[10px]">
-                          Projects
+                          {t("pricingPage.labelProjects", "Projects")}
                         </dt>
                         <dd className="font-bold text-sm text-white mt-0.5">
-                          20, team shared
+                          {t("pricingPage.teamsSideCard.col2.projects", "20, team shared")}
                         </dd>
                       </div>
                       <div>
                         <dt className="text-[#9cc0ff] uppercase tracking-wider text-[10px]">
-                          Administrator
+                          {t("pricingPage.labelAdmin", "Administrator")}
                         </dt>
                         <dd className="font-bold text-sm text-white mt-0.5">
-                          Roles, access, caps
+                          {t("pricingPage.teamsSideCard.col2.admin", "Roles, access, caps")}
                         </dd>
                       </div>
                       <div className="pt-2 border-t border-[#548bf5]/30">
                         <dt className="text-[#9cc0ff] uppercase tracking-wider text-[10px]">
-                          Price
+                          {t("pricingPage.labelPrice", "Price")}
                         </dt>
                         <dd className="font-extrabold text-base text-[#9cc0ff] mt-0.5">
-                          $250/month
+                          {t("pricingPage.teamsSideCard.col2.price", "$250/month")}
                         </dd>
                       </div>
                     </dl>

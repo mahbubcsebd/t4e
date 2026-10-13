@@ -9,7 +9,12 @@ import SectionCard from "@/components/layout/SectionCard";
 import { Button } from "@/components/ui/button";
 
 export default function PricingCta() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const localizeHref = (href) => {
+    if (language === 'en' || !href.startsWith('/')) return href;
+    return `/${language}${href}`;
+  };
 
   return (
     <section className="py-6 md:py-8 lg:py-12" id="cta">
@@ -33,7 +38,7 @@ export default function PricingCta() {
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-border">
-                <Link href="/contact-us/">
+                <Link href={localizeHref("/contact-us/")}>
                   {t("pricingPage.ctaBtnSecondary", "Talk to sales")}
                 </Link>
               </Button>

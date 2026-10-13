@@ -257,7 +257,9 @@
       "Agent context"
     ],
     "ctaTitle": "Start with one real project.",
-    "ctaSubtitle": "See the system behind the code before you ask an agent to change it."
+    "ctaSubtitle": "See the system behind the code before you ask an agent to change it.",
+    "metaTitle": "How Think4Ever Works — From Code or Intent to a Living Blueprint",
+    "metaDesc": "See how Think4Ever bridges code and design: start from an existing codebase or business intent, create a living blueprint, and guide AI changes with precision."
   },
   "codeToDesignPage": {
     "metaTitle": "Code to Design — Understand and Visualize Your Software | Think4Ever",
@@ -391,9 +393,18 @@
     "plan1Price": "Free",
     "plan1Desc": "Build, extend or modernize something real before spending a penny.",
     "plan1Limits": [
-      { "val": "1", "label": "User" },
-      { "val": "1", "label": "Project" },
-      { "val": "500", "label": "Credits" }
+      {
+        "val": "1",
+        "label": "User"
+      },
+      {
+        "val": "1",
+        "label": "Project"
+      },
+      {
+        "val": "500",
+        "label": "Credits"
+      }
     ],
     "plan1List": [
       "Included 500 orchestration credits",
@@ -408,9 +419,18 @@
     "plan2Price": "$25/month",
     "plan2Desc": "For solo developers, freelancers and startup founders.",
     "plan2Limits": [
-      { "val": "1", "label": "User" },
-      { "val": "3", "label": "Projects" },
-      { "val": "2,000", "label": "Credits/mo" }
+      {
+        "val": "1",
+        "label": "User"
+      },
+      {
+        "val": "3",
+        "label": "Projects"
+      },
+      {
+        "val": "2,000",
+        "label": "Credits/mo"
+      }
     ],
     "plan2List": [
       "Your own company workspace",
@@ -427,9 +447,18 @@
     "plan3Price": "$250/month",
     "plan3Desc": "For developer teams shipping together in one shared workspace.",
     "plan3Limits": [
-      { "val": "8", "label": "Users" },
-      { "val": "20", "label": "Projects" },
-      { "val": "20,000", "label": "Credits/mo" }
+      {
+        "val": "8",
+        "label": "Users"
+      },
+      {
+        "val": "20",
+        "label": "Projects"
+      },
+      {
+        "val": "20,000",
+        "label": "Credits/mo"
+      }
     ],
     "plan3List": [
       "Everything in Think New, for the whole team",
@@ -446,9 +475,18 @@
     "plan4Price": "Custom",
     "plan4Desc": "For organizations with sophisticated environments, larger scale and tailored deployment.",
     "plan4Limits": [
-      { "val": "Custom", "label": "Users" },
-      { "val": "Custom", "label": "Projects" },
-      { "val": "Custom", "label": "Credits" }
+      {
+        "val": "Custom",
+        "label": "Users"
+      },
+      {
+        "val": "Custom",
+        "label": "Projects"
+      },
+      {
+        "val": "Custom",
+        "label": "Credits"
+      }
     ],
     "plan4List": [
       "Scale to enterprise teams",
@@ -529,8 +567,54 @@
         "price": "$250/month"
       }
     },
+    "labelWorkspaces": "Workspaces",
+    "labelCredits": "Credits",
+    "labelProjects": "Projects",
+    "labelAdmin": "Administrator",
+    "labelPrice": "Price",
+    "labelShared": "Shared",
     "compareEyebrow": "Compare plans",
     "compareTitle": "Everything in each plan",
+    "compareColPlan": "Plan",
+    "compareGroupLimits": "Plan limits",
+    "compareRowPrice": "Price",
+    "compareValFree": "Free",
+    "compareValNewPrice": "$25/month",
+    "compareValBigPrice": "$250/month",
+    "compareValCustom": "Custom",
+    "compareRowUsers": "Users",
+    "compareValNewUsers": "1 (administrator)",
+    "compareValBigUsers": "8, including administrator",
+    "compareRowProjects": "Projects",
+    "compareValBigProjects": "20, shared",
+    "compareRowCredits": "Orchestration credits",
+    "compareValNewCredits": "2,000 a month",
+    "compareValBigCredits": "20,000 a month, pooled",
+    "compareValBlueCredits": "Custom usage pools",
+    "compareRowExtraCredits": "Extra credits",
+    "compareValUpgrade": "Upgrade to continue",
+    "compareValPerCredit": "$0.05 per credit",
+    "compareRowUnused": "Unused included credits",
+    "compareValDontRollOver": "Don't roll over",
+    "compareValResetMonthly": "Reset every month",
+    "compareRowPurchased": "Purchased credits",
+    "compareValRollOver": "Roll over month to month",
+    "compareGroupDesign": "Design and build",
+    "compareRowBuild": "Build new, extend current, modernize legacy",
+    "compareRowBlueprint": "Living Blueprint: concept, flows, rules, data, architecture",
+    "compareRowByok": "BYOK (bring your own model)",
+    "compareRowMcp": "Connect Claude Code, Cursor or Codex over MCP",
+    "compareValForEveryMember": "✓ For every member",
+    "compareGroupTeam": "Team and administration",
+    "compareRowWorkspace": "Company workspace",
+    "compareRowUsersRoles": "Company users with roles",
+    "compareRowProjectAccess": "Per-project access",
+    "compareRowSharedPool": "Shared credit pool with admin caps",
+    "compareRowPriority": "Priority system orchestration",
+    "compareGroupEnterprise": "Enterprise",
+    "compareRowPrivate": "Private deployment options",
+    "compareRowStageGates": "Stage gates and confidence scoring",
+    "compareRowSupport": "Dedicated support and onboarding",
     "limitsEyebrow": "Project limits",
     "limitsTitle": "Reached your project limit? You have options.",
     "limitsSubtitle": "Every project in your workspace counts toward your plan's limit, whoever created it. When you reach it, you can:",

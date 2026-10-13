@@ -12,151 +12,151 @@ export default function PricingComparison() {
 
   const comparisonData = [
     {
-      group: "Plan limits",
+      group: t("pricingPage.compareGroupLimits", "Plan limits"),
       rows: [
         {
-          feature: "Price",
-          free: "Free",
-          new: "$25/month",
-          big: "$250/month",
-          blue: "Custom",
+          feature: t("pricingPage.compareRowPrice", "Price"),
+          free: t("pricingPage.compareValFree", "Free"),
+          new: t("pricingPage.compareValNewPrice", "$25/month"),
+          big: t("pricingPage.compareValBigPrice", "$250/month"),
+          blue: t("pricingPage.compareValCustom", "Custom"),
         },
         {
-          feature: "Users",
+          feature: t("pricingPage.compareRowUsers", "Users"),
           free: "1",
-          new: "1 (administrator)",
-          big: "8, including administrator",
-          blue: "Custom",
+          new: t("pricingPage.compareValNewUsers", "1 (administrator)"),
+          big: t("pricingPage.compareValBigUsers", "8, including administrator"),
+          blue: t("pricingPage.compareValCustom", "Custom"),
         },
         {
-          feature: "Projects",
+          feature: t("pricingPage.compareRowProjects", "Projects"),
           free: "1",
           new: "3",
-          big: "20, shared",
-          blue: "Custom",
+          big: t("pricingPage.compareValBigProjects", "20, shared"),
+          blue: t("pricingPage.compareValCustom", "Custom"),
         },
         {
-          feature: "Orchestration credits",
+          feature: t("pricingPage.compareRowCredits", "Orchestration credits"),
           free: "500",
-          new: "2,000 a month",
-          big: "20,000 a month, pooled",
-          blue: "Custom usage pools",
+          new: t("pricingPage.compareValNewCredits", "2,000 a month"),
+          big: t("pricingPage.compareValBigCredits", "20,000 a month, pooled"),
+          blue: t("pricingPage.compareValBlueCredits", "Custom usage pools"),
         },
         {
-          feature: "Extra credits",
-          free: "Upgrade to continue",
-          new: "$0.05 per credit",
-          big: "$0.05 per credit",
-          blue: "Custom",
+          feature: t("pricingPage.compareRowExtraCredits", "Extra credits"),
+          free: t("pricingPage.compareValUpgrade", "Upgrade to continue"),
+          new: t("pricingPage.compareValPerCredit", "$0.05 per credit"),
+          big: t("pricingPage.compareValPerCredit", "$0.05 per credit"),
+          blue: t("pricingPage.compareValCustom", "Custom"),
         },
         {
-          feature: "Unused included credits",
-          free: "Don't roll over",
-          new: "Reset every month",
-          big: "Reset every month",
-          blue: "Custom",
+          feature: t("pricingPage.compareRowUnused", "Unused included credits"),
+          free: t("pricingPage.compareValDontRollOver", "Don't roll over"),
+          new: t("pricingPage.compareValResetMonthly", "Reset every month"),
+          big: t("pricingPage.compareValResetMonthly", "Reset every month"),
+          blue: t("pricingPage.compareValCustom", "Custom"),
         },
         {
-          feature: "Purchased credits",
+          feature: t("pricingPage.compareRowPurchased", "Purchased credits"),
           free: false,
-          new: "Roll over month to month",
-          big: "Roll over month to month",
-          blue: "Custom",
+          new: t("pricingPage.compareValRollOver", "Roll over month to month"),
+          big: t("pricingPage.compareValRollOver", "Roll over month to month"),
+          blue: t("pricingPage.compareValCustom", "Custom"),
         },
       ],
     },
     {
-      group: "Design and build",
+      group: t("pricingPage.compareGroupDesign", "Design and build"),
       rows: [
         {
-          feature: "Build new, extend current, modernize legacy",
+          feature: t("pricingPage.compareRowBuild", "Build new, extend current, modernize legacy"),
           free: true,
           new: true,
           big: true,
           blue: true,
         },
         {
-          feature: "Living Blueprint: concept, flows, rules, data, architecture",
+          feature: t("pricingPage.compareRowBlueprint", "Living Blueprint: concept, flows, rules, data, architecture"),
           free: true,
           new: true,
           big: true,
           blue: true,
         },
         {
-          feature: "BYOK (bring your own model)",
+          feature: t("pricingPage.compareRowByok", "BYOK (bring your own model)"),
           free: true,
           new: true,
           big: true,
           blue: true,
         },
         {
-          feature: "Connect Claude Code, Cursor or Codex over MCP",
+          feature: t("pricingPage.compareRowMcp", "Connect Claude Code, Cursor or Codex over MCP"),
           free: true,
           new: true,
-          big: "✓ For every member",
-          blue: true,
-        },
-      ],
-    },
-    {
-      group: "Team and administration",
-      rows: [
-        {
-          feature: "Company workspace",
-          free: true,
-          new: true,
-          big: true,
-          blue: true,
-        },
-        {
-          feature: "Company users with roles",
-          free: false,
-          new: false,
-          big: true,
-          blue: true,
-        },
-        {
-          feature: "Per-project access",
-          free: false,
-          new: false,
-          big: true,
-          blue: true,
-        },
-        {
-          feature: "Shared credit pool with admin caps",
-          free: false,
-          new: false,
-          big: true,
-          blue: true,
-        },
-        {
-          feature: "Priority system orchestration",
-          free: false,
-          new: false,
-          big: true,
+          big: t("pricingPage.compareValForEveryMember", "✓ For every member"),
           blue: true,
         },
       ],
     },
     {
-      group: "Enterprise",
+      group: t("pricingPage.compareGroupTeam", "Team and administration"),
       rows: [
         {
-          feature: "Private deployment options",
+          feature: t("pricingPage.compareRowWorkspace", "Company workspace"),
+          free: true,
+          new: true,
+          big: true,
+          blue: true,
+        },
+        {
+          feature: t("pricingPage.compareRowUsersRoles", "Company users with roles"),
+          free: false,
+          new: false,
+          big: true,
+          blue: true,
+        },
+        {
+          feature: t("pricingPage.compareRowProjectAccess", "Per-project access"),
+          free: false,
+          new: false,
+          big: true,
+          blue: true,
+        },
+        {
+          feature: t("pricingPage.compareRowSharedPool", "Shared credit pool with admin caps"),
+          free: false,
+          new: false,
+          big: true,
+          blue: true,
+        },
+        {
+          feature: t("pricingPage.compareRowPriority", "Priority system orchestration"),
+          free: false,
+          new: false,
+          big: true,
+          blue: true,
+        },
+      ],
+    },
+    {
+      group: t("pricingPage.compareGroupEnterprise", "Enterprise"),
+      rows: [
+        {
+          feature: t("pricingPage.compareRowPrivate", "Private deployment options"),
           free: false,
           new: false,
           big: false,
           blue: true,
         },
         {
-          feature: "Stage gates and confidence scoring",
+          feature: t("pricingPage.compareRowStageGates", "Stage gates and confidence scoring"),
           free: false,
           new: false,
           big: false,
           blue: true,
         },
         {
-          feature: "Dedicated support and onboarding",
+          feature: t("pricingPage.compareRowSupport", "Dedicated support and onboarding"),
           free: false,
           new: false,
           big: false,
@@ -211,19 +211,19 @@ export default function PricingComparison() {
               <thead>
                 <tr className="border-b border-border/80 bg-muted/40">
                   <th className="p-4 sm:p-5 text-xs sm:text-sm font-bold uppercase tracking-wider text-muted-foreground w-[28%]">
-                    Plan
+                    {t("pricingPage.compareColPlan", "Plan")}
                   </th>
                   <th className="p-4 sm:p-5 text-xs sm:text-sm font-bold uppercase tracking-wider text-muted-foreground w-[18%]">
-                    Think Free
+                    {t("pricingPage.plan1Name", "Think Free")}
                   </th>
                   <th className="p-4 sm:p-5 text-xs sm:text-sm font-bold uppercase tracking-wider text-amber-600 w-[18%]">
-                    Think New
+                    {t("pricingPage.plan2Name", "Think New")}
                   </th>
                   <th className="p-4 sm:p-5 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-primary bg-primary/5 w-[18%] border-x border-primary/20">
-                    Think Big
+                    {t("pricingPage.plan3Name", "Think Big")}
                   </th>
                   <th className="p-4 sm:p-5 text-xs sm:text-sm font-bold uppercase tracking-wider text-muted-foreground w-[18%]">
-                    Think Blue
+                    {t("pricingPage.plan4Name", "Think Blue")}
                   </th>
                 </tr>
               </thead>
