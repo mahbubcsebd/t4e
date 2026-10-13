@@ -68,7 +68,9 @@
         "title": "Construir una aplicación a partir de la intención",
         "desc": "Comience desde un resultado comercial para crear una aplicación"
       }
-    }
+    },
+    "productVideos": "Videos de productos",
+    "whitePapers": "Libros blancos y guías"
   },
   "hero": {
     "eyebrow": "El código heredado o el código generado por IA crea puntos ciegos que nadie puede ver.",
@@ -112,7 +114,8 @@
     "card2Desc": "El código, los flujos de trabajo y las decisiones de negocio se distancian.",
     "card3Tag": "El impacto aparece tarde",
     "card3Title": "Un cambio local se convierte en un cambio de sistema",
-    "card3Desc": "Una decisión puede alterar APIs, datos, flujos de trabajo, UI y pruebas."
+    "card3Desc": "Una decisión puede alterar APIs, datos, flujos de trabajo, UI y pruebas.",
+    "titleHighlight": "la brecha crece."
   },
   "productModel": {
     "eyebrow": "El plano vivo",
@@ -127,7 +130,8 @@
     "persp4Tag": "ARQUITECTURA Y DATOS",
     "persp4Title": "Servicios, APIs y flujos de información",
     "centerTag": "PLANO VIVO",
-    "centerTitle": "Contexto compartido que permanece con el sistema."
+    "centerTitle": "Contexto compartido que permanece con el sistema.",
+    "titleHighlight": "Cada perspectiva."
   },
   "values": {
     "card1Tag": "Claridad",
@@ -182,18 +186,20 @@
     "step2Desc": "Validar el mapa del sistema con las personas que lo conocen.",
     "step3Num": "PASO 3",
     "step3Title": "Cambiar",
-    "step3Desc": "Construir en Think4Ever o llevar el contexto aprobado a su agente de código."
+    "step3Desc": "Construir en Think4Ever o llevar el contexto aprobado a su agente de código.",
+    "titleHighlight": "Cambio."
   },
   "demo": {
     "eyebrow": "Ver el producto",
     "title": "Mire Think4Ever funcionar en ambas direcciones.",
     "subtitle": "Vea cómo un proyecto existente se convierte en un modelo de sistema inspeccionable, luego vea cómo la intención del sistema guía la implementación.",
     "btnCodeToDesign": "Código → Diseño",
-    "btnDesignToCode": "Diseño → Código"
+    "btnDesignToCode": "Diseño → Código",
+    "titleHighlight": "ambas direcciones."
   },
   "cta": {
-    "title": "Vea el sistema detrás de su código.",
-    "subtitle": "Analice un proyecto real y revise lo que cada cambio futuro debe preservar.",
+    "title": "Suba la base de código que teme tocar.",
+    "subtitle": "En minutos verá cómo funciona realmente—y qué tocaría cada cambio.",
     "btn": "Analizar un proyecto →"
   },
   "footer": {
@@ -375,62 +381,257 @@
   },
   "pricingPage": {
     "metaTitle": "Precios de Think4Ever — Comience Gratis, Escale con su Equipo",
-    "metaDesc": "Comience Think4Ever gratis con un proyecto. Agregue proyectos, créditos de orquestación, controles de equipo y despliegue privado a medida que escala.",
+    "metaDesc": "Planes de Think4Ever: comience gratis, cree en solitario con Think New o reúna a todo su equipo en un solo espacio de trabajo con Think Big. Un espacio de trabajo empresarial, créditos compartidos y control de administrador.",
     "heroEyebrow": "Precios",
-    "heroTitlePrefix": "Demuestre valor en ",
-    "heroTitleHighlight": "un proyecto real.",
-    "heroSubtitle": "Analice un sistema, revise el plano y vea el impacto de los cambios antes de agregar capacidad de equipo o controles de despliegue.",
+    "heroTitlePrefix": "Comience con el proyecto ",
+    "heroTitleHighlight": "que teme tocar",
+    "heroSubtitle": "Analice un sistema, revise el plano y vea el impacto de los cambios. Comience gratis, cree en solitario con Think New o reúna a todo su equipo en un solo espacio de trabajo con Think Big.",
     "heroCtaPrimary": "Comenzar gratis →",
     "heroMicro": "No se requiere tarjeta de crédito para el plan gratuito",
     "plan1Tag": "THINK FREE",
-    "plan1Name": "Gratis",
+    "plan1Name": "Think Free",
     "plan1Price": "Gratis",
-    "plan1Desc": "Construye, extiende o moderniza algo real antes de gastar un centavo.",
+    "plan1Desc": "Construya, amplíe o modernice algo real antes de gastar un centavo.",
+    "plan1Limits": [
+      {
+        "val": "1",
+        "label": "Usuario"
+      },
+      {
+        "val": "1",
+        "label": "Proyecto"
+      },
+      {
+        "val": "500",
+        "label": "Créditos"
+      }
+    ],
     "plan1List": [
-      "500 Créditos de Orquestación Incluidos",
-      "1 Proyecto",
-      "Construir Nuevo, Extender Actual, Modernizar Legado",
-      "BYOK (trae tu propio modelo)",
-      "Actualiza al exceder los límites de uso gratuito"
+      "500 créditos de orquestación incluidos",
+      "Construya nuevo, amplíe actual, modernice legado",
+      "BYOK (traiga su propio modelo)",
+      "Actualice cuando supere los límites gratuitos"
     ],
-    "plan1Btn": "Comenzar Gratis",
+    "plan1Btn": "Comenzar gratis",
     "plan2Tag": "THINK NEW",
+    "plan2Badge": "POPULAR",
     "plan2Name": "Think New",
-    "plan2Price": "$25.00/mes",
-    "plan2Desc": "Para desarrolladores en solitario, autónomos y fundadores de startups",
+    "plan2Price": "$25/mes",
+    "plan2Desc": "Para desarrolladores independientes, freelancers y fundadores de startups.",
+    "plan2Limits": [
+      {
+        "val": "1",
+        "label": "Usuario"
+      },
+      {
+        "val": "3",
+        "label": "Proyectos"
+      },
+      {
+        "val": "2,000",
+        "label": "Créditos/mes"
+      }
+    ],
     "plan2List": [
-      "2000 Créditos de Orquestación/Mes Incluidos",
-      "Crea hasta 3 Proyectos",
-      "Construir Nuevo, Extender Actual, Modernizar Legado",
-      "BYOK (trae tu propio modelo)",
-      "Agrega créditos según sea necesario ($0.05 por crédito)"
+      "Su propio espacio de trabajo empresarial",
+      "2,000 créditos de orquestación cada mes",
+      "Construya nuevo, amplíe actual, modernice legado",
+      "Conecte Claude Code, Cursor o Codex a través de MCP",
+      "BYOK (traiga su propio modelo)",
+      "Agregue créditos según sea necesario ($0.05 por crédito). Los créditos comprados se acumulan"
     ],
-    "plan2Btn": "Iniciar Sesión",
+    "plan2Btn": "Obtener Think New",
     "plan3Tag": "THINK BIG",
-    "plan3Name": "Equipo",
-    "plan3Price": "$250.00/mes",
-    "plan3Desc": "Para equipos de desarrolladores y entornos multi-desarrollador enviando juntos a gran velocidad.",
+    "plan3Badge": "PARA EQUIPOS",
+    "plan3Name": "Think Big",
+    "plan3Price": "$250/mes",
+    "plan3Desc": "Para equipos de desarrolladores que lanzan juntos en un espacio compartido.",
+    "plan3Limits": [
+      {
+        "val": "8",
+        "label": "Usuarios"
+      },
+      {
+        "val": "20",
+        "label": "Proyectos"
+      },
+      {
+        "val": "20,000",
+        "label": "Créditos/mes"
+      }
+    ],
     "plan3List": [
-      "Soporte hasta 5 Usuarios",
-      "Crea hasta 5 Proyectos",
-      "Acceso a Entornos de Proyectos Compartidos",
-      "Agrupar Uso en Todo el Equipo",
-      "Utiliza Controles de Administrador + Límites",
-      "Acceso Prioritario a Orquestación de Sistemas"
+      "Todo lo de Think New, para todo el equipo",
+      "Un espacio de trabajo con 20 proyectos compartidos",
+      "20,000 créditos al mes en un fondo compartido",
+      "Agregue usuarios de la empresa con roles y acceso por proyecto",
+      "Controles de administrador y límites de uso",
+      "Cada miembro programa en paralelo a través de MCP",
+      "Orquestación de sistemas prioritaria"
     ],
-    "plan3Btn": "Contactar Ventas",
+    "plan3Btn": "Obtener Think Big",
     "plan4Tag": "THINK BLUE",
-    "plan4Name": "Empresa",
+    "plan4Name": "Think Blue",
     "plan4Price": "Personalizado",
-    "plan4Desc": "Para organizaciones con entornos sofisticados, mayor escala y modelos de implementación a medida.",
-    "plan4List": [
-      "Escalar a Equipos Empresariales",
-      "Acceso a Opciones de Implementación Privada",
-      "Acceso a Grupos de Uso Personalizados + Controles de Costos",
-      "Acceso a Puertas de Etapa + Puntuación de Confianza",
-      "Acceso a Soporte Dedicado + Incorporación"
+    "plan4Desc": "Para organizaciones con entornos complejos, mayor escala y despliegue a medida.",
+    "plan4Limits": [
+      {
+        "val": "Personalizado",
+        "label": "Usuarios"
+      },
+      {
+        "val": "Personalizado",
+        "label": "Proyectos"
+      },
+      {
+        "val": "Personalizado",
+        "label": "Créditos"
+      }
     ],
-    "plan4Btn": "Contactar Ventas",
+    "plan4List": [
+      "Escala a equipos empresariales",
+      "Opciones de despliegue privado",
+      "Fondos de uso personalizados y control de costos",
+      "Control de etapas y puntuación de confianza",
+      "Soporte dedicado e incorporación"
+    ],
+    "plan4Btn": "Contactar ventas",
+    "howEyebrow": "Cómo funciona",
+    "howTitle": "Una empresa. Un espacio de trabajo.",
+    "howHighlight": "Un fondo de créditos.",
+    "howSubtitle": "Cada plan pago es una cuenta de empresa. Sus proyectos, usuarios y créditos conviven en su propio espacio, sin dispersarse en cuentas personales.",
+    "howSteps": [
+      {
+        "num": "1",
+        "title": "Suscríbase",
+        "desc": "La persona que se registra y suscribe se convierte en administrador de la empresa."
+      },
+      {
+        "num": "2",
+        "title": "Obtenga su espacio",
+        "desc": "Su empresa recibe su propio servidor. Todos sus proyectos, usuarios y créditos residen allí."
+      },
+      {
+        "num": "3",
+        "title": "Agregue su equipo",
+        "desc": "El administrador agrega usuarios, asigna roles y elige qué proyectos pueden abrir. Sin registros ni pagos separados."
+      },
+      {
+        "num": "4",
+        "title": "Comparta un fondo de créditos",
+        "desc": "Todo el trabajo de IA de cada miembro se paga desde el fondo compartido, con límites del administrador para controlar el gasto."
+      }
+    ],
+    "teamsEyebrow": "Think Big",
+    "teamsTitle": "Creado para equipos que trabajan en el mismo sistema",
+    "teamsSubtitle": "Cuentas separadas significan espacios separados, créditos divididos y proyectos cerrados. Think Big une a todo el equipo en un solo Plano Vivo.",
+    "teamsValues": [
+      {
+        "title": "Un plano compartido por proyecto",
+        "desc": "Todos trabajan a partir de los mismos conceptos, flujos, reglas y pantallas, evitando desalineaciones en el diseño."
+      },
+      {
+        "title": "Roles y acceso por proyecto",
+        "desc": "Asigne a cada persona un rol como Desarrollador, Gerente de Proyecto o QA, y otorgue acceso solo a los proyectos necesarios. Desactive a cualquiera al instante."
+      },
+      {
+        "title": "Créditos compartidos con topes de admin",
+        "desc": "Los compañeros con mayor carga consumen más y los más tranquilos menos, sin que queden créditos bloqueados en cuentas individuales."
+      },
+      {
+        "title": "Programación paralela con sus herramientas",
+        "desc": "Cada miembro conecta su propia sesión de Claude Code, Cursor o Codex al mismo proyecto mediante el servidor Think MCP."
+      },
+      {
+        "title": "Incorpore freelancers cuando los necesite",
+        "desc": "Contrate mediante Think4Ever Marketplace y otorgue a los freelancers acceso delimitado a sus proyectos que finaliza con el contrato."
+      }
+    ],
+    "teamsSideCard": {
+      "title": "Un equipo de 8, dos formas",
+      "desc": "Lo que su equipo obtiene con cuentas separadas de Think New frente a un solo plan Think Big.",
+      "col1": {
+        "title": "8 × Think New",
+        "workspaces": "8 separados",
+        "credits": "16,000, divididos en 2k",
+        "projects": "24, bloqueados a 1",
+        "admin": "Ninguno en el equipo",
+        "price": "$200/mes"
+      },
+      "col2": {
+        "title": "Think Big",
+        "workspaces": "1 compartido",
+        "credits": "20,000, fondo común",
+        "projects": "20, equipo compartido",
+        "admin": "Roles, acceso, topes",
+        "price": "$250/mes"
+      }
+    },
+    "labelWorkspaces": "Espacios",
+    "labelCredits": "Créditos",
+    "labelProjects": "Proyectos",
+    "labelAdmin": "Administrador",
+    "labelPrice": "Precio",
+    "labelShared": "Compartido",
+    "compareEyebrow": "Comparar planes",
+    "compareTitle": "Todo lo que incluye cada plan",
+    "compareColPlan": "Plan",
+    "compareGroupLimits": "Límites del plan",
+    "compareRowPrice": "Precio",
+    "compareValFree": "Gratis",
+    "compareValNewPrice": "$25/mes",
+    "compareValBigPrice": "$250/mes",
+    "compareValCustom": "Personalizado",
+    "compareRowUsers": "Usuarios",
+    "compareValNewUsers": "1 (administrador)",
+    "compareValBigUsers": "8, incluido el administrador",
+    "compareRowProjects": "Proyectos",
+    "compareValBigProjects": "20, compartidos",
+    "compareRowCredits": "Créditos de orquestación",
+    "compareValNewCredits": "2,000 al mes",
+    "compareValBigCredits": "20,000 al mes, fondo común",
+    "compareValBlueCredits": "Fondos de uso personalizados",
+    "compareRowExtraCredits": "Créditos adicionales",
+    "compareValUpgrade": "Actualice para continuar",
+    "compareValPerCredit": "$0.05 por crédito",
+    "compareRowUnused": "Créditos incluidos no utilizados",
+    "compareValDontRollOver": "No se acumulan",
+    "compareValResetMonthly": "Se restablecen cada mes",
+    "compareRowPurchased": "Créditos comprados",
+    "compareValRollOver": "Se acumulan mes a mes",
+    "compareGroupDesign": "Diseño y construcción",
+    "compareRowBuild": "Construya nuevo, amplíe actual, modernice legado",
+    "compareRowBlueprint": "Plano Vivo: conceptos, flujos, reglas, datos, arquitectura",
+    "compareRowByok": "BYOK (traiga su propio modelo)",
+    "compareRowMcp": "Conecte Claude Code, Cursor o Codex a través de MCP",
+    "compareValForEveryMember": "✓ Para cada miembro",
+    "compareGroupTeam": "Equipo y administración",
+    "compareRowWorkspace": "Espacio de trabajo empresarial",
+    "compareRowUsersRoles": "Usuarios de empresa con roles",
+    "compareRowProjectAccess": "Acceso por proyecto",
+    "compareRowSharedPool": "Fondo compartido con topes de admin",
+    "compareRowPriority": "Orquestación de sistemas prioritaria",
+    "compareGroupEnterprise": "Empresarial",
+    "compareRowPrivate": "Opciones de despliegue privado",
+    "compareRowStageGates": "Control de etapas y puntuación de confianza",
+    "compareRowSupport": "Soporte dedicado e incorporación",
+    "limitsEyebrow": "Límites de proyectos",
+    "limitsTitle": "¿Alcanzó el límite de proyectos? Tiene opciones.",
+    "limitsSubtitle": "Cada proyecto en su espacio cuenta para el límite de su plan, sin importar quién lo haya creado. Cuando lo alcance, puede:",
+    "limitsCards": [
+      {
+        "title": "Archivar un proyecto",
+        "desc": "Libere un espacio archivando un proyecto que ya no necesite."
+      },
+      {
+        "title": "Agregar un proyecto por créditos",
+        "desc": "Agregue un proyecto más, pagado desde el fondo de créditos de su empresa."
+      },
+      {
+        "title": "Actualizar su plan",
+        "desc": "Suba a un plan con más proyectos, usuarios y créditos."
+      }
+    ],
     "costEyebrow": "Control de costos",
     "costTitle": "Controle la elección de modelos sin perder el contexto.",
     "costSubtitle": "Mantenga el plano independiente de un solo proveedor. Traiga claves compatibles y reserve el razonamiento avanzado para el trabajo que lo requiera.",
@@ -440,8 +641,51 @@
     "card2Desc": "Utilice credenciales de proveedores compatibles cuando estén disponibles en lugar de forzar todo el uso de modelos en un paquete único.",
     "card3Title": "Controles empresariales",
     "card3Desc": "Discuta el despliegue privado, controles de uso personalizados y requisitos de soporte con Think4Ever.",
-    "ctaTitle": "Pruebe el producto antes de la llamada de ventas.",
-    "ctaSubtitle": "Comience gratis. Contacte al equipo solo cuando sus necesidades de gobernanza lo requieran."
+    "faqEyebrow": "Preguntas frecuentes",
+    "faqTitle": "Preguntas sobre los planes",
+    "faqItems": [
+      {
+        "q": "¿Quién es el administrador?",
+        "a": "La persona que se registra y suscribe. El administrador gestiona usuarios, roles, accesos a proyectos y créditos, y puede ver todos los proyectos del espacio de trabajo."
+      },
+      {
+        "q": "¿Los miembros de mi equipo necesitan sus propias cuentas de Think4Ever?",
+        "a": "No. En Think Big, el administrador crea usuarios de empresa dentro de su espacio con un inicio de sesión y una contraseña temporal. Cada usuario recibe un correo electrónico y establece su propia contraseña al iniciar sesión por primera vez. No pagan ni se registran por separado."
+      },
+      {
+        "q": "¿Qué puede ver cada miembro del equipo?",
+        "a": "Cada usuario ve solo los proyectos que el administrador le asignó, más los proyectos creados por ellos mismos. El administrador ve todos los proyectos de la empresa."
+      },
+      {
+        "q": "¿Quién paga por el uso de IA?",
+        "a": "Todo el trabajo de IA de cada usuario se paga desde el fondo compartido de la empresa. En Think Big, el administrador puede fijar topes para que ningún usuario o proyecto use más de su parte."
+      },
+      {
+        "q": "¿Los créditos no utilizados se acumulan?",
+        "a": "Los créditos incluidos se restablecen cada mes. Los créditos incluidos que no use al final del mes no se acumulan. Los créditos que compre adicionalmente a $0.05 cada uno sí se acumulan mes a mes hasta que los use."
+      },
+      {
+        "q": "¿Qué sucede cuando alcanzamos el límite de proyectos?",
+        "a": "Puede archivar un proyecto, agregar uno más con créditos de su fondo o actualizar a un plan con un límite mayor."
+      },
+      {
+        "q": "¿Cómo elimino el acceso de alguien?",
+        "a": "El administrador puede desactivar a un usuario en cualquier momento y ese usuario pierde el acceso inmediatamente."
+      },
+      {
+        "q": "¿Puedo usar mis propias herramientas de código?",
+        "a": "Sí. Claude Code, Cursor, Codex y otras herramientas compatibles con MCP pueden construir desde su diseño de Think4Ever a través del servidor Think MCP, en su propia suscripción. Consulte Cómo: Diseñar en Think, Codificar en Claude."
+      },
+      {
+        "q": "¿Puedo traer mi propio modelo?",
+        "a": "Sí. Cada plan admite BYOK, por lo que puede usar credenciales de proveedores compatibles en lugar de poner todo el uso de modelos en un solo paquete."
+      }
+    ],
+    "ctaEyebrow": "Comenzar gratis",
+    "ctaTitle": "Suba la base de código que teme tocar.",
+    "ctaSubtitle": "En minutos verá cómo funciona realmente y qué tocaría cada cambio.",
+    "ctaBtnPrimary": "Analizar un proyecto →",
+    "ctaBtnSecondary": "Hablar con ventas"
   },
   "faqPage": {
     "metaTitle": "Preguntas Frecuentes Think4Ever — Planos Vivos, Comprensión de Código y MCP",
@@ -606,7 +850,9 @@
     "marketingCheck": "Enviar actualizaciones de productos y orientación práctica. Opcional.",
     "btnSubmit": "Crear cuenta gratis",
     "alreadyAccount": "¿Ya tiene una cuenta?",
-    "signIn": "Iniciar sesión"
+    "signIn": "Iniciar sesión",
+    "metaTitle": "Cree su cuenta — Think4Ever",
+    "metaDesc": "Cree su cuenta de Think4Ever para comenzar a analizar proyectos de software o diseñar sistemas a partir de la intención del negocio."
   },
   "onboardingPage": {
     "kicker": "Bienvenido a Think4Ever",
@@ -622,7 +868,9 @@
     "path2Desc": "Defina lo que debe ser verdadero y revise el sistema antes de la implementación.",
     "path2Cta": "Diseñar un sistema →",
     "back": "Atrás",
-    "continue": "Continuar"
+    "continue": "Continuar",
+    "metaTitle": "Primeros pasos — Elija su flujo de trabajo | Think4Ever",
+    "metaDesc": "Seleccione su camino: analice un proyecto existente o defina la intención de negocio para comenzar a construir su plano vivo."
   },
   "contactPage": {
     "heroEyebrow": "Contacto",

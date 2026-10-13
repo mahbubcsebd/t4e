@@ -64,7 +64,13 @@
         "title": "Bouw een applicatie vanuit intentie",
         "desc": "Begin met een bedrijfsresultaat om een app te bouwen"
       }
-    }
+    },
+    "codeToDesignDesc": "Code reverse-engineeren naar visuals",
+    "designToCodeDesc": "Systemen omzetten in daadwerkelijke code",
+    "resourceLibraryDesc": "Verken onze verzameling van bronnen.",
+    "blogDesc": "Lees het laatste nieuws en artikelen.",
+    "faq": "FAQ",
+    "faqDesc": "Veelgestelde vragen."
   },
   "hero": {
     "eyebrow": "Legacycode of door AI gegenereerde code creëert blinde vlekken die niemand kan zien.",
@@ -86,7 +92,16 @@
     "cardTwoIntentName": "Terugbetalingen blijven controleerbaar en zichtbaar voor de klant.",
     "cardTwoImplTag": "IMPLEMENTATIE",
     "cardTwoImplName": "Regel, werkstroom en acceptatiecriteria",
-    "cardTwoStatus": "✓ doel behouden"
+    "cardTwoStatus": "✓ doel behouden",
+    "tabOne": "CODE → ONTWERP",
+    "tabTwo": "ONTWERP → CODE",
+    "cardOneFooter": "Levende repository-kaart realtime gesynchroniseerd",
+    "cardTwoFooter": "Goedgekeurde intentie afgedwongen vóór code-uitvoering",
+    "nodeBooking": "Boeking",
+    "nodePayments": "Betalingen",
+    "nodeRefundRule": "Terugbetalingsregel",
+    "nodeUI": "UI",
+    "watchDemo": "Bekijk demo"
   },
   "problem": {
     "eyebrow": "De context-kloof",
@@ -99,7 +114,8 @@
     "card2Desc": "Code, werkstromen en zakelijke beslissingen groeien uit elkaar.",
     "card3Tag": "Impact verschijnt laat",
     "card3Title": "Een lokale wijziging wordt een systeemwijziging",
-    "card3Desc": "Één beslissing kan API's, gegevens, werkstromen, UI en tests veranderen."
+    "card3Desc": "Één beslissing kan API's, gegevens, werkstromen, UI en tests veranderen.",
+    "titleHighlight": "groeit de kloof."
   },
   "productModel": {
     "eyebrow": "De levende blauwdruk",
@@ -114,7 +130,8 @@
     "persp4Tag": "ARCHITECTUUR & GEGEVENS",
     "persp4Title": "Services, API's en informatiestromen",
     "centerTag": "LEVENDE BLAUWDRUK",
-    "centerTitle": "Gedeelde context die bij het systeem blijft."
+    "centerTitle": "Gedeelde context die bij het systeem blijft.",
+    "titleHighlight": "Elk perspectief."
   },
   "values": {
     "card1Tag": "Helderheid",
@@ -169,18 +186,20 @@
     "step2Desc": "Valideer de systeemkaart met de mensen die het kennen.",
     "step3Num": "STAP 3",
     "step3Title": "Wijzigen",
-    "step3Desc": "Bouw in Think4Ever of neem goedgekeurde context mee naar je coderingsagent."
+    "step3Desc": "Bouw in Think4Ever of neem goedgekeurde context mee naar je coderingsagent.",
+    "titleHighlight": "Verandering."
   },
   "demo": {
     "eyebrow": "Bekijk het product",
     "title": "Zie Think4Ever in beide richtingen werken.",
     "subtitle": "Zie hoe een bestaand project een inspecteerbaar systeemmodel wordt, en zie vervolgens hoe goedgekeurde bedoeling de implementatie leidt.",
     "btnCodeToDesign": "Code → Ontwerp ↗",
-    "btnDesignToCode": "Ontwerp → Code ↗"
+    "btnDesignToCode": "Ontwerp → Code ↗",
+    "titleHighlight": "beide richtingen."
   },
   "cta": {
-    "title": "Zie het systeem achter je code.",
-    "subtitle": "Analyseer één echt project en beoordeel wat elke toekomstige wijziging moet behouden.",
+    "title": "Upload de codebase die je niet durft aan te raken.",
+    "subtitle": "Binnen enkele minuten zie je hoe het echt werkt—en wat elke wijziging zou raken.",
     "btn": "Analyseer een project →"
   },
   "footer": {
@@ -238,7 +257,9 @@
       "Agent-context"
     ],
     "ctaTitle": "Start met één echt project.",
-    "ctaSubtitle": "Zie het systeem achter de code voordat je een agent vraagt het te wijzigen."
+    "ctaSubtitle": "Zie het systeem achter de code voordat je een agent vraagt het te wijzigen.",
+    "explorePath1": "Verken Code naar Ontwerp",
+    "explorePath2": "Verken Ontwerp naar Code"
   },
   "codeToDesignPage": {
     "metaTitle": "Code naar Ontwerp — Begrijp en Visualiseer uw Software | Think4Ever",
@@ -360,62 +381,311 @@
   },
   "pricingPage": {
     "metaTitle": "Think4Ever Prijzen — Begin Gratis, Schaal met uw Team",
-    "metaDesc": "Begin Think4Ever gratis met één project. Voeg projecten, orkestratiekredieten, teamcontroles en privé-implementatie toe naarmate u groeit.",
+    "metaDesc": "Think4Ever-abonnementen: begin gratis, bouw solo met Think New of breng je hele team samen in één werkruimte met Think Big. Eén bedrijfswerkruimte, gedeelde credits en beheerderscontrole.",
     "heroEyebrow": "Prijzen",
-    "heroTitlePrefix": "Bewijs waarde op ",
-    "heroTitleHighlight": "één echt project.",
-    "heroSubtitle": "Analyseer een systeem, beoordeel de blauwdruk en zie de impact van wijzigingen voordat je teamcapaciteit of implementatiecontroles toevoegt.",
+    "heroTitlePrefix": "Begin met het project ",
+    "heroTitleHighlight": "dat je niet durft aan te raken",
+    "heroSubtitle": "Analyseer een systeem, beoordeel de blauwdruk en zie de impact van wijzigingen. Begin gratis, bouw solo met Think New of breng je hele team samen in één werkruimte met Think Big.",
     "heroCtaPrimary": "Gratis starten →",
     "heroMicro": "Geen creditcard nodig voor het gratis abonnement",
-    "plan1Tag": "Think Free",
-    "plan1Price": "$0",
-    "plan1Desc": "Verken Think4Ever met één project.",
+    "plan1Tag": "THINK FREE",
+    "plan1Name": "Think Free",
+    "plan1Price": "Gratis",
+    "plan1Desc": "Bouw, breid uit of moderniseer iets echts voordat je een cent uitgeeft.",
+    "plan1Limits": [
+      {
+        "val": "1",
+        "label": "Gebruiker"
+      },
+      {
+        "val": "1",
+        "label": "Project"
+      },
+      {
+        "val": "500",
+        "label": "Credits"
+      }
+    ],
     "plan1List": [
-      "500 orchestratie-credits",
-      "1 project",
-      "Neem je eigen sleutels mee"
+      "500 orkestratie-credits inbegrepen",
+      "Nieuw bouwen, bestaand uitbreiden, legacy moderniseren",
+      "BYOK (neem je eigen model mee)",
+      "Upgrade zodra je de gratis limieten ontgroeit"
     ],
     "plan1Btn": "Gratis starten",
-    "plan2Tag": "Think New",
-    "plan2Price": "$25",
-    "plan2Period": "/ maand",
-    "plan2Desc": "Voor individuele bouwers die actieve projecten beheren.",
+    "plan2Tag": "THINK NEW",
+    "plan2Badge": "POPULAIR",
+    "plan2Name": "Think New",
+    "plan2Price": "$25/maand",
+    "plan2Desc": "Voor individuele ontwikkelaars, freelancers en startup-oprichters.",
+    "plan2Limits": [
+      {
+        "val": "1",
+        "label": "Gebruiker"
+      },
+      {
+        "val": "3",
+        "label": "Projecten"
+      },
+      {
+        "val": "2.000",
+        "label": "Credits/mnd"
+      }
+    ],
     "plan2List": [
-      "2.000 credits per maand",
-      "Tot 3 projecten",
-      "Neem je eigen sleutels mee"
+      "Je eigen bedrijfswerkruimte",
+      "2.000 orkestratie-credits per maand",
+      "Nieuw bouwen, bestaand uitbreiden, legacy moderniseren",
+      "Verbind Claude Code, Cursor of Codex via MCP",
+      "BYOK (neem je eigen model mee)",
+      "Voeg credits toe naar behoefte ($0,05 per credit). Gekochte credits rollen door"
     ],
-    "plan2Btn": "Gratis starten",
-    "plan3Tag": "Think Big",
-    "plan3Price": "$250",
-    "plan3Period": "/ maand",
-    "plan3Desc": "Voor een team dat projecten en gebruik deelt.",
+    "plan2Btn": "Kies Think New",
+    "plan3Tag": "THINK BIG",
+    "plan3Badge": "VOOR TEAMS",
+    "plan3Name": "Think Big",
+    "plan3Price": "$250/maand",
+    "plan3Desc": "Voor ontwikkelaarsteams die samen verzenden in één gedeelde werkruimte.",
+    "plan3Limits": [
+      {
+        "val": "8",
+        "label": "Gebruikers"
+      },
+      {
+        "val": "20",
+        "label": "Projecten"
+      },
+      {
+        "val": "20.000",
+        "label": "Credits/mnd"
+      }
+    ],
     "plan3List": [
-      "Tot 5 gebruikers",
-      "Tot 5 projecten",
-      "Teamgebruikscontroles"
+      "Alles in Think New, voor het hele team",
+      "Eén bedrijfswerkruimte met 20 gedeelde projecten",
+      "20.000 credits per maand in één gedeelde pool",
+      "Voeg gebruikers toe met rollen en per-project toegang",
+      "Beheerderscontroles en gebruikslimieten",
+      "Elk lid codeert parallel via MCP",
+      "Prioritaire systeemorkestratie"
     ],
-    "plan3Btn": "Neem contact op met verkoop",
-    "plan4Tag": "Think Blue",
+    "plan3Btn": "Kies Think Big",
+    "plan4Tag": "THINK BLUE",
+    "plan4Name": "Think Blue",
     "plan4Price": "Aangepast",
-    "plan4Desc": "Voor enterprise-implementatie en governance-behoeften.",
+    "plan4Desc": "Voor organisaties met complexe omgevingen, grotere schaal en implementatie op maat.",
+    "plan4Limits": [
+      {
+        "val": "Op maat",
+        "label": "Gebruikers"
+      },
+      {
+        "val": "Op maat",
+        "label": "Projecten"
+      },
+      {
+        "val": "Op maat",
+        "label": "Credits"
+      }
+    ],
     "plan4List": [
-      "Prive-implementatie-opties",
-      "Aangepaste gebruikscontroles",
-      "Toegewijde ondersteuning"
+      "Schaal naar enterprise-teams",
+      "Privé-implementatieopties",
+      "Aangepaste gebruikspools en kostenbeheersing",
+      "Fasepoorten en betrouwbaarheidsscores",
+      "Toegewijde ondersteuning en onboarding"
     ],
     "plan4Btn": "Neem contact op met verkoop",
+    "howEyebrow": "Hoe het werkt",
+    "howTitle": "Eén bedrijf. Eén werkruimte.",
+    "howHighlight": "Eén pool van credits.",
+    "howSubtitle": "Elk betaald abonnement is een bedrijfsaccount. Je projecten, gebruikers en credits leven samen in je eigen werkruimte, zodat er niets verspreid raakt over persoonlijke accounts.",
+    "howSteps": [
+      {
+        "num": "1",
+        "title": "Abonneren",
+        "desc": "De persoon die zich aanmeldt en abonneert wordt de bedrijfsbeheerder."
+      },
+      {
+        "num": "2",
+        "title": "Ontvang je werkruimte",
+        "desc": "Je bedrijf krijgt een eigen server. Alle projecten, gebruikers en credits leven daar."
+      },
+      {
+        "num": "3",
+        "title": "Voeg je team toe",
+        "desc": "De beheerder voegt gebruikers toe, kiest hun rol en bepaalt welke projecten ze mogen openen. Geen afzonderlijke betalingen of accounts."
+      },
+      {
+        "num": "4",
+        "title": "Deel één creditpool",
+        "desc": "Al het AI-werk van het hele team wordt betaald uit de gedeelde credits, met limieten om uitgaven onder controle te houden."
+      }
+    ],
+    "teamsEyebrow": "Think Big",
+    "teamsTitle": "Gebouwd voor teams die aan hetzelfde systeem werken",
+    "teamsSubtitle": "Aparte accounts betekenen gescheiden werkruimtes, gesplitste credits en projecten die niemand anders kan openen. Think Big brengt het hele team samen op één Levende Blauwdruk.",
+    "teamsValues": [
+      {
+        "title": "Eén gedeelde blauwdruk per project",
+        "desc": "Iedereen werkt vanuit dezelfde concepten, stromen, regels en schermen, zodat ontwerpen consistent blijven."
+      },
+      {
+        "title": "Rollen en toegang per project",
+        "desc": "Geef elk lid een rol zoals Ontwikkelaar, Projectmanager of QA, en open alleen de benodigde projecten. Deactiveer accounts direct indien nodig."
+      },
+      {
+        "title": "Gedeelde credits met beheerderslimieten",
+        "desc": "Actievere teamleden verbruiken meer en rustigere minder, zodat credits niet vast komen te zitten in individuele accounts."
+      },
+      {
+        "title": "Parallel coderen met je eigen tools",
+        "desc": "Elk teamlid verbindt zijn eigen Claude Code, Cursor of Codex-sessie met hetzelfde project via de Think MCP-server."
+      },
+      {
+        "title": "Schakel freelancers in wanneer nodig",
+        "desc": "Huur in via Think4Ever Marketplace en geef freelancers afgebakende toegang tot projecten die eindigt bij het contract."
+      }
+    ],
+    "teamsSideCard": {
+      "title": "Een team van 8, op twee manieren",
+      "desc": "Wat je team krijgt met afzonderlijke Think New-accounts vergeleken met één Think Big-abonnement.",
+      "col1": {
+        "title": "8 × Think New",
+        "workspaces": "8 gescheiden",
+        "credits": "16.000, 2k elk",
+        "projects": "24, vergrendeld aan 1",
+        "admin": "Geen binnen team",
+        "price": "$200/maand"
+      },
+      "col2": {
+        "title": "Think Big",
+        "workspaces": "1 gedeeld",
+        "credits": "20.000, gedeeld",
+        "projects": "20, team gedeeld",
+        "admin": "Rollen, toegang, caps",
+        "price": "$250/maand"
+      }
+    },
+    "labelWorkspaces": "Werkruimtes",
+    "labelCredits": "Credits",
+    "labelProjects": "Projecten",
+    "labelAdmin": "Beheerder",
+    "labelPrice": "Prijs",
+    "labelShared": "Gedeeld",
+    "compareEyebrow": "Vergelijk abonnementen",
+    "compareTitle": "Alles in elk abonnement",
+    "compareColPlan": "Abonnement",
+    "compareGroupLimits": "Abonnementslimieten",
+    "compareRowPrice": "Prijs",
+    "compareValFree": "Gratis",
+    "compareValNewPrice": "$25/maand",
+    "compareValBigPrice": "$250/maand",
+    "compareValCustom": "Aangepast",
+    "compareRowUsers": "Gebruikers",
+    "compareValNewUsers": "1 (beheerder)",
+    "compareValBigUsers": "8, inclusief de beheerder",
+    "compareRowProjects": "Projecten",
+    "compareValBigProjects": "20, gedeeld",
+    "compareRowCredits": "Orkestratie-credits",
+    "compareValNewCredits": "2.000 per maand",
+    "compareValBigCredits": "20.000 per maand, gedeeld",
+    "compareValBlueCredits": "Aangepaste gebruikspools",
+    "compareRowExtraCredits": "Extra credits",
+    "compareValUpgrade": "Upgrade om door te gaan",
+    "compareValPerCredit": "$0,05 per credit",
+    "compareRowUnused": "Ongebruikte inbegrepen credits",
+    "compareValDontRollOver": "Rollen niet door",
+    "compareValResetMonthly": "Resetten elke maand",
+    "compareRowPurchased": "Gekochte credits",
+    "compareValRollOver": "Rollen van maand tot maand door",
+    "compareGroupDesign": "Ontwerp en bouw",
+    "compareRowBuild": "Nieuw bouwen, bestaand uitbreiden, legacy moderniseren",
+    "compareRowBlueprint": "Levende Blauwdruk: concept, stromen, regels, data, architectuur",
+    "compareRowByok": "BYOK (neem je eigen model mee)",
+    "compareRowMcp": "Verbind Claude Code, Cursor of Codex via MCP",
+    "compareValForEveryMember": "✓ Voor elk lid",
+    "compareGroupTeam": "Team en beheer",
+    "compareRowWorkspace": "Bedrijfswerkruimte",
+    "compareRowUsersRoles": "Bedrijfsgebruikers met rollen",
+    "compareRowProjectAccess": "Toegang per project",
+    "compareRowSharedPool": "Gedeelde creditpool met beheerderslimieten",
+    "compareRowPriority": "Prioritaire systeemorkestratie",
+    "compareGroupEnterprise": "Enterprise",
+    "compareRowPrivate": "Privé-implementatieopties",
+    "compareRowStageGates": "Fasepoorten en betrouwbaarheidsscores",
+    "compareRowSupport": "Toegewijde ondersteuning en onboarding",
+    "limitsEyebrow": "Projectlimieten",
+    "limitsTitle": "Projectlimiet bereikt? Je hebt opties.",
+    "limitsSubtitle": "Elk project in je werkruimte telt mee voor de limiet van je abonnement, ongeacht wie het heeft gemaakt. Wanneer je deze bereikt, kun je:",
+    "limitsCards": [
+      {
+        "title": "Een project archiveren",
+        "desc": "Maak een slot vrij door een project te archiveren dat je niet meer nodig hebt."
+      },
+      {
+        "title": "Een project toevoegen voor credits",
+        "desc": "Voeg nog één project toe, betaald uit de creditpool van je bedrijf."
+      },
+      {
+        "title": "Je abonnement upgraden",
+        "desc": "Stap over naar een abonnement met meer projecten, gebruikers en credits."
+      }
+    ],
     "costEyebrow": "Kostenbeheersing",
     "costTitle": "Beheers modelkeuze zonder context te verliezen.",
     "costSubtitle": "Houd de blauwdruk onafhankelijk van één provider. Breng ondersteunde sleutels mee en bewaar duur redeneren voor werk dat het nodig heeft.",
-    "card1Title": "Orchestratie-credits",
-    "card1Desc": "Abonnementen bevatten een vergoeding voor Think4Ever-orchestratie. Gebruik hangt af van het uitgevoerde werk.",
+    "card1Title": "Orkestratie-credits",
+    "card1Desc": "Abonnementen bevatten een vergoeding voor Think4Ever-orkestratie. Gebruik hangt af van het uitgevoerde werk.",
     "card2Title": "Neem je eigen sleutels mee",
     "card2Desc": "Gebruik ondersteunde provider-referenties waar beschikbaar in plaats van al het modelgebruik in één bundel te dwingen.",
     "card3Title": "Enterprise-controles",
-    "card3Desc": "Bespreek prive-implementatie, aangepaste gebruikscontroles en ondersteuningsvereisten met Think4Ever.",
-    "ctaTitle": "Probeer het product vóór het verkoopgesprek.",
-    "ctaSubtitle": "Start gratis. Neem pas contact op met het team wanneer je implementatie- of governance-behoeften dit vereisen."
+    "card3Desc": "Bespreek privé-implementatie, aangepaste gebruikscontroles en ondersteuningsvereisten met Think4Ever.",
+    "faqEyebrow": "FAQ",
+    "faqTitle": "Vragen over abonnementen",
+    "faqItems": [
+      {
+        "q": "Wie is de beheerder?",
+        "a": "De persoon die zich aanmeldt en abonneert. De beheerder beheert gebruikers, rollen, projecttoegang en credits, en kan elk project in de bedrijfswerkruimte zien."
+      },
+      {
+        "q": "Hebben mijn teamleden hun eigen Think4Ever-accounts nodig?",
+        "a": "Nee. Bij Think Big maakt de beheerder gebruikers aan binnen je werkruimte met een login en tijdelijk wachtwoord. Ze betalen of registreren zich niet afzonderlijk."
+      },
+      {
+        "q": "Wat kan elk teamlid zien?",
+        "a": "Elke gebruiker ziet alleen de projecten die de beheerder aan hen heeft toegewezen, plus projecten die ze zelf hebben gemaakt. De beheerder ziet alle bedrijfsprojecten."
+      },
+      {
+        "q": "Wie betaalt voor AI-gebruik?",
+        "a": "Al het AI-werk door elke gebruiker wordt betaald uit de gedeelde creditpool van het bedrijf. Bij Think Big kan de beheerder limieten instellen zodat niemand meer dan zijn deel verbruikt."
+      },
+      {
+        "q": "Rollen ongebruikte credits door?",
+        "a": "Inbegrepen credits resetten elke maand en rollen niet door. Credits die je erbij koopt voor $0,05 per stuk rollen wel van maand tot maand door totdat je ze gebruikt."
+      },
+      {
+        "q": "Wat gebeurt er als we de projectlimiet bereiken?",
+        "a": "Je kunt een project archiveren, nog een project toevoegen voor credits uit je pool, of upgraden naar een abonnement met een hogere limiet."
+      },
+      {
+        "q": "Hoe verwijder ik iemands toegang?",
+        "a": "De beheerder kan een gebruiker op elk moment deactiveren, waarna diegene onmiddellijk toegang verliest."
+      },
+      {
+        "q": "Kan ik mijn eigen codeertools gebruiken?",
+        "a": "Ja. Claude Code, Cursor, Codex en andere MCP-compatibele tools kunnen bouwen vanuit je Think4Ever-ontwerp via de Think MCP-server, op je eigen abonnement."
+      },
+      {
+        "q": "Kan ik mijn eigen model meenemen?",
+        "a": "Ja. Elk abonnement ondersteunt BYOK, zodat je ondersteunde provider-referenties kunt gebruiken."
+      }
+    ],
+    "ctaEyebrow": "Gratis starten",
+    "ctaTitle": "Upload de codebase die je niet durft aan te raken.",
+    "ctaSubtitle": "Binnen enkele minuten zie je hoe het echt werkt, en wat elke verandering zou raken.",
+    "ctaBtnPrimary": "Analyseer een project →",
+    "ctaBtnSecondary": "Praat met verkoop"
   },
   "faqPage": {
     "metaTitle": "Think4Ever FAQ — Levende Blauwdrukken, Code Begrip en MCP",
@@ -711,5 +981,77 @@
     "description": "De pagina die u zoekt bestaat niet of is verplaatst. Laten we u terugbrengen naar het bouwen en begrijpen van uw codebase.",
     "ctaPrimary": "Analyseer een project",
     "ctaSecondary": "Keer terug naar home"
+  },
+  "contact": {
+    "eyebrow": "Neem contact op",
+    "titlePrefix": "Laten we samen ",
+    "titleHighlight": "bouwen.",
+    "title": "Contact opnemen",
+    "subtitle": "Vul je gegevens in en een lid van het Think4Ever-team neemt spoedig contact met je op.",
+    "segmentLabel": "Je segment",
+    "segmentPlaceholder": "Selecteer je segment",
+    "firstNameLabel": "Voornaam",
+    "firstNamePlaceholder": "Vul je voornaam in",
+    "lastNameLabel": "Achternaam",
+    "lastNamePlaceholder": "Vul je achternaam in",
+    "emailLabel": "Zakelijk e-mailadres",
+    "emailPlaceholder": "jij@bedrijf.com",
+    "companyLabel": "Bedrijfsnaam",
+    "companyPlaceholder": "Je bedrijf",
+    "sizeLabel": "Bedrijfsgrootte",
+    "sizePlaceholder": "Selecteer grootte",
+    "roleLabel": "Je rol",
+    "rolePlaceholder": "bijv. CTO, VP Engineering",
+    "needsLabel": "Primaire behoefte (selecteer maximaal 5)",
+    "interestsLabel": "Waar ben je het meest in geïnteresseerd?",
+    "interestsPlaceholder": "Vertel ons over je specifieke use case, uitdagingen of functies die je graag wilt zien...",
+    "thankYou": "Bedankt voor het verduidelijken van je zakelijke behoeften.",
+    "agreementPrefix": "Ik ga akkoord met het",
+    "privacyPolicy": "Privacybeleid",
+    "agreementSuffix": "en geef toestemming om gecontacteerd te worden.",
+    "submitBtn": "Verzenden",
+    "submittingBtn": "Versturen...",
+    "requiredError": "Dit veld is verplicht",
+    "requiredSuffix": "is verplicht",
+    "invalidEmail": "Voer een geldig e-mailadres in",
+    "minLength": "moet minimaal",
+    "maxLength": "mag niet langer zijn dan",
+    "characters": "tekens",
+    "officeTitle": "Kantoorinformatie",
+    "hqLabel": "Hoofdkantoor",
+    "hqAddress": "161 Bay Street, 27th Floor",
+    "hqCity": "Toronto, ON M5J2S1",
+    "emailHeading": "E-mail",
+    "emailAddress": "info@think4ever.com",
+    "options": {
+      "segment": [
+        "Onafhankelijke ontwikkelaars",
+        "Startups & Nieuwe ondernemingen",
+        "Software & SaaS",
+        "Systeemintegrators / Adviseurs",
+        "Enterprise & Middenbedrijf"
+      ],
+      "size": [
+        "1 - 10",
+        "11 - 50",
+        "51 - 200",
+        "500+"
+      ],
+      "needs": [
+        "Bestaande code wijzigen en herstellen",
+        "De juiste architectuur vooraf ontwerpen",
+        "SDLC-stack vereenvoudigen met minder tools",
+        "AI-agenten of automatiseringsworkflows bouwen",
+        "Systemen op één lijn houden naarmate complexiteit groeit",
+        "Systeemafhankelijkheden en veranderingsimpact in realtime zien",
+        "Herwerk verminderen door gefragmenteerde levering",
+        "Governance, goedkeuringen en controle verbeteren",
+        "Legacy-systemen veilig moderniseren",
+        "Think4Ever evalueren voor toekomstig gebruik"
+      ]
+    },
+    "successTitle": "Bedankt voor je bericht!",
+    "successMsg": "We hebben je bericht ontvangen en nemen binnenkort contact met je op.",
+    "okay": "Oké"
   }
 }
