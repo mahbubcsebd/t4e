@@ -469,7 +469,7 @@
       "Cada miembro programa en paralelo a través de MCP",
       "Orquestación de sistemas prioritaria"
     ],
-    "plan3Btn": "Obtener Think Big",
+    "plan3Btn": "Contactar ventas",
     "plan4Tag": "THINK BLUE",
     "plan4Name": "Think Blue",
     "plan4Price": "Personalizado",
@@ -523,6 +523,7 @@
       }
     ],
     "teamsEyebrow": "Think Big",
+    "teamsHeadingHighlight": "Think Big:",
     "teamsTitle": "Creado para equipos que trabajan en el mismo sistema",
     "teamsSubtitle": "Cuentas separadas significan espacios separados, créditos divididos y proyectos cerrados. Think Big une a todo el equipo en un solo Plano Vivo.",
     "teamsValues": [
