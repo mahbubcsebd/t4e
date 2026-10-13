@@ -379,73 +379,229 @@
   },
   "pricingPage": {
     "metaTitle": "Think4Ever Pricing — Start Free, Scale with Your Team",
-    "metaDesc": "Start Think4Ever free with one project. Add projects, orchestration credits, team controls and private deployment as you scale.",
+    "metaDesc": "Think4Ever plans: start free, build solo with Think New, or bring your whole team into one workspace with Think Big. One company workspace, shared credits, and admin control.",
     "heroEyebrow": "Pricing",
     "heroTitlePrefix": "Start with the project ",
     "heroTitleHighlight": "you're afraid to touch",
-    "heroSubtitle": "Analyze a system, review the blueprint and see change impact before adding team capacity or deployment controls.",
+    "heroSubtitle": "Analyze a system, review the blueprint and see change impact. Start free, build solo with Think New, or bring your whole team into one workspace with Think Big.",
     "heroCtaPrimary": "Start free →",
     "heroMicro": "No credit card required for the free plan",
     "plan1Tag": "THINK FREE",
-    "plan1Name": "Free",
+    "plan1Name": "Think Free",
     "plan1Price": "Free",
-    "plan1Desc": "Build, extend, or modernize something real before spending a penny.",
+    "plan1Desc": "Build, extend or modernize something real before spending a penny.",
+    "plan1Limits": [
+      { "val": "1", "label": "User" },
+      { "val": "1", "label": "Project" },
+      { "val": "500", "label": "Credits" }
+    ],
     "plan1List": [
-      "Included 500 Orchestration Credits",
-      "1 Project",
-      "Build New, Extend Current, Modernize Legacy",
+      "Included 500 orchestration credits",
+      "Build new, extend current, modernize legacy",
       "BYOK (bring your own model)",
-      "Upgrade upon exceeding the free usage limits"
+      "Upgrade when you outgrow the free limits"
     ],
-    "plan1Btn": "Start Free",
+    "plan1Btn": "Start free",
     "plan2Tag": "THINK NEW",
+    "plan2Badge": "POPULAR",
     "plan2Name": "Think New",
-    "plan2Price": "$25.00/month",
-    "plan2Desc": "For solo developers, freelancers and startup founders",
+    "plan2Price": "$25/month",
+    "plan2Desc": "For solo developers, freelancers and startup founders.",
+    "plan2Limits": [
+      { "val": "1", "label": "User" },
+      { "val": "3", "label": "Projects" },
+      { "val": "2,000", "label": "Credits/mo" }
+    ],
     "plan2List": [
-      "Included 2000 Orchestration Credits/Month",
-      "Create up to 3 Projects",
-      "Build New, Extend Current, Modernize Legacy",
+      "Your own company workspace",
+      "2,000 orchestration credits every month",
+      "Build new, extend current, modernize legacy",
+      "Connect Claude Code, Cursor or Codex over MCP",
       "BYOK (bring your own model)",
-      "Add credits as needed ($0.05 per credit)"
+      "Add credits as needed ($0.05 per credit). Purchased credits roll over"
     ],
-    "plan2Btn": "Login",
+    "plan2Btn": "Get Think New",
     "plan3Tag": "THINK BIG",
-    "plan3Name": "Team",
-    "plan3Price": "$250.00/month",
-    "plan3Desc": "For developer teams and multi-developer environments shipping together at speed.",
+    "plan3Badge": "FOR TEAMS",
+    "plan3Name": "Think Big",
+    "plan3Price": "$250/month",
+    "plan3Desc": "For developer teams shipping together in one shared workspace.",
+    "plan3Limits": [
+      { "val": "8", "label": "Users" },
+      { "val": "20", "label": "Projects" },
+      { "val": "20,000", "label": "Credits/mo" }
+    ],
     "plan3List": [
-      "Support up to 5 Users",
-      "Create up to 5 Projects",
-      "Access Shared Project Environments",
-      "Pool Usage across the Team",
-      "Utilize Admin Controls + Caps",
-      "Access Priority System Orchestration"
+      "Everything in Think New, for the whole team",
+      "One company workspace with 20 shared projects",
+      "20,000 credits a month in one shared pool",
+      "Add company users with roles and per-project access",
+      "Admin controls and usage caps",
+      "Every member codes in parallel over MCP",
+      "Priority system orchestration"
     ],
-    "plan3Btn": "Contact Sales",
+    "plan3Btn": "Get Think Big",
     "plan4Tag": "THINK BLUE",
-    "plan4Name": "Enterprise",
+    "plan4Name": "Think Blue",
     "plan4Price": "Custom",
-    "plan4Desc": "For organisations with sophisticated environments, larger scale, and tailored deployment models.",
-    "plan4List": [
-      "Scale to Enterprise Teams",
-      "Access Private Deployment Options",
-      "Access Custom Usage Pools + Cost Controls",
-      "Access Stage Gates + Confidence Scoring",
-      "Access Dedicated Support + Onboarding"
+    "plan4Desc": "For organizations with sophisticated environments, larger scale and tailored deployment.",
+    "plan4Limits": [
+      { "val": "Custom", "label": "Users" },
+      { "val": "Custom", "label": "Projects" },
+      { "val": "Custom", "label": "Credits" }
     ],
-    "plan4Btn": "Contact Sales",
+    "plan4List": [
+      "Scale to enterprise teams",
+      "Private deployment options",
+      "Custom usage pools and cost controls",
+      "Stage gates and confidence scoring",
+      "Dedicated support and onboarding"
+    ],
+    "plan4Btn": "Contact sales",
+    "howEyebrow": "How it works",
+    "howTitle": "One company. One workspace.",
+    "howHighlight": "One pool of credits.",
+    "howSubtitle": "Every paid plan is a company account. Your projects, users and credits live together in your own workspace, so nothing is scattered across personal accounts.",
+    "howSteps": [
+      {
+        "num": "1",
+        "title": "Subscribe",
+        "desc": "The person who signs up and subscribes becomes the company administrator."
+      },
+      {
+        "num": "2",
+        "title": "Get your workspace",
+        "desc": "Your company gets its own server. All of its projects, users and credits live there."
+      },
+      {
+        "num": "3",
+        "title": "Add your team",
+        "desc": "The administrator adds company users, picks each person's role and chooses which projects they can open. No separate sign-ups or payments."
+      },
+      {
+        "num": "4",
+        "title": "Share one credit pool",
+        "desc": "All AI work by everyone on the team is paid from the company's shared credits, with admin caps to keep spending in check."
+      }
+    ],
+    "teamsEyebrow": "Think Big",
+    "teamsTitle": "Built for teams that work on the same system",
+    "teamsSubtitle": "Separate accounts mean separate workspaces, split credits and projects nobody else can open. Think Big puts the whole team on one Living Blueprint.",
+    "teamsValues": [
+      {
+        "title": "One shared blueprint per project",
+        "desc": "Everyone works from the same concepts, flows, rules and screens, so designs don't drift apart."
+      },
+      {
+        "title": "Roles and per-project access",
+        "desc": "Give each person a role such as Developer, Project Manager or QA Engineer, and open only the projects they need. Deactivate anyone instantly."
+      },
+      {
+        "title": "Pooled credits with admin caps",
+        "desc": "Busy teammates draw more and quieter ones draw less, so no credits sit stranded in someone else's account."
+      },
+      {
+        "title": "Parallel coding with your tools",
+        "desc": "Each member connects their own Claude Code, Cursor or Codex session to the same project through the Think MCP server."
+      },
+      {
+        "title": "Bring in freelancers when you need them",
+        "desc": "Hire through the Think4Ever Marketplace and give freelancers scoped access to your projects that ends with the contract."
+      }
+    ],
+    "teamsSideCard": {
+      "title": "A team of 8, two ways",
+      "desc": "What your team gets with separate Think New accounts compared with one Think Big plan.",
+      "col1": {
+        "title": "8 × Think New",
+        "workspaces": "8 separate",
+        "credits": "16,000, split 2,000 each",
+        "projects": "24, each locked to one person",
+        "admin": "None across the team",
+        "price": "$200/month"
+      },
+      "col2": {
+        "title": "Think Big",
+        "workspaces": "1 shared",
+        "credits": "20,000, pooled",
+        "projects": "20, open to the whole team",
+        "admin": "Roles, access, caps",
+        "price": "$250/month"
+      }
+    },
+    "compareEyebrow": "Compare plans",
+    "compareTitle": "Everything in each plan",
+    "limitsEyebrow": "Project limits",
+    "limitsTitle": "Reached your project limit? You have options.",
+    "limitsSubtitle": "Every project in your workspace counts toward your plan's limit, whoever created it. When you reach it, you can:",
+    "limitsCards": [
+      {
+        "title": "Archive a project",
+        "desc": "Free up a slot by archiving a project you no longer need."
+      },
+      {
+        "title": "Add a project for credits",
+        "desc": "Add one more project, paid from your company's credit pool."
+      },
+      {
+        "title": "Upgrade your plan",
+        "desc": "Move up to a plan with more projects, users and credits."
+      }
+    ],
     "costEyebrow": "Cost control",
     "costTitle": "Control model choice without losing context.",
     "costSubtitle": "Keep the blueprint independent from one provider. Bring supported keys and reserve expensive reasoning for work that needs it.",
     "card1Title": "Orchestration credits",
-    "card1Desc": "Plans include an allowance for Think4Ever orchestration. Usage depends on the work performed.",
+    "card1Desc": "Plans include a monthly allowance for Think4Ever orchestration. Usage depends on the work performed. Included credits reset every month and don't roll over. Credits you buy roll over month to month.",
     "card2Title": "Bring your own keys",
-    "card2Desc": "Use supported provider credentials where available instead of forcing all model usage into one bundle.",
+    "card2Desc": "Use supported provider credentials where available, instead of forcing all model usage into one bundle.",
     "card3Title": "Enterprise controls",
-    "card3Desc": "Discuss private deployment, custom usage controls and support requirements with Think4Ever.",
-    "ctaTitle": "Try the product before the sales call.",
-    "ctaSubtitle": "Start free. Contact the team only when your deployment or governance needs require it."
+    "card3Desc": "Talk to Think4Ever about private deployment, custom usage controls and support requirements.",
+    "faqEyebrow": "FAQ",
+    "faqTitle": "Questions about plans",
+    "faqItems": [
+      {
+        "q": "Who is the administrator?",
+        "a": "The person who signs up and subscribes. The administrator manages users, roles, project access and credits, and can see every project in the company workspace."
+      },
+      {
+        "q": "Do my team members need their own Think4Ever accounts?",
+        "a": "No. On Think Big, the administrator creates company users inside your workspace with a login and a temporary password. Each user gets an email and sets their own password at first sign-in. They don't sign up or pay separately."
+      },
+      {
+        "q": "What can each team member see?",
+        "a": "Each user sees only the projects the administrator assigned to them, plus any projects they created themselves. The administrator sees all company projects."
+      },
+      {
+        "q": "Who pays for AI usage?",
+        "a": "All AI work by every user is paid from the company's shared credit pool. On Think Big, the administrator can set caps so no single user or project uses more than its share."
+      },
+      {
+        "q": "Do unused credits roll over?",
+        "a": "Included credits reset every month. Any included credits you don't use by the end of the month don't roll over. Credits you buy on top of your plan, at $0.05 each, do roll over from month to month until you use them."
+      },
+      {
+        "q": "What happens when we reach the project limit?",
+        "a": "You can archive a project, add one more project for credits from your company pool, or upgrade to a plan with a higher limit."
+      },
+      {
+        "q": "How do I remove someone's access?",
+        "a": "The administrator can deactivate a user at any time, and that user loses access immediately."
+      },
+      {
+        "q": "Can I use my own coding tools?",
+        "a": "Yes. Claude Code, Cursor, Codex and other MCP-compatible tools can build from your Think4Ever design through the Think MCP server, on your own subscription. See How to: Design in Think, Code in Claude."
+      },
+      {
+        "q": "Can I bring my own model?",
+        "a": "Yes. Every plan supports BYOK, so you can use supported provider credentials instead of putting all model usage into one bundle."
+      }
+    ],
+    "ctaEyebrow": "Start free",
+    "ctaTitle": "Upload the codebase you're afraid of.",
+    "ctaSubtitle": "In minutes you'll see how it actually works, and what every change would touch.",
+    "ctaBtnPrimary": "Analyze a project →",
+    "ctaBtnSecondary": "Talk to sales"
   },
   "faqPage": {
     "metaTitle": "Think4Ever FAQ — Living Blueprints, Code Understanding and MCP",
