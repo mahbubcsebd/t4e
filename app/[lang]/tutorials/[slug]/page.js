@@ -42,6 +42,8 @@ export async function generateMetadata(props) {
   };
 }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const langs = ["es", "nl"];
   const params = [];

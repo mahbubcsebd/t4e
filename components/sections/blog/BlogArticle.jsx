@@ -110,7 +110,7 @@ export const BlogArticle = ({ post, currentLang }) => {
                 if (href.startsWith("/")) {
                   const localizeHref = (path) => currentLang === "en" ? path : `/${currentLang}${path}`;
                   return (
-                    <Link href={localizeHref(href)} {...props} />
+                    <a href={localizeHref(href)} {...props} />
                   );
                 }
                 return <a {...props} />;
