@@ -1,4 +1,4 @@
-import { getPostBySlug, getAllPosts } from "@/lib/markdown";
+import { getPostBySlug, getAllPosts, SLUG_ALIASES } from "@/lib/markdown";
 import { notFound } from "next/navigation";
 import { BlogDetailNav } from "@/components/sections/blog/BlogDetailNav";
 import { BlogArticle } from "@/components/sections/blog/BlogArticle";
@@ -7,6 +7,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
+
+export const dynamicParams = false;
 
 export async function generateMetadata(props) {
   const params = await props.params;
@@ -27,7 +29,7 @@ export async function generateMetadata(props) {
   return {
     title,
     description,
-    alternates: { canonical: `/${lang}/blog/${slug}/` },
+    alternates: { canonical: `/${lang}/blog/${post.canonicalSlug || slug}/` },
     openGraph: {
       title,
       description,
@@ -52,6 +54,12 @@ export async function generateStaticParams() {
       params.push({
         lang,
         slug: post.slug,
+      });
+    }
+    for (const alias of Object.keys(SLUG_ALIASES)) {
+      params.push({
+        lang,
+        slug: alias,
       });
     }
   }

@@ -40,6 +40,8 @@ export async function generateMetadata(props) {
   };
 }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const tutorials = getAllTutorials("en");
   return tutorials.map((tut) => ({
