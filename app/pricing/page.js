@@ -9,7 +9,7 @@ import PricingComparison from "@/components/sections/pricing/PricingComparison";
 import PricingProjectLimits from "@/components/sections/pricing/PricingProjectLimits";
 import CostControl from "@/components/sections/pricing/CostControl";
 import PricingFaq from "@/components/sections/pricing/PricingFaq";
-import PricingCta from "@/components/sections/pricing/PricingCta";
+import CtaSection from "@/components/sections/home/CtaSection";
 
 export default function PricingPage() {
   return (
@@ -22,9 +22,9 @@ export default function PricingPage() {
         <PricingTeams />
         <PricingComparison />
         <PricingProjectLimits />
-        <CostControl />
         <PricingFaq />
-        <PricingCta />
+        <CostControl />
+        <CtaSection />
       </main>
       <Footer />
     </div>
