@@ -58,6 +58,14 @@
         "title": "Design in Think, Code in Claude",
         "desc": "Connect Claude Code and build your project"
       },
+      "designInThinkCodex": {
+        "title": "Design in Think, Code in Codex",
+        "desc": "Connect OpenAI Codex and build your project"
+      },
+      "vibeCodedProductionReady": {
+        "title": "Make Vibe-Coded Apps Production Ready",
+        "desc": "Harden and audit AI-generated code for enterprise"
+      },
       "addCoDevelopers": {
         "title": "Add Co-developers and Collaborators",
         "desc": "Add team members as company users"

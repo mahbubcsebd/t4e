@@ -56,6 +56,14 @@
         "title": "Diseñar en Think, Codificar en Claude",
         "desc": "Conecte Claude Code y construya su proyecto"
       },
+      "designInThinkCodex": {
+        "title": "Diseñar en Think, Programar en Codex",
+        "desc": "Conecte OpenAI Codex y construya su proyecto"
+      },
+      "vibeCodedProductionReady": {
+        "title": "Hacer que las apps de Vibe-Coding estén listas para producción",
+        "desc": "Fortalezca y audite código generado con IA para la empresa"
+      },
       "addCoDevelopers": {
         "title": "Agregar Co-desarrolladores y Colaboradores",
         "desc": "Agregue miembros del equipo como usuarios de la empresa"
