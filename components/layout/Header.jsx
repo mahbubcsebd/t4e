@@ -135,7 +135,7 @@ export default function Header() {
     {
       title: t('nav.docsMenu.designerTitle', 'Think4ever Designer'),
       desc: t('nav.docsMenu.designerDesc', '7 - Learn how to map systems.'),
-      href: 'https://think4ever.com/docs/manual_introduction.html',
+      href: 'https://think4ever.com/docs/introduction.html',
       icon: <Palette className="w-4 h-4 text-foreground" />,
     },
     {
@@ -150,19 +150,19 @@ export default function Header() {
         'nav.docsMenu.developerDesc',
         '8 - Technical guide for developers.',
       ),
-      href: 'https://think4ever.com/docs/dev/start_new_project.html',
+      href: 'https://think4ever.com/docs/dev/developer_mode.html',
       icon: <Code className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.docsMenu.createProjectTitle', 'Build a New Project'),
       desc: t('nav.docsMenu.createProjectDesc', '3 - Create your new project.'),
-      href: 'https://think4ever.com/docs/manual_create_project.html',
+      href: 'https://think4ever.com/docs/create_project.html',
       icon: <FolderPlus className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.docsMenu.mcpTitle', 'Think MCP'),
       desc: t('nav.docsMenu.mcpDesc', '9 - Claude, Codex and Cursor.'),
-      href: 'https://think4ever.com/docs/manual_think_mcp.html',
+      href: 'https://think4ever.com/docs/think_mcp.html',
       icon: <Puzzle className="w-4 h-4 text-foreground" />,
     },
     {
@@ -174,13 +174,13 @@ export default function Header() {
         'nav.docsMenu.reverseEngDesc',
         '4 - Import your existing codebase.',
       ),
-      href: 'https://think4ever.com/docs/reverse_engineering.html',
+      href: 'https://think4ever.com/docs/analyze_code.html',
       icon: <Settings className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.docsMenu.apiTitle', 'Think API'),
       desc: t('nav.docsMenu.apiDesc', '10 - Programmatically manage tokens.'),
-      href: 'https://think4ever.com/docs/manual_think_api.html',
+      href: 'https://think4ever.com/docs/think_api.html',
       icon: <Terminal className="w-4 h-4 text-foreground" />,
     },
     {
@@ -189,7 +189,7 @@ export default function Header() {
         'nav.docsMenu.productionHardeningDesc',
         "5 - Assess your project's production readiness.",
       ),
-      href: 'https://think4ever.com/docs/manual_production_hardening.html',
+      href: 'https://think4ever.com/docs/production_hardening.html',
       icon: <Shield className="w-4 h-4 text-foreground" />,
     },
     {
