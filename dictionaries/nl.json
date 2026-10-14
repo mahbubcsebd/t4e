@@ -52,6 +52,14 @@
         "title": "Ontwerp in Think, Codeer in Claude",
         "desc": "Verbind Claude Code en bouw je project"
       },
+      "designInThinkCodex": {
+        "title": "Ontwerp in Think, Codeer in Codex",
+        "desc": "Verbind OpenAI Codex en bouw je project"
+      },
+      "vibeCodedProductionReady": {
+        "title": "Maak Vibe-Coded apps klaar voor productie",
+        "desc": "Beveilig en controleer AI-gegenereerde code voor bedrijven"
+      },
       "addCoDevelopers": {
         "title": "Co-ontwikkelaars en Medewerkers toevoegen",
         "desc": "Voeg teamleden toe als bedrijfsgebruikers"
