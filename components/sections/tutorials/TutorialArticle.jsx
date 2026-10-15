@@ -119,10 +119,10 @@ export const TutorialArticle = ({ tutorial, currentLang }) => {
                     return currentLang === "en" ? normalized : `/${currentLang}${normalized}`;
                   };
                   return (
-                    <a href={localizeHref(href)} {...props} />
+                    <Link href={localizeHref(href)} {...props} />
                   );
                 }
-                return <a href={href} target="_blank" rel="noopener noreferrer" {...props} />;
+                return <Link href={href} target="_blank" rel="noopener noreferrer" {...props} />;
               }
             }}
           >

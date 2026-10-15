@@ -208,13 +208,13 @@ export default function ResourceGrid() {
                         Which design artifacts matter in each phase of delivery, who should open which one, and what it saves the team.
                       </p>
                     </div>
-                    <a
+                    <Link
                       href={localizeHref("/tutorials/design-artifacts-guide/")}
                       className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-primary/80 transition-colors w-max"
                     >
                       <BookOpen className="w-4 h-4" />
                       <span>Read Guide</span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

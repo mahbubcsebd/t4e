@@ -2,7 +2,6 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { ThemeProvider } from "@/components/theme-provider";
-import ChunkErrorHandler from "@/components/ChunkErrorHandler";
 import Script from "next/script";
 
 
@@ -60,7 +59,6 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <LanguageProvider>
-            <ChunkErrorHandler />
             {children}
           </LanguageProvider>
         </ThemeProvider>
