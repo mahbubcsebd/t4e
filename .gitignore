@@ -43,4 +43,5 @@ next-env.d.ts
 # legacy / reference folders
 think4ever-old-next-app/
 think4ever-site-v2/
+/design-artifacts-guide/
 
