@@ -411,12 +411,12 @@ export default function ContactFormSection() {
                     <h4 className="text-xs font-bold text-foreground mb-1">
                       {t("contactPage.emailTitle")}
                     </h4>
-                    <a
+                    <Link
                       href="mailto:info@think4ever.com"
                       className="text-xs font-bold text-[#093cad] hover:underline"
                     >
                       {t("contactPage.emailVal")}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

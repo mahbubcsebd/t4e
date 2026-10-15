@@ -9,24 +9,49 @@ import { AlertCircle, RotateCcw, Home } from "lucide-react";
 import Link from "next/link";
 
 export default function ErrorBoundary({ error, reset }) {
+  const isChunkError =
+    error?.name === "ChunkLoadError" ||
+    (typeof error?.message === "string" &&
+      (error.message.includes("Loading chunk") ||
+        error.message.includes("Loading CSS chunk") ||
+        error.message.includes("enqueueModel") ||
+        error.message.includes("dynamicRequire") ||
+        error.message.includes("Failed to fetch dynamically imported module") ||
+        error.message.includes("Importing a module script failed") ||
+        error.message.includes("error loading dynamically imported module")));
+
   useEffect(() => {
-    console.error("Application error:", error);
-
-    // Auto-reload on stale chunk errors (happens after Vercel redeploys
-    // when the browser has cached old JS chunks from a previous build)
-    const isChunkError =
-      error?.name === "ChunkLoadError" ||
-      (typeof error?.message === "string" &&
-        (error.message.includes("Loading chunk") ||
-          error.message.includes("Loading CSS chunk") ||
-          error.message.includes("enqueueModel") ||
-          error.message.includes("dynamicRequire")));
-
     if (isChunkError) {
       console.warn("[ErrorBoundary] Stale chunk detected, reloading...");
-      window.location.reload();
+      if (typeof window !== "undefined") {
+        const lastReload = sessionStorage.getItem("last_chunk_reload");
+        const now = Date.now();
+        if (!lastReload || now - parseInt(lastReload, 10) > 10000) {
+          sessionStorage.setItem("last_chunk_reload", String(now));
+          window.location.reload();
+          return;
+        }
+      }
+    } else {
+      console.error("Application error:", error);
     }
-  }, [error]);
+  }, [error, isChunkError]);
+
+  if (isChunkError) {
+    return (
+      <div className="min-h-screen flex flex-col bg-white">
+        <Header />
+        <main className="flex-grow flex items-center justify-center py-16 px-4">
+          <div className="flex flex-col items-center justify-center p-8 text-center max-w-sm">
+            <div className="w-9 h-9 border-3 border-primary/20 border-t-primary rounded-full animate-spin mb-4" />
+            <p className="text-sm font-semibold text-foreground">Loading latest content...</p>
+            <p className="text-xs text-muted-foreground mt-1">Please wait a moment</p>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-white">

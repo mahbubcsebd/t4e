@@ -10,7 +10,8 @@ import { Button } from "@/components/ui/button";
 import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function FaqAccordion() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const localizeHref = (href) => language === "en" ? href : `/${language}${href}`;
   const [openIndex, setOpenIndex] = useState(null);
 
   const items = t("faqPage.items") || [];
@@ -52,7 +53,7 @@ export default function FaqAccordion() {
               variant="outline"
               className="border-border hover:bg-muted"
             >
-              <Link href="/how-it-works">{t("faqPage.heroCtaSecondary")}</Link>
+              <Link href={localizeHref("/how-it-works/")}>{t("faqPage.heroCtaSecondary")}</Link>
             </Button>
           </div>
         </div>

@@ -33,9 +33,9 @@ export default function PricingCta() {
 
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Button asChild size="lg" className="shadow-lg shadow-primary/25">
-                <a href="https://portal.think4ever.com/#/register">
+                <Link href="https://portal.think4ever.com/#/register">
                   {t("pricingPage.ctaBtnPrimary", "Analyze a project →")}
-                </a>
+                </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-border">
                 <Link href={localizeHref("/contact-us/")}>

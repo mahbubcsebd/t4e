@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function HowItWorksHero() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const localizeHref = (href) => language === "en" ? href : `/${language}${href}`;
 
   return (
     <section className="pt-8 lg:pt-12 pb-4 lg:pb-8 bg-background border-b border-border text-center">
@@ -34,7 +35,7 @@ export default function HowItWorksHero() {
             </Link>
           </Button>
           <Button asChild variant="outline" className="w-full sm:w-auto">
-            <Link href="/code-to-design">
+            <Link href={localizeHref("/code-to-design/")}>
               {t("howItWorksPage.heroCtaSecondary")}
             </Link>
           </Button>

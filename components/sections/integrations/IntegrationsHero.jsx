@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import CodingToolPills from "@/components/ui/CodingToolPills";
@@ -29,9 +30,9 @@ export default function IntegrationsHero() {
 
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Button asChild className="shadow-md shadow-primary/25">
-            <a href="https://portal.think4ever.com/#/register">
+            <Link href="https://portal.think4ever.com/#/register">
               {t("nav.startFree")}
-            </a>
+            </Link>
           </Button>
           {/* <a
             href="https://think4ever.com/docs/onboarding.html"

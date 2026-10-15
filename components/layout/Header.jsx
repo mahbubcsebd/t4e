@@ -23,7 +23,6 @@ import {
   Users,
   X,
 } from 'lucide-react';
-import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -51,8 +50,13 @@ export default function Header() {
   };
 
   const localizeHref = (href) => {
-    if (language === 'en' || !href.startsWith('/')) return href;
-    return `/${language}${href}`;
+    if (!href || !href.startsWith('/')) return href;
+    let normalized = href;
+    if (!normalized.includes('#') && !normalized.includes('?') && !normalized.includes('.') && !normalized.endsWith('/')) {
+      normalized += '/';
+    }
+    if (language === 'en') return normalized;
+    return `/${language}${normalized}`;
   };
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -68,7 +72,6 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const desktopLangDropdownRef = useRef(null);
   const mobileLangDropdownRef = useRef(null);
-  const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -225,43 +228,43 @@ export default function Header() {
     {
       title: t('nav.tutorialsMenu.designInThink.title', 'Design in Think, Code in Claude'),
       desc: t('nav.tutorialsMenu.designInThink.desc', 'Connect Claude Code and build your project'),
-      href: '/tutorials/how-to-design-in-think',
+      href: '/tutorials/how-to-design-in-think/',
       icon: <Code className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.tutorialsMenu.designInThinkCodex.title', 'Design in Think, Code in Codex'),
       desc: t('nav.tutorialsMenu.designInThinkCodex.desc', 'Connect OpenAI Codex and build your project'),
-      href: '/tutorials/design-in-think-code-in-codex',
+      href: '/tutorials/design-in-think-code-in-codex/',
       icon: <Code className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.tutorialsMenu.vibeCodedProductionReady.title', 'Make Vibe-Coded Apps Production Ready'),
       desc: t('nav.tutorialsMenu.vibeCodedProductionReady.desc', 'Harden and audit AI-generated code for enterprise'),
-      href: '/tutorials/make-vibe-coded-applications-production-ready',
+      href: '/tutorials/make-vibe-coded-applications-production-ready/',
       icon: <Shield className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.tutorialsMenu.addCoDevelopers.title', 'Add Co-developers and Collaborators'),
       desc: t('nav.tutorialsMenu.addCoDevelopers.desc', 'Add team members as company users'),
-      href: '/tutorials/add-co-developers-and-collaborators',
+      href: '/tutorials/add-co-developers-and-collaborators/',
       icon: <Users className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.tutorialsMenu.turnExistingCode.title', 'Turn Existing Code into a Living Blueprint'),
       desc: t('nav.tutorialsMenu.turnExistingCode.desc', 'Analyze your repository and create design artifacts'),
-      href: '/tutorials/turn-existing-code-into-a-living-blueprint',
+      href: '/tutorials/turn-existing-code-into-a-living-blueprint/',
       icon: <BookOpen className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.tutorialsMenu.buildFromIntent.title', 'Build an Application from Intent'),
       desc: t('nav.tutorialsMenu.buildFromIntent.desc', 'Start from a business outcome to build an app'),
-      href: '/tutorials/build-an-application-from-intent-in-think4ever',
+      href: '/tutorials/build-an-application-from-intent-in-think4ever/',
       icon: <Puzzle className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.tutorialsMenu.designArtifactsGuide.title', 'Put the Blueprint to Work'),
       desc: t('nav.tutorialsMenu.designArtifactsGuide.desc', 'How to use Think4Ever design artifacts across the SDLC'),
-      href: '/tutorials/design-artifacts-guide',
+      href: '/tutorials/design-artifacts-guide/',
       icon: <BookOpen className="w-4 h-4 text-foreground" />,
     }
   ];
@@ -368,7 +371,7 @@ export default function Header() {
                   </p>
                 </div>
               </Link>
-              <a
+              <Link
                 href="/#reviewed-handoff"
                 onClick={(e) => {
                   e.preventDefault();
@@ -387,7 +390,7 @@ export default function Header() {
                     Audit & fix AI-generated code
                   </p>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
           {/* <Link
@@ -474,7 +477,7 @@ export default function Header() {
               }`}
             >
               {docsLinks.map((doc, idx) => (
-                <a
+                <Link
                   key={idx}
                   href={doc.href}
                   target="_blank"
@@ -492,7 +495,7 @@ export default function Header() {
                       {doc.desc}
                     </p>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -620,9 +623,9 @@ export default function Header() {
             variant="ghost"
             className="text-white hover:text-white hover:bg-white/10 font-medium"
           >
-            <a href="https://portal.think4ever.com/#/login">
+            <Link href="https://portal.think4ever.com/#/login">
               {t('nav.signIn')}
-            </a>
+            </Link>
           </Button>
 
           {/* Start free button */}
@@ -630,9 +633,9 @@ export default function Header() {
             asChild
             className="bg-white text-[#093cad] hover:bg-gray-100 shadow-none font-bold"
           >
-            <a href="https://portal.think4ever.com/#/register">
+            <Link href="https://portal.think4ever.com/#/register">
               {t('nav.startFree')}
-            </a>
+            </Link>
           </Button>
         </div>
 
@@ -755,7 +758,7 @@ export default function Header() {
                       >
                         {t('nav.designToCode')}
                       </Link>
-                      <a
+                      <Link
                         href="/#reviewed-handoff"
                         onClick={(e) => {
                           e.preventDefault();
@@ -774,7 +777,7 @@ export default function Header() {
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors cursor-pointer"
                       >
                         Production Hardening
-                      </a>
+                      </Link>
                     </div>
                   </motion.div>
                 )}
@@ -828,14 +831,14 @@ export default function Header() {
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       {/* Resource Library link removed per request */}
                       <Link
-                        href="/blog"
+                        href={localizeHref('/blog/')}
                         onClick={() => setMobileMenuOpen(false)}
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                       >
                         {t('nav.blog')}
                       </Link>
                       <Link
-                        href="/faq"
+                        href={localizeHref('/faq/')}
                         onClick={() => setMobileMenuOpen(false)}
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                       >
@@ -869,7 +872,7 @@ export default function Header() {
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       {docsLinks.map((doc, idx) => (
-                        <a
+                        <Link
                           key={idx}
                           href={doc.href}
                           target="_blank"
@@ -878,7 +881,7 @@ export default function Header() {
                           className="flex items-center justify-between text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                         >
                           <span>{doc.title}</span>
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </motion.div>
@@ -947,20 +950,20 @@ export default function Header() {
 
             <div className="pt-2 pb-2 grid grid-cols-2 gap-2">
               <Button asChild variant="outline" className="w-full text-center">
-                <a
+                <Link
                   href="https://portal.think4ever.com/#/login"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t('nav.signIn')}
-                </a>
+                </Link>
               </Button>
               <Button asChild className="w-full text-center">
-                <a
+                <Link
                   href="https://portal.think4ever.com/#/register"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t('nav.startFree')}
-                </a>
+                </Link>
               </Button>
             </div>
           </motion.div>

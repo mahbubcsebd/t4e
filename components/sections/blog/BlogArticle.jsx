@@ -107,12 +107,18 @@ export const BlogArticle = ({ post, currentLang }) => {
               a: ({ node, ...props }) => {
                 const href = props.href || "";
                 if (href.startsWith("/")) {
-                  const localizeHref = (path) => currentLang === "en" ? path : `/${currentLang}${path}`;
+                  const localizeHref = (path) => {
+                    let normalized = path;
+                    if (!normalized.includes('#') && !normalized.includes('?') && !normalized.includes('.') && !normalized.endsWith('/')) {
+                      normalized += '/';
+                    }
+                    return currentLang === "en" ? normalized : `/${currentLang}${normalized}`;
+                  };
                   return (
-                    <a href={localizeHref(href)} {...props} />
+                    <Link href={localizeHref(href)} {...props} />
                   );
                 }
-                return <a {...props} />;
+                return <Link href={href} target="_blank" rel="noopener noreferrer" {...props} />;
               }
             }}
           >

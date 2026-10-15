@@ -84,7 +84,7 @@ export default function TwoWaysIn() {
                     asChild
                     className="w-full sm:w-auto shadow-md shadow-primary/25 group-hover:bg-primary/90 transition-all duration-300 bg-primary text-primary-foreground mt-2"
                   >
-                    <Link href="/code-to-design">
+                    <Link href={localizeHref("/code-to-design/")}>
                       {t("howItWorksPage.explorePath1") ||
                         "Explore Code to Design"}
                       <ArrowRight className="w-4 h-4 ml-2" />
@@ -150,7 +150,7 @@ export default function TwoWaysIn() {
                     asChild
                     className="w-full sm:w-auto shadow-md shadow-primary/25 group-hover:bg-primary/90 transition-all duration-300 bg-primary text-primary-foreground"
                   >
-                    <Link href="/design-to-code">
+                    <Link href={localizeHref("/design-to-code/")}>
                       {t("howItWorksPage.explorePath2") ||
                         "Explore Design to Code"}
                       <ArrowRight className="w-4 h-4 ml-2" />

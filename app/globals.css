@@ -15,19 +15,20 @@
   --popover-foreground: #0B1B3A;
 }
 
+/* Dark mode disabled - values match light mode */
 .dark {
-  --background: #0d0f12;
-  --foreground: #ffffff;
-  --card: #13161b;
-  --card-foreground: #ffffff;
-  --border: rgba(255, 255, 255, 0.04);
-  --muted: #1c2028;
-  --muted-foreground: #94a3b8;
+  --background: #fafafa;
+  --foreground: #0B1B3A;
+  --card: #ffffff;
+  --card-foreground: #0B1B3A;
+  --border: #e5e7eb;
+  --muted: #F4F6FA;
+  --muted-foreground: #3A5690;
   --brand-blue: #1D63E0;
   --primary: #FF7A1A;
   --primary-foreground: #0B1B3A;
-  --popover: #13161b;
-  --popover-foreground: #ffffff;
+  --popover: #ffffff;
+  --popover-foreground: #0B1B3A;
 }
 
 @theme {

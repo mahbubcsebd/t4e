@@ -22,15 +22,22 @@ export default function ChunkErrorHandler() {
           (error.message.includes("Loading chunk") ||
             error.message.includes("Loading CSS chunk") ||
             error.message.includes("enqueueModel") ||
-            error.message.includes("dynamicRequire")));
+            error.message.includes("dynamicRequire") ||
+            error.message.includes("Failed to fetch dynamically imported module") ||
+            error.message.includes("Importing a module script failed") ||
+            error.message.includes("error loading dynamically imported module")));
 
       if (isChunkError) {
         console.warn(
           "[ChunkErrorHandler] Stale chunk detected, forcing page reload.",
           error.message
         );
-        // Hard reload to bypass stale browser/CDN cache
-        window.location.reload();
+        const lastReload = sessionStorage.getItem("last_chunk_reload");
+        const now = Date.now();
+        if (!lastReload || now - parseInt(lastReload, 10) > 10000) {
+          sessionStorage.setItem("last_chunk_reload", String(now));
+          window.location.reload();
+        }
       }
     };
 

@@ -114,7 +114,7 @@ export default function BlogGridSection({ posts }) {
               {filtered.map((art) => {
                 const articleHref = art.lang && art.lang !== 'en' ? `/${art.lang}/blog/${art.slug}/` : `/blog/${art.slug}/`;
                 return (
-                  <a
+                  <Link
                     key={art.slug}
                     href={articleHref}
                     className="bg-card/80 backdrop-blur-xl border border-border/60 rounded-xl p-8 hover:-translate-y-2 shadow-sm hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/50 transition-all duration-500 flex flex-col justify-between group overflow-hidden relative block"
@@ -148,7 +148,7 @@ export default function BlogGridSection({ posts }) {
                         {art.slug && art.slug.includes("how-to") || (art.category && art.category.toLowerCase() === "tutorial") ? t("blogPage.readTutorial", "Read Tutorial →") : t("blogPage.readMore")}
                       </span>
                     </div>
-                  </a>
+                  </Link>
                 );
               })}
             </div>

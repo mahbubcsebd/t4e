@@ -376,7 +376,7 @@ hideThumbnail: true
 </span>
 </summary>
 <div class="p-4 text-gray-600 border-t border-gray-100">
-<p>No. Puede enviar los hallazgos a Claude Code, Cursor o Codex y solucionarlos en su propio entorno sin consumir créditos de Think4Ever. Consulte <a href="/tutorials/how-to-design-in-think" class="text-blue-600 hover:underline">Cómo hacerlo: Diseñar en Think, Codificar en Claude</a> para conectar su herramienta.</p>
+<p>No. Puede enviar los hallazgos a Claude Code, Cursor o Codex y solucionarlos en su propio entorno sin consumir créditos de Think4Ever. Consulte <a href="/tutorials/how-to-design-in-think/" class="text-blue-600 hover:underline">Cómo hacerlo: Diseñar en Think, Codificar en Claude</a> para conectar su herramienta.</p>
 </div>
 </details>
 

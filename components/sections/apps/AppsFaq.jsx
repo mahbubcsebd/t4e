@@ -13,8 +13,13 @@ export default function AppsFaq() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const localizeHref = (href) => {
-    if (language === "en" || !href.startsWith("/")) return href;
-    return `/${language}${href}`;
+    if (!href || !href.startsWith("/")) return href;
+    let normalized = href;
+    if (!normalized.includes('#') && !normalized.includes('?') && !normalized.includes('.') && !normalized.endsWith('/')) {
+      normalized += '/';
+    }
+    if (language === "en") return normalized;
+    return `/${language}${normalized}`;
   };
 
   const rawItems = t("appsPage.faq.items");
@@ -102,14 +107,14 @@ export default function AppsFaq() {
                             </Link>
                           )}
                           {item.question.includes("iPhone") && (
-                            <a
+                            <Link
                               href="https://portal.think4ever.com"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-primary font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity ml-1"
                             >
                               portal.think4ever.com
-                            </a>
+                            </Link>
                           )}
                         </p>
                       )}

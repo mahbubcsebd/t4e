@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function SecurityHero() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section className="pt-8 lg:pt-12 pb-4 lg:pb-8 bg-background border-b border-border text-center">
@@ -29,9 +29,9 @@ export default function SecurityHero() {
 
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Button asChild className="shadow-md shadow-primary/25">
-            <a href="https://think4ever.com/contact-us/">
+            <Link href={language === 'en' ? "/contact-us/" : `/${language}/contact-us/`}>
               {t("securityPage.heroCtaPrimary")}
-            </a>
+            </Link>
           </Button>
           <Button asChild variant="outline" className="bg-card text-foreground border-border hover:bg-muted">
             <Link href="https://portal.think4ever.com/#/register">

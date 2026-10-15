@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import Eyebrow from "@/components/ui/Eyebrow";
@@ -28,9 +29,9 @@ export default function PricingHero() {
 
         <div className="flex flex-wrap items-center justify-center gap-4 mb-4">
           <Button asChild className="shadow-md shadow-primary/25">
-            <a href="https://portal.think4ever.com/#/register">
+            <Link href="https://portal.think4ever.com/#/register">
               {t("pricingPage.heroCtaPrimary")}
-            </a>
+            </Link>
           </Button>
         </div>
 

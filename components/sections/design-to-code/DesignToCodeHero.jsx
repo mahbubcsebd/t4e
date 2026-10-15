@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
 import VideoModal from "@/components/ui/VideoModal";
@@ -29,9 +30,9 @@ export default function DesignToCodeHero() {
 
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Button asChild className="shadow-md shadow-primary/25">
-            <a href="https://portal.think4ever.com/#/register">
+            <Link href="https://portal.think4ever.com/#/register">
               {t("nav.startFree")}
-            </a>
+            </Link>
           </Button>
           <button
             onClick={() => {

@@ -376,7 +376,7 @@ hideThumbnail: true
 </span>
 </summary>
 <div class="p-4 text-gray-600 border-t border-gray-100">
-<p>No. You can send the findings to Claude Code, Cursor or Codex and fix them in your own environment without using Think4Ever credits. See <a href="/tutorials/how-to-design-in-think" class="text-blue-600 hover:underline">How to: Design in Think, Code in Claude</a> to connect your tool.</p>
+<p>No. You can send the findings to Claude Code, Cursor or Codex and fix them in your own environment without using Think4Ever credits. See <a href="/tutorials/how-to-design-in-think/" class="text-blue-600 hover:underline">How to: Design in Think, Code in Claude</a> to connect your tool.</p>
 </div>
 </details>
 

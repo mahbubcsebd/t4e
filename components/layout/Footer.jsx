@@ -9,8 +9,13 @@ export default function Footer() {
   const { t, language } = useLanguage();
 
   const localizeHref = (href) => {
-    if (language === 'en' || !href.startsWith('/')) return href;
-    return `/${language}${href}`;
+    if (!href || !href.startsWith('/')) return href;
+    let normalized = href;
+    if (!normalized.includes('#') && !normalized.includes('?') && !normalized.includes('.') && !normalized.endsWith('/')) {
+      normalized += '/';
+    }
+    if (language === 'en') return normalized;
+    return `/${language}${normalized}`;
   };
 
   return (
@@ -44,7 +49,7 @@ export default function Footer() {
             </p>
             {/* Social icons */}
             <div className="flex items-center gap-3 mt-1">
-              <a
+              <Link
                 href="https://www.youtube.com/@Think4EverInc"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -52,8 +57,8 @@ export default function Footer() {
                 aria-label="Visit our YouTube channel"
               >
                 <FaYoutube className="w-5 h-5" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.linkedin.com/company/think4ever-global-inc/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -61,7 +66,7 @@ export default function Footer() {
                 aria-label="Visit our LinkedIn page"
               >
                 <FaLinkedinIn className="w-5 h-5" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -136,7 +141,7 @@ export default function Footer() {
                 {t('footer.faq')}
               </Link>
               <Link
-                href={localizeHref('/tutorials/design-artifacts-guide')}
+                href={localizeHref('/tutorials/design-artifacts-guide/')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 Put the Blueprint to Work
