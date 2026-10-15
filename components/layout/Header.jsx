@@ -402,6 +402,12 @@ export default function Header() {
           >
             {t('nav.integrations')}
           </Link>
+          <Link
+            href={localizeHref('/apps')}
+            className="hover:text-white transition-colors whitespace-nowrap"
+          >
+            {t('nav.apps', 'Apps')}
+          </Link>
 
           {/* Resources Dropdown with chevron */}
           <div
@@ -790,6 +796,13 @@ export default function Header() {
               >
                 {t('nav.integrations')}
               </Link>
+              <Link
+                href={localizeHref('/apps')}
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
+              >
+                {t('nav.apps', 'Apps')}
+              </Link>
             </div>
 
             <div className="flex flex-col gap-0">
@@ -919,6 +932,8 @@ export default function Header() {
                 {t('nav.pricing')}
               </Link>
             </div>
+
+
 
             {/* <div className="py-1 mb-2">
               <Link

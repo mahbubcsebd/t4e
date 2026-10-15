@@ -97,6 +97,12 @@ export default function Footer() {
                 {t('nav.integrations')}
               </Link>
               <Link
+                href={localizeHref('/apps')}
+                className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
+              >
+                {t('nav.apps', 'Apps')}
+              </Link>
+              <Link
                 href={localizeHref('/pricing')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >

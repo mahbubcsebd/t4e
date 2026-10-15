@@ -82,7 +82,8 @@
         "title": "Put the Blueprint to Work",
         "desc": "How to use Think4Ever design artifacts across the SDLC"
       }
-    }
+    },
+    "apps": "Apps"
   },
   "hero": {
     "eyebrow": "Legacy code or AI Generated code creates blind spots no one can see.",
@@ -1060,5 +1061,246 @@
     "description": "The page you're looking for doesn't exist or has been moved. Let's get you back to building and understanding your codebase.",
     "ctaPrimary": "Analyze a project",
     "ctaSecondary": "Return home"
+  },
+  "appsPage": {
+    "metaTitle": "Think4Ever Apps for Windows and Android",
+    "metaDesc": "Download Think4Ever for Windows and Android. Run Think4Ever locally, with the same capabilities as the Think4Ever web platform.",
+    "hero": {
+      "eyebrow": "Think4Ever apps",
+      "title": "Think4Ever, installed on your device",
+      "lead": "Native apps for Windows and Android bring the full Think4Ever platform to your own device. Run Think4Ever locally, with the same capabilities as the web platform.",
+      "iosBold": "iOS coming soon",
+      "note": "Free to download. Sign in to get started. iOS app coming soon.",
+      "getOnStore": "Get it from",
+      "getOnPlay": "Get it on",
+      "microsoftStore": "Microsoft Store",
+      "googlePlay": "Google Play",
+      "titlePrefix": "Think4Ever, ",
+      "titleHighlight": "installed on your device"
+    },
+    "benefits": {
+      "eyebrow": "Why use the apps",
+      "title": "The whole platform, wherever you work",
+      "subtitle": "Everything you do on think4ever.com, from mapping a codebase to approving a blueprint, now runs in a native app.",
+      "items": [
+        {
+          "title": "Run Think4Ever locally",
+          "desc": "Use Think4Ever on your own device, as a native app rather than a browser tab."
+        },
+        {
+          "title": "Same capabilities as the web",
+          "desc": "Design from intent, analyze existing code, review the Living Blueprint and validate changes, just as you do on think4ever.com."
+        },
+        {
+          "title": "See your whole system",
+          "desc": "Architecture and dependency maps, workflows, UI screens, business rules, data flows and API connections in one view."
+        },
+        {
+          "title": "Validate changes first",
+          "desc": "Coherence checks, impact analysis and conflict detection flag risky changes before any code is written."
+        },
+        {
+          "title": "Works with your coding agents",
+          "desc": "Share approved context with Claude Code, Cursor, Windsurf, Codex and other MCP clients."
+        },
+        {
+          "title": "Review on the go",
+          "desc": "Check a blueprint, follow a build or approve a change from your Android phone or tablet."
+        }
+      ]
+    },
+    "platforms": {
+      "eyebrow": "Download",
+      "title": "Choose your platform",
+      "windows": {
+        "title": "Think4Ever for Windows",
+        "badge": "Microsoft Store · Free",
+        "desc": "The full Think4Ever multi-agent development platform on your Windows PC. Turn ideas and existing code into production-ready systems in one visual workspace, with no switching between tools.",
+        "features": [
+          "Native Windows app",
+          "See how your applications are built, connected and deployed",
+          "Same capabilities as the web platform",
+          "Installs and updates through the Microsoft Store"
+        ]
+      },
+      "android": {
+        "title": "Think4Ever for Android",
+        "badge": "Google Play · Free",
+        "desc": "Think4Ever on your Android phone or tablet, so you can review blueprints, follow builds and approve changes away from your desk.",
+        "features": [
+          "Native Android app for phones and tablets",
+          "Same capabilities as the web platform",
+          "Play Store data safety: no data collected or shared with third parties"
+        ]
+      }
+    },
+    "screenshots": {
+      "eyebrow": "Screenshots",
+      "title": "See the apps in action",
+      "subtitle": "Scroll through each row to see more.",
+      "windowsTitle": "Windows",
+      "androidTitle": "Android",
+      "windows": [
+        {
+          "src": "/images/apps/win-2.png",
+          "title": "Concept map"
+        },
+        {
+          "src": "/images/apps/win-3.png",
+          "title": "Screen and block architecture"
+        },
+        {
+          "src": "/images/apps/win-4.png",
+          "title": "Business flows"
+        },
+        {
+          "src": "/images/apps/win-5.png",
+          "title": "Roles and permissions"
+        },
+        {
+          "src": "/images/apps/win-6.png",
+          "title": "UI designs"
+        },
+        {
+          "src": "/images/apps/win-7.png",
+          "title": "Technical diagrams"
+        }
+      ],
+      "android": [
+        {
+          "src": "/images/apps/android-phone-1.png",
+          "title": "Business flows",
+          "type": "tall"
+        },
+        {
+          "src": "/images/apps/android-phone-2.png",
+          "title": "Functional architecture",
+          "type": "tall"
+        },
+        {
+          "src": "/images/apps/android-phone-3.png",
+          "title": "Data objects",
+          "type": "tall"
+        },
+        {
+          "src": "/images/apps/android-phone-6.png",
+          "title": "Concept map",
+          "type": "tall"
+        },
+        {
+          "src": "/images/apps/android-phone-7.png",
+          "title": "UI designs",
+          "type": "tall"
+        },
+        {
+          "src": "/images/apps/android-tablet-2.png",
+          "title": "Your projects, on a tablet",
+          "type": "wide"
+        },
+        {
+          "src": "/images/apps/android-tablet-1.png",
+          "title": "Business flows, on a tablet",
+          "type": "wide"
+        },
+        {
+          "src": "/images/apps/android-tablet-3.png",
+          "title": "Concept, on a tablet",
+          "type": "wide"
+        }
+      ]
+    },
+    "steps": {
+      "eyebrow": "Get started",
+      "title": "Up and running in three steps",
+      "items": [
+        {
+          "num": "1",
+          "title": "Download",
+          "desc": "Install Think4Ever from the Microsoft Store or Google Play."
+        },
+        {
+          "num": "2",
+          "title": "Sign in",
+          "desc": "Sign in with your Think4Ever account, or create a free one."
+        },
+        {
+          "num": "3",
+          "title": "Start a project",
+          "desc": "Connect a repository or describe what you want to build, then review the system map Think4Ever generates."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Questions about the apps",
+      "items": [
+        {
+          "question": "Can the apps do everything the web platform does?",
+          "answer": "Yes. The Windows and Android apps have the same capabilities as Think4Ever on the web."
+        },
+        {
+          "question": "How much do the apps cost?",
+          "answer": "The apps are free to download, with in-app purchases for paid plans. Your Think4Ever plan sets your projects, users and credits.",
+          "pricingLink": "See pricing."
+        },
+        {
+          "question": "Can I use my existing Think4Ever account?",
+          "answer": "Yes. Sign in with the same account you use on think4ever.com."
+        },
+        {
+          "question": "What are the system requirements for Windows?",
+          "type": "table",
+          "rows": [
+            {
+              "label": "Operating system",
+              "value": "Windows 10 version 17763.0 or higher"
+            },
+            {
+              "label": "Memory",
+              "value": "8 GB"
+            },
+            {
+              "label": "Video memory",
+              "value": "1 GB"
+            },
+            {
+              "label": "DirectX",
+              "value": "Version 10"
+            },
+            {
+              "label": "Download size",
+              "value": "About 41.4 MB"
+            },
+            {
+              "label": "Installation",
+              "value": "Install on up to ten Windows devices while signed in to your Microsoft account"
+            }
+          ]
+        },
+        {
+          "question": "What are the system requirements for Android?",
+          "type": "table",
+          "rows": [
+            {
+              "label": "Operating system",
+              "value": "Android 11 and above"
+            },
+            {
+              "label": "Devices",
+              "value": "Phones and tablets"
+            }
+          ]
+        },
+        {
+          "question": "Is there an app for iPhone and iPad?",
+          "answer": "The iOS native app is coming soon. Until then, use Think4Ever in your browser at portal.think4ever.com."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Download Think4Ever",
+      "title": "Understand the system. Change it with confidence.",
+      "desc": "Get the native app for Windows or Android and start mapping your first project today."
+    }
   }
 }
