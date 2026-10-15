@@ -522,7 +522,7 @@ export default function Header() {
               }`}
             >
               {tutorialsLinks.map((tut, idx) => (
-                <Link
+                <a
                   key={idx}
                   href={localizeHref(tut.href)}
                   className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-muted group/item transition-colors"
@@ -538,7 +538,7 @@ export default function Header() {
                       {tut.desc}
                     </p>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -911,14 +911,14 @@ export default function Header() {
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       {tutorialsLinks.map((tut, idx) => (
-                        <Link
+                        <a
                           key={idx}
                           href={localizeHref(tut.href)}
                           onClick={() => setMobileMenuOpen(false)}
                           className="flex items-center justify-between text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                         >
                           <span>{tut.title}</span>
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   </motion.div>

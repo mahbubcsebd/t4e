@@ -118,34 +118,34 @@ export default function PricingFaq() {
                             {language === "es" ? (
                               <>
                                 Sí. Claude Code, Cursor, Codex y otras herramientas compatibles con MCP pueden construir desde su diseño de Think4Ever a través del servidor Think MCP, en su propia suscripción. Consulte{" "}
-                                <Link
+                                <a
                                   href={localizeHref("/tutorials/how-to-design-in-think/")}
                                   className="text-primary font-semibold hover:underline"
                                 >
                                   Cómo: Diseñar en Think, Codificar en Claude
-                                </Link>
+                                </a>
                                 .
                               </>
                             ) : language === "nl" ? (
                               <>
                                 Ja. Claude Code, Cursor, Codex en andere MCP-compatibele tools kunnen bouwen vanuit je Think4Ever-ontwerp via de Think MCP-server, op je eigen abonnement. Zie{" "}
-                                <Link
+                                <a
                                   href={localizeHref("/tutorials/how-to-design-in-think/")}
                                   className="text-primary font-semibold hover:underline"
                                 >
                                   Hoe te: Ontwerpen in Think, Coderen in Claude
-                                </Link>
+                                </a>
                                 .
                               </>
                             ) : (
                               <>
                                 Yes. Claude Code, Cursor, Codex and other MCP-compatible tools can build from your Think4Ever design through the Think MCP server, on your own subscription. See{" "}
-                                <Link
+                                <a
                                   href="/tutorials/how-to-design-in-think/"
                                   className="text-primary font-semibold hover:underline"
                                 >
                                   How to: Design in Think, Code in Claude
-                                </Link>
+                                </a>
                                 .
                               </>
                             )}
