@@ -82,7 +82,8 @@
       }
     },
     "productVideos": "Videos de productos",
-    "whitePapers": "Libros blancos y guías"
+    "whitePapers": "Libros blancos y guías",
+    "apps": "Aplicaciones"
   },
   "hero": {
     "eyebrow": "El código heredado o el código generado por IA crea puntos ciegos que nadie puede ver.",
@@ -1188,6 +1189,247 @@
       "a8": "Solo el rol, proyectos y tipo de acceso que elijas en el contrato: inicio de sesión, un token MCP con alcance de proyecto, o ambos. El acceso y los tokens se revocan automáticamente cuando el contrato termina o el proyecto se completa.",
       "q9": "¿Puedo externalizar un proyecto completo a un equipo?",
       "a9": "Sí. La externalización de un proyecto completo permite que una agencia o equipo se encargue del diseño y desarrollo de principio a fin, mientras tú mantienes visibilidad, registros de auditoría y control sobre lo que pueden acceder."
+    }
+  },
+  "appsPage": {
+    "metaTitle": "Aplicaciones Think4Ever para Windows y Android",
+    "metaDesc": "Descarga Think4Ever para Windows y Android. Ejecuta Think4Ever localmente, con las mismas capacidades que la plataforma web de Think4Ever.",
+    "hero": {
+      "eyebrow": "Aplicaciones Think4Ever",
+      "title": "Think4Ever, instalado en tu dispositivo",
+      "lead": "Las aplicaciones nativas para Windows y Android llevan la plataforma completa de Think4Ever a tu propio dispositivo. Ejecuta Think4Ever localmente, con las mismas capacidades que la plataforma web.",
+      "iosBold": "iOS próximamente",
+      "note": "Descarga gratuita. Inicia sesión para comenzar. Aplicación para iOS disponible próximamente.",
+      "getOnStore": "Consíguelo en",
+      "getOnPlay": "Disponible en",
+      "microsoftStore": "Microsoft Store",
+      "googlePlay": "Google Play",
+      "titlePrefix": "Think4Ever, ",
+      "titleHighlight": "instalado en tu dispositivo"
+    },
+    "benefits": {
+      "eyebrow": "¿Por qué usar las aplicaciones?",
+      "title": "Toda la plataforma, dondequiera que trabajes",
+      "subtitle": "Todo lo que haces en think4ever.com, desde mapear una base de código hasta aprobar un plano de arquitectura, ahora se ejecuta en una aplicación nativa.",
+      "items": [
+        {
+          "title": "Ejecuta Think4Ever localmente",
+          "desc": "Usa Think4Ever en tu propio dispositivo como una aplicación nativa en lugar de una pestaña de navegador."
+        },
+        {
+          "title": "Mismas capacidades que la web",
+          "desc": "Diseña desde la intención, analiza código existente, revisa el Plano Vivo y valida cambios, igual que en think4ever.com."
+        },
+        {
+          "title": "Visualiza todo tu sistema",
+          "desc": "Mapas de arquitectura y dependencias, flujos de trabajo, pantallas de interfaz, reglas de negocio, flujos de datos y conexiones API en una sola vista."
+        },
+        {
+          "title": "Valida los cambios primero",
+          "desc": "Las verificaciones de coherencia, el análisis de impacto y la detección de conflictos señalan cambios riesgosos antes de escribir código."
+        },
+        {
+          "title": "Compatible con tus agentes de código",
+          "desc": "Comparte contexto aprobado con Claude Code, Cursor, Windsurf, Codex y otros clientes MCP."
+        },
+        {
+          "title": "Revisa sobre la marcha",
+          "desc": "Consulta un plano, sigue una compilación o aprueba un cambio desde tu teléfono o tableta Android."
+        }
+      ]
+    },
+    "platforms": {
+      "eyebrow": "Descarga",
+      "title": "Elige tu plataforma",
+      "windows": {
+        "title": "Think4Ever para Windows",
+        "badge": "Microsoft Store · Gratis",
+        "desc": "La plataforma integral de desarrollo multiagente Think4Ever en tu PC con Windows. Transforma ideas y código existente en sistemas listos para producción en un espacio de trabajo visual unificado, sin alternar entre herramientas.",
+        "features": [
+          "Aplicación nativa para Windows",
+          "Descubre cómo se construyen, conectan e implementan tus aplicaciones",
+          "Mismas capacidades que la plataforma web",
+          "Instalación y actualizaciones a través de Microsoft Store"
+        ]
+      },
+      "android": {
+        "title": "Think4Ever para Android",
+        "badge": "Google Play · Gratis",
+        "desc": "Think4Ever en tu teléfono o tableta Android para revisar planos, seguir compilaciones y aprobar cambios fuera de tu escritorio.",
+        "features": [
+          "Aplicación nativa de Android para teléfonos y tabletas",
+          "Mismas capacidades que la plataforma web",
+          "Seguridad de datos de Play Store: no se recopilan ni comparten datos con terceros"
+        ]
+      }
+    },
+    "screenshots": {
+      "eyebrow": "Capturas de pantalla",
+      "title": "Descubre las aplicaciones en acción",
+      "subtitle": "Desplázate horizontalmente por cada fila para ver más.",
+      "windowsTitle": "Windows",
+      "androidTitle": "Android",
+      "windows": [
+        {
+          "src": "/images/apps/win-2.png",
+          "title": "Mapa conceptual"
+        },
+        {
+          "src": "/images/apps/win-3.png",
+          "title": "Arquitectura de pantallas y bloques"
+        },
+        {
+          "src": "/images/apps/win-4.png",
+          "title": "Flujos de negocio"
+        },
+        {
+          "src": "/images/apps/win-5.png",
+          "title": "Roles y permisos"
+        },
+        {
+          "src": "/images/apps/win-6.png",
+          "title": "Diseños de interfaz de usuario"
+        },
+        {
+          "src": "/images/apps/win-7.png",
+          "title": "Diagramas técnicos"
+        }
+      ],
+      "android": [
+        {
+          "src": "/images/apps/android-phone-1.png",
+          "title": "Flujos de negocio",
+          "type": "tall"
+        },
+        {
+          "src": "/images/apps/android-phone-2.png",
+          "title": "Arquitectura funcional",
+          "type": "tall"
+        },
+        {
+          "src": "/images/apps/android-phone-3.png",
+          "title": "Objetos de datos",
+          "type": "tall"
+        },
+        {
+          "src": "/images/apps/android-phone-6.png",
+          "title": "Mapa conceptual",
+          "type": "tall"
+        },
+        {
+          "src": "/images/apps/android-phone-7.png",
+          "title": "Diseños de interfaz",
+          "type": "tall"
+        },
+        {
+          "src": "/images/apps/android-tablet-2.png",
+          "title": "Tus proyectos en tableta",
+          "type": "wide"
+        },
+        {
+          "src": "/images/apps/android-tablet-1.png",
+          "title": "Flujos de negocio en tableta",
+          "type": "wide"
+        },
+        {
+          "src": "/images/apps/android-tablet-3.png",
+          "title": "Conceptos en tableta",
+          "type": "wide"
+        }
+      ]
+    },
+    "steps": {
+      "eyebrow": "Primeros pasos",
+      "title": "En funcionamiento en solo tres pasos",
+      "items": [
+        {
+          "num": "1",
+          "title": "Descargar",
+          "desc": "Instala Think4Ever desde Microsoft Store o Google Play."
+        },
+        {
+          "num": "2",
+          "title": "Iniciar sesión",
+          "desc": "Inicia sesión con tu cuenta de Think4Ever o crea una gratis."
+        },
+        {
+          "num": "3",
+          "title": "Comenzar un proyecto",
+          "desc": "Conecta un repositorio o describe lo que deseas construir, y luego revisa el mapa del sistema generado por Think4Ever."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Preguntas frecuentes",
+      "title": "Preguntas sobre las aplicaciones",
+      "items": [
+        {
+          "question": "¿Pueden las aplicaciones hacer todo lo que hace la plataforma web?",
+          "answer": "Sí. Las aplicaciones para Windows y Android cuentan con las mismas capacidades completas que Think4Ever en la web."
+        },
+        {
+          "question": "¿Cuánto cuestan las aplicaciones?",
+          "answer": "Las aplicaciones se pueden descargar gratis, con compras dentro de la aplicación para planes de pago. Tu plan Think4Ever determina tus proyectos, usuarios y créditos.",
+          "pricingLink": "Ver precios."
+        },
+        {
+          "question": "¿Puedo usar mi cuenta de Think4Ever existente?",
+          "answer": "Sí. Inicia sesión con la misma cuenta que utilizas en think4ever.com."
+        },
+        {
+          "question": "¿Cuáles son los requisitos del sistema para Windows?",
+          "type": "table",
+          "rows": [
+            {
+              "label": "Sistema operativo",
+              "value": "Windows 10 versión 17763.0 o superior"
+            },
+            {
+              "label": "Memoria",
+              "value": "8 GB"
+            },
+            {
+              "label": "Memoria de video",
+              "value": "1 GB"
+            },
+            {
+              "label": "DirectX",
+              "value": "Versión 10"
+            },
+            {
+              "label": "Tamaño de descarga",
+              "value": "Aproximadamente 41,4 MB"
+            },
+            {
+              "label": "Instalación",
+              "value": "Instala en hasta diez dispositivos Windows con tu cuenta de Microsoft conectada"
+            }
+          ]
+        },
+        {
+          "question": "¿Cuáles son los requisitos del sistema para Android?",
+          "type": "table",
+          "rows": [
+            {
+              "label": "Sistema operativo",
+              "value": "Android 11 o superior"
+            },
+            {
+              "label": "Dispositivos",
+              "value": "Teléfonos y tabletas"
+            }
+          ]
+        },
+        {
+          "question": "¿Hay alguna aplicación para iPhone y iPad?",
+          "answer": "La aplicación nativa para iOS estará disponible próximamente. Mientras tanto, puedes usar Think4Ever en tu navegador en portal.think4ever.com."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Descarga Think4Ever",
+      "title": "Comprende el sistema. Modifícalo con total confianza.",
+      "desc": "Obtén la aplicación nativa para Windows o Android y comienza a mapear tu primer proyecto hoy mismo."
     }
   }
 }

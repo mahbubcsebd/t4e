@@ -82,7 +82,8 @@
     "resourceLibraryDesc": "Verken onze verzameling van bronnen.",
     "blogDesc": "Lees het laatste nieuws en artikelen.",
     "faq": "FAQ",
-    "faqDesc": "Veelgestelde vragen."
+    "faqDesc": "Veelgestelde vragen.",
+    "apps": "Applicaties"
   },
   "hero": {
     "eyebrow": "Legacycode of door AI gegenereerde code creëert blinde vlekken die niemand kan zien.",
@@ -1066,5 +1067,246 @@
     "successTitle": "Bedankt voor je bericht!",
     "successMsg": "We hebben je bericht ontvangen en nemen binnenkort contact met je op.",
     "okay": "Oké"
+  },
+  "appsPage": {
+    "metaTitle": "Think4Ever Apps voor Windows en Android",
+    "metaDesc": "Download Think4Ever voor Windows en Android. Draai Think4Ever lokaal, met dezelfde mogelijkheden als het Think4Ever webplatform.",
+    "hero": {
+      "eyebrow": "Think4Ever apps",
+      "title": "Think4Ever, geïnstalleerd op je apparaat",
+      "lead": "Native apps voor Windows en Android brengen het volledige Think4Ever platform naar je eigen apparaat. Draai Think4Ever lokaal, met dezelfde mogelijkheden als het webplatform.",
+      "iosBold": "iOS binnenkort beschikbaar",
+      "note": "Gratis te downloaden. Log in om te beginnen. iOS-app binnenkort beschikbaar.",
+      "getOnStore": "Download via",
+      "getOnPlay": "Download op",
+      "microsoftStore": "Microsoft Store",
+      "googlePlay": "Google Play",
+      "titlePrefix": "Think4Ever, ",
+      "titleHighlight": "geïnstalleerd op je apparaat"
+    },
+    "benefits": {
+      "eyebrow": "Waarom de apps gebruiken",
+      "title": "Het hele platform, waar je ook werkt",
+      "subtitle": "Alles wat je doet op think4ever.com, van het in kaart brengen van een codebase tot het goedkeuren van een blauwdruk, draait nu in een native app.",
+      "items": [
+        {
+          "title": "Draai Think4Ever lokaal",
+          "desc": "Gebruik Think4Ever op je eigen apparaat als een native app in plaats van een browsertabblad."
+        },
+        {
+          "title": "Dezelfde mogelijkheden als het web",
+          "desc": "Ontwerp vanuit intentie, analyseer bestaande code, bekijk de Living Blueprint en valideer wijzigingen, net zoals op think4ever.com."
+        },
+        {
+          "title": "Zie je hele systeem",
+          "desc": "Architectuur- en afhankelijkheidskaarten, workflows, UI-schermen, bedrijfsregels, datastromen en API-verbindingen in één overzicht."
+        },
+        {
+          "title": "Valideer wijzigingen vooraf",
+          "desc": "Samenhangcontroles, impactanalyses en conflictdetectie signaleren risicovolle wijzigingen voordat er code wordt geschreven."
+        },
+        {
+          "title": "Werkt met je coding agents",
+          "desc": "Deel goedgekeurde context met Claude Code, Cursor, Windsurf, Codex en andere MCP-clients."
+        },
+        {
+          "title": "Beoordeel onderweg",
+          "desc": "Controleer een blauwdruk, volg een build of keur een wijziging goed vanaf je Android telefoon of tablet."
+        }
+      ]
+    },
+    "platforms": {
+      "eyebrow": "Download",
+      "title": "Kies je platform",
+      "windows": {
+        "title": "Think4Ever voor Windows",
+        "badge": "Microsoft Store · Gratis",
+        "desc": "Het complete Think4Ever multi-agent ontwikkelplatform op je Windows PC. Zet ideeën en bestaande code om in productierijpe systemen in één visuele werkruimte, zonder te schakelen tussen tools.",
+        "features": [
+          "Native Windows app",
+          "Zie hoe je applicaties worden gebouwd, verbonden en geïmplementeerd",
+          "Dezelfde mogelijkheden als het webplatform",
+          "Installeert en updatet automatisch via de Microsoft Store"
+        ]
+      },
+      "android": {
+        "title": "Think4Ever voor Android",
+        "badge": "Google Play · Gratis",
+        "desc": "Think4Ever op je Android telefoon of tablet, zodat je blauwdrukken kunt controleren, builds kunt volgen en wijzigingen kunt goedkeuren buiten je bureau.",
+        "features": [
+          "Native Android app voor telefoons en tablets",
+          "Dezelfde mogelijkheden als het webplatform",
+          "Play Store gegevensbeveiliging: geen gegevens verzameld of gedeeld met derden"
+        ]
+      }
+    },
+    "screenshots": {
+      "eyebrow": "Screenshots",
+      "title": "Bekijk de apps in actie",
+      "subtitle": "Scroll door elke rij voor meer.",
+      "windowsTitle": "Windows",
+      "androidTitle": "Android",
+      "windows": [
+        {
+          "src": "/images/apps/win-2.png",
+          "title": "Conceptkaart"
+        },
+        {
+          "src": "/images/apps/win-3.png",
+          "title": "Scherm- en blokarchitectuur"
+        },
+        {
+          "src": "/images/apps/win-4.png",
+          "title": "Bedrijfsprocessen"
+        },
+        {
+          "src": "/images/apps/win-5.png",
+          "title": "Rollen en rechten"
+        },
+        {
+          "src": "/images/apps/win-6.png",
+          "title": "UI-ontwerpen"
+        },
+        {
+          "src": "/images/apps/win-7.png",
+          "title": "Technische diagrammen"
+        }
+      ],
+      "android": [
+        {
+          "src": "/images/apps/android-phone-1.png",
+          "title": "Bedrijfsprocessen",
+          "type": "tall"
+        },
+        {
+          "src": "/images/apps/android-phone-2.png",
+          "title": "Functionele architectuur",
+          "type": "tall"
+        },
+        {
+          "src": "/images/apps/android-phone-3.png",
+          "title": "Data-objecten",
+          "type": "tall"
+        },
+        {
+          "src": "/images/apps/android-phone-6.png",
+          "title": "Conceptkaart",
+          "type": "tall"
+        },
+        {
+          "src": "/images/apps/android-phone-7.png",
+          "title": "UI-ontwerpen",
+          "type": "tall"
+        },
+        {
+          "src": "/images/apps/android-tablet-2.png",
+          "title": "Je projecten op tablet",
+          "type": "wide"
+        },
+        {
+          "src": "/images/apps/android-tablet-1.png",
+          "title": "Bedrijfsprocessen op tablet",
+          "type": "wide"
+        },
+        {
+          "src": "/images/apps/android-tablet-3.png",
+          "title": "Concept op tablet",
+          "type": "wide"
+        }
+      ]
+    },
+    "steps": {
+      "eyebrow": "Aan de slag",
+      "title": "Binnen drie stappen klaar voor gebruik",
+      "items": [
+        {
+          "num": "1",
+          "title": "Downloaden",
+          "desc": "Installeer Think4Ever vanuit de Microsoft Store of Google Play."
+        },
+        {
+          "num": "2",
+          "title": "Inloggen",
+          "desc": "Log in met je Think4Ever-account of maak gratis een account aan."
+        },
+        {
+          "num": "3",
+          "title": "Start een project",
+          "desc": "Verbind een repository of beschrijf wat je wilt bouwen en bekijk de door Think4Ever gegenereerde systeemkaart."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Veelgestelde vragen",
+      "title": "Vragen over de apps",
+      "items": [
+        {
+          "question": "Kunnen de apps alles wat het webplatform kan?",
+          "answer": "Ja. De Windows- en Android-apps hebben dezelfde volledige mogelijkheden als Think4Ever op het web."
+        },
+        {
+          "question": "Wat kosten de apps?",
+          "answer": "De apps zijn gratis te downloaden, met in-app aankopen voor betaalde abonnementen. Je Think4Ever-abonnement bepaalt je projecten, gebruikers en credits.",
+          "pricingLink": "Bekijk prijzen."
+        },
+        {
+          "question": "Kan ik mijn bestaande Think4Ever-account gebruiken?",
+          "answer": "Ja. Log in met hetzelfde account dat je op think4ever.com gebruikt."
+        },
+        {
+          "question": "Wat zijn de systeemvereisten voor Windows?",
+          "type": "table",
+          "rows": [
+            {
+              "label": "Besturingssysteem",
+              "value": "Windows 10 versie 17763.0 of hoger"
+            },
+            {
+              "label": "Geheugen",
+              "value": "8 GB"
+            },
+            {
+              "label": "Videogeheugen",
+              "value": "1 GB"
+            },
+            {
+              "label": "DirectX",
+              "value": "Versie 10"
+            },
+            {
+              "label": "Downloadgrootte",
+              "value": "Ongeveer 41,4 MB"
+            },
+            {
+              "label": "Installatie",
+              "value": "Installeer op maximaal tien Windows-apparaten terwijl je bent aangemeld bij je Microsoft-account"
+            }
+          ]
+        },
+        {
+          "question": "Wat zijn de systeemvereisten voor Android?",
+          "type": "table",
+          "rows": [
+            {
+              "label": "Besturingssysteem",
+              "value": "Android 11 en hoger"
+            },
+            {
+              "label": "Apparaten",
+              "value": "Telefoons en tablets"
+            }
+          ]
+        },
+        {
+          "question": "Is er een app voor iPhone en iPad?",
+          "answer": "De native iOS-app is binnenkort beschikbaar. Gebruik tot die tijd Think4Ever in je browser op portal.think4ever.com."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Download Think4Ever",
+      "title": "Begrijp het systeem. Wijzig met vertrouwen.",
+      "desc": "Download de native app voor Windows of Android en breng vandaag nog je eerste project in kaart."
+    }
   }
 }
