@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Mail, MapPin } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
@@ -46,12 +47,12 @@ export default function ContactSidebar() {
               <h4 className="text-sm font-bold text-foreground leading-none mb-1.5">
                 {t("contact.emailHeading")}
               </h4>
-              <a
+              <Link
                 href={`mailto:${t("contact.emailAddress")}`}
                 className="text-xs sm:text-sm text-primary font-semibold hover:text-[#093cad] transition-colors"
               >
                 {t("contact.emailAddress")}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

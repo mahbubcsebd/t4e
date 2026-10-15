@@ -115,10 +115,10 @@ export const BlogArticle = ({ post, currentLang }) => {
                     return currentLang === "en" ? normalized : `/${currentLang}${normalized}`;
                   };
                   return (
-                    <a href={localizeHref(href)} {...props} />
+                    <Link href={localizeHref(href)} {...props} />
                   );
                 }
-                return <a {...props} />;
+                return <Link href={href} target="_blank" rel="noopener noreferrer" {...props} />;
               }
             }}
           >

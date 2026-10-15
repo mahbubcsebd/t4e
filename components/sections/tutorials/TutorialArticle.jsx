@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import Link from "next/link";
 
 export const TutorialArticle = ({ tutorial, currentLang }) => {
   const [zoomedImgSrc, setZoomedImgSrc] = useState(null);
@@ -118,10 +119,10 @@ export const TutorialArticle = ({ tutorial, currentLang }) => {
                     return currentLang === "en" ? normalized : `/${currentLang}${normalized}`;
                   };
                   return (
-                    <a href={localizeHref(href)} {...props} />
+                    <Link href={localizeHref(href)} {...props} />
                   );
                 }
-                return <a {...props} />;
+                return <Link href={href} target="_blank" rel="noopener noreferrer" {...props} />;
               }
             }}
           >

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { cn } from "@/lib/utils";
 
@@ -65,7 +66,7 @@ export default function StoreButtons({
   return (
     <div className={containerClass}>
       {(!showOnly || showOnly === "windows") && (
-        <a
+        <Link
           href="https://apps.microsoft.com/detail/9nj1lbpvwn49?hl=en-US&gl=US&ocid=pdpshare"
           target="_blank"
           rel="noopener noreferrer"
@@ -86,11 +87,11 @@ export default function StoreButtons({
               {t("appsPage.hero.microsoftStore", "Microsoft Store")}
             </span>
           </div>
-        </a>
+        </Link>
       )}
 
       {(!showOnly || showOnly === "android") && (
-        <a
+        <Link
           href="https://play.google.com/store/apps/details?id=com.think4ever.t4e"
           target="_blank"
           rel="noopener noreferrer"
@@ -111,7 +112,7 @@ export default function StoreButtons({
               {t("appsPage.hero.googlePlay", "Google Play")}
             </span>
           </div>
-        </a>
+        </Link>
       )}
     </div>
   );

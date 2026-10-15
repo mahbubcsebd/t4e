@@ -371,7 +371,7 @@ export default function Header() {
                   </p>
                 </div>
               </Link>
-              <a
+              <Link
                 href="/#reviewed-handoff"
                 onClick={(e) => {
                   e.preventDefault();
@@ -390,7 +390,7 @@ export default function Header() {
                     Audit & fix AI-generated code
                   </p>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
           {/* <Link
@@ -477,7 +477,7 @@ export default function Header() {
               }`}
             >
               {docsLinks.map((doc, idx) => (
-                <a
+                <Link
                   key={idx}
                   href={doc.href}
                   target="_blank"
@@ -495,7 +495,7 @@ export default function Header() {
                       {doc.desc}
                     </p>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -522,7 +522,7 @@ export default function Header() {
               }`}
             >
               {tutorialsLinks.map((tut, idx) => (
-                <a
+                <Link
                   key={idx}
                   href={localizeHref(tut.href)}
                   className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-muted group/item transition-colors"
@@ -538,7 +538,7 @@ export default function Header() {
                       {tut.desc}
                     </p>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -623,9 +623,9 @@ export default function Header() {
             variant="ghost"
             className="text-white hover:text-white hover:bg-white/10 font-medium"
           >
-            <a href="https://portal.think4ever.com/#/login">
+            <Link href="https://portal.think4ever.com/#/login">
               {t('nav.signIn')}
-            </a>
+            </Link>
           </Button>
 
           {/* Start free button */}
@@ -633,9 +633,9 @@ export default function Header() {
             asChild
             className="bg-white text-[#093cad] hover:bg-gray-100 shadow-none font-bold"
           >
-            <a href="https://portal.think4ever.com/#/register">
+            <Link href="https://portal.think4ever.com/#/register">
               {t('nav.startFree')}
-            </a>
+            </Link>
           </Button>
         </div>
 
@@ -758,7 +758,7 @@ export default function Header() {
                       >
                         {t('nav.designToCode')}
                       </Link>
-                      <a
+                      <Link
                         href="/#reviewed-handoff"
                         onClick={(e) => {
                           e.preventDefault();
@@ -777,7 +777,7 @@ export default function Header() {
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors cursor-pointer"
                       >
                         Production Hardening
-                      </a>
+                      </Link>
                     </div>
                   </motion.div>
                 )}
@@ -830,20 +830,20 @@ export default function Header() {
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       {/* Resource Library link removed per request */}
-                      <a
+                      <Link
                         href={localizeHref('/blog/')}
                         onClick={() => setMobileMenuOpen(false)}
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                       >
                         {t('nav.blog')}
-                      </a>
-                      <a
+                      </Link>
+                      <Link
                         href={localizeHref('/faq/')}
                         onClick={() => setMobileMenuOpen(false)}
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                       >
                         FAQ
-                      </a>
+                      </Link>
                     </div>
                   </motion.div>
                 )}
@@ -872,7 +872,7 @@ export default function Header() {
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       {docsLinks.map((doc, idx) => (
-                        <a
+                        <Link
                           key={idx}
                           href={doc.href}
                           target="_blank"
@@ -881,7 +881,7 @@ export default function Header() {
                           className="flex items-center justify-between text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                         >
                           <span>{doc.title}</span>
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </motion.div>
@@ -911,14 +911,14 @@ export default function Header() {
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       {tutorialsLinks.map((tut, idx) => (
-                        <a
+                        <Link
                           key={idx}
                           href={localizeHref(tut.href)}
                           onClick={() => setMobileMenuOpen(false)}
                           className="flex items-center justify-between text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                         >
                           <span>{tut.title}</span>
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </motion.div>
@@ -950,20 +950,20 @@ export default function Header() {
 
             <div className="pt-2 pb-2 grid grid-cols-2 gap-2">
               <Button asChild variant="outline" className="w-full text-center">
-                <a
+                <Link
                   href="https://portal.think4ever.com/#/login"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t('nav.signIn')}
-                </a>
+                </Link>
               </Button>
               <Button asChild className="w-full text-center">
-                <a
+                <Link
                   href="https://portal.think4ever.com/#/register"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t('nav.startFree')}
-                </a>
+                </Link>
               </Button>
             </div>
           </motion.div>

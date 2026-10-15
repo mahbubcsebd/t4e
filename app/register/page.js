@@ -103,13 +103,13 @@ export default function RegisterPage() {
                 </p>
 
                 {/* Google OAuth Button */}
-                <a
+                <Link
                   href="https://portal.think4ever.com/#/register"
                   className="w-full bg-white border border-[#c8d9ed] hover:border-[#093cad] text-[#09090d] font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition-all shadow-sm mb-6 text-sm"
                 >
                   <Globe className="w-4 h-4 text-[#07A7E1]" />
                   <span>{t("registerPage.btnGoogle")}</span>
-                </a>
+                </Link>
 
                 <div className="relative flex items-center justify-center mb-6">
                   <div className="border-t border-[#c8d9ed] w-full"></div>
@@ -233,12 +233,12 @@ export default function RegisterPage() {
 
                 <div className="mt-6 pt-4 border-t border-[#c8d9ed]/50 text-center text-xs text-[#71849c]">
                   <span>{t("registerPage.alreadyAccount")} </span>
-                  <a
+                  <Link
                     href="https://portal.think4ever.com/#/login"
                     className="font-bold text-[#093cad] hover:underline"
                   >
                     {t("registerPage.signIn")}
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

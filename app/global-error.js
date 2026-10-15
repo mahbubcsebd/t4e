@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 import { AlertCircle, RotateCcw, Home } from "lucide-react";
 
 export default function GlobalError({ error, reset }) {
@@ -73,13 +74,13 @@ export default function GlobalError({ error, reset }) {
               <RotateCcw className="w-4 h-4" />
               <span>Reload page</span>
             </button>
-            <a
+            <Link
               href="/"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gray-100 border border-gray-300 text-gray-800 font-bold text-sm hover:bg-gray-200 transition-colors"
             >
               <Home className="w-4 h-4" />
               <span>Return home</span>
-            </a>
+            </Link>
           </div>
         </div>
       </body>

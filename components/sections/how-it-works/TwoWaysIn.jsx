@@ -71,13 +71,13 @@ export default function TwoWaysIn() {
                   </div>
 
                   <div className="mt-2 mb-2 sm:mb-0">
-                    <a
+                    <Link
                       href={localizeHref("/blog/code-visualization-real-codebases/")}
                       className="inline-flex items-start gap-1.5 text-primary font-bold hover:text-primary/80 transition-colors text-[13px] group leading-tight"
                     >
                       <span className="flex-1">{t('howItWorksPage.path1BlogLink') || 'See the five views engineers need before changing a codebase'}</span>
                       <ArrowRight className="w-3.5 h-3.5 mt-0.5 group-hover:translate-x-1 transition-transform shrink-0" />
-                    </a>
+                    </Link>
                   </div>
 
                   <Button

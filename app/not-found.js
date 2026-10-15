@@ -37,9 +37,9 @@ export default function NotFound() {
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button asChild className="shadow-md shadow-primary/25 min-w-[220px] h-12 text-[15px] font-semibold transition-all hover:scale-105">
-                  <a href="https://portal.think4ever.com/#/register">
+                  <Link href="https://portal.think4ever.com/#/register">
                     {t("notFoundPage.ctaPrimary") || "Analyze a project"}
-                  </a>
+                  </Link>
                 </Button>
                 <Button asChild variant="outline" className="min-w-[220px] h-12 bg-card hover:bg-muted border-border text-[15px] font-medium transition-all hover:border-primary/30">
                   <Link href="/">

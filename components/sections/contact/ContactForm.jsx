@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, ChevronDown } from "lucide-react";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { GlobalSuccessPopup } from "@/components/ui/GlobalSuccessPopup";
@@ -99,7 +100,7 @@ const InputError = ({ error }) => {
 
 // --- Main Form Component ---
 export default function ContactForm() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
     // Translation helpers
     // Handle both contact and contactPage namespaces (for Dutch)
     const tContact = (key) => {
@@ -534,12 +535,12 @@ export default function ContactForm() {
             </div>
             <span className="text-xs text-muted-foreground font-semibold select-none leading-relaxed">
               {t("contact.agreementPrefix")}{" "}
-              <a
-                href="/privacy-policy/"
+              <Link
+                href={language === 'en' ? "/privacy-policy/" : `/${language}/privacy-policy/`}
                 className="text-primary hover:text-[#093cad] underline decoration-transparent hover:decoration-[#093cad] transition-all"
               >
                 {t("contact.privacyPolicy")}
-              </a>{" "}
+              </Link>{" "}
               {t("contact.agreementSuffix")}
             </span>
           </label>
