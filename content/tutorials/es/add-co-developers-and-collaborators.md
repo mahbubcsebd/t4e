@@ -21,7 +21,7 @@ hideThumbnail: true
 <li>Solo ven los proyectos que poseen o a los que se les otorga acceso.</li>
 </ul>
 
-<p class="mt-4">Utilice los usuarios de la empresa para su propio equipo: desarrolladores, diseñadores, probadores y analistas de negocios. Para contratar talento externo, utilice el <a href="https://claude.ai/code/artifact/e89838c4-eafc-454b-addf-e43e5d8d96c3" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Mercado de Think4Ever</a>. Un freelancer que acepta un contrato en el Mercado se agrega automáticamente a esta misma lista de usuarios, con el rol y los proyectos establecidos en el contrato.</p>
+<p class="mt-4">Utilice los usuarios de la empresa para su propio equipo: desarrolladores, diseñadores, probadores y analistas de negocios. Para contratar talento externo, utilice el <a href="/es/marketplace/" class="text-blue-600 hover:underline">Mercado de Think4Ever</a>. Un freelancer que acepta un contrato en el Mercado se agrega automáticamente a esta misma lista de usuarios, con el rol y los proyectos establecidos en el contrato.</p>
 </section>
 
 <section>
