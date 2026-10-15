@@ -20,7 +20,7 @@ description: "Learn how Think4Ever analyzes your existing repository and creates
 
 <p class="mt-4">Use it to onboard developers, review a system before changing it, or bring an existing app into Think4Ever so new work stays true to the design.</p>
 
-<p class="mt-4">This guide follows the public <a href="https://github.com/OpenAPITools/openapi-petstore" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">OpenAPI Petstore</a> sample, a Spring Boot API for pets, orders and users. Analyzing existing code is one of two starting points. The other is designing from intent, covered in <a href="https://claude.ai/code/artifact/a5a82168-4db3-41f2-963c-dcb08e2b9351" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">How to: Build an Application from Intent</a>. Both lead to the same Living Blueprint.</p>
+<p class="mt-4">This guide follows the public <a href="https://github.com/OpenAPITools/openapi-petstore" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">OpenAPI Petstore</a> sample, a Spring Boot API for pets, orders and users. Analyzing existing code is one of two starting points. The other is designing from intent, covered in <a href="/tutorials/build-an-application-from-intent-in-think4ever/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">How to: Build an Application from Intent</a>. Both lead to the same Living Blueprint.</p>
 
 <p class="mt-4"><strong>Watch it first:</strong> see the whole flow in the two-minute <a href="https://www.youtube.com/watch?v=FY68DuwOf4Q" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Code &rarr; Design video</a>, also on the <a href="/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">think4ever.com</a> home page.</p>
 </section>
@@ -154,7 +154,7 @@ description: "Learn how Think4Ever analyzes your existing repository and creates
 <p>Plan changes against the blueprint before you touch the code. Compare a proposed implementation with the approved business rules, and use the flows, data objects and architecture to see what else a change affects.</p>
 
 <h3 class="text-xl font-bold text-gray-900 mb-3 mt-8">Build with the tools you already use</h3>
-<p>The <strong>Think MCP Server</strong> makes the reviewed blueprint available to your coding tools through the Model Context Protocol, including Claude Code, Codex, Cursor, VS Code, Gemini CLI, Devin and Windsurf. Whichever tool or model writes the code, it works from the same design. For the full setup with Claude Code, see <a href="/tutorials/how-to-design-in-think/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">How to: Design in Think, Code in Claude</a>. To have Think4Ever agents build or extend the app instead, follow Step 4 of <a href="https://claude.ai/code/artifact/a5a82168-4db3-41f2-963c-dcb08e2b9351" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">How to: Build an Application from Intent</a>.</p>
+<p>The <strong>Think MCP Server</strong> makes the reviewed blueprint available to your coding tools through the Model Context Protocol, including Claude Code, Codex, Cursor, VS Code, Gemini CLI, Devin and Windsurf. Whichever tool or model writes the code, it works from the same design. For the full setup with Claude Code, see <a href="/tutorials/how-to-design-in-think/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">How to: Design in Think, Code in Claude</a>. To have Think4Ever agents build or extend the app instead, follow Step 4 of <a href="/tutorials/build-an-application-from-intent-in-think4ever/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">How to: Build an Application from Intent</a>.</p>
 
 <figure class="my-10">
 <div class="w-full overflow-hidden rounded-xl border border-gray-100 shadow-sm">
@@ -241,7 +241,7 @@ description: "Learn how Think4Ever analyzes your existing repository and creates
 </span>
 </summary>
 <div class="p-4 text-gray-600 border-t border-gray-100">
-<p>Yes. Choose <strong>Design from intent</strong>. See <a href="https://claude.ai/code/artifact/a5a82168-4db3-41f2-963c-dcb08e2b9351" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">How to: Build an Application from Intent</a>.</p>
+<p>Yes. Choose <strong>Design from intent</strong>. See <a href="/tutorials/build-an-application-from-intent-in-think4ever/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">How to: Build an Application from Intent</a>.</p>
 </div>
 </details>
 </div>

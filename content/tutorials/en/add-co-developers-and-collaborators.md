@@ -21,7 +21,7 @@ hideThumbnail: true
 <li>They see only the projects they own or that you grant them.</li>
 </ul>
 
-<p class="mt-4">Use company users for your own team: developers, designers, testers and business analysts. To hire outside talent, use the <a href="https://claude.ai/code/artifact/e89838c4-eafc-454b-addf-e43e5d8d96c3" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Think4Ever Marketplace</a>. A freelancer who accepts a Marketplace contract is added to this same user list automatically, with the role and projects set in the contract.</p>
+<p class="mt-4">Use company users for your own team: developers, designers, testers and business analysts. To hire outside talent, use the <a href="/marketplace/" class="text-blue-600 hover:underline">Think4Ever Marketplace</a>. A freelancer who accepts a Marketplace contract is added to this same user list automatically, with the role and projects set in the contract.</p>
 </section>
 
 <section>
