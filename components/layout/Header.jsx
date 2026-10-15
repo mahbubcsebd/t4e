@@ -223,43 +223,43 @@ export default function Header() {
     {
       title: t('nav.tutorialsMenu.designInThink.title', 'Design in Think, Code in Claude'),
       desc: t('nav.tutorialsMenu.designInThink.desc', 'Connect Claude Code and build your project'),
-      href: '/tutorials/how-to-design-in-think',
+      href: '/tutorials/how-to-design-in-think/',
       icon: <Code className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.tutorialsMenu.designInThinkCodex.title', 'Design in Think, Code in Codex'),
       desc: t('nav.tutorialsMenu.designInThinkCodex.desc', 'Connect OpenAI Codex and build your project'),
-      href: '/tutorials/design-in-think-code-in-codex',
+      href: '/tutorials/design-in-think-code-in-codex/',
       icon: <Code className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.tutorialsMenu.vibeCodedProductionReady.title', 'Make Vibe-Coded Apps Production Ready'),
       desc: t('nav.tutorialsMenu.vibeCodedProductionReady.desc', 'Harden and audit AI-generated code for enterprise'),
-      href: '/tutorials/make-vibe-coded-applications-production-ready',
+      href: '/tutorials/make-vibe-coded-applications-production-ready/',
       icon: <Shield className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.tutorialsMenu.addCoDevelopers.title', 'Add Co-developers and Collaborators'),
       desc: t('nav.tutorialsMenu.addCoDevelopers.desc', 'Add team members as company users'),
-      href: '/tutorials/add-co-developers-and-collaborators',
+      href: '/tutorials/add-co-developers-and-collaborators/',
       icon: <Users className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.tutorialsMenu.turnExistingCode.title', 'Turn Existing Code into a Living Blueprint'),
       desc: t('nav.tutorialsMenu.turnExistingCode.desc', 'Analyze your repository and create design artifacts'),
-      href: '/tutorials/turn-existing-code-into-a-living-blueprint',
+      href: '/tutorials/turn-existing-code-into-a-living-blueprint/',
       icon: <BookOpen className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.tutorialsMenu.buildFromIntent.title', 'Build an Application from Intent'),
       desc: t('nav.tutorialsMenu.buildFromIntent.desc', 'Start from a business outcome to build an app'),
-      href: '/tutorials/build-an-application-from-intent-in-think4ever',
+      href: '/tutorials/build-an-application-from-intent-in-think4ever/',
       icon: <Puzzle className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.tutorialsMenu.designArtifactsGuide.title', 'Put the Blueprint to Work'),
       desc: t('nav.tutorialsMenu.designArtifactsGuide.desc', 'How to use Think4Ever design artifacts across the SDLC'),
-      href: '/tutorials/design-artifacts-guide',
+      href: '/tutorials/design-artifacts-guide/',
       icon: <BookOpen className="w-4 h-4 text-foreground" />,
     }
   ];
@@ -517,7 +517,7 @@ export default function Header() {
               }`}
             >
               {tutorialsLinks.map((tut, idx) => (
-                <Link
+                <a
                   key={idx}
                   href={localizeHref(tut.href)}
                   className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-muted group/item transition-colors"
@@ -533,7 +533,7 @@ export default function Header() {
                       {tut.desc}
                     </p>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -906,14 +906,14 @@ export default function Header() {
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       {tutorialsLinks.map((tut, idx) => (
-                        <Link
+                        <a
                           key={idx}
                           href={localizeHref(tut.href)}
                           onClick={() => setMobileMenuOpen(false)}
                           className="flex items-center justify-between text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                         >
                           <span>{tut.title}</span>
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   </motion.div>

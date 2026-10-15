@@ -135,12 +135,12 @@ export default function Footer() {
               >
                 {t('footer.faq')}
               </Link>
-              <Link
-                href={localizeHref('/tutorials/design-artifacts-guide')}
+              <a
+                href={localizeHref('/tutorials/design-artifacts-guide/')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 Put the Blueprint to Work
-              </Link>
+              </a>
               {/* <a
                 href="https://think4ever.com/docs/onboarding.html"
                 target="_blank"
