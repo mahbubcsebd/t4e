@@ -23,7 +23,6 @@ import {
   Users,
   X,
 } from 'lucide-react';
-import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -68,7 +67,6 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const desktopLangDropdownRef = useRef(null);
   const mobileLangDropdownRef = useRef(null);
-  const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

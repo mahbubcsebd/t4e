@@ -14,5 +14,9 @@ export function ThemeProvider({ children, ...props }) {
     return <>{children}</>;
   }
 
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
+  return (
+    <NextThemesProvider {...props} forcedTheme="light" enableSystem={false}>
+      {children}
+    </NextThemesProvider>
+  );
 }
