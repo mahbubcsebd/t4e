@@ -71,20 +71,20 @@ export default function TwoWaysIn() {
                   </div>
 
                   <div className="mt-2 mb-2 sm:mb-0">
-                    <Link
+                    <a
                       href={localizeHref("/blog/code-visualization-real-codebases/")}
                       className="inline-flex items-start gap-1.5 text-primary font-bold hover:text-primary/80 transition-colors text-[13px] group leading-tight"
                     >
                       <span className="flex-1">{t('howItWorksPage.path1BlogLink') || 'See the five views engineers need before changing a codebase'}</span>
                       <ArrowRight className="w-3.5 h-3.5 mt-0.5 group-hover:translate-x-1 transition-transform shrink-0" />
-                    </Link>
+                    </a>
                   </div>
 
                   <Button
                     asChild
                     className="w-full sm:w-auto shadow-md shadow-primary/25 group-hover:bg-primary/90 transition-all duration-300 bg-primary text-primary-foreground mt-2"
                   >
-                    <Link href="/code-to-design">
+                    <Link href={localizeHref("/code-to-design/")}>
                       {t("howItWorksPage.explorePath1") ||
                         "Explore Code to Design"}
                       <ArrowRight className="w-4 h-4 ml-2" />
@@ -150,7 +150,7 @@ export default function TwoWaysIn() {
                     asChild
                     className="w-full sm:w-auto shadow-md shadow-primary/25 group-hover:bg-primary/90 transition-all duration-300 bg-primary text-primary-foreground"
                   >
-                    <Link href="/design-to-code">
+                    <Link href={localizeHref("/design-to-code/")}>
                       {t("howItWorksPage.explorePath2") ||
                         "Explore Design to Code"}
                       <ArrowRight className="w-4 h-4 ml-2" />

@@ -50,8 +50,13 @@ export default function Header() {
   };
 
   const localizeHref = (href) => {
-    if (language === 'en' || !href.startsWith('/')) return href;
-    return `/${language}${href}`;
+    if (!href || !href.startsWith('/')) return href;
+    let normalized = href;
+    if (!normalized.includes('#') && !normalized.includes('?') && !normalized.includes('.') && !normalized.endsWith('/')) {
+      normalized += '/';
+    }
+    if (language === 'en') return normalized;
+    return `/${language}${normalized}`;
   };
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -825,20 +830,20 @@ export default function Header() {
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       {/* Resource Library link removed per request */}
-                      <Link
-                        href="/blog"
+                      <a
+                        href={localizeHref('/blog/')}
                         onClick={() => setMobileMenuOpen(false)}
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                       >
                         {t('nav.blog')}
-                      </Link>
-                      <Link
-                        href="/faq"
+                      </a>
+                      <a
+                        href={localizeHref('/faq/')}
                         onClick={() => setMobileMenuOpen(false)}
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                       >
                         FAQ
-                      </Link>
+                      </a>
                     </div>
                   </motion.div>
                 )}

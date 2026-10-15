@@ -53,13 +53,13 @@ export default function SeeSystem() {
               </ul>
 
               <div className="mt-8">
-                <Link 
+                <a 
                   href={localizeHref("/blog/code-visualization-real-codebases/")}
                   className="inline-flex items-start sm:items-center gap-2 text-primary font-bold hover:text-primary/80 transition-colors text-sm sm:text-base group"
                 >
                   <span className="leading-tight">{t('codeToDesignPage.seeSystemLinkText') || 'Learn what effective codebase visualization should show'}</span>
                   <ArrowRight className="w-4 h-4 shrink-0 mt-0.5 sm:mt-0 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
               </div>
             </div>
 

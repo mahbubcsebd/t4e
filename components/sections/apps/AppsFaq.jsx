@@ -13,8 +13,13 @@ export default function AppsFaq() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const localizeHref = (href) => {
-    if (language === "en" || !href.startsWith("/")) return href;
-    return `/${language}${href}`;
+    if (!href || !href.startsWith("/")) return href;
+    let normalized = href;
+    if (!normalized.includes('#') && !normalized.includes('?') && !normalized.includes('.') && !normalized.endsWith('/')) {
+      normalized += '/';
+    }
+    if (language === "en") return normalized;
+    return `/${language}${normalized}`;
   };
 
   const rawItems = t("appsPage.faq.items");
