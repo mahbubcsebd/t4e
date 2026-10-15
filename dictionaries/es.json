@@ -75,6 +75,10 @@
       "buildFromIntent": {
         "title": "Construir una aplicación a partir de la intención",
         "desc": "Comience desde un resultado comercial para crear una aplicación"
+      },
+      "designArtifactsGuide": {
+        "title": "Poner el Blueprint a trabajar",
+        "desc": "Cómo usar los artefactos de diseño de Think4Ever en el SDLC"
       }
     },
     "productVideos": "Videos de productos",

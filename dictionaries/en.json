@@ -77,6 +77,10 @@
       "buildFromIntent": {
         "title": "Build an Application from Intent",
         "desc": "Start from a business outcome to build an app"
+      },
+      "designArtifactsGuide": {
+        "title": "Put the Blueprint to Work",
+        "desc": "How to use Think4Ever design artifacts across the SDLC"
       }
     }
   },

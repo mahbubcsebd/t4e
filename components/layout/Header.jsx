@@ -257,6 +257,12 @@ export default function Header() {
       desc: t('nav.tutorialsMenu.buildFromIntent.desc', 'Start from a business outcome to build an app'),
       href: '/tutorials/build-an-application-from-intent-in-think4ever',
       icon: <Puzzle className="w-4 h-4 text-foreground" />,
+    },
+    {
+      title: t('nav.tutorialsMenu.designArtifactsGuide.title', 'Put the Blueprint to Work'),
+      desc: t('nav.tutorialsMenu.designArtifactsGuide.desc', 'How to use Think4Ever design artifacts across the SDLC'),
+      href: '/tutorials/design-artifacts-guide',
+      icon: <BookOpen className="w-4 h-4 text-foreground" />,
     }
   ];
 
@@ -500,7 +506,7 @@ export default function Header() {
               <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
             </button>
             <div
-              className={`absolute top-full left-1/2 -translate-x-1/2 w-[300px] bg-card rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-1 gap-2 ${
+              className={`absolute top-full left-1/2 -translate-x-1/2 w-[590px] bg-card rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
                 tutorialsOpen
                   ? 'opacity-100 visible translate-y-0'
                   : 'opacity-0 invisible -translate-y-2'

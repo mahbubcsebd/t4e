@@ -131,7 +131,7 @@ export default function ResourceGrid() {
                 </h2>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* Guide 1 */}
                 <div className="shadow-sm relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-xl p-8 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 flex flex-col justify-between group overflow-hidden translate-y-0 hover:-translate-y-1">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -181,6 +181,40 @@ export default function ResourceGrid() {
                       <Layers className="w-4 h-4" />
                       <span>{t("resourcesPage.guide2Link")}</span>
                     </a>
+                  </div>
+                </div>
+
+                {/* Guide 3: Putting the Blueprint to Work */}
+                <div className="shadow-sm relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 flex flex-col justify-between group translate-y-0 hover:-translate-y-1">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+
+                  <div className="relative w-full h-44 overflow-hidden bg-muted">
+                    <img
+                      src="/images/tutorials/design-artifacts-guide/concept-ready.jpg"
+                      alt="Putting the Blueprint to Work"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+
+                  <div className="relative z-10 flex flex-col h-full p-6 sm:p-8">
+                    <div>
+                      <span className="text-[10px] font-extrabold text-foreground bg-muted px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-4 border border-border">
+                        Tutorial Guide
+                      </span>
+                      <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                        Putting the Blueprint to Work
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-8 leading-relaxed">
+                        Which design artifacts matter in each phase of delivery, who should open which one, and what it saves the team.
+                      </p>
+                    </div>
+                    <Link
+                      href={localizeHref("/tutorials/design-artifacts-guide/")}
+                      className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-primary/80 transition-colors w-max"
+                    >
+                      <BookOpen className="w-4 h-4" />
+                      <span>Read Guide</span>
+                    </Link>
                   </div>
                 </div>
               </div>

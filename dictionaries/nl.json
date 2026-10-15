@@ -71,6 +71,10 @@
       "buildFromIntent": {
         "title": "Bouw een applicatie vanuit intentie",
         "desc": "Begin met een bedrijfsresultaat om een app te bouwen"
+      },
+      "designArtifactsGuide": {
+        "title": "Zet de blauwdruk aan het werk",
+        "desc": "Hoe Think4Ever-ontwerpartifacten te gebruiken in de SDLC"
       }
     },
     "codeToDesignDesc": "Code reverse-engineeren naar visuals",
