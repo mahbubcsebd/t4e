@@ -3,6 +3,7 @@ import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { ThemeProvider } from "@/components/theme-provider";
 import Script from "next/script";
+import ChunkErrorHandler from "@/components/chunk-error-handler";
 
 
 const dmSans = DM_Sans({
@@ -58,6 +59,7 @@ export default function RootLayout({ children }) {
           forcedTheme="light"
           disableTransitionOnChange
         >
+          <ChunkErrorHandler />
           <LanguageProvider>
             {children}
           </LanguageProvider>
