@@ -7,10 +7,27 @@ import Container from "@/components/layout/Container";
 import SectionCard from "@/components/layout/SectionCard";
 import { AlertCircle, RotateCcw, Home } from "lucide-react";
 import Link from "next/link";
-
 export default function ErrorBoundary({ error, reset }) {
   useEffect(() => {
     console.error("Application error:", error);
+
+    const msg = (error?.message ?? error?.name ?? String(error)).toLowerCase();
+    const isRecoverable =
+      msg.includes("enqueuemodel") ||
+      msg.includes("t.reason") ||
+      msg.includes("chunk.reason") ||
+      msg.includes("loading chunk") ||
+      msg.includes("failed to fetch") ||
+      msg.includes("unexpected token");
+
+    if (isRecoverable) {
+      const SESSION_KEY = "__t4e_err_reload__";
+      const last = Number(sessionStorage.getItem(SESSION_KEY) || 0);
+      if (Date.now() - last > 8000) {
+        sessionStorage.setItem(SESSION_KEY, String(Date.now()));
+        window.location.reload();
+      }
+    }
   }, [error]);
 
   return (

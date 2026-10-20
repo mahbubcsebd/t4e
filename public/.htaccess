@@ -2,34 +2,46 @@
   RewriteEngine On
   RewriteBase /
 
-  # Disable proxy / passenger buffering for real-time delivery
+  # 1. Disable proxy / passenger response buffering
   <IfModule mod_headers.c>
     Header set X-Accel-Buffering "no"
   </IfModule>
 
-  # Ensure .txt files (Next.js App Router RSC flight payloads) are served with correct MIME type
-  <FilesMatch "\.txt$">
-    ForceType text/plain
-    <IfModule mod_headers.c>
-      Header set Cache-Control "no-cache, must-revalidate"
-      Header set Access-Control-Allow-Origin "*"
-    </IfModule>
-  </FilesMatch>
+  # 2. Redirect directory paths missing trailing slash to include trailing slash
+  # Example: /pricing -> /pricing/ (matches trailingSlash: true)
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^(.*[^/])$ /$1/ [R=301,L]
 
-  # Prevent Directory Listings
-  Options -Indexes
+  # 3. Handle Next.js RSC Flight payload requests:
+  # Next.js may fetch /path.txt; rewrite it to /path/index.txt if it exists
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.txt -f
+  RewriteRule ^(.+?)\.txt$ /$1/index.txt [L]
 
-  # Handle trailing slash directory index
+  # 4. If a .txt request cannot be found, return a clean 404 instead of 404.html
+  # This prevents Next.js Flight client from attempting to parse HTML error pages as JSON/Flight streams
+  RewriteCond %{REQUEST_URI} \.txt$ [NC]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^ - [R=404,L]
+
+  # 5. Handle directory index
   DirectoryIndex index.html
 
-  # Custom 404 page
-  ErrorDocument 404 /404.html
-
-  # If requested file or directory does not exist, serve 404.html
+  # 6. Serve 404.html only for missing pages (never for assets or .txt)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !\.(txt|js|css|png|jpg|jpeg|gif|ico|svg|woff2?|map)$ [NC]
   RewriteRule ^ 404.html [L]
 </IfModule>
+
+# Ensure .txt files (Next.js Flight data) are served as clean text/plain without caching
+<FilesMatch "\.txt$">
+  ForceType text/plain
+  <IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>
 
 # Prevent aggressive caching of HTML & JSON routes
 <FilesMatch "\.(html|json)$">
@@ -47,7 +59,7 @@
   </IfModule>
 </FilesMatch>
 
-# Static assets caching
+# Static media assets caching
 <FilesMatch "\.(ico|pdf|jpg|jpeg|png|gif|webp|svg|woff|woff2|ttf|eot)$">
   <IfModule mod_headers.c>
     Header set Cache-Control "public, max-age=2592000"
