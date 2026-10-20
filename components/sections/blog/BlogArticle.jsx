@@ -99,13 +99,29 @@ export const BlogArticle = ({ post, currentLang }) => {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-          className="prose max-w-none prose-headings:text-foreground prose-headings:font-bold prose-p:text-[16px] prose-p:leading-loose prose-p:text-muted-foreground prose-strong:text-foreground prose-strong:font-bold prose-th:text-foreground prose-a:text-primary prose-a:font-semibold hover:prose-a:text-primary/80 prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:text-foreground prose-blockquote:font-medium prose-blockquote:not-italic"
+          className="prose max-w-none prose-headings:text-foreground prose-headings:font-bold prose-p:text-[16px] prose-p:leading-loose prose-p:text-muted-foreground prose-strong:text-foreground prose-strong:font-bold prose-th:text-foreground prose-a:text-blue-600 prose-a:underline hover:prose-a:text-blue-800 prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:text-foreground prose-blockquote:font-medium prose-blockquote:not-italic"
         >
           <ReactMarkdown 
             rehypePlugins={[rehypeRaw]}
             components={{
-              a: ({ node, ...props }) => {
+              a: ({ node, className, ...props }) => {
                 const href = props.href || "";
+                let baseClass = className 
+                  ? className.replace(/text-\[#1b30a7\]/g, "text-blue-600").replace(/hover:text-\[#142380\]/g, "hover:text-blue-800")
+                  : "text-blue-600 hover:underline";
+                if (!baseClass.includes("text-blue-600")) {
+                  baseClass = `${baseClass} text-blue-600`;
+                }
+                if (!baseClass.includes("hover:underline") && !baseClass.includes("underline")) {
+                  baseClass = `${baseClass} hover:underline`;
+                }
+
+                if (href.startsWith("#")) {
+                  return (
+                    <a href={href} className={baseClass} {...props} />
+                  );
+                }
+
                 if (href.startsWith("/")) {
                   const localizeHref = (path) => {
                     let normalized = path;
@@ -115,10 +131,10 @@ export const BlogArticle = ({ post, currentLang }) => {
                     return currentLang === "en" ? normalized : `/${currentLang}${normalized}`;
                   };
                   return (
-                    <Link href={localizeHref(href)} {...props} />
+                    <Link href={localizeHref(href)} className={baseClass} {...props} />
                   );
                 }
-                return <Link href={href} target="_blank" rel="noopener noreferrer" {...props} />;
+                return <a href={href} target="_blank" rel="noopener noreferrer" className={baseClass} {...props} />;
               }
             }}
           >
