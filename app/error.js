@@ -11,6 +11,8 @@ export default function ErrorBoundary({ error, reset }) {
   useEffect(() => {
     console.error("Application error:", error);
 
+    // If an RSC/chunk loading error occurred during client-side navigation,
+    // do a clean hard reload once so the pre-rendered HTML can serve directly.
     const msg = (error?.message ?? error?.name ?? String(error)).toLowerCase();
     const isRecoverable =
       msg.includes("enqueuemodel") ||
@@ -18,13 +20,17 @@ export default function ErrorBoundary({ error, reset }) {
       msg.includes("chunk.reason") ||
       msg.includes("loading chunk") ||
       msg.includes("failed to fetch") ||
-      msg.includes("unexpected token");
+      msg.includes("unexpected token") ||
+      msg.includes("digest");
 
-    if (isRecoverable) {
-      const SESSION_KEY = "__t4e_err_reload__";
-      const last = Number(sessionStorage.getItem(SESSION_KEY) || 0);
-      if (Date.now() - last > 8000) {
-        sessionStorage.setItem(SESSION_KEY, String(Date.now()));
+    if (typeof window !== "undefined" && isRecoverable) {
+      const reloadKey = "t4e_last_rsc_error_reload";
+      const lastReload = sessionStorage.getItem(reloadKey);
+      const now = Date.now();
+
+      // Avoid infinite reload loop: only auto-reload once within 10 seconds
+      if (!lastReload || now - Number(lastReload) > 10000) {
+        sessionStorage.setItem(reloadKey, String(now));
         window.location.reload();
       }
     }

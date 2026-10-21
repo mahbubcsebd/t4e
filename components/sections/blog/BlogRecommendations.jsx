@@ -20,7 +20,7 @@ export const BlogRecommendations = ({ posts, currentPostId }) => {
         {recommendedPosts.map((recommended) => {
           const href = recommended.lang === 'en' ? `/blog/${recommended.slug}/` : `/${recommended.lang}/blog/${recommended.slug}/`;
           return (
-            <Link
+            <a
               key={recommended.id}
               href={href}
               className="group shadow-sm block bg-card/80 backdrop-blur-xl rounded-xl p-8 border border-border/60 hover:border-primary/40 hover:shadow-sm hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 overflow-hidden relative"
@@ -42,7 +42,7 @@ export const BlogRecommendations = ({ posts, currentPostId }) => {
                   </span>
                 </div>
               </div>
-            </Link>
+            </a>
           );
         })}
       </div>
