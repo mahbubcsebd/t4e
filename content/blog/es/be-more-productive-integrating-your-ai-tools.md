@@ -4,7 +4,6 @@ description: "Nos vendieron la idea de que el desarrollador más productivo es e
 date: "21 de octubre de 2026"
 readTime: "4 min de lectura"
 category: "Productividad"
-author: "Sunil Kishen"
 hideThumbnail: true
 ---
 

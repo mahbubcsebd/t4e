@@ -60,14 +60,6 @@ export const BlogArticle = ({ post, currentLang }) => {
 
           {/* Meta */}
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-8 gap-y-4 text-[13px] text-muted-foreground font-medium">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-muted border border-border flex items-center justify-center text-foreground font-bold shadow-sm">
-                {post.author ? post.author.charAt(0) : "T"}
-              </div>
-              <span className="text-foreground font-bold">
-                {post.author || "Think4Ever Team"}
-              </span>
-            </div>
             <div className="flex items-center gap-2">
               <span>{post.date}</span>
               <span className="w-1.5 h-1.5 rounded-full bg-border" />
