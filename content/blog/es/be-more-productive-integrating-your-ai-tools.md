@@ -5,7 +5,7 @@ date: "21 de octubre de 2026"
 readTime: "4 min de lectura"
 category: "Productividad"
 author: "Sunil Kishen"
-image: "/images/blog/be-more-productive-integrating-your-ai-tools/thumbnail.jpg"
+hideThumbnail: true
 ---
 
 <div class="space-y-8 text-gray-600">
@@ -40,13 +40,6 @@ Consideremos, por ejemplo, un servicio que procesa pagos. Un asistente puede gen
 <p class="mt-4">
 Estos requisitos no son detalles secundarios. Son parte del comportamiento correcto del sistema. Por eso, la productividad real debe evaluarse de extremo a extremo, desde que comienza el trabajo hasta que la funcionalidad está integrada, validada y lista para utilizarse.
 </p>
-
-<figure class="my-10">
-<div class="w-full overflow-hidden rounded-xl border border-gray-100 shadow-sm">
-<img src="/images/blog/be-more-productive-integrating-your-ai-tools/thumbnail.jpg" alt="Integración de herramientas de IA y arquitectura de software con Think4Ever" class="w-full h-auto" />
-</div>
-<figcaption class="text-center text-sm text-gray-400 mt-3 italic">Estructuración de proyectos y arquitectura en Blueprint para equipos de desarrollo.</figcaption>
-</figure>
 </section>
 
 <div class="h-px bg-gray-100 my-8"></div>

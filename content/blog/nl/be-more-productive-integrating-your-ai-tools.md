@@ -5,7 +5,7 @@ date: "21 oktober 2026"
 readTime: "4 min leestijd"
 category: "Productiviteit"
 author: "Sunil Kishen"
-image: "/images/blog/be-more-productive-integrating-your-ai-tools/thumbnail.jpg"
+hideThumbnail: true
 ---
 
 <div class="space-y-8 text-gray-600">
@@ -34,19 +34,12 @@ AI transformeert de manier waarop we programmeren. De uitdaging is ervoor te zor
 <h2 class="text-2xl font-bold text-gray-900 mb-4">We hebben geavanceerdere AI-tools nodig met oog voor elk detail.</h2>
 
 <p>
-Laten we bijvoorbeeld een service nemen die betalingen verwerkt. Een assistent kan snel een endpoint, een servicelaag en unit tests genereren. De implementatie moet echter nog steeds vraagstukken oplossen zoals de idempotentie van verzoeken, de atomiciteit van transacties, externe foutafhandeling en bescherming tegen dubbele transacties.
+Laten we bijvoorbeeld een service nemen die betalingen verwerkt. Een assistent kan snel een endpoint, een servicelaag en unit tests genereren. De implementatie moet echter nog steeds vraagstukken oplossen zoals de idempotentie van verzoeken, de atomicidad van transacties, externe foutafhandeling en bescherming tegen dubbele transacties.
 </p>
 
 <p class="mt-4">
 Deze vereisten zijn geen secundaire details. Ze maken integraal deel uit van het correcte gedrag van het systeem. Daarom moet echte productiviteit end-to-end worden geëvalueerd, vanaf het moment dat het werk begint totdat de functionaliteit is geïntegreerd, gevalideerd en klaar voor gebruik.
 </p>
-
-<figure class="my-10">
-<div class="w-full overflow-hidden rounded-xl border border-gray-100 shadow-sm">
-<img src="/images/blog/be-more-productive-integrating-your-ai-tools/thumbnail.jpg" alt="Integratie van AI-tools en softwarearchitectuur met Think4Ever" class="w-full h-auto" />
-</div>
-<figcaption class="text-center text-sm text-gray-400 mt-3 italic">Projectstructurering en systeemcoherentie met de living blueprint van Think4Ever.</figcaption>
-</figure>
 </section>
 
 <div class="h-px bg-gray-100 my-8"></div>
