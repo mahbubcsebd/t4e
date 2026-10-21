@@ -4,7 +4,6 @@ description: "We were sold the idea that the most productive developer generates
 date: "October 21, 2026"
 readTime: "4 min read"
 category: "Productivity"
-author: "Sunil Kishen"
 hideThumbnail: true
 ---
 

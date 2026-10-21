@@ -4,7 +4,6 @@ description: "Ons werd verteld dat de meest productieve ontwikkelaar de meeste c
 date: "21 oktober 2026"
 readTime: "4 min leestijd"
 category: "Productiviteit"
-author: "Sunil Kishen"
 hideThumbnail: true
 ---
 
