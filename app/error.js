@@ -7,21 +7,23 @@ import Container from "@/components/layout/Container";
 import SectionCard from "@/components/layout/SectionCard";
 import { AlertCircle, RotateCcw, Home } from "lucide-react";
 import Link from "next/link";
-
 export default function ErrorBoundary({ error, reset }) {
   useEffect(() => {
     console.error("Application error:", error);
 
     // If an RSC/chunk loading error occurred during client-side navigation,
     // do a clean hard reload once so the pre-rendered HTML can serve directly.
-    const errorMessage = error?.message || "";
-    const isNavigationOrRscError =
-      errorMessage.includes("enqueueModel") ||
-      errorMessage.includes("Failed to fetch") ||
-      errorMessage.includes("Loading chunk") ||
-      errorMessage.includes("digest");
+    const msg = (error?.message ?? error?.name ?? String(error)).toLowerCase();
+    const isRecoverable =
+      msg.includes("enqueuemodel") ||
+      msg.includes("t.reason") ||
+      msg.includes("chunk.reason") ||
+      msg.includes("loading chunk") ||
+      msg.includes("failed to fetch") ||
+      msg.includes("unexpected token") ||
+      msg.includes("digest");
 
-    if (typeof window !== "undefined" && isNavigationOrRscError) {
+    if (typeof window !== "undefined" && isRecoverable) {
       const reloadKey = "t4e_last_rsc_error_reload";
       const lastReload = sessionStorage.getItem(reloadKey);
       const now = Date.now();
