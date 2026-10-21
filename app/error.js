@@ -11,6 +11,27 @@ import Link from "next/link";
 export default function ErrorBoundary({ error, reset }) {
   useEffect(() => {
     console.error("Application error:", error);
+
+    // If an RSC/chunk loading error occurred during client-side navigation,
+    // do a clean hard reload once so the pre-rendered HTML can serve directly.
+    const errorMessage = error?.message || "";
+    const isNavigationOrRscError =
+      errorMessage.includes("enqueueModel") ||
+      errorMessage.includes("Failed to fetch") ||
+      errorMessage.includes("Loading chunk") ||
+      errorMessage.includes("digest");
+
+    if (typeof window !== "undefined" && isNavigationOrRscError) {
+      const reloadKey = "t4e_last_rsc_error_reload";
+      const lastReload = sessionStorage.getItem(reloadKey);
+      const now = Date.now();
+
+      // Avoid infinite reload loop: only auto-reload once within 10 seconds
+      if (!lastReload || now - Number(lastReload) > 10000) {
+        sessionStorage.setItem(reloadKey, String(now));
+        window.location.reload();
+      }
+    }
   }, [error]);
 
   return (
