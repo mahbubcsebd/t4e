@@ -29,7 +29,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
 export default function Header() {
-  const { t, language, setLanguage, availableLanguages } = useLanguage();
+  const { t, language, setLanguage, availableLanguages, getLocalizedPathname } = useLanguage();
   const router = useRouter();
   const pathname = usePathname();
 
@@ -587,33 +587,40 @@ export default function Header() {
             >
               {availableLanguages
                 .filter((l) => !l.hidden)
-                .map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => handleLanguageChange(lang.code)}
-                    className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
-                      language === lang.code
-                        ? 'text-foreground font-bold bg-muted'
-                        : 'text-muted-foreground font-medium hover:text-foreground hover:bg-muted'
-                    }`}
-                    aria-label={`Change language to ${lang.name}`}
-                  >
-                    <div className="flex items-center gap-2">
-                      <Image
-                        src={`https://flagcdn.com/w20/${lang.code === 'en' ? 'us' : lang.code}.png`}
-                        alt={lang.name}
-                        width={18}
-                        height={13}
-                        unoptimized
-                        className="w-[18px] h-auto shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
-                      />
-                      <span translate="no">{lang.name}</span>
-                    </div>
-                    {language === lang.code && (
-                      <span className="text-primary text-xs">✓</span>
-                    )}
-                  </button>
-                ))}
+                .map((lang) => {
+                  const targetHref = getLocalizedPathname ? getLocalizedPathname(lang.code, pathname, language) : '#';
+                  return (
+                    <a
+                      key={lang.code}
+                      href={targetHref}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleLanguageChange(lang.code);
+                      }}
+                      className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
+                        language === lang.code
+                          ? 'text-foreground font-bold bg-muted'
+                          : 'text-muted-foreground font-medium hover:text-foreground hover:bg-muted'
+                      }`}
+                      aria-label={`Change language to ${lang.name}`}
+                    >
+                      <div className="flex items-center gap-2">
+                        <Image
+                          src={`https://flagcdn.com/w20/${lang.code === 'en' ? 'us' : lang.code}.png`}
+                          alt={lang.name}
+                          width={18}
+                          height={13}
+                          unoptimized
+                          className="w-[18px] h-auto shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
+                        />
+                        <span translate="no">{lang.name}</span>
+                      </div>
+                      {language === lang.code && (
+                        <span className="text-primary text-xs">✓</span>
+                      )}
+                    </a>
+                  );
+                })}
             </div>
           </div>
 
@@ -658,35 +665,42 @@ export default function Header() {
               <div className="absolute right-0 top-full mt-1 w-36 bg-card rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-border py-1.5 z-50 animate-in fade-in slide-in-from-top-2">
                 {availableLanguages
                   .filter((l) => !l.hidden)
-                  .map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => handleLanguageChange(lang.code)}
-                      className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
-                        language === lang.code
-                          ? 'text-foreground font-bold bg-muted'
-                          : 'text-muted-foreground font-medium hover:bg-muted'
-                      }`}
-                      aria-label={`Change language to ${lang.name}`}
-                    >
-                      <div className="flex items-center gap-2">
-                        <Image
-                          src={`https://flagcdn.com/w20/${lang.code === 'en' ? 'us' : lang.code}.png`}
-                          alt={lang.name}
-                          width={18}
-                          height={13}
-                          unoptimized
-                          className="w-[18px] h-auto rounded-sm shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
-                        />
-                        <span translate="no">{lang.name}</span>
-                      </div>
-                      {language === lang.code && (
-                        <span className="text-primary font-bold text-xs">
-                          ✓
-                        </span>
-                      )}
-                    </button>
-                  ))}
+                  .map((lang) => {
+                    const targetHref = getLocalizedPathname ? getLocalizedPathname(lang.code, pathname, language) : '#';
+                    return (
+                      <a
+                        key={lang.code}
+                        href={targetHref}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleLanguageChange(lang.code);
+                        }}
+                        className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
+                          language === lang.code
+                            ? 'text-foreground font-bold bg-muted'
+                            : 'text-muted-foreground font-medium hover:bg-muted'
+                        }`}
+                        aria-label={`Change language to ${lang.name}`}
+                      >
+                        <div className="flex items-center gap-2">
+                          <Image
+                            src={`https://flagcdn.com/w20/${lang.code === 'en' ? 'us' : lang.code}.png`}
+                            alt={lang.name}
+                            width={18}
+                            height={13}
+                            unoptimized
+                            className="w-[18px] h-auto rounded-sm shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
+                          />
+                          <span translate="no">{lang.name}</span>
+                        </div>
+                        {language === lang.code && (
+                          <span className="text-primary font-bold text-xs">
+                            ✓
+                          </span>
+                        )}
+                      </a>
+                    );
+                  })}
               </div>
             )}
           </div>

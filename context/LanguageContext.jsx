@@ -17,6 +17,32 @@ export const availableLanguages = [
   { code: "nl", name: "Nederlands", flag: "🇳🇱", hidden: true },
 ];
 
+export function getLocalizedPathname(targetLang, currentPath, currentLang) {
+  let p = currentPath || "/";
+
+  // Strip current language prefix if it's not 'en'
+  if (currentLang && currentLang !== "en") {
+    p = p.replace(new RegExp(`^/${currentLang}(/|$)`), "/");
+  }
+
+  // Ensure leading slash
+  if (!p.startsWith("/")) {
+    p = "/" + p;
+  }
+
+  // Add target language prefix if not 'en'
+  if (targetLang && targetLang !== "en") {
+    p = `/${targetLang}${p === "/" ? "/" : p}`;
+  }
+
+  // Ensure trailing slash for static export compatibility (trailingSlash: true)
+  if (!p.endsWith("/") && !p.includes(".")) {
+    p += "/";
+  }
+
+  return p;
+}
+
 export function LanguageProvider({ children }) {
   const pathname = usePathname();
   const router = useRouter();
@@ -35,24 +61,25 @@ export function LanguageProvider({ children }) {
 
   const setLanguage = (lang) => {
     if (!dictionaries[lang]) return;
-    localStorage.setItem("think4ever_lang", lang);
+    try {
+      localStorage.setItem("think4ever_lang", lang);
+    } catch (e) {}
     
     if (lang === language) return;
     
-    let newPathname = pathname || "/";
-    
-    // If currently on a translated route, strip the prefix
-    if (language !== "en") {
-      // replace only the first occurrence which is the language prefix
-      newPathname = newPathname.replace(`/${language}`, "") || "/";
+    const currentPath = typeof window !== "undefined" ? window.location.pathname : (pathname || "/");
+    const targetPath = getLocalizedPathname(lang, currentPath, language);
+    const search = typeof window !== "undefined" ? window.location.search : "";
+    const hash = typeof window !== "undefined" ? window.location.hash : "";
+    const finalUrl = `${targetPath}${search}${hash}`;
+
+    // Native browser navigation ensures fresh static HTML load and avoids
+    // Next.js client-side Flight (.txt) routing issues on cPanel/WAF
+    if (typeof window !== "undefined") {
+      window.location.href = finalUrl;
+    } else {
+      router.push(finalUrl);
     }
-    
-    // If going to a translated route, add the prefix
-    if (lang !== "en") {
-      newPathname = `/${lang}${newPathname === "/" ? "" : newPathname}`;
-    }
-    
-    router.push(newPathname);
   };
 
   // Helper to fetch nested key, e.g. t('nav.product')
@@ -80,7 +107,7 @@ export function LanguageProvider({ children }) {
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t, availableLanguages }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, availableLanguages, getLocalizedPathname }}>
       {children}
     </LanguageContext.Provider>
   );
