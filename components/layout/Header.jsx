@@ -421,13 +421,6 @@ export default function Header() {
           >
             {t('nav.apps', 'Apps')}
           </Link>
-          <Link
-            href="https://t4e-customers.vercel.app/"
-            className="hover:text-white transition-colors whitespace-nowrap"
-          >
-            Customers
-          </Link>
-
           {/* Resources Dropdown with chevron */}
           <div
             className="relative group"
@@ -564,6 +557,12 @@ export default function Header() {
             className="hover:text-white transition-colors whitespace-nowrap"
           >
             {t('nav.pricing')}
+          </Link>
+          <Link
+            href="https://t4e-customers.vercel.app/"
+            className="hover:text-white transition-colors whitespace-nowrap"
+          >
+            Customers
           </Link>
           {/* <Link
             href={localizeHref('/marketplace')}
@@ -836,14 +835,7 @@ export default function Header() {
               >
                 {t('nav.apps', 'Apps')}
               </Link>
-              <Link
-                href="https://t4e-customers.vercel.app/"
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
-              >
-                Customers
-              </Link>
-            </div>
+              </div>
 
             <div className="flex flex-col gap-0">
               <button
@@ -977,6 +969,13 @@ export default function Header() {
                 className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
               >
                 {t('nav.pricing')}
+              </Link>
+              <Link
+                href="https://t4e-customers.vercel.app/"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
+              >
+                Customers
               </Link>
             </div>
 
