@@ -13,8 +13,7 @@ hideThumbnail: true
 
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">Context is geen intentie: De Living Blueprint als System of Record voor met AI gebouwde software</h2>
-<p class="text-lg font-medium text-gray-700 mb-2">Hoe een levende, goedgekeurde blauwdruk AI-coderingsagenten aanvult, en waarom het een andere categorie is dan code search en automatisch gegenereerde repository-wiki's</p>
-<p class="text-sm italic text-gray-400 mb-6">Concept ter beoordeling, oktober 2026.</p>
+<p class="text-lg font-medium text-gray-700 mb-6">Hoe een levende, goedgekeurde blauwdruk AI-coderingsagenten aanvult, en waarom het een andere categorie is dan code search en automatisch gegenereerde repository-wiki's</p>
 
 <p>AI maakte code goedkoop. Het maakte code niet correct.</p>
 
