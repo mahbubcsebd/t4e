@@ -13,8 +13,7 @@ hideThumbnail: true
 
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">El contexto no es intención: El Living Blueprint como sistema de registro para software creado con IA</h2>
-<p class="text-lg font-medium text-gray-700 mb-2">Cómo un blueprint vivo y aprobado complementa a los agentes de código de IA, y por qué es una categoría diferente de la búsqueda de código y las wikis de repositorios generadas automáticamente</p>
-<p class="text-sm italic text-gray-400 mb-6">Borrador para revisión, octubre de 2026.</p>
+<p class="text-lg font-medium text-gray-700 mb-6">Cómo un blueprint vivo y aprobado complementa a los agentes de código de IA, y por qué es una categoría diferente de la búsqueda de código y las wikis de repositorios generadas automáticamente</p>
 
 <p>La IA abarató el código. No hizo que el código fuera correcto.</p>
 

@@ -13,8 +13,7 @@ hideThumbnail: true
 
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">Context Is Not Intent: The Living Blueprint as a System of Record for AI-Built Software</h2>
-<p class="text-lg font-medium text-gray-700 mb-2">How a living, approved blueprint complements AI coding agents, and why it is a different category from code search and auto-generated repository wikis</p>
-<p class="text-sm italic text-gray-400 mb-6">Draft for review, October 2026.</p>
+<p class="text-lg font-medium text-gray-700 mb-6">How a living, approved blueprint complements AI coding agents, and why it is a different category from code search and auto-generated repository wikis</p>
 
 <p>AI made code cheap. It did not make code right.</p>
 

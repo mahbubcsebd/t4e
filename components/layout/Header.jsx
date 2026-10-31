@@ -29,7 +29,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
 export default function Header() {
-  const { t, language, setLanguage, availableLanguages } = useLanguage();
+  const { t, language, setLanguage, availableLanguages, getLocalizedPathname } = useLanguage();
   const router = useRouter();
   const pathname = usePathname();
 
@@ -110,6 +110,12 @@ export default function Header() {
       desc: t('nav.libraryDesc', 'Explore our collection of resources.'),
       href: localizeHref('/resources/'),
       icon: <Puzzle className="w-4 h-4 text-foreground" />,
+    },
+    {
+      title: 'Customer stories',
+      desc: 'How EY, YogiFi and Insignian Homes build with Think4Ever.',
+      href: 'https://t4e-customers.vercel.app/',
+      icon: <Users className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.blog', 'Blog'),
@@ -278,8 +284,8 @@ export default function Header() {
       }`}
     >
       <div
-        className={`max-w-[1600px] mx-auto px-5 flex items-center justify-between gap-4 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          scrolled ? 'h-16' : 'h-[76px]'
+        className={`max-w-[1600px] mx-auto px-3 sm:px-5 lg:px-4 xl:px-6 2xl:px-8 flex items-center justify-between gap-2 lg:gap-3 xl:gap-4 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          scrolled ? 'h-16' : 'h-[70px] lg:h-[72px] xl:h-[76px]'
         }`}
       >
         {/* Brand Logo */}
@@ -293,12 +299,16 @@ export default function Header() {
             alt="Think4Ever"
             width={260}
             height={80}
-            className={`w-auto object-contain transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'h-14' : 'h-16'}`}
+            className={`w-auto object-contain transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              scrolled
+                ? 'h-9 lg:h-10 xl:h-12 2xl:h-14'
+                : 'h-10 lg:h-11 xl:h-13 2xl:h-16'
+            }`}
           />
         </Link>
 
         {/* Center Desktop Menu Items */}
-        <nav className="header-nav hidden lg:flex items-center gap-6 xl:gap-7 text-[15px] font-semibold text-white/80">
+        <nav className="header-nav hidden lg:flex items-center lg:gap-2.5 xl:gap-4 2xl:gap-6 text-[13px] xl:text-[14px] 2xl:text-[15px] font-semibold text-white/80">
           {/* Product Dropdown */}
           <div
             className="relative group"
@@ -311,7 +321,7 @@ export default function Header() {
               aria-label="Toggle Product menu"
             >
               <span>{t('nav.product', 'Product')}</span>
-              <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-0 w-64 bg-card rounded-2xl shadow-2xl border border-border py-2 transition-all duration-200 z-50 ${
@@ -411,6 +421,12 @@ export default function Header() {
           >
             {t('nav.apps', 'Apps')}
           </Link>
+          <Link
+            href="https://t4e-customers.vercel.app/"
+            className="hover:text-white transition-colors whitespace-nowrap"
+          >
+            Customers
+          </Link>
 
           {/* Resources Dropdown with chevron */}
           <div
@@ -424,7 +440,7 @@ export default function Header() {
               aria-label="Toggle Resources menu"
             >
               <span>{t('nav.resources')}</span>
-              <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
             </button>
             <div
               className={`absolute top-full left-1/2 -translate-x-1/2 w-[260px] bg-card rounded-2xl shadow-2xl border border-border p-2 transition-all duration-200 z-50 grid grid-cols-1 gap-1 ${
@@ -467,10 +483,10 @@ export default function Header() {
               aria-label="Toggle Docs menu"
             >
               <span>{t('nav.docs', 'Docs')}</span>
-              <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
             </button>
             <div
-              className={`absolute top-full left-1/2 -translate-x-1/2 w-[590px] bg-card rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
+              className={`absolute top-full -right-24 xl:left-1/2 xl:-translate-x-1/2 xl:right-auto w-[520px] xl:w-[580px] 2xl:w-[590px] bg-card rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
                 docsOpen
                   ? 'opacity-100 visible translate-y-0'
                   : 'opacity-0 invisible -translate-y-2'
@@ -512,10 +528,10 @@ export default function Header() {
               aria-label="Toggle Tutorials menu"
             >
               <span>{t('nav.tutorialsMenu.title', 'Tutorials')}</span>
-              <ChevronDown className="w-4 h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
+              <ChevronDown className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-white/80 group-hover:text-white group-hover:rotate-180 transition-transform" />
             </button>
             <div
-              className={`absolute top-full left-1/2 -translate-x-1/2 w-[590px] bg-card rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
+              className={`absolute top-full right-0 xl:right-[-60px] 2xl:left-1/2 2xl:-translate-x-1/2 2xl:right-auto w-[520px] xl:w-[580px] 2xl:w-[590px] bg-card rounded-2xl shadow-2xl border border-border p-3 transition-all duration-200 z-50 grid grid-cols-2 gap-2 ${
                 tutorialsOpen
                   ? 'opacity-100 visible translate-y-0'
                   : 'opacity-0 invisible -translate-y-2'
@@ -558,12 +574,12 @@ export default function Header() {
         </nav>
 
         {/* Right Action Items */}
-        <div className="hidden lg:flex items-center gap-3 shrink-0">
+        <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
           {/* Language Selector Dropdown */}
           <div className="relative" ref={desktopLangDropdownRef}>
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              className="flex items-center gap-1.5 text-[15px] font-medium text-white/90 hover:text-white transition-colors py-2"
+              className="flex items-center gap-1 text-[13px] xl:text-[14px] 2xl:text-[15px] font-medium text-white/90 hover:text-white transition-colors py-2 px-1"
               aria-label="Select language"
             >
               <Globe className="w-4 h-4 text-white/90" />
@@ -587,33 +603,40 @@ export default function Header() {
             >
               {availableLanguages
                 .filter((l) => !l.hidden)
-                .map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => handleLanguageChange(lang.code)}
-                    className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
-                      language === lang.code
-                        ? 'text-foreground font-bold bg-muted'
-                        : 'text-muted-foreground font-medium hover:text-foreground hover:bg-muted'
-                    }`}
-                    aria-label={`Change language to ${lang.name}`}
-                  >
-                    <div className="flex items-center gap-2">
-                      <Image
-                        src={`https://flagcdn.com/w20/${lang.code === 'en' ? 'us' : lang.code}.png`}
-                        alt={lang.name}
-                        width={18}
-                        height={13}
-                        unoptimized
-                        className="w-[18px] h-auto shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
-                      />
-                      <span translate="no">{lang.name}</span>
-                    </div>
-                    {language === lang.code && (
-                      <span className="text-primary text-xs">✓</span>
-                    )}
-                  </button>
-                ))}
+                .map((lang) => {
+                  const targetHref = getLocalizedPathname ? getLocalizedPathname(lang.code, pathname, language) : '#';
+                  return (
+                    <a
+                      key={lang.code}
+                      href={targetHref}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleLanguageChange(lang.code);
+                      }}
+                      className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
+                        language === lang.code
+                          ? 'text-foreground font-bold bg-muted'
+                          : 'text-muted-foreground font-medium hover:text-foreground hover:bg-muted'
+                      }`}
+                      aria-label={`Change language to ${lang.name}`}
+                    >
+                      <div className="flex items-center gap-2">
+                        <Image
+                          src={`https://flagcdn.com/w20/${lang.code === 'en' ? 'us' : lang.code}.png`}
+                          alt={lang.name}
+                          width={18}
+                          height={13}
+                          unoptimized
+                          className="w-[18px] h-auto shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
+                        />
+                        <span translate="no">{lang.name}</span>
+                      </div>
+                      {language === lang.code && (
+                        <span className="text-primary text-xs">✓</span>
+                      )}
+                    </a>
+                  );
+                })}
             </div>
           </div>
 
@@ -621,7 +644,7 @@ export default function Header() {
           <Button
             asChild
             variant="ghost"
-            className="text-white hover:text-white hover:bg-white/10 font-medium"
+            className="text-white hover:text-white hover:bg-white/10 font-medium px-2.5 xl:px-4 py-2 text-xs xl:text-sm h-8 xl:h-9"
           >
             <Link href="https://portal.think4ever.com/#/login">
               {t('nav.signIn')}
@@ -631,7 +654,7 @@ export default function Header() {
           {/* Start free button */}
           <Button
             asChild
-            className="bg-white text-[#093cad] hover:bg-gray-100 shadow-none font-bold"
+            className="bg-white text-[#093cad] hover:bg-gray-100 shadow-none font-bold px-3 xl:px-5 py-2 text-xs xl:text-sm h-8 xl:h-9"
           >
             <Link href="https://portal.think4ever.com/#/register">
               {t('nav.startFree')}
@@ -658,35 +681,42 @@ export default function Header() {
               <div className="absolute right-0 top-full mt-1 w-36 bg-card rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-border py-1.5 z-50 animate-in fade-in slide-in-from-top-2">
                 {availableLanguages
                   .filter((l) => !l.hidden)
-                  .map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => handleLanguageChange(lang.code)}
-                      className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
-                        language === lang.code
-                          ? 'text-foreground font-bold bg-muted'
-                          : 'text-muted-foreground font-medium hover:bg-muted'
-                      }`}
-                      aria-label={`Change language to ${lang.name}`}
-                    >
-                      <div className="flex items-center gap-2">
-                        <Image
-                          src={`https://flagcdn.com/w20/${lang.code === 'en' ? 'us' : lang.code}.png`}
-                          alt={lang.name}
-                          width={18}
-                          height={13}
-                          unoptimized
-                          className="w-[18px] h-auto rounded-sm shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
-                        />
-                        <span translate="no">{lang.name}</span>
-                      </div>
-                      {language === lang.code && (
-                        <span className="text-primary font-bold text-xs">
-                          ✓
-                        </span>
-                      )}
-                    </button>
-                  ))}
+                  .map((lang) => {
+                    const targetHref = getLocalizedPathname ? getLocalizedPathname(lang.code, pathname, language) : '#';
+                    return (
+                      <a
+                        key={lang.code}
+                        href={targetHref}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleLanguageChange(lang.code);
+                        }}
+                        className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
+                          language === lang.code
+                            ? 'text-foreground font-bold bg-muted'
+                            : 'text-muted-foreground font-medium hover:bg-muted'
+                        }`}
+                        aria-label={`Change language to ${lang.name}`}
+                      >
+                        <div className="flex items-center gap-2">
+                          <Image
+                            src={`https://flagcdn.com/w20/${lang.code === 'en' ? 'us' : lang.code}.png`}
+                            alt={lang.name}
+                            width={18}
+                            height={13}
+                            unoptimized
+                            className="w-[18px] h-auto rounded-sm shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
+                          />
+                          <span translate="no">{lang.name}</span>
+                        </div>
+                        {language === lang.code && (
+                          <span className="text-primary font-bold text-xs">
+                            ✓
+                          </span>
+                        )}
+                      </a>
+                    );
+                  })}
               </div>
             )}
           </div>
@@ -806,6 +836,13 @@ export default function Header() {
               >
                 {t('nav.apps', 'Apps')}
               </Link>
+              <Link
+                href="https://t4e-customers.vercel.app/"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
+              >
+                Customers
+              </Link>
             </div>
 
             <div className="flex flex-col gap-0">
@@ -830,6 +867,13 @@ export default function Header() {
                   >
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       {/* Resource Library link removed per request */}
+                      <Link
+                        href="https://t4e-customers.vercel.app/"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        Customer stories
+                      </Link>
                       <Link
                         href={localizeHref('/blog/')}
                         onClick={() => setMobileMenuOpen(false)}

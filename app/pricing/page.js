@@ -4,6 +4,7 @@ import CtaSection from '@/components/sections/home/CtaSection';
 import CostControl from '@/components/sections/pricing/CostControl';
 import PricingComparison from '@/components/sections/pricing/PricingComparison';
 import PricingFaq from '@/components/sections/pricing/PricingFaq';
+import PricingCustomerQuote from '@/components/sections/pricing/PricingCustomerQuote';
 import PricingHero from '@/components/sections/pricing/PricingHero';
 import PricingHowItWorks from '@/components/sections/pricing/PricingHowItWorks';
 import PricingProjectLimits from '@/components/sections/pricing/PricingProjectLimits';
@@ -23,6 +24,7 @@ export default function PricingPage() {
         <PricingComparison />
         <PricingProjectLimits />
         <CostControl />
+        <PricingCustomerQuote />
         <PricingFaq />
         <CtaSection />
       </main>

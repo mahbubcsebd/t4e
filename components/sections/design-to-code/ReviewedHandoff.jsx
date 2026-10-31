@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
@@ -80,6 +82,17 @@ export default function ReviewedHandoff() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Customer Stories Link */}
+            <div className="mt-10 pt-6 border-t border-border/60 text-center">
+              <Link
+                href="/customers/"
+                className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline group"
+              >
+                <span>See how YogiFi and Insignian Homes built from an approved design</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
         </Container>

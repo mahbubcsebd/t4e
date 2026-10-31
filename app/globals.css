@@ -179,3 +179,12 @@ svg.lucide {
 .prose a:not([class*="btn"]):hover {
   color: #1d4ed8 !important;
 }
+
+/* Yellow document highlight styling for draft/unapproved content across light & dark mode */
+mark {
+  background-color: #FFF2A8 !important;
+  color: #3D3300 !important;
+  border: 1px solid #E6D885 !important;
+  padding: 1px 4px !important;
+  border-radius: 4px !important;
+}

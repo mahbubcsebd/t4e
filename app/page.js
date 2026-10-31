@@ -2,6 +2,7 @@ import { getLocalizedMetadata } from '@/lib/metadata';
 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import PortalStartSection from "@/components/sections/home/PortalStartSection";
 import HeroSection from "@/components/sections/home/HeroSection";
 import ProblemSection from "@/components/sections/home/ProblemSection";
 import ProductModelSection from "@/components/sections/home/ProductModelSection";
@@ -11,6 +12,7 @@ import PersistentContextSection from "@/components/sections/home/PersistentConte
 import HowItWorksSection from "@/components/sections/home/HowItWorksSection";
 import ReviewedHandoffSection from "@/components/sections/home/ReviewedHandoffSection";
 import ProductDemoSection from "@/components/sections/home/ProductDemoSection";
+import CustomersQuoteBand from "@/components/sections/customers/CustomersQuoteBand";
 import CtaSection from "@/components/sections/home/CtaSection";
 
 export default function Home() {
@@ -18,6 +20,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <main className="flex-grow">
+        <PortalStartSection />
         <HeroSection />
         <ProblemSection />
         <ProductModelSection />
@@ -27,6 +30,7 @@ export default function Home() {
         <HowItWorksSection />
         <ReviewedHandoffSection />
         <ProductDemoSection />
+        <CustomersQuoteBand />
         <CtaSection />
       </main>
       <Footer />
