@@ -1,30 +1,28 @@
-"use client";
+'use client';
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import SectionCard from "@/components/layout/SectionCard";
-import Container from "@/components/layout/Container";
-import { useLanguage } from "@/context/LanguageContext";
+import Container from '@/components/layout/Container';
+import SectionCard from '@/components/layout/SectionCard';
+import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/context/LanguageContext';
+import { customersTranslations } from '@/lib/i18n/customersTranslations';
 import {
   ArrowLeft,
-  Quote,
   Building2,
-  Factory,
-  ShieldAlert,
   ExternalLink,
-  AlertTriangle,
-} from "lucide-react";
-import { customersTranslations } from "@/lib/i18n/customersTranslations";
+  Factory,
+  Quote,
+  ShieldAlert,
+} from 'lucide-react';
 
 export default function YogiFiStoryContent() {
   const { language } = useLanguage();
-  const dict = customersTranslations[language === "es" ? "es" : "en"];
+  const dict = customersTranslations[language === 'es' ? 'es' : 'en'];
   const t = dict.yogifi;
   const common = dict.common;
 
   const localizeHref = (href) => {
-    if (!href.startsWith("/")) return href;
-    if (language === "en") return href;
+    if (!href.startsWith('/')) return href;
+    if (language === 'en') return href;
     return `/${language}${href}`;
   };
 
@@ -35,29 +33,10 @@ export default function YogiFiStoryContent() {
         <SectionCard>
           <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs">
             <div className="max-w-4xl">
-              {/* Draft Review Warning Banner */}
-              {t.draftWarning && (
-                <div className="mb-6 p-4 rounded-xl bg-[#FFF2A8] border border-[#E6D885] text-[#3D3300] text-xs sm:text-sm font-medium leading-relaxed flex items-start gap-3 shadow-xs">
-                  <AlertTriangle className="w-5 h-5 text-[#8A7100] shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="block mb-0.5 font-bold uppercase tracking-wide">
-                      {language === "es"
-                        ? "BORRADOR PARA REVISIÓN Y APROBACIÓN — NO PARA PUBLICACIÓN"
-                        : "DRAFT FOR REVIEW AND APPROVAL — NOT FOR PUBLICATION"}
-                    </strong>
-                    <span>
-                      {language === "es"
-                        ? "Los elementos resaltados en amarillo son marcadores de posición para confirmar o suministrar. El fundador debe aprobar las citas, su nombre y cargo, y todos los detalles del producto antes de publicar nada."
-                        : "Items highlighted in yellow are placeholders to confirm or supply. The founder must approve the quotes, their name and title, and all product details before anything is published."}
-                    </span>
-                  </div>
-                </div>
-              )}
-
               {/* Breadcrumb Eyebrow */}
               <div className="flex items-center gap-2 mb-4 text-xs font-mono tracking-wider uppercase text-muted-foreground">
                 <a
-                  href={localizeHref("/customers/")}
+                  href={localizeHref('/customers/')}
                   className="hover:text-primary underline underline-offset-4 flex items-center gap-1 font-bold text-primary"
                 >
                   <ArrowLeft className="w-3.5 h-3.5" />
@@ -65,7 +44,7 @@ export default function YogiFiStoryContent() {
                 </a>
                 <span>/</span>
                 <span className="font-semibold text-foreground/80">
-                  {t.breadcrumb || "Startups"}
+                  {t.breadcrumb || 'Startups'}
                 </span>
               </div>
 
@@ -94,7 +73,7 @@ export default function YogiFiStoryContent() {
                 <div className="bg-muted/40 border border-border rounded-xl p-4">
                   <span className="block text-2xl sm:text-3xl font-extrabold text-primary mb-1">
                     <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-bold border border-[#E6D885]">
-                      {t.metric1Val || "X weeks"}
+                      {t.metric1Val || 'X weeks'}
                     </mark>
                   </span>
                   <span className="text-xs text-foreground/70 leading-snug">
@@ -104,7 +83,7 @@ export default function YogiFiStoryContent() {
                 <div className="bg-muted/40 border border-border rounded-xl p-4">
                   <span className="block text-2xl sm:text-3xl font-extrabold text-primary mb-1">
                     <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-bold border border-[#E6D885]">
-                      {t.metric2Val || "6"}
+                      {t.metric2Val || '6'}
                     </mark>
                   </span>
                   <span className="text-xs text-foreground/70 leading-snug">
@@ -114,7 +93,7 @@ export default function YogiFiStoryContent() {
                 <div className="bg-muted/40 border border-border rounded-xl p-4">
                   <span className="block text-2xl sm:text-3xl font-extrabold text-primary mb-1">
                     <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-bold border border-[#E6D885]">
-                      {t.metric3Val || "X"}
+                      {t.metric3Val || 'X'}
                     </mark>
                   </span>
                   <span className="text-xs text-foreground/70 leading-snug">
@@ -164,7 +143,7 @@ export default function YogiFiStoryContent() {
                           <span>
                             <strong className="text-foreground font-bold">
                               {pt.b}
-                            </strong>{" "}
+                            </strong>{' '}
                             {pt.text}
                           </span>
                         </li>
@@ -240,13 +219,14 @@ export default function YogiFiStoryContent() {
                       <thead className="bg-muted/70 border-b border-border text-foreground font-bold text-xs uppercase tracking-wider">
                         <tr>
                           <th className="py-3 px-4">
-                            {t.orgTableThRole || (language === "es" ? "Rol" : "Role")}
+                            {t.orgTableThRole ||
+                              (language === 'es' ? 'Rol' : 'Role')}
                           </th>
                           <th className="py-3 px-4">
                             {t.orgTableThWhat ||
-                              (language === "es"
-                                ? "Lo que obtienen de Think4Ever"
-                                : "What they get from Think4Ever")}
+                              (language === 'es'
+                                ? 'Lo que obtienen de Think4Ever'
+                                : 'What they get from Think4Ever')}
                           </th>
                         </tr>
                       </thead>
@@ -273,7 +253,7 @@ export default function YogiFiStoryContent() {
                     {t.validationTitle}
                   </h2>
                   <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
-                    {t.validationP1}{" "}
+                    {t.validationP1}{' '}
                     <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono border border-[#E6D885]">
                       {t.validationTbd}
                     </mark>
@@ -358,7 +338,7 @@ export default function YogiFiStoryContent() {
                           <span>
                             <strong className="text-foreground font-bold">
                               {pt.b}
-                            </strong>{" "}
+                            </strong>{' '}
                             {pt.text}
                           </span>
                         </li>
@@ -374,7 +354,7 @@ export default function YogiFiStoryContent() {
                   <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
                     <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded border border-[#E6D885] font-mono">
                       {t.whatsNextTbd}
-                    </mark>{" "}
+                    </mark>{' '}
                     {t.whatsNextText}
                   </p>
                 </section>
@@ -384,13 +364,15 @@ export default function YogiFiStoryContent() {
                   <div className="bg-muted/40 border border-border rounded-xl p-5">
                     <h3 className="text-sm font-bold text-foreground mb-1.5">
                       {t.aboutYogiFiTitle ||
-                        (language === "es" ? "Acerca de YogiFi" : "About YogiFi")}
+                        (language === 'es'
+                          ? 'Acerca de YogiFi'
+                          : 'About YogiFi')}
                     </h3>
                     <p className="text-xs text-foreground/70 leading-relaxed">
                       {t.aboutYogiFiDesc ||
-                        (language === "es"
-                          ? "YogiFi fabrica una esterilla de yoga inteligente con IA. Los sensores de presión integrados detectan la postura y se sincronizan con la app YogiFi para sesiones guiadas y corrección postural en tiempo real. Más información en us.yogifismart.com."
-                          : "YogiFi makes an AI-powered smart yoga mat. Built-in pressure sensors detect posture and sync with the YogiFi app for AI-guided sessions and real-time posture correction. Learn more at us.yogifismart.com.")}
+                        (language === 'es'
+                          ? 'YogiFi fabrica una esterilla de yoga inteligente con IA. Los sensores de presión integrados detectan la postura y se sincronizan con la app YogiFi para sesiones guiadas y corrección postural en tiempo real. Más información en us.yogifismart.com.'
+                          : 'YogiFi makes an AI-powered smart yoga mat. Built-in pressure sensors detect posture and sync with the YogiFi app for AI-guided sessions and real-time posture correction. Learn more at us.yogifismart.com.')}
                     </p>
                   </div>
                   <div className="bg-muted/40 border border-border rounded-xl p-5">
@@ -413,10 +395,11 @@ export default function YogiFiStoryContent() {
                   <dl className="space-y-3.5 text-xs sm:text-sm">
                     <div>
                       <dt className="text-muted-foreground font-semibold">
-                        {t.factsCompany || (language === "es" ? "Empresa" : "Company")}
+                        {t.factsCompany ||
+                          (language === 'es' ? 'Empresa' : 'Company')}
                       </dt>
                       <dd className="text-foreground font-bold mt-0.5">
-                        YogiFi (Wellnesys Inc.),{" "}
+                        YogiFi (Wellnesys Inc.),{' '}
                         <a
                           href="https://us.yogifismart.com"
                           target="_blank"
@@ -430,11 +413,12 @@ export default function YogiFiStoryContent() {
                     </div>
                     <div className="border-t border-border/60 pt-3">
                       <dt className="text-muted-foreground font-semibold">
-                        {t.factsStage || (language === "es" ? "Etapa" : "Stage")}
+                        {t.factsStage ||
+                          (language === 'es' ? 'Etapa' : 'Stage')}
                       </dt>
                       <dd className="text-foreground mt-0.5">
                         <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded text-xs border border-[#E6D885] font-semibold font-mono">
-                          {t.factsStageVal || "Pre-Series A"}
+                          {t.factsStageVal || 'Pre-Series A'}
                         </mark>
                       </dd>
                     </div>
@@ -457,7 +441,7 @@ export default function YogiFiStoryContent() {
                     <div className="border-t border-border/60 pt-3">
                       <dt className="text-muted-foreground font-semibold">
                         {t.factsPlatform ||
-                          (language === "es" ? "Plataforma" : "Platform")}
+                          (language === 'es' ? 'Plataforma' : 'Platform')}
                       </dt>
                       <dd className="text-foreground mt-0.5 font-medium">
                         {t.factsPlatformVal}
@@ -466,7 +450,9 @@ export default function YogiFiStoryContent() {
                     <div className="border-t border-border/60 pt-3">
                       <dt className="text-muted-foreground font-semibold">
                         {t.factsHeadlineResults ||
-                          (language === "es" ? "Resultados clave" : "Headline results")}
+                          (language === 'es'
+                            ? 'Resultados clave'
+                            : 'Headline results')}
                       </dt>
                       <dd className="text-foreground mt-1 flex flex-wrap gap-1.5 items-center">
                         <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded text-xs border border-[#E6D885] font-semibold font-mono">
@@ -516,7 +502,7 @@ export default function YogiFiStoryContent() {
                 size="lg"
                 className="rounded-full"
               >
-                <a href={localizeHref("/contact-us/")}>{common.talkToUs}</a>
+                <a href={localizeHref('/contact-us/')}>{common.talkToUs}</a>
               </Button>
             </div>
           </Container>
@@ -533,7 +519,7 @@ export default function YogiFiStoryContent() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {/* Story 1: EY Caribbean */}
               <a
-                href={localizeHref("/customers/ey/")}
+                href={localizeHref('/customers/ey/')}
                 className="group bg-muted/20 border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
@@ -563,7 +549,7 @@ export default function YogiFiStoryContent() {
 
               {/* Story 2: Insignian Homes */}
               <a
-                href={localizeHref("/customers/insignian-homes/")}
+                href={localizeHref('/customers/insignian-homes/')}
                 className="group bg-muted/20 border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
@@ -582,8 +568,8 @@ export default function YogiFiStoryContent() {
                     Insignian Homes
                   </h3>
                   <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-4">
-                    A global exporter replaces per-seat SaaS with applications it
-                    designs and owns, starting with CRM.
+                    A global exporter replaces per-seat SaaS with applications
+                    it designs and owns, starting with CRM.
                   </p>
                 </div>
                 <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
@@ -593,7 +579,7 @@ export default function YogiFiStoryContent() {
 
               {/* Story 3: Jake Williams (Security) */}
               <a
-                href={localizeHref("/customers/security-incident-response/")}
+                href={localizeHref('/customers/security-incident-response/')}
                 className="group bg-muted/20 border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
@@ -610,8 +596,9 @@ export default function YogiFiStoryContent() {
                     Security Incident Response
                   </h3>
                   <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-4">
-                    A security analyst generates the architecture, user flows and
-                    data flow diagrams of undocumented apps straight from code.
+                    A security analyst generates the architecture, user flows
+                    and data flow diagrams of undocumented apps straight from
+                    code.
                   </p>
                 </div>
                 <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
