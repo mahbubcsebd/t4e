@@ -113,8 +113,8 @@ export default function Header() {
     },
     {
       title: 'Customer stories',
-      desc: 'How EY, YogiFi and Insignian Homes build with Think4Ever.',
-      href: 'https://t4e-customers.vercel.app/',
+      desc: 'How EY, YogiFi, Insignian Homes and a security analyst design before they build with Think4Ever.',
+      href: localizeHref('/customers'),
       icon: <Users className="w-4 h-4 text-foreground" />,
     },
     {
@@ -559,10 +559,10 @@ export default function Header() {
             {t('nav.pricing')}
           </Link>
           <Link
-            href="https://t4e-customers.vercel.app/"
+            href={localizeHref('/customers')}
             className="hover:text-white transition-colors whitespace-nowrap"
           >
-            Customers
+            {t('nav.customers', 'Customers')}
           </Link>
           {/* <Link
             href={localizeHref('/marketplace')}
@@ -860,7 +860,7 @@ export default function Header() {
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       {/* Resource Library link removed per request */}
                       <Link
-                        href="https://t4e-customers.vercel.app/"
+                        href={localizeHref('/customers')}
                         onClick={() => setMobileMenuOpen(false)}
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                       >
@@ -971,7 +971,7 @@ export default function Header() {
                 {t('nav.pricing')}
               </Link>
               <Link
-                href="https://t4e-customers.vercel.app/"
+                href={localizeHref('/customers')}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
               >

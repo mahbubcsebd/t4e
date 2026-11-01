@@ -129,7 +129,7 @@ export default function Footer() {
                   : t('nav.library')}
               </Link>
               <Link
-                href="https://t4e-customers.vercel.app/"
+                href={localizeHref('/customers')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 Customer stories

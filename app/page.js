@@ -1,19 +1,18 @@
 import { getLocalizedMetadata } from '@/lib/metadata';
 
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import PortalStartSection from "@/components/sections/home/PortalStartSection";
-import HeroSection from "@/components/sections/home/HeroSection";
-import ProblemSection from "@/components/sections/home/ProblemSection";
-import ProductModelSection from "@/components/sections/home/ProductModelSection";
-import ValueSection from "@/components/sections/home/ValueSection";
-import CoherenceSection from "@/components/sections/home/CoherenceSection";
-import PersistentContextSection from "@/components/sections/home/PersistentContextSection";
-import HowItWorksSection from "@/components/sections/home/HowItWorksSection";
-import ReviewedHandoffSection from "@/components/sections/home/ReviewedHandoffSection";
-import ProductDemoSection from "@/components/sections/home/ProductDemoSection";
-import CustomersQuoteBand from "@/components/sections/customers/CustomersQuoteBand";
-import CtaSection from "@/components/sections/home/CtaSection";
+import Footer from '@/components/layout/Footer';
+import Header from '@/components/layout/Header';
+import CoherenceSection from '@/components/sections/home/CoherenceSection';
+import CtaSection from '@/components/sections/home/CtaSection';
+import HeroSection from '@/components/sections/home/HeroSection';
+import HowItWorksSection from '@/components/sections/home/HowItWorksSection';
+import PersistentContextSection from '@/components/sections/home/PersistentContextSection';
+import PortalStartSection from '@/components/sections/home/PortalStartSection';
+import ProblemSection from '@/components/sections/home/ProblemSection';
+import ProductDemoSection from '@/components/sections/home/ProductDemoSection';
+import ProductModelSection from '@/components/sections/home/ProductModelSection';
+import ReviewedHandoffSection from '@/components/sections/home/ReviewedHandoffSection';
+import ValueSection from '@/components/sections/home/ValueSection';
 
 export default function Home() {
   return (
@@ -30,15 +29,13 @@ export default function Home() {
         <HowItWorksSection />
         <ReviewedHandoffSection />
         <ProductDemoSection />
-        <CustomersQuoteBand />
+        {/* <CustomersQuoteBand /> */}
         <CtaSection />
       </main>
       <Footer />
     </div>
   );
 }
-
-
 
 export const fallbackMetadata = { alternates: { canonical: '/' } };
 

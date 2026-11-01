@@ -1,85 +1,95 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import Eyebrow from "@/components/ui/Eyebrow";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
+import { useLanguage } from "@/context/LanguageContext";
 import {
   ArrowRight,
-  Building2,
-  Rocket,
-  Factory,
   Quote,
 } from "lucide-react";
+import { customersTranslations } from "@/lib/i18n/customersTranslations";
 
 export default function CustomersIndexContent() {
+  const { language } = useLanguage();
+  const dict = customersTranslations[language === "es" ? "es" : "en"];
+  const t = dict.index;
+  const common = dict.common;
+
+  const localizeHref = (href) => {
+    if (!href.startsWith("/")) return href;
+    if (language === "en") return href;
+    return `/${language}${href}`;
+  };
+
   return (
-    <div className="py-6 md:py-10 space-y-8 sm:space-y-12">
-      {/* ── 1. Top Card: Masthead Hero (White Background) ── */}
+    <div className="py-6 md:py-10 space-y-8 sm:space-y-12 bg-[#F4F6FA]">
+      {/* ── 1. Masthead Hero ── */}
       <section>
         <SectionCard>
-          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs">
+          <Container className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs">
             <div className="max-w-4xl mx-auto text-center">
-              <Eyebrow className="mb-4">
-                Customers
-              </Eyebrow>
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase bg-[#F4F6FA] text-foreground border border-[#DCE3EF] mb-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
+                {t.eyebrow}
+              </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-foreground tracking-tight leading-[1.15] mb-5">
-                Teams that <span className="text-primary">design</span> before they build
+                {t.titlePre}
+                <span className="text-primary italic">{t.titleHighlight}</span>
+                {t.titlePost}
               </h1>
               <p className="text-base sm:text-lg text-foreground/75 leading-relaxed max-w-2xl mx-auto">
-                See how a global consulting firm, a founder and an enterprise
-                exporter use Think4Ever to turn approved intent into applications
-                they can trust and own.
+                {t.lede}
               </p>
             </div>
           </Container>
         </SectionCard>
       </section>
 
-      {/* ── 2. Featured Story (EY) ── */}
+      {/* ── 2. Featured Story (EY Caribbean) ── */}
       <section>
         <SectionCard>
-          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
+          <Container className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 shadow-xs">
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
               {/* Left Column: Lead */}
               <div>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-primary/10 text-primary border border-primary/20 mb-4">
-                  Featured · Consulting
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase bg-primary/10 text-primary border border-primary/20 mb-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
+                  {t.featuredTag}
                 </span>
+                <div className="h-12 mb-3 flex items-center">
+                  <img
+                    src="/images/customers/ey.svg"
+                    alt="EY Caribbean logo"
+                    className="max-h-10 max-w-[140px] object-contain"
+                  />
+                </div>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight leading-snug mb-4">
-                  How EY builds coherent applications faster, for itself and for
-                  its clients
+                  {t.featuredTitle}
                 </h2>
                 <p className="text-sm sm:text-base text-foreground/75 leading-relaxed mb-6">
-                  EY Caribbean&rsquo;s Technology Consulting practice uses
-                  Think4Ever to build its own internal applications and to deliver
-                  client software projects, with business intent, policies and
-                  acceptance criteria carried from the first conversation to
-                  released code.
+                  {t.featuredDesc}
                 </p>
-                <Button asChild size="lg">
-                  <Link href="/customers/ey/">
-                    Read the EY story
+                <Button asChild size="lg" className="rounded-full">
+                  <a href={localizeHref("/customers/ey/")}>
+                    {t.featuredBtn}
                     <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
+                  </a>
                 </Button>
               </div>
 
               {/* Right Column: Featured Quote */}
-              <div className="bg-muted/50 border border-border/80 rounded-2xl p-6 sm:p-8 relative">
+              <div className="bg-[#F8FAFD] border border-[#DCE3EF] rounded-2xl p-6 sm:p-8 relative">
                 <Quote className="w-8 h-8 text-primary/30 mb-3" />
                 <blockquote className="text-base sm:text-lg font-medium text-foreground leading-relaxed italic mb-4">
-                  &ldquo;Creating software is becoming easier. Governing it is
-                  becoming harder. Think4Ever makes the entire journey
-                  transparent, traceable, and auditable.&rdquo;
+                  &ldquo;{t.featuredQuote}&rdquo;
                 </blockquote>
                 <figcaption className="text-xs sm:text-sm text-foreground/70">
-                  <strong className="text-foreground block font-bold">
-                    Vernon A. Huerta
+                  <strong className="text-foreground block font-bold text-sm">
+                    {t.featuredAuthor}
                   </strong>
-                  Partner, EY Caribbean Technology Consulting Lead
+                  {t.featuredRole}
                 </figcaption>
               </div>
             </div>
@@ -87,225 +97,156 @@ export default function CustomersIndexContent() {
         </SectionCard>
       </section>
 
-      {/* ── 3. Find a Story Like Yours (Grid) ── */}
+      {/* ── 3. Find a story like yours (Grid: 4 Cards) ── */}
       <section>
         <SectionCard>
-          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
+          <Container className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 shadow-xs">
             <div className="mb-8 text-center sm:text-left">
-              <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-1">
-                Explore stories
-              </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
-                Find a story like yours
+                {t.fitTitle}
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Card 1: Consulting */}
-              <Link
-                href="/customers/ey/"
-                className="group flex flex-col justify-between bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="inline-flex items-center gap-1 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20">
-                      <Building2 className="w-3 h-3" />
-                      Consulting
-                    </span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {t.cards.map((card, idx) => (
+                <a
+                  key={idx}
+                  href={localizeHref(card.href)}
+                  className="group flex flex-col justify-between bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all"
+                >
+                  <div>
+                    <div className="mb-3">
+                      <span className="inline-flex items-center gap-1.5 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
+                        {card.tag}
+                      </span>
+                    </div>
+                    <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                      {card.situation}
+                    </p>
+                    <div className="h-10 mb-3 flex items-center">
+                      {card.logo ? (
+                        card.who === "YogiFi" ? (
+                          <div className="bg-[#0B1B3A] px-2.5 py-1.5 rounded-md flex items-center">
+                            <img
+                              src={card.logo}
+                              alt={`${card.who} logo`}
+                              className="max-h-5 max-w-[90px] object-contain"
+                            />
+                          </div>
+                        ) : (
+                          <img
+                            src={card.logo}
+                            alt={`${card.who} logo`}
+                            className="max-h-8 max-w-[120px] object-contain"
+                          />
+                        )
+                      ) : (
+                        <span className="text-base font-bold text-foreground">
+                          {card.who}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-sm text-foreground/70 leading-relaxed mb-6">
+                      {card.desc}
+                    </p>
                   </div>
-                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">
-                    You deliver software for clients and need it to match what they
-                    approved.
-                  </p>
-                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    EY Caribbean
-                  </h3>
-                  <p className="text-sm text-foreground/70 leading-relaxed mb-6">
-                    EY&rsquo;s consulting team builds internal apps and client
-                    software from one governed Living Blueprint.
-                  </p>
-                </div>
-                <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                  Read the story →
-                </span>
-              </Link>
-
-              {/* Card 2: Startups */}
-              <Link
-                href="/customers/yogifi/"
-                className="group flex flex-col justify-between bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="inline-flex items-center gap-1 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20">
-                      <Rocket className="w-3 h-3" />
-                      Startups
-                    </span>
-                  </div>
-                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">
-                    You&rsquo;re a founder with a new idea and a small team.
-                  </p>
-                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    YogiFi
-                  </h3>
-                  <p className="text-sm text-foreground/70 leading-relaxed mb-6">
-                    A founder with limited resources takes a new idea from
-                    requirements to a deployed product.
-                  </p>
-                </div>
-                <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                  Read the story →
-                </span>
-              </Link>
-
-              {/* Card 3: Enterprise */}
-              <Link
-                href="/customers/insignian-homes/"
-                className="group flex flex-col justify-between bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="inline-flex items-center gap-1 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20">
-                      <Factory className="w-3 h-3" />
-                      Enterprise
-                    </span>
-                  </div>
-                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">
-                    You&rsquo;re paying for SaaS tools that don&rsquo;t fit how your
-                    business works.
-                  </p>
-                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    Insignian Homes
-                  </h3>
-                  <p className="text-sm text-foreground/70 leading-relaxed mb-6">
-                    A global exporter replaces per-seat SaaS with applications it
-                    designs and owns, starting with CRM.
-                  </p>
-                </div>
-                <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                  Read the story →
-                </span>
-              </Link>
+                  <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    {common.readStory}
+                  </span>
+                </a>
+              ))}
             </div>
           </Container>
         </SectionCard>
       </section>
 
-      {/* ── 4. In Their Words (Quotes Section) ── */}
+      {/* ── 4. Quotes (Grid: 4 Quotes) ── */}
       <section>
         <SectionCard>
-          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
-            <div className="mb-8 text-center max-w-xl mx-auto">
-              <span className="text-xs font-bold tracking-wider uppercase text-muted-foreground block mb-2">
-                In their words
+          <Container className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 shadow-xs">
+            <div className="mb-8 text-center sm:text-left">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase bg-[#F4F6FA] text-foreground border border-[#DCE3EF] mb-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
+                {t.quotesEyebrow}
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground">
-                What leaders say about building with Think4Ever
-              </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Quote 1: Vernon Huerta */}
-              <div className="bg-muted/30 border border-border rounded-2xl p-6 flex flex-col justify-between">
-                <blockquote className="text-sm sm:text-base text-foreground/80 leading-relaxed italic mb-4">
-                  &ldquo;Creating software is becoming easier. Governing it is
-                  becoming harder. Think4Ever makes the entire journey
-                  transparent, traceable, and auditable.&rdquo;
-                </blockquote>
-                <figcaption className="text-xs text-foreground/70 border-t border-border pt-3">
-                  <strong className="text-foreground block font-bold text-sm">
-                    Vernon A. Huerta
-                  </strong>
-                  Partner, EY Caribbean Technology Consulting Lead
-                </figcaption>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {t.quotes.map((q, idx) => (
+                <div
+                  key={idx}
+                  className="bg-[#F8FAFD] border border-[#DCE3EF] rounded-2xl p-6 flex flex-col justify-between"
+                >
+                  <blockquote className="text-sm sm:text-base text-foreground/80 leading-relaxed italic mb-4">
+                    &ldquo;{q.quote}&rdquo;
+                  </blockquote>
+                  <figcaption className="text-xs text-foreground/70 border-t border-border pt-3">
+                    <strong className="text-foreground block font-bold text-sm">
+                      {q.author}
+                    </strong>
+                    {q.role}
+                    {q.disclosure && (
+                      <span className="block mt-2 text-[11px] text-muted-foreground leading-normal border-t border-border/60 pt-1.5">
+                        {q.disclosure}
+                      </span>
+                    )}
+                  </figcaption>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </SectionCard>
+      </section>
 
-              {/* Quote 2: Muralidhar Somisetty */}
-              <div className="bg-muted/30 border border-border rounded-2xl p-6 flex flex-col justify-between">
-                <blockquote className="text-sm sm:text-base text-foreground/80 leading-relaxed italic mb-4">
-                  &ldquo;Think4Ever has been invaluable in helping us
-                  comprehensively design our YogiFi Smart Yoga teacher portal
-                  before we coded it and tested it.&rdquo;
-                </blockquote>
-                <figcaption className="text-xs text-foreground/70 border-t border-border pt-3">
-                  <strong className="text-foreground block font-bold text-sm">
-                    Muralidhar Somisetty
-                  </strong>
-                  Founder and CEO, YogiFi
-                </figcaption>
-              </div>
-
-              {/* Quote 3: Mahendra Poddar */}
-              <div className="bg-muted/30 border border-border rounded-2xl p-6 flex flex-col justify-between">
-                <blockquote className="text-sm sm:text-base text-foreground/80 leading-relaxed italic mb-4">
-                  &ldquo;
-                  <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-medium border border-[#E6D885]">
-                    SAMPLE, needs CEO approval: We were paying every year for
-                    software that was never really built for how we work with our
-                    buyers around the world. With Think4Ever we design the
-                    application around our own process first, then build it, and
-                    we end up owning it.
-                  </mark>
-                  &rdquo;
-                </blockquote>
-                <figcaption className="text-xs text-foreground/70 border-t border-border pt-3">
-                  <strong className="text-foreground block font-bold text-sm">
-                    Mahendra Poddar
-                  </strong>
-                  CEO, Insignian Homes
-                </figcaption>
+      {/* ── 5. Blue Band CTA Card ── */}
+      <section>
+        <SectionCard>
+          <Container className="bg-[#093CAD] text-white rounded-2xl p-6 sm:p-10 shadow-lg">
+            <div className="max-w-2xl space-y-4">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase bg-white/10 text-white border border-white/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
+                {t.blueBandEyebrow}
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                {t.blueBandTitle}
+              </h2>
+              <p className="text-sm sm:text-base text-white/85 leading-relaxed">
+                {t.blueBandDesc}
+              </p>
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <Button asChild size="lg" className="bg-white text-[#093CAD] hover:bg-white/90 rounded-full font-bold">
+                  <a href={localizeHref("/contact-us/")}>{t.blueBandBtn1}</a>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 rounded-full">
+                  <a href={localizeHref("/customers/ey/")}>{t.blueBandBtn2}</a>
+                </Button>
               </div>
             </div>
           </Container>
         </SectionCard>
       </section>
 
-      {/* ── 5. Last Card: Band & Next Story (White Background) ── */}
+      {/* ── 6. Write the next story with us (Clean White Card) ── */}
       <section>
         <SectionCard>
-          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
-            <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center pb-8 border-b border-border/70 mb-8">
-              <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-2">
-                  For consulting firms and systems integrators
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-3">
-                  EY was first. Your firm can be next.
-                </h2>
-                <p className="text-sm sm:text-base text-foreground/75 leading-relaxed max-w-xl mb-6">
-                  Consulting teams use Think4Ever to deliver client software from
-                  one governed Living Blueprint, and to leave each client with
-                  working software, governed context and a trained team.
-                </p>
-                <div className="flex flex-wrap items-center gap-3">
-                  <Button asChild size="lg">
-                    <Link href="/contact-us/">Talk to us about a partner pilot</Link>
-                  </Button>
-                  <Button asChild variant="outline" size="lg">
-                    <Link href="/customers/ey/">Read the EY story</Link>
-                  </Button>
-                </div>
-              </div>
-
-              <div className="bg-muted/40 border border-border rounded-2xl p-6 sm:p-8 text-center sm:text-left">
-                <h3 className="text-xl font-bold text-foreground mb-2">
-                  Write the next story with us
-                </h3>
-                <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-5">
-                  Start with your idea or your existing codebase. If you are already
-                  building with Think4Ever and want to share your results, we would
-                  like to hear from you.
-                </p>
-                <div className="flex flex-wrap gap-2.5 justify-center sm:justify-start">
-                  <Button asChild size="default">
-                    <Link href="https://portal.think4ever.com/#/register">
-                      Start free
-                    </Link>
-                  </Button>
-                  <Button asChild variant="outline" size="default">
-                    <Link href="/contact-us/">Share your story</Link>
-                  </Button>
-                </div>
+          <Container className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 shadow-xs">
+            <div className="max-w-2xl space-y-3 text-center sm:text-left">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground">
+                {t.nextStoryTitle}
+              </h2>
+              <p className="text-sm sm:text-base text-foreground/75 leading-relaxed">
+                {t.nextStoryDesc}
+              </p>
+              <div className="flex flex-wrap gap-3 pt-2 justify-center sm:justify-start">
+                <Button asChild size="default" className="rounded-full">
+                  <a href="https://portal.think4ever.com/#/register">
+                    {t.nextStoryBtn1}
+                  </a>
+                </Button>
+                <Button asChild variant="outline" size="default" className="rounded-full">
+                  <a href={localizeHref("/contact-us/")}>{t.nextStoryBtn2}</a>
+                </Button>
               </div>
             </div>
           </Container>
