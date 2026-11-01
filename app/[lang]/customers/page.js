@@ -1,4 +1,9 @@
-import Page, { metadata } from '../../customers/page';
-export { metadata };
-export default Page;
+import Page, { metadata as fallbackMetadata } from '../../customers/page';
+import { getLocalizedMetadata } from '@/lib/metadata';
 
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
+  return getLocalizedMetadata(lang, 'customers', fallbackMetadata);
+}
+
+export default Page;

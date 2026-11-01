@@ -22,6 +22,7 @@
     "tutorialsBack": "Volver a Tutoriales",
     "recommendedTutorials": "Tutoriales Recomendados",
     "pricing": "Precios",
+    "customers": "Clientes",
     "signIn": "Iniciar sesión",
     "startFree": "Comenzar gratis",
     "docsMenu": {
@@ -802,7 +803,11 @@
     "card4Desc": "Cinco vistas que los ingenieros necesitan para entender un sistema complejo antes de cambiarlo.",
     "card4Link": "Leer guía ↗",
     "ctaTitle": "¿Listo para pasar de la lectura a la acción?",
-    "ctaSubtitle": "Comience con un proyecto real e inspeccione el sistema detrás del código."
+    "ctaSubtitle": "Comience con un proyecto real e inspeccione el sistema detrás del código.",
+    "cardCaseStudiesType": "Casos de estudio",
+    "cardCaseStudiesTitle": "Historias de clientes",
+    "cardCaseStudiesDesc": "Cómo EY, YogiFi, Insignian Homes y un analista de seguridad diseñan antes de construir con Think4Ever.",
+    "cardCaseStudiesLink": "Leer historias"
   },
   "securityPage": {
     "metaTitle": "Confianza y Seguridad Think4Ever — Contexto Controlado para el Desarrollo Agéntico",
@@ -1431,5 +1436,9 @@
       "title": "Comprende el sistema. Modifícalo con total confianza.",
       "desc": "Obtén la aplicación nativa para Windows o Android y comienza a mapear tu primer proyecto hoy mismo."
     }
+  },
+  "customersPage": {
+    "metaTitle": "Historias de clientes | Think4Ever",
+    "metaDesc": "Cómo firmas de consultoría, fundadores, empresas y equipos de seguridad usan Think4Ever para diseñar antes de construir."
   }
 }

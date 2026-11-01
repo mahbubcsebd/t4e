@@ -1,663 +1,493 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import SectionCard from "@/components/layout/SectionCard";
-import Container from "@/components/layout/Container";
+import { useLanguage } from "@/context/LanguageContext";
 import {
   ArrowLeft,
-  ArrowRight,
-  Building2,
-  Rocket,
   Quote,
-  Sparkles,
-  Inbox,
-  Calculator,
-  Truck,
-  ShieldCheck,
-  ExternalLink,
 } from "lucide-react";
+import { customersTranslations } from "@/lib/i18n/customersTranslations";
 
 export default function InsignianStoryContent() {
+  const { language } = useLanguage();
+  const dict = customersTranslations[language === "es" ? "es" : "en"];
+  const t = dict.insignian;
+  const common = dict.common;
+
+  const localizeHref = (href) => {
+    if (!href.startsWith("/")) return href;
+    if (language === "en") return href;
+    return `/${language}${href}`;
+  };
+
   return (
-    <div className="py-6 md:py-10 space-y-8 sm:space-y-12">
-      {/* ── 1. Top Card: Masthead Hero (White Background) ── */}
+    <div className="min-h-screen bg-[#F4F6FA] py-10 sm:py-16">
+      <div className="max-w-[1120px] mx-auto px-4 sm:px-6 space-y-12">
+      {/* ── 1. Masthead Hero ── */}
       <section>
-        <SectionCard>
-          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs">
+        
+          <div className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs">
             <div className="max-w-4xl">
               {/* Breadcrumb Eyebrow */}
-              <div className="flex items-center gap-2 mb-4 text-xs font-mono tracking-wider uppercase text-muted-foreground">
-                <Link
-                  href="/customers/"
-                  className="hover:text-primary underline underline-offset-4 flex items-center gap-1 font-bold text-primary"
+              <div className="flex items-center gap-2 mb-4">
+                <a
+                  href={localizeHref("/customers/")}
+                  className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:underline uppercase tracking-wider"
                 >
                   <ArrowLeft className="w-3.5 h-3.5" />
-                  Customers
-                </Link>
-                <span>/</span>
-                <span className="font-semibold text-foreground/80">Enterprise</span>
+                  {common.breadcrumbCustomers}
+                </a>
+                <span className="text-xs text-muted-foreground">/</span>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase bg-[#F4F6FA] text-foreground border border-[#DCE3EF]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
+                  {t.breadcrumb}
+                </span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-5">
-                From SaaS subscriptions to software it owns: how Insignian Homes is
-                building its own CRM
-              </h1>
+              {/* Logo */}
+              <div className="h-12 mb-4 flex items-center">
+                <img
+                  src="/images/customers/insignian-homes.png"
+                  alt="Insignian Homes logo"
+                  className="max-h-11 max-w-[150px] object-contain"
+                />
+              </div>
 
-              <p className="text-base sm:text-lg text-foreground/80 leading-relaxed max-w-3xl mb-8">
-                Insignian Homes is one of the largest home textile exporters from
-                India to Europe, supplying complete bedding solutions to
-                retailers and brands in more than thirty countries. It is using
-                Think4Ever to design and build in-house versions of its SaaS
-                applications, starting with CRM, to cut subscription costs, reduce
-                SaaS sprawl and own software that fits how it works with its
-                customers.
+              {/* Title & Lede */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-5">
+                {t.title}
+              </h1>
+              <p className="text-base sm:text-lg text-foreground/75 leading-relaxed max-w-3xl mb-8">
+                {t.lede}
               </p>
 
-              {/* Metrics Row */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-border/70">
-                <div className="bg-muted/40 border border-border rounded-xl p-4">
-                  <span className="block text-2xl sm:text-3xl font-extrabold text-primary mb-1">
-                    <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-bold border border-[#E6D885]">
-                      X%
-                    </mark>
+              {/* Metric Strip */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-[#DCE3EF]">
+                <div>
+                  <span className="block text-3xl sm:text-4xl font-extrabold text-[#FF7A1A] tracking-tight">
+                    {t.metric1Val}
                   </span>
-                  <span className="text-xs text-foreground/70 leading-snug">
-                    lower annual CRM cost
+                  <span className="text-xs sm:text-sm text-foreground/70 mt-1 block">
+                    {t.metric1Label}
                   </span>
                 </div>
-                <div className="bg-muted/40 border border-border rounded-xl p-4">
-                  <span className="block text-2xl sm:text-3xl font-extrabold text-primary mb-1">
-                    <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-bold border border-[#E6D885]">
-                      X
-                    </mark>
+                <div>
+                  <span className="block text-3xl sm:text-4xl font-extrabold text-[#FF7A1A] tracking-tight">
+                    {t.metric2Val}
                   </span>
-                  <span className="text-xs text-foreground/70 leading-snug">
-                    SaaS subscriptions retired or planned
+                  <span className="text-xs sm:text-sm text-foreground/70 mt-1 block">
+                    {t.metric2Label}
                   </span>
                 </div>
-                <div className="bg-muted/40 border border-border rounded-xl p-4">
-                  <span className="block text-2xl sm:text-3xl font-extrabold text-primary mb-1">
-                    <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-bold border border-[#E6D885]">
-                      X weeks
-                    </mark>
+                <div>
+                  <span className="block text-3xl sm:text-4xl font-extrabold text-[#FF7A1A] tracking-tight">
+                    {t.metric3Val}
                   </span>
-                  <span className="text-xs text-foreground/70 leading-snug">
-                    to design and build the CRM
+                  <span className="text-xs sm:text-sm text-foreground/70 mt-1 block">
+                    {t.metric3Label}
                   </span>
                 </div>
               </div>
+              <p className="text-xs text-muted-foreground mt-4 italic">
+                {t.metricsNote}
+              </p>
             </div>
-          </Container>
-        </SectionCard>
+          </div>
+        
       </section>
 
-      {/* ── 2. Main Story + Factsheet Sidebar ── */}
+      {/* ── 2. Main Story Body + Sticky Factsheet ── */}
       <section>
-        <SectionCard>
-          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-10 items-start">
-              {/* Main Story Column */}
-              <main className="space-y-10">
-                {/* Featured Quote */}
-                <div className="bg-muted/40 border border-border/80 rounded-2xl p-6 sm:p-8">
+        
+          <div className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12 items-start">
+              {/* Left Column: Story Content */}
+              <div className="space-y-10 text-foreground">
+                {/* Poddar Quote 1 */}
+                <div className="bg-[#F8FAFD] border border-[#DCE3EF] rounded-2xl p-6 sm:p-8 relative">
                   <Quote className="w-8 h-8 text-primary/30 mb-3" />
-                  <blockquote className="text-base sm:text-lg font-medium text-foreground leading-relaxed italic mb-4">
-                    &ldquo;
-                    <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-medium border border-[#E6D885]">
-                      SAMPLE, needs CEO approval: We were paying every year for
-                      software that was never really built for how we work with our
-                      buyers around the world. With Think4Ever we design the
-                      application around our own process first, then build it, and we
-                      end up owning it.
-                    </mark>
-                    &rdquo;
+                  <blockquote className="text-base sm:text-lg font-medium leading-relaxed italic mb-4">
+                    &ldquo;{t.quote}&rdquo;
                   </blockquote>
                   <figcaption className="text-xs sm:text-sm text-foreground/70">
-                    <strong className="text-foreground block font-bold">
-                      Mahendra Poddar
+                    <strong className="text-foreground block font-bold text-sm">
+                      {t.author}
                     </strong>
-                    CEO, Insignian Homes
+                    {t.authorRole}
                   </figcaption>
                 </div>
 
-                {/* The Challenge */}
-                <section className="space-y-4">
+                {/* Section: The Challenge */}
+                <div className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
-                    The challenge
+                    {t.challengeTitle}
                   </h2>
                   <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
-                    Insignian Homes began when a cotton farmer&rsquo;s grandson set
-                    out to reconnect with his family&rsquo;s textile heritage. Like
-                    most growing exporters, it runs on a stack of off-the-shelf SaaS
-                    applications, and its CRM is one of the largest and most
-                    important of them. Over time the costs and compromises added up:
+                    {t.challengeP1}
                   </p>
-                  <ul className="space-y-3 pt-2 text-sm sm:text-base text-foreground/80">
-                    <li className="flex items-start gap-2.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                      <span>
-                        <strong className="text-foreground font-bold">
-                          Rising subscription costs.
-                        </strong>{" "}
-                        Per-seat pricing grows with every new salesperson, agent and
-                        module, and the CRM was one of the largest lines in the
-                        software budget{" "}
-                        <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-medium border border-[#E6D885]">
-                          confirm or remove
-                        </mark>
-                        .
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                      <span>
-                        <strong className="text-foreground font-bold">
-                          SaaS sprawl.
-                        </strong>{" "}
-                        Each team added its own tools. Customer and sales data ended
-                        up spread across several applications, with overlapping
-                        features, separate logins and integrations to maintain.
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                      <span>
-                        <strong className="text-foreground font-bold">
-                          A generic product for a specific business.
-                        </strong>{" "}
-                        Selling bedding to retailers in more than thirty countries
-                        means long B2B relationships: enquiries, sampling,
-                        quotations, seasonal ranges, repeat orders and shipments. A
-                        generic CRM forced the team to adapt its process to the
-                        software{" "}
-                        <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-medium border border-[#E6D885]">
-                          confirm the main gaps
-                        </mark>
-                        .
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                      <span>
-                        <strong className="text-foreground font-bold">
-                          Building in-house looked too risky.
-                        </strong>{" "}
-                        Rebuilding an application like a CRM normally takes a large
-                        team and months of design work, and AI coding tools alone
-                        produce code without the requirements, data model and
-                        architecture a business-critical system needs.
-                      </span>
-                    </li>
+                  <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
+                    {t.challengeP2}
+                  </p>
+                  <ul className="space-y-3 pt-2">
+                    {t.points.map((pt, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-foreground/80">
+                        <span className="w-2 h-2 rounded-xs bg-[#FF7A1A] mt-2 shrink-0"></span>
+                        <span>
+                          <strong className="font-bold text-foreground">{pt.b}</strong>{pt.text}
+                        </span>
+                      </li>
+                    ))}
                   </ul>
-                </section>
+                </div>
 
-                {/* The Solution */}
-                <section className="space-y-4">
+                {/* Section: The Solution */}
+                <div className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
-                    The solution: design first, then build
+                    {t.solutionTitle}
                   </h2>
                   <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
-                    Insignian Homes used Think4Ever to design its CRM
-                    comprehensively before building it. The team captured how the
-                    business actually works once, as objectives and business rules,
-                    and let Think4Ever generate the artifacts of the full software
-                    development lifecycle from that shared context.
+                    {t.solutionP1}
                   </p>
-                </section>
-
-                {/* Starting with Customer Relationships */}
-                <section className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
-                    Starting with customer relationships
-                  </h2>
-                  <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
-                    The CRM focuses on four workflows that match how an
-                    international textile exporter works with its buyers:
-                  </p>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
-                    <div className="bg-card border border-border rounded-2xl p-5 shadow-xs">
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
-                        <Inbox className="w-4 h-4" />
-                      </div>
-                      <h3 className="text-base font-bold text-foreground mb-1">
-                        Enquiry &amp; sampling
-                      </h3>
-                      <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">
-                        Buyers request new fabrics, weaves, finishes and packaging.
-                        Samples are tracked from laboratory dip to buyer sign-off.
-                      </p>
-                    </div>
-
-                    <div className="bg-card border border-border rounded-2xl p-5 shadow-xs">
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
-                        <Calculator className="w-4 h-4" />
-                      </div>
-                      <h3 className="text-base font-bold text-foreground mb-1">
-                        Quotation &amp; price breaks
-                      </h3>
-                      <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">
-                        Quotes calculate yarn, dyeing, weaving and freight costs
-                        across order volumes, currencies and Incoterms.
-                      </p>
-                    </div>
-
-                    <div className="bg-card border border-border rounded-2xl p-5 shadow-xs">
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
-                        <Truck className="w-4 h-4" />
-                      </div>
-                      <h3 className="text-base font-bold text-foreground mb-1">
-                        Order tracking &amp; shipments
-                      </h3>
-                      <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">
-                        Production milestones (spinning, weaving, dyeing, stitching,
-                        packing) mapped to vessel bookings and container dispatches.
-                      </p>
-                    </div>
-
-                    <div className="bg-card border border-border rounded-2xl p-5 shadow-xs">
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
-                        <ShieldCheck className="w-4 h-4" />
-                      </div>
-                      <h3 className="text-base font-bold text-foreground mb-1">
-                        Buyer-specific rules
-                      </h3>
-                      <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">
-                        Seasonal range calendars, compliance standards (OEKO-TEX,
-                        GOTS, Sedex) and buyer-specific packaging guidelines
-                        enforced automatically.
-                      </p>
-                    </div>
-                  </div>
-                </section>
-
-                {/* How Insignian Homes Builds (Table) */}
-                <section className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
-                    How Insignian Homes builds
-                  </h2>
-
-                  <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-xs">
-                    <table className="w-full text-left text-sm">
-                      <thead className="bg-muted/70 border-b border-border text-foreground font-bold text-xs uppercase tracking-wider">
-                        <tr>
-                          <th className="py-3 px-4">Stage</th>
-                          <th className="py-3 px-4">What Think4Ever delivered</th>
-                          <th className="py-3 px-4">Result for the business</th>
+                  <div className="overflow-x-auto border border-[#DCE3EF] rounded-xl">
+                    <table className="w-full text-left text-sm border-collapse min-w-[560px]">
+                      <thead>
+                        <tr className="border-b border-[#DCE3EF] bg-[#F8FAFD]">
+                          <th className="py-3 px-4 font-mono text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{t.tableThStep}</th>
+                          <th className="py-3 px-4 font-mono text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{t.tableThArtifact}</th>
+                          <th className="py-3 px-4 font-mono text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{t.tableThHow}</th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-border/70 text-foreground/80 text-xs sm:text-sm">
-                        <tr>
-                          <td className="py-3 px-4 font-bold text-foreground whitespace-nowrap">
-                            1. Business process
-                          </td>
-                          <td className="py-3 px-4 text-primary font-semibold whitespace-nowrap">
-                            Intent &amp; rules
-                          </td>
-                          <td className="py-3 px-4 leading-relaxed">
-                            Merchandisers and sales leads review and approve the
-                            four workflows and their validation rules.
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="py-3 px-4 font-bold text-foreground whitespace-nowrap">
-                            2. Living Blueprint
-                          </td>
-                          <td className="py-3 px-4 text-primary font-semibold whitespace-nowrap">
-                            SDLC artifacts
-                          </td>
-                          <td className="py-3 px-4 leading-relaxed">
-                            Think4Ever generates screens, user journeys, relational
-                            data model, security roles and API specifications.
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="py-3 px-4 font-bold text-foreground whitespace-nowrap">
-                            3. Generated application
-                          </td>
-                          <td className="py-3 px-4 text-primary font-semibold whitespace-nowrap">
-                            Working CRM
-                          </td>
-                          <td className="py-3 px-4 leading-relaxed">
-                            Frontend and backend code is generated from the approved
-                            design, with audit trails and role-based permissions.
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="py-3 px-4 font-bold text-foreground whitespace-nowrap">
-                            4. Incremental adoption
-                          </td>
-                          <td className="py-3 px-4 text-primary font-semibold whitespace-nowrap">
-                            Migration
-                          </td>
-                          <td className="py-3 px-4 leading-relaxed">
-                            The sales team pilots the new CRM alongside the old
-                            SaaS tool, migrating customer accounts domain by domain.
-                          </td>
-                        </tr>
+                      <tbody className="divide-y divide-[#DCE3EF]">
+                        {t.tableRows.map((row, idx) => (
+                          <tr key={idx}>
+                            <td className="py-3.5 px-4 font-bold text-foreground whitespace-nowrap">{row.step}</td>
+                            <td className="py-3.5 px-4 text-foreground/75">{row.artifact}</td>
+                            <td className="py-3.5 px-4 text-foreground/85">{row.how}</td>
+                          </tr>
+                        ))}
                       </tbody>
                     </table>
                   </div>
-                </section>
+                </div>
 
-                {/* Results Table */}
-                <section className="space-y-4">
+                {/* Section: Off-the-shelf capability, built to fit */}
+                <div className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
-                    Results
+                    {t.fitTitle}
                   </h2>
+                  <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
+                    {t.fitDesc}
+                  </p>
+                </div>
 
-                  <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-xs">
-                    <table className="w-full text-left text-sm">
-                      <thead className="bg-muted/70 border-b border-border text-foreground font-bold text-xs uppercase tracking-wider">
-                        <tr>
-                          <th className="py-3 px-4">Value area</th>
-                          <th className="py-3 px-4">Measure</th>
-                          <th className="py-3 px-4">Result</th>
+                {/* Section: Value for Everyone Trio */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
+                    {t.trioTitle}
+                  </h2>
+                  <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
+                    {t.trioDesc}
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                    <div className="bg-[#F8FAFD] border border-[#DCE3EF] rounded-xl p-5">
+                      <h3 className="text-base font-bold text-foreground mb-2">{t.trio1Title}</h3>
+                      <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed">
+                        {t.trio1Desc}
+                      </p>
+                    </div>
+                    <div className="bg-[#F8FAFD] border border-[#DCE3EF] rounded-xl p-5">
+                      <h3 className="text-base font-bold text-foreground mb-2">{t.trio2Title}</h3>
+                      <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed">
+                        {t.trio2Desc}
+                      </p>
+                    </div>
+                    <div className="bg-[#F8FAFD] border border-[#DCE3EF] rounded-xl p-5">
+                      <h3 className="text-base font-bold text-foreground mb-2">{t.trio3Title}</h3>
+                      <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed">
+                        {t.trio3Desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Section: A repeatable path to reduce SaaS sprawl */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
+                    {t.proactiveTitle}
+                  </h2>
+                  <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
+                    {t.proactiveDesc}
+                  </p>
+                </div>
+
+                {/* Section: Results */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
+                    {t.resultsTitle}
+                  </h2>
+                  <div className="overflow-x-auto border border-[#DCE3EF] rounded-xl">
+                    <table className="w-full text-left text-sm border-collapse min-w-[560px]">
+                      <thead>
+                        <tr className="border-b border-[#DCE3EF] bg-[#F8FAFD]">
+                          <th className="py-3 px-4 font-mono text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{t.resultsThArea}</th>
+                          <th className="py-3 px-4 font-mono text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{t.resultsThMeasure}</th>
+                          <th className="py-3 px-4 font-mono text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{t.resultsThExpected}</th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-border/70 text-foreground/80 text-xs sm:text-sm">
-                        <tr>
-                          <td className="py-3 px-4 font-bold text-foreground">
-                            Ownership
-                          </td>
-                          <td className="py-3 px-4">Application and data</td>
-                          <td className="py-3 px-4 font-semibold text-primary">
-                            <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded border border-[#E6D885]">
-                              100% owned; runs on Insignian Homes infrastructure
-                            </mark>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="py-3 px-4 font-bold text-foreground">
-                            Fit
-                          </td>
-                          <td className="py-3 px-4">Workflow alignment</td>
-                          <td className="py-3 px-4 font-semibold text-primary">
-                            Built around textile export workflows, not generic B2B
-                            sales
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="py-3 px-4 font-bold text-foreground">
-                            Cost
-                          </td>
-                          <td className="py-3 px-4">Ongoing software cost</td>
-                          <td className="py-3 px-4 font-semibold text-primary">
-                            <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded border border-[#E6D885]">
-                              X% lower than annual per-seat SaaS renewals
-                            </mark>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="py-3 px-4 font-bold text-foreground">
-                            Extensibility
-                          </td>
-                          <td className="py-3 px-4">New features and integrations</td>
-                          <td className="py-3 px-4 font-semibold text-primary">
-                            Added in days by updating the Blueprint, without agency
-                            fees
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="py-3 px-4 font-bold text-foreground">
-                            Data sovereignty
-                          </td>
-                          <td className="py-3 px-4">Customer and pricing data</td>
-                          <td className="py-3 px-4 font-semibold text-primary">
-                            <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded border border-[#E6D885]">
-                              Stored in India under full enterprise control; confirm
-                            </mark>
-                          </td>
-                        </tr>
+                      <tbody className="divide-y divide-[#DCE3EF]">
+                        {t.resultsRows.map((row, idx) => (
+                          <tr key={idx}>
+                            <td className="py-3.5 px-4 font-bold text-foreground whitespace-nowrap">{row.area}</td>
+                            <td className="py-3.5 px-4 text-foreground/75">{row.measure}</td>
+                            <td className="py-3.5 px-4 text-foreground font-medium">{row.expected}</td>
+                          </tr>
+                        ))}
                       </tbody>
                     </table>
                   </div>
-                </section>
+                </div>
 
-                {/* Why This Matters for Enterprises */}
-                <section className="space-y-4">
+                {/* Section: Why This Matters for Enterprises */}
+                <div className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
-                    Why this matters for enterprises
-                  </h2>
-                  <ul className="space-y-3 text-sm sm:text-base text-foreground/80">
-                    <li className="flex items-start gap-2.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                      <span>
-                        <strong className="text-foreground font-bold">
-                          Own your core tools.
-                        </strong>{" "}
-                        High-margin businesses should not rent generic software that
-                        dictates how they serve their customers. Building in-house is
-                        now viable.
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                      <span>
-                        <strong className="text-foreground font-bold">
-                          Fit the software to the business.
-                        </strong>{" "}
-                        Workflows reflect real operating steps (sampling, lab dips,
-                        seasonal ranges), not SaaS defaults.
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                      <span>
-                        <strong className="text-foreground font-bold">
-                          Cut recurring SaaS costs.
-                        </strong>{" "}
-                        Once built, the application costs only hosting and
-                        maintenance, with no per-seat growth penalties.
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                      <span>
-                        <strong className="text-foreground font-bold">
-                          No migration dead-ends.
-                        </strong>{" "}
-                        The Living Blueprint documents the entire system, so the
-                        company is never dependent on individual developers or an
-                        agency.
-                      </span>
-                    </li>
-                  </ul>
-                </section>
-
-                {/* What's Next */}
-                <section className="space-y-3">
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
-                    What&rsquo;s next
+                    {t.whyMattersTitle}
                   </h2>
                   <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
-                    <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-medium border border-[#E6D885]">
-                      e.g. rolling the CRM out to all sales and merchandising teams
-                      and moving the next SaaS application in-house.
-                    </mark>{" "}
-                    Insignian Homes and Think4Ever plan to continue building
-                    together.
+                    {t.whyMattersDesc}
                   </p>
-                </section>
+                  <ul className="space-y-3 pt-2">
+                    {t.whyMattersPoints.map((pt, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-foreground/80">
+                        <span className="w-2 h-2 rounded-xs bg-[#FF7A1A] mt-2 shrink-0"></span>
+                        <span>
+                          <strong className="font-bold text-foreground">{pt.b}</strong>{pt.text}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                {/* About Section */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-border pt-8">
-                  <div className="bg-muted/40 border border-border rounded-xl p-5">
-                    <h3 className="text-sm font-bold text-foreground mb-1.5">
-                      About Insignian Homes
+                {/* Section: What's Next */}
+                <div className="space-y-6">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
+                    {t.whatsNextTitle}
+                  </h2>
+                  <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
+                    {t.whatsNextDesc}
+                  </p>
+                  <div className="bg-[#F8FAFD] border border-[#DCE3EF] rounded-2xl p-6 sm:p-8 relative">
+                    <Quote className="w-8 h-8 text-primary/30 mb-3" />
+                    <blockquote className="text-base sm:text-lg font-medium leading-relaxed italic mb-4">
+                      &ldquo;{t.secondQuote}&rdquo;
+                    </blockquote>
+                    <figcaption className="text-xs sm:text-sm text-foreground/70">
+                      <strong className="text-foreground block font-bold text-sm">
+                        {t.author}
+                      </strong>
+                      {t.authorRole}
+                    </figcaption>
+                  </div>
+                </div>
+
+                {/* Section: About Boxes */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-[#DCE3EF]">
+                  <div className="space-y-2">
+                    <h3 className="text-base font-bold text-foreground">
+                      {t.aboutTitle}
                     </h3>
-                    <p className="text-xs text-foreground/70 leading-relaxed">
-                      Insignian Homes is a home textiles manufacturer and exporter
-                      based in India, supplying complete bedding solutions to
-                      retailers and brands in more than thirty countries. Its
-                      socially compliant factory in Bhiwandi, near Mumbai, produces
-                      more than 150,000 duvet sets and sheets and 50,000 quilt sets a
-                      month. Learn more at insignianhome.com.
+                    <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed">
+                      {t.aboutDesc}
                     </p>
                   </div>
-                  <div className="bg-muted/40 border border-border rounded-xl p-5">
-                    <h3 className="text-sm font-bold text-foreground mb-1.5">
-                      About Think4Ever
+                  <div className="space-y-2">
+                    <h3 className="text-base font-bold text-foreground">
+                      {common.aboutThink4Ever}
                     </h3>
-                    <p className="text-xs text-foreground/70 leading-relaxed">
-                      Think4Ever is an AI-native SDLC platform that keeps
-                      architecture, code and every dependency connected. Its
-                      multi-agent design and development platform captures
-                      requirements and business rules as approved intent in a Living
-                      Blueprint, generates architecture and documentation, and
-                      builds working applications from that shared context, in
-                      Think4Ever or in the coding agents your team already uses.
+                    <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed">
+                      {common.aboutThink4EverDesc}
                     </p>
                   </div>
                 </div>
-              </main>
+              </div>
 
-              {/* Sticky Factsheet Sidebar */}
-              <aside className="lg:sticky lg:top-24 space-y-6">
-                <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
-                  <p className="text-xs font-mono font-bold tracking-wider uppercase text-muted-foreground mb-4">
-                    At a glance
-                  </p>
-                  <dl className="space-y-3.5 text-xs sm:text-sm">
+              {/* Right Column: Sticky Factsheet */}
+              <aside className="sticky top-24 bg-[#F8FAFD] border border-[#DCE3EF] rounded-2xl p-6 space-y-6 shadow-xs">
+                <div>
+                  <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-muted-foreground block mb-4">
+                    {common.atAGlance}
+                  </span>
+                  <dl className="space-y-4 text-xs sm:text-sm">
                     <div>
-                      <dt className="text-muted-foreground font-semibold">Company</dt>
-                      <dd className="text-foreground font-bold mt-0.5">
-                        Insignian Homes, Bhiwandi (Mumbai), India
+                      <dt className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground font-bold">
+                        {common.customer}
+                      </dt>
+                      <dd className="font-semibold text-foreground mt-0.5">
+                        {t.factsCustomerVal}
                       </dd>
                     </div>
-                    <div className="border-t border-border/60 pt-3">
-                      <dt className="text-muted-foreground font-semibold">Industry</dt>
-                      <dd className="text-foreground mt-0.5">
-                        Home textiles: bedding manufacturing and export
+                    <div>
+                      <dt className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground font-bold">
+                        {common.industry}
+                      </dt>
+                      <dd className="font-semibold text-foreground mt-0.5">
+                        {t.factsIndustryVal}
                       </dd>
                     </div>
-                    <div className="border-t border-border/60 pt-3">
-                      <dt className="text-muted-foreground font-semibold">Scale</dt>
-                      <dd className="text-foreground mt-0.5">
-                        Retailers and brands in 30+ countries; a 150,000 sq ft factory
-                        producing 150,000+ duvet sets and sheets a month
+                    <div>
+                      <dt className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground font-bold">
+                        {common.region}
+                      </dt>
+                      <dd className="font-semibold text-foreground mt-0.5">
+                        {t.factsRegionVal}
                       </dd>
                     </div>
-                    <div className="border-t border-border/60 pt-3">
-                      <dt className="text-muted-foreground font-semibold">Use case</dt>
-                      <dd className="text-foreground mt-0.5 font-medium">
-                        Designing and building an in-house CRM, and other business
-                        applications, to replace SaaS subscriptions
+                    <div>
+                      <dt className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground font-bold">
+                        {common.useCases}
+                      </dt>
+                      <dd className="font-semibold text-foreground mt-0.5">
+                        {t.factsUseCasesVal}
                       </dd>
                     </div>
-                    <div className="border-t border-border/60 pt-3">
-                      <dt className="text-muted-foreground font-semibold">Website</dt>
-                      <dd className="text-foreground mt-0.5">
-                        <a
-                          href="https://insignianhome.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-primary hover:underline inline-flex items-center gap-1 font-medium"
-                        >
-                          insignianhome.com
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
+                    <div>
+                      <dt className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground font-bold">
+                        {common.think4everUsed}
+                      </dt>
+                      <dd className="font-semibold text-foreground mt-0.5">
+                        {t.factsThinkVal}
                       </dd>
                     </div>
                   </dl>
-
-                  <div className="mt-6 pt-4 border-t border-border">
-                    <Button asChild size="lg" className="w-full">
-                      <Link href="https://portal.think4ever.com/#/register">
-                        Start free
-                      </Link>
-                    </Button>
-                  </div>
                 </div>
+                <Button asChild size="default" className="w-full rounded-full">
+                  <a href="https://portal.think4ever.com/#/register">
+                    {common.startFree}
+                  </a>
+                </Button>
               </aside>
             </div>
-          </Container>
-        </SectionCard>
+          </div>
+        
       </section>
 
-      {/* ── 3. Band Section (White Background) ── */}
+      {/* ── 3. Band: Call to Action (Clean Card Matching Site) ── */}
       <section>
-        <SectionCard>
-          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-3">
-              Design it first. Then build it.
-            </h2>
-            <p className="text-sm sm:text-base text-foreground/75 leading-relaxed max-w-2xl mb-6">
-              Turn your idea or your existing code into a reviewed Living
-              Blueprint, and build from it in Think4Ever or the coding tools you
-              already use.
-            </p>
-            <div className="flex flex-wrap items-center gap-3">
-              <Button asChild size="lg">
-                <Link href="https://portal.think4ever.com/#/register">
-                  Start free
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/contact-us/">Talk to us</Link>
-              </Button>
+        
+          <div className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 shadow-xs">
+            <div className="max-w-2xl space-y-3 text-center sm:text-left">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
+                {common.designItFirstTitle}
+              </h2>
+              <p className="text-sm sm:text-base text-foreground/75 leading-relaxed">
+                {common.designItFirstDesc}
+              </p>
+              <div className="flex flex-wrap items-center gap-3 pt-2 justify-center sm:justify-start">
+                <Button asChild size="default" className="rounded-full">
+                  <a href="https://portal.think4ever.com/#/register">{common.startFree}</a>
+                </Button>
+                <Button asChild variant="outline" size="default" className="rounded-full">
+                  <a href={localizeHref("/contact-us/")}>{common.talkToUs}</a>
+                </Button>
+              </div>
             </div>
-          </Container>
-        </SectionCard>
+          </div>
+        
       </section>
 
-      {/* ── 4. Related Stories ── */}
+      {/* ── 4. More Customer Stories (3 Cards) ── */}
       <section>
-        <SectionCard>
-          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
-            <h2 className="text-xl sm:text-2xl font-extrabold text-foreground mb-6">
-              More customer stories
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <Link
-                href="/customers/ey/"
-                className="group bg-muted/20 border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
+        
+          <div className="mb-6">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0B1B3A] tracking-tight">
+            {common.moreCustomerStories}
+          </h2>
+        </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Card 1: EY */}
+              <a
+                href={localizeHref("/customers/ey/")}
+                className="group flex flex-col justify-between bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all"
               >
                 <div>
-                  <span className="inline-flex items-center gap-1 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20 mb-3">
-                    <Building2 className="w-3 h-3" />
-                    Consulting
-                  </span>
-                  <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    EY Caribbean
-                  </h3>
-                  <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-4">
-                    EY&rsquo;s consulting team builds internal apps and client
-                    software from one governed Living Blueprint.
+                  <div className="mb-3">
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
+                      {dict.index.cards[0].tag}
+                    </span>
+                  </div>
+                  <div className="h-10 mb-3 flex items-center">
+                    <img
+                      src="/images/customers/ey.svg"
+                      alt="EY Caribbean logo"
+                      className="max-h-8 max-w-[120px] object-contain"
+                    />
+                  </div>
+                  <p className="text-sm text-foreground/70 leading-relaxed mb-6">
+                    {dict.index.cards[0].desc}
                   </p>
                 </div>
                 <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                  Read the story →
+                  {common.readStory}
                 </span>
-              </Link>
+              </a>
 
-              <Link
-                href="/customers/yogifi/"
-                className="group bg-muted/20 border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
+              {/* Card 2: YogiFi */}
+              <a
+                href={localizeHref("/customers/yogifi/")}
+                className="group flex flex-col justify-between bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all"
               >
                 <div>
-                  <span className="inline-flex items-center gap-1 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20 mb-3">
-                    <Rocket className="w-3 h-3" />
-                    Startups
-                  </span>
-                  <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    YogiFi
-                  </h3>
-                  <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-4">
-                    A founder with limited resources takes a new idea from
-                    requirements to a deployed product.
+                  <div className="mb-3">
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
+                      {dict.index.cards[1].tag}
+                    </span>
+                  </div>
+                  <div className="h-10 mb-3 flex items-center">
+                    <div className="bg-[#0B1B3A] px-2.5 py-1.5 rounded-md flex items-center">
+                      <img
+                        src="/images/customers/yogifi.png"
+                        alt="YogiFi logo"
+                        className="max-h-5 max-w-[90px] object-contain"
+                      />
+                    </div>
+                  </div>
+                  <p className="text-sm text-foreground/70 leading-relaxed mb-6">
+                    {dict.index.cards[1].desc}
                   </p>
                 </div>
                 <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                  Read the story →
+                  {common.readStory}
                 </span>
-              </Link>
+              </a>
+
+              {/* Card 3: Security */}
+              <a
+                href={localizeHref("/customers/security-incident-response/")}
+                className="group flex flex-col justify-between bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all"
+              >
+                <div>
+                  <div className="mb-3">
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
+                      {dict.index.cards[3].tag}
+                    </span>
+                  </div>
+                  <div className="h-10 mb-3 flex items-center">
+                    <span className="text-base font-bold text-foreground">Jake Williams</span>
+                  </div>
+                  <p className="text-sm text-foreground/70 leading-relaxed mb-6">
+                    {dict.index.cards[3].desc}
+                  </p>
+                </div>
+                <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  {common.readStory}
+                </span>
+              </a>
             </div>
-          </Container>
-        </SectionCard>
       </section>
+      </div>
     </div>
   );
 }

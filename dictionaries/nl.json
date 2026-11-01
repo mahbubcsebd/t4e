@@ -18,6 +18,7 @@
     "tutorialsBack": "Terug naar Tutorials",
     "recommendedTutorials": "Aanbevolen Tutorials",
     "pricing": "Prijzen",
+    "customers": "Klanten",
     "signIn": "Inloggen",
     "startFree": "Gratis starten",
     "docsMenu": {
@@ -802,7 +803,11 @@
     "card4Desc": "Vijf weergaven die engineers nodig hebben om een complex systeem te begrijpen voordat ze het wijzigen.",
     "card4Link": "Lees de gids ↗",
     "ctaTitle": "Klaar om van lezen naar zien te gaan?",
-    "ctaSubtitle": "Start met één echt project en inspecteer het systeem achter de code."
+    "ctaSubtitle": "Start met één echt project en inspecteer het systeem achter de code.",
+    "cardCaseStudiesType": "Casestudy's",
+    "cardCaseStudiesTitle": "Klantverhalen",
+    "cardCaseStudiesDesc": "Hoe EY, YogiFi, Insignian Homes en een beveiligingsanalist ontwerpen voordat ze bouwen met Think4Ever.",
+    "cardCaseStudiesLink": "Verhalen lezen"
   },
   "securityPage": {
     "metaTitle": "Think4Ever Vertrouwen & Beveiliging — Gecontroleerde Context voor Agentische Ontwikkeling",
@@ -1308,5 +1313,9 @@
       "title": "Begrijp het systeem. Wijzig met vertrouwen.",
       "desc": "Download de native app voor Windows of Android en breng vandaag nog je eerste project in kaart."
     }
+  },
+  "customersPage": {
+    "metaTitle": "Klantverhalen | Think4Ever",
+    "metaDesc": "Hoe adviesbureaus, oprichters, ondernemingen en beveiligingsteams Think4Ever gebruiken om te ontwerpen voordat ze bouwen."
   }
 }

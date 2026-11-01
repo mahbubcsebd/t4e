@@ -24,6 +24,7 @@
     "tutorialsBack": "Back to Tutorials",
     "recommendedTutorials": "Recommended Tutorials",
     "pricing": "Pricing",
+    "customers": "Customers",
     "signIn": "Sign in",
     "startFree": "Start free",
     "docsMenu": {
@@ -802,7 +803,11 @@
     "card4Desc": "Five views engineers need to understand a complex system before changing it.",
     "card4Link": "Read Guide ↗",
     "ctaTitle": "Ready to move from reading to seeing?",
-    "ctaSubtitle": "Start with one real project and inspect the system behind the code."
+    "ctaSubtitle": "Start with one real project and inspect the system behind the code.",
+    "cardCaseStudiesType": "Case Studies",
+    "cardCaseStudiesTitle": "Customer stories",
+    "cardCaseStudiesDesc": "How EY, YogiFi, Insignian Homes and a security analyst design before they build with Think4Ever.",
+    "cardCaseStudiesLink": "Read stories"
   },
   "securityPage": {
     "metaTitle": "Think4Ever Trust & Security — Controlled Context for Agentic Development",
@@ -1302,5 +1307,9 @@
       "title": "Understand the system. Change it with confidence.",
       "desc": "Get the native app for Windows or Android and start mapping your first project today."
     }
+  },
+  "customersPage": {
+    "metaTitle": "Customer stories | Think4Ever",
+    "metaDesc": "How consulting firms, founders, enterprises and security teams use Think4Ever to design before they build."
   }
 }
