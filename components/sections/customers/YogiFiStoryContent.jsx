@@ -10,10 +10,9 @@ import {
   Quote,
   Building2,
   Factory,
-  FileText,
-  Palette,
-  Code2,
+  ShieldAlert,
   ExternalLink,
+  AlertTriangle,
 } from "lucide-react";
 import { customersTranslations } from "@/lib/i18n/customersTranslations";
 
@@ -36,6 +35,25 @@ export default function YogiFiStoryContent() {
         <SectionCard>
           <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs">
             <div className="max-w-4xl">
+              {/* Draft Review Warning Banner */}
+              {t.draftWarning && (
+                <div className="mb-6 p-4 rounded-xl bg-[#FFF2A8] border border-[#E6D885] text-[#3D3300] text-xs sm:text-sm font-medium leading-relaxed flex items-start gap-3 shadow-xs">
+                  <AlertTriangle className="w-5 h-5 text-[#8A7100] shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="block mb-0.5 font-bold uppercase tracking-wide">
+                      {language === "es"
+                        ? "BORRADOR PARA REVISIÓN Y APROBACIÓN — NO PARA PUBLICACIÓN"
+                        : "DRAFT FOR REVIEW AND APPROVAL — NOT FOR PUBLICATION"}
+                    </strong>
+                    <span>
+                      {language === "es"
+                        ? "Los elementos resaltados en amarillo son marcadores de posición para confirmar o suministrar. El fundador debe aprobar las citas, su nombre y cargo, y todos los detalles del producto antes de publicar nada."
+                        : "Items highlighted in yellow are placeholders to confirm or supply. The founder must approve the quotes, their name and title, and all product details before anything is published."}
+                    </span>
+                  </div>
+                </div>
+              )}
+
               {/* Breadcrumb Eyebrow */}
               <div className="flex items-center gap-2 mb-4 text-xs font-mono tracking-wider uppercase text-muted-foreground">
                 <a
@@ -47,7 +65,7 @@ export default function YogiFiStoryContent() {
                 </a>
                 <span>/</span>
                 <span className="font-semibold text-foreground/80">
-                  {t.breadcrumb}
+                  {t.breadcrumb || "Startups"}
                 </span>
               </div>
 
@@ -76,7 +94,7 @@ export default function YogiFiStoryContent() {
                 <div className="bg-muted/40 border border-border rounded-xl p-4">
                   <span className="block text-2xl sm:text-3xl font-extrabold text-primary mb-1">
                     <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-bold border border-[#E6D885]">
-                      {t.metric1Val}
+                      {t.metric1Val || "X weeks"}
                     </mark>
                   </span>
                   <span className="text-xs text-foreground/70 leading-snug">
@@ -86,7 +104,7 @@ export default function YogiFiStoryContent() {
                 <div className="bg-muted/40 border border-border rounded-xl p-4">
                   <span className="block text-2xl sm:text-3xl font-extrabold text-primary mb-1">
                     <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-bold border border-[#E6D885]">
-                      {t.metric2Val}
+                      {t.metric2Val || "6"}
                     </mark>
                   </span>
                   <span className="text-xs text-foreground/70 leading-snug">
@@ -96,7 +114,7 @@ export default function YogiFiStoryContent() {
                 <div className="bg-muted/40 border border-border rounded-xl p-4">
                   <span className="block text-2xl sm:text-3xl font-extrabold text-primary mb-1">
                     <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-bold border border-[#E6D885]">
-                      {t.metric3Val}
+                      {t.metric3Val || "X"}
                     </mark>
                   </span>
                   <span className="text-xs text-foreground/70 leading-snug">
@@ -115,22 +133,22 @@ export default function YogiFiStoryContent() {
           <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-10 items-start">
               {/* Main Story Column */}
-              <main className="space-y-10">
-                {/* Featured Quote */}
+              <main className="space-y-10 min-w-0">
+                {/* 1. Featured Quote (Short) */}
                 <div className="bg-muted/40 border border-border/80 rounded-2xl p-6 sm:p-8">
                   <Quote className="w-8 h-8 text-primary/30 mb-3" />
                   <blockquote className="text-base sm:text-lg font-medium text-foreground leading-relaxed italic mb-4">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
                   <figcaption className="text-xs sm:text-sm text-foreground/70">
-                    <strong className="text-foreground block font-bold">
+                    <strong className="text-foreground inline font-bold">
                       {t.author}
                     </strong>
                     {t.authorRole}
                   </figcaption>
                 </div>
 
-                {/* The Challenge */}
+                {/* 2. The Challenge */}
                 <section className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.challengeTitle}
@@ -152,9 +170,16 @@ export default function YogiFiStoryContent() {
                         </li>
                       ))}
                   </ul>
+                  {t.challengeCallout && (
+                    <div className="pt-2">
+                      <mark className="bg-[#FFF2A8] text-[#3D3300] px-2.5 py-1.5 rounded-md border border-[#E6D885] inline-block font-mono text-xs sm:text-sm">
+                        [{t.challengeCallout}]
+                      </mark>
+                    </div>
+                  )}
                 </section>
 
-                {/* The Solution: Design First, Then Build (Table) */}
+                {/* 3. The Solution: Design First, Then Build (5-Step Table) */}
                 <section className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.solutionTitle}
@@ -192,68 +217,83 @@ export default function YogiFiStoryContent() {
                   </div>
                 </section>
 
-                {/* Value for Everyone on the Team (Trio) */}
-                <section className="space-y-4">
+                {/* 4. One Platform Across the Whole Lifecycle */}
+                <section className="space-y-3">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
-                    {t.trioTitle}
+                    {t.lifecycleTitle}
                   </h2>
                   <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
-                    {t.trioDesc}
+                    {t.lifecycleDesc}
                   </p>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-                    <div className="bg-card border border-border rounded-2xl p-5 shadow-xs">
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
-                        <FileText className="w-4 h-4" />
-                      </div>
-                      <h3 className="text-base font-bold text-foreground mb-1">
-                        {t.trio1Title}
-                      </h3>
-                      <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">
-                        {t.trio1Desc}
-                      </p>
-                    </div>
+                </section>
 
-                    <div className="bg-card border border-border rounded-2xl p-5 shadow-xs">
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
-                        <Palette className="w-4 h-4" />
-                      </div>
-                      <h3 className="text-base font-bold text-foreground mb-1">
-                        {t.trio2Title}
-                      </h3>
-                      <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">
-                        {t.trio2Desc}
-                      </p>
-                    </div>
-
-                    <div className="bg-card border border-border rounded-2xl p-5 shadow-xs">
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
-                        <Code2 className="w-4 h-4" />
-                      </div>
-                      <h3 className="text-base font-bold text-foreground mb-1">
-                        {t.trio3Title}
-                      </h3>
-                      <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">
-                        {t.trio3Desc}
-                      </p>
-                    </div>
+                {/* 5. Value for Everyone in the Organization (Role Table) */}
+                <section className="space-y-4">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
+                    {t.orgTitle}
+                  </h2>
+                  <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
+                    {t.orgDesc}
+                  </p>
+                  <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-xs">
+                    <table className="w-full text-left text-sm">
+                      <thead className="bg-muted/70 border-b border-border text-foreground font-bold text-xs uppercase tracking-wider">
+                        <tr>
+                          <th className="py-3 px-4">
+                            {t.orgTableThRole || (language === "es" ? "Rol" : "Role")}
+                          </th>
+                          <th className="py-3 px-4">
+                            {t.orgTableThWhat ||
+                              (language === "es"
+                                ? "Lo que obtienen de Think4Ever"
+                                : "What they get from Think4Ever")}
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-border/70 text-foreground/80 text-xs sm:text-sm">
+                        {t.orgTableRows &&
+                          t.orgTableRows.map((row, idx) => (
+                            <tr key={idx}>
+                              <td className="py-3.5 px-4 font-bold text-foreground whitespace-nowrap">
+                                {row.role}
+                              </td>
+                              <td className="py-3.5 px-4 leading-relaxed">
+                                {row.what}
+                              </td>
+                            </tr>
+                          ))}
+                      </tbody>
+                    </table>
                   </div>
                 </section>
 
-                {/* Validating Impact Faster */}
+                {/* 6. Validating Impact Faster */}
                 <section className="space-y-3">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.validationTitle}
                   </h2>
                   <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
-                    {t.validationDesc}
+                    {t.validationP1}{" "}
+                    <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono border border-[#E6D885]">
+                      {t.validationTbd}
+                    </mark>
+                    . {t.validationP2}
                   </p>
                 </section>
 
-                {/* Results Table */}
+                {/* 7. Results Table */}
                 <section className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.resultsTitle}
                   </h2>
+
+                  {t.resultsNote && (
+                    <p className="text-xs sm:text-sm">
+                      <mark className="bg-[#FFF2A8] text-[#3D3300] px-2 py-1 rounded border border-[#E6D885] inline-block font-mono leading-relaxed">
+                        {t.resultsNote}
+                      </mark>
+                    </p>
+                  )}
 
                   <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-xs">
                     <table className="w-full text-left text-sm">
@@ -268,18 +308,14 @@ export default function YogiFiStoryContent() {
                         {t.resultsRows &&
                           t.resultsRows.map((row, idx) => (
                             <tr key={idx}>
-                              <td className="py-3 px-4 font-bold text-foreground">
+                              <td className="py-3 px-4 font-bold text-foreground whitespace-nowrap">
                                 {row.area}
                               </td>
                               <td className="py-3 px-4">{row.measure}</td>
                               <td className="py-3 px-4 font-semibold text-primary">
-                                {row.tbd ? (
-                                  <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded border border-[#E6D885]">
-                                    {row.result}
-                                  </mark>
-                                ) : (
-                                  row.result
-                                )}
+                                <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded border border-[#E6D885] font-mono">
+                                  {row.result}
+                                </mark>
                               </td>
                             </tr>
                           ))}
@@ -288,11 +324,32 @@ export default function YogiFiStoryContent() {
                   </div>
                 </section>
 
-                {/* Why This Matters for Founders */}
+                {/* 8. Second Featured Quote (Long) */}
+                {t.secondQuote && (
+                  <div className="bg-muted/40 border border-border/80 rounded-2xl p-6 sm:p-8">
+                    <Quote className="w-8 h-8 text-primary/30 mb-3" />
+                    <blockquote className="text-base sm:text-lg font-medium text-foreground leading-relaxed italic mb-4">
+                      &ldquo;{t.secondQuote}&rdquo;
+                    </blockquote>
+                    <figcaption className="text-xs sm:text-sm text-foreground/70">
+                      <strong className="text-foreground inline font-bold">
+                        {t.secondQuoteAuthor || t.author}
+                      </strong>
+                      {t.secondQuoteRole || t.authorRole}
+                    </figcaption>
+                  </div>
+                )}
+
+                {/* 9. Why This Matters for Startups */}
                 <section className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.whyMattersTitle}
                   </h2>
+                  {t.whyMattersIntro && (
+                    <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
+                      {t.whyMattersIntro}
+                    </p>
+                  )}
                   <ul className="space-y-3 text-sm sm:text-base text-foreground/80">
                     {t.whyMattersPoints &&
                       t.whyMattersPoints.map((pt, idx) => (
@@ -309,33 +366,39 @@ export default function YogiFiStoryContent() {
                   </ul>
                 </section>
 
-                {/* What's Next */}
+                {/* 10. What's Next */}
                 <section className="space-y-3">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.whatsNextTitle}
                   </h2>
                   <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
-                    {t.whatsNextDesc}
+                    <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded border border-[#E6D885] font-mono">
+                      {t.whatsNextTbd}
+                    </mark>{" "}
+                    {t.whatsNextText}
                   </p>
                 </section>
 
-                {/* About Section */}
+                {/* 11. About Section */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-border pt-8">
                   <div className="bg-muted/40 border border-border rounded-xl p-5">
                     <h3 className="text-sm font-bold text-foreground mb-1.5">
-                      {t.aboutYogiFiTitle || "About YogiFi"}
+                      {t.aboutYogiFiTitle ||
+                        (language === "es" ? "Acerca de YogiFi" : "About YogiFi")}
                     </h3>
                     <p className="text-xs text-foreground/70 leading-relaxed">
                       {t.aboutYogiFiDesc ||
-                        "YogiFi makes an AI-powered smart yoga mat. Built-in pressure sensors detect posture and sync with the YogiFi app for AI-guided sessions and real-time posture correction. Learn more at us.yogifismart.com."}
+                        (language === "es"
+                          ? "YogiFi fabrica una esterilla de yoga inteligente con IA. Los sensores de presión integrados detectan la postura y se sincronizan con la app YogiFi para sesiones guiadas y corrección postural en tiempo real. Más información en us.yogifismart.com."
+                          : "YogiFi makes an AI-powered smart yoga mat. Built-in pressure sensors detect posture and sync with the YogiFi app for AI-guided sessions and real-time posture correction. Learn more at us.yogifismart.com.")}
                     </p>
                   </div>
                   <div className="bg-muted/40 border border-border rounded-xl p-5">
                     <h3 className="text-sm font-bold text-foreground mb-1.5">
-                      {common.aboutThink4Ever}
+                      {t.aboutTitle || common.aboutThink4Ever}
                     </h3>
                     <p className="text-xs text-foreground/70 leading-relaxed">
-                      {common.aboutThink4EverDesc}
+                      {t.aboutDesc || common.aboutThink4EverDesc}
                     </p>
                   </div>
                 </div>
@@ -350,17 +413,10 @@ export default function YogiFiStoryContent() {
                   <dl className="space-y-3.5 text-xs sm:text-sm">
                     <div>
                       <dt className="text-muted-foreground font-semibold">
-                        {common.customer}
+                        {t.factsCompany || (language === "es" ? "Empresa" : "Company")}
                       </dt>
                       <dd className="text-foreground font-bold mt-0.5">
-                        {t.factsCustomerVal}
-                      </dd>
-                    </div>
-                    <div className="border-t border-border/60 pt-3">
-                      <dt className="text-muted-foreground font-semibold">
-                        Website
-                      </dt>
-                      <dd className="text-foreground mt-0.5">
+                        YogiFi (Wellnesys Inc.),{" "}
                         <a
                           href="https://us.yogifismart.com"
                           target="_blank"
@@ -374,18 +430,17 @@ export default function YogiFiStoryContent() {
                     </div>
                     <div className="border-t border-border/60 pt-3">
                       <dt className="text-muted-foreground font-semibold">
-                        Stage
+                        {t.factsStage || (language === "es" ? "Etapa" : "Stage")}
                       </dt>
                       <dd className="text-foreground mt-0.5">
-                        <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded text-xs border border-[#E6D885]">
-                          {t.factsStageVal ||
-                            "Early-stage startup; confirm stage and funding"}
+                        <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded text-xs border border-[#E6D885] font-semibold font-mono">
+                          {t.factsStageVal || "Pre-Series A"}
                         </mark>
                       </dd>
                     </div>
                     <div className="border-t border-border/60 pt-3">
                       <dt className="text-muted-foreground font-semibold">
-                        {common.industry}
+                        {t.factsIndustry || common.industry}
                       </dt>
                       <dd className="text-foreground mt-0.5">
                         {t.factsIndustryVal}
@@ -393,10 +448,34 @@ export default function YogiFiStoryContent() {
                     </div>
                     <div className="border-t border-border/60 pt-3">
                       <dt className="text-muted-foreground font-semibold">
-                        {common.useCases}
+                        {t.factsUseCase || common.useCases}
+                      </dt>
+                      <dd className="text-foreground mt-0.5 font-medium leading-relaxed">
+                        {t.factsUseCaseVal}
+                      </dd>
+                    </div>
+                    <div className="border-t border-border/60 pt-3">
+                      <dt className="text-muted-foreground font-semibold">
+                        {t.factsPlatform ||
+                          (language === "es" ? "Plataforma" : "Platform")}
                       </dt>
                       <dd className="text-foreground mt-0.5 font-medium">
-                        {t.factsUseCasesVal}
+                        {t.factsPlatformVal}
+                      </dd>
+                    </div>
+                    <div className="border-t border-border/60 pt-3">
+                      <dt className="text-muted-foreground font-semibold">
+                        {t.factsHeadlineResults ||
+                          (language === "es" ? "Resultados clave" : "Headline results")}
+                      </dt>
+                      <dd className="text-foreground mt-1 flex flex-wrap gap-1.5 items-center">
+                        <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded text-xs border border-[#E6D885] font-semibold font-mono">
+                          {t.factsHeadlineVal1}
+                        </mark>
+                        <span className="text-muted-foreground">·</span>
+                        <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded text-xs border border-[#E6D885] font-semibold font-mono">
+                          {t.factsHeadlineVal2}
+                        </mark>
                       </dd>
                     </div>
                   </dl>
@@ -431,7 +510,12 @@ export default function YogiFiStoryContent() {
                   {common.startFree}
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="rounded-full"
+              >
                 <a href={localizeHref("/contact-us/")}>{common.talkToUs}</a>
               </Button>
             </div>
@@ -446,7 +530,8 @@ export default function YogiFiStoryContent() {
             <h2 className="text-xl sm:text-2xl font-extrabold text-foreground mb-6">
               {common.moreCustomerStories}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {/* Story 1: EY Caribbean */}
               <a
                 href={localizeHref("/customers/ey/")}
                 className="group bg-muted/20 border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
@@ -476,6 +561,7 @@ export default function YogiFiStoryContent() {
                 </span>
               </a>
 
+              {/* Story 2: Insignian Homes */}
               <a
                 href={localizeHref("/customers/insignian-homes/")}
                 className="group bg-muted/20 border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
@@ -498,6 +584,34 @@ export default function YogiFiStoryContent() {
                   <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-4">
                     A global exporter replaces per-seat SaaS with applications it
                     designs and owns, starting with CRM.
+                  </p>
+                </div>
+                <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  {common.readStory}
+                </span>
+              </a>
+
+              {/* Story 3: Jake Williams (Security) */}
+              <a
+                href={localizeHref("/customers/security-incident-response/")}
+                className="group bg-muted/20 border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <span className="inline-flex items-center gap-1 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20 mb-3">
+                    <ShieldAlert className="w-3 h-3" />
+                    Security
+                  </span>
+                  <div className="h-8 mb-2 flex items-center">
+                    <span className="text-base font-bold text-foreground">
+                      Jake Williams
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    Security Incident Response
+                  </h3>
+                  <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-4">
+                    A security analyst generates the architecture, user flows and
+                    data flow diagrams of undocumented apps straight from code.
                   </p>
                 </div>
                 <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
