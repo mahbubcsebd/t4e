@@ -4,7 +4,7 @@ import React from "react";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
 import { useLanguage } from "@/context/LanguageContext";
-import { ArrowLeft, Quote } from "lucide-react";
+import { ArrowLeft, Quote, ExternalLink } from "lucide-react";
 import { customersTranslations } from "@/lib/i18n/customersTranslations";
 
 export default function YogiFiStoryContent() {
@@ -24,7 +24,7 @@ export default function YogiFiStoryContent() {
       {/* ── Section 1: Hero & Company Factsheet ── */}
       <section>
         <SectionCard>
-          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs max-w-4xl">
+          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs">
             {/* Breadcrumb Eyebrow */}
             <div className="flex items-center gap-2 mb-4 text-xs font-mono tracking-wider uppercase text-muted-foreground">
               <a
@@ -61,69 +61,70 @@ export default function YogiFiStoryContent() {
             </p>
 
             {/* Factsheet Table (Page 1) */}
-            <div className="overflow-x-auto rounded-xl border border-border bg-card shadow-2xs">
-              <table className="w-full text-left text-xs sm:text-sm border-collapse">
-                <tbody className="divide-y divide-border text-foreground/85">
+            <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-xs">
+              <table className="w-full text-left text-sm">
+                <tbody className="divide-y divide-border/70 text-foreground/80 text-xs sm:text-sm">
                   <tr>
-                    <td className="py-3 px-4 font-bold text-foreground w-[160px] sm:w-[200px] bg-muted/40 align-top">
+                    <td className="py-3.5 px-4 font-bold text-foreground w-[180px] sm:w-[220px] bg-muted/40 align-top">
                       {t.factsCompany || (language === "es" ? "Empresa" : "Company")}
                     </td>
-                    <td className="py-3 px-4 leading-relaxed">
+                    <td className="py-3.5 px-4 leading-relaxed align-top">
                       YogiFi (Wellnesys Inc.),{" "}
                       <a
                         href="https://us.yogifismart.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary hover:underline font-medium"
+                        className="text-primary hover:underline font-medium inline-flex items-center gap-1"
                       >
                         us.yogifismart.com
+                        <ExternalLink className="w-3 h-3" />
                       </a>
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-3 px-4 font-bold text-foreground bg-muted/40 align-top">
+                    <td className="py-3.5 px-4 font-bold text-foreground bg-muted/40 align-top">
                       {t.factsStage || (language === "es" ? "Etapa" : "Stage")}
                     </td>
-                    <td className="py-3 px-4">
-                      <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-medium border border-[#E6D885]">
+                    <td className="py-3.5 px-4 align-top">
+                      <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-semibold border border-[#E6D885]">
                         {t.factsStageVal || "Pre-Series A"}
                       </mark>
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-3 px-4 font-bold text-foreground bg-muted/40 align-top">
+                    <td className="py-3.5 px-4 font-bold text-foreground bg-muted/40 align-top">
                       {t.factsIndustry || (language === "es" ? "Industria" : "Industry")}
                     </td>
-                    <td className="py-3 px-4 leading-relaxed">
+                    <td className="py-3.5 px-4 leading-relaxed align-top">
                       {t.factsIndustryVal}
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-3 px-4 font-bold text-foreground bg-muted/40 align-top">
+                    <td className="py-3.5 px-4 font-bold text-foreground bg-muted/40 align-top">
                       {t.factsUseCase || (language === "es" ? "Caso de uso" : "Use case")}
                     </td>
-                    <td className="py-3 px-4 leading-relaxed">
+                    <td className="py-3.5 px-4 leading-relaxed align-top">
                       {t.factsUseCaseVal}
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-3 px-4 font-bold text-foreground bg-muted/40 align-top">
+                    <td className="py-3.5 px-4 font-bold text-foreground bg-muted/40 align-top">
                       {t.factsPlatform || (language === "es" ? "Plataforma" : "Platform")}
                     </td>
-                    <td className="py-3 px-4 leading-relaxed">
+                    <td className="py-3.5 px-4 leading-relaxed align-top">
                       {t.factsPlatformVal}
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-3 px-4 font-bold text-foreground bg-muted/40 align-top">
+                    <td className="py-3.5 px-4 font-bold text-foreground bg-muted/40 align-top">
                       {t.factsHeadlineResults || (language === "es" ? "Resultados clave" : "Headline results")}
                     </td>
-                    <td className="py-3 px-4 leading-relaxed">
-                      <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-medium border border-[#E6D885]">
+                    <td className="py-3.5 px-4 leading-relaxed align-top">
+                      <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-semibold border border-[#E6D885]">
                         {t.factsHeadlineVal1}
                       </mark>
                       {" · "}
-                      <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-medium border border-[#E6D885]">
+                      <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-semibold border border-[#E6D885]">
                         {t.factsHeadlineVal2}
                       </mark>
                     </td>
@@ -138,7 +139,7 @@ export default function YogiFiStoryContent() {
       {/* ── Section 2: The Challenge ── */}
       <section>
         <SectionCard>
-          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs max-w-4xl space-y-8">
+          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs space-y-8">
             {/* Featured Quote 1 (Short) */}
             <div className="bg-muted/40 border border-border/80 rounded-2xl p-6 sm:p-8">
               <Quote className="w-8 h-8 text-primary/30 mb-3" />
@@ -177,7 +178,7 @@ export default function YogiFiStoryContent() {
               </ul>
               {t.challengeCallout && (
                 <div className="pt-2">
-                  <mark className="bg-[#FFF2A8] text-[#3D3300] px-2.5 py-1.5 rounded-md border border-[#E6D885] inline-block font-mono text-xs sm:text-sm">
+                  <mark className="bg-[#FFF2A8] text-[#3D3300] px-2.5 py-1.5 rounded-md border border-[#E6D885] inline-block font-mono text-xs sm:text-sm font-semibold">
                     [{t.challengeCallout}]
                   </mark>
                 </div>
@@ -190,7 +191,7 @@ export default function YogiFiStoryContent() {
       {/* ── Section 3: The Solution & SDLC Lifecycle ── */}
       <section>
         <SectionCard>
-          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs max-w-4xl space-y-10">
+          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs space-y-10">
             {/* The Solution: Design First, Then Build */}
             <div className="space-y-4">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
@@ -202,7 +203,7 @@ export default function YogiFiStoryContent() {
 
               <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-xs">
                 <table className="w-full text-left text-sm">
-                  <thead className="bg-[#183B6B] text-white font-bold text-xs uppercase tracking-wider">
+                  <thead className="bg-muted/70 border-b border-border text-foreground font-bold text-xs uppercase tracking-wider">
                     <tr>
                       <th className="py-3 px-4">{t.tableThStep}</th>
                       <th className="py-3 px-4">{t.tableThWhat}</th>
@@ -213,13 +214,13 @@ export default function YogiFiStoryContent() {
                     {t.tableRows &&
                       t.tableRows.map((row, idx) => (
                         <tr key={idx}>
-                          <td className="py-3 px-4 font-bold text-foreground whitespace-nowrap">
+                          <td className="py-3 px-4 font-bold text-foreground whitespace-nowrap align-top">
                             {row.step}
                           </td>
-                          <td className="py-3 px-4 text-primary font-semibold whitespace-nowrap">
+                          <td className="py-3 px-4 text-primary font-semibold whitespace-nowrap align-top">
                             {row.what}
                           </td>
-                          <td className="py-3 px-4 leading-relaxed">
+                          <td className="py-3 px-4 leading-relaxed align-top">
                             {row.how}
                           </td>
                         </tr>
@@ -249,7 +250,7 @@ export default function YogiFiStoryContent() {
               </p>
               <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-xs">
                 <table className="w-full text-left text-sm">
-                  <thead className="bg-[#183B6B] text-white font-bold text-xs uppercase tracking-wider">
+                  <thead className="bg-muted/70 border-b border-border text-foreground font-bold text-xs uppercase tracking-wider">
                     <tr>
                       <th className="py-3 px-4">
                         {t.orgTableThRole || (language === "es" ? "Rol" : "Role")}
@@ -266,10 +267,10 @@ export default function YogiFiStoryContent() {
                     {t.orgTableRows &&
                       t.orgTableRows.map((row, idx) => (
                         <tr key={idx}>
-                          <td className="py-3.5 px-4 font-bold text-foreground whitespace-nowrap">
+                          <td className="py-3.5 px-4 font-bold text-foreground whitespace-nowrap align-top">
                             {row.role}
                           </td>
-                          <td className="py-3.5 px-4 leading-relaxed">
+                          <td className="py-3.5 px-4 leading-relaxed align-top">
                             {row.what}
                           </td>
                         </tr>
@@ -286,7 +287,7 @@ export default function YogiFiStoryContent() {
               </h2>
               <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
                 {t.validationP1}{" "}
-                <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono border border-[#E6D885]">
+                <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono border border-[#E6D885] font-semibold">
                   {t.validationTbd}
                 </mark>
                 . {t.validationP2}
@@ -299,7 +300,7 @@ export default function YogiFiStoryContent() {
       {/* ── Section 4: Results & Why This Matters for Startups ── */}
       <section>
         <SectionCard>
-          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs max-w-4xl space-y-10">
+          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs space-y-10">
             {/* Results Table */}
             <div className="space-y-4">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
@@ -308,7 +309,7 @@ export default function YogiFiStoryContent() {
 
               {t.resultsNote && (
                 <p className="text-xs sm:text-sm">
-                  <mark className="bg-[#FFF2A8] text-[#3D3300] px-2 py-1 rounded border border-[#E6D885] inline-block font-mono leading-relaxed">
+                  <mark className="bg-[#FFF2A8] text-[#3D3300] px-2 py-1 rounded border border-[#E6D885] inline-block font-mono leading-relaxed font-semibold">
                     {t.resultsNote}
                   </mark>
                 </p>
@@ -316,7 +317,7 @@ export default function YogiFiStoryContent() {
 
               <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-xs">
                 <table className="w-full text-left text-sm">
-                  <thead className="bg-[#183B6B] text-white font-bold text-xs uppercase tracking-wider">
+                  <thead className="bg-muted/70 border-b border-border text-foreground font-bold text-xs uppercase tracking-wider">
                     <tr>
                       <th className="py-3 px-4">{t.resultsThArea}</th>
                       <th className="py-3 px-4">{t.resultsThMeasure}</th>
@@ -327,12 +328,14 @@ export default function YogiFiStoryContent() {
                     {t.resultsRows &&
                       t.resultsRows.map((row, idx) => (
                         <tr key={idx}>
-                          <td className="py-3 px-4 font-bold text-foreground whitespace-nowrap">
+                          <td className="py-3 px-4 font-bold text-foreground whitespace-nowrap align-top">
                             {row.area}
                           </td>
-                          <td className="py-3 px-4">{row.measure}</td>
-                          <td className="py-3 px-4 font-semibold text-primary">
-                            <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded border border-[#E6D885] font-mono">
+                          <td className="py-3 px-4 align-top leading-relaxed">
+                            {row.measure}
+                          </td>
+                          <td className="py-3 px-4 align-top">
+                            <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded border border-[#E6D885] font-mono font-semibold">
                               {row.result}
                             </mark>
                           </td>
@@ -391,7 +394,7 @@ export default function YogiFiStoryContent() {
                 {t.whatsNextTitle}
               </h2>
               <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
-                <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded border border-[#E6D885] font-mono">
+                <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded border border-[#E6D885] font-mono font-semibold">
                   {t.whatsNextTbd}
                 </mark>{" "}
                 {t.whatsNextText}
