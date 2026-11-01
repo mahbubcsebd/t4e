@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
@@ -59,10 +60,12 @@ export default function CustomersIndexContent() {
                   {t.featuredTag}
                 </span>
                 <div className="h-12 mb-3 flex items-center">
-                  <img
+                  <Image
                     src="/images/customers/ey.svg"
                     alt="EY Caribbean logo"
-                    className="max-h-10 max-w-[140px] object-contain"
+                    width={140}
+                    height={40}
+                    className="max-h-10 max-w-[140px] object-contain w-auto h-auto"
                   />
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight leading-snug mb-4">
@@ -128,17 +131,21 @@ export default function CustomersIndexContent() {
                       {card.logo ? (
                         card.who === "YogiFi" ? (
                           <div className="bg-[#0B1B3A] px-2.5 py-1.5 rounded-md flex items-center">
-                            <img
+                            <Image
                               src={card.logo}
                               alt={`${card.who} logo`}
-                              className="max-h-5 max-w-[90px] object-contain"
+                              width={90}
+                              height={20}
+                              className="max-h-5 max-w-[90px] object-contain w-auto h-auto"
                             />
                           </div>
                         ) : (
-                          <img
+                          <Image
                             src={card.logo}
                             alt={`${card.who} logo`}
-                            className="max-h-8 max-w-[120px] object-contain"
+                            width={120}
+                            height={32}
+                            className="max-h-8 max-w-[120px] object-contain w-auto h-auto"
                           />
                         )
                       ) : (

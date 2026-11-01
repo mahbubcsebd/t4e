@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
@@ -148,10 +149,12 @@ export default function SecurityStoryContent() {
 
                   {/* Screenshot 1 */}
                   <div className="rounded-2xl border border-border overflow-hidden bg-card shadow-xs mt-6">
-                    <img
+                    <Image
                       src="/images/customers/security-concept-view.png"
                       alt="Think4Ever Concept View"
-                      className="w-full object-cover"
+                      width={1200}
+                      height={675}
+                      className="w-full h-auto object-cover"
                     />
                     <div className="p-4 bg-muted/40 border-t border-border text-xs text-muted-foreground leading-relaxed">
                       {t.caption1}
@@ -189,10 +192,12 @@ export default function SecurityStoryContent() {
 
                   {/* Screenshot 2 */}
                   <div className="rounded-2xl border border-border overflow-hidden bg-card shadow-xs mt-6">
-                    <img
+                    <Image
                       src="/images/customers/security-business-rules.png"
                       alt="Think4Ever Business Rules"
-                      className="w-full object-cover"
+                      width={1200}
+                      height={675}
+                      className="w-full h-auto object-cover"
                     />
                     <div className="p-4 bg-muted/40 border-t border-border text-xs text-muted-foreground leading-relaxed">
                       {t.caption2}
@@ -472,10 +477,12 @@ export default function SecurityStoryContent() {
                     Consulting
                   </span>
                   <div className="h-8 mb-2 flex items-center">
-                    <img
+                    <Image
                       src="/images/customers/ey.svg"
                       alt="EY Caribbean logo"
-                      className="max-h-6 max-w-[100px] object-contain"
+                      width={100}
+                      height={24}
+                      className="max-h-6 max-w-[100px] object-contain w-auto h-auto"
                     />
                   </div>
                   <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
@@ -502,10 +509,12 @@ export default function SecurityStoryContent() {
                   </span>
                   <div className="h-8 mb-2 flex items-center">
                     <div className="bg-[#0B1B3A] px-2 py-1 rounded inline-flex items-center">
-                      <img
+                      <Image
                         src="/images/customers/yogifi.png"
                         alt="YogiFi logo"
-                        className="max-h-5 max-w-[80px] object-contain"
+                        width={80}
+                        height={20}
+                        className="max-h-5 max-w-[80px] object-contain w-auto h-auto"
                       />
                     </div>
                   </div>
@@ -533,10 +542,12 @@ export default function SecurityStoryContent() {
                     Enterprise
                   </span>
                   <div className="h-8 mb-2 flex items-center">
-                    <img
+                    <Image
                       src="/images/customers/insignian-homes.png"
                       alt="Insignian Homes logo"
-                      className="max-h-6 max-w-[100px] object-contain"
+                      width={100}
+                      height={24}
+                      className="max-h-6 max-w-[100px] object-contain w-auto h-auto"
                     />
                   </div>
                   <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">

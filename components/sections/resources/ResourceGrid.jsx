@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Play, BookOpen, Layers } from "lucide-react";
@@ -215,10 +216,12 @@ export default function ResourceGrid() {
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
                   <div className="relative w-full h-44 overflow-hidden bg-muted">
-                    <img
+                    <Image
                       src="/images/tutorials/design-artifacts-guide/concept-ready.jpg"
                       alt="Putting the Blueprint to Work"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
 

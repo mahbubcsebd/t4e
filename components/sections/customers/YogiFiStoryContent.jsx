@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
 import { useLanguage } from "@/context/LanguageContext";
@@ -43,10 +44,12 @@ export default function YogiFiStoryContent() {
             {/* Logo */}
             <div className="h-10 mb-4 flex items-center">
               <div className="bg-[#0B1B3A] px-3 py-1.5 rounded-md inline-flex items-center">
-                <img
+                <Image
                   src="/images/customers/yogifi.png"
                   alt="YogiFi logo"
-                  className="max-h-6 max-w-[110px] object-contain"
+                  width={110}
+                  height={24}
+                  className="max-h-6 max-w-[110px] object-contain w-auto h-auto"
                 />
               </div>
             </div>

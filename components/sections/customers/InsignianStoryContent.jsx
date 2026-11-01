@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
@@ -53,10 +54,12 @@ export default function InsignianStoryContent() {
 
               {/* Logo */}
               <div className="h-12 mb-4 flex items-center">
-                <img
+                <Image
                   src="/images/customers/insignian-homes.png"
                   alt="Insignian Homes logo"
-                  className="max-h-10 max-w-[150px] object-contain"
+                  width={150}
+                  height={40}
+                  className="max-h-10 max-w-[150px] object-contain w-auto h-auto"
                 />
               </div>
 
@@ -479,10 +482,12 @@ export default function InsignianStoryContent() {
                     Consulting
                   </span>
                   <div className="h-8 mb-2 flex items-center">
-                    <img
+                    <Image
                       src="/images/customers/ey.svg"
                       alt="EY Caribbean logo"
-                      className="max-h-6 max-w-[100px] object-contain"
+                      width={100}
+                      height={24}
+                      className="max-h-6 max-w-[100px] object-contain w-auto h-auto"
                     />
                   </div>
                   <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
@@ -509,10 +514,12 @@ export default function InsignianStoryContent() {
                   </span>
                   <div className="h-8 mb-2 flex items-center">
                     <div className="bg-[#0B1B3A] px-2 py-1 rounded inline-flex items-center">
-                      <img
+                      <Image
                         src="/images/customers/yogifi.png"
                         alt="YogiFi logo"
-                        className="max-h-5 max-w-[80px] object-contain"
+                        width={80}
+                        height={20}
+                        className="max-h-5 max-w-[80px] object-contain w-auto h-auto"
                       />
                     </div>
                   </div>

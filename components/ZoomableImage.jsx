@@ -64,9 +64,12 @@ export function ZoomableImage({
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </button>
-            <img
+            <Image
               src={src}
               alt={alt}
+              width={1920}
+              height={1080}
+              unoptimized
               className="max-w-full max-h-[85vh] w-auto h-auto object-contain rounded-xl select-none bg-black/5 block"
             />
           </div>
