@@ -13,12 +13,13 @@ import {
   Sliders,
   Rocket,
   Factory,
+  ShieldAlert,
 } from "lucide-react";
 import { customersTranslations } from "@/lib/i18n/customersTranslations";
 
 export default function EyStoryContent() {
   const { language } = useLanguage();
-  const dict = customersTranslations[language === "es" ? "es" : "en"];
+  const dict = customersTranslations[language === "es" ? "es" : "en"] || customersTranslations.en;
   const t = dict.ey;
   const common = dict.common;
 
@@ -30,7 +31,7 @@ export default function EyStoryContent() {
 
   return (
     <div className="py-6 md:py-10 space-y-8 sm:space-y-12">
-      {/* ── 1. Top Card: Masthead Hero (White Background) ── */}
+      {/* ── 1. Top Card: Masthead Hero (Full Width SectionCard) ── */}
       <section>
         <SectionCard>
           <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs">
@@ -68,42 +69,42 @@ export default function EyStoryContent() {
               {/* Metrics Row */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-border/70">
                 <div className="bg-muted/40 border border-border rounded-xl p-4">
-                  <span className="block text-2xl sm:text-3xl font-extrabold text-primary mb-1">
-                    <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-bold border border-[#E6D885]">
-                      {t.metric1Val}
-                    </mark>
+                  <span className="block text-2xl sm:text-3xl font-extrabold text-[#FF7A1A] mb-1">
+                    {t.metric1Val}
                   </span>
                   <span className="text-xs text-foreground/70 leading-snug">
                     {t.metric1Label}
                   </span>
                 </div>
                 <div className="bg-muted/40 border border-border rounded-xl p-4">
-                  <span className="block text-2xl sm:text-3xl font-extrabold text-primary mb-1">
-                    <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-bold border border-[#E6D885]">
-                      {t.metric2Val}
-                    </mark>
+                  <span className="block text-2xl sm:text-3xl font-extrabold text-[#FF7A1A] mb-1">
+                    {t.metric2Val}
                   </span>
                   <span className="text-xs text-foreground/70 leading-snug">
                     {t.metric2Label}
                   </span>
                 </div>
                 <div className="bg-muted/40 border border-border rounded-xl p-4">
-                  <span className="block text-2xl sm:text-3xl font-extrabold text-primary mb-1">
-                    <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-bold border border-[#E6D885]">
-                      {t.metric3Val}
-                    </mark>
+                  <span className="block text-2xl sm:text-3xl font-extrabold text-[#FF7A1A] mb-1">
+                    {t.metric3Val}
                   </span>
                   <span className="text-xs text-foreground/70 leading-snug">
                     {t.metric3Label}
                   </span>
                 </div>
               </div>
+
+              {t.metricsNote && (
+                <p className="text-xs text-foreground/60 max-w-2xl pt-3">
+                  {t.metricsNote}
+                </p>
+              )}
             </div>
           </Container>
         </SectionCard>
       </section>
 
-      {/* ── 2. Main Story + Factsheet Sidebar ── */}
+      {/* ── 2. Main Story + Factsheet Sidebar (Full Width SectionCard) ── */}
       <section>
         <SectionCard>
           <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
@@ -112,7 +113,7 @@ export default function EyStoryContent() {
               <main className="space-y-10">
                 {/* Featured Quote */}
                 <div className="bg-muted/40 border border-border/80 rounded-2xl p-6 sm:p-8">
-                  <Quote className="w-8 h-8 text-primary/30 mb-3" />
+                  <Quote className="w-8 h-8 text-[#FF7A1A] mb-3 opacity-60" />
                   <blockquote className="text-base sm:text-lg font-medium text-foreground leading-relaxed italic mb-4">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
@@ -139,7 +140,7 @@ export default function EyStoryContent() {
                     {t.points &&
                       t.points.map((pt, idx) => (
                         <li key={idx} className="flex items-start gap-2.5">
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                          <div className="w-2 h-2 rounded-[2px] bg-[#FF7A1A] mt-2 shrink-0" />
                           <span>
                             <strong className="text-foreground font-bold">
                               {pt.b}
@@ -151,7 +152,7 @@ export default function EyStoryContent() {
                   </ul>
                 </section>
 
-                {/* Why EY Chose Think4Ever */}
+                {/* Why EYC Chose Think4Ever */}
                 <section className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.whyTitle}
@@ -211,8 +212,8 @@ export default function EyStoryContent() {
                     <table className="w-full text-left text-sm">
                       <thead className="bg-muted/70 border-b border-border text-foreground font-bold text-xs uppercase tracking-wider">
                         <tr>
-                          <th className="py-3 px-4">{t.loopThStep}</th>
-                          <th className="py-3 px-4">{t.loopThStage}</th>
+                          <th className="py-3 px-4 whitespace-nowrap">{t.loopThStep}</th>
+                          <th className="py-3 px-4 whitespace-nowrap">{t.loopThStage}</th>
                           <th className="py-3 px-4">{t.loopThWhat}</th>
                         </tr>
                       </thead>
@@ -234,14 +235,14 @@ export default function EyStoryContent() {
                       </tbody>
                     </table>
                   </div>
-                  {t.loopFootnote && (
-                    <p className="text-xs text-foreground/60 italic pt-1">
-                      {t.loopFootnote}
+                  {t.loopPost && (
+                    <p className="text-sm sm:text-base text-foreground/80 leading-relaxed pt-1">
+                      {t.loopPost}
                     </p>
                   )}
                 </section>
 
-                {/* Two Contexts, One Platform */}
+                {/* Client Software Delivery (Timeline) */}
                 <section className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.deliveryTitle}
@@ -250,37 +251,28 @@ export default function EyStoryContent() {
                     {t.deliveryDesc}
                   </p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                    <div className="bg-muted/30 border border-border rounded-2xl p-5">
-                      <span className="text-xs font-mono font-bold uppercase tracking-wider text-primary block mb-1">
-                        Internal practice
-                      </span>
-                      <h3 className="text-base font-bold text-foreground mb-2">
-                        Internal applications at EY
-                      </h3>
-                      <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed">
-                        EY Caribbean uses Think4Ever internally to automate and
-                        govern its own consulting workflows, build custom tooling,
-                        and capture consulting methodology in repeatable, living
-                        architectures.
-                      </p>
-                    </div>
-
-                    <div className="bg-muted/30 border border-border rounded-2xl p-5">
-                      <span className="text-xs font-mono font-bold uppercase tracking-wider text-primary block mb-1">
-                        Client engagements
-                      </span>
-                      <h3 className="text-base font-bold text-foreground mb-2">
-                        Client software delivery
-                      </h3>
-                      <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed">
-                        For clients, EY teams use Think4Ever to deliver software
-                        from an approved Living Blueprint, handing over tested
-                        code, living context, and a trained client team without
-                        lock-in.
-                      </p>
-                    </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4 border-t-2 border-primary">
+                    {t.timeline &&
+                      t.timeline.map((item, idx) => (
+                        <div key={idx} className="relative pt-2 space-y-1">
+                          <span className="block text-xs font-mono font-bold text-primary">
+                            {item.when}
+                          </span>
+                          <h3 className="text-base font-bold text-foreground">
+                            {item.stage}
+                          </h3>
+                          <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+                      ))}
                   </div>
+
+                  {t.timelinePost && (
+                    <p className="text-sm sm:text-base text-foreground/80 leading-relaxed pt-2">
+                      {t.timelinePost}
+                    </p>
+                  )}
                 </section>
 
                 {/* Results Table */}
@@ -293,27 +285,23 @@ export default function EyStoryContent() {
                     <table className="w-full text-left text-sm">
                       <thead className="bg-muted/70 border-b border-border text-foreground font-bold text-xs uppercase tracking-wider">
                         <tr>
-                          <th className="py-3 px-4">{t.resultsThArea}</th>
-                          <th className="py-3 px-4">{t.resultsThMeasure}</th>
-                          <th className="py-3 px-4">{t.resultsThResult}</th>
+                          <th className="py-3 px-4 whitespace-nowrap">{t.resultsThArea}</th>
+                          <th className="py-3 px-4 whitespace-nowrap">{t.resultsThMeasure}</th>
+                          <th className="py-3 px-4 whitespace-nowrap">{t.resultsThResult}</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-border/70 text-foreground/80 text-xs sm:text-sm">
                         {t.resultsRows &&
                           t.resultsRows.map((row, idx) => (
                             <tr key={idx}>
-                              <td className="py-3 px-4 font-bold text-foreground">
+                              <td className="py-3 px-4 font-bold text-foreground whitespace-nowrap">
                                 {row.area}
                               </td>
-                              <td className="py-3 px-4">{row.measure}</td>
-                              <td className="py-3 px-4 font-semibold text-primary">
-                                {row.tbd ? (
-                                  <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded border border-[#E6D885]">
-                                    {row.result}
-                                  </mark>
-                                ) : (
-                                  row.result
-                                )}
+                              <td className="py-3 px-4 text-foreground/80">
+                                {row.measure}
+                              </td>
+                              <td className="py-3 px-4 text-foreground font-normal leading-relaxed">
+                                {row.result}
                               </td>
                             </tr>
                           ))}
@@ -334,7 +322,7 @@ export default function EyStoryContent() {
                     {t.whyMattersPoints &&
                       t.whyMattersPoints.map((pt, idx) => (
                         <li key={idx} className="flex items-start gap-2.5">
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                          <div className="w-2 h-2 rounded-[2px] bg-[#FF7A1A] mt-2 shrink-0" />
                           <span>
                             <strong className="text-foreground font-bold">
                               {pt.b}
@@ -347,13 +335,27 @@ export default function EyStoryContent() {
                 </section>
 
                 {/* What's Next */}
-                <section className="space-y-3">
+                <section className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.whatsNextTitle}
                   </h2>
                   <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
                     {t.whatsNextDesc}
                   </p>
+                  {t.sunilQuote && (
+                    <div className="bg-muted/40 border border-border/80 rounded-2xl p-6 sm:p-8 mt-4">
+                      <Quote className="w-8 h-8 text-[#FF7A1A] mb-3 opacity-60" />
+                      <blockquote className="text-base sm:text-lg font-medium text-foreground leading-relaxed italic mb-4">
+                        &ldquo;{t.sunilQuote}&rdquo;
+                      </blockquote>
+                      <figcaption className="text-xs sm:text-sm text-foreground/70">
+                        <strong className="text-foreground block font-bold">
+                          {t.sunilAuthor}
+                        </strong>
+                        {t.sunilRole}
+                      </figcaption>
+                    </div>
+                  )}
                 </section>
 
                 {/* About Section */}
@@ -440,7 +442,7 @@ export default function EyStoryContent() {
         </SectionCard>
       </section>
 
-      {/* ── 3. Bottom Card: Partner Pilot Band ── */}
+      {/* ── 3. Bottom Card: Partner Pilot Band (Full Width SectionCard) ── */}
       <section>
         <SectionCard>
           <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
@@ -468,14 +470,15 @@ export default function EyStoryContent() {
         </SectionCard>
       </section>
 
-      {/* ── 4. Related Stories (White Card Matching Site) ── */}
+      {/* ── 4. Related Stories (Full Width SectionCard) ── */}
       <section>
         <SectionCard>
           <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
             <h2 className="text-xl sm:text-2xl font-extrabold text-foreground mb-6">
               {common.moreCustomerStories}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {/* YogiFi */}
               <a
                 href={localizeHref("/customers/yogifi/")}
                 className="group bg-muted/20 border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
@@ -507,6 +510,7 @@ export default function EyStoryContent() {
                 </span>
               </a>
 
+              {/* Insignian Homes */}
               <a
                 href={localizeHref("/customers/insignian-homes/")}
                 className="group bg-muted/20 border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
@@ -529,6 +533,33 @@ export default function EyStoryContent() {
                   <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-4">
                     A global exporter replaces per-seat SaaS with applications it
                     designs and owns, starting with CRM.
+                  </p>
+                </div>
+                <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  {common.readStory}
+                </span>
+              </a>
+
+              {/* Jake Williams (Security incident response) */}
+              <a
+                href={localizeHref("/customers/security-incident-response/")}
+                className="group bg-muted/20 border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <span className="inline-flex items-center gap-1 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20 mb-3">
+                    <ShieldAlert className="w-3 h-3" />
+                    Security
+                  </span>
+                  <div className="h-8 mb-2 flex items-center">
+                    <span className="text-lg font-extrabold text-foreground">
+                      Jake Williams
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    Security Incident Response
+                  </h3>
+                  <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-4">
+                    A security analyst generates the architecture, user flows and data flow diagrams of undocumented apps straight from the code.
                   </p>
                 </div>
                 <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
