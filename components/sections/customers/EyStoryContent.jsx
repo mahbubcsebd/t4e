@@ -2,10 +2,17 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import SectionCard from "@/components/layout/SectionCard";
+import Container from "@/components/layout/Container";
 import { useLanguage } from "@/context/LanguageContext";
 import {
   ArrowLeft,
   Quote,
+  Sparkles,
+  Layers,
+  Sliders,
+  Rocket,
+  Factory,
 } from "lucide-react";
 import { customersTranslations } from "@/lib/i18n/customersTranslations";
 
@@ -22,27 +29,23 @@ export default function EyStoryContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F4F6FA] py-10 sm:py-16">
-      <div className="max-w-[1120px] mx-auto px-4 sm:px-6 space-y-12">
-      {/* ── 1. Masthead Hero ── */}
+    <div className="py-6 md:py-10 space-y-8 sm:space-y-12">
+      {/* ── 1. Top Card: Masthead Hero (White Background) ── */}
       <section>
-        
-          <div className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs">
+        <SectionCard>
+          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs">
             <div className="max-w-4xl">
               {/* Breadcrumb Eyebrow */}
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-4 text-xs font-mono tracking-wider uppercase text-muted-foreground">
                 <a
                   href={localizeHref("/customers/")}
-                  className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:underline uppercase tracking-wider"
+                  className="hover:text-primary underline underline-offset-4 flex items-center gap-1 font-bold text-primary"
                 >
                   <ArrowLeft className="w-3.5 h-3.5" />
                   {common.breadcrumbCustomers}
                 </a>
-                <span className="text-xs text-muted-foreground">/</span>
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase bg-[#F4F6FA] text-foreground border border-[#DCE3EF]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
-                  {t.breadcrumb}
-                </span>
+                <span>/</span>
+                <span className="font-semibold text-foreground/80">{t.breadcrumb}</span>
               </div>
 
               {/* Logo */}
@@ -54,72 +57,75 @@ export default function EyStoryContent() {
                 />
               </div>
 
-              {/* Title & Lede */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-5">
                 {t.title}
               </h1>
-              <p className="text-base sm:text-lg text-foreground/75 leading-relaxed max-w-3xl mb-8">
+
+              <p className="text-base sm:text-lg text-foreground/80 leading-relaxed max-w-3xl mb-8">
                 {t.lede}
               </p>
 
-              {/* Metric Strip */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-[#DCE3EF]">
-                <div>
-                  <span className="block text-3xl sm:text-4xl font-extrabold text-[#FF7A1A] tracking-tight">
-                    {t.metric1Val}
+              {/* Metrics Row */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-border/70">
+                <div className="bg-muted/40 border border-border rounded-xl p-4">
+                  <span className="block text-2xl sm:text-3xl font-extrabold text-primary mb-1">
+                    <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-bold border border-[#E6D885]">
+                      {t.metric1Val}
+                    </mark>
                   </span>
-                  <span className="text-xs sm:text-sm text-foreground/70 mt-1 block">
+                  <span className="text-xs text-foreground/70 leading-snug">
                     {t.metric1Label}
                   </span>
                 </div>
-                <div>
-                  <span className="block text-3xl sm:text-4xl font-extrabold text-[#FF7A1A] tracking-tight">
-                    {t.metric2Val}
+                <div className="bg-muted/40 border border-border rounded-xl p-4">
+                  <span className="block text-2xl sm:text-3xl font-extrabold text-primary mb-1">
+                    <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-bold border border-[#E6D885]">
+                      {t.metric2Val}
+                    </mark>
                   </span>
-                  <span className="text-xs sm:text-sm text-foreground/70 mt-1 block">
+                  <span className="text-xs text-foreground/70 leading-snug">
                     {t.metric2Label}
                   </span>
                 </div>
-                <div>
-                  <span className="block text-3xl sm:text-4xl font-extrabold text-[#FF7A1A] tracking-tight">
-                    {t.metric3Val}
+                <div className="bg-muted/40 border border-border rounded-xl p-4">
+                  <span className="block text-2xl sm:text-3xl font-extrabold text-primary mb-1">
+                    <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded font-mono font-bold border border-[#E6D885]">
+                      {t.metric3Val}
+                    </mark>
                   </span>
-                  <span className="text-xs sm:text-sm text-foreground/70 mt-1 block">
+                  <span className="text-xs text-foreground/70 leading-snug">
                     {t.metric3Label}
                   </span>
                 </div>
               </div>
-              <p className="text-xs text-muted-foreground mt-4 italic">
-                {t.metricsNote}
-              </p>
             </div>
-          </div>
-        
+          </Container>
+        </SectionCard>
       </section>
 
-      {/* ── 2. Main Story Body + Sticky Factsheet ── */}
+      {/* ── 2. Main Story + Factsheet Sidebar ── */}
       <section>
-        
-          <div className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12 items-start">
-              {/* Left Column: Story Content */}
-              <div className="space-y-10 text-foreground">
-                {/* Vernon Huerta Quote */}
-                <div className="bg-[#F8FAFD] border border-[#DCE3EF] rounded-2xl p-6 sm:p-8 relative">
+        <SectionCard>
+          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-10 items-start">
+              {/* Main Story Column */}
+              <main className="space-y-10">
+                {/* Featured Quote */}
+                <div className="bg-muted/40 border border-border/80 rounded-2xl p-6 sm:p-8">
                   <Quote className="w-8 h-8 text-primary/30 mb-3" />
-                  <blockquote className="text-base sm:text-lg font-medium leading-relaxed italic mb-4">
+                  <blockquote className="text-base sm:text-lg font-medium text-foreground leading-relaxed italic mb-4">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
                   <figcaption className="text-xs sm:text-sm text-foreground/70">
-                    <strong className="text-foreground block font-bold text-sm">
+                    <strong className="text-foreground block font-bold">
                       {t.author}
                     </strong>
                     {t.authorRole}
                   </figcaption>
                 </div>
 
-                {/* Section: The Challenge */}
-                <div className="space-y-4">
+                {/* The Challenge */}
+                <section className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.challengeTitle}
                   </h2>
@@ -129,20 +135,24 @@ export default function EyStoryContent() {
                   <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
                     {t.challengeP2}
                   </p>
-                  <ul className="space-y-3 pt-2">
-                    {t.points.map((pt, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-foreground/80">
-                        <span className="w-2 h-2 rounded-xs bg-[#FF7A1A] mt-2 shrink-0"></span>
-                        <span>
-                          <strong className="font-bold text-foreground">{pt.b}</strong>{pt.text}
-                        </span>
-                      </li>
-                    ))}
+                  <ul className="space-y-3 pt-2 text-sm sm:text-base text-foreground/80">
+                    {t.points &&
+                      t.points.map((pt, idx) => (
+                        <li key={idx} className="flex items-start gap-2.5">
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                          <span>
+                            <strong className="text-foreground font-bold">
+                              {pt.b}
+                            </strong>{" "}
+                            {pt.text}
+                          </span>
+                        </li>
+                      ))}
                   </ul>
-                </div>
+                </section>
 
-                {/* Section: Why EYC chose Think4Ever */}
-                <div className="space-y-4">
+                {/* Why EY Chose Think4Ever */}
+                <section className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.whyTitle}
                   </h2>
@@ -150,240 +160,290 @@ export default function EyStoryContent() {
                     {t.whyDesc}
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-                    <div className="bg-[#F8FAFD] border border-[#DCE3EF] rounded-xl p-5">
-                      <h3 className="text-base font-bold text-foreground mb-2">{t.clarityTitle}</h3>
-                      <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed">
+                    <div className="bg-card border border-border rounded-2xl p-5 shadow-xs">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
+                        <Sparkles className="w-4 h-4" />
+                      </div>
+                      <h3 className="text-base font-bold text-foreground mb-1">
+                        {t.clarityTitle}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">
                         {t.clarityDesc}
                       </p>
                     </div>
-                    <div className="bg-[#F8FAFD] border border-[#DCE3EF] rounded-xl p-5">
-                      <h3 className="text-base font-bold text-foreground mb-2">{t.coherenceTitle}</h3>
-                      <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed">
+
+                    <div className="bg-card border border-border rounded-2xl p-5 shadow-xs">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
+                        <Layers className="w-4 h-4" />
+                      </div>
+                      <h3 className="text-base font-bold text-foreground mb-1">
+                        {t.coherenceTitle}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">
                         {t.coherenceDesc}
                       </p>
                     </div>
-                    <div className="bg-[#F8FAFD] border border-[#DCE3EF] rounded-xl p-5">
-                      <h3 className="text-base font-bold text-foreground mb-2">{t.controlTitle}</h3>
-                      <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed">
+
+                    <div className="bg-card border border-border rounded-2xl p-5 shadow-xs">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
+                        <Sliders className="w-4 h-4" />
+                      </div>
+                      <h3 className="text-base font-bold text-foreground mb-1">
+                        {t.controlTitle}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">
                         {t.controlDesc}
                       </p>
                     </div>
                   </div>
-                </div>
+                </section>
 
-                {/* Section: The approach: one governed loop */}
-                <div className="space-y-4">
+                {/* The Approach: One Governed Loop (Table) */}
+                <section className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.loopTitle}
                   </h2>
                   <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
                     {t.loopDesc}
                   </p>
-                  <div className="overflow-x-auto border border-[#DCE3EF] rounded-xl">
-                    <table className="w-full text-left text-sm border-collapse min-w-[560px]">
-                      <thead>
-                        <tr className="border-b border-[#DCE3EF] bg-[#F8FAFD]">
-                          <th className="py-3 px-4 font-mono text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{t.loopThStep}</th>
-                          <th className="py-3 px-4 font-mono text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{t.loopThStage}</th>
-                          <th className="py-3 px-4 font-mono text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{t.loopThWhat}</th>
+
+                  <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-xs">
+                    <table className="w-full text-left text-sm">
+                      <thead className="bg-muted/70 border-b border-border text-foreground font-bold text-xs uppercase tracking-wider">
+                        <tr>
+                          <th className="py-3 px-4">{t.loopThStep}</th>
+                          <th className="py-3 px-4">{t.loopThStage}</th>
+                          <th className="py-3 px-4">{t.loopThWhat}</th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-[#DCE3EF]">
-                        {t.loopRows.map((row, idx) => (
-                          <tr key={idx}>
-                            <td className="py-3.5 px-4 font-bold text-foreground whitespace-nowrap">{row.step}</td>
-                            <td className="py-3.5 px-4 text-foreground/75">{row.stage}</td>
-                            <td className="py-3.5 px-4 text-foreground/85">{row.what}</td>
-                          </tr>
-                        ))}
+                      <tbody className="divide-y divide-border/70 text-foreground/80 text-xs sm:text-sm">
+                        {t.loopRows &&
+                          t.loopRows.map((row, idx) => (
+                            <tr key={idx}>
+                              <td className="py-3 px-4 font-bold text-foreground whitespace-nowrap">
+                                {row.step}
+                              </td>
+                              <td className="py-3 px-4 text-primary font-semibold whitespace-nowrap">
+                                {row.stage}
+                              </td>
+                              <td className="py-3 px-4 leading-relaxed">
+                                {row.what}
+                              </td>
+                            </tr>
+                          ))}
                       </tbody>
                     </table>
                   </div>
-                  <p className="text-sm sm:text-base text-foreground/80 leading-relaxed pt-2">
-                    {t.loopFootnote}
-                  </p>
-                </div>
+                  {t.loopFootnote && (
+                    <p className="text-xs text-foreground/60 italic pt-1">
+                      {t.loopFootnote}
+                    </p>
+                  )}
+                </section>
 
-                {/* Section: Client software delivery (Timeline) */}
-                <div className="space-y-4">
+                {/* Two Contexts, One Platform */}
+                <section className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.deliveryTitle}
                   </h2>
                   <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
                     {t.deliveryDesc}
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
-                    {t.timeline.map((item, idx) => (
-                      <div key={idx} className="border-t-2 border-primary pt-3 space-y-1.5">
-                        <span className="font-mono text-xs font-bold text-primary block">
-                          {item.when}
-                        </span>
-                        <h3 className="text-sm font-bold text-foreground">{item.title}</h3>
-                        <p className="text-xs text-foreground/75 leading-relaxed">
-                          {item.desc}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="text-sm text-foreground/80 leading-relaxed pt-2">
-                    {t.timelineFootnote}
-                  </p>
-                </div>
 
-                {/* Section: Results */}
-                <div className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                    <div className="bg-muted/30 border border-border rounded-2xl p-5">
+                      <span className="text-xs font-mono font-bold uppercase tracking-wider text-primary block mb-1">
+                        Internal practice
+                      </span>
+                      <h3 className="text-base font-bold text-foreground mb-2">
+                        Internal applications at EY
+                      </h3>
+                      <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed">
+                        EY Caribbean uses Think4Ever internally to automate and
+                        govern its own consulting workflows, build custom tooling,
+                        and capture consulting methodology in repeatable, living
+                        architectures.
+                      </p>
+                    </div>
+
+                    <div className="bg-muted/30 border border-border rounded-2xl p-5">
+                      <span className="text-xs font-mono font-bold uppercase tracking-wider text-primary block mb-1">
+                        Client engagements
+                      </span>
+                      <h3 className="text-base font-bold text-foreground mb-2">
+                        Client software delivery
+                      </h3>
+                      <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed">
+                        For clients, EY teams use Think4Ever to deliver software
+                        from an approved Living Blueprint, handing over tested
+                        code, living context, and a trained client team without
+                        lock-in.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Results Table */}
+                <section className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.resultsTitle}
                   </h2>
-                  <div className="overflow-x-auto border border-[#DCE3EF] rounded-xl">
-                    <table className="w-full text-left text-sm border-collapse min-w-[560px]">
-                      <thead>
-                        <tr className="border-b border-[#DCE3EF] bg-[#F8FAFD]">
-                          <th className="py-3 px-4 font-mono text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{t.resultsThArea}</th>
-                          <th className="py-3 px-4 font-mono text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{t.resultsThMeasure}</th>
-                          <th className="py-3 px-4 font-mono text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{t.resultsThResult}</th>
+
+                  <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-xs">
+                    <table className="w-full text-left text-sm">
+                      <thead className="bg-muted/70 border-b border-border text-foreground font-bold text-xs uppercase tracking-wider">
+                        <tr>
+                          <th className="py-3 px-4">{t.resultsThArea}</th>
+                          <th className="py-3 px-4">{t.resultsThMeasure}</th>
+                          <th className="py-3 px-4">{t.resultsThResult}</th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-[#DCE3EF]">
-                        {t.resultsRows.map((row, idx) => (
-                          <tr key={idx}>
-                            <td className="py-3.5 px-4 font-bold text-foreground whitespace-nowrap">{row.area}</td>
-                            <td className="py-3.5 px-4 text-foreground/75">{row.measure}</td>
-                            <td className="py-3.5 px-4 text-foreground font-medium">{row.result}</td>
-                          </tr>
-                        ))}
+                      <tbody className="divide-y divide-border/70 text-foreground/80 text-xs sm:text-sm">
+                        {t.resultsRows &&
+                          t.resultsRows.map((row, idx) => (
+                            <tr key={idx}>
+                              <td className="py-3 px-4 font-bold text-foreground">
+                                {row.area}
+                              </td>
+                              <td className="py-3 px-4">{row.measure}</td>
+                              <td className="py-3 px-4 font-semibold text-primary">
+                                {row.tbd ? (
+                                  <mark className="bg-[#FFF2A8] text-[#3D3300] px-1.5 py-0.5 rounded border border-[#E6D885]">
+                                    {row.result}
+                                  </mark>
+                                ) : (
+                                  row.result
+                                )}
+                              </td>
+                            </tr>
+                          ))}
                       </tbody>
                     </table>
                   </div>
-                </div>
+                </section>
 
-                {/* Section: Why this matters for consulting firms */}
-                <div className="space-y-4">
+                {/* Why This Matters for Consulting Firms */}
+                <section className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.whyMattersTitle}
                   </h2>
                   <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
                     {t.whyMattersDesc}
                   </p>
-                  <ul className="space-y-3 pt-2">
-                    {t.whyMattersPoints.map((pt, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-foreground/80">
-                        <span className="w-2 h-2 rounded-xs bg-[#FF7A1A] mt-2 shrink-0"></span>
-                        <span>
-                          <strong className="font-bold text-foreground">{pt.b}</strong>{pt.text}
-                        </span>
-                      </li>
-                    ))}
+                  <ul className="space-y-3 text-sm sm:text-base text-foreground/80">
+                    {t.whyMattersPoints &&
+                      t.whyMattersPoints.map((pt, idx) => (
+                        <li key={idx} className="flex items-start gap-2.5">
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                          <span>
+                            <strong className="text-foreground font-bold">
+                              {pt.b}
+                            </strong>{" "}
+                            {pt.text}
+                          </span>
+                        </li>
+                      ))}
                   </ul>
-                </div>
+                </section>
 
-                {/* Section: What's next */}
-                <div className="space-y-6">
+                {/* What's Next */}
+                <section className="space-y-3">
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                     {t.whatsNextTitle}
                   </h2>
                   <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
                     {t.whatsNextDesc}
                   </p>
-                  <div className="bg-[#F8FAFD] border border-[#DCE3EF] rounded-2xl p-6 sm:p-8 relative">
-                    <Quote className="w-8 h-8 text-primary/30 mb-3" />
-                    <blockquote className="text-base sm:text-lg font-medium leading-relaxed italic mb-4">
-                      &ldquo;{t.sunilQuote}&rdquo;
-                    </blockquote>
-                    <figcaption className="text-xs sm:text-sm text-foreground/70">
-                      <strong className="text-foreground block font-bold text-sm">
-                        {t.sunilAuthor}
-                      </strong>
-                      {t.sunilRole}
-                    </figcaption>
-                  </div>
-                </div>
+                </section>
 
-                {/* Section: About Boxes */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-[#DCE3EF]">
-                  <div className="space-y-2">
-                    <h3 className="text-base font-bold text-foreground">
+                {/* About Section */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-border pt-8">
+                  <div className="bg-muted/40 border border-border rounded-xl p-5">
+                    <h3 className="text-sm font-bold text-foreground mb-1.5">
                       {t.aboutEyTitle}
                     </h3>
-                    <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed">
+                    <p className="text-xs text-foreground/70 leading-relaxed">
                       {t.aboutEyDesc}
                     </p>
                   </div>
-                  <div className="space-y-2">
-                    <h3 className="text-base font-bold text-foreground">
+                  <div className="bg-muted/40 border border-border rounded-xl p-5">
+                    <h3 className="text-sm font-bold text-foreground mb-1.5">
                       {common.aboutThink4Ever}
                     </h3>
-                    <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed">
+                    <p className="text-xs text-foreground/70 leading-relaxed">
                       {common.aboutThink4EverDesc}
                     </p>
                   </div>
                 </div>
-              </div>
+              </main>
 
-              {/* Right Column: Sticky Factsheet */}
-              <aside className="sticky top-24 bg-[#F8FAFD] border border-[#DCE3EF] rounded-2xl p-6 space-y-6 shadow-xs">
-                <div>
-                  <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-muted-foreground block mb-4">
+              {/* Sticky Factsheet Sidebar */}
+              <aside className="lg:sticky lg:top-24 space-y-6">
+                <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
+                  <p className="text-xs font-mono font-bold tracking-wider uppercase text-muted-foreground mb-4">
                     {common.atAGlance}
-                  </span>
-                  <dl className="space-y-4 text-xs sm:text-sm">
+                  </p>
+                  <dl className="space-y-3.5 text-xs sm:text-sm">
                     <div>
-                      <dt className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground font-bold">
+                      <dt className="text-muted-foreground font-semibold">
                         {common.customer}
                       </dt>
-                      <dd className="font-semibold text-foreground mt-0.5">
+                      <dd className="text-foreground font-bold mt-0.5">
                         {t.factsCustomerVal}
                       </dd>
                     </div>
-                    <div>
-                      <dt className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground font-bold">
+                    <div className="border-t border-border/60 pt-3">
+                      <dt className="text-muted-foreground font-semibold">
                         {common.industry}
                       </dt>
-                      <dd className="font-semibold text-foreground mt-0.5">
+                      <dd className="text-foreground mt-0.5">
                         {t.factsIndustryVal}
                       </dd>
                     </div>
-                    <div>
-                      <dt className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground font-bold">
+                    <div className="border-t border-border/60 pt-3">
+                      <dt className="text-muted-foreground font-semibold">
                         {common.region}
                       </dt>
-                      <dd className="font-semibold text-foreground mt-0.5">
+                      <dd className="text-foreground mt-0.5">
                         {t.factsRegionVal}
                       </dd>
                     </div>
-                    <div>
-                      <dt className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground font-bold">
+                    <div className="border-t border-border/60 pt-3">
+                      <dt className="text-muted-foreground font-semibold">
                         {common.useCases}
                       </dt>
-                      <dd className="font-semibold text-foreground mt-0.5">
+                      <dd className="text-foreground mt-0.5 font-medium">
                         {t.factsUseCasesVal}
                       </dd>
                     </div>
-                    <div>
-                      <dt className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground font-bold">
+                    <div className="border-t border-border/60 pt-3">
+                      <dt className="text-muted-foreground font-semibold">
                         {common.think4everUsed}
                       </dt>
-                      <dd className="font-semibold text-foreground mt-0.5">
+                      <dd className="text-foreground mt-0.5">
                         {t.factsThinkVal}
                       </dd>
                     </div>
                   </dl>
+
+                  <div className="mt-6 pt-4 border-t border-border">
+                    <Button asChild size="lg" className="w-full rounded-full">
+                      <a href="https://portal.think4ever.com/#/register">
+                        {common.startFree}
+                      </a>
+                    </Button>
+                  </div>
                 </div>
-                <Button asChild size="default" className="w-full rounded-full">
-                  <a href="https://portal.think4ever.com/#/register">
-                    {common.startFree}
-                  </a>
-                </Button>
               </aside>
             </div>
-          </div>
-        
+          </Container>
+        </SectionCard>
       </section>
 
-      {/* ── 3. Bottom CTA (Clean Card Matching Site) ── */}
+      {/* ── 3. Bottom Card: Partner Pilot Band ── */}
       <section>
-        
-          <div className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 shadow-xs">
+        <SectionCard>
+          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
             <div className="max-w-2xl space-y-4 text-center sm:text-left">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase bg-[#F4F6FA] text-foreground border border-[#DCE3EF]">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
@@ -404,42 +464,42 @@ export default function EyStoryContent() {
                 </Button>
               </div>
             </div>
-          </div>
-        
+          </Container>
+        </SectionCard>
       </section>
 
-      {/* ── 4. Related Customer Stories (3 Cards) ── */}
+      {/* ── 4. Related Stories (White Card Matching Site) ── */}
       <section>
-        
-          <div className="mb-6">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0B1B3A] tracking-tight">
-            {common.moreCustomerStories}
-          </h2>
-        </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Card 1: YogiFi */}
+        <SectionCard>
+          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
+            <h2 className="text-xl sm:text-2xl font-extrabold text-foreground mb-6">
+              {common.moreCustomerStories}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <a
                 href={localizeHref("/customers/yogifi/")}
-                className="group flex flex-col justify-between bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all"
+                className="group bg-muted/20 border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="mb-3">
-                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
-                      Startups
-                    </span>
-                  </div>
-                  <div className="h-10 mb-3 flex items-center">
-                    <div className="bg-[#0B1B3A] px-2.5 py-1.5 rounded-md flex items-center">
+                  <span className="inline-flex items-center gap-1 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20 mb-3">
+                    <Rocket className="w-3 h-3" />
+                    Startups
+                  </span>
+                  <div className="h-8 mb-2 flex items-center">
+                    <div className="bg-[#0B1B3A] px-2 py-1 rounded inline-flex items-center">
                       <img
                         src="/images/customers/yogifi.png"
                         alt="YogiFi logo"
-                        className="max-h-5 max-w-[90px] object-contain"
+                        className="max-h-5 max-w-[80px] object-contain"
                       />
                     </div>
                   </div>
-                  <p className="text-sm text-foreground/70 leading-relaxed mb-6">
-                    {dict.index.cards[1].desc}
+                  <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    YogiFi
+                  </h3>
+                  <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-4">
+                    A founder with limited resources takes a new idea from
+                    requirements to a deployed product.
                   </p>
                 </div>
                 <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
@@ -447,51 +507,28 @@ export default function EyStoryContent() {
                 </span>
               </a>
 
-              {/* Card 2: Insignian Homes */}
               <a
                 href={localizeHref("/customers/insignian-homes/")}
-                className="group flex flex-col justify-between bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all"
+                className="group bg-muted/20 border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="mb-3">
-                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
-                      Enterprise
-                    </span>
-                  </div>
-                  <div className="h-12 mb-3 flex items-center">
+                  <span className="inline-flex items-center gap-1 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20 mb-3">
+                    <Factory className="w-3 h-3" />
+                    Enterprise
+                  </span>
+                  <div className="h-8 mb-2 flex items-center">
                     <img
                       src="/images/customers/insignian-homes.png"
                       alt="Insignian Homes logo"
-                      className="max-h-11 max-w-[140px] object-contain"
+                      className="max-h-6 max-w-[100px] object-contain"
                     />
                   </div>
-                  <p className="text-sm text-foreground/70 leading-relaxed mb-6">
-                    {dict.index.cards[2].desc}
-                  </p>
-                </div>
-                <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                  {common.readStory}
-                </span>
-              </a>
-
-              {/* Card 3: Security */}
-              <a
-                href={localizeHref("/customers/security-incident-response/")}
-                className="group flex flex-col justify-between bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all"
-              >
-                <div>
-                  <div className="mb-3">
-                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
-                      Security
-                    </span>
-                  </div>
-                  <div className="h-10 mb-3 flex items-center">
-                    <span className="text-base font-bold text-foreground">Jake Williams</span>
-                  </div>
-                  <p className="text-sm text-foreground/70 leading-relaxed mb-6">
-                    {dict.index.cards[3].desc}
+                  <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    Insignian Homes
+                  </h3>
+                  <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-4">
+                    A global exporter replaces per-seat SaaS with applications it
+                    designs and owns, starting with CRM.
                   </p>
                 </div>
                 <span className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
@@ -499,8 +536,9 @@ export default function EyStoryContent() {
                 </span>
               </a>
             </div>
+          </Container>
+        </SectionCard>
       </section>
-      </div>
     </div>
   );
 }

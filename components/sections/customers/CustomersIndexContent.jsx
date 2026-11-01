@@ -24,11 +24,11 @@ export default function CustomersIndexContent() {
   };
 
   return (
-    <div className="py-6 md:py-10 space-y-8 sm:space-y-12 bg-[#F4F6FA]">
+    <div className="py-6 md:py-10 space-y-8 sm:space-y-12">
       {/* ── 1. Masthead Hero ── */}
       <section>
         <SectionCard>
-          <Container className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs">
+          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs">
             <div className="max-w-4xl mx-auto text-center">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase bg-[#F4F6FA] text-foreground border border-[#DCE3EF] mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
@@ -50,7 +50,7 @@ export default function CustomersIndexContent() {
       {/* ── 2. Featured Story (EY Caribbean) ── */}
       <section>
         <SectionCard>
-          <Container className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 shadow-xs">
+          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
               {/* Left Column: Lead */}
               <div>
@@ -100,7 +100,7 @@ export default function CustomersIndexContent() {
       {/* ── 3. Find a story like yours (Grid: 4 Cards) ── */}
       <section>
         <SectionCard>
-          <Container className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 shadow-xs">
+          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
             <div className="mb-8 text-center sm:text-left">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                 {t.fitTitle}
@@ -164,7 +164,7 @@ export default function CustomersIndexContent() {
       {/* ── 4. Quotes (Grid: 4 Quotes) ── */}
       <section>
         <SectionCard>
-          <Container className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 shadow-xs">
+          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
             <div className="mb-8 text-center sm:text-left">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase bg-[#F4F6FA] text-foreground border border-[#DCE3EF] mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
@@ -199,26 +199,26 @@ export default function CustomersIndexContent() {
         </SectionCard>
       </section>
 
-      {/* ── 5. Blue Band CTA Card ── */}
+      {/* ── 5. Partner Pilot Band (Clean Card Matching Site) ── */}
       <section>
         <SectionCard>
-          <Container className="bg-[#093CAD] text-white rounded-2xl p-6 sm:p-10 shadow-lg">
+          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
             <div className="max-w-2xl space-y-4">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase bg-white/10 text-white border border-white/20">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase bg-[#F4F6FA] text-foreground border border-[#DCE3EF]">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]"></span>
                 {t.blueBandEyebrow}
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                 {t.blueBandTitle}
               </h2>
-              <p className="text-sm sm:text-base text-white/85 leading-relaxed">
+              <p className="text-sm sm:text-base text-foreground/75 leading-relaxed">
                 {t.blueBandDesc}
               </p>
               <div className="flex flex-wrap items-center gap-3 pt-2">
-                <Button asChild size="lg" className="bg-white text-[#093CAD] hover:bg-white/90 rounded-full font-bold">
+                <Button asChild size="lg" className="rounded-full">
                   <a href={localizeHref("/contact-us/")}>{t.blueBandBtn1}</a>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 rounded-full">
+                <Button asChild variant="outline" size="lg" className="rounded-full">
                   <a href={localizeHref("/customers/ey/")}>{t.blueBandBtn2}</a>
                 </Button>
               </div>
@@ -230,7 +230,7 @@ export default function CustomersIndexContent() {
       {/* ── 6. Write the next story with us (Clean White Card) ── */}
       <section>
         <SectionCard>
-          <Container className="bg-white border border-[#DCE3EF] rounded-2xl p-6 sm:p-10 shadow-xs">
+          <Container className="bg-white border border-border/80 rounded-2xl p-6 sm:p-10 shadow-xs">
             <div className="max-w-2xl space-y-3 text-center sm:text-left">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground">
                 {t.nextStoryTitle}
