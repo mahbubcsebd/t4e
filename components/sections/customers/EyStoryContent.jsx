@@ -480,8 +480,8 @@ export default function EyStoryContent() {
             <h2 className="text-xl sm:text-2xl font-extrabold text-foreground mb-6">
               {common.moreCustomerStories}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {/* Temporarily commented out per client request until YogiFi page is finalized
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {/* YogiFi */}
               <a
                 href={localizeHref("/customers/yogifi/")}
                 className="group bg-muted/20 border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
@@ -514,7 +514,6 @@ export default function EyStoryContent() {
                   {common.readStory}
                 </span>
               </a>
-              */}
 
               {/* Insignian Homes */}
               <a

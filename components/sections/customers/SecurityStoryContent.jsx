@@ -465,7 +465,7 @@ export default function SecurityStoryContent() {
             <h2 className="text-xl sm:text-2xl font-extrabold text-foreground mb-6">
               {common.moreCustomerStories}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {/* EY Caribbean */}
               <a
                 href={localizeHref("/customers/ey/")}
@@ -496,8 +496,7 @@ export default function SecurityStoryContent() {
                   {common.readStory}
                 </span>
               </a>
-
-              {/* Temporarily commented out per client request until YogiFi page is finalized
+              {/* YogiFi */}
               <a
                 href={localizeHref("/customers/yogifi/")}
                 className="group bg-muted/20 border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
@@ -530,7 +529,6 @@ export default function SecurityStoryContent() {
                   {common.readStory}
                 </span>
               </a>
-              */}
 
               {/* Insignian Homes */}
               <a

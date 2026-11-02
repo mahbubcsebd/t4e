@@ -110,7 +110,7 @@ export default function CustomersIndexContent() {
               </h2>
             </div>
 
-            <div className={`grid grid-cols-1 sm:grid-cols-2 ${t.cards.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-4"} gap-6`}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {t.cards.map((card, idx) => (
                 <a
                   key={idx}
