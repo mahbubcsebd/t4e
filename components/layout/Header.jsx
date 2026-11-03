@@ -611,12 +611,12 @@ export default function Header() {
           >
             {t('nav.customers', 'Customers')}
           </Link>
-          {/* <Link
+          <Link
             href={localizeHref('/marketplace')}
             className="hover:text-white transition-colors whitespace-nowrap"
           >
             {t('nav.marketplace', 'Marketplace')}
-          </Link> */}
+          </Link>
         </nav>
 
         {/* Right Action Items */}
@@ -1032,7 +1032,7 @@ export default function Header() {
               </Link>
             </div>
 
-            {/* <div className="py-1 mb-2">
+            <div className="py-1 mb-2">
               <Link
                 href={localizeHref('/marketplace')}
                 onClick={() => setMobileMenuOpen(false)}
@@ -1040,7 +1040,7 @@ export default function Header() {
               >
                 {t('nav.marketplace', 'Marketplace')}
               </Link>
-            </div> */}
+            </div>
 
             <div className="pt-2 pb-2 grid grid-cols-2 gap-2">
               <Button asChild variant="outline" className="w-full text-center">
