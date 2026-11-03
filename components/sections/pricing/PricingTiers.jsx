@@ -29,33 +29,34 @@ export default function PricingTiers() {
       href: "https://portal.think4ever.com/#/register",
       featured: false,
     },
-    {
-      tag: t("pricingPage.plan2Tag"),
-      badge: t("pricingPage.plan2Badge", "POPULAR"),
-      badgeColor: "orange",
-      name: t("pricingPage.plan2Name"),
-      price: t("pricingPage.plan2Price"),
-      desc: t("pricingPage.plan2Desc"),
-      limits: t("pricingPage.plan2Limits") || [],
-      list: t("pricingPage.plan2List") || [],
-      btnText: t("pricingPage.plan2Btn"),
-      href: "https://portal.think4ever.com/#/register",
-      featured: true,
-    },
-    {
-      tag: t("pricingPage.plan3Tag"),
-      badge: t("pricingPage.plan3Badge", "FOR TEAMS"),
-      badgeColor: "blue",
-      name: t("pricingPage.plan3Name"),
-      price: t("pricingPage.plan3Price"),
-      desc: t("pricingPage.plan3Desc"),
-      limits: t("pricingPage.plan3Limits") || [],
-      list: t("pricingPage.plan3List") || [],
-      btnText: t("pricingPage.plan3Btn"),
-      href: "/contact-us/",
-      featured: false,
-      team: true,
-    },
+    // TEMPORARILY HIDDEN (client request): Think New + Think Big. Uncomment to restore.
+    // {
+    //   tag: t("pricingPage.plan2Tag"),
+    //   badge: t("pricingPage.plan2Badge", "POPULAR"),
+    //   badgeColor: "orange",
+    //   name: t("pricingPage.plan2Name"),
+    //   price: t("pricingPage.plan2Price"),
+    //   desc: t("pricingPage.plan2Desc"),
+    //   limits: t("pricingPage.plan2Limits") || [],
+    //   list: t("pricingPage.plan2List") || [],
+    //   btnText: t("pricingPage.plan2Btn"),
+    //   href: "https://portal.think4ever.com/#/register",
+    //   featured: true,
+    // },
+    // {
+    //   tag: t("pricingPage.plan3Tag"),
+    //   badge: t("pricingPage.plan3Badge", "FOR TEAMS"),
+    //   badgeColor: "blue",
+    //   name: t("pricingPage.plan3Name"),
+    //   price: t("pricingPage.plan3Price"),
+    //   desc: t("pricingPage.plan3Desc"),
+    //   limits: t("pricingPage.plan3Limits") || [],
+    //   list: t("pricingPage.plan3List") || [],
+    //   btnText: t("pricingPage.plan3Btn"),
+    //   href: "/contact-us/",
+    //   featured: false,
+    //   team: true,
+    // },
     {
       tag: t("pricingPage.plan4Tag"),
       name: t("pricingPage.plan4Name"),
@@ -65,7 +66,7 @@ export default function PricingTiers() {
       list: t("pricingPage.plan4List") || [],
       btnText: t("pricingPage.plan4Btn"),
       href: "/contact-us/",
-      featured: false,
+      featured: true,
     },
   ];
 
@@ -73,7 +74,11 @@ export default function PricingTiers() {
     <section className="py-6 md:py-8 lg:py-12 border-b border-border" id="plans">
       <SectionCard>
         <Container>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 items-stretch">
+          <div
+            className={`grid sm:grid-cols-2 gap-4 lg:gap-6 items-stretch ${
+              plans.length > 2 ? "lg:grid-cols-4" : "max-w-4xl mx-auto"
+            }`}
+          >
             {plans.map((plan, idx) => (
               <div
                 key={idx}

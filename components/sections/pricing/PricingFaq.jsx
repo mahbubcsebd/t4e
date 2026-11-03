@@ -10,7 +10,7 @@ import SectionCard from "@/components/layout/SectionCard";
 
 export default function PricingFaq() {
   const { t, language } = useLanguage();
-  const [openIndex, setOpenIndex] = useState(0); // first item open by default like HTML
+  const [openIndex, setOpenIndex] = useState(null); // all items closed initially
 
   const localizeHref = (href) => {
     if (language === 'en' || !href.startsWith('/')) return href;
