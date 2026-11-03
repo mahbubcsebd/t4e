@@ -452,12 +452,12 @@ export default function Header() {
               </Link>
             </div>
           </div>
-          {/* <Link
-            href={localizeHref('/marketplace')}
+          <Link
+            href={localizeHref('/marketplaces')}
             className="hover:text-white transition-colors whitespace-nowrap"
           >
             {t('nav.marketplace', 'Marketplace')}
-          </Link> */}
+          </Link>
           <Link
             href={localizeHref('/integrations')}
             className="hover:text-white transition-colors whitespace-nowrap"
@@ -612,12 +612,6 @@ export default function Header() {
             className="hover:text-white transition-colors whitespace-nowrap"
           >
             {t('nav.customers', 'Customers')}
-          </Link>
-          <Link
-            href={localizeHref('/marketplace')}
-            className="hover:text-white transition-colors whitespace-nowrap"
-          >
-            {t('nav.marketplace', 'Marketplace')}
           </Link>
         </nav>
 
@@ -866,7 +860,7 @@ export default function Header() {
 
             <div className="py-1">
               <Link
-                href={localizeHref('/marketplace')}
+                href={localizeHref('/marketplaces')}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
               >
@@ -1032,7 +1026,7 @@ export default function Header() {
 
             {/* <div className="py-1 mb-2">
               <Link
-                href={localizeHref('/marketplace')}
+                href={localizeHref('/marketplaces')}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
               >
