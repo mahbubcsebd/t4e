@@ -3,11 +3,13 @@
 import React from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import { useAuthModal } from "@/context/AuthModalContext";
 import { Button } from "@/components/ui/button";
 import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function PricingHero() {
   const { t } = useLanguage();
+  const { openAuthModal } = useAuthModal();
 
   return (
     <section className="pt-8 lg:pt-12 pb-4 lg:pb-8 bg-background border-b border-border text-center">
@@ -28,10 +30,11 @@ export default function PricingHero() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 mb-4">
-          <Button asChild className="shadow-md shadow-primary/25">
-            <Link href="https://portal.think4ever.com/#/register">
-              {t("pricingPage.heroCtaPrimary")}
-            </Link>
+          <Button
+            onClick={() => openAuthModal("signup")}
+            className="shadow-md shadow-primary/25 cursor-pointer"
+          >
+            {t("pricingPage.heroCtaPrimary")}
           </Button>
         </div>
 

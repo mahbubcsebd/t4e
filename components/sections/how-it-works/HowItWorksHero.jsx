@@ -3,11 +3,13 @@
 import React from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import { useAuthModal } from "@/context/AuthModalContext";
 import { Button } from "@/components/ui/button";
 import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function HowItWorksHero() {
   const { t, language } = useLanguage();
+  const { openAuthModal } = useAuthModal();
   const localizeHref = (href) => language === "en" ? href : `/${language}${href}`;
 
   return (
@@ -29,10 +31,11 @@ export default function HowItWorksHero() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
-          <Button asChild className="w-full sm:w-auto">
-            <Link href="https://portal.think4ever.com/#/register">
-              {t("howItWorksPage.heroCtaPrimary")}
-            </Link>
+          <Button
+            onClick={() => openAuthModal("signup")}
+            className="w-full sm:w-auto cursor-pointer"
+          >
+            {t("howItWorksPage.heroCtaPrimary")}
           </Button>
           <Button asChild variant="outline" className="w-full sm:w-auto">
             <Link href={localizeHref("/code-to-design/")}>

@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/LanguageContext';
+import { useAuthModal } from '@/context/AuthModalContext';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   BookOpen,
@@ -30,6 +31,7 @@ import { useEffect, useRef, useState } from 'react';
 export default function Header() {
   const { t, language, setLanguage, availableLanguages, getLocalizedPathname } =
     useLanguage();
+  const { openAuthModal } = useAuthModal();
   const router = useRouter();
   const pathname = usePathname();
 
@@ -611,12 +613,12 @@ export default function Header() {
           >
             {t('nav.customers', 'Customers')}
           </Link>
-          {/* <Link
+          <Link
             href={localizeHref('/marketplace')}
             className="hover:text-white transition-colors whitespace-nowrap"
           >
             {t('nav.marketplace', 'Marketplace')}
-          </Link> */}
+          </Link>
         </nav>
 
         {/* Right Action Items */}
@@ -690,23 +692,19 @@ export default function Header() {
 
           {/* Sign in text link */}
           <Button
-            asChild
             variant="ghost"
-            className="text-white hover:text-white hover:bg-white/10 font-medium px-2.5 xl:px-4 py-2 text-xs xl:text-sm h-8 xl:h-9"
+            onClick={() => openAuthModal('signin')}
+            className="text-white hover:text-white hover:bg-white/10 font-medium px-2.5 xl:px-4 py-2 text-xs xl:text-sm h-8 xl:h-9 cursor-pointer"
           >
-            <Link href="https://portal.think4ever.com/#/login">
-              {t('nav.signIn')}
-            </Link>
+            {t('nav.signIn')}
           </Button>
 
           {/* Start free button */}
           <Button
-            asChild
-            className="bg-white text-[#093cad] hover:bg-gray-100 shadow-none font-bold px-3 xl:px-5 py-2 text-xs xl:text-sm h-8 xl:h-9"
+            onClick={() => openAuthModal('signup')}
+            className="bg-white text-[#093cad] hover:bg-gray-100 shadow-none font-bold px-3 xl:px-5 py-2 text-xs xl:text-sm h-8 xl:h-9 cursor-pointer"
           >
-            <Link href="https://portal.think4ever.com/#/register">
-              {t('nav.startFree')}
-            </Link>
+            {t('nav.startFree')}
           </Button>
         </div>
 
@@ -867,13 +865,13 @@ export default function Header() {
             </div>
 
             <div className="py-1">
-              {/* <Link
+              <Link
                 href={localizeHref('/marketplace')}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
               >
                 {t('nav.marketplace', 'Marketplace')}
-              </Link> */}
+              </Link>
               <Link
                 href={localizeHref('/integrations')}
                 onClick={() => setMobileMenuOpen(false)}
@@ -1043,21 +1041,24 @@ export default function Header() {
             </div> */}
 
             <div className="pt-2 pb-2 grid grid-cols-2 gap-2">
-              <Button asChild variant="outline" className="w-full text-center">
-                <Link
-                  href="https://portal.think4ever.com/#/login"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {t('nav.signIn')}
-                </Link>
+              <Button
+                variant="outline"
+                className="w-full text-center cursor-pointer"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  openAuthModal('signin');
+                }}
+              >
+                {t('nav.signIn')}
               </Button>
-              <Button asChild className="w-full text-center">
-                <Link
-                  href="https://portal.think4ever.com/#/register"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {t('nav.startFree')}
-                </Link>
+              <Button
+                className="w-full text-center cursor-pointer"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  openAuthModal('signup');
+                }}
+              >
+                {t('nav.startFree')}
               </Button>
             </div>
           </motion.div>

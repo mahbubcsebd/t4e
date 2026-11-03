@@ -3,12 +3,14 @@
 import React from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import { useAuthModal } from "@/context/AuthModalContext";
 import { Button } from "@/components/ui/button";
 import CodingToolPills from "@/components/ui/CodingToolPills";
 import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function IntegrationsHero() {
   const { t } = useLanguage();
+  const { openAuthModal } = useAuthModal();
 
   return (
     <section className="pt-8 lg:pt-12 pb-4 lg:pb-8 bg-background border-b border-border text-center">
@@ -29,10 +31,11 @@ export default function IntegrationsHero() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <Button asChild className="shadow-md shadow-primary/25">
-            <Link href="https://portal.think4ever.com/#/register">
-              {t("nav.startFree")}
-            </Link>
+          <Button
+            onClick={() => openAuthModal("signup")}
+            className="shadow-md shadow-primary/25 cursor-pointer"
+          >
+            {t("nav.startFree")}
           </Button>
           {/* <a
             href="https://think4ever.com/docs/onboarding.html"

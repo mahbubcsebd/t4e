@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import { useAuthModal } from "@/context/AuthModalContext";
 import Container from "@/components/layout/Container";
 import SectionHeading from "@/components/layout/SectionHeading";
 import SectionCard from "@/components/layout/SectionCard";
@@ -10,6 +11,7 @@ import { Button } from "@/components/ui/button";
 
 export default function PricingCta() {
   const { t, language } = useLanguage();
+  const { openAuthModal } = useAuthModal();
 
   const localizeHref = (href) => {
     if (language === 'en' || !href.startsWith('/')) return href;
@@ -32,10 +34,12 @@ export default function PricingCta() {
             />
 
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button asChild size="lg" className="shadow-lg shadow-primary/25">
-                <Link href="https://portal.think4ever.com/#/register">
-                  {t("pricingPage.ctaBtnPrimary", "Analyze a project →")}
-                </Link>
+              <Button
+                size="lg"
+                onClick={() => openAuthModal("signup")}
+                className="shadow-lg shadow-primary/25 cursor-pointer"
+              >
+                {t("pricingPage.ctaBtnPrimary", "Analyze a project →")}
               </Button>
               <Button asChild variant="outline" size="lg" className="border-border">
                 <Link href={localizeHref("/contact-us/")}>
