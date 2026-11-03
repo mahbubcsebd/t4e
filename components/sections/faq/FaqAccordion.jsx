@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import { useAuthModal } from "@/context/AuthModalContext";
 import { ChevronDown } from "lucide-react";
 import Container from "@/components/layout/Container";
 import SectionCard from "@/components/layout/SectionCard";
@@ -11,6 +12,7 @@ import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function FaqAccordion() {
   const { t, language } = useLanguage();
+  const { openAuthModal } = useAuthModal();
   const localizeHref = (href) => language === "en" ? href : `/${language}${href}`;
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -43,10 +45,11 @@ export default function FaqAccordion() {
           </p>
 
           <div className="flex justify-center gap-4">
-            <Button asChild className="shadow-md shadow-primary/25">
-              <Link href="https://portal.think4ever.com/#/register">
-                {t("faqPage.heroCtaPrimary")}
-              </Link>
+            <Button
+              onClick={() => openAuthModal("signup")}
+              className="shadow-md shadow-primary/25 cursor-pointer"
+            >
+              {t("faqPage.heroCtaPrimary")}
             </Button>
             <Button
               asChild

@@ -1,6 +1,7 @@
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { AuthModalProvider } from "@/context/AuthModalContext";
 import { ThemeProvider } from "@/components/theme-provider";
 import Script from "next/script";
 import ChunkErrorHandler from "@/components/chunk-error-handler";
@@ -61,7 +62,9 @@ export default function RootLayout({ children }) {
         >
           <ChunkErrorHandler />
           <LanguageProvider>
-            {children}
+            <AuthModalProvider>
+              {children}
+            </AuthModalProvider>
           </LanguageProvider>
         </ThemeProvider>
       </body>

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
 import { useLanguage } from "@/context/LanguageContext";
+import { useAuthModal } from "@/context/AuthModalContext";
 import {
   ArrowRight,
   Quote,
@@ -14,6 +15,7 @@ import { customersTranslations } from "@/lib/i18n/customersTranslations";
 
 export default function CustomersIndexContent() {
   const { language } = useLanguage();
+  const { openAuthModal } = useAuthModal();
   const dict = customersTranslations[language === "es" ? "es" : "en"];
   const t = dict.index;
   const common = dict.common;
@@ -246,10 +248,12 @@ export default function CustomersIndexContent() {
                 {t.nextStoryDesc}
               </p>
               <div className="flex flex-wrap gap-3 pt-2 justify-center sm:justify-start">
-                <Button asChild size="default" className="rounded-full">
-                  <a href="https://portal.think4ever.com/#/register">
-                    {t.nextStoryBtn1}
-                  </a>
+                <Button
+                  size="default"
+                  className="rounded-full cursor-pointer"
+                  onClick={() => openAuthModal("signup")}
+                >
+                  {t.nextStoryBtn1}
                 </Button>
                 <Button asChild variant="outline" size="default" className="rounded-full">
                   <a href={localizeHref("/contact-us/")}>{t.nextStoryBtn2}</a>

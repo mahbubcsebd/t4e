@@ -7,9 +7,11 @@ import Footer from "@/components/layout/Footer";
 import SectionCard from "@/components/layout/SectionCard";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
+import { useAuthModal } from "@/context/AuthModalContext";
 
 export default function NotFound() {
   const { t } = useLanguage();
+  const { openAuthModal } = useAuthModal();
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -36,10 +38,11 @@ export default function NotFound() {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button asChild className="shadow-md shadow-primary/25 min-w-[220px] h-12 text-[15px] font-semibold transition-all hover:scale-105">
-                  <Link href="https://portal.think4ever.com/#/register">
-                    {t("notFoundPage.ctaPrimary") || "Analyze a project"}
-                  </Link>
+                <Button
+                  onClick={() => openAuthModal("signup")}
+                  className="shadow-md shadow-primary/25 min-w-[220px] h-12 text-[15px] font-semibold transition-all hover:scale-105 cursor-pointer"
+                >
+                  {t("notFoundPage.ctaPrimary") || "Analyze a project"}
                 </Button>
                 <Button asChild variant="outline" className="min-w-[220px] h-12 bg-card hover:bg-muted border-border text-[15px] font-medium transition-all hover:border-primary/30">
                   <Link href="/">

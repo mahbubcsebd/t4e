@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
 import { useLanguage } from "@/context/LanguageContext";
+import { useAuthModal } from "@/context/AuthModalContext";
 import {
   ArrowLeft,
   Quote,
@@ -20,6 +21,7 @@ import { customersTranslations } from "@/lib/i18n/customersTranslations";
 
 export default function EyStoryContent() {
   const { language } = useLanguage();
+  const { openAuthModal } = useAuthModal();
   const dict = customersTranslations[language === "es" ? "es" : "en"] || customersTranslations.en;
   const t = dict.ey;
   const common = dict.common;
@@ -432,10 +434,12 @@ export default function EyStoryContent() {
                   </dl>
 
                   <div className="mt-6 pt-4 border-t border-border">
-                    <Button asChild size="lg" className="w-full rounded-full">
-                      <a href="https://portal.think4ever.com/#/register">
-                        {common.startFree}
-                      </a>
+                    <Button
+                      size="lg"
+                      className="w-full rounded-full cursor-pointer"
+                      onClick={() => openAuthModal("signup")}
+                    >
+                      {common.startFree}
                     </Button>
                   </div>
                 </div>
@@ -464,8 +468,13 @@ export default function EyStoryContent() {
                 <Button asChild size="default" className="rounded-full">
                   <a href={localizeHref("/contact-us/")}>{t.ctaBtn1}</a>
                 </Button>
-                <Button asChild variant="outline" size="default" className="rounded-full">
-                  <a href="https://portal.think4ever.com/#/register">{t.ctaBtn2}</a>
+                <Button
+                  variant="outline"
+                  size="default"
+                  className="rounded-full cursor-pointer"
+                  onClick={() => openAuthModal("signup")}
+                >
+                  {t.ctaBtn2}
                 </Button>
               </div>
             </div>

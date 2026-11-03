@@ -6,10 +6,12 @@ import Container from "@/components/layout/Container";
 
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
+import { useAuthModal } from "@/context/AuthModalContext";
 import Link from "next/link";
 
 export default function CtaSection() {
   const { t } = useLanguage();
+  const { openAuthModal } = useAuthModal();
 
   return (
     <section className="py-6 md:py-8 lg:py-12 " id="register">
@@ -29,12 +31,11 @@ export default function CtaSection() {
             {/* CTA Button */}
             <div className="flex justify-center w-full">
               <Button
-                asChild
-                className="w-full sm:w-auto max-w-xs sm:max-w-none"
+                size="lg"
+                onClick={() => openAuthModal("signup")}
+                className="w-full sm:w-auto max-w-xs sm:max-w-none cursor-pointer"
               >
-                <Link href="https://portal.think4ever.com/#/register">
-                  {t("cta.btn")}
-                </Link>
+                {t("cta.btn")}
               </Button>
             </div>
           </div>

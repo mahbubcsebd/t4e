@@ -9,9 +9,11 @@ import MarketplaceSection from '@/components/marketplace/ui/MarketplaceSection';
 import MarketplaceContainer from '@/components/marketplace/ui/MarketplaceContainer';
 import Eyebrow from "@/components/ui/Eyebrow";
 import { useLanguage } from '@/context/LanguageContext';
+import { useAuthModal } from '@/context/AuthModalContext';
 
 export default function MarketplaceCta() {
   const { t } = useLanguage();
+  const { openAuthModal } = useAuthModal();
 
   const guarantees = [
     t('marketplace.cta.g1', 'Free to join on the Think Free plan'),
@@ -52,16 +54,19 @@ export default function MarketplaceCta() {
               </ul>
 
               <div className="flex flex-wrap justify-center gap-4 w-full sm:w-auto">
-                <Button asChild className="w-full sm:w-auto shadow-sm shadow-primary/20">
-                  <Link href="https://portal.think4ever.com/#/login">
-                    {t('marketplace.cta.startHiring', 'Start Hiring')}
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
+                <Button
+                  onClick={() => openAuthModal("signin")}
+                  className="w-full sm:w-auto shadow-sm shadow-primary/20 cursor-pointer"
+                >
+                  {t('marketplace.cta.startHiring', 'Start Hiring')}
+                  <ArrowRight className="w-4 h-4 ml-1.5 inline" />
                 </Button>
-                <Button asChild variant="outline" className="w-full sm:w-auto">
-                  <Link href="https://portal.think4ever.com/#/register">
-                    {t('marketplace.cta.apply', 'Apply as Talent')}
-                  </Link>
+                <Button
+                  variant="outline"
+                  onClick={() => openAuthModal("signup")}
+                  className="w-full sm:w-auto cursor-pointer"
+                >
+                  {t('marketplace.cta.apply', 'Apply as Talent')}
                 </Button>
               </div>
             </div>

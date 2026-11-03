@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
 import { useLanguage } from "@/context/LanguageContext";
+import { useAuthModal } from "@/context/AuthModalContext";
 import {
   ArrowLeft,
   Quote,
@@ -18,6 +19,7 @@ import { customersTranslations } from "@/lib/i18n/customersTranslations";
 
 export default function YogiFiStoryContent() {
   const { language } = useLanguage();
+  const { openAuthModal } = useAuthModal();
   const dict = customersTranslations[language === "es" ? "es" : "en"] || customersTranslations.en;
   const t = dict.yogifi;
   const common = dict.common;
@@ -393,10 +395,12 @@ export default function YogiFiStoryContent() {
                   </dl>
 
                   <div className="mt-6 pt-4 border-t border-border">
-                    <Button asChild size="lg" className="w-full rounded-full">
-                      <a href="https://portal.think4ever.com/#/register">
-                        {common.startFree}
-                      </a>
+                    <Button
+                      size="lg"
+                      className="w-full rounded-full cursor-pointer"
+                      onClick={() => openAuthModal("signup")}
+                    >
+                      {common.startFree}
                     </Button>
                   </div>
                 </div>
@@ -422,8 +426,12 @@ export default function YogiFiStoryContent() {
                 {t.ctaDesc}
               </p>
               <div className="flex flex-wrap items-center gap-3 pt-2 justify-center sm:justify-start">
-                <Button asChild size="default" className="rounded-full">
-                  <a href="https://portal.think4ever.com/#/register">{t.ctaBtn1}</a>
+                <Button
+                  size="default"
+                  className="rounded-full cursor-pointer"
+                  onClick={() => openAuthModal("signup")}
+                >
+                  {t.ctaBtn1}
                 </Button>
                 <Button asChild variant="outline" size="default" className="rounded-full">
                   <a href={localizeHref("/contact-us/")}>{t.ctaBtn2}</a>

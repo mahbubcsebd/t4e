@@ -5,6 +5,7 @@ import SectionCard from "@/components/layout/SectionCard";
 import CodingToolPills from "@/components/ui/CodingToolPills";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
+import { useAuthModal } from "@/context/AuthModalContext";
 import { AnimatePresence, motion } from "framer-motion";
 import { Box, CheckCircle2, Code2, LayoutTemplate, Play } from "lucide-react";
 import Link from "next/link";
@@ -13,6 +14,7 @@ import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function HeroSection() {
   const { t } = useLanguage();
+  const { openAuthModal } = useAuthModal();
   const [activeScene, setActiveScene] = useState(1);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [videoId, setVideoId] = useState("");
@@ -54,10 +56,11 @@ export default function HeroSection() {
 
               {/* Hero CTAs */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 w-full sm:w-auto mb-4">
-                <Button asChild className="w-full sm:w-auto">
-                  <Link href="https://portal.think4ever.com/#/register">
-                    {t("hero.ctaPrimary")}
-                  </Link>
+                <Button
+                  onClick={() => openAuthModal("signup")}
+                  className="w-full sm:w-auto cursor-pointer"
+                >
+                  {t("hero.ctaPrimary")}
                 </Button>
                 <Button
                   variant="outline"

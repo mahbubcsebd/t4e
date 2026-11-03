@@ -8,9 +8,11 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import MarketplaceContainer from '@/components/marketplace/ui/MarketplaceContainer';
 import { useLanguage } from '@/context/LanguageContext';
+import { useAuthModal } from '@/context/AuthModalContext';
 
 export default function MarketplaceHero() {
   const { t } = useLanguage();
+  const { openAuthModal } = useAuthModal();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -68,17 +70,20 @@ export default function MarketplaceHero() {
               variants={itemVariants}
               className="flex flex-wrap items-center justify-center lg:justify-start gap-4 w-full sm:w-auto mb-4"
             >
-              <Button asChild className="w-full sm:w-auto">
-                <Link href="https://portal.think4ever.com/#/register">
-                  {t('marketplace.hero.findTalent', 'Find Talent')}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+              <Button
+                onClick={() => openAuthModal("signup")}
+                className="w-full sm:w-auto cursor-pointer"
+              >
+                {t('marketplace.hero.findTalent', 'Find Talent')}
+                <ArrowRight className="w-4 h-4 ml-1.5 inline" />
               </Button>
 
-              <Button asChild variant="outline" className="w-full sm:w-auto">
-                <Link href="https://portal.think4ever.com/#/register">
-                  {t('marketplace.hero.findWork', 'Find Work')}
-                </Link>
+              <Button
+                variant="outline"
+                onClick={() => openAuthModal("signup")}
+                className="w-full sm:w-auto cursor-pointer"
+              >
+                {t('marketplace.hero.findWork', 'Find Work')}
               </Button>
             </motion.div>
 

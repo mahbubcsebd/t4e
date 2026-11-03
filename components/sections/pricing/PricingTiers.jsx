@@ -3,12 +3,14 @@
 import React from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import { useAuthModal } from "@/context/AuthModalContext";
 import { Check } from "lucide-react";
 import Container from "@/components/layout/Container";
 import SectionCard from "@/components/layout/SectionCard";
 
 export default function PricingTiers() {
   const { t, language } = useLanguage();
+  const { openAuthModal } = useAuthModal();
 
   const localizeHref = (href) => {
     if (language === 'en' || !href.startsWith('/')) return href;
@@ -172,18 +174,34 @@ export default function PricingTiers() {
                 </div>
 
                 <div className="relative z-10 mt-auto">
-                  <Link
-                    href={localizeHref(plan.href)}
-                    className={`flex w-full items-center justify-center rounded-full text-sm font-bold py-3.5 transition-all duration-300 ${
-                      plan.featured
-                        ? "bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-600/25 hover:shadow-xl hover:shadow-amber-600/40 hover:-translate-y-0.5"
-                        : plan.team
-                        ? "bg-[#093cad] hover:bg-[#072d82] text-white shadow-lg shadow-[#093cad]/25 hover:shadow-xl hover:shadow-[#093cad]/40 hover:-translate-y-0.5"
-                        : "bg-muted text-foreground border border-border/60 hover:bg-muted/80 hover:border-border hover:text-foreground"
-                    }`}
-                  >
-                    <span>{plan.btnText}</span>
-                  </Link>
+                  {plan.href.includes("portal.think4ever.com") ? (
+                    <button
+                      type="button"
+                      onClick={() => openAuthModal("signup")}
+                      className={`flex w-full items-center justify-center rounded-full text-sm font-bold py-3.5 transition-all duration-300 cursor-pointer ${
+                        plan.featured
+                          ? "bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-600/25 hover:shadow-xl hover:shadow-amber-600/40 hover:-translate-y-0.5"
+                          : plan.team
+                          ? "bg-[#093cad] hover:bg-[#072d82] text-white shadow-lg shadow-[#093cad]/25 hover:shadow-xl hover:shadow-[#093cad]/40 hover:-translate-y-0.5"
+                          : "bg-muted text-foreground border border-border/60 hover:bg-muted/80 hover:border-border hover:text-foreground"
+                      }`}
+                    >
+                      <span>{plan.btnText}</span>
+                    </button>
+                  ) : (
+                    <Link
+                      href={localizeHref(plan.href)}
+                      className={`flex w-full items-center justify-center rounded-full text-sm font-bold py-3.5 transition-all duration-300 ${
+                        plan.featured
+                          ? "bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-600/25 hover:shadow-xl hover:shadow-amber-600/40 hover:-translate-y-0.5"
+                          : plan.team
+                          ? "bg-[#093cad] hover:bg-[#072d82] text-white shadow-lg shadow-[#093cad]/25 hover:shadow-xl hover:shadow-[#093cad]/40 hover:-translate-y-0.5"
+                          : "bg-muted text-foreground border border-border/60 hover:bg-muted/80 hover:border-border hover:text-foreground"
+                      }`}
+                    >
+                      <span>{plan.btnText}</span>
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}

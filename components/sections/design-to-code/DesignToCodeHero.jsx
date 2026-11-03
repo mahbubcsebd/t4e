@@ -4,11 +4,13 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
+import { useAuthModal } from "@/context/AuthModalContext";
 import VideoModal from "@/components/ui/VideoModal";
 import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function DesignToCodeHero() {
   const { t } = useLanguage();
+  const { openAuthModal } = useAuthModal();
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [videoId, setVideoId] = useState("");
 
@@ -29,10 +31,11 @@ export default function DesignToCodeHero() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <Button asChild className="shadow-md shadow-primary/25">
-            <Link href="https://portal.think4ever.com/#/register">
-              {t("nav.startFree")}
-            </Link>
+          <Button
+            onClick={() => openAuthModal("signup")}
+            className="shadow-md shadow-primary/25 cursor-pointer"
+          >
+            {t("nav.startFree")}
           </Button>
           <button
             onClick={() => {

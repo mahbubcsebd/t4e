@@ -6,10 +6,12 @@ import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { useLanguage } from "@/context/LanguageContext";
+import { useAuthModal } from "@/context/AuthModalContext";
 import { CheckCircle2, Shield, Globe } from "lucide-react";
 
 export default function RegisterPage() {
   const { t } = useLanguage();
+  const { openAuthModal } = useAuthModal();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -21,7 +23,7 @@ export default function RegisterPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.location.href = "https://portal.think4ever.com/#/register";
+    openAuthModal("signup");
   };
 
   return (
@@ -103,13 +105,14 @@ export default function RegisterPage() {
                 </p>
 
                 {/* Google OAuth Button */}
-                <Link
-                  href="https://portal.think4ever.com/#/register"
-                  className="w-full bg-white border border-[#c8d9ed] hover:border-[#093cad] text-[#09090d] font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition-all shadow-sm mb-6 text-sm"
+                <button
+                  type="button"
+                  onClick={() => openAuthModal("signup")}
+                  className="w-full bg-white border border-[#c8d9ed] hover:border-[#093cad] text-[#09090d] font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition-all shadow-sm mb-6 text-sm cursor-pointer"
                 >
                   <Globe className="w-4 h-4 text-[#07A7E1]" />
                   <span>{t("registerPage.btnGoogle")}</span>
-                </Link>
+                </button>
 
                 <div className="relative flex items-center justify-center mb-6">
                   <div className="border-t border-[#c8d9ed] w-full"></div>
@@ -233,12 +236,13 @@ export default function RegisterPage() {
 
                 <div className="mt-6 pt-4 border-t border-[#c8d9ed]/50 text-center text-xs text-[#71849c]">
                   <span>{t("registerPage.alreadyAccount")} </span>
-                  <Link
-                    href="https://portal.think4ever.com/#/login"
-                    className="font-bold text-[#093cad] hover:underline"
+                  <button
+                    type="button"
+                    onClick={() => openAuthModal("signin")}
+                    className="font-bold text-[#093cad] hover:underline cursor-pointer"
                   >
                     {t("registerPage.signIn")}
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>

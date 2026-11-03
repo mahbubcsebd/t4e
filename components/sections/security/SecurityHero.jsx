@@ -3,11 +3,13 @@
 import React from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import { useAuthModal } from "@/context/AuthModalContext";
 import { Button } from "@/components/ui/button";
 import Eyebrow from "@/components/ui/Eyebrow";
 
 export default function SecurityHero() {
   const { t, language } = useLanguage();
+  const { openAuthModal } = useAuthModal();
 
   return (
     <section className="pt-8 lg:pt-12 pb-4 lg:pb-8 bg-background border-b border-border text-center">
@@ -33,10 +35,12 @@ export default function SecurityHero() {
               {t("securityPage.heroCtaPrimary")}
             </Link>
           </Button>
-          <Button asChild variant="outline" className="bg-card text-foreground border-border hover:bg-muted">
-            <Link href="https://portal.think4ever.com/#/register">
-              {t("securityPage.heroCtaSecondary")}
-            </Link>
+          <Button
+            variant="outline"
+            onClick={() => openAuthModal("signup")}
+            className="bg-card text-foreground border-border hover:bg-muted cursor-pointer"
+          >
+            {t("securityPage.heroCtaSecondary")}
           </Button>
         </div>
       </div>
