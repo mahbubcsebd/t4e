@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, Minus } from 'lucide-react';
+import { Plus } from 'lucide-react';
 import SectionCard from '@/components/layout/SectionCard';
 import MarketplaceSection from '@/components/marketplace/ui/MarketplaceSection';
 import MarketplaceSectionHeader from '@/components/marketplace/ui/MarketplaceSectionHeader';
@@ -41,20 +40,18 @@ function FaqItem({ item, openId, toggleFaq }) {
         </div>
       </button>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-          >
-            <div className="pb-6 text-[15px] md:text-base text-foreground/80 leading-relaxed md:pr-14">
-              {item.answer}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Answer is always in the HTML (crawlable); CSS collapses it when closed. */}
+      <div
+        className={`grid transition-all duration-300 ease-in-out ${
+          isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+        }`}
+      >
+        <div className="overflow-hidden">
+          <div className="pb-6 text-[15px] md:text-base text-foreground/80 leading-relaxed md:pr-14">
+            {item.answer}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -131,7 +128,7 @@ export default function MarketplaceFaq() {
               eyebrow={t('marketplace.faq.eyebrow', 'Got Questions?')}
               title={t('marketplace.faq.title', 'Frequently Asked')}
               highlightText={t('marketplace.faq.highlight', 'Questions')}
-              description={t('marketplace.faq.desc', 'Everything you need to know about hiring and managing world-class talent through Think4Ever Marketplace.')}
+              description={t('marketplace.faq.desc', 'Everything you need to know about hiring and working through Think4Ever Marketplace.')}
               align="center"
             />
           </div>

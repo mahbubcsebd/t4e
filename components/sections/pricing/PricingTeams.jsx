@@ -162,17 +162,6 @@ export default function PricingTeams() {
                           )}
                         </dd>
                       </div>
-                      <div className="pt-2 border-t border-white/10">
-                        <dt className="text-slate-400 uppercase tracking-wider text-[10px]">
-                          {t('pricingPage.labelPrice', 'Price')}
-                        </dt>
-                        <dd className="font-extrabold text-base text-white mt-0.5">
-                          {t(
-                            'pricingPage.teamsSideCard.col1.price',
-                            '$200/month',
-                          )}
-                        </dd>
-                      </div>
                     </dl>
                   </div>
 
@@ -228,17 +217,6 @@ export default function PricingTeams() {
                           {t(
                             'pricingPage.teamsSideCard.col2.admin',
                             'Roles, access, caps',
-                          )}
-                        </dd>
-                      </div>
-                      <div className="pt-2 border-t border-[#548bf5]/30">
-                        <dt className="text-[#9cc0ff] uppercase tracking-wider text-[10px]">
-                          {t('pricingPage.labelPrice', 'Price')}
-                        </dt>
-                        <dd className="font-extrabold text-base text-[#9cc0ff] mt-0.5">
-                          {t(
-                            'pricingPage.teamsSideCard.col2.price',
-                            '$250/month',
                           )}
                         </dd>
                       </div>

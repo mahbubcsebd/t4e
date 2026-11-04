@@ -17,8 +17,9 @@ export default function PricingComparison() {
         {
           feature: t("pricingPage.compareRowPrice", "Price"),
           free: t("pricingPage.compareValFree", "Free"),
-          new: t("pricingPage.compareValNewPrice", "$25/month"),
-          big: t("pricingPage.compareValBigPrice", "$250/month"),
+          // Amounts ($25 / $250) hidden per client request
+          new: "",
+          big: "",
           blue: t("pricingPage.compareValCustom", "Custom"),
         },
         {
@@ -216,14 +217,12 @@ export default function PricingComparison() {
                   <th className="p-4 sm:p-5 text-xs sm:text-sm font-bold uppercase tracking-wider text-muted-foreground w-[18%]">
                     {t("pricingPage.plan1Name", "Think Free")}
                   </th>
-                  {/* Hidden: Think New / Think Big columns
                   <th className="p-4 sm:p-5 text-xs sm:text-sm font-bold uppercase tracking-wider text-amber-600 w-[18%]">
                     {t("pricingPage.plan2Name", "Think New")}
                   </th>
                   <th className="p-4 sm:p-5 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-primary bg-primary/5 w-[18%] border-x border-primary/20">
                     {t("pricingPage.plan3Name", "Think Big")}
                   </th>
-                  */}
                   <th className="p-4 sm:p-5 text-xs sm:text-sm font-bold uppercase tracking-wider text-muted-foreground w-[18%]">
                     {t("pricingPage.plan4Name", "Think Blue")}
                   </th>
@@ -234,7 +233,7 @@ export default function PricingComparison() {
                   <React.Fragment key={sIdx}>
                     <tr className="bg-muted/70 border-y border-border/60">
                       <td
-                        colSpan={3} /* 5 when Think New / Think Big columns are restored */
+                        colSpan={5}
                         className="py-2.5 px-5 text-xs font-extrabold uppercase tracking-wider text-foreground"
                       >
                         {section.group}
@@ -251,14 +250,12 @@ export default function PricingComparison() {
                         <td className="p-3.5 sm:p-4 text-xs sm:text-sm text-muted-foreground">
                           {renderVal(row.free)}
                         </td>
-                        {/* Hidden: Think New / Think Big columns
                         <td className="p-3.5 sm:p-4 text-xs sm:text-sm text-foreground">
                           {renderVal(row.new)}
                         </td>
                         <td className="p-3.5 sm:p-4 text-xs sm:text-sm bg-primary/5 border-x border-primary/20">
                           {renderVal(row.big, true)}
                         </td>
-                        */}
                         <td className="p-3.5 sm:p-4 text-xs sm:text-sm text-foreground">
                           {renderVal(row.blue)}
                         </td>

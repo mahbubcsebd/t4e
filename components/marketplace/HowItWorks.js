@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Briefcase,
   UserPlus,
@@ -91,7 +90,7 @@ export default function MarketplaceHowItWorks() {
               {t('marketplace.howItWorks.titlePrefix', 'How it ')}<span className="text-primary">{t('marketplace.howItWorks.titleHighlight', 'works')}</span>
             </h2>
             <p className="text-sm sm:text-base text-muted-foreground max-w-xl leading-relaxed">
-              {t('marketplace.howItWorks.subtitle', "Whether you need to hire top talent or you're looking for your next big project, our platform makes it seamless.")}
+              {t('marketplace.howItWorks.subtitle', "Hire AI-enabled freelancers and agencies, or find your next project, without leaving Think4Ever.")}
             </p>
           </div>
 
@@ -124,16 +123,15 @@ export default function MarketplaceHowItWorks() {
 
         {/* Content Area */}
         <div>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
+          {/* Both tabs are always in the HTML (crawlable); the inactive one is hidden with CSS. */}
+          {Object.entries(tabData).map(([tabKey, steps]) => (
+            <div
+              key={tabKey}
+              className={`grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 ${
+                activeTab === tabKey ? 'grid' : 'hidden'
+              }`}
             >
-              {tabData[activeTab].map((item, index) => {
+              {steps.map((item, index) => {
                 const Icon = item.icon;
                 return (
                   <div
@@ -159,8 +157,8 @@ export default function MarketplaceHowItWorks() {
                   </div>
                 );
               })}
-            </motion.div>
-          </AnimatePresence>
+            </div>
+          ))}
         </div>
         </div>
       </SectionCard>
