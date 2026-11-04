@@ -8,8 +8,7 @@ import PricingCustomerQuote from '@/components/sections/pricing/PricingCustomerQ
 import PricingHero from '@/components/sections/pricing/PricingHero';
 import PricingHowItWorks from '@/components/sections/pricing/PricingHowItWorks';
 import PricingProjectLimits from '@/components/sections/pricing/PricingProjectLimits';
-// Hidden (Think Big section) - restore with the <PricingTeams /> line below
-// import PricingTeams from '@/components/sections/pricing/PricingTeams';
+import PricingTeams from '@/components/sections/pricing/PricingTeams';
 import PricingTiers from '@/components/sections/pricing/PricingTiers';
 import { getLocalizedMetadata } from '@/lib/metadata';
 
@@ -21,7 +20,7 @@ export default function PricingPage() {
         <PricingHero />
         <PricingTiers />
         <PricingHowItWorks />
-        {/* <PricingTeams /> */}
+        <PricingTeams />
         <PricingComparison />
         <PricingProjectLimits />
         <CostControl />

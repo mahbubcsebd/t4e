@@ -194,7 +194,7 @@ export default function MarketplaceExpertise() {
             eyebrow={t('marketplace.expertise.eyebrow', "Browse Expertise")}
             title={t('marketplace.expertise.title', "Find freelancers for")}
             highlightText={t('marketplace.expertise.highlight', "every type of work")}
-            description={t('marketplace.expertise.desc', "Access a global network of top-tier professionals ready to execute your most critical initiatives.")}
+            description={t('marketplace.expertise.desc', "AI-enabled freelancers and agencies post proposals for every kind of work, from a single task to a full project.")}
             align="left"
           />
 
@@ -254,7 +254,7 @@ export default function MarketplaceExpertise() {
                       {t(`marketplace.expertise.cat.${selectedCategory.id}`, selectedCategory.title)}
                     </DialogTitle>
                     <DialogDescription className="text-sm md:text-[15px] text-muted-foreground mt-1.5 md:mt-1">
-                      {t('marketplace.expertise.modalDesc', 'Select a specialization to find top talent')}
+                      {t('marketplace.expertise.modalDesc', 'Select a specialization to find freelancers')}
                     </DialogDescription>
                   </div>
                 </div>

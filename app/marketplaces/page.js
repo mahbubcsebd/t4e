@@ -17,7 +17,7 @@ export const fallbackMetadata = {
 };
 
 export async function generateMetadata() {
-  return getLocalizedMetadata('en', 'marketplace', fallbackMetadata);
+  return getLocalizedMetadata('en', 'marketplaces', fallbackMetadata);
 }
 
 export default function MarketplacePage() {

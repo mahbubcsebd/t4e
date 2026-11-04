@@ -29,34 +29,36 @@ export default function PricingTiers() {
       href: "https://portal.think4ever.com/#/register",
       featured: false,
     },
-    // TEMPORARILY HIDDEN (client request): Think New + Think Big. Uncomment to restore.
-    // {
-    //   tag: t("pricingPage.plan2Tag"),
-    //   badge: t("pricingPage.plan2Badge", "POPULAR"),
-    //   badgeColor: "orange",
-    //   name: t("pricingPage.plan2Name"),
-    //   price: t("pricingPage.plan2Price"),
-    //   desc: t("pricingPage.plan2Desc"),
-    //   limits: t("pricingPage.plan2Limits") || [],
-    //   list: t("pricingPage.plan2List") || [],
-    //   btnText: t("pricingPage.plan2Btn"),
-    //   href: "https://portal.think4ever.com/#/register",
-    //   featured: true,
-    // },
-    // {
-    //   tag: t("pricingPage.plan3Tag"),
-    //   badge: t("pricingPage.plan3Badge", "FOR TEAMS"),
-    //   badgeColor: "blue",
-    //   name: t("pricingPage.plan3Name"),
-    //   price: t("pricingPage.plan3Price"),
-    //   desc: t("pricingPage.plan3Desc"),
-    //   limits: t("pricingPage.plan3Limits") || [],
-    //   list: t("pricingPage.plan3List") || [],
-    //   btnText: t("pricingPage.plan3Btn"),
-    //   href: "/contact-us/",
-    //   featured: false,
-    //   team: true,
-    // },
+    // Price amounts ($25 / $250) are hidden via hidePrice (client request).
+    {
+      tag: t("pricingPage.plan2Tag"),
+      badge: t("pricingPage.plan2Badge", "POPULAR"),
+      badgeColor: "orange",
+      name: t("pricingPage.plan2Name"),
+      price: t("pricingPage.plan2Price"),
+      hidePrice: true,
+      desc: t("pricingPage.plan2Desc"),
+      limits: t("pricingPage.plan2Limits") || [],
+      list: t("pricingPage.plan2List") || [],
+      btnText: t("pricingPage.plan2Btn"),
+      href: "https://portal.think4ever.com/#/register",
+      featured: true,
+    },
+    {
+      tag: t("pricingPage.plan3Tag"),
+      badge: t("pricingPage.plan3Badge", "FOR TEAMS"),
+      badgeColor: "blue",
+      name: t("pricingPage.plan3Name"),
+      price: t("pricingPage.plan3Price"),
+      hidePrice: true,
+      desc: t("pricingPage.plan3Desc"),
+      limits: t("pricingPage.plan3Limits") || [],
+      list: t("pricingPage.plan3List") || [],
+      btnText: t("pricingPage.plan3Btn"),
+      href: "/contact-us/",
+      featured: false,
+      team: true,
+    },
     {
       tag: t("pricingPage.plan4Tag"),
       name: t("pricingPage.plan4Name"),
@@ -66,7 +68,7 @@ export default function PricingTiers() {
       list: t("pricingPage.plan4List") || [],
       btnText: t("pricingPage.plan4Btn"),
       href: "/contact-us/",
-      featured: true,
+      featured: false,
     },
   ];
 
@@ -110,16 +112,18 @@ export default function PricingTiers() {
                     {plan.tag}
                   </span>
 
-                  <div className="flex flex-row items-baseline gap-1 mb-3">
-                    <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">
-                      {plan.price.split("/")[0]}
-                    </span>
-                    {plan.price.split("/")[1] && (
-                      <span className="text-sm font-medium text-muted-foreground">
-                        /{plan.price.split("/")[1]}
+                  {!plan.hidePrice && (
+                    <div className="flex flex-row items-baseline gap-1 mb-3">
+                      <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">
+                        {plan.price.split("/")[0]}
                       </span>
-                    )}
-                  </div>
+                      {plan.price.split("/")[1] && (
+                        <span className="text-sm font-medium text-muted-foreground">
+                          /{plan.price.split("/")[1]}
+                        </span>
+                      )}
+                    </div>
+                  )}
 
                   <p className="text-sm min-h-[44px] mb-4 leading-relaxed text-muted-foreground">
                     {plan.desc}
