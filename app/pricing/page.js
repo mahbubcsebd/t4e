@@ -7,7 +7,7 @@ import PricingFaq from '@/components/sections/pricing/PricingFaq';
 import PricingCustomerQuote from '@/components/sections/pricing/PricingCustomerQuote';
 import PricingHero from '@/components/sections/pricing/PricingHero';
 import PricingHowItWorks from '@/components/sections/pricing/PricingHowItWorks';
-import PricingProjectLimits from '@/components/sections/pricing/PricingProjectLimits';
+import PricingEstimate from '@/components/sections/pricing/PricingEstimate';
 import PricingTeams from '@/components/sections/pricing/PricingTeams';
 import PricingTiers from '@/components/sections/pricing/PricingTiers';
 import { getLocalizedMetadata } from '@/lib/metadata';
@@ -21,8 +21,8 @@ export default function PricingPage() {
         <PricingTiers />
         <PricingHowItWorks />
         <PricingTeams />
+        <PricingEstimate />
         <PricingComparison />
-        <PricingProjectLimits />
         <CostControl />
         <PricingCustomerQuote />
         <PricingFaq />
@@ -34,9 +34,9 @@ export default function PricingPage() {
 }
 
 export const fallbackMetadata = {
-  title: 'Think4Ever Pricing — Start Free, Scale with Your Team',
+  title: 'Think4Ever Pricing — Start Free, Pay for What You Use',
   description:
-    'Think4Ever plans: start free, build solo with Think New, or bring your whole team into one workspace with Think Big. One company workspace, shared credits, and admin control.',
+    'Think4Ever pricing: start free, then buy credit packs with no monthly platform fee. Build solo with Think New, or bring up to 25 people into one workspace with Think Big.',
 };
 
 export async function generateMetadata() {

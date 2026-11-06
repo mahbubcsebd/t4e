@@ -162,6 +162,14 @@ export default function PricingTeams() {
                           )}
                         </dd>
                       </div>
+                      <div>
+                        <dt className="text-slate-400 uppercase tracking-wider text-[10px]">
+                          {t('pricingPage.labelPrice', 'Price per credit')}
+                        </dt>
+                        <dd className="font-bold text-sm text-white mt-0.5">
+                          {t('pricingPage.teamsSideCard.col1.price', '$0.05')}
+                        </dd>
+                      </div>
                     </dl>
                   </div>
 
@@ -218,6 +226,14 @@ export default function PricingTeams() {
                             'pricingPage.teamsSideCard.col2.admin',
                             'Roles, access, caps',
                           )}
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="text-[#9cc0ff] uppercase tracking-wider text-[10px]">
+                          {t('pricingPage.labelPrice', 'Price per credit')}
+                        </dt>
+                        <dd className="font-bold text-sm text-white mt-0.5">
+                          {t('pricingPage.teamsSideCard.col2.price', '$0.06')}
                         </dd>
                       </div>
                     </dl>

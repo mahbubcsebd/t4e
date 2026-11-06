@@ -10,59 +10,65 @@ import { Check, Minus } from "lucide-react";
 export default function PricingComparison() {
   const { t } = useLanguage();
 
+  const custom = t("pricingPage.compareValCustom", "Custom");
+
   const comparisonData = [
     {
       group: t("pricingPage.compareGroupLimits", "Plan limits"),
       rows: [
         {
-          feature: t("pricingPage.compareRowPrice", "Price"),
-          free: t("pricingPage.compareValFree", "Free"),
-          // Amounts ($25 / $250) hidden per client request
-          new: "",
-          big: "",
-          blue: t("pricingPage.compareValCustom", "Custom"),
+          feature: t("pricingPage.compareRowFee", "Monthly platform fee"),
+          free: t("pricingPage.compareValNone", "None"),
+          new: t("pricingPage.compareValNone", "None"),
+          big: t("pricingPage.compareValNone", "None"),
+          blue: custom,
         },
         {
           feature: t("pricingPage.compareRowUsers", "Users"),
           free: "1",
           new: t("pricingPage.compareValNewUsers", "1 (administrator)"),
-          big: t("pricingPage.compareValBigUsers", "8, including administrator"),
-          blue: t("pricingPage.compareValCustom", "Custom"),
+          big: t("pricingPage.compareValBigUsers", "Up to 25, including the administrator"),
+          blue: custom,
         },
         {
           feature: t("pricingPage.compareRowProjects", "Projects"),
           free: "1",
-          new: "3",
-          big: t("pricingPage.compareValBigProjects", "20, shared"),
-          blue: t("pricingPage.compareValCustom", "Custom"),
+          new: t("pricingPage.compareValUnlimited", "Unlimited"),
+          big: t("pricingPage.compareValBigProjects", "Unlimited, shared"),
+          blue: custom,
+        },
+      ],
+    },
+    {
+      group: t("pricingPage.compareGroupCredits", "Credits"),
+      rows: [
+        {
+          feature: t("pricingPage.compareRowIncluded", "Included credits"),
+          free: t("pricingPage.compareValFreeCredits", "500, one time"),
+          new: false,
+          big: false,
+          blue: custom,
         },
         {
-          feature: t("pricingPage.compareRowCredits", "Orchestration credits"),
-          free: "500",
-          new: t("pricingPage.compareValNewCredits", "2,000 a month"),
-          big: t("pricingPage.compareValBigCredits", "20,000 a month, pooled"),
-          blue: t("pricingPage.compareValBlueCredits", "Custom usage pools"),
+          feature: t("pricingPage.compareRowPerCredit", "Price per credit"),
+          free: false,
+          new: t("pricingPage.compareValNewRate", "$0.05"),
+          big: t("pricingPage.compareValBigRate", "$0.06"),
+          blue: custom,
         },
         {
-          feature: t("pricingPage.compareRowExtraCredits", "Extra credits"),
-          free: t("pricingPage.compareValUpgrade", "Upgrade to continue"),
-          new: t("pricingPage.compareValPerCredit", "$0.05 per credit"),
-          big: t("pricingPage.compareValPerCredit", "$0.05 per credit"),
-          blue: t("pricingPage.compareValCustom", "Custom"),
-        },
-        {
-          feature: t("pricingPage.compareRowUnused", "Unused included credits"),
-          free: t("pricingPage.compareValDontRollOver", "Don't roll over"),
-          new: t("pricingPage.compareValResetMonthly", "Reset every month"),
-          big: t("pricingPage.compareValResetMonthly", "Reset every month"),
-          blue: t("pricingPage.compareValCustom", "Custom"),
+          feature: t("pricingPage.compareRowPacks", "Credit packs"),
+          free: false,
+          new: t("pricingPage.compareValNewPacks", "$25, $50, $75, $100"),
+          big: t("pricingPage.compareValBigPacks", "$180, $360, $480, $960"),
+          blue: custom,
         },
         {
           feature: t("pricingPage.compareRowPurchased", "Purchased credits"),
           free: false,
           new: t("pricingPage.compareValRollOver", "Roll over month to month"),
           big: t("pricingPage.compareValRollOver", "Roll over month to month"),
-          blue: t("pricingPage.compareValCustom", "Custom"),
+          blue: custom,
         },
       ],
     },

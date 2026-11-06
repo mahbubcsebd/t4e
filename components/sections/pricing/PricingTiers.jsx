@@ -29,7 +29,7 @@ export default function PricingTiers() {
       href: "https://portal.think4ever.com/#/register",
       featured: false,
     },
-    // Price amounts ($25 / $250) are hidden via hidePrice (client request).
+    // Paid plans show a "no monthly fee" note and credit packs instead of a price.
     {
       tag: t("pricingPage.plan2Tag"),
       badge: t("pricingPage.plan2Badge", "POPULAR"),
@@ -37,6 +37,9 @@ export default function PricingTiers() {
       name: t("pricingPage.plan2Name"),
       price: t("pricingPage.plan2Price"),
       hidePrice: true,
+      noFee: true,
+      packsLabel: t("pricingPage.plan2PacksLabel"),
+      packs: t("pricingPage.plan2Packs") || [],
       desc: t("pricingPage.plan2Desc"),
       limits: t("pricingPage.plan2Limits") || [],
       list: t("pricingPage.plan2List") || [],
@@ -51,11 +54,14 @@ export default function PricingTiers() {
       name: t("pricingPage.plan3Name"),
       price: t("pricingPage.plan3Price"),
       hidePrice: true,
+      noFee: true,
+      packsLabel: t("pricingPage.plan3PacksLabel"),
+      packs: t("pricingPage.plan3Packs") || [],
       desc: t("pricingPage.plan3Desc"),
       limits: t("pricingPage.plan3Limits") || [],
       list: t("pricingPage.plan3List") || [],
       btnText: t("pricingPage.plan3Btn"),
-      href: "/contact-us/",
+      href: "https://portal.think4ever.com/#/register",
       featured: false,
       team: true,
     },
@@ -129,9 +135,19 @@ export default function PricingTiers() {
                     {plan.desc}
                   </p>
 
+                  {plan.noFee && (
+                    <div className="mb-4 rounded-lg bg-[#0b1b3a] px-3 py-2 text-center text-xs font-bold text-white">
+                      {t("pricingPage.noFee", "No monthly platform fee")}
+                    </div>
+                  )}
+
                   {/* Limits summary boxes */}
                   {plan.limits && plan.limits.length > 0 && (
-                    <div className="grid grid-cols-3 gap-1.5 mb-6">
+                    <div
+                      className={`grid gap-1.5 mb-6 ${
+                        plan.limits.length === 2 ? "grid-cols-2" : "grid-cols-3"
+                      }`}
+                    >
                       {plan.limits.map((lim, lIdx) => (
                         <div
                           key={lIdx}
@@ -143,7 +159,13 @@ export default function PricingTiers() {
                               : "bg-muted/60 border-border/60"
                           }`}
                         >
-                          <b className="block text-base sm:text-lg font-bold text-foreground leading-tight">
+                          <b
+                            className={`block font-bold text-foreground leading-tight ${
+                              String(lim.val).length > 6
+                                ? "text-sm sm:text-base py-0.5"
+                                : "text-base sm:text-lg"
+                            }`}
+                          >
                             {lim.val}
                           </b>
                           <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider block mt-0.5">
@@ -151,6 +173,33 @@ export default function PricingTiers() {
                           </span>
                         </div>
                       ))}
+                    </div>
+                  )}
+
+                  {plan.packs && plan.packs.length > 0 && (
+                    <div className="mb-6">
+                      <p className="text-xs font-bold text-foreground mb-2">
+                        {plan.packsLabel}
+                      </p>
+                      <div className="grid grid-cols-2 gap-2">
+                        {plan.packs.map((pack, pIdx) => (
+                          <div
+                            key={pIdx}
+                            className={`rounded-lg border px-2.5 py-2 ${
+                              plan.featured
+                                ? "bg-amber-500/5 border-amber-500/20"
+                                : "bg-primary/5 border-primary/20"
+                            }`}
+                          >
+                            <b className="block text-base font-extrabold text-foreground leading-tight">
+                              {pack.price}
+                            </b>
+                            <span className="block text-[11px] text-muted-foreground">
+                              {pack.credits}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   )}
 
