@@ -404,21 +404,39 @@
     "roleLabel": "Rol",
     "useLabel": "Hoe zij Think4Ever gebruiken",
     "roles": [
-      { "name": "Productmanagers", "desc": "Stem doelen af en valideer elk resultaat vóór de lancering." },
-      { "name": "Ontwikkelaars", "desc": "Stop met je product aan elke agent uit te leggen." },
-      { "name": "Softwarearchitecten", "desc": "Architectuur, ingebouwd in elke agent." },
-      { "name": "Bedrijfsleiders", "desc": "Schaal ontwikkeling met AI-tools zonder de controle te verliezen." },
-      { "name": "Consultancypartners", "desc": "Van kick-off tot oplevering, zonder context te verliezen." },
-      { "name": "Kwaliteitsborging (QA)", "desc": "Beoordeel het systeem, niet alleen de codewijzigingen." }
+      {
+        "name": "Productmanagers",
+        "desc": "Stem doelen af en valideer elk resultaat vóór de lancering."
+      },
+      {
+        "name": "Ontwikkelaars",
+        "desc": "Stop met je product aan elke agent uit te leggen."
+      },
+      {
+        "name": "Softwarearchitecten",
+        "desc": "Architectuur, ingebouwd in elke agent."
+      },
+      {
+        "name": "Bedrijfsleiders",
+        "desc": "Schaal ontwikkeling met AI-tools zonder de controle te verliezen."
+      },
+      {
+        "name": "Consultancypartners",
+        "desc": "Van kick-off tot oplevering, zonder context te verliezen."
+      },
+      {
+        "name": "Kwaliteitsborging (QA)",
+        "desc": "Beoordeel het systeem, niet alleen de codewijzigingen."
+      }
     ]
   },
   "pricingPage": {
-    "metaTitle": "Think4Ever Prijzen — Begin Gratis, Schaal met uw Team",
-    "metaDesc": "Think4Ever-abonnementen: begin gratis, bouw solo met Think New of breng je hele team samen in één werkruimte met Think Big. Eén bedrijfswerkruimte, gedeelde credits en beheerderscontrole.",
+    "metaTitle": "Think4Ever-prijzen — Begin gratis, betaal voor wat je gebruikt",
+    "metaDesc": "Think4Ever-prijzen: begin gratis en koop daarna creditpakketten zonder maandelijkse platformkosten. Bouw solo met Think New of breng tot 25 mensen samen in één werkruimte met Think Big.",
     "heroEyebrow": "Prijzen",
     "heroTitlePrefix": "Begin met het project ",
     "heroTitleHighlight": "dat je niet durft aan te raken",
-    "heroSubtitle": "Analyseer een systeem, beoordeel de blauwdruk en zie de impact van wijzigingen. Begin gratis, bouw solo met Think New of breng je hele team samen in één werkruimte met Think Big.",
+    "heroSubtitle": "Analyseer een systeem, beoordeel de blauwdruk en zie de impact van wijzigingen. Begin gratis en koop daarna credits wanneer je ze nodig hebt. Bouw solo met Think New of breng je hele team samen in één werkruimte met Think Big.",
     "heroCtaPrimary": "Gratis starten →",
     "heroMicro": "Geen creditcard nodig voor het gratis abonnement",
     "plan1Tag": "THINK FREE",
@@ -440,7 +458,7 @@
       }
     ],
     "plan1List": [
-      "500 orkestratie-credits inbegrepen",
+      "500 orkestratiecredits, eenmalig",
       "Nieuw bouwen, bestaand uitbreiden, legacy moderniseren",
       "BYOK (neem je eigen model mee)",
       "Upgrade zodra je de gratis limieten ontgroeit"
@@ -457,21 +475,16 @@
         "label": "Gebruiker"
       },
       {
-        "val": "3",
+        "val": "Onbeperkt",
         "label": "Projecten"
-      },
-      {
-        "val": "2.000",
-        "label": "Credits/mnd"
       }
     ],
     "plan2List": [
       "Je eigen bedrijfswerkruimte",
-      "2.000 orkestratie-credits per maand",
       "Nieuw bouwen, bestaand uitbreiden, legacy moderniseren",
       "Verbind Claude Code, Cursor of Codex via MCP",
       "BYOK (neem je eigen model mee)",
-      "Voeg credits toe naar behoefte ($0,05 per credit). Gekochte credits rollen door"
+      "Gekochte credits blijven behouden"
     ],
     "plan2Btn": "Kies Think New",
     "plan3Tag": "THINK BIG",
@@ -481,28 +494,25 @@
     "plan3Desc": "Voor ontwikkelaarsteams die samen verzenden in één gedeelde werkruimte.",
     "plan3Limits": [
       {
-        "val": "8",
+        "val": "25",
         "label": "Gebruikers"
       },
       {
-        "val": "20",
+        "val": "Onbeperkt",
         "label": "Projecten"
-      },
-      {
-        "val": "20.000",
-        "label": "Credits/mnd"
       }
     ],
     "plan3List": [
       "Alles in Think New, voor het hele team",
-      "Eén bedrijfswerkruimte met 20 gedeelde projecten",
-      "20.000 credits per maand in één gedeelde pool",
+      "Eén bedrijfswerkruimte met gedeelde projecten",
+      "Creditpakketten in één gedeelde pool",
       "Voeg gebruikers toe met rollen en per-project toegang",
       "Beheerderscontroles en gebruikslimieten",
       "Elk lid codeert parallel via MCP",
-      "Prioritaire systeemorkestratie"
+      "Prioritaire systeemorkestratie",
+      "Gekochte credits blijven behouden"
     ],
-    "plan3Btn": "Neem contact op met verkoop",
+    "plan3Btn": "Kies Think Big",
     "plan4Tag": "THINK BLUE",
     "plan4Name": "Think Blue",
     "plan4Price": "Aangepast",
@@ -532,27 +542,27 @@
     "howEyebrow": "Hoe het werkt",
     "howTitle": "Eén bedrijf. Eén werkruimte.",
     "howHighlight": "Eén pool van credits.",
-    "howSubtitle": "Elk betaald abonnement is een bedrijfsaccount. Je projecten, gebruikers en credits leven samen in je eigen werkruimte, zodat er niets verspreid raakt over persoonlijke accounts.",
+    "howSubtitle": "Think New en Think Big zijn bedrijfsaccounts. Je projecten, gebruikers en credits staan samen in je eigen werkruimte, zodat niets verspreid raakt over persoonlijke accounts.",
     "howSteps": [
       {
         "num": "1",
-        "title": "Abonneren",
-        "desc": "De persoon die zich aanmeldt en abonneert wordt de bedrijfsbeheerder."
+        "title": "Meld je aan",
+        "desc": "De persoon die zich aanmeldt wordt de beheerder van het bedrijf."
       },
       {
         "num": "2",
-        "title": "Ontvang je werkruimte",
-        "desc": "Je bedrijf krijgt een eigen server. Alle projecten, gebruikers en credits leven daar."
+        "title": "Krijg je werkruimte",
+        "desc": "Je bedrijf krijgt een eigen server. Alle projecten, gebruikers en credits staan daar."
       },
       {
         "num": "3",
-        "title": "Voeg je team toe",
-        "desc": "De beheerder voegt gebruikers toe, kiest hun rol en bepaalt welke projecten ze mogen openen. Geen afzonderlijke betalingen of accounts."
+        "title": "Koop een creditpakket",
+        "desc": "Kies een pakket wanneer je credits nodig hebt. Er zijn geen maandelijkse platformkosten en credits die je koopt blijven behouden."
       },
       {
         "num": "4",
-        "title": "Deel één creditpool",
-        "desc": "Al het AI-werk van het hele team wordt betaald uit de gedeelde credits, met limieten om uitgaven onder controle te houden."
+        "title": "Voeg je team toe",
+        "desc": "Bij Think Big voegt de beheerder bedrijfsgebruikers toe, kiest de rol van iedereen en bepaalt welke projecten ze mogen openen. Iedereen gebruikt de gedeelde credits."
       }
     ],
     "teamsEyebrow": "Think Big",
@@ -583,54 +593,41 @@
     ],
     "teamsSideCard": {
       "title": "Een team van 8, op twee manieren",
-      "desc": "Wat je team krijgt met afzonderlijke Think New-accounts vergeleken met één Think Big-abonnement.",
+      "desc": "Wat je team krijgt met afzonderlijke Think New-accounts vergeleken met één Think Big-werkruimte.",
       "col1": {
         "title": "8 × Think New",
         "workspaces": "8 gescheiden",
-        "credits": "16.000, 2k elk",
-        "projects": "24, vergrendeld aan 1",
-        "admin": "Geen binnen team",
-        "price": "$200/maand"
+        "credits": "Verdeeld over 8 accounts",
+        "projects": "Elk vergrendeld aan één persoon",
+        "admin": "Geen binnen het team",
+        "price": "$0,05"
       },
       "col2": {
         "title": "Think Big",
         "workspaces": "1 gedeeld",
-        "credits": "20.000, gedeeld",
-        "projects": "20, team gedeeld",
-        "admin": "Rollen, toegang, caps",
-        "price": "$250/maand"
+        "credits": "Eén gedeelde pool",
+        "projects": "Onbeperkt, gedeeld met het team",
+        "admin": "Rollen, toegang, limieten",
+        "price": "$0,06"
       }
     },
     "labelWorkspaces": "Werkruimtes",
     "labelCredits": "Credits",
     "labelProjects": "Projecten",
     "labelAdmin": "Beheerder",
-    "labelPrice": "Prijs",
+    "labelPrice": "Prijs per credit",
     "labelShared": "Gedeeld",
     "compareEyebrow": "Vergelijk abonnementen",
     "compareTitle": "Alles in elk abonnement",
     "compareColPlan": "Abonnement",
     "compareGroupLimits": "Abonnementslimieten",
-    "compareRowPrice": "Prijs",
     "compareValFree": "Gratis",
-    "compareValNewPrice": "$25/maand",
-    "compareValBigPrice": "$250/maand",
     "compareValCustom": "Aangepast",
     "compareRowUsers": "Gebruikers",
     "compareValNewUsers": "1 (beheerder)",
-    "compareValBigUsers": "8, inclusief de beheerder",
+    "compareValBigUsers": "Tot 25, inclusief de beheerder",
     "compareRowProjects": "Projecten",
-    "compareValBigProjects": "20, gedeeld",
-    "compareRowCredits": "Orkestratie-credits",
-    "compareValNewCredits": "2.000 per maand",
-    "compareValBigCredits": "20.000 per maand, gedeeld",
-    "compareValBlueCredits": "Aangepaste gebruikspools",
-    "compareRowExtraCredits": "Extra credits",
-    "compareValUpgrade": "Upgrade om door te gaan",
-    "compareValPerCredit": "$0,05 per credit",
-    "compareRowUnused": "Ongebruikte inbegrepen credits",
-    "compareValDontRollOver": "Rollen niet door",
-    "compareValResetMonthly": "Resetten elke maand",
+    "compareValBigProjects": "Onbeperkt, gedeeld",
     "compareRowPurchased": "Gekochte credits",
     "compareValRollOver": "Rollen van maand tot maand door",
     "compareGroupDesign": "Ontwerp en bouw",
@@ -670,7 +667,7 @@
     "costTitle": "Beheers modelkeuze zonder context te verliezen.",
     "costSubtitle": "Houd de blauwdruk onafhankelijk van één provider. Breng ondersteunde sleutels mee en bewaar duur redeneren voor werk dat het nodig heeft.",
     "card1Title": "Orkestratie-credits",
-    "card1Desc": "Abonnementen bevatten een vergoeding voor Think4Ever-orkestratie. Gebruik hangt af van het uitgevoerde werk.",
+    "card1Desc": "Koop credits in pakketten wanneer je ze nodig hebt. Het gebruik hangt af van het uitgevoerde werk. Credits die je koopt blijven van maand tot maand behouden.",
     "card2Title": "Neem je eigen sleutels mee",
     "card2Desc": "Gebruik ondersteunde provider-referenties waar beschikbaar in plaats van al het modelgebruik in één bundel te dwingen.",
     "card3Title": "Enterprise-controles",
@@ -679,47 +676,131 @@
     "faqTitle": "Vragen over abonnementen",
     "faqItems": [
       {
-        "q": "Wie is de beheerder?",
-        "a": "De persoon die zich aanmeldt en abonneert. De beheerder beheert gebruikers, rollen, projecttoegang en credits, en kan elk project in de bedrijfswerkruimte zien."
+        "q": "Zijn er maandelijkse kosten?",
+        "a": "Nee. Think Free, Think New en Think Big hebben geen maandelijkse platformkosten. Bij Think New en Think Big betaal je alleen voor de creditpakketten die je koopt. Think Blue wordt per organisatie geprijsd."
       },
       {
-        "q": "Hebben mijn teamleden hun eigen Think4Ever-accounts nodig?",
-        "a": "Nee. Bij Think Big maakt de beheerder gebruikers aan binnen je werkruimte met een login en tijdelijk wachtwoord. Ze betalen of registreren zich niet afzonderlijk."
+        "q": "Hoe werken creditpakketten?",
+        "a": "Think New-pakketten kosten $25, $50, $75 of $100, tegen $0,05 per credit. Think Big-pakketten kosten $180, $360, $480 of $960, tegen $0,06 per credit. Koop een pakket wanneer je meer credits nodig hebt."
       },
       {
-        "q": "Wat kan elk teamlid zien?",
-        "a": "Elke gebruiker ziet alleen de projecten die de beheerder aan hen heeft toegewezen, plus projecten die ze zelf hebben gemaakt. De beheerder ziet alle bedrijfsprojecten."
+        "q": "Waarom kosten Think Big-credits meer?",
+        "a": "Think Big-credits omvatten wat teams nodig hebben om samen te werken: een gedeelde werkruimte en creditpool, tot 25 gebruikers, rollen en toegang per project, en beheerdersfuncties."
       },
       {
-        "q": "Wie betaalt voor AI-gebruik?",
-        "a": "Al het AI-werk door elke gebruiker wordt betaald uit de gedeelde creditpool van het bedrijf. Bij Think Big kan de beheerder limieten instellen zodat niemand meer dan zijn deel verbruikt."
+        "q": "Blijven ongebruikte credits behouden?",
+        "a": "Credits die je koopt blijven van maand tot maand behouden tot je ze gebruikt. De 500 credits van Think Free zijn een eenmalige toekenning en worden niet vernieuwd."
       },
       {
-        "q": "Rollen ongebruikte credits door?",
-        "a": "Inbegrepen credits resetten elke maand en rollen niet door. Credits die je erbij koopt voor $0,05 per stuk rollen wel van maand tot maand door totdat je ze gebruikt."
+        "q": "Wat gebeurt er als onze credits op zijn?",
+        "a": "AI-werk pauzeert totdat je een nieuw pakket koopt. Je houdt toegang tot je werkruimte en projecten. Stap bij Think Free over naar Think New of Think Big voor meer credits."
       },
       {
         "q": "Wat gebeurt er als we de projectlimiet bereiken?",
-        "a": "Je kunt een project archiveren, nog een project toevoegen voor credits uit je pool, of upgraden naar een abonnement met een hogere limiet."
+        "a": "Think Free bevat één project. Think New en Think Big bevatten onbeperkt projecten, dus stap over naar een van beide als je meer nodig hebt."
+      },
+      {
+        "q": "Wie is de beheerder?",
+        "a": "De persoon die zich aanmeldt. De beheerder beheert gebruikers, rollen, projecttoegang en credits, en kan elk project in de bedrijfswerkruimte zien."
+      },
+      {
+        "q": "Hebben mijn teamleden eigen Think4Ever-accounts nodig?",
+        "a": "Nee. Bij Think Big maakt de beheerder bedrijfsgebruikers aan in je werkruimte met een login en een tijdelijk wachtwoord. Elke gebruiker krijgt een e-mail en stelt bij de eerste aanmelding een eigen wachtwoord in. Ze melden zich niet apart aan en betalen niet apart."
+      },
+      {
+        "q": "Wat kan elk teamlid zien?",
+        "a": "Elke gebruiker ziet alleen de projecten die de beheerder heeft toegewezen, plus projecten die ze zelf hebben gemaakt. De beheerder ziet alle bedrijfsprojecten."
+      },
+      {
+        "q": "Wie betaalt voor AI-gebruik?",
+        "a": "Al het AI-werk van elke gebruiker wordt betaald uit de gedeelde creditpool van het bedrijf. Bij Think Big kan de beheerder limieten instellen zodat geen enkele gebruiker of project meer dan zijn deel gebruikt."
       },
       {
         "q": "Hoe verwijder ik iemands toegang?",
-        "a": "De beheerder kan een gebruiker op elk moment deactiveren, waarna diegene onmiddellijk toegang verliest."
+        "a": "De beheerder kan een gebruiker op elk moment deactiveren, en die gebruiker verliest meteen toegang."
       },
       {
         "q": "Kan ik mijn eigen codeertools gebruiken?",
-        "a": "Ja. Claude Code, Cursor, Codex en andere MCP-compatibele tools kunnen bouwen vanuit je Think4Ever-ontwerp via de Think MCP-server, op je eigen abonnement."
+        "a": "Ja, bij Think New en hoger. Claude Code, Cursor, Codex en andere MCP-compatibele tools kunnen bouwen vanuit je Think4Ever-ontwerp via de Think MCP-server, op je eigen abonnement. Zie {link}."
       },
       {
-        "q": "Kan ik mijn eigen model meenemen?",
-        "a": "Ja. Elk abonnement ondersteunt BYOK, zodat je ondersteunde provider-referenties kunt gebruiken."
+        "q": "Kan ik mijn eigen model gebruiken?",
+        "a": "Ja. Elk abonnement ondersteunt BYOK, zodat je ondersteunde providergegevens kunt gebruiken in plaats van al het modelgebruik in één bundel te stoppen."
+      },
+      {
+        "q": "Ik heb een Think New- of Think Big-abonnement. Wat gebeurt er met mijn abonnement?",
+        "a": "Je huidige abonnement blijft voorlopig gelden. We nemen minstens 60 dagen voordat er iets verandert contact met je op en laten zien wat je onder de nieuwe prijzen zou betalen."
       }
     ],
     "ctaEyebrow": "Gratis starten",
     "ctaTitle": "Upload de codebase die je niet durft aan te raken.",
     "ctaSubtitle": "Binnen enkele minuten zie je hoe het echt werkt, en wat elke verandering zou raken.",
     "ctaBtnPrimary": "Analyseer een project →",
-    "ctaBtnSecondary": "Praat met verkoop"
+    "ctaBtnSecondary": "Praat met verkoop",
+    "noFee": "Geen maandelijkse platformkosten",
+    "plan2PacksLabel": "Creditpakketten à $0,05 per credit",
+    "plan3PacksLabel": "Creditpakketten à $0,06 per credit",
+    "plan2Packs": [
+      {
+        "price": "$25",
+        "credits": "500 credits"
+      },
+      {
+        "price": "$50",
+        "credits": "1.000 credits"
+      },
+      {
+        "price": "$75",
+        "credits": "1.500 credits"
+      },
+      {
+        "price": "$100",
+        "credits": "2.000 credits"
+      }
+    ],
+    "plan3Packs": [
+      {
+        "price": "$180",
+        "credits": "3.000 credits"
+      },
+      {
+        "price": "$360",
+        "credits": "6.000 credits"
+      },
+      {
+        "price": "$480",
+        "credits": "8.000 credits"
+      },
+      {
+        "price": "$960",
+        "credits": "16.000 credits"
+      }
+    ],
+    "estimateEyebrow": "Schat je kosten",
+    "estimateTitle": "Zie wat je credits zouden kosten",
+    "estimateSubtitle": "Verschuif de schuifregelaar of kies een bedrag. Het gebruik hangt af van het uitgevoerde werk en de modellen die je kiest.",
+    "estimateLabel": "Credits die je elke maand gebruikt",
+    "estimateUnit": "credits",
+    "estimateHint": "Schattingen gebruiken de prijs per credit. Je koopt credits in pakketten en wat je niet gebruikt blijft behouden.",
+    "estimateFree": "Think Free, 500 credits eenmalig",
+    "estimateNew": "Think New, 1 gebruiker, $0,05 per credit",
+    "estimateBig": "Think Big, tot 25 gebruikers, $0,06 per credit",
+    "estimateLimited": "Beperkt tot 500 credits",
+    "estimatePerMonth": "/maand",
+    "estimatePresets": "Voorbeeldbedragen",
+    "compareGroupCredits": "Credits",
+    "compareRowFee": "Maandelijkse platformkosten",
+    "compareValNone": "Geen",
+    "compareValUnlimited": "Onbeperkt",
+    "compareRowIncluded": "Inbegrepen credits",
+    "compareValFreeCredits": "500, eenmalig",
+    "compareRowPerCredit": "Prijs per credit",
+    "compareRowPacks": "Creditpakketten",
+    "compareValNewRate": "$0,05",
+    "compareValBigRate": "$0,06",
+    "compareValNewPacks": "$25, $50, $75, $100",
+    "compareValBigPacks": "$180, $360, $480, $960",
+    "faqLinkText": "Hoe te: Ontwerpen in Think, Coderen in Claude"
   },
   "faqPage": {
     "metaTitle": "Think4Ever FAQ — Levende Blauwdrukken, Code Begrip en MCP",

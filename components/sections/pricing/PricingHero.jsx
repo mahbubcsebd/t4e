@@ -29,6 +29,10 @@ export default function PricingHero() {
           {t("pricingPage.heroSubtitle")}
         </p>
 
+        <div className="inline-flex items-center rounded-lg bg-amber-100 text-amber-900 text-sm sm:text-base font-bold px-4 py-2 mb-6">
+          {t("pricingPage.noFee", "No monthly platform fee")}
+        </div>
+
         <div className="flex flex-wrap items-center justify-center gap-4 mb-4">
           <Button
             onClick={() => openAuthModal("signup")}

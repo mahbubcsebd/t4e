@@ -404,21 +404,39 @@
     "roleLabel": "Role",
     "useLabel": "How they use Think4Ever",
     "roles": [
-      { "name": "Product Managers", "desc": "Align goals and validate every deliverable before launch." },
-      { "name": "Developers", "desc": "Stop explaining your product to every agent." },
-      { "name": "Software Architects", "desc": "Architecture, built into every agent." },
-      { "name": "Business Leaders", "desc": "Scale development with AI tools without losing control." },
-      { "name": "Consulting Partners", "desc": "From kickoff to delivery, without losing context." },
-      { "name": "Quality Assurance (QA)", "desc": "Review the system, not just the code changes." }
+      {
+        "name": "Product Managers",
+        "desc": "Align goals and validate every deliverable before launch."
+      },
+      {
+        "name": "Developers",
+        "desc": "Stop explaining your product to every agent."
+      },
+      {
+        "name": "Software Architects",
+        "desc": "Architecture, built into every agent."
+      },
+      {
+        "name": "Business Leaders",
+        "desc": "Scale development with AI tools without losing control."
+      },
+      {
+        "name": "Consulting Partners",
+        "desc": "From kickoff to delivery, without losing context."
+      },
+      {
+        "name": "Quality Assurance (QA)",
+        "desc": "Review the system, not just the code changes."
+      }
     ]
   },
   "pricingPage": {
-    "metaTitle": "Think4Ever Pricing — Start Free, Scale with Your Team",
-    "metaDesc": "Think4Ever plans: start free, build solo with Think New, or bring your whole team into one workspace with Think Big. One company workspace, shared credits, and admin control.",
+    "metaTitle": "Think4Ever Pricing — Start Free, Pay for What You Use",
+    "metaDesc": "Think4Ever pricing: start free, then buy credit packs with no monthly platform fee. Build solo with Think New, or bring up to 25 people into one workspace with Think Big.",
     "heroEyebrow": "Pricing",
     "heroTitlePrefix": "Start with the project ",
     "heroTitleHighlight": "you're afraid to touch",
-    "heroSubtitle": "Analyze a system, review the blueprint and see change impact. Start free, build solo with Think New, or bring your whole team into one workspace with Think Big.",
+    "heroSubtitle": "Analyze a system, review the blueprint and see change impact. Start free, then buy credits as you need them. Build solo with Think New, or bring your whole team into one workspace with Think Big.",
     "heroCtaPrimary": "Start free →",
     "heroMicro": "No credit card required for the free plan",
     "plan1Tag": "THINK FREE",
@@ -440,7 +458,7 @@
       }
     ],
     "plan1List": [
-      "Included 500 orchestration credits",
+      "500 orchestration credits, one time",
       "Build new, extend current, modernize legacy",
       "BYOK (bring your own model)",
       "Upgrade when you outgrow the free limits"
@@ -457,21 +475,16 @@
         "label": "User"
       },
       {
-        "val": "3",
+        "val": "Unlimited",
         "label": "Projects"
-      },
-      {
-        "val": "2,000",
-        "label": "Credits/mo"
       }
     ],
     "plan2List": [
       "Your own company workspace",
-      "2,000 orchestration credits every month",
       "Build new, extend current, modernize legacy",
       "Connect Claude Code, Cursor or Codex over MCP",
       "BYOK (bring your own model)",
-      "Add credits as needed ($0.05 per credit). Purchased credits roll over"
+      "Purchased credits roll over"
     ],
     "plan2Btn": "Get Think New",
     "plan3Tag": "THINK BIG",
@@ -481,28 +494,25 @@
     "plan3Desc": "For developer teams shipping together in one shared workspace.",
     "plan3Limits": [
       {
-        "val": "8",
+        "val": "25",
         "label": "Users"
       },
       {
-        "val": "20",
+        "val": "Unlimited",
         "label": "Projects"
-      },
-      {
-        "val": "20,000",
-        "label": "Credits/mo"
       }
     ],
     "plan3List": [
       "Everything in Think New, for the whole team",
-      "One company workspace with 20 shared projects",
-      "20,000 credits a month in one shared pool",
+      "One company workspace with shared projects",
+      "Credit packs in one shared pool",
       "Add company users with roles and per-project access",
       "Admin controls and usage caps",
       "Every member codes in parallel over MCP",
-      "Priority system orchestration"
+      "Priority system orchestration",
+      "Purchased credits roll over"
     ],
-    "plan3Btn": "Contact Sales",
+    "plan3Btn": "Get Think Big",
     "plan4Tag": "THINK BLUE",
     "plan4Name": "Think Blue",
     "plan4Price": "Custom",
@@ -532,12 +542,12 @@
     "howEyebrow": "How it works",
     "howTitle": "One company. One workspace.",
     "howHighlight": "One pool of credits.",
-    "howSubtitle": "Every paid plan is a company account. Your projects, users and credits live together in your own workspace, so nothing is scattered across personal accounts.",
+    "howSubtitle": "Think New and Think Big are company accounts. Your projects, users and credits live together in your own workspace, so nothing is scattered across personal accounts.",
     "howSteps": [
       {
         "num": "1",
-        "title": "Subscribe",
-        "desc": "The person who signs up and subscribes becomes the company administrator."
+        "title": "Sign up",
+        "desc": "The person who signs up becomes the company administrator."
       },
       {
         "num": "2",
@@ -546,13 +556,13 @@
       },
       {
         "num": "3",
-        "title": "Add your team",
-        "desc": "The administrator adds company users, picks each person's role and chooses which projects they can open. No separate sign-ups or payments."
+        "title": "Buy a credit pack",
+        "desc": "Choose a pack when you need credits. There's no monthly platform fee, and credits you buy roll over."
       },
       {
         "num": "4",
-        "title": "Share one credit pool",
-        "desc": "All AI work by everyone on the team is paid from the company's shared credits, with admin caps to keep spending in check."
+        "title": "Add your team",
+        "desc": "On Think Big, the administrator adds company users, picks each person's role and chooses which projects they can open. Everyone draws from the shared credits."
       }
     ],
     "teamsEyebrow": "Think Big",
@@ -583,54 +593,41 @@
     ],
     "teamsSideCard": {
       "title": "A team of 8, two ways",
-      "desc": "What your team gets with separate Think New accounts compared with one Think Big plan.",
+      "desc": "What your team gets with separate Think New accounts compared with one Think Big workspace.",
       "col1": {
         "title": "8 × Think New",
         "workspaces": "8 separate",
-        "credits": "16,000, split 2,000 each",
-        "projects": "24, each locked to one person",
+        "credits": "Split across 8 accounts",
+        "projects": "Each locked to one person",
         "admin": "None across the team",
-        "price": "$200/month"
+        "price": "$0.05"
       },
       "col2": {
         "title": "Think Big",
         "workspaces": "1 shared",
-        "credits": "20,000, pooled",
-        "projects": "20, open to the whole team",
+        "credits": "One shared pool",
+        "projects": "Unlimited, shared with the team",
         "admin": "Roles, access, caps",
-        "price": "$250/month"
+        "price": "$0.06"
       }
     },
     "labelWorkspaces": "Workspaces",
     "labelCredits": "Credits",
     "labelProjects": "Projects",
     "labelAdmin": "Administrator",
-    "labelPrice": "Price",
+    "labelPrice": "Price per credit",
     "labelShared": "Shared",
     "compareEyebrow": "Compare plans",
     "compareTitle": "Everything in each plan",
     "compareColPlan": "Plan",
     "compareGroupLimits": "Plan limits",
-    "compareRowPrice": "Price",
     "compareValFree": "Free",
-    "compareValNewPrice": "$25/month",
-    "compareValBigPrice": "$250/month",
     "compareValCustom": "Custom",
     "compareRowUsers": "Users",
     "compareValNewUsers": "1 (administrator)",
-    "compareValBigUsers": "8, including administrator",
+    "compareValBigUsers": "Up to 25, including the administrator",
     "compareRowProjects": "Projects",
-    "compareValBigProjects": "20, shared",
-    "compareRowCredits": "Orchestration credits",
-    "compareValNewCredits": "2,000 a month",
-    "compareValBigCredits": "20,000 a month, pooled",
-    "compareValBlueCredits": "Custom usage pools",
-    "compareRowExtraCredits": "Extra credits",
-    "compareValUpgrade": "Upgrade to continue",
-    "compareValPerCredit": "$0.05 per credit",
-    "compareRowUnused": "Unused included credits",
-    "compareValDontRollOver": "Don't roll over",
-    "compareValResetMonthly": "Reset every month",
+    "compareValBigProjects": "Unlimited, shared",
     "compareRowPurchased": "Purchased credits",
     "compareValRollOver": "Roll over month to month",
     "compareGroupDesign": "Design and build",
@@ -670,7 +667,7 @@
     "costTitle": "Control model choice without losing context.",
     "costSubtitle": "Keep the blueprint independent from one provider. Bring supported keys and reserve expensive reasoning for work that needs it.",
     "card1Title": "Orchestration credits",
-    "card1Desc": "Plans include an allowance for Think4Ever orchestration. Usage depends on the work performed.",
+    "card1Desc": "Buy credits in packs when you need them. Usage depends on the work performed. Credits you buy roll over month to month.",
     "card2Title": "Bring your own keys",
     "card2Desc": "Use supported provider credentials where available instead of forcing all model usage into one bundle.",
     "card3Title": "Enterprise controls",
@@ -679,8 +676,32 @@
     "faqTitle": "Questions about plans",
     "faqItems": [
       {
+        "q": "Is there a monthly fee?",
+        "a": "No. Think Free, Think New and Think Big have no monthly platform fee. On Think New and Think Big, you pay only for the credit packs you buy. Think Blue is priced for each organization."
+      },
+      {
+        "q": "How do credit packs work?",
+        "a": "Think New packs cost $25, $50, $75 or $100, at $0.05 per credit. Think Big packs cost $180, $360, $480 or $960, at $0.06 per credit. Buy a pack whenever you need more credits."
+      },
+      {
+        "q": "Why do Think Big credits cost more?",
+        "a": "Think Big credits include what teams need to work together: a shared workspace and credit pool, up to 25 users, roles and per-project access, and admin controls."
+      },
+      {
+        "q": "Do unused credits roll over?",
+        "a": "Credits you buy roll over from month to month until you use them. Think Free's 500 credits are a one-time grant and don't renew."
+      },
+      {
+        "q": "What happens when we run out of credits?",
+        "a": "AI work pauses until you buy another pack. You keep access to your workspace and your projects. On Think Free, move to Think New or Think Big to get more credits."
+      },
+      {
+        "q": "What happens when we reach the project limit?",
+        "a": "Think Free includes one project. Think New and Think Big include unlimited projects, so move to either plan when you need more."
+      },
+      {
         "q": "Who is the administrator?",
-        "a": "The person who signs up and subscribes. The administrator manages users, roles, project access and credits, and can see every project in the company workspace."
+        "a": "The person who signs up. The administrator manages users, roles, project access and credits, and can see every project in the company workspace."
       },
       {
         "q": "Do my team members need their own Think4Ever accounts?",
@@ -695,31 +716,91 @@
         "a": "All AI work by every user is paid from the company's shared credit pool. On Think Big, the administrator can set caps so no single user or project uses more than its share."
       },
       {
-        "q": "Do unused credits roll over?",
-        "a": "Included credits reset every month. Any included credits you don't use by the end of the month don't roll over. Credits you buy on top of your plan, at $0.05 each, do roll over from month to month until you use them."
-      },
-      {
-        "q": "What happens when we reach the project limit?",
-        "a": "You can archive a project, add one more project for credits from your company pool, or upgrade to a plan with a higher limit."
-      },
-      {
         "q": "How do I remove someone's access?",
         "a": "The administrator can deactivate a user at any time, and that user loses access immediately."
       },
       {
         "q": "Can I use my own coding tools?",
-        "a": "Yes. Claude Code, Cursor, Codex and other MCP-compatible tools can build from your Think4Ever design through the Think MCP server, on your own subscription. See How to: Design in Think, Code in Claude."
+        "a": "Yes, on Think New and above. Claude Code, Cursor, Codex and other MCP-compatible tools can build from your Think4Ever design through the Think MCP server, on your own subscription. See {link}."
       },
       {
         "q": "Can I bring my own model?",
         "a": "Yes. Every plan supports BYOK, so you can use supported provider credentials instead of putting all model usage into one bundle."
+      },
+      {
+        "q": "I'm on a Think New or Think Big subscription. What happens to my plan?",
+        "a": "Your current plan stays in place for now. We'll contact you at least 60 days before anything changes, and show you what you'd pay under the new pricing."
       }
     ],
     "ctaEyebrow": "Start free",
     "ctaTitle": "Upload the codebase you're afraid of.",
     "ctaSubtitle": "In minutes you'll see how it actually works, and what every change would touch.",
     "ctaBtnPrimary": "Analyze a project →",
-    "ctaBtnSecondary": "Talk to sales"
+    "ctaBtnSecondary": "Talk to sales",
+    "noFee": "No monthly platform fee",
+    "plan2PacksLabel": "Credit packs at $0.05 per credit",
+    "plan3PacksLabel": "Credit packs at $0.06 per credit",
+    "plan2Packs": [
+      {
+        "price": "$25",
+        "credits": "500 credits"
+      },
+      {
+        "price": "$50",
+        "credits": "1,000 credits"
+      },
+      {
+        "price": "$75",
+        "credits": "1,500 credits"
+      },
+      {
+        "price": "$100",
+        "credits": "2,000 credits"
+      }
+    ],
+    "plan3Packs": [
+      {
+        "price": "$180",
+        "credits": "3,000 credits"
+      },
+      {
+        "price": "$360",
+        "credits": "6,000 credits"
+      },
+      {
+        "price": "$480",
+        "credits": "8,000 credits"
+      },
+      {
+        "price": "$960",
+        "credits": "16,000 credits"
+      }
+    ],
+    "estimateEyebrow": "Estimate your cost",
+    "estimateTitle": "See what your credits would cost",
+    "estimateSubtitle": "Move the slider, or pick an amount. Usage depends on the work performed and the models you choose.",
+    "estimateLabel": "Credits you use each month",
+    "estimateUnit": "credits",
+    "estimateHint": "Estimates use the price per credit. You buy credits in packs, and what you don't use rolls over.",
+    "estimateFree": "Think Free, 500 credits one time",
+    "estimateNew": "Think New, 1 user, $0.05 a credit",
+    "estimateBig": "Think Big, up to 25 users, $0.06 a credit",
+    "estimateLimited": "Limited to 500 credits",
+    "estimatePerMonth": "/month",
+    "estimatePresets": "Example amounts",
+    "compareGroupCredits": "Credits",
+    "compareRowFee": "Monthly platform fee",
+    "compareValNone": "None",
+    "compareValUnlimited": "Unlimited",
+    "compareRowIncluded": "Included credits",
+    "compareValFreeCredits": "500, one time",
+    "compareRowPerCredit": "Price per credit",
+    "compareRowPacks": "Credit packs",
+    "compareValNewRate": "$0.05",
+    "compareValBigRate": "$0.06",
+    "compareValNewPacks": "$25, $50, $75, $100",
+    "compareValBigPacks": "$180, $360, $480, $960",
+    "faqLinkText": "How to: Design in Think, Code in Claude"
   },
   "faqPage": {
     "metaTitle": "Think4Ever FAQ — Living Blueprints, Code Understanding and MCP",

@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Think4Ever Pricing — Start Free, Pay for What You Use</title>
+<meta name="description" content="Think4Ever pricing: start free, then buy credit packs with no monthly platform fee. Build solo with Think New, or bring up to 25 people into one workspace with Think Big.">
+<link rel="canonical" href="https://think4ever.com/pricing/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0b1b3a; --ink-soft: #3f5175; --muted: #6b7a99;
+    --bg: #fafafa; --card: #ffffff; --line: #e6eaf2; --soft: #f4f6fa;
+    --brand: #093cad; --accent: #c2570a; --accent-line: #fdba74; --accent-tint: #fff8ef; --tint: #eaf2ff;
+    --highlight: #ff7a1a; --radius: 18px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 24px; }
+
+  header.site { position: sticky; top: 0; z-index: 10; background: var(--ink); }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  header.site img { height: 30px; display: block; }
+  header.site nav { display: flex; gap: 28px; align-items: center; font-size: 15px; font-weight: 500; }
+  header.site nav a { text-decoration: none; color: #c8d3ea; }
+  header.site nav a:hover { color: #fff; }
+  header.site nav a.active { color: #fff; font-weight: 700; }
+
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-weight: 700; font-size: 15px; text-decoration: none; border: 1px solid var(--line); background: var(--soft); color: var(--ink); transition: transform .15s ease, box-shadow .15s ease; cursor: pointer; }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(11,27,58,.08); }
+  .btn.primary { background: var(--brand); color: #fff; border-color: var(--brand); box-shadow: 0 8px 20px rgba(9,60,173,.25); }
+  header.site nav a.btn.primary { background: #fff; color: var(--ink); border-color: #fff; box-shadow: none; }
+  .btn.orange { background: var(--accent); color: #fff; border-color: var(--accent); box-shadow: 0 8px 20px rgba(194,87,10,.25); }
+  .btn.small { padding: 9px 18px; font-size: 14px; }
+  .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--brand); }
+
+  .hero { text-align: center; padding: 72px 0 36px; }
+  .hero h1 { font-size: clamp(34px, 5.2vw, 56px); line-height: 1.08; margin: 12px auto 16px; max-width: 860px; letter-spacing: -0.02em; }
+  .hero h1 span { color: var(--highlight); }
+  .hero p { font-size: 19px; color: var(--ink-soft); max-width: 700px; margin: 0 auto 28px; }
+  .hero .note { font-size: 14px; color: var(--muted); margin-top: 14px; }
+
+  .plans-shell { background: #cfe3ff; border-radius: 28px; padding: 22px; margin-top: 16px; }
+  .plans { background: var(--card); border-radius: 22px; padding: 28px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .plan { position: relative; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 22px 22px; display: flex; flex-direction: column; }
+  .plan.featured { border: 1.5px solid var(--accent-line); box-shadow: 0 10px 30px rgba(249,115,22,.10); }
+  .badge { position: absolute; top: -12px; right: 22px; font-size: 11px; font-weight: 800; letter-spacing: .08em; padding: 5px 12px; border-radius: 999px; background: var(--accent); color: #fff; }
+  .plan .name { font-size: 15px; font-weight: 700; letter-spacing: .04em; color: var(--brand); }
+  .plan .big { font-size: 40px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; margin-top: 8px; }
+  .plan .who { color: var(--ink-soft); font-size: 15.5px; margin: 10px 0 18px; }
+  .nofee { background: var(--ink); color: #fff; font-size: 14.5px; font-weight: 700; text-align: center; border-radius: 10px; padding: 9px 12px; margin-bottom: 16px; }
+  .hero .nofee { display: table; margin: -8px auto 24px; font-size: 17px; padding: 8px 18px; border-radius: 8px; background: #ffedd5; color: #9a3f06; }
+  .stats { display: flex; gap: 8px; margin-bottom: 20px; }
+  .stat { flex: 1 1 0; min-width: 0; border: 1px solid var(--line); border-radius: 12px; padding: 12px 4px 10px; text-align: center; background: var(--card); }
+  .featured .stat { background: var(--accent-tint); border-color: #fde6c8; }
+  .stat b { display: block; font-size: 19px; font-weight: 800; line-height: 1.2; }
+  .stat b.word { font-size: 14px; line-height: 23px; }
+  .stat span { display: block; font-size: 10.5px; font-weight: 700; letter-spacing: .05em; color: var(--ink-soft); margin-top: 3px; }
+  .packs-label { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+  .packs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; }
+  .pack { border: 1px solid #fde6c8; background: var(--accent-tint); border-radius: 10px; padding: 8px 10px; }
+  .pack b { display: block; font-size: 17px; font-weight: 800; line-height: 1.2; }
+  .pack span { display: block; font-size: 12.5px; color: var(--ink-soft); }
+  .plan ul { list-style: none; padding: 18px 0 0; margin: 0 0 24px; display: grid; gap: 11px; border-top: 1px solid var(--line); flex: 1; align-content: start; }
+  .plan li { position: relative; padding-left: 30px; font-size: 14.5px; color: var(--ink-soft); }
+  .plan li::before { content: ""; position: absolute; left: 0; top: 2px; width: 20px; height: 20px; border-radius: 50%; background: var(--soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233f5175' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / 12px no-repeat; }
+  .featured li::before { background: #ffedd5 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c2570a' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / 12px no-repeat; }
+  .plan .btn { width: 100%; }
+
+  section { padding: 80px 0 0; }
+  .section-head { max-width: 760px; margin-bottom: 32px; }
+  .section-head h2 { font-size: clamp(26px, 3.4vw, 36px); line-height: 1.15; margin: 10px 0 12px; letter-spacing: -0.015em; }
+  .section-head p { color: var(--ink-soft); font-size: 17px; margin: 0; }
+
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .step .num { width: 34px; height: 34px; border-radius: 10px; background: var(--tint); color: var(--brand); font-weight: 800; display: grid; place-items: center; margin-bottom: 14px; }
+  .step h3 { font-size: 17px; margin: 0 0 8px; }
+  .step p { font-size: 15px; color: var(--ink-soft); margin: 0; }
+
+  .team-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 28px; align-items: start; }
+  .value-list { display: grid; gap: 14px; }
+  .value { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; }
+  .value h3 { font-size: 16px; margin: 0 0 4px; }
+  .value p { font-size: 14.5px; color: var(--ink-soft); margin: 0; }
+  .side-card { background: var(--ink); color: #fff; border-radius: 22px; padding: 30px; }
+  .side-card h3 { font-size: 22px; margin: 0 0 6px; }
+  .side-card p { color: #c8d3ea; margin: 0 0 20px; font-size: 15px; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .split .col { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: 18px; }
+  .split .col.big { background: rgba(156,192,255,.16); border-color: rgba(156,192,255,.45); }
+  .split h4 { margin: 0 0 12px; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: #9cc0ff; }
+  .split .col:first-child h4 { color: #c8d3ea; }
+  .split dl { margin: 0; display: grid; gap: 10px; }
+  .split dt { font-size: 12px; color: #9fb0d3; text-transform: uppercase; letter-spacing: .04em; }
+  .split dd { margin: 0; font-weight: 700; font-size: 15px; }
+
+  .calc { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 30px; }
+  .calc label { font-weight: 700; font-size: 15px; display: block; margin-bottom: 10px; }
+  .calc input[type=range] { width: 100%; accent-color: var(--accent); }
+  .calc .presets { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .calc .presets button { font: inherit; font-size: 13.5px; font-weight: 600; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--soft); color: var(--ink-soft); cursor: pointer; }
+  .calc .presets button:hover { border-color: var(--accent-line); color: var(--ink); }
+  .calc .credits { font-size: 34px; font-weight: 800; margin: 8px 0 2px; }
+  .calc .hint { font-size: 14px; color: var(--muted); }
+  .result { background: var(--ink); color: #fff; border-radius: 18px; padding: 24px; display: grid; gap: 14px; align-content: start; }
+  .result .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-bottom: 1px solid rgba(255,255,255,.12); padding-bottom: 12px; }
+  .result .row:last-child { border-bottom: none; padding-bottom: 0; }
+  .result .lbl { color: #c8d3ea; font-size: 14.5px; }
+  .result .val { font-size: 24px; font-weight: 800; text-align: right; }
+  .result .val.limit { font-size: 15px; font-weight: 600; color: #c8d3ea; }
+
+  .table-wrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 20px; }
+  table { width: 100%; border-collapse: collapse; min-width: 760px; font-size: 15px; }
+  th, td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+  thead th { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); background: var(--soft); }
+  thead th.hl { color: var(--brand); background: var(--tint); }
+  td.hl { background: #f7faff; }
+  tbody tr.group td { background: var(--soft); font-weight: 800; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+  td:first-child { color: var(--ink-soft); font-weight: 500; width: 30%; }
+  .yes { color: #15803d; font-weight: 700; }
+  .no { color: #a3acc2; }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .cards3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .info { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .info h3 { margin: 0 0 8px; font-size: 17px; }
+  .info p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+
+  .faq { display: grid; gap: 12px; max-width: 860px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 4px 20px; }
+  summary { cursor: pointer; font-weight: 700; padding: 14px 0; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: 20px; color: var(--muted); line-height: 1; }
+  details[open] summary::after { content: "\2013"; }
+  details p { margin: 0 0 16px; color: var(--ink-soft); font-size: 15.5px; }
+
+  .cta { margin: 90px 0 0; background: var(--ink); color: #fff; border-radius: 28px; padding: 56px 32px; text-align: center; }
+  .cta .eyebrow { color: #9cc0ff; }
+  .cta h2 { font-size: clamp(26px, 3.6vw, 38px); margin: 10px 0 10px; }
+  .cta p { color: #c8d3ea; margin: 0 auto 26px; max-width: 560px; font-size: 17px; }
+  .cta .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .cta .btn { background: #fff; color: var(--ink); border-color: #fff; }
+  .cta .btn.ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.35); }
+  footer { padding: 48px 0 40px; color: var(--muted); font-size: 14px; text-align: center; }
+
+  @media (max-width: 1180px) {
+    .plans { grid-template-columns: repeat(2, 1fr); }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .team-grid, .calc { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 680px) {
+    .wrap { padding: 0 16px; }
+    header.site nav a:not(.btn) { display: none; }
+    .hero { padding: 44px 0 24px; }
+    .plans-shell { padding: 10px; border-radius: 20px; }
+    .plans { grid-template-columns: 1fr; padding: 16px; gap: 26px; }
+    .steps, .cards3, .split { grid-template-columns: 1fr; }
+    section { padding-top: 60px; }
+    .calc, .side-card { padding: 20px; }
+    .cta { padding: 40px 20px; border-radius: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Placeholder header and footer so this file opens on its own. On the live site, keep the existing site header and footer. -->
+<header class="site">
+  <div class="wrap">
+    <a href="https://think4ever.com/" aria-label="Think4Ever home"><img src="https://think4ever.com/images/t4e-logo.png" alt="Think4Ever"></a>
+    <nav>
+      <a href="https://think4ever.com/how-it-works/">How it works</a>
+      <a href="https://think4ever.com/integrations/">Integrations</a>
+      <a href="https://think4ever.com/apps/">Apps</a>
+      <a class="active" href="https://think4ever.com/pricing/">Pricing</a>
+      <a class="btn small primary" href="https://portal.think4ever.com">Start free</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <div class="eyebrow">Pricing</div>
+      <h1>Start with the project <span>you're afraid to touch</span></h1>
+      <p>Analyze a system, review the blueprint and see change impact. Start free, then buy credits as you need them. Build solo with Think New, or bring your whole team into one workspace with Think Big.</p>
+      <div class="nofee">No monthly platform fee</div>
+      <a class="btn primary" href="https://portal.think4ever.com">Start free →</a>
+      <div class="note">No credit card required for the free plan</div>
+    </div>
+
+    <div class="plans-shell" id="plans">
+      <div class="plans">
+
+        <article class="plan">
+          <div class="name">THINK FREE</div>
+          <div class="big">Free</div>
+          <p class="who">Build, extend or modernize something real before spending a penny.</p>
+          <div class="stats">
+            <div class="stat"><b>1</b><span>USER</span></div>
+            <div class="stat"><b>1</b><span>PROJECT</span></div>
+            <div class="stat"><b>500</b><span>CREDITS</span></div>
+          </div>
+          <ul>
+            <li>500 orchestration credits, one time</li>
+            <li>Build new, extend current, modernize legacy</li>
+            <li>BYOK (bring your own model)</li>
+            <li>Upgrade when you outgrow the free limits</li>
+          </ul>
+          <a class="btn" href="https://portal.think4ever.com">Start free</a>
+        </article>
+
+        <article class="plan featured">
+          <span class="badge">POPULAR</span>
+          <div class="name">THINK NEW</div>
+          <p class="who">For solo developers, freelancers and startup founders.</p>
+          <div class="nofee">No monthly platform fee</div>
+          <div class="stats">
+            <div class="stat"><b>1</b><span>USER</span></div>
+            <div class="stat"><b class="word">UNLIMITED</b><span>PROJECTS</span></div>
+          </div>
+          <div class="packs-label">Credit packs at $0.05 per credit</div>
+          <div class="packs">
+            <div class="pack"><b>$25</b><span>500 credits</span></div>
+            <div class="pack"><b>$50</b><span>1,000 credits</span></div>
+            <div class="pack"><b>$75</b><span>1,500 credits</span></div>
+            <div class="pack"><b>$100</b><span>2,000 credits</span></div>
+          </div>
+          <ul>
+            <li>Your own company workspace</li>
+            <li>Build new, extend current, modernize legacy</li>
+            <li>Connect Claude Code, Cursor or Codex over MCP</li>
+            <li>BYOK (bring your own model)</li>
+            <li>Purchased credits roll over</li>
+          </ul>
+          <a class="btn orange" href="https://portal.think4ever.com">Get Think New</a>
+        </article>
+
+        <article class="plan featured">
+          <span class="badge">FOR TEAMS</span>
+          <div class="name">THINK BIG</div>
+          <p class="who">For developer teams shipping together in one shared workspace.</p>
+          <div class="nofee">No monthly platform fee</div>
+          <div class="stats">
+            <div class="stat"><b>25</b><span>USERS</span></div>
+            <div class="stat"><b class="word">UNLIMITED</b><span>PROJECTS</span></div>
+          </div>
+          <div class="packs-label">Credit packs at $0.06 per credit</div>
+          <div class="packs">
+            <div class="pack"><b>$180</b><span>3,000 credits</span></div>
+            <div class="pack"><b>$360</b><span>6,000 credits</span></div>
+            <div class="pack"><b>$480</b><span>8,000 credits</span></div>
+            <div class="pack"><b>$960</b><span>16,000 credits</span></div>
+          </div>
+          <ul>
+            <li>Everything in Think New, for the whole team</li>
+            <li>One company workspace with shared projects</li>
+            <li>Credit packs in one shared pool</li>
+            <li>Add company users with roles and per-project access</li>
+            <li>Admin controls and usage caps</li>
+            <li>Every member codes in parallel over MCP</li>
+            <li>Priority system orchestration</li>
+            <li>Purchased credits roll over</li>
+          </ul>
+          <a class="btn orange" href="https://portal.think4ever.com">Get Think Big</a>
+        </article>
+
+        <article class="plan">
+          <div class="name">THINK BLUE</div>
+          <div class="big">Custom</div>
+          <p class="who">For organizations with sophisticated environments, larger scale and tailored deployment.</p>
+          <div class="stats">
+            <div class="stat"><b class="word">Custom</b><span>USERS</span></div>
+            <div class="stat"><b class="word">Custom</b><span>PROJECTS</span></div>
+            <div class="stat"><b class="word">Custom</b><span>CREDITS</span></div>
+          </div>
+          <ul>
+            <li>Scale to enterprise teams</li>
+            <li>Private deployment options</li>
+            <li>Custom usage pools and cost controls</li>
+            <li>Stage gates and confidence scoring</li>
+            <li>Dedicated support and onboarding</li>
+          </ul>
+          <a class="btn" href="https://think4ever.com/contact-us/">Contact sales</a>
+        </article>
+
+      </div>
+    </div>
+
+    <section id="how">
+      <div class="section-head">
+        <div class="eyebrow">How it works</div>
+        <h2>One company. One workspace. One pool of credits.</h2>
+        <p>Think New and Think Big are company accounts. Your projects, users and credits live together in your own workspace, so nothing is scattered across personal accounts.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h3>Sign up</h3><p>The person who signs up becomes the company administrator.</p></div>
+        <div class="step"><div class="num">2</div><h3>Get your workspace</h3><p>Your company gets its own server. All of its projects, users and credits live there.</p></div>
+        <div class="step"><div class="num">3</div><h3>Buy a credit pack</h3><p>Choose a pack when you need credits. There's no monthly platform fee, and credits you buy roll over.</p></div>
+        <div class="step"><div class="num">4</div><h3>Add your team</h3><p>On Think Big, the administrator adds company users, picks each person's role and chooses which projects they can open. Everyone draws from the shared credits.</p></div>
+      </div>
+    </section>
+
+    <section id="teams">
+      <div class="team-grid">
+        <div>
+          <div class="section-head">
+            <div class="eyebrow">Think Big</div>
+            <h2>Built for teams that work on the same system</h2>
+            <p>Separate accounts mean separate workspaces, split credits and projects nobody else can open. Think Big puts the whole team on one Living Blueprint.</p>
+          </div>
+          <div class="value-list">
+            <div class="value"><h3>One shared blueprint per project</h3><p>Everyone works from the same concepts, flows, rules and screens, so designs don't drift apart.</p></div>
+            <div class="value"><h3>Roles and per-project access</h3><p>Give each person a role such as Developer, Project Manager or QA Engineer, and open only the projects they need. Deactivate anyone instantly.</p></div>
+            <div class="value"><h3>Pooled credits with admin caps</h3><p>Busy teammates draw more and quieter ones draw less, so no credits sit stranded in someone else's account.</p></div>
+            <div class="value"><h3>Parallel coding with your tools</h3><p>Each member connects their own Claude Code, Cursor or Codex session to the same project through the Think MCP server.</p></div>
+            <div class="value"><h3>Bring in freelancers when you need them</h3><p>Hire through the Think4Ever Marketplace and give freelancers scoped access to your projects that ends with the contract.</p></div>
+          </div>
+        </div>
+        <aside class="side-card">
+          <h3>A team of 8, two ways</h3>
+          <p>What your team gets with separate Think New accounts compared with one Think Big workspace.</p>
+          <div class="split">
+            <div class="col">
+              <h4>8 × Think New</h4>
+              <dl>
+                <div><dt>Workspaces</dt><dd>8 separate</dd></div>
+                <div><dt>Credits</dt><dd>Split across 8 accounts</dd></div>
+                <div><dt>Projects</dt><dd>Each locked to one person</dd></div>
+                <div><dt>Administrator</dt><dd>None across the team</dd></div>
+                <div><dt>Price per credit</dt><dd>$0.05</dd></div>
+              </dl>
+            </div>
+            <div class="col big">
+              <h4>Think Big</h4>
+              <dl>
+                <div><dt>Workspaces</dt><dd>1 shared</dd></div>
+                <div><dt>Credits</dt><dd>One shared pool</dd></div>
+                <div><dt>Projects</dt><dd>Unlimited, shared with the team</dd></div>
+                <div><dt>Administrator</dt><dd>Roles, access, caps</dd></div>
+                <div><dt>Price per credit</dt><dd>$0.06</dd></div>
+              </dl>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="estimate">
+      <div class="section-head">
+        <div class="eyebrow">Estimate your cost</div>
+        <h2>See what your credits would cost</h2>
+        <p>Move the slider, or pick an amount. Usage depends on the work performed and the models you choose.</p>
+      </div>
+      <div class="calc">
+        <div>
+          <label for="credits">Credits you use each month</label>
+          <input id="credits" type="range" min="0" max="50000" step="500" value="2000" aria-describedby="credits-out">
+          <div class="credits" id="credits-out">2,000 credits</div>
+          <div class="hint">Estimates use the price per credit. You buy credits in packs, and what you don't use rolls over.</div>
+          <div class="presets" aria-label="Example amounts">
+            <button type="button" data-v="500">500</button>
+            <button type="button" data-v="2000">2,000</button>
+            <button type="button" data-v="8000">8,000</button>
+            <button type="button" data-v="16000">16,000</button>
+          </div>
+        </div>
+        <div class="result" aria-live="polite">
+          <div class="row"><span class="lbl">Think Free, 500 credits one time</span><span class="val" id="r-free">Limited to 500 credits</span></div>
+          <div class="row"><span class="lbl">Think New, 1 user, $0.05 a credit</span><span class="val" id="r-new">$100 /month</span></div>
+          <div class="row"><span class="lbl">Think Big, up to 25 users, $0.06 a credit</span><span class="val" id="r-big">$120 /month</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare">
+      <div class="section-head">
+        <div class="eyebrow">Compare plans</div>
+        <h2>Everything in each plan</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Plan</th><th>Think Free</th><th>Think New</th><th class="hl">Think Big</th><th>Think Blue</th></tr></thead>
+          <tbody>
+            <tr class="group"><td colspan="5">Plan limits</td></tr>
+            <tr><td>Monthly platform fee</td><td>None</td><td>None</td><td class="hl">None</td><td>Custom</td></tr>
+            <tr><td>Users</td><td>1</td><td>1 (administrator)</td><td class="hl">Up to 25, including the administrator</td><td>Custom</td></tr>
+            <tr><td>Projects</td><td>1</td><td>Unlimited</td><td class="hl">Unlimited, shared</td><td>Custom</td></tr>
+            <tr class="group"><td colspan="5">Credits</td></tr>
+            <tr><td>Included credits</td><td>500, one time</td><td class="no">—</td><td class="hl no">—</td><td>Custom</td></tr>
+            <tr><td>Price per credit</td><td class="no">—</td><td>$0.05</td><td class="hl">$0.06</td><td>Custom</td></tr>
+            <tr><td>Credit packs</td><td class="no">—</td><td>$25, $50, $75, $100</td><td class="hl">$180, $360, $480, $960</td><td>Custom</td></tr>
+            <tr><td>Purchased credits</td><td class="no">—</td><td>Roll over month to month</td><td class="hl">Roll over month to month</td><td>Custom</td></tr>
+            <tr class="group"><td colspan="5">Design and build</td></tr>
+            <tr><td>Build new, extend current, modernize legacy</td><td class="yes">✓</td><td class="yes">✓</td><td class="hl yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Living Blueprint: concept, flows, rules, data, architecture</td><td class="yes">✓</td><td class="yes">✓</td><td class="hl yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>BYOK (bring your own model)</td><td class="yes">✓</td><td class="yes">✓</td><td class="hl yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Connect Claude Code, Cursor or Codex over MCP</td><td class="no">—</td><td class="yes">✓</td><td class="hl yes">✓ For every member</td><td class="yes">✓</td></tr>
+            <tr class="group"><td colspan="5">Team and administration</td></tr>
+            <tr><td>Company workspace</td><td class="yes">✓</td><td class="yes">✓</td><td class="hl yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Company users with roles</td><td class="no">—</td><td class="no">—</td><td class="hl yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Per-project access</td><td class="no">—</td><td class="no">—</td><td class="hl yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Shared credit pool with admin caps</td><td class="no">—</td><td class="no">—</td><td class="hl yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Priority system orchestration</td><td class="no">—</td><td class="no">—</td><td class="hl yes">✓</td><td class="yes">✓</td></tr>
+            <tr class="group"><td colspan="5">Enterprise</td></tr>
+            <tr><td>Private deployment options</td><td class="no">—</td><td class="no">—</td><td class="hl no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Stage gates and confidence scoring</td><td class="no">—</td><td class="no">—</td><td class="hl no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Dedicated support and onboarding</td><td class="no">—</td><td class="no">—</td><td class="hl no">—</td><td class="yes">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="cost">
+      <div class="section-head">
+        <div class="eyebrow">Cost control</div>
+        <h2>Control model choice without losing context.</h2>
+        <p>Keep the blueprint independent from one provider. Bring supported keys and reserve expensive reasoning for work that needs it.</p>
+      </div>
+      <div class="cards3">
+        <div class="info"><h3>Orchestration credits</h3><p>Buy credits in packs when you need them. Usage depends on the work performed. Credits you buy roll over month to month.</p></div>
+        <div class="info"><h3>Bring your own keys</h3><p>Use supported provider credentials where available instead of forcing all model usage into one bundle.</p></div>
+        <div class="info"><h3>Enterprise controls</h3><p>Discuss private deployment, custom usage controls and support requirements with Think4Ever.</p></div>
+      </div>
+    </section>
+
+    <!-- Keep the existing EY customer quote block from the live page here. -->
+
+    <section id="faq">
+      <div class="section-head">
+        <div class="eyebrow">FAQ</div>
+        <h2>Questions about plans</h2>
+      </div>
+      <div class="faq">
+        <details open><summary>Is there a monthly fee?</summary><p>No. Think Free, Think New and Think Big have no monthly platform fee. On Think New and Think Big, you pay only for the credit packs you buy. Think Blue is priced for each organization.</p></details>
+        <details><summary>How do credit packs work?</summary><p>Think New packs cost $25, $50, $75 or $100, at $0.05 per credit. Think Big packs cost $180, $360, $480 or $960, at $0.06 per credit. Buy a pack whenever you need more credits.</p></details>
+        <details><summary>Why do Think Big credits cost more?</summary><p>Think Big credits include what teams need to work together: a shared workspace and credit pool, up to 25 users, roles and per-project access, and admin controls.</p></details>
+        <details><summary>Do unused credits roll over?</summary><p>Credits you buy roll over from month to month until you use them. Think Free's 500 credits are a one-time grant and don't renew.</p></details>
+        <details><summary>What happens when we run out of credits?</summary><p>AI work pauses until you buy another pack. You keep access to your workspace and your projects. On Think Free, move to Think New or Think Big to get more credits.</p></details>
+        <details><summary>What happens when we reach the project limit?</summary><p>Think Free includes one project. Think New and Think Big include unlimited projects, so move to either plan when you need more.</p></details>
+        <details><summary>Who is the administrator?</summary><p>The person who signs up. The administrator manages users, roles, project access and credits, and can see every project in the company workspace.</p></details>
+        <details><summary>Do my team members need their own Think4Ever accounts?</summary><p>No. On Think Big, the administrator creates company users inside your workspace with a login and a temporary password. Each user gets an email and sets their own password at first sign-in. They don't sign up or pay separately.</p></details>
+        <details><summary>What can each team member see?</summary><p>Each user sees only the projects the administrator assigned to them, plus any projects they created themselves. The administrator sees all company projects.</p></details>
+        <details><summary>Who pays for AI usage?</summary><p>All AI work by every user is paid from the company's shared credit pool. On Think Big, the administrator can set caps so no single user or project uses more than its share.</p></details>
+        <details><summary>How do I remove someone's access?</summary><p>The administrator can deactivate a user at any time, and that user loses access immediately.</p></details>
+        <details><summary>Can I use my own coding tools?</summary><p>Yes, on Think New and above. Claude Code, Cursor, Codex and other MCP-compatible tools can build from your Think4Ever design through the Think MCP server, on your own subscription. See <a href="https://think4ever.com/tutorials/how-to-design-in-think/">How to: Design in Think, Code in Claude</a>.</p></details>
+        <details><summary>Can I bring my own model?</summary><p>Yes. Every plan supports BYOK, so you can use supported provider credentials instead of putting all model usage into one bundle.</p></details>
+        <details><summary>I'm on a Think New or Think Big subscription. What happens to my plan?</summary><p>Your current plan stays in place for now. We'll contact you at least 60 days before anything changes, and show you what you'd pay under the new pricing.</p></details>
+      </div>
+    </section>
+
+    <div class="cta">
+      <div class="eyebrow">Start free</div>
+      <h2>Upload the codebase you're afraid of.</h2>
+      <p>In minutes you'll see how it actually works, and what every change would touch.</p>
+      <div class="btns">
+        <a class="btn" href="https://portal.think4ever.com">Analyze a project →</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer><div class="wrap">© 2026 Think4Ever™ · Think4Ever Global Inc.</div></footer>
+
+<script>
+  (function () {
+    var FREE = 500, NEW_RATE = 0.05, BIG_RATE = 0.06;
+    var slider = document.getElementById('credits');
+    var free = document.getElementById('r-free');
+    function money(n) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 }); }
+    function update() {
+      var c = Number(slider.value);
+      document.getElementById('credits-out').textContent = c.toLocaleString('en-US') + ' credits';
+      free.textContent = c <= FREE ? '$0' : 'Limited to 500 credits';
+      free.className = c <= FREE ? 'val' : 'val limit';
+      document.getElementById('r-new').textContent = money(c * NEW_RATE) + ' /month';
+      document.getElementById('r-big').textContent = money(c * BIG_RATE) + ' /month';
+    }
+    slider.addEventListener('input', update);
+    document.querySelectorAll('.presets button').forEach(function (b) { b.addEventListener('click', function () { slider.value = b.getAttribute('data-v'); update(); }); });
+    update();
+  })();
+</script>
+</body>
+</html>

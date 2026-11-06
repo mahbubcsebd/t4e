@@ -17,44 +17,26 @@ export default function PricingFaq() {
     return `/${language}${href}`;
   };
 
-  const items = t("pricingPage.faqItems") || [
-    {
-      q: "Who is the administrator?",
-      a: "The person who signs up and subscribes. The administrator manages users, roles, project access and credits, and can see every project in the company workspace.",
-    },
-    {
-      q: "Do my team members need their own Think4Ever accounts?",
-      a: "No. On Think Big, the administrator creates company users inside your workspace with a login and a temporary password. Each user gets an email and sets their own password at first sign-in. They don't sign up or pay separately.",
-    },
-    {
-      q: "What can each team member see?",
-      a: "Each user sees only the projects the administrator assigned to them, plus any projects they created themselves. The administrator sees all company projects.",
-    },
-    {
-      q: "Who pays for AI usage?",
-      a: "All AI work by every user is paid from the company's shared credit pool. On Think Big, the administrator can set caps so no single user or project uses more than its share.",
-    },
-    {
-      q: "Do unused credits roll over?",
-      a: "Included credits reset every month. Any included credits you don't use by the end of the month don't roll over. Credits you buy on top of your plan, at $0.05 each, do roll over from month to month until you use them.",
-    },
-    {
-      q: "What happens when we reach the project limit?",
-      a: "You can archive a project, add one more project for credits from your company pool, or upgrade to a plan with a higher limit.",
-    },
-    {
-      q: "How do I remove someone's access?",
-      a: "The administrator can deactivate a user at any time, and that user loses access immediately.",
-    },
-    {
-      q: "Can I use my own coding tools?",
-      a: "Yes. Claude Code, Cursor, Codex and other MCP-compatible tools can build from your Think4Ever design through the Think MCP server, on your own subscription. See How to: Design in Think, Code in Claude.",
-    },
-    {
-      q: "Can I bring my own model?",
-      a: "Yes. Every plan supports BYOK, so you can use supported provider credentials instead of putting all model usage into one bundle.",
-    },
-  ];
+  const items = t("pricingPage.faqItems") || [];
+  const linkText = t("pricingPage.faqLinkText", "How to: Design in Think, Code in Claude");
+
+  // Answers may contain a {link} token that is replaced by the tutorial link.
+  const renderAnswer = (answer) => {
+    const parts = String(answer).split("{link}");
+    if (parts.length < 2) return answer;
+    return (
+      <>
+        {parts[0]}
+        <Link
+          href={localizeHref("/tutorials/how-to-design-in-think/")}
+          className="text-primary font-semibold hover:underline"
+        >
+          {linkText}
+        </Link>
+        {parts.slice(1).join("")}
+      </>
+    );
+  };
 
   const toggleItem = (idx) => {
     setOpenIndex(openIndex === idx ? null : idx);
@@ -113,46 +95,7 @@ export default function PricingFaq() {
                   >
                     <div className="overflow-hidden">
                       <div className="px-5 pb-5 pt-1 text-sm text-muted-foreground leading-relaxed border-t border-border/40">
-                        {idx === 7 ? (
-                          <p>
-                            {language === "es" ? (
-                              <>
-                                Sí. Claude Code, Cursor, Codex y otras herramientas compatibles con MCP pueden construir desde su diseño de Think4Ever a través del servidor Think MCP, en su propia suscripción. Consulte{" "}
-                                <Link
-                                  href={localizeHref("/tutorials/how-to-design-in-think/")}
-                                  className="text-primary font-semibold hover:underline"
-                                >
-                                  Cómo: Diseñar en Think, Codificar en Claude
-                                </Link>
-                                .
-                              </>
-                            ) : language === "nl" ? (
-                              <>
-                                Ja. Claude Code, Cursor, Codex en andere MCP-compatibele tools kunnen bouwen vanuit je Think4Ever-ontwerp via de Think MCP-server, op je eigen abonnement. Zie{" "}
-                                <Link
-                                  href={localizeHref("/tutorials/how-to-design-in-think/")}
-                                  className="text-primary font-semibold hover:underline"
-                                >
-                                  Hoe te: Ontwerpen in Think, Coderen in Claude
-                                </Link>
-                                .
-                              </>
-                            ) : (
-                              <>
-                                Yes. Claude Code, Cursor, Codex and other MCP-compatible tools can build from your Think4Ever design through the Think MCP server, on your own subscription. See{" "}
-                                <Link
-                                  href="/tutorials/how-to-design-in-think/"
-                                  className="text-primary font-semibold hover:underline"
-                                >
-                                  How to: Design in Think, Code in Claude
-                                </Link>
-                                .
-                              </>
-                            )}
-                          </p>
-                        ) : (
-                          <p>{item.a}</p>
-                        )}
+                        <p>{renderAnswer(item.a)}</p>
                       </div>
                     </div>
                   </div>

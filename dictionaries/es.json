@@ -404,21 +404,39 @@
     "roleLabel": "Rol",
     "useLabel": "Cómo usan Think4Ever",
     "roles": [
-      { "name": "Product Managers", "desc": "Alinee objetivos y valide cada entregable antes del lanzamiento." },
-      { "name": "Desarrolladores", "desc": "Deje de explicar su producto a cada agente." },
-      { "name": "Arquitectos de software", "desc": "La arquitectura, integrada en cada agente." },
-      { "name": "Líderes de negocio", "desc": "Escale el desarrollo con herramientas de IA sin perder el control." },
-      { "name": "Socios consultores", "desc": "Del inicio a la entrega, sin perder el contexto." },
-      { "name": "Control de calidad (QA)", "desc": "Revise el sistema, no solo los cambios de código." }
+      {
+        "name": "Product Managers",
+        "desc": "Alinee objetivos y valide cada entregable antes del lanzamiento."
+      },
+      {
+        "name": "Desarrolladores",
+        "desc": "Deje de explicar su producto a cada agente."
+      },
+      {
+        "name": "Arquitectos de software",
+        "desc": "La arquitectura, integrada en cada agente."
+      },
+      {
+        "name": "Líderes de negocio",
+        "desc": "Escale el desarrollo con herramientas de IA sin perder el control."
+      },
+      {
+        "name": "Socios consultores",
+        "desc": "Del inicio a la entrega, sin perder el contexto."
+      },
+      {
+        "name": "Control de calidad (QA)",
+        "desc": "Revise el sistema, no solo los cambios de código."
+      }
     ]
   },
   "pricingPage": {
-    "metaTitle": "Precios de Think4Ever — Comience Gratis, Escale con su Equipo",
-    "metaDesc": "Planes de Think4Ever: comience gratis, cree en solitario con Think New o reúna a todo su equipo en un solo espacio de trabajo con Think Big. Un espacio de trabajo empresarial, créditos compartidos y control de administrador.",
+    "metaTitle": "Precios de Think4Ever — Comience gratis y pague por lo que use",
+    "metaDesc": "Precios de Think4Ever: comience gratis y luego compre paquetes de créditos sin cuota mensual de plataforma. Cree en solitario con Think New o reúna hasta 25 personas en un espacio de trabajo con Think Big.",
     "heroEyebrow": "Precios",
     "heroTitlePrefix": "Comience con el proyecto ",
     "heroTitleHighlight": "que teme tocar",
-    "heroSubtitle": "Analice un sistema, revise el plano y vea el impacto de los cambios. Comience gratis, cree en solitario con Think New o reúna a todo su equipo en un solo espacio de trabajo con Think Big.",
+    "heroSubtitle": "Analice un sistema, revise el plano y vea el impacto de los cambios. Comience gratis y luego compre créditos según los necesite. Cree en solitario con Think New o reúna a todo su equipo en un solo espacio de trabajo con Think Big.",
     "heroCtaPrimary": "Comenzar gratis →",
     "heroMicro": "No se requiere tarjeta de crédito para el plan gratuito",
     "plan1Tag": "THINK FREE",
@@ -440,7 +458,7 @@
       }
     ],
     "plan1List": [
-      "500 créditos de orquestación incluidos",
+      "500 créditos de orquestación, una sola vez",
       "Construya nuevo, amplíe actual, modernice legado",
       "BYOK (traiga su propio modelo)",
       "Actualice cuando supere los límites gratuitos"
@@ -457,21 +475,16 @@
         "label": "Usuario"
       },
       {
-        "val": "3",
+        "val": "Ilimitados",
         "label": "Proyectos"
-      },
-      {
-        "val": "2,000",
-        "label": "Créditos/mes"
       }
     ],
     "plan2List": [
       "Su propio espacio de trabajo empresarial",
-      "2,000 créditos de orquestación cada mes",
       "Construya nuevo, amplíe actual, modernice legado",
       "Conecte Claude Code, Cursor o Codex a través de MCP",
       "BYOK (traiga su propio modelo)",
-      "Agregue créditos según sea necesario ($0.05 por crédito). Los créditos comprados se acumulan"
+      "Los créditos comprados se acumulan"
     ],
     "plan2Btn": "Obtener Think New",
     "plan3Tag": "THINK BIG",
@@ -481,28 +494,25 @@
     "plan3Desc": "Para equipos de desarrolladores que lanzan juntos en un espacio compartido.",
     "plan3Limits": [
       {
-        "val": "8",
+        "val": "25",
         "label": "Usuarios"
       },
       {
-        "val": "20",
+        "val": "Ilimitados",
         "label": "Proyectos"
-      },
-      {
-        "val": "20,000",
-        "label": "Créditos/mes"
       }
     ],
     "plan3List": [
       "Todo lo de Think New, para todo el equipo",
-      "Un espacio de trabajo con 20 proyectos compartidos",
-      "20,000 créditos al mes en un fondo compartido",
+      "Un espacio de trabajo de empresa con proyectos compartidos",
+      "Paquetes de créditos en un fondo común compartido",
       "Agregue usuarios de la empresa con roles y acceso por proyecto",
       "Controles de administrador y límites de uso",
       "Cada miembro programa en paralelo a través de MCP",
-      "Orquestación de sistemas prioritaria"
+      "Orquestación de sistemas prioritaria",
+      "Los créditos comprados se acumulan"
     ],
-    "plan3Btn": "Contactar ventas",
+    "plan3Btn": "Obtener Think Big",
     "plan4Tag": "THINK BLUE",
     "plan4Name": "Think Blue",
     "plan4Price": "Personalizado",
@@ -532,27 +542,27 @@
     "howEyebrow": "Cómo funciona",
     "howTitle": "Una empresa. Un espacio de trabajo.",
     "howHighlight": "Un fondo de créditos.",
-    "howSubtitle": "Cada plan pago es una cuenta de empresa. Sus proyectos, usuarios y créditos conviven en su propio espacio, sin dispersarse en cuentas personales.",
+    "howSubtitle": "Think New y Think Big son cuentas de empresa. Sus proyectos, usuarios y créditos viven juntos en su propio espacio de trabajo, por lo que nada queda disperso en cuentas personales.",
     "howSteps": [
       {
         "num": "1",
-        "title": "Suscríbase",
-        "desc": "La persona que se registra y suscribe se convierte en administrador de la empresa."
+        "title": "Regístrese",
+        "desc": "La persona que se registra se convierte en el administrador de la empresa."
       },
       {
         "num": "2",
-        "title": "Obtenga su espacio",
-        "desc": "Su empresa recibe su propio servidor. Todos sus proyectos, usuarios y créditos residen allí."
+        "title": "Obtenga su espacio de trabajo",
+        "desc": "Su empresa recibe su propio servidor. Todos sus proyectos, usuarios y créditos viven allí."
       },
       {
         "num": "3",
-        "title": "Agregue su equipo",
-        "desc": "El administrador agrega usuarios, asigna roles y elige qué proyectos pueden abrir. Sin registros ni pagos separados."
+        "title": "Compre un paquete de créditos",
+        "desc": "Elija un paquete cuando necesite créditos. No hay cuota mensual de plataforma y los créditos que compra se acumulan."
       },
       {
         "num": "4",
-        "title": "Comparta un fondo de créditos",
-        "desc": "Todo el trabajo de IA de cada miembro se paga desde el fondo compartido, con límites del administrador para controlar el gasto."
+        "title": "Añada a su equipo",
+        "desc": "En Think Big, el administrador añade usuarios de la empresa, elige el rol de cada persona y decide qué proyectos puede abrir. Todos usan los créditos compartidos."
       }
     ],
     "teamsEyebrow": "Think Big",
@@ -583,54 +593,41 @@
     ],
     "teamsSideCard": {
       "title": "Un equipo de 8, dos formas",
-      "desc": "Lo que su equipo obtiene con cuentas separadas de Think New frente a un solo plan Think Big.",
+      "desc": "Lo que su equipo obtiene con cuentas separadas de Think New frente a un solo espacio de trabajo Think Big.",
       "col1": {
         "title": "8 × Think New",
         "workspaces": "8 separados",
-        "credits": "16,000, divididos en 2k",
-        "projects": "24, bloqueados a 1",
+        "credits": "Divididos entre 8 cuentas",
+        "projects": "Cada uno bloqueado a una persona",
         "admin": "Ninguno en el equipo",
-        "price": "$200/mes"
+        "price": "$0.05"
       },
       "col2": {
         "title": "Think Big",
         "workspaces": "1 compartido",
-        "credits": "20,000, fondo común",
-        "projects": "20, equipo compartido",
+        "credits": "Un fondo común compartido",
+        "projects": "Ilimitados, compartidos con el equipo",
         "admin": "Roles, acceso, topes",
-        "price": "$250/mes"
+        "price": "$0.06"
       }
     },
     "labelWorkspaces": "Espacios",
     "labelCredits": "Créditos",
     "labelProjects": "Proyectos",
     "labelAdmin": "Administrador",
-    "labelPrice": "Precio",
+    "labelPrice": "Precio por crédito",
     "labelShared": "Compartido",
     "compareEyebrow": "Comparar planes",
     "compareTitle": "Todo lo que incluye cada plan",
     "compareColPlan": "Plan",
     "compareGroupLimits": "Límites del plan",
-    "compareRowPrice": "Precio",
     "compareValFree": "Gratis",
-    "compareValNewPrice": "$25/mes",
-    "compareValBigPrice": "$250/mes",
     "compareValCustom": "Personalizado",
     "compareRowUsers": "Usuarios",
     "compareValNewUsers": "1 (administrador)",
-    "compareValBigUsers": "8, incluido el administrador",
+    "compareValBigUsers": "Hasta 25, incluido el administrador",
     "compareRowProjects": "Proyectos",
-    "compareValBigProjects": "20, compartidos",
-    "compareRowCredits": "Créditos de orquestación",
-    "compareValNewCredits": "2,000 al mes",
-    "compareValBigCredits": "20,000 al mes, fondo común",
-    "compareValBlueCredits": "Fondos de uso personalizados",
-    "compareRowExtraCredits": "Créditos adicionales",
-    "compareValUpgrade": "Actualice para continuar",
-    "compareValPerCredit": "$0.05 por crédito",
-    "compareRowUnused": "Créditos incluidos no utilizados",
-    "compareValDontRollOver": "No se acumulan",
-    "compareValResetMonthly": "Se restablecen cada mes",
+    "compareValBigProjects": "Ilimitados, compartidos",
     "compareRowPurchased": "Créditos comprados",
     "compareValRollOver": "Se acumulan mes a mes",
     "compareGroupDesign": "Diseño y construcción",
@@ -670,7 +667,7 @@
     "costTitle": "Controle la elección de modelos sin perder el contexto.",
     "costSubtitle": "Mantenga el plano independiente de un solo proveedor. Traiga claves compatibles y reserve el razonamiento avanzado para el trabajo que lo requiera.",
     "card1Title": "Créditos de orquestación",
-    "card1Desc": "Los planes incluyen una cuota para la orquestación de Think4Ever. El uso depende del trabajo realizado.",
+    "card1Desc": "Compre créditos en paquetes cuando los necesite. El uso depende del trabajo realizado. Los créditos que compra se acumulan de mes a mes.",
     "card2Title": "Traiga sus propias claves",
     "card2Desc": "Utilice credenciales de proveedores compatibles cuando estén disponibles en lugar de forzar todo el uso de modelos en un paquete único.",
     "card3Title": "Controles empresariales",
@@ -679,47 +676,131 @@
     "faqTitle": "Preguntas sobre los planes",
     "faqItems": [
       {
-        "q": "¿Quién es el administrador?",
-        "a": "La persona que se registra y suscribe. El administrador gestiona usuarios, roles, accesos a proyectos y créditos, y puede ver todos los proyectos del espacio de trabajo."
+        "q": "¿Hay una cuota mensual?",
+        "a": "No. Think Free, Think New y Think Big no tienen cuota mensual de plataforma. En Think New y Think Big solo paga los paquetes de créditos que compra. Think Blue tiene un precio a medida para cada organización."
       },
       {
-        "q": "¿Los miembros de mi equipo necesitan sus propias cuentas de Think4Ever?",
-        "a": "No. En Think Big, el administrador crea usuarios de empresa dentro de su espacio con un inicio de sesión y una contraseña temporal. Cada usuario recibe un correo electrónico y establece su propia contraseña al iniciar sesión por primera vez. No pagan ni se registran por separado."
+        "q": "¿Cómo funcionan los paquetes de créditos?",
+        "a": "Los paquetes de Think New cuestan $25, $50, $75 o $100, a $0.05 por crédito. Los paquetes de Think Big cuestan $180, $360, $480 o $960, a $0.06 por crédito. Compre un paquete cuando necesite más créditos."
+      },
+      {
+        "q": "¿Por qué los créditos de Think Big cuestan más?",
+        "a": "Los créditos de Think Big incluyen lo que los equipos necesitan para trabajar juntos: un espacio de trabajo y un fondo de créditos compartidos, hasta 25 usuarios, roles y acceso por proyecto, y controles de administración."
+      },
+      {
+        "q": "¿Los créditos no usados se acumulan?",
+        "a": "Los créditos que compra se acumulan de mes a mes hasta que los use. Los 500 créditos de Think Free son una concesión única y no se renuevan."
+      },
+      {
+        "q": "¿Qué pasa cuando nos quedamos sin créditos?",
+        "a": "El trabajo de IA se pausa hasta que compre otro paquete. Conserva el acceso a su espacio de trabajo y a sus proyectos. En Think Free, pase a Think New o Think Big para obtener más créditos."
+      },
+      {
+        "q": "¿Qué pasa cuando alcanzamos el límite de proyectos?",
+        "a": "Think Free incluye un proyecto. Think New y Think Big incluyen proyectos ilimitados, así que pase a cualquiera de ellos cuando necesite más."
+      },
+      {
+        "q": "¿Quién es el administrador?",
+        "a": "La persona que se registra. El administrador gestiona usuarios, roles, acceso a proyectos y créditos, y puede ver todos los proyectos del espacio de trabajo de la empresa."
+      },
+      {
+        "q": "¿Mis compañeros necesitan sus propias cuentas de Think4Ever?",
+        "a": "No. En Think Big, el administrador crea usuarios de la empresa dentro de su espacio de trabajo con un inicio de sesión y una contraseña temporal. Cada usuario recibe un correo y define su propia contraseña en el primer inicio de sesión. No se registran ni pagan por separado."
       },
       {
         "q": "¿Qué puede ver cada miembro del equipo?",
-        "a": "Cada usuario ve solo los proyectos que el administrador le asignó, más los proyectos creados por ellos mismos. El administrador ve todos los proyectos de la empresa."
+        "a": "Cada usuario ve solo los proyectos que el administrador le asignó, más los proyectos que creó él mismo. El administrador ve todos los proyectos de la empresa."
       },
       {
-        "q": "¿Quién paga por el uso de IA?",
-        "a": "Todo el trabajo de IA de cada usuario se paga desde el fondo compartido de la empresa. En Think Big, el administrador puede fijar topes para que ningún usuario o proyecto use más de su parte."
+        "q": "¿Quién paga el uso de IA?",
+        "a": "Todo el trabajo de IA de cada usuario se paga con el fondo de créditos compartido de la empresa. En Think Big, el administrador puede fijar topes para que ningún usuario o proyecto use más de lo que le corresponde."
       },
       {
-        "q": "¿Los créditos no utilizados se acumulan?",
-        "a": "Los créditos incluidos se restablecen cada mes. Los créditos incluidos que no use al final del mes no se acumulan. Los créditos que compre adicionalmente a $0.05 cada uno sí se acumulan mes a mes hasta que los use."
-      },
-      {
-        "q": "¿Qué sucede cuando alcanzamos el límite de proyectos?",
-        "a": "Puede archivar un proyecto, agregar uno más con créditos de su fondo o actualizar a un plan con un límite mayor."
-      },
-      {
-        "q": "¿Cómo elimino el acceso de alguien?",
-        "a": "El administrador puede desactivar a un usuario en cualquier momento y ese usuario pierde el acceso inmediatamente."
+        "q": "¿Cómo quito el acceso a alguien?",
+        "a": "El administrador puede desactivar a un usuario en cualquier momento, y ese usuario pierde el acceso de inmediato."
       },
       {
         "q": "¿Puedo usar mis propias herramientas de código?",
-        "a": "Sí. Claude Code, Cursor, Codex y otras herramientas compatibles con MCP pueden construir desde su diseño de Think4Ever a través del servidor Think MCP, en su propia suscripción. Consulte Cómo: Diseñar en Think, Codificar en Claude."
+        "a": "Sí, en Think New y superiores. Claude Code, Cursor, Codex y otras herramientas compatibles con MCP pueden construir desde su diseño de Think4Ever a través del servidor Think MCP, en su propia suscripción. Consulte {link}."
       },
       {
         "q": "¿Puedo traer mi propio modelo?",
-        "a": "Sí. Cada plan admite BYOK, por lo que puede usar credenciales de proveedores compatibles en lugar de poner todo el uso de modelos en un solo paquete."
+        "a": "Sí. Todos los planes admiten BYOK, así que puede usar credenciales de proveedores compatibles en lugar de concentrar todo el uso de modelos en un solo paquete."
+      },
+      {
+        "q": "Tengo una suscripción a Think New o Think Big. ¿Qué pasa con mi plan?",
+        "a": "Su plan actual se mantiene por ahora. Nos pondremos en contacto con usted al menos 60 días antes de cualquier cambio y le mostraremos lo que pagaría con los nuevos precios."
       }
     ],
     "ctaEyebrow": "Comenzar gratis",
     "ctaTitle": "Suba la base de código que teme tocar.",
     "ctaSubtitle": "En minutos verá cómo funciona realmente y qué tocaría cada cambio.",
     "ctaBtnPrimary": "Analizar un proyecto →",
-    "ctaBtnSecondary": "Hablar con ventas"
+    "ctaBtnSecondary": "Hablar con ventas",
+    "noFee": "Sin cuota mensual de plataforma",
+    "plan2PacksLabel": "Paquetes de créditos a $0.05 por crédito",
+    "plan3PacksLabel": "Paquetes de créditos a $0.06 por crédito",
+    "plan2Packs": [
+      {
+        "price": "$25",
+        "credits": "500 créditos"
+      },
+      {
+        "price": "$50",
+        "credits": "1,000 créditos"
+      },
+      {
+        "price": "$75",
+        "credits": "1,500 créditos"
+      },
+      {
+        "price": "$100",
+        "credits": "2,000 créditos"
+      }
+    ],
+    "plan3Packs": [
+      {
+        "price": "$180",
+        "credits": "3,000 créditos"
+      },
+      {
+        "price": "$360",
+        "credits": "6,000 créditos"
+      },
+      {
+        "price": "$480",
+        "credits": "8,000 créditos"
+      },
+      {
+        "price": "$960",
+        "credits": "16,000 créditos"
+      }
+    ],
+    "estimateEyebrow": "Calcule su costo",
+    "estimateTitle": "Vea cuánto costarían sus créditos",
+    "estimateSubtitle": "Mueva el control deslizante o elija una cantidad. El uso depende del trabajo realizado y de los modelos que elija.",
+    "estimateLabel": "Créditos que usa cada mes",
+    "estimateUnit": "créditos",
+    "estimateHint": "Las estimaciones usan el precio por crédito. Los créditos se compran en paquetes y lo que no use se acumula.",
+    "estimateFree": "Think Free, 500 créditos una sola vez",
+    "estimateNew": "Think New, 1 usuario, $0.05 por crédito",
+    "estimateBig": "Think Big, hasta 25 usuarios, $0.06 por crédito",
+    "estimateLimited": "Limitado a 500 créditos",
+    "estimatePerMonth": "/mes",
+    "estimatePresets": "Cantidades de ejemplo",
+    "compareGroupCredits": "Créditos",
+    "compareRowFee": "Cuota mensual de plataforma",
+    "compareValNone": "Ninguna",
+    "compareValUnlimited": "Ilimitados",
+    "compareRowIncluded": "Créditos incluidos",
+    "compareValFreeCredits": "500, una sola vez",
+    "compareRowPerCredit": "Precio por crédito",
+    "compareRowPacks": "Paquetes de créditos",
+    "compareValNewRate": "$0.05",
+    "compareValBigRate": "$0.06",
+    "compareValNewPacks": "$25, $50, $75, $100",
+    "compareValBigPacks": "$180, $360, $480, $960",
+    "faqLinkText": "Cómo: Diseñar en Think, Codificar en Claude"
   },
   "faqPage": {
     "metaTitle": "Preguntas Frecuentes Think4Ever — Planos Vivos, Comprensión de Código y MCP",
