@@ -671,7 +671,7 @@ export default function Header() {
                           width={18}
                           height={13}
                           unoptimized
-                          className="w-[18px] h-auto shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
+                          className="w-[18px] h-[13px] shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
                         />
                         <span translate="no">{lang.name}</span>
                       </div>
@@ -747,7 +747,7 @@ export default function Header() {
                             width={18}
                             height={13}
                             unoptimized
-                            className="w-[18px] h-auto rounded-sm shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
+                            className="w-[18px] h-[13px] rounded-sm shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
                           />
                           <span translate="no">{lang.name}</span>
                         </div>

@@ -47,16 +47,23 @@ export default function StoreButtons({
   const { t } = useLanguage();
 
   const isLight = variant === "light";
+  const isBlue = variant === "blue";
 
-  // Smaller, premium button styling that scales smoothly from mobile to desktop
+  // Same rectangle badge as the Apps page; "blue" swaps the black fill for brand blue.
   const buttonBaseClass = cn(
-    "group inline-flex items-center justify-center sm:justify-start gap-2 sm:gap-2.5 md:gap-3 px-2.5 py-2 sm:px-3.5 sm:py-2.5 md:px-4.5 md:py-2.5 rounded-lg sm:rounded-[10px] transition-all duration-200 w-full sm:w-auto sm:min-w-[170px] md:min-w-[195px]",
-    isLight
-      ? "bg-white text-[#0B1B3A] border border-border shadow-sm sm:shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:border-primary/40"
-      : "bg-[#0B1B3A] text-white border border-white/10 shadow-md sm:shadow-lg hover:shadow-xl hover:-translate-y-0.5 hover:border-white/30 hover:bg-[#10244C]"
+    "group inline-flex items-center justify-center gap-2 sm:gap-2.5 md:gap-3 px-2.5 py-2 sm:px-3.5 sm:py-2.5 md:px-4.5 md:py-2.5 rounded-lg sm:rounded-[10px] transition-all duration-200 w-full sm:w-auto sm:min-w-[170px] md:min-w-[195px]",
+    isBlue
+      ? "w-full sm:w-full h-[50px] py-0 sm:py-0 md:py-0 bg-[#093cad] text-white border border-transparent shadow-sm shadow-[#093cad]/20 hover:bg-[#093cad]/90 hover:shadow-md hover:shadow-[#093cad]/30"
+      : isLight
+      ? "sm:justify-start bg-white text-[#0B1B3A] border border-border shadow-sm sm:shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:border-primary/40"
+      : "sm:justify-start bg-[#0B1B3A] text-white border border-white/10 shadow-md sm:shadow-lg hover:shadow-xl hover:-translate-y-0.5 hover:border-white/30 hover:bg-[#10244C]"
   );
 
-  const containerClass = showOnly
+  const containerClass = isBlue && showOnly
+    ? cn("flex w-full", className)
+    : isBlue
+    ? cn("grid grid-cols-2 gap-3.5 w-full", className)
+    : showOnly
     ? cn("flex items-center w-full sm:w-auto", className)
     : cn(
         "grid grid-cols-2 gap-2 sm:gap-3.5 sm:flex sm:flex-wrap sm:items-center w-full sm:w-auto",
@@ -83,7 +90,7 @@ export default function StoreButtons({
             >
               {t("appsPage.hero.getOnStore", "Get it from")}
             </span>
-            <span className="block text-[11px] sm:text-[13px] md:text-[14.5px] font-bold tracking-tight whitespace-nowrap">
+            <span className={"block text-[11px] sm:text-[13px] md:text-[14.5px] font-bold tracking-tight whitespace-nowrap"}>
               {t("appsPage.hero.microsoftStore", "Microsoft Store")}
             </span>
           </div>
@@ -108,7 +115,7 @@ export default function StoreButtons({
             >
               {t("appsPage.hero.getOnPlay", "Get it on")}
             </span>
-            <span className="block text-[11px] sm:text-[13px] md:text-[14.5px] font-bold tracking-tight whitespace-nowrap">
+            <span className={"block text-[11px] sm:text-[13px] md:text-[14.5px] font-bold tracking-tight whitespace-nowrap"}>
               {t("appsPage.hero.googlePlay", "Google Play")}
             </span>
           </div>

@@ -42,7 +42,7 @@ export default function AppsHero() {
 
             {/* Store Download Buttons */}
             <div className="flex justify-center lg:justify-start mb-4 w-full">
-              <StoreButtons variant="dark" className="max-w-[380px] sm:max-w-none" />
+              <StoreButtons variant="blue" className="max-w-[460px]" />
             </div>
 
             {/* Microcopy note */}
