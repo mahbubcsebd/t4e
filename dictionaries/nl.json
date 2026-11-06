@@ -393,6 +393,25 @@
     "ctaTitle": "Behoud je tools. Verbeter hun context.",
     "ctaSubtitle": "Koppel een project, beoordeel de blauwdruk en neem deze mee naar je coderingswerkstroom."
   },
+  "discoverRole": {
+    "eyebrow": "Voor wie",
+    "title": "Ontdek jouw",
+    "highlight": "rol",
+    "coverCount": "6",
+    "coverWord": "rollen",
+    "coverText": "die Think4Ever nodig hebben, maar het nog niet weten.",
+    "coverCta": "Vind de jouwe",
+    "roleLabel": "Rol",
+    "useLabel": "Hoe zij Think4Ever gebruiken",
+    "roles": [
+      { "name": "Productmanagers", "desc": "Stem doelen af en valideer elk resultaat vóór de lancering." },
+      { "name": "Ontwikkelaars", "desc": "Stop met je product aan elke agent uit te leggen." },
+      { "name": "Softwarearchitecten", "desc": "Architectuur, ingebouwd in elke agent." },
+      { "name": "Bedrijfsleiders", "desc": "Schaal ontwikkeling met AI-tools zonder de controle te verliezen." },
+      { "name": "Consultancypartners", "desc": "Van kick-off tot oplevering, zonder context te verliezen." },
+      { "name": "Kwaliteitsborging (QA)", "desc": "Beoordeel het systeem, niet alleen de codewijzigingen." }
+    ]
+  },
   "pricingPage": {
     "metaTitle": "Think4Ever Prijzen — Begin Gratis, Schaal met uw Team",
     "metaDesc": "Think4Ever-abonnementen: begin gratis, bouw solo met Think New of breng je hele team samen in één werkruimte met Think Big. Eén bedrijfswerkruimte, gedeelde credits en beheerderscontrole.",

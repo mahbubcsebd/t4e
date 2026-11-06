@@ -393,6 +393,25 @@
     "ctaTitle": "Conserve sus herramientas. Mejore su contexto.",
     "ctaSubtitle": "Conecte un proyecto, revise el plano y llévelo a su flujo de código."
   },
+  "discoverRole": {
+    "eyebrow": "Para quién es",
+    "title": "Descubra su",
+    "highlight": "rol",
+    "coverCount": "6",
+    "coverWord": "roles",
+    "coverText": "que necesitan Think4Ever pero aún no lo saben.",
+    "coverCta": "Encuentre el suyo",
+    "roleLabel": "Rol",
+    "useLabel": "Cómo usan Think4Ever",
+    "roles": [
+      { "name": "Product Managers", "desc": "Alinee objetivos y valide cada entregable antes del lanzamiento." },
+      { "name": "Desarrolladores", "desc": "Deje de explicar su producto a cada agente." },
+      { "name": "Arquitectos de software", "desc": "La arquitectura, integrada en cada agente." },
+      { "name": "Líderes de negocio", "desc": "Escale el desarrollo con herramientas de IA sin perder el control." },
+      { "name": "Socios consultores", "desc": "Del inicio a la entrega, sin perder el contexto." },
+      { "name": "Control de calidad (QA)", "desc": "Revise el sistema, no solo los cambios de código." }
+    ]
+  },
   "pricingPage": {
     "metaTitle": "Precios de Think4Ever — Comience Gratis, Escale con su Equipo",
     "metaDesc": "Planes de Think4Ever: comience gratis, cree en solitario con Think New o reúna a todo su equipo en un solo espacio de trabajo con Think Big. Un espacio de trabajo empresarial, créditos compartidos y control de administrador.",

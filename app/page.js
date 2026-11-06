@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import CoherenceSection from '@/components/sections/home/CoherenceSection';
 import CtaSection from '@/components/sections/home/CtaSection';
+import DiscoverRoleSection from '@/components/sections/home/DiscoverRoleSection';
 import HeroSection from '@/components/sections/home/HeroSection';
 import HowItWorksSection from '@/components/sections/home/HowItWorksSection';
 import PersistentContextSection from '@/components/sections/home/PersistentContextSection';
@@ -20,6 +21,7 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <PortalStartSection />
+        <DiscoverRoleSection />
         <HeroSection />
         <ProblemSection />
         <ProductModelSection />
