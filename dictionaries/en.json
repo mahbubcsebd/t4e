@@ -393,6 +393,25 @@
     "ctaTitle": "Keep your tools. Improve their context.",
     "ctaSubtitle": "Connect a project, review the blueprint and carry it into your coding workflow."
   },
+  "discoverRole": {
+    "eyebrow": "Who it's for",
+    "title": "Discover your",
+    "highlight": "Role",
+    "coverCount": "6",
+    "coverWord": "roles",
+    "coverText": "that need Think4Ever but don't know it yet.",
+    "coverCta": "Find yours",
+    "roleLabel": "Role",
+    "useLabel": "How they use Think4Ever",
+    "roles": [
+      { "name": "Product Managers", "desc": "Align goals and validate every deliverable before launch." },
+      { "name": "Developers", "desc": "Stop explaining your product to every agent." },
+      { "name": "Software Architects", "desc": "Architecture, built into every agent." },
+      { "name": "Business Leaders", "desc": "Scale development with AI tools without losing control." },
+      { "name": "Consulting Partners", "desc": "From kickoff to delivery, without losing context." },
+      { "name": "Quality Assurance (QA)", "desc": "Review the system, not just the code changes." }
+    ]
+  },
   "pricingPage": {
     "metaTitle": "Think4Ever Pricing — Start Free, Scale with Your Team",
     "metaDesc": "Think4Ever plans: start free, build solo with Think New, or bring your whole team into one workspace with Think Big. One company workspace, shared credits, and admin control.",
