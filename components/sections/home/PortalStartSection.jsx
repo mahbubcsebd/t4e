@@ -6,6 +6,7 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import { useLanguage } from "@/context/LanguageContext";
 import { useAuthModal } from "@/context/AuthModalContext";
 import { callPortalApi } from "@/lib/portalApi";
+import StoreButtons from "@/components/sections/apps/StoreButtons";
 import {
   GitFork,
   Code2,
@@ -324,12 +325,12 @@ export default function PortalStartSection() {
         </div>
 
         {/* ── 4. Action CTAs (Consistent rounded-full buttons matching the site) ── */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 w-full max-w-[460px] mx-auto">
           <Button
             size="lg"
             disabled={loading}
             onClick={() => handleOpenAuthModal("signup")}
-            className="w-full sm:w-auto min-w-[220px]"
+            className="w-full"
           >
             {loading && <Loader2 className="w-4 h-4 animate-spin mr-2" />}
             Continue &amp; sign up
@@ -340,10 +341,22 @@ export default function PortalStartSection() {
             size="lg"
             disabled={loading}
             onClick={() => handleOpenAuthModal("signin")}
-            className="w-full sm:w-auto min-w-[220px]"
+            className="w-full"
           >
             I already have an account
           </Button>
+        </div>
+
+        {/* ── 5. Native apps ── */}
+        <div className="mt-8 md:mt-10 flex flex-col items-center gap-4 w-full max-w-[460px] mx-auto">
+          <div className="flex items-center gap-4 w-full" aria-hidden="true">
+            <span className="h-px flex-1 bg-gradient-to-r from-transparent to-border" />
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+              Or install the app
+            </span>
+            <span className="h-px flex-1 bg-gradient-to-l from-transparent to-border" />
+          </div>
+          <StoreButtons variant="blue" />
         </div>
       </div>
     </section>

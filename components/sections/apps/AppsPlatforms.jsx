@@ -67,7 +67,7 @@ export default function AppsPlatforms() {
 
               {/* Action Button */}
               <div className="pt-4 border-t border-border/60">
-                <StoreButtons variant="dark" showOnly="windows" />
+                <StoreButtons variant="blue" showOnly="windows" />
               </div>
             </div>
 
@@ -113,7 +113,7 @@ export default function AppsPlatforms() {
 
               {/* Action Button */}
               <div className="pt-4 border-t border-border/60">
-                <StoreButtons variant="dark" showOnly="android" />
+                <StoreButtons variant="blue" showOnly="android" />
               </div>
             </div>
           </div>
