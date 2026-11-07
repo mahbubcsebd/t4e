@@ -115,7 +115,7 @@ function RoleCard({ role, index, roleLabel, useLabel, moreLabel, onOpen }) {
                   alt=""
                   fill
                   sizes="96px"
-                  className="object-cover object-left-top"
+                  className="object-cover object-top"
                 />
               </span>
             </span>
@@ -216,7 +216,7 @@ function RoleDialog({ role, index, t, guideHref, onStart, onOpenChange }) {
               alt={role.caption}
               width={480}
               height={314}
-              className="block h-auto max-h-[300px] w-full rounded-lg border border-[#e6d6b8] bg-white object-cover object-left-top"
+              className="block h-auto max-h-[300px] w-full rounded-lg border border-[#e6d6b8] bg-white object-cover object-top"
             />
             <figcaption className="mt-1.5 text-xs text-muted-foreground">{role.caption}</figcaption>
           </figure>
