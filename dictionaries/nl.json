@@ -406,29 +406,128 @@
     "roles": [
       {
         "name": "Productmanagers",
-        "desc": "Stem doelen af en valideer elk resultaat vóór de lancering."
+        "who": "Productowners, business analisten, delivery managers",
+        "desc": "Keur de intentie goed. Weet dat het is gebouwd.",
+        "question": "“Komt wat wordt opgeleverd overeen met wat we hebben goedgekeurd?”",
+        "openFirst": [
+          "Vereisten",
+          "Bedrijfsflows",
+          "Bedrijfsregels",
+          "UI-ontwerpen"
+        ],
+        "routine": [
+          "Keur vereisten goed en vink af wat buiten scope valt.",
+          "Loop de hoofdflows door en klik samen met stakeholders door de UI-preview.",
+          "Beoordeel de ernst van elke regel en het gedrag bij een overtreding, en keur daarna het bouwplan per fase goed."
+        ],
+        "outcome": "Wat wordt opgeleverd komt overeen met wat is goedgekeurd, met minder late verrassingen en een traceerbare lijn van regel naar code.",
+        "caption": "Vereistenreview in Think4Ever: doelen, gebruikersrollen en epics, stuk voor stuk af te vinken."
       },
       {
         "name": "Ontwikkelaars",
-        "desc": "Stop met je product aan elke agent uit te leggen."
+        "who": "Engineers die werken met Claude Code, Cursor, Codex en andere agents",
+        "desc": "Stop met je product aan elke agent uit te leggen.",
+        "question": "“Waarom leg ik dit product aan elke agent opnieuw uit?”",
+        "openFirst": [
+          "Conceptmap en samenvattingen",
+          "Dataobjecten",
+          "Bedrijfsregels",
+          "UI-ontwerpen"
+        ],
+        "routine": [
+          "Koppel Claude Code, Cursor of Codex één keer aan het project via MCP.",
+          "Laat de agent het concept, het schema en de regels ophalen voordat hij code schrijft.",
+          "Lees bij een geërfde repository eerst de blokkensamenvattingen en flows."
+        ],
+        "outcome": "Minder opnieuw prompten en herwerk, agents die stoppen met schema's verzinnen en onboarding op onbekende code zonder regel voor regel te lezen, in de editor die je al gebruikt.",
+        "caption": "Think MCP Server levert de blueprint aan VS Code, Cursor, Codex, Gemini CLI en Claude Code."
       },
       {
         "name": "Softwarearchitecten",
-        "desc": "Architectuur, ingebouwd in elke agent."
+        "who": "Architecten en tech leads",
+        "desc": "Jouw architectuur, afgedwongen bij elke agent.",
+        "question": "“Hoe houd ik het ontwerp intact als tien agents code schrijven?”",
+        "openFirst": [
+          "Technische architectuur",
+          "Dataobjecten",
+          "Integratiemaps",
+          "Conceptmap"
+        ],
+        "routine": [
+          "Beoordeel de architectuur per laag en het ERD voordat de bouw begint.",
+          "Koppel de agents van het team via MCP zodat ze allemaal dezelfde contracten lezen.",
+          "Controleer de impact in de blueprint voordat je een wijziging goedkeurt en voer hardening uit voor elke release."
+        ],
+        "outcome": "Architectuur die wordt afgedwongen en niet alleen gedocumenteerd, en veilig refactoren en moderniseren van legacysystemen.",
+        "caption": "Technische architectuur per laag, elk blok gekoppeld aan de bronbestanden."
       },
       {
         "name": "Bedrijfsleiders",
-        "desc": "Schaal ontwikkeling met AI-tools zonder de controle te verliezen."
+        "who": "CEO, CIO, CTO, CFO",
+        "desc": "Schaal AI-ontwikkeling op zonder de controle over wat wordt gebouwd te verliezen.",
+        "question": "“Krijgen we controle en rendement uit wat we aan AI-ontwikkeling uitgeven?”",
+        "openFirst": [
+          "Productiegereedheidsrapport",
+          "Vereistendocumenten",
+          "Roadmapfases"
+        ],
+        "routine": [
+          "Controleer de gereedheidsscore en het cijfer van elke releasekandidaat.",
+          "Lees de Conceptsamenvatting van de programma's die je sponsort.",
+          "Vraag om roadmapfases vóór het budget, niet erna."
+        ],
+        "outcome": "Eén beheerd dossier over teams, leveranciers en agents heen, kennis die bij het bedrijf blijft en bewijs dat klaarligt wanneer auditors of klanten erom vragen.",
+        "caption": "Productiegereedheidsrapport met een gereedheidsscore van 57 en mislukte, waarschuwende en geslaagde controles."
       },
       {
         "name": "Consultancypartners",
-        "desc": "Van kick-off tot oplevering, zonder context te verliezen."
+        "who": "Systeemintegratoren en deliverypartners",
+        "desc": "Van kick-off tot overdracht, zonder context te verliezen.",
+        "question": "“Hoe lever ik een beheerd resultaat en draag ik het netjes over?”",
+        "openFirst": [
+          "Functionele architectuur",
+          "Vereistendocumenten",
+          "Bouwplan"
+        ],
+        "routine": [
+          "Breng het bestaande systeem van de klant in de eerste week in kaart.",
+          "Spreek scope en fases af op de blueprint, niet in slides.",
+          "Draag de blueprint en de herbouwde specificaties samen met de code over."
+        ],
+        "outcome": "Een herhaalbare leveringsmethode die je als resultaat kunt verkopen: begrijpen, vastleggen, bouwen, beheren. De kennis gaat over naar de klant in plaats van met het team te vertrekken.",
+        "caption": "Beoordeelbaar bouwplan: elke stap noemt de pagina's, API's en data die hij bouwt en de agent die hem bouwt."
       },
       {
         "name": "Kwaliteitsborging (QA)",
-        "desc": "Beoordeel het systeem, niet alleen de codewijzigingen."
+        "who": "QA, beveiliging, risico en compliance",
+        "desc": "Beoordeel het systeem, niet alleen de codewijzigingen.",
+        "question": "“Wat moest dit doen, en kan ik bewijzen dat het dat doet?”",
+        "openFirst": [
+          "Bedrijfsflows",
+          "Bedrijfsregels",
+          "Rollen en rechten",
+          "Gereedheidsrapport"
+        ],
+        "routine": [
+          "Leid testcases af uit foutpaden van flows en regelovertredingen.",
+          "Test de toegang per rol aan de hand van de rechtenmatrix.",
+          "Gebruik dataflowdiagrammen, beveiligingsdiagrammen en het hardeningrapport als reviewbewijs."
+        ],
+        "outcome": "Documentatie, dataflows en gekoppelde regels voor code die je niet zelf hebt geschreven, en bevindingen gerangschikt op ernst in plaats van begraven in een scanlog.",
+        "caption": "Bedrijfsregels in gewone taal en als expressies, met ernst en wat er bij een overtreding gebeurt."
       }
-    ]
+    ],
+    "sub": "Eén Living Blueprint, zes manieren om binnen te komen. Vereisten, flows, regels, data, architectuur en schermen blijven verbonden, en elke rol begint bij de weergave die zijn eigen vraag beantwoordt.",
+    "coverBody": "Van de opdrachtgever die goedkeurt tot de agent die de code schrijft: iedereen werkt vanuit hetzelfde beoordeelde dossier.",
+    "guideLink": "Lees: De blueprint aan het werk zetten",
+    "panelAlt": "Samenvatting van Concept Ready: 75 blueprint-items gemaakt vanuit één alinea intentie",
+    "moreLabel": "Bekijk hun eerste klik",
+    "openFirstLabel": "Open eerst in de Living Blueprint",
+    "routineLabel": "Een korte routine",
+    "outcomeLabel": "Wat ze krijgen",
+    "startFree": "Begin gratis",
+    "fullPlaybook": "Volledige gids",
+    "close": "Sluiten"
   },
   "pricingPage": {
     "metaTitle": "Think4Ever-prijzen — Begin gratis, betaal voor wat je gebruikt",
