@@ -406,29 +406,128 @@
     "roles": [
       {
         "name": "Product Managers",
-        "desc": "Alinee objetivos y valide cada entregable antes del lanzamiento."
+        "who": "Product owners, analistas de negocio, gerentes de entrega",
+        "desc": "Apruebe la intención. Sepa que se construyó.",
+        "question": "“¿Lo que se entregue coincidirá con lo que aprobamos?”",
+        "openFirst": [
+          "Requisitos",
+          "Flujos de negocio",
+          "Reglas de negocio",
+          "Diseños de UI"
+        ],
+        "routine": [
+          "Apruebe los requisitos y desmarque lo que queda fuera del alcance.",
+          "Recorra los flujos principales y navegue la vista previa de la UI con las partes interesadas.",
+          "Revise la severidad de cada regla y su comportamiento ante una violación, y luego apruebe el plan de construcción por fases."
+        ],
+        "outcome": "Lo que se entrega coincide con lo aprobado, con menos sorpresas tardías y una línea trazable desde la regla hasta el código.",
+        "caption": "Revisión de requisitos en Think4Ever: objetivos, roles de usuario y epics, cada uno marcable."
       },
       {
         "name": "Desarrolladores",
-        "desc": "Deje de explicar su producto a cada agente."
+        "who": "Ingenieros que trabajan con Claude Code, Cursor, Codex y otros agentes",
+        "desc": "Deje de explicar su producto a cada agente.",
+        "question": "“¿Por qué vuelvo a explicar este producto a cada agente?”",
+        "openFirst": [
+          "Mapa de conceptos y resúmenes",
+          "Objetos de datos",
+          "Reglas de negocio",
+          "Diseños de UI"
+        ],
+        "routine": [
+          "Conecte Claude Code, Cursor o Codex al proyecto una sola vez, mediante MCP.",
+          "Pida al agente que obtenga el concepto, el esquema y las reglas antes de escribir código.",
+          "En un repositorio heredado, lea primero los resúmenes de bloques y los flujos."
+        ],
+        "outcome": "Menos reprompts y retrabajo, agentes que dejan de inventar esquemas y una incorporación a código desconocido sin leerlo línea por línea, en el editor que ya usa.",
+        "caption": "Think MCP Server entregando el blueprint a VS Code, Cursor, Codex, Gemini CLI y Claude Code."
       },
       {
         "name": "Arquitectos de software",
-        "desc": "La arquitectura, integrada en cada agente."
+        "who": "Arquitectos y líderes técnicos",
+        "desc": "Su arquitectura, aplicada en cada agente.",
+        "question": "“¿Cómo mantengo intacto el diseño cuando diez agentes escriben código?”",
+        "openFirst": [
+          "Arquitectura técnica",
+          "Objetos de datos",
+          "Mapas de integración",
+          "Mapa de conceptos"
+        ],
+        "routine": [
+          "Revise la arquitectura por capas y el ERD antes de que empiece la construcción.",
+          "Conecte los agentes del equipo mediante MCP para que todos lean los mismos contratos.",
+          "Compruebe el impacto en el blueprint antes de aprobar un cambio y ejecute el hardening antes de cada versión."
+        ],
+        "outcome": "Una arquitectura que se aplica, no solo se documenta, y una refactorización y modernización seguras de sistemas heredados.",
+        "caption": "Arquitectura técnica por capas, con cada bloque vinculado a sus archivos de origen."
       },
       {
         "name": "Líderes de negocio",
-        "desc": "Escale el desarrollo con herramientas de IA sin perder el control."
+        "who": "CEO, CIO, CTO, CFO",
+        "desc": "Escale el desarrollo con IA sin perder el control de lo que se construye.",
+        "question": "“¿Estamos obteniendo control y retorno de lo que gastamos en desarrollo con IA?”",
+        "openFirst": [
+          "Informe de preparación para producción",
+          "Documentos de requisitos",
+          "Fases de la hoja de ruta"
+        ],
+        "routine": [
+          "Revise la puntuación y la calificación de preparación de cada candidata a versión.",
+          "Lea el Resumen del concepto de los programas que patrocina.",
+          "Pida las fases de la hoja de ruta antes del presupuesto, no después."
+        ],
+        "outcome": "Un registro gobernado entre equipos, proveedores y agentes, conocimiento que permanece en la empresa y evidencia lista cuando la pidan auditores o clientes.",
+        "caption": "Informe de preparación para producción con una puntuación de 57 y verificaciones fallidas, con advertencias y aprobadas."
       },
       {
         "name": "Socios consultores",
-        "desc": "Del inicio a la entrega, sin perder el contexto."
+        "who": "Integradores de sistemas y socios de entrega",
+        "desc": "Del inicio a la entrega, sin perder el contexto.",
+        "question": "“¿Cómo entrego un resultado gobernado y lo traspaso sin fricciones?”",
+        "openFirst": [
+          "Arquitectura funcional",
+          "Documentos de requisitos",
+          "Plan de construcción"
+        ],
+        "routine": [
+          "Mapee el sistema existente del cliente en la primera semana.",
+          "Acuerde el alcance y las fases sobre el blueprint, no en diapositivas.",
+          "Entregue el blueprint y las especificaciones reconstruidas junto con el código."
+        ],
+        "outcome": "Un método de entrega repetible que puede vender como resultado: comprender, codificar, construir, gobernar. El conocimiento se transfiere al cliente en lugar de irse con el equipo.",
+        "caption": "Plan de construcción revisable: cada paso nombra las páginas, las API y los datos que construye y el agente que lo construye."
       },
       {
         "name": "Control de calidad (QA)",
-        "desc": "Revise el sistema, no solo los cambios de código."
+        "who": "QA, seguridad, riesgo y cumplimiento",
+        "desc": "Revise el sistema, no solo los cambios de código.",
+        "question": "“¿Qué se suponía que hacía esto y puedo demostrar que lo hace?”",
+        "openFirst": [
+          "Flujos de negocio",
+          "Reglas de negocio",
+          "Roles y permisos",
+          "Informe de preparación"
+        ],
+        "routine": [
+          "Derive casos de prueba de las rutas de fallo de los flujos y de las violaciones de reglas.",
+          "Pruebe el acceso rol por rol frente a la matriz de permisos.",
+          "Use diagramas de flujo de datos, diagramas de seguridad y el informe de hardening como evidencia de revisión."
+        ],
+        "outcome": "Documentación, flujos de datos y reglas vinculadas para código que usted no escribió, y hallazgos clasificados por severidad en lugar de enterrados en un registro de escaneo.",
+        "caption": "Reglas de negocio en lenguaje natural y como expresiones, con severidad y qué ocurre ante una violación."
       }
-    ]
+    ],
+    "sub": "Un solo Living Blueprint, seis formas de entrar. Requisitos, flujos, reglas, datos, arquitectura y pantallas permanecen conectados, y cada rol empieza desde la vista que responde a su propia pregunta.",
+    "coverBody": "Desde el patrocinador que aprueba hasta el agente que escribe el código, todos trabajan desde el mismo registro revisado.",
+    "guideLink": "Leer: Poner el Blueprint a trabajar",
+    "panelAlt": "Resumen de Concept Ready: 75 elementos del blueprint creados a partir de un párrafo de intención",
+    "moreLabel": "Vea su primer clic",
+    "openFirstLabel": "En el Living Blueprint, abra primero",
+    "routineLabel": "Una rutina breve",
+    "outcomeLabel": "Qué obtienen",
+    "startFree": "Comience gratis",
+    "fullPlaybook": "Guía completa",
+    "close": "Cerrar"
   },
   "pricingPage": {
     "metaTitle": "Precios de Think4Ever — Comience gratis y pague por lo que use",

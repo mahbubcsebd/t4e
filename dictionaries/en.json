@@ -406,29 +406,128 @@
     "roles": [
       {
         "name": "Product Managers",
-        "desc": "Align goals and validate every deliverable before launch."
+        "who": "Product owners, business analysts, delivery managers",
+        "desc": "Approve the intent. Know it was built.",
+        "question": "“Will what ships match what we approved?”",
+        "openFirst": [
+          "Requirements",
+          "Business flows",
+          "Business rules",
+          "UI designs"
+        ],
+        "routine": [
+          "Approve requirements and untick what is out of scope.",
+          "Walk the main flows and click through the UI preview with stakeholders.",
+          "Review each rule's severity and on-violation behavior, then approve the build plan by phase."
+        ],
+        "outcome": "What ships matches what was approved, with fewer late surprises and a traceable line from rule to code.",
+        "caption": "Requirements review in Think4Ever: goals, user roles and epics, each one tickable."
       },
       {
         "name": "Developers",
-        "desc": "Stop explaining your product to every agent."
+        "who": "Engineers working with Claude Code, Cursor, Codex and other agents",
+        "desc": "Stop re-explaining your product to every agent.",
+        "question": "“Why am I re-explaining this product to every agent?”",
+        "openFirst": [
+          "Concept map & summaries",
+          "Data objects",
+          "Business rules",
+          "UI designs"
+        ],
+        "routine": [
+          "Connect Claude Code, Cursor or Codex to the project once, over MCP.",
+          "Ask the agent to pull the concept, schema and rules before writing code.",
+          "On an inherited repo, read block summaries and flows first."
+        ],
+        "outcome": "Less re-prompting and rework, agents that stop inventing schemas, and onboarding to unfamiliar code without reading it line by line, in the editor you already use.",
+        "caption": "Think MCP Server serving the blueprint to VS Code, Cursor, Codex, Gemini CLI and Claude Code."
       },
       {
         "name": "Software Architects",
-        "desc": "Architecture, built into every agent."
+        "who": "Architects and tech leads",
+        "desc": "Your architecture, enforced across every agent.",
+        "question": "“How do I keep the design intact when ten agents are writing code?”",
+        "openFirst": [
+          "Technical architecture",
+          "Data objects",
+          "Integration maps",
+          "Concept map"
+        ],
+        "routine": [
+          "Review architecture by layer and the ERD before build starts.",
+          "Connect the team's agents over MCP so they all read the same contracts.",
+          "Check impact in the blueprint before approving a change, and run hardening before each release."
+        ],
+        "outcome": "Architecture that is enforced, not just documented, and safe refactoring and modernization of legacy systems.",
+        "caption": "Technical architecture by layer, each block linked to its source files."
       },
       {
         "name": "Business Leaders",
-        "desc": "Scale development with AI tools without losing control."
+        "who": "CEO, CIO, CTO, CFO",
+        "desc": "Scale AI development without losing control of what gets built.",
+        "question": "“Are we getting control and return from what we spend on AI development?”",
+        "openFirst": [
+          "Production readiness report",
+          "Requirements docs",
+          "Roadmap phases"
+        ],
+        "routine": [
+          "Check the readiness score and grade on each release candidate.",
+          "Read the Concept Summary for the programs you sponsor.",
+          "Ask for roadmap phases before budget, not after."
+        ],
+        "outcome": "One governed record across teams, vendors and agents, knowledge that stays with the company, and evidence ready when auditors or customers ask.",
+        "caption": "Production readiness report with a readiness score of 57 and failed, warning and passed checks."
       },
       {
         "name": "Consulting Partners",
-        "desc": "From kickoff to delivery, without losing context."
+        "who": "Systems integrators and delivery partners",
+        "desc": "From kickoff to handover, without losing context.",
+        "question": "“How do I deliver a governed result and hand it over cleanly?”",
+        "openFirst": [
+          "Functional architecture",
+          "Requirements docs",
+          "Build plan"
+        ],
+        "routine": [
+          "Map the client's existing system in the first week.",
+          "Agree scope and phases on the blueprint, not in slides.",
+          "Hand over the blueprint and rebuilt specs together with the code."
+        ],
+        "outcome": "A repeatable delivery method you can sell as an outcome: understand, encode, build, govern. The knowledge transfers to the client instead of leaving with the team.",
+        "caption": "Reviewable build plan: each step names the pages, APIs and data it builds and the agent that builds it."
       },
       {
         "name": "Quality Assurance (QA)",
-        "desc": "Review the system, not just the code changes."
+        "who": "QA, security, risk and compliance",
+        "desc": "Review the system, not just the code changes.",
+        "question": "“What was this supposed to do, and can I prove it does?”",
+        "openFirst": [
+          "Business flows",
+          "Business rules",
+          "Roles & permissions",
+          "Readiness report"
+        ],
+        "routine": [
+          "Derive test cases from flow failure paths and rule violations.",
+          "Test access one role at a time against the permissions matrix.",
+          "Use data flow diagrams, security diagrams and the hardening report as review evidence."
+        ],
+        "outcome": "Documentation, data flows and linked rules for code you did not write, and findings ranked by severity instead of buried in a scan log.",
+        "caption": "Business rules in plain language and as expressions, with severity and what happens on violation."
       }
-    ]
+    ],
+    "sub": "One Living Blueprint, six ways in. Requirements, flows, rules, data, architecture and screens stay connected, and each role starts from the view that answers its own question.",
+    "coverBody": "From the sponsor who signs off to the agent that writes the code, everyone works from the same reviewed record.",
+    "guideLink": "Read: Putting the Blueprint to Work",
+    "panelAlt": "Concept Ready summary: 75 blueprint items created from one paragraph of intent",
+    "moreLabel": "See their first click",
+    "openFirstLabel": "In the Living Blueprint, open first",
+    "routineLabel": "A short routine",
+    "outcomeLabel": "What they get",
+    "startFree": "Start free",
+    "fullPlaybook": "Full playbook",
+    "close": "Close"
   },
   "pricingPage": {
     "metaTitle": "Think4Ever Pricing — Start Free, Pay for What You Use",
