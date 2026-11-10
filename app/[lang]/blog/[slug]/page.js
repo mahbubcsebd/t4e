@@ -49,18 +49,14 @@ export async function generateStaticParams() {
   const params = [];
 
   for (const lang of langs) {
-    const posts = getAllPosts(lang);
-    for (const post of posts) {
-      params.push({
-        lang,
-        slug: post.slug,
-      });
-    }
-    for (const alias of Object.keys(SLUG_ALIASES)) {
-      params.push({
-        lang,
-        slug: alias,
-      });
+    // Posts without a translation fall back to EN, so every EN slug needs a route too.
+    const slugs = new Set([
+      ...getAllPosts("en").map((post) => post.slug),
+      ...getAllPosts(lang).map((post) => post.slug),
+      ...Object.keys(SLUG_ALIASES),
+    ]);
+    for (const slug of slugs) {
+      params.push({ lang, slug });
     }
   }
 

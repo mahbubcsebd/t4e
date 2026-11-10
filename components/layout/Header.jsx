@@ -348,6 +348,7 @@ export default function Header() {
             alt="Think4Ever"
             width={260}
             height={80}
+            loading="eager"
             className={`w-auto object-contain transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               scrolled
                 ? 'h-9 lg:h-10 xl:h-12 2xl:h-14'
