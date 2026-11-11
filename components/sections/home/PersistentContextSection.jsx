@@ -39,7 +39,7 @@ export default function PersistentContextSection() {
           />
 
           {/* Central Brain Visualization */}
-          <div className="max-w-4xl mx-auto relative md:mt-8 md:mt-16 py-10 pb-0">
+          <div className="hidden md:block max-w-4xl mx-auto relative md:mt-8 md:mt-16 py-10 pb-0">
             {/* Connecting Dashed Line (Desktop Horizontal) */}
             <div className="hidden md:block absolute top-[120px] left-[15%] right-[15%] border-t-2 border-dashed border-border z-0"></div>
 

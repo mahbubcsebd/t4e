@@ -189,7 +189,7 @@ export default function PortalStartSection() {
   };
 
   return (
-    <section className="relative min-h-[calc(100vh-76px)] flex flex-col justify-center overflow-hidden bg-background py-10 sm:py-14 lg:py-16">
+    <section className="relative min-h-[calc(100svh-64px)] md:min-h-[calc(100vh-76px)] flex flex-col justify-center overflow-hidden bg-background py-8 sm:py-14 lg:py-16">
       {/* ── Soft Ambient Pastel Background Glow ── */}
       <div
         aria-hidden
@@ -202,23 +202,59 @@ export default function PortalStartSection() {
 
       <div className="relative z-10 w-full max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* ── 1. Header Titles & Subtitles ── */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
-          <div className="flex justify-center mb-3.5">
+        <div className="text-center max-w-3xl mx-auto mb-6 md:mb-10">
+          <div className="hidden md:flex justify-center mb-3.5">
             <Eyebrow uppercase={true}>
               START HERE
             </Eyebrow>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-foreground tracking-tight leading-[1.12] mb-4">
+          <h1 className="text-[34px] sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-foreground tracking-tight leading-[1.1] mb-3 md:mb-4">
             What do you want to <span className="text-primary">build?</span>
           </h1>
-          <p className="text-base sm:text-lg text-foreground/75 font-normal leading-relaxed max-w-2xl mx-auto">
+          <p className="text-[15px] md:hidden text-foreground/65 leading-relaxed max-w-xs mx-auto">
+            Describe it. We design it, then build it.
+          </p>
+          <p className="hidden md:block text-lg text-foreground/75 font-normal leading-relaxed max-w-2xl mx-auto">
             Pick a path, tell us a little, and sign up — your workspace opens on
             that step, ready to go.
           </p>
         </div>
 
         {/* ── 2. The 4 Mode Cards ── */}
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mb-5">
+        {/* Mobile: compact pill selector */}
+        <div
+          role="tablist"
+          aria-label="Build mode"
+          className="md:hidden -mx-4 px-4 mb-3 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {modes.map((m) => {
+            const Icon = m.icon;
+            const isActive = selectedModeKey === m.key;
+            return (
+              <button
+                key={m.key}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => {
+                  setSelectedModeKey(m.key);
+                  clearError("prompt");
+                }}
+                className={[
+                  "shrink-0 inline-flex items-center gap-1.5 rounded-full border px-3.5 py-2 text-[13px] font-semibold transition-all duration-200 active:scale-95",
+                  isActive
+                    ? "bg-foreground text-background border-foreground shadow-md"
+                    : "bg-white/90 text-foreground/70 border-border",
+                ].join(" ")}
+              >
+                <Icon className="w-3.5 h-3.5" />
+                {m.title}
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="hidden md:grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mb-5">
           {modes.map((m) => {
             const Icon = m.icon;
             const isActive = selectedModeKey === m.key;
@@ -283,9 +319,9 @@ export default function PortalStartSection() {
         </div>
 
         {/* ── 3. Active Mode Interactive Input Box (Clean Unified Textarea) ── */}
-        <div className="w-full bg-white border border-border/80 rounded-2xl shadow-sm p-5 sm:p-7 mb-5">
+        <div className="w-full bg-white border border-border/60 rounded-3xl md:rounded-2xl shadow-[0_8px_30px_-12px_rgba(29,99,224,0.25)] md:shadow-sm p-3 md:p-7 mb-4 md:mb-5">
           <div>
-            <div className="flex items-center justify-between mb-2">
+            <div className="hidden md:flex items-center justify-between mb-2">
               <label className="text-sm font-semibold text-foreground">
                 {currentMode.prompt_label} <span className="text-rose-500 font-bold">*</span>
               </label>
@@ -301,10 +337,11 @@ export default function PortalStartSection() {
                 setProjectPrompt(e.target.value);
                 clearError("prompt");
               }}
-              rows={3}
+              rows={4}
+              aria-label={currentMode.prompt_label}
               placeholder={currentMode.placeholder}
               className={[
-                "w-full text-sm sm:text-base text-foreground placeholder:text-foreground/35 rounded-xl p-3.5 sm:p-4 resize-none outline-none leading-relaxed transition-all",
+                "w-full text-base text-foreground placeholder:text-foreground/35 rounded-2xl md:rounded-xl p-3.5 sm:p-4 resize-none outline-none leading-relaxed transition-all",
                 errors.prompt
                   ? "bg-rose-50/50 border-2 border-rose-400 focus:ring-2 focus:ring-rose-200"
                   : "bg-muted/20 border border-border/80 focus:border-primary focus:ring-2 focus:ring-primary/20",
@@ -317,7 +354,7 @@ export default function PortalStartSection() {
 
           {/* Subtle dynamic hint message */}
           {projectPrompt.trim().length > 5 && (
-            <div className="mt-4 pt-3.5 border-t border-border/60 flex items-center gap-2 text-xs sm:text-sm font-medium text-primary">
+            <div className="hidden md:flex mt-4 pt-3.5 border-t border-border/60 flex items-center gap-2 text-xs sm:text-sm font-medium text-primary">
               <Sparkles className="w-3.5 h-3.5 shrink-0" />
               <span>{currentMode.preparing_message}</span>
             </div>
@@ -325,12 +362,12 @@ export default function PortalStartSection() {
         </div>
 
         {/* ── 4. Action CTAs (Consistent rounded-full buttons matching the site) ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 w-full max-w-[460px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3.5 w-full max-w-[460px] mx-auto">
           <Button
             size="lg"
             disabled={loading}
             onClick={() => handleOpenAuthModal("signup")}
-            className="w-full"
+            className="w-full h-12 md:h-auto"
           >
             {loading && <Loader2 className="w-4 h-4 animate-spin mr-2" />}
             Continue &amp; sign up
@@ -341,14 +378,23 @@ export default function PortalStartSection() {
             size="lg"
             disabled={loading}
             onClick={() => handleOpenAuthModal("signin")}
-            className="w-full"
+            className="hidden md:inline-flex w-full"
           >
             I already have an account
           </Button>
+          <button
+            type="button"
+            disabled={loading}
+            onClick={() => handleOpenAuthModal("signin")}
+            className="md:hidden py-2 text-sm text-foreground/60"
+          >
+            Already have an account?{" "}
+            <span className="font-semibold text-primary">Sign in</span>
+          </button>
         </div>
 
         {/* ── 5. Native apps ── */}
-        <div className="mt-8 md:mt-10 flex flex-col items-center gap-4 w-full max-w-[460px] mx-auto">
+        <div className="mt-5 md:mt-10 flex flex-col items-center gap-4 w-full max-w-[460px] mx-auto">
           <div className="flex items-center gap-4 w-full" aria-hidden="true">
             <span className="h-px flex-1 bg-gradient-to-r from-transparent to-border" />
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
