@@ -35,7 +35,7 @@ export default function HeroSection() {
             {/* Left Column: Hero Text */}
             <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left w-full max-w-2xl mx-auto lg:max-w-none">
               {/* Eyebrow */}
-              <Eyebrow className="mb-4" uppercase={false}>
+              <Eyebrow className="mb-4 max-md:hidden" uppercase={false}>
                 {t("hero.eyebrow")}
               </Eyebrow>
 

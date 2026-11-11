@@ -18,7 +18,7 @@ export default function SectionHeading({
     return (
       <div
         className={cn(
-          "flex flex-col items-center text-center md:flex-row md:items-center md:text-left justify-between gap-6 md:gap-12 mb-8 md:mb-16",
+          "section-heading flex flex-col items-center text-center md:flex-row md:items-center md:text-left justify-between gap-6 md:gap-12 mb-8 md:mb-16",
           className,
         )}
       >
@@ -58,7 +58,7 @@ export default function SectionHeading({
     return (
       <div
         className={cn(
-          "max-w-2xl text-left relative z-10",
+          "section-heading max-w-2xl text-left relative z-10",
           className,
         )}
       >
@@ -94,7 +94,7 @@ export default function SectionHeading({
   return (
     <div
       className={cn(
-        "max-w-3xl mx-auto mb-8 md:mb-14 text-center flex flex-col items-center",
+        "section-heading max-w-3xl mx-auto mb-8 md:mb-14 text-center flex flex-col items-center",
         className,
       )}
     >

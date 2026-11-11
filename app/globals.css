@@ -188,3 +188,87 @@ mark {
   padding: 1px 4px !important;
   border-radius: 4px !important;
 }
+
+/* ── Home page · mobile-only clean layout (scoped to <main class="home-clean">) ── */
+@media (max-width: 767px) {
+  .home-clean > section {
+    padding-block: 2rem;
+  }
+
+  /* Drop the blue frame + white panel; let content sit on the page */
+  .home-clean .section-card {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+  .home-clean .section-card > div > div {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  /* Headings: tighter, no eyebrow, short subtitle */
+  .home-clean .section-heading {
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .home-clean .section-heading > :not(h2):not(p):not(div) {
+    display: none;
+  }
+  .home-clean .section-heading h2 {
+    font-size: 1.75rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.625rem;
+  }
+  .home-clean .section-heading p {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+  }
+
+  /* Cards: lighter, text-first, no decorative illustration canvases */
+  .home-clean .gemini-card {
+    border-radius: 1.25rem;
+    box-shadow: none;
+  }
+  .home-clean .gemini-card > [class*="min-h-[200px]"],
+  .home-clean .gemini-card > [class*="h-[240px]"] {
+    display: none;
+  }
+  .home-clean .gemini-card[class*="min-h-[400px]"] {
+    min-height: 0;
+  }
+  .home-clean .gemini-card [class*="p-8"],
+  .home-clean .gemini-card [class*="p-10"] {
+    padding: 1.25rem;
+  }
+  .home-clean .gemini-card [class*="text-center"] {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .home-clean .gemini-card h3 {
+    font-size: 1.125rem;
+  }
+
+  /* Role cards: swipeable carousel instead of a 6-card vertical stack */
+  .home-clean #role-cards {
+    display: flex;
+    gap: 0.875rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+    padding-bottom: 0.75rem;
+    scrollbar-width: none;
+  }
+  .home-clean #role-cards::-webkit-scrollbar {
+    display: none;
+  }
+  .home-clean #role-cards > * {
+    flex: 0 0 84%;
+    scroll-snap-align: center;
+  }
+}

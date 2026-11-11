@@ -217,7 +217,7 @@ export default function ProductModelSection() {
               </div>
 
               {/* Center Column (Universal Meta-Model Core) */}
-              <div className="lg:col-span-4 flex justify-center relative z-20 order-1 lg:order-2 mb-8 lg:mb-0">
+              <div className="lg:col-span-4 hidden md:flex justify-center relative z-20 order-1 lg:order-2 mb-8 lg:mb-0">
                 <div className="relative w-full max-w-sm h-full flex flex-col">
                   {/* Glowing Background Effect */}
                   <div className="absolute inset-0 bg-primary blur-2xl opacity-10 rounded-xl"></div>
