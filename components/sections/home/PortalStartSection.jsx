@@ -16,61 +16,14 @@ import {
   Loader2,
 } from "lucide-react";
 
-// 4 High-Quality Modes without confusing file-upload / git-connect buttons
-const DEFAULT_MODES = [
-  {
-    key: "design",
-    icon: GitFork,
-    eyebrow: "Intent → System design",
-    title: "Design from intent",
-    description:
-      "Describe what you want to build. Think4Ever turns it into a reviewable blueprint of roles, workflows, rules and acceptance criteria — then builds it.",
-    prompt_label: "What do you want to build?",
-    placeholder:
-      "A field service app where technicians get jobs, log parts and close work orders",
-    preparing_message:
-      "Great — we are preparing your blueprint. Sign up and let's build it.",
-  },
-  {
-    key: "analyze",
-    icon: Code2,
-    eyebrow: "Code → Understanding",
-    title: "Analyze existing code",
-    description:
-      "Bring a real project — a public GitHub URL now, or a ZIP / connected repository once you are in. We import it and map the system into a visual, reviewable view.",
-    prompt_label: "Describe project focus areas or repository URL",
-    placeholder:
-      "e.g. https://github.com/owner/repository or describe the parts of the codebase you want to understand and visualize...",
-    preparing_message:
-      "Great — we are mapping your repository. Sign up and let's build it.",
-  },
-  {
-    key: "harden",
-    icon: ShieldCheck,
-    eyebrow: "Code → Production ready",
-    title: "Production hardening",
-    description:
-      "Import your codebase, map the system, then reviewer agents audit it against a production-readiness checklist: security, configuration, reliability, data, observability, deploy and more.",
-    prompt_label: "Describe specific security or architecture concerns",
-    placeholder:
-      "e.g. Audit checklist for security, configuration, reliability, data, observability, and deploy readiness...",
-    preparing_message:
-      "Great — we are preparing your production review. Sign up and let's build it.",
-  },
-  {
-    key: "prototype",
-    icon: Zap,
-    eyebrow: "Idea → Working prototype",
-    title: "Fast prototype",
-    description:
-      "Describe the idea and get a working prototype built straight from the dev side. Production hardening and deeper design can follow later.",
-    prompt_label: "What should the prototype do?",
-    placeholder:
-      "A habit tracker with daily streaks and a weekly review screen",
-    preparing_message:
-      "Great — we are preparing your prototype. Sign up and let's build it.",
-  },
-];
+// 4 modes; copy lives in dictionaries (portalStart.modes.*)
+const MODE_ICONS = {
+  design: GitFork,
+  analyze: Code2,
+  harden: ShieldCheck,
+  prototype: Zap,
+};
+const MODE_KEYS = Object.keys(MODE_ICONS);
 
 // Field-level error component styled identical to ContactForm
 const InputError = ({ error, className = "" }) => {
@@ -83,11 +36,20 @@ const InputError = ({ error, className = "" }) => {
 };
 
 export default function PortalStartSection() {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const { openAuthModal } = useAuthModal();
 
   // Mode & input state
-  const [modes] = useState(DEFAULT_MODES);
+  const modes = MODE_KEYS.map((key) => ({
+    key,
+    icon: MODE_ICONS[key],
+    eyebrow: t(`portalStart.modes.${key}.eyebrow`),
+    title: t(`portalStart.modes.${key}.title`),
+    description: t(`portalStart.modes.${key}.description`),
+    prompt_label: t(`portalStart.modes.${key}.promptLabel`),
+    placeholder: t(`portalStart.modes.${key}.placeholder`),
+    preparing_message: t(`portalStart.modes.${key}.preparing`),
+  }));
   const [selectedModeKey, setSelectedModeKey] = useState("design");
   const [projectPrompt, setProjectPrompt] = useState("");
   const [intentToken, setIntentToken] = useState(null);
@@ -205,18 +167,17 @@ export default function PortalStartSection() {
         <div className="text-center max-w-3xl mx-auto mb-6 md:mb-10">
           <div className="hidden md:flex justify-center mb-3.5">
             <Eyebrow uppercase={true}>
-              START HERE
+              {t("portalStart.startHere")}
             </Eyebrow>
           </div>
           <h1 className="text-[34px] sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-foreground tracking-tight leading-[1.1] mb-3 md:mb-4">
-            What do you want to <span className="text-primary">build?</span>
+            {t("portalStart.titleA")} <span className="text-primary">{t("portalStart.titleB")}</span>
           </h1>
           <p className="text-[15px] md:hidden text-foreground/65 leading-relaxed max-w-xs mx-auto">
-            Describe it. We design it, then build it.
+            {t("portalStart.subMobile")}
           </p>
           <p className="hidden md:block text-lg text-foreground/75 font-normal leading-relaxed max-w-2xl mx-auto">
-            Pick a path, tell us a little, and sign up — your workspace opens on
-            that step, ready to go.
+            {t("portalStart.subDesktop")}
           </p>
         </div>
 
@@ -224,7 +185,7 @@ export default function PortalStartSection() {
         {/* Mobile: compact pill selector */}
         <div
           role="tablist"
-          aria-label="Build mode"
+          aria-label={t("portalStart.modeLabel")}
           className="md:hidden mb-3 grid grid-cols-2 gap-2"
         >
           {modes.map((m) => {
@@ -370,7 +331,7 @@ export default function PortalStartSection() {
             className="w-full h-12 md:h-auto"
           >
             {loading && <Loader2 className="w-4 h-4 animate-spin mr-2" />}
-            Continue &amp; sign up
+            {t("portalStart.signup")}
           </Button>
 
           <Button
@@ -380,7 +341,7 @@ export default function PortalStartSection() {
             onClick={() => handleOpenAuthModal("signin")}
             className="hidden md:inline-flex w-full"
           >
-            I already have an account
+            {t("portalStart.haveAccount")}
           </Button>
           <button
             type="button"
@@ -388,8 +349,8 @@ export default function PortalStartSection() {
             onClick={() => handleOpenAuthModal("signin")}
             className="md:hidden py-2 text-sm text-foreground/60"
           >
-            Already have an account?{" "}
-            <span className="font-semibold text-primary">Sign in</span>
+            {t("portalStart.haveAccountShort")}{" "}
+            <span className="font-semibold text-primary">{t("portalStart.signIn")}</span>
           </button>
         </div>
 
@@ -398,7 +359,7 @@ export default function PortalStartSection() {
           <div className="flex items-center gap-4 w-full" aria-hidden="true">
             <span className="h-px flex-1 bg-gradient-to-r from-transparent to-border" />
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              Or install the app
+              {t("portalStart.installApp")}
             </span>
             <span className="h-px flex-1 bg-gradient-to-l from-transparent to-border" />
           </div>
