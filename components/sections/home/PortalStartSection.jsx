@@ -225,7 +225,7 @@ export default function PortalStartSection() {
         <div
           role="tablist"
           aria-label="Build mode"
-          className="md:hidden -mx-4 px-4 mb-3 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="md:hidden mb-3 grid grid-cols-2 gap-2"
         >
           {modes.map((m) => {
             const Icon = m.icon;
@@ -241,7 +241,7 @@ export default function PortalStartSection() {
                   clearError("prompt");
                 }}
                 className={[
-                  "shrink-0 inline-flex items-center gap-1.5 rounded-full border px-3.5 py-2 text-[13px] font-semibold transition-all duration-200 active:scale-95",
+                  "inline-flex items-center justify-center gap-1.5 rounded-xl border px-3 py-3 text-[13px] font-semibold transition-all duration-200 active:scale-95",
                   isActive
                     ? "bg-foreground text-background border-foreground shadow-md"
                     : "bg-white/90 text-foreground/70 border-border",
