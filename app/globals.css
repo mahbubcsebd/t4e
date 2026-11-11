@@ -253,22 +253,20 @@ mark {
     font-size: 1.125rem;
   }
 
-  /* Role cards: swipeable carousel instead of a 6-card vertical stack */
+  /* Role cards: single-column stack, no horizontal scroll */
   .home-clean #role-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0.875rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    margin-inline: -1rem;
-    padding-inline: 1rem;
-    padding-bottom: 0.75rem;
-    scrollbar-width: none;
-  }
-  .home-clean #role-cards::-webkit-scrollbar {
-    display: none;
   }
   .home-clean #role-cards > * {
-    flex: 0 0 84%;
-    scroll-snap-align: center;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Safety net: nothing on the home page may scroll sideways */
+  .home-clean {
+    overflow-x: clip;
+    max-width: 100vw;
   }
 }
