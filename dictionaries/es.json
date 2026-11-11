@@ -1,4 +1,51 @@
 {
+  "portalStart": {
+    "startHere": "EMPIECE AQUÍ",
+    "titleA": "¿Qué quiere",
+    "titleB": "construir?",
+    "subMobile": "Descríbalo. Lo diseñamos y luego lo construimos.",
+    "subDesktop": "Elija un camino, cuéntenos un poco y regístrese: su espacio de trabajo se abre en ese paso, listo para empezar.",
+    "signup": "Continuar y registrarse",
+    "haveAccount": "Ya tengo una cuenta",
+    "haveAccountShort": "¿Ya tiene una cuenta?",
+    "signIn": "Iniciar sesión",
+    "installApp": "O instale la app",
+    "modeLabel": "Modo de creación",
+    "modes": {
+      "design": {
+        "eyebrow": "Intención → Diseño de sistema",
+        "title": "Diseñar desde la intención",
+        "description": "Describa lo que quiere construir. Think4Ever lo convierte en un plano revisable de roles, flujos, reglas y criterios de aceptación, y luego lo construye.",
+        "promptLabel": "¿Qué quiere construir?",
+        "placeholder": "Una app de servicio en campo donde los técnicos reciben trabajos, registran piezas y cierran órdenes de trabajo",
+        "preparing": "Genial: estamos preparando su plano. Regístrese y construyámoslo."
+      },
+      "analyze": {
+        "eyebrow": "Código → Comprensión",
+        "title": "Analizar código existente",
+        "description": "Traiga un proyecto real: una URL pública de GitHub ahora, o un ZIP / repositorio conectado una vez dentro. Lo importamos y mapeamos el sistema en una vista visual y revisable.",
+        "promptLabel": "Describa las áreas de enfoque o la URL del repositorio",
+        "placeholder": "p. ej. https://github.com/owner/repository o describa las partes del código que quiere entender y visualizar...",
+        "preparing": "Genial: estamos mapeando su repositorio. Regístrese y construyámoslo."
+      },
+      "harden": {
+        "eyebrow": "Código → Listo para producción",
+        "title": "Refuerzo para producción",
+        "description": "Importe su código, mapeamos el sistema y luego agentes revisores lo auditan con una lista de preparación para producción: seguridad, configuración, fiabilidad, datos, observabilidad, despliegue y más.",
+        "promptLabel": "Describa inquietudes específicas de seguridad o arquitectura",
+        "placeholder": "p. ej. Lista de auditoría de seguridad, configuración, fiabilidad, datos, observabilidad y preparación para el despliegue...",
+        "preparing": "Genial: estamos preparando su revisión de producción. Regístrese y construyámoslo."
+      },
+      "prototype": {
+        "eyebrow": "Idea → Prototipo funcional",
+        "title": "Prototipo rápido",
+        "description": "Describa la idea y obtenga un prototipo funcional construido directamente desde el lado de desarrollo. El refuerzo para producción y un diseño más profundo pueden venir después.",
+        "promptLabel": "¿Qué debe hacer el prototipo?",
+        "placeholder": "Un seguidor de hábitos con rachas diarias y una pantalla de revisión semanal",
+        "preparing": "Genial: estamos preparando su prototipo. Regístrese y construyámoslo."
+      }
+    }
+  },
   "nav": {
     "product": "Producto",
     "marketplace": "Marketplace",

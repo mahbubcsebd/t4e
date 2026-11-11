@@ -1,4 +1,51 @@
 {
+  "portalStart": {
+    "startHere": "START HERE",
+    "titleA": "What do you want to",
+    "titleB": "build?",
+    "subMobile": "Describe it. We design it, then build it.",
+    "subDesktop": "Pick a path, tell us a little, and sign up — your workspace opens on that step, ready to go.",
+    "signup": "Continue & sign up",
+    "haveAccount": "I already have an account",
+    "haveAccountShort": "Already have an account?",
+    "signIn": "Sign in",
+    "installApp": "Or install the app",
+    "modeLabel": "Build mode",
+    "modes": {
+      "design": {
+        "eyebrow": "Intent → System design",
+        "title": "Design from intent",
+        "description": "Describe what you want to build. Think4Ever turns it into a reviewable blueprint of roles, workflows, rules and acceptance criteria — then builds it.",
+        "promptLabel": "What do you want to build?",
+        "placeholder": "A field service app where technicians get jobs, log parts and close work orders",
+        "preparing": "Great — we are preparing your blueprint. Sign up and let's build it."
+      },
+      "analyze": {
+        "eyebrow": "Code → Understanding",
+        "title": "Analyze existing code",
+        "description": "Bring a real project — a public GitHub URL now, or a ZIP / connected repository once you are in. We import it and map the system into a visual, reviewable view.",
+        "promptLabel": "Describe project focus areas or repository URL",
+        "placeholder": "e.g. https://github.com/owner/repository or describe the parts of the codebase you want to understand and visualize...",
+        "preparing": "Great — we are mapping your repository. Sign up and let's build it."
+      },
+      "harden": {
+        "eyebrow": "Code → Production ready",
+        "title": "Production hardening",
+        "description": "Import your codebase, map the system, then reviewer agents audit it against a production-readiness checklist: security, configuration, reliability, data, observability, deploy and more.",
+        "promptLabel": "Describe specific security or architecture concerns",
+        "placeholder": "e.g. Audit checklist for security, configuration, reliability, data, observability, and deploy readiness...",
+        "preparing": "Great — we are preparing your production review. Sign up and let's build it."
+      },
+      "prototype": {
+        "eyebrow": "Idea → Working prototype",
+        "title": "Fast prototype",
+        "description": "Describe the idea and get a working prototype built straight from the dev side. Production hardening and deeper design can follow later.",
+        "promptLabel": "What should the prototype do?",
+        "placeholder": "A habit tracker with daily streaks and a weekly review screen",
+        "preparing": "Great — we are preparing your prototype. Sign up and let's build it."
+      }
+    }
+  },
   "nav": {
     "product": "Product",
     "marketplace": "Marketplace",
