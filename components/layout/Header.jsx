@@ -603,7 +603,7 @@ export default function Header() {
           </div>
 
           <Link
-            href={localizeHref('/pricing')}
+            href={localizeHref('/price')}
             className="hover:text-white transition-colors whitespace-nowrap"
           >
             {t('nav.pricing')}
@@ -1010,7 +1010,7 @@ export default function Header() {
 
             <div className="py-1 mb-2">
               <Link
-                href={localizeHref('/pricing')}
+                href={localizeHref('/price')}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[15px] font-semibold text-[#314865] hover:text-primary transition-colors block py-1.5"
               >

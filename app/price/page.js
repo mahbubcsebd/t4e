@@ -8,6 +8,7 @@ import PricingCustomerQuote from '@/components/sections/pricing/PricingCustomerQ
 import PricingHero from '@/components/sections/pricing/PricingHero';
 import PricingHowItWorks from '@/components/sections/pricing/PricingHowItWorks';
 import PricingEstimate from '@/components/sections/pricing/PricingEstimate';
+import PricingProjectLimits from '@/components/sections/pricing/PricingProjectLimits';
 import PricingTeams from '@/components/sections/pricing/PricingTeams';
 import PricingTiers from '@/components/sections/pricing/PricingTiers';
 import { getLocalizedMetadata } from '@/lib/metadata';
@@ -23,6 +24,7 @@ export default function PricingPage() {
         <PricingTeams />
         <PricingEstimate />
         <PricingComparison />
+        <PricingProjectLimits />
         <CostControl />
         <PricingCustomerQuote />
         <PricingFaq />
@@ -34,9 +36,9 @@ export default function PricingPage() {
 }
 
 export const fallbackMetadata = {
-  title: 'Think4Ever Pricing — Start Free, Pay for What You Use',
+  title: 'Think4Ever Pricing — No Subscription, Pay for What You Use',
   description:
-    'Think4Ever pricing: start free, then buy credit packs with no monthly platform fee. Build solo with Think New, or bring up to 25 people into one workspace with Think Big.',
+    'Think4Ever pricing: start free, with no subscription. Pay 90 credits a month for each project you keep and for the AI you use. Build solo with Think New, or bring up to 25 people into one workspace with Think Big.',
 };
 
 export async function generateMetadata() {

@@ -38,6 +38,7 @@ export default function PricingTiers() {
       price: t("pricingPage.plan2Price"),
       hidePrice: true,
       noFee: true,
+      feeNote: t("pricingPage.plan2FeeNote"),
       packsLabel: t("pricingPage.plan2PacksLabel"),
       packs: t("pricingPage.plan2Packs") || [],
       desc: t("pricingPage.plan2Desc"),
@@ -55,6 +56,7 @@ export default function PricingTiers() {
       price: t("pricingPage.plan3Price"),
       hidePrice: true,
       noFee: true,
+      feeNote: t("pricingPage.plan3FeeNote"),
       packsLabel: t("pricingPage.plan3PacksLabel"),
       packs: t("pricingPage.plan3Packs") || [],
       desc: t("pricingPage.plan3Desc"),
@@ -137,7 +139,10 @@ export default function PricingTiers() {
 
                   {plan.noFee && (
                     <div className="mb-4 rounded-lg bg-[#0b1b3a] px-3 py-2 text-center text-xs font-bold text-white">
-                      {t("pricingPage.noFee", "No monthly platform fee")}
+                      {t("pricingPage.noFee")}
+                      <span className="block mt-0.5 text-[11px] font-medium text-slate-300">
+                        {plan.feeNote}
+                      </span>
                     </div>
                   )}
 
@@ -161,8 +166,8 @@ export default function PricingTiers() {
                         >
                           <b
                             className={`block font-bold text-foreground leading-tight ${
-                              String(lim.val).length > 6
-                                ? "text-sm sm:text-base py-0.5"
+                              String(lim.val).length > 4
+                                ? "text-xs xl:text-sm py-1 break-words"
                                 : "text-base sm:text-lg"
                             }`}
                           >

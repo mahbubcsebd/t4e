@@ -110,8 +110,8 @@ export default function PricingTeams() {
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   {/* 8 x Think New */}
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col justify-between">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300 mb-4 pb-2 border-b border-white/10">
+                  <div className="bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300 mb-4 pb-2 border-b border-white/10 min-h-[34px] flex items-center">
                       {t(
                         'pricingPage.teamsSideCard.col1.title',
                         '8 × Think New',
@@ -122,7 +122,7 @@ export default function PricingTeams() {
                         <dt className="text-slate-400 uppercase tracking-wider text-[10px]">
                           {t('pricingPage.labelWorkspaces', 'Workspaces')}
                         </dt>
-                        <dd className="font-bold text-sm text-white mt-0.5">
+                        <dd className="font-bold text-sm text-white mt-0.5 sm:min-h-[2.5rem]">
                           {t(
                             'pricingPage.teamsSideCard.col1.workspaces',
                             '8 separate',
@@ -133,7 +133,7 @@ export default function PricingTeams() {
                         <dt className="text-slate-400 uppercase tracking-wider text-[10px]">
                           {t('pricingPage.labelCredits', 'Credits')}
                         </dt>
-                        <dd className="font-bold text-sm text-white mt-0.5">
+                        <dd className="font-bold text-sm text-white mt-0.5 sm:min-h-[2.5rem]">
                           {t(
                             'pricingPage.teamsSideCard.col1.credits',
                             '16,000, split 2k',
@@ -144,7 +144,7 @@ export default function PricingTeams() {
                         <dt className="text-slate-400 uppercase tracking-wider text-[10px]">
                           {t('pricingPage.labelProjects', 'Projects')}
                         </dt>
-                        <dd className="font-bold text-sm text-white mt-0.5">
+                        <dd className="font-bold text-sm text-white mt-0.5 sm:min-h-[2.5rem]">
                           {t(
                             'pricingPage.teamsSideCard.col1.projects',
                             '24, locked to 1',
@@ -155,7 +155,7 @@ export default function PricingTeams() {
                         <dt className="text-slate-400 uppercase tracking-wider text-[10px]">
                           {t('pricingPage.labelAdmin', 'Administrator')}
                         </dt>
-                        <dd className="font-bold text-sm text-white mt-0.5">
+                        <dd className="font-bold text-sm text-white mt-0.5 sm:min-h-[2.5rem]">
                           {t(
                             'pricingPage.teamsSideCard.col1.admin',
                             'None across team',
@@ -166,7 +166,7 @@ export default function PricingTeams() {
                         <dt className="text-slate-400 uppercase tracking-wider text-[10px]">
                           {t('pricingPage.labelPrice', 'Price per credit')}
                         </dt>
-                        <dd className="font-bold text-sm text-white mt-0.5">
+                        <dd className="font-bold text-sm text-white mt-0.5 sm:min-h-[2.5rem]">
                           {t('pricingPage.teamsSideCard.col1.price', '$0.05')}
                         </dd>
                       </div>
@@ -174,8 +174,8 @@ export default function PricingTeams() {
                   </div>
 
                   {/* Think Big */}
-                  <div className="bg-[#1447b8]/40 border-2 border-[#548bf5]/60 rounded-xl p-5 flex flex-col justify-between shadow-lg shadow-blue-900/30">
-                    <div className="flex items-center justify-between mb-4 pb-2 border-b border-[#548bf5]/30">
+                  <div className="bg-[#1447b8]/40 border-2 border-[#548bf5]/60 rounded-xl p-5 flex flex-col shadow-lg shadow-blue-900/30">
+                    <div className="flex items-center justify-between mb-4 pb-2 border-b border-[#548bf5]/30 min-h-[34px]">
                       <h4 className="text-xs font-extrabold uppercase tracking-wider text-[#9cc0ff]">
                         {t('pricingPage.plan3Name', 'Think Big')}
                       </h4>
@@ -188,7 +188,7 @@ export default function PricingTeams() {
                         <dt className="text-[#9cc0ff] uppercase tracking-wider text-[10px]">
                           {t('pricingPage.labelWorkspaces', 'Workspaces')}
                         </dt>
-                        <dd className="font-bold text-sm text-white mt-0.5">
+                        <dd className="font-bold text-sm text-white mt-0.5 sm:min-h-[2.5rem]">
                           {t(
                             'pricingPage.teamsSideCard.col2.workspaces',
                             '1 shared',
@@ -199,7 +199,7 @@ export default function PricingTeams() {
                         <dt className="text-[#9cc0ff] uppercase tracking-wider text-[10px]">
                           {t('pricingPage.labelCredits', 'Credits')}
                         </dt>
-                        <dd className="font-bold text-sm text-white mt-0.5">
+                        <dd className="font-bold text-sm text-white mt-0.5 sm:min-h-[2.5rem]">
                           {t(
                             'pricingPage.teamsSideCard.col2.credits',
                             '20,000, pooled',
@@ -210,7 +210,7 @@ export default function PricingTeams() {
                         <dt className="text-[#9cc0ff] uppercase tracking-wider text-[10px]">
                           {t('pricingPage.labelProjects', 'Projects')}
                         </dt>
-                        <dd className="font-bold text-sm text-white mt-0.5">
+                        <dd className="font-bold text-sm text-white mt-0.5 sm:min-h-[2.5rem]">
                           {t(
                             'pricingPage.teamsSideCard.col2.projects',
                             '20, team shared',
@@ -221,7 +221,7 @@ export default function PricingTeams() {
                         <dt className="text-[#9cc0ff] uppercase tracking-wider text-[10px]">
                           {t('pricingPage.labelAdmin', 'Administrator')}
                         </dt>
-                        <dd className="font-bold text-sm text-white mt-0.5">
+                        <dd className="font-bold text-sm text-white mt-0.5 sm:min-h-[2.5rem]">
                           {t(
                             'pricingPage.teamsSideCard.col2.admin',
                             'Roles, access, caps',
@@ -232,7 +232,7 @@ export default function PricingTeams() {
                         <dt className="text-[#9cc0ff] uppercase tracking-wider text-[10px]">
                           {t('pricingPage.labelPrice', 'Price per credit')}
                         </dt>
-                        <dd className="font-bold text-sm text-white mt-0.5">
+                        <dd className="font-bold text-sm text-white mt-0.5 sm:min-h-[2.5rem]">
                           {t('pricingPage.teamsSideCard.col2.price', '$0.06')}
                         </dd>
                       </div>
