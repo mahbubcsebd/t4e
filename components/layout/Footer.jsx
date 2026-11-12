@@ -108,7 +108,7 @@ export default function Footer() {
                 {t('nav.apps', 'Apps')}
               </Link>
               <Link
-                href={localizeHref('/pricing')}
+                href={localizeHref('/price')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {t('nav.pricing')}

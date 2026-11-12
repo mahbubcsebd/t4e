@@ -11,16 +11,18 @@ export default function PricingComparison() {
   const { t } = useLanguage();
 
   const custom = t("pricingPage.compareValCustom", "Custom");
+  const none = t("pricingPage.compareValNone", "None");
+  const projectFee = t("pricingPage.compareValProjectFee", "90 credits a month each");
 
   const comparisonData = [
     {
       group: t("pricingPage.compareGroupLimits", "Plan limits"),
       rows: [
         {
-          feature: t("pricingPage.compareRowFee", "Monthly platform fee"),
-          free: t("pricingPage.compareValNone", "None"),
-          new: t("pricingPage.compareValNone", "None"),
-          big: t("pricingPage.compareValNone", "None"),
+          feature: t("pricingPage.compareRowSubscription", "Subscription"),
+          free: none,
+          new: none,
+          big: none,
           blue: custom,
         },
         {
@@ -33,8 +35,15 @@ export default function PricingComparison() {
         {
           feature: t("pricingPage.compareRowProjects", "Projects"),
           free: "1",
-          new: t("pricingPage.compareValUnlimited", "Unlimited"),
-          big: t("pricingPage.compareValBigProjects", "Unlimited, shared"),
+          new: t("pricingPage.compareValNewProjects", "Up to 10"),
+          big: t("pricingPage.compareValBigProjects", "Up to 25, shared"),
+          blue: custom,
+        },
+        {
+          feature: t("pricingPage.compareRowProjectFee", "Project fee"),
+          free: t("pricingPage.compareValFree", "Free"),
+          new: projectFee,
+          big: projectFee,
           blue: custom,
         },
       ],

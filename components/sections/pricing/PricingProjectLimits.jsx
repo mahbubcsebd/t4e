@@ -5,27 +5,14 @@ import { useLanguage } from "@/context/LanguageContext";
 import Container from "@/components/layout/Container";
 import SectionHeading from "@/components/layout/SectionHeading";
 import SectionCard from "@/components/layout/SectionCard";
-import { Archive, PlusCircle, ArrowUpRight } from "lucide-react";
+import { Trash2, ArrowUpRight } from "lucide-react";
 
 export default function PricingProjectLimits() {
   const { t } = useLanguage();
 
-  const icons = [Archive, PlusCircle, ArrowUpRight];
+  const icons = [Trash2, ArrowUpRight];
 
-  const cards = t("pricingPage.limitsCards") || [
-    {
-      title: "Archive a project",
-      desc: "Free up a slot by archiving a project you no longer need.",
-    },
-    {
-      title: "Add a project for credits",
-      desc: "Add one more project, paid from your company's credit pool.",
-    },
-    {
-      title: "Upgrade your plan",
-      desc: "Move up to a plan with more projects, users and credits.",
-    },
-  ];
+  const cards = t("pricingPage.limitsCards") || [];
 
   return (
     <section className="py-6 md:py-8 lg:py-12 border-b border-border" id="limits">
@@ -44,7 +31,7 @@ export default function PricingProjectLimits() {
             className="mb-10 md:mb-14 relative z-10"
           />
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 relative z-10">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto relative z-10">
             {cards.map((card, idx) => {
               const Icon = icons[idx % icons.length];
               return (

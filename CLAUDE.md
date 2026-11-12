@@ -6,7 +6,7 @@ Next.js 16.3.1 (App Router), React 19, JavaScript (jsconfig), Tailwind v4, shadc
 
 ## Commands
 - dev: npm run dev
-- build: npm run build
+- build: npm run build (static export to out/, then scripts/stamp-htaccess.mjs stamps a per-build cache-buster id into out/.htaccess — upload out/ incl. .htaccess)
 - lint: npx eslint <files>
 - test: none configured
 

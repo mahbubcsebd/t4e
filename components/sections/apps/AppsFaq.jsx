@@ -100,7 +100,7 @@ export default function AppsFaq() {
                           {item.answer}{" "}
                           {item.pricingLink && (
                             <Link
-                              href={localizeHref("/pricing")}
+                              href={localizeHref("/price")}
                               className="text-primary font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity"
                             >
                               {item.pricingLink}

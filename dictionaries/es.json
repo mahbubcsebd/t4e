@@ -577,14 +577,16 @@
     "close": "Cerrar"
   },
   "pricingPage": {
-    "metaTitle": "Precios de Think4Ever — Comience gratis y pague por lo que use",
-    "metaDesc": "Precios de Think4Ever: comience gratis y luego compre paquetes de créditos sin cuota mensual de plataforma. Cree en solitario con Think New o reúna hasta 25 personas en un espacio de trabajo con Think Big.",
+    "metaTitle": "Precios de Think4Ever — Sin suscripción, pague por lo que use",
+    "metaDesc": "Precios de Think4Ever: comience gratis, sin suscripción. Cada proyecto que conserva cuesta 90 créditos al mes, más la IA que use. Trabaje en solitario con Think New o reúna hasta 25 personas en un espacio con Think Big.",
     "heroEyebrow": "Precios",
     "heroTitlePrefix": "Comience con el proyecto ",
     "heroTitleHighlight": "que teme tocar",
-    "heroSubtitle": "Analice un sistema, revise el plano y vea el impacto de los cambios. Comience gratis y luego compre créditos según los necesite. Cree en solitario con Think New o reúna a todo su equipo en un solo espacio de trabajo con Think Big.",
+    "heroSubtitle": "Analice un sistema, revise su plano y vea qué tocaría cada cambio. Comience gratis y compre créditos cuando los necesite. Cree en solitario con Think New o reúna a todo su equipo en un solo espacio de trabajo con Think Big.",
+    "heroNoFee": "Sin suscripción. Pague por los proyectos que conserva y por la IA que usa.",
     "heroCtaPrimary": "Comenzar gratis →",
     "heroMicro": "No se requiere tarjeta de crédito para el plan gratuito",
+    "noFee": "Sin cuotas de suscripción mensual",
     "plan1Tag": "THINK FREE",
     "plan1Name": "Think Free",
     "plan1Price": "Gratis",
@@ -605,7 +607,9 @@
     ],
     "plan1List": [
       "500 créditos de orquestación, una sola vez",
+      "Su 1 proyecto es gratis",
       "Construya nuevo, amplíe actual, modernice legado",
+      "Conecte Claude Code, Cursor o Codex a través de MCP",
       "BYOK (traiga su propio modelo)",
       "Actualice cuando supere los límites gratuitos"
     ],
@@ -613,16 +617,36 @@
     "plan2Tag": "THINK NEW",
     "plan2Badge": "POPULAR",
     "plan2Name": "Think New",
-    "plan2Price": "$25/mes",
+    "plan2Price": "$0.05/crédito",
     "plan2Desc": "Para desarrolladores independientes, freelancers y fundadores de startups.",
+    "plan2FeeNote": "Paga por los proyectos que conserva y por la IA que usa. Cada proyecto cuesta 90 créditos al mes ($4.50).",
     "plan2Limits": [
       {
         "val": "1",
         "label": "Usuario"
       },
       {
-        "val": "Ilimitados",
+        "val": "10",
         "label": "Proyectos"
+      }
+    ],
+    "plan2PacksLabel": "Paquetes de créditos a $0.05 por crédito",
+    "plan2Packs": [
+      {
+        "price": "$25",
+        "credits": "500 créditos"
+      },
+      {
+        "price": "$50",
+        "credits": "1,000 créditos"
+      },
+      {
+        "price": "$75",
+        "credits": "1,500 créditos"
+      },
+      {
+        "price": "$100",
+        "credits": "2,000 créditos"
       }
     ],
     "plan2List": [
@@ -636,21 +660,41 @@
     "plan3Tag": "THINK BIG",
     "plan3Badge": "PARA EQUIPOS",
     "plan3Name": "Think Big",
-    "plan3Price": "$250/mes",
+    "plan3Price": "$0.06/crédito",
     "plan3Desc": "Para equipos de desarrolladores que lanzan juntos en un espacio compartido.",
+    "plan3FeeNote": "Paga por los proyectos que conserva y por la IA que usa. Cada proyecto cuesta 90 créditos al mes ($5.40).",
     "plan3Limits": [
       {
         "val": "25",
         "label": "Usuarios"
       },
       {
-        "val": "Ilimitados",
+        "val": "25",
         "label": "Proyectos"
+      }
+    ],
+    "plan3PacksLabel": "Paquetes de créditos a $0.06 por crédito",
+    "plan3Packs": [
+      {
+        "price": "$180",
+        "credits": "3,000 créditos"
+      },
+      {
+        "price": "$360",
+        "credits": "6,000 créditos"
+      },
+      {
+        "price": "$480",
+        "credits": "8,000 créditos"
+      },
+      {
+        "price": "$960",
+        "credits": "16,000 créditos"
       }
     ],
     "plan3List": [
       "Todo lo de Think New, para todo el equipo",
-      "Un espacio de trabajo de empresa con proyectos compartidos",
+      "Un espacio de trabajo de empresa con 25 proyectos compartidos",
       "Paquetes de créditos en un fondo común compartido",
       "Agregue usuarios de la empresa con roles y acceso por proyecto",
       "Controles de administrador y límites de uso",
@@ -693,7 +737,7 @@
       {
         "num": "1",
         "title": "Regístrese",
-        "desc": "La persona que se registra se convierte en el administrador de la empresa."
+        "desc": "Quien se registra se convierte en el administrador de la empresa."
       },
       {
         "num": "2",
@@ -703,12 +747,12 @@
       {
         "num": "3",
         "title": "Compre un paquete de créditos",
-        "desc": "Elija un paquete cuando necesite créditos. No hay cuota mensual de plataforma y los créditos que compra se acumulan."
+        "desc": "Elija un paquete cuando necesite créditos. Cada proyecto usa 90 créditos al mes, el trabajo de IA consume créditos sobre la marcha y los créditos que compra se acumulan."
       },
       {
         "num": "4",
         "title": "Añada a su equipo",
-        "desc": "En Think Big, el administrador añade usuarios de la empresa, elige el rol de cada persona y decide qué proyectos puede abrir. Todos usan los créditos compartidos."
+        "desc": "En Think Big, el administrador añade usuarios de la empresa, define el rol de cada persona y decide qué proyectos puede abrir. Todos usan los créditos compartidos."
       }
     ],
     "teamsEyebrow": "Think Big",
@@ -752,7 +796,7 @@
         "title": "Think Big",
         "workspaces": "1 compartido",
         "credits": "Un fondo común compartido",
-        "projects": "Ilimitados, compartidos con el equipo",
+        "projects": "25, abiertos a todo el equipo",
         "admin": "Roles, acceso, topes",
         "price": "$0.06"
       }
@@ -763,17 +807,49 @@
     "labelAdmin": "Administrador",
     "labelPrice": "Precio por crédito",
     "labelShared": "Compartido",
+    "estimateEyebrow": "Calcule su costo",
+    "estimateTitle": "Vea cuánto pagaría cada mes",
+    "estimateSubtitle": "Elija cuántos proyectos conserva y cuánto trabajo de IA realiza. El uso depende del trabajo realizado y de los modelos que elija.",
+    "estimateProjectsLabel": "Proyectos que conserva",
+    "estimateProjectsOne": "{n} proyecto",
+    "estimateProjectsMany": "{n} proyectos",
+    "estimateProjectsHint": "Cada proyecto usa 90 créditos al mes. Think Free incluye 1 proyecto sin costo.",
+    "estimateLabel": "Créditos de trabajo de IA cada mes",
+    "estimateUnit": "créditos",
+    "estimateHint": "Las estimaciones usan el precio por crédito. Los créditos se compran en paquetes y lo que no use se acumula.",
+    "estimateFree": "Think Free, 1 proyecto y 500 créditos una sola vez",
+    "estimateNew": "Think New, 1 usuario, hasta 10 proyectos",
+    "estimateBig": "Think Big, hasta 25 usuarios y 25 proyectos",
+    "estimateOverFree": "Supera los límites gratuitos",
+    "estimateNewMax": "Hasta 10 proyectos",
+    "estimateNote": "Incluye {credits} créditos al mes para {projects} en Think New y Think Big",
+    "estimatePerMonth": "/mes",
+    "estimatePresets": "Cantidades de ejemplo",
     "compareEyebrow": "Comparar planes",
     "compareTitle": "Todo lo que incluye cada plan",
     "compareColPlan": "Plan",
     "compareGroupLimits": "Límites del plan",
-    "compareValFree": "Gratis",
     "compareValCustom": "Personalizado",
+    "compareValNone": "Ninguna",
+    "compareRowSubscription": "Suscripción",
     "compareRowUsers": "Usuarios",
     "compareValNewUsers": "1 (administrador)",
     "compareValBigUsers": "Hasta 25, incluido el administrador",
     "compareRowProjects": "Proyectos",
-    "compareValBigProjects": "Ilimitados, compartidos",
+    "compareValNewProjects": "Hasta 10",
+    "compareValBigProjects": "Hasta 25, compartidos",
+    "compareRowProjectFee": "Costo por proyecto",
+    "compareValFree": "Gratis",
+    "compareValProjectFee": "90 créditos al mes cada uno",
+    "compareGroupCredits": "Créditos",
+    "compareRowIncluded": "Créditos incluidos",
+    "compareValFreeCredits": "500, una sola vez",
+    "compareRowPerCredit": "Precio por crédito",
+    "compareValNewRate": "$0.05",
+    "compareValBigRate": "$0.06",
+    "compareRowPacks": "Paquetes de créditos",
+    "compareValNewPacks": "$25, $50, $75, $100",
+    "compareValBigPacks": "$180, $360, $480, $960",
     "compareRowPurchased": "Créditos comprados",
     "compareValRollOver": "Se acumulan mes a mes",
     "compareGroupDesign": "Diseño y construcción",
@@ -794,44 +870,53 @@
     "compareRowSupport": "Soporte dedicado e incorporación",
     "limitsEyebrow": "Límites de proyectos",
     "limitsTitle": "¿Alcanzó el límite de proyectos? Tiene opciones.",
-    "limitsSubtitle": "Cada proyecto en su espacio cuenta para el límite de su plan, sin importar quién lo haya creado. Cuando lo alcance, puede:",
+    "limitsSubtitle": "Cada proyecto en su espacio cuenta para el límite de su plan, sin importar quién lo haya creado. Los límites son fijos: 1 proyecto en Think Free, 10 en Think New y 25 en Think Big. Cuando alcance el suyo, puede:",
     "limitsCards": [
       {
-        "title": "Archivar un proyecto",
-        "desc": "Libere un espacio archivando un proyecto que ya no necesite."
-      },
-      {
-        "title": "Agregar un proyecto por créditos",
-        "desc": "Agregue un proyecto más, pagado desde el fondo de créditos de su empresa."
+        "title": "Eliminar un proyecto",
+        "desc": "Libere un espacio eliminando un proyecto que ya no necesite. Los proyectos eliminados se archivan durante 6 meses y dejan de generar cargos."
       },
       {
         "title": "Actualizar su plan",
-        "desc": "Suba a un plan con más proyectos, usuarios y créditos."
+        "desc": "Pase de Think New a Think Big para tener hasta 25 proyectos, o hable con nosotros sobre Think Blue."
       }
     ],
     "costEyebrow": "Control de costos",
     "costTitle": "Controle la elección de modelos sin perder el contexto.",
     "costSubtitle": "Mantenga el plano independiente de un solo proveedor. Traiga claves compatibles y reserve el razonamiento avanzado para el trabajo que lo requiera.",
     "card1Title": "Créditos de orquestación",
-    "card1Desc": "Compre créditos en paquetes cuando los necesite. El uso depende del trabajo realizado. Los créditos que compra se acumulan de mes a mes.",
+    "card1Desc": "Compre créditos en paquetes cuando los necesite. Cada proyecto usa 90 créditos al mes y el trabajo de IA consume créditos según la tarea realizada. Los créditos que compra se acumulan de mes a mes.",
     "card2Title": "Traiga sus propias claves",
     "card2Desc": "Utilice credenciales de proveedores compatibles cuando estén disponibles en lugar de forzar todo el uso de modelos en un paquete único.",
     "card3Title": "Controles empresariales",
-    "card3Desc": "Discuta el despliegue privado, controles de uso personalizados y requisitos de soporte con Think4Ever.",
+    "card3Desc": "Converse con Think4Ever sobre despliegue privado, controles de uso personalizados y requisitos de soporte.",
     "faqEyebrow": "Preguntas frecuentes",
     "faqTitle": "Preguntas sobre los planes",
+    "faqLinkText": "Cómo: Diseñar en Think, Codificar en Claude",
     "faqItems": [
       {
-        "q": "¿Hay una cuota mensual?",
-        "a": "No. Think Free, Think New y Think Big no tienen cuota mensual de plataforma. En Think New y Think Big solo paga los paquetes de créditos que compra. Think Blue tiene un precio a medida para cada organización."
+        "q": "¿Hay una suscripción?",
+        "a": "No. Think Free, Think New y Think Big no tienen suscripción. En Think New y Think Big, cada proyecto que conserva usa 90 créditos al mes y el trabajo de IA consume créditos sobre la marcha, así que solo paga los paquetes de créditos que compra. El proyecto de Think Free es gratis y Think Blue tiene un precio a medida para cada organización."
+      },
+      {
+        "q": "¿Por qué los proyectos usan créditos cada mes?",
+        "a": "Cada proyecto se ejecuta en el espacio de trabajo alojado de su empresa. Los créditos mensuales del proyecto cubren su alojamiento, su almacenamiento y mantenerlo listo para su equipo."
+      },
+      {
+        "q": "¿Cuándo se cobran los créditos de proyecto?",
+        "a": "Se descuentan 90 créditos de su fondo cuando crea un proyecto y de nuevo cada mes. Si elimina un proyecto a mitad de mes, los créditos de ese mes no se reembolsan."
+      },
+      {
+        "q": "¿Los proyectos archivados o eliminados usan créditos?",
+        "a": "No. Los proyectos archivados y eliminados no generan cargos. Los proyectos eliminados permanecen archivados durante 6 meses."
       },
       {
         "q": "¿Cómo funcionan los paquetes de créditos?",
-        "a": "Los paquetes de Think New cuestan $25, $50, $75 o $100, a $0.05 por crédito. Los paquetes de Think Big cuestan $180, $360, $480 o $960, a $0.06 por crédito. Compre un paquete cuando necesite más créditos."
+        "a": "Los paquetes de Think New cuestan $25, $50, $75 o $100, a $0.05 por crédito. Los paquetes de Think Big cuestan $180, $360, $480 o $960, a $0.06 por crédito. Compre un paquete cuando necesite más créditos. Tanto sus proyectos como su trabajo de IA consumen los créditos que compra."
       },
       {
         "q": "¿Por qué los créditos de Think Big cuestan más?",
-        "a": "Los créditos de Think Big incluyen lo que los equipos necesitan para trabajar juntos: un espacio de trabajo y un fondo de créditos compartidos, hasta 25 usuarios, roles y acceso por proyecto, y controles de administración."
+        "a": "Los créditos de Think Big cubren lo que los equipos necesitan para trabajar juntos: un espacio de trabajo y un fondo de créditos compartidos, hasta 25 usuarios, roles y acceso por proyecto, y controles de administración."
       },
       {
         "q": "¿Los créditos no usados se acumulan?",
@@ -839,11 +924,11 @@
       },
       {
         "q": "¿Qué pasa cuando nos quedamos sin créditos?",
-        "a": "El trabajo de IA se pausa hasta que compre otro paquete. Conserva el acceso a su espacio de trabajo y a sus proyectos. En Think Free, pase a Think New o Think Big para obtener más créditos."
+        "a": "El trabajo de IA se pausa hasta que compre otro paquete. Si no hay créditos suficientes para el cargo mensual de un proyecto, ese proyecto se pausa hasta que agregue créditos. En Think Free, pase a Think New o Think Big para obtener más créditos."
       },
       {
         "q": "¿Qué pasa cuando alcanzamos el límite de proyectos?",
-        "a": "Think Free incluye un proyecto. Think New y Think Big incluyen proyectos ilimitados, así que pase a cualquiera de ellos cuando necesite más."
+        "a": "Los límites de proyectos son fijos. Elimine un proyecto para hacer espacio a uno nuevo o actualice a un plan con un límite mayor. Los proyectos eliminados permanecen archivados durante 6 meses."
       },
       {
         "q": "¿Quién es el administrador?",
@@ -867,7 +952,7 @@
       },
       {
         "q": "¿Puedo usar mis propias herramientas de código?",
-        "a": "Sí, en Think New y superiores. Claude Code, Cursor, Codex y otras herramientas compatibles con MCP pueden construir desde su diseño de Think4Ever a través del servidor Think MCP, en su propia suscripción. Consulte {link}."
+        "a": "Sí, en todos los planes. Claude Code, Cursor, Codex y otras herramientas compatibles con MCP pueden construir desde su diseño de Think4Ever a través del servidor Think MCP, con su propia suscripción. Consulte {link}."
       },
       {
         "q": "¿Puedo traer mi propio modelo?",
@@ -882,71 +967,7 @@
     "ctaTitle": "Suba la base de código que teme tocar.",
     "ctaSubtitle": "En minutos verá cómo funciona realmente y qué tocaría cada cambio.",
     "ctaBtnPrimary": "Analizar un proyecto →",
-    "ctaBtnSecondary": "Hablar con ventas",
-    "noFee": "Sin cuota mensual de plataforma",
-    "plan2PacksLabel": "Paquetes de créditos a $0.05 por crédito",
-    "plan3PacksLabel": "Paquetes de créditos a $0.06 por crédito",
-    "plan2Packs": [
-      {
-        "price": "$25",
-        "credits": "500 créditos"
-      },
-      {
-        "price": "$50",
-        "credits": "1,000 créditos"
-      },
-      {
-        "price": "$75",
-        "credits": "1,500 créditos"
-      },
-      {
-        "price": "$100",
-        "credits": "2,000 créditos"
-      }
-    ],
-    "plan3Packs": [
-      {
-        "price": "$180",
-        "credits": "3,000 créditos"
-      },
-      {
-        "price": "$360",
-        "credits": "6,000 créditos"
-      },
-      {
-        "price": "$480",
-        "credits": "8,000 créditos"
-      },
-      {
-        "price": "$960",
-        "credits": "16,000 créditos"
-      }
-    ],
-    "estimateEyebrow": "Calcule su costo",
-    "estimateTitle": "Vea cuánto costarían sus créditos",
-    "estimateSubtitle": "Mueva el control deslizante o elija una cantidad. El uso depende del trabajo realizado y de los modelos que elija.",
-    "estimateLabel": "Créditos que usa cada mes",
-    "estimateUnit": "créditos",
-    "estimateHint": "Las estimaciones usan el precio por crédito. Los créditos se compran en paquetes y lo que no use se acumula.",
-    "estimateFree": "Think Free, 500 créditos una sola vez",
-    "estimateNew": "Think New, 1 usuario, $0.05 por crédito",
-    "estimateBig": "Think Big, hasta 25 usuarios, $0.06 por crédito",
-    "estimateLimited": "Limitado a 500 créditos",
-    "estimatePerMonth": "/mes",
-    "estimatePresets": "Cantidades de ejemplo",
-    "compareGroupCredits": "Créditos",
-    "compareRowFee": "Cuota mensual de plataforma",
-    "compareValNone": "Ninguna",
-    "compareValUnlimited": "Ilimitados",
-    "compareRowIncluded": "Créditos incluidos",
-    "compareValFreeCredits": "500, una sola vez",
-    "compareRowPerCredit": "Precio por crédito",
-    "compareRowPacks": "Paquetes de créditos",
-    "compareValNewRate": "$0.05",
-    "compareValBigRate": "$0.06",
-    "compareValNewPacks": "$25, $50, $75, $100",
-    "compareValBigPacks": "$180, $360, $480, $960",
-    "faqLinkText": "Cómo: Diseñar en Think, Codificar en Claude"
+    "ctaBtnSecondary": "Hablar con ventas"
   },
   "faqPage": {
     "metaTitle": "Preguntas Frecuentes Think4Ever — Planos Vivos, Comprensión de Código y MCP",

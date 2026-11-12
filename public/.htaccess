@@ -52,6 +52,19 @@
   </IfModule>
 </FilesMatch>
 
+# Deploy cache-buster: __BUILD_ID__ is stamped per build by scripts/stamp-htaccess.mjs.
+# A browser without this build's cookie gets its HTTP cache wiped (stale JS / RSC .txt
+# payloads cached by the CDN's max-age override) on its first HTML request after a deploy.
+<IfModule mod_setenvif.c>
+  SetEnvIf Cookie "(^|;\s*)t4e_build=__BUILD_ID__(;|$)" T4E_FRESH
+  <FilesMatch "\.html$">
+    <IfModule mod_headers.c>
+      Header set Clear-Site-Data "\"cache\"" env=!T4E_FRESH
+      Header add Set-Cookie "t4e_build=__BUILD_ID__; Path=/; Max-Age=31536000; Secure; SameSite=Lax" env=!T4E_FRESH
+    </IfModule>
+  </FilesMatch>
+</IfModule>
+
 # Proper caching for immutable JS/CSS static chunks
 <FilesMatch "\.(js|css)$">
   <IfModule mod_headers.c>
