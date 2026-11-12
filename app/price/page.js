@@ -42,5 +42,5 @@ export const fallbackMetadata = {
 };
 
 export async function generateMetadata() {
-  return getLocalizedMetadata('en', 'pricing', fallbackMetadata);
+  return getLocalizedMetadata('en', 'pricing', fallbackMetadata, 'price');
 }
