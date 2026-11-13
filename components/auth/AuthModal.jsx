@@ -411,13 +411,13 @@ export default function AuthModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => { if (!open) onClose(); }}>
-      <DialogContent className="sm:max-w-[500px] p-0 overflow-hidden rounded-3xl border border-border shadow-2xl bg-card">
+      <DialogContent className="w-[calc(100%-1.5rem)] max-w-[calc(100%-1.5rem)] max-h-[calc(100dvh-1.5rem)] overflow-y-auto overscroll-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:w-full sm:max-w-[500px] p-0 rounded-2xl sm:rounded-3xl border border-border shadow-2xl bg-card">
         {/* ──── POPUP STEP 1: AUTH (SIGN UP & SIGN IN) ──── */}
         {modalStep === "auth" && (
-          <div className="p-6 sm:p-8">
+          <div className="p-4 pt-5 sm:p-8">
             {/* Top Choice Badge (if mode provided) */}
             {modalData?.mode?.title && (
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 mb-3.5">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 mb-2.5 sm:mb-3.5">
                 <Sparkles className="w-3.5 h-3.5 shrink-0" />
                 <span className="truncate">
                   {modalData.mode.title}
@@ -425,8 +425,8 @@ export default function AuthModal({
               </div>
             )}
 
-            <DialogHeader className="mb-5 text-left">
-              <DialogTitle className="text-2xl font-extrabold text-foreground tracking-tight">
+            <DialogHeader className="mb-3 sm:mb-5 gap-1 text-left">
+              <DialogTitle className="text-xl sm:text-2xl font-extrabold text-foreground tracking-tight">
                 {authTab === "signup"
                   ? "Create your account"
                   : "Welcome back"}
@@ -439,7 +439,7 @@ export default function AuthModal({
             </DialogHeader>
 
             {/* Tabs: Sign Up vs Sign In (Rounded-full consistent design) */}
-            <div className="flex rounded-full bg-muted p-1 mb-5 border border-border/50">
+            <div className="flex rounded-full bg-muted p-1 mb-3.5 sm:mb-5 border border-border/50">
               <button
                 type="button"
                 onClick={() => {

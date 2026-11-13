@@ -205,7 +205,6 @@ export default function PortalStartSection() {
             onAnimationEnd={() => setIsShaking(false)}
             className={[
               "mt-2 rounded-2xl border-[1.5px] bg-white text-left shadow-[0_10px_15px_-3px_rgba(0,0,0,.08),0_4px_6px_-4px_rgba(0,0,0,.05)] transition-[border-color,box-shadow] duration-200 md:mt-3",
-              "focus-within:border-[#2563eb] focus-within:shadow-[0_0_0_3px_rgba(37,99,235,.15),0_10px_15px_-3px_rgba(0,0,0,.08)]",
               promptError ? "border-rose-400" : "border-slate-200",
               isShaking ? "hero-motion animate-[hero-shake_.35s]" : "",
             ].join(" ")}
