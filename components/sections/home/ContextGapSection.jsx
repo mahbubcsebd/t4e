@@ -81,7 +81,7 @@ export default function ContextGapSection() {
                   </span>
                 </span>
               </td>
-              <td className="border-t border-slate-200 bg-[#F5F8FF] px-[18px] py-4 align-top text-[15px] font-medium text-[#0B1B3A] max-md:mx-3 max-md:mb-3.5 max-md:mt-1 max-md:block max-md:rounded-xl max-md:border-0 max-md:px-4 max-md:py-3">
+              <td className="border-t border-slate-200 bg-[#F5F8FF] px-[18px] py-4 align-top text-[15px] font-medium text-[#0B1B3A] max-md:mt-2 max-md:block max-md:border-0 max-md:px-4 max-md:py-3.5">
                 <span className="flex items-start gap-2">
                   <Check className="mt-[3px] h-[18px] w-[18px] shrink-0 text-[#1D63E0]" strokeWidth={2.6} aria-hidden="true" />
                   <span>
