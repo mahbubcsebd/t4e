@@ -411,7 +411,7 @@ export default function AuthModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => { if (!open) onClose(); }}>
-      <DialogContent className="w-[calc(100%-1.5rem)] max-w-[calc(100%-1.5rem)] max-h-[calc(100dvh-1.5rem)] overflow-y-auto overscroll-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:w-full sm:max-w-[500px] p-0 rounded-2xl sm:rounded-3xl border border-border shadow-2xl bg-card">
+      <DialogContent className="w-[calc(100%-1.5rem)] max-w-[calc(100%-1.5rem)] max-h-[calc(100dvh-1.5rem)] grid-cols-[minmax(0,1fr)] overflow-x-hidden overflow-y-auto overscroll-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:w-full sm:max-w-[500px] p-0 rounded-2xl sm:rounded-3xl border border-border shadow-2xl bg-card">
         {/* ──── POPUP STEP 1: AUTH (SIGN UP & SIGN IN) ──── */}
         {modalStep === "auth" && (
           <div className="p-4 pt-5 sm:p-8">
