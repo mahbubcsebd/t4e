@@ -224,7 +224,7 @@ export default function PortalStartSection() {
               aria-label={currentMode.prompt_label}
               aria-invalid={Boolean(promptError)}
               placeholder={currentMode.placeholder}
-              className="block w-full resize-none rounded-2xl bg-transparent min-h-[96px] px-4 pb-2.5 pt-3 text-base leading-snug text-[#0f172a] outline-none placeholder:text-slate-400 md:min-h-[72px]"
+              className="block w-full resize-none rounded-2xl bg-transparent min-h-[96px] px-4 pb-2.5 pt-3 text-base leading-snug text-[#0f172a] outline-none placeholder:text-slate-400 md:min-h-[112px] md:pt-4"
             />
             {promptError && (
               <p role="alert" className="px-4 pb-2.5 text-[13px] text-[#b84e00]">
