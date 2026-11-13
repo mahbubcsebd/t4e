@@ -61,6 +61,50 @@ const InputError = ({ error, className = "" }) => {
   );
 };
 
+function LegalCheckboxes({
+  eula,
+  marketing,
+  eulaError,
+  onEulaChange,
+  onMarketingChange,
+}) {
+  return (
+    <>
+      <div>
+        <label className="flex items-start gap-2.5 text-xs text-foreground/75 cursor-pointer select-none">
+          <input
+            type="checkbox"
+            checked={eula}
+            onChange={(e) => onEulaChange(e.target.checked)}
+            className="mt-0.5 w-4 h-4 rounded border-border text-primary focus:ring-primary/30"
+          />
+          <span>
+            I accept the{" "}
+            <a
+              href="https://portal.think4ever.com/legal.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-semibold"
+            >
+              EULA, Privacy Policy and Acceptable Use Policy
+            </a>
+          </span>
+        </label>
+        <InputError error={eulaError} />
+      </div>
+      <label className="flex items-center gap-2.5 text-xs text-foreground/75 cursor-pointer select-none">
+        <input
+          type="checkbox"
+          checked={marketing}
+          onChange={(e) => onMarketingChange(e.target.checked)}
+          className="w-4 h-4 rounded border-border text-primary focus:ring-primary/30"
+        />
+        <span>Send me product news and updates</span>
+      </label>
+    </>
+  );
+}
+
 export default function AuthModal({
   isOpen,
   onClose,
@@ -524,44 +568,17 @@ export default function AuthModal({
                   <InputError error={errors.suEmail} />
                 </div>
 
-                {/* Legal EULA Checkbox */}
-                <div>
-                  <label className="flex items-start gap-2.5 text-xs text-foreground/75 cursor-pointer select-none">
-                    <input
-                      type="checkbox"
-                      checked={suEula}
-                      onChange={(e) => {
-                        setSuEula(e.target.checked);
-                        clearError("suEula");
-                        setServerError("");
-                      }}
-                      className="mt-0.5 w-4 h-4 rounded border-border text-primary focus:ring-primary/30"
-                    />
-                    <span>
-                      I accept the{" "}
-                      <a
-                        href="https://portal.think4ever.com/legal.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary hover:underline font-semibold"
-                      >
-                        EULA, Privacy Policy and Acceptable Use Policy
-                      </a>
-                    </span>
-                  </label>
-                  <InputError error={errors.suEula} />
-                </div>
-
-                {/* Marketing Opt-in Checkbox */}
-                <label className="flex items-center gap-2.5 text-xs text-foreground/75 cursor-pointer select-none">
-                  <input
-                    type="checkbox"
-                    checked={suMarketing}
-                    onChange={(e) => setSuMarketing(e.target.checked)}
-                    className="w-4 h-4 rounded border-border text-primary focus:ring-primary/30"
-                  />
-                  <span>Send me product news and updates</span>
-                </label>
+                <LegalCheckboxes
+                  eula={suEula}
+                  marketing={suMarketing}
+                  eulaError={errors.suEula}
+                  onEulaChange={(checked) => {
+                    setSuEula(checked);
+                    clearError("suEula");
+                    setServerError("");
+                  }}
+                  onMarketingChange={setSuMarketing}
+                />
 
                 {/* Optional Password toggle */}
                 <div className="pt-1">
@@ -673,6 +690,17 @@ export default function AuthModal({
                   />
                   <InputError error={errors.siPassword} />
                 </div>
+
+                <LegalCheckboxes
+                  eula={suEula}
+                  marketing={suMarketing}
+                  eulaError={errors.suEula}
+                  onEulaChange={(checked) => {
+                    setSuEula(checked);
+                    clearError("suEula");
+                  }}
+                  onMarketingChange={setSuMarketing}
+                />
 
                 {/* Sign In Button (Rounded-full consistent design) */}
                 <Button
