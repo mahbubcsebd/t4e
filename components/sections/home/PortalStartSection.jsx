@@ -160,7 +160,7 @@ export default function PortalStartSection() {
   };
 
   return (
-    <section className="relative isolate flex min-h-[calc(100svh-64px)] flex-col overflow-x-clip bg-[#f8fafc] md:min-h-[calc(100vh-76px)]">
+    <section className="relative isolate flex flex-col overflow-x-clip bg-[#f8fafc] max-md:pb-0!">
       {/* Backdrop */}
       <div
         aria-hidden="true"
@@ -171,7 +171,7 @@ export default function PortalStartSection() {
         }}
       />
 
-      <div className="mx-auto flex w-full max-w-[1100px] flex-1 flex-col items-center px-4 pb-4 pt-1 text-center sm:px-7 md:pb-10">
+      <div className="mx-auto flex w-full max-w-[1100px] flex-1 flex-col items-center px-4 pb-0 pt-1 text-center sm:px-7 md:pb-10">
         {/* Mascot: height follows the viewport; page scrolls on very short screens */}
         <HeroMascot
           sceneIndex={phraseIndex}

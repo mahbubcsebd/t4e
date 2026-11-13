@@ -30,7 +30,7 @@ export default function HeroSection() {
   return (
     <section className="pt-8 lg:pt-12 pb-4 lg:pb-8 transition-colors duration-300">
       <div className="w-full">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 mb-8 lg:mb-10 pt-4">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 mb-8 lg:mb-10 pt-4">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-10">
             {/* Left Column: Hero Text */}
             <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left w-full max-w-2xl mx-auto lg:max-w-none">

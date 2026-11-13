@@ -17,9 +17,9 @@ export default function ContextGapSection() {
   return (
     <section
       aria-labelledby="context-gap-title"
-      className="relative mx-auto max-w-[1040px] px-4 pb-14 pt-6 md:px-6"
+      className="relative mx-auto w-full max-w-[1600px] px-4 pb-10 sm:px-6 md:pb-14 md:pt-6 lg:px-8 max-md:pt-6!"
     >
-      <div className="mx-auto mb-12 flex w-full max-w-[640px] flex-col items-center gap-4">
+      <div className="mx-auto mb-8 flex w-full max-w-[640px] md:mb-12 flex-col items-center gap-4">
         <div className="flex w-full items-center gap-4" aria-hidden="true">
           <span className="h-px flex-1 bg-gradient-to-r from-transparent to-slate-200" />
           <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
