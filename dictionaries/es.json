@@ -10,6 +10,23 @@
     "haveAccountShort": "¿Ya tiene una cuenta?",
     "signIn": "Iniciar sesión",
     "installApp": "O instale la app",
+    "send": "Crear mi plano",
+    "orSignUp": "o regístrese gratis con",
+    "google": "Google",
+    "email": "Correo",
+    "finePre": "Al continuar acepta los",
+    "terms": "Términos",
+    "finePost": "y la",
+    "privacy": "Política de privacidad",
+    "perk": "Plan gratis con 500 créditos",
+    "phrases": {
+      "p1": "Diseñe su sistema",
+      "p2": "Genere su UX/UI",
+      "p3": "Mapee su código",
+      "p4": "Plano vivo",
+      "p5": "Construya con su IA",
+      "p6": "Audite su código"
+    },
     "modeLabel": "Modo de creación",
     "modes": {
       "design": {
@@ -18,7 +35,8 @@
         "description": "Describa lo que quiere construir. Think4Ever lo convierte en un plano revisable de roles, flujos, reglas y criterios de aceptación, y luego lo construye.",
         "promptLabel": "¿Qué quiere construir?",
         "placeholder": "Una app de servicio en campo donde los técnicos reciben trabajos, registran piezas y cierran órdenes de trabajo",
-        "preparing": "Genial: estamos preparando su plano. Regístrese y construyámoslo."
+        "preparing": "Genial: estamos preparando su plano. Regístrese y construyámoslo.",
+        "required": "Indique qué quiere construir."
       },
       "analyze": {
         "eyebrow": "Código → Comprensión",
@@ -26,7 +44,8 @@
         "description": "Traiga un proyecto real: una URL pública de GitHub ahora, o un ZIP / repositorio conectado una vez dentro. Lo importamos y mapeamos el sistema en una vista visual y revisable.",
         "promptLabel": "Describa las áreas de enfoque o la URL del repositorio",
         "placeholder": "p. ej. https://github.com/owner/repository o describa las partes del código que quiere entender y visualizar...",
-        "preparing": "Genial: estamos mapeando su repositorio. Regístrese y construyámoslo."
+        "preparing": "Genial: estamos mapeando su repositorio. Regístrese y construyámoslo.",
+        "required": "Indique las áreas de enfoque del proyecto o la URL del repositorio."
       },
       "harden": {
         "eyebrow": "Código → Listo para producción",
@@ -34,7 +53,8 @@
         "description": "Importe su código, mapeamos el sistema y luego agentes revisores lo auditan con una lista de preparación para producción: seguridad, configuración, fiabilidad, datos, observabilidad, despliegue y más.",
         "promptLabel": "Describa inquietudes específicas de seguridad o arquitectura",
         "placeholder": "p. ej. Lista de auditoría de seguridad, configuración, fiabilidad, datos, observabilidad y preparación para el despliegue...",
-        "preparing": "Genial: estamos preparando su revisión de producción. Regístrese y construyámoslo."
+        "preparing": "Genial: estamos preparando su revisión de producción. Regístrese y construyámoslo.",
+        "required": "Indique sus preocupaciones de seguridad o arquitectura."
       },
       "prototype": {
         "eyebrow": "Idea → Prototipo funcional",
@@ -42,9 +62,15 @@
         "description": "Describa la idea y obtenga un prototipo funcional construido directamente desde el lado de desarrollo. El refuerzo para producción y un diseño más profundo pueden venir después.",
         "promptLabel": "¿Qué debe hacer el prototipo?",
         "placeholder": "Un seguidor de hábitos con rachas diarias y una pantalla de revisión semanal",
-        "preparing": "Genial: estamos preparando su prototipo. Regístrese y construyámoslo."
+        "preparing": "Genial: estamos preparando su prototipo. Regístrese y construyámoslo.",
+        "required": "Indique qué debe hacer el prototipo."
       }
-    }
+    },
+    "noCard": "Sin tarjeta de crédito",
+    "proofPre": "Equipos de",
+    "proofAnd": "e",
+    "proofPost": "diseñan antes de construir con Think4Ever.",
+    "proofLink": "Lea sus historias"
   },
   "nav": {
     "product": "Producto",
@@ -1707,5 +1733,39 @@
   "customersPage": {
     "metaTitle": "Historias de clientes | Think4Ever",
     "metaDesc": "Cómo firmas de consultoría, fundadores, empresas y equipos de seguridad usan Think4Ever para diseñar antes de construir."
+  },
+  "contextGap": {
+    "eyebrow": "La brecha de contexto",
+    "titleBefore": "La IA escribe código más rápido de lo que su equipo puede",
+    "titleHighlight": "entender",
+    "titleAfter": ".",
+    "caption": "Trabajar sin un mapa compartido del sistema frente a trabajar en Think4Ever",
+    "area": "Área",
+    "withoutTitle": "Sin un mapa compartido",
+    "withTitle": "Con Think4Ever",
+    "rows": {
+      "context": {
+        "label": "Contexto",
+        "without": "Cada tarea parte de fragmentos. Cada agente recibe una parte distinta del sistema.",
+        "with": "Todos los agentes de código reciben el mismo contexto de sistema revisado."
+      },
+      "knowledge": {
+        "label": "Conocimiento",
+        "without": "El código, los flujos y las decisiones de negocio viven en lugares distintos y se desalinean.",
+        "with": "Un modelo conectado de requisitos, reglas, flujos y arquitectura."
+      },
+      "changes": {
+        "label": "Cambios",
+        "without": "Un cambio local se convierte, sin avisar, en un cambio del sistema.",
+        "with": "Vea el impacto antes de ejecutar nada."
+      },
+      "tools": {
+        "label": "Herramientas",
+        "without": "Debe explicar el producto de nuevo a cada agente y a cada nuevo compañero.",
+        "with": "Conserve sus herramientas de código. Claude Code, Cursor, Codex y otras leen el mismo plano."
+      }
+    },
+    "cta": "Empezar gratis",
+    "note": "Plan gratuito con 500 créditos. Sin tarjeta de crédito."
   }
 }

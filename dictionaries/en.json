@@ -10,6 +10,23 @@
     "haveAccountShort": "Already have an account?",
     "signIn": "Sign in",
     "installApp": "Or install the app",
+    "send": "Create my blueprint",
+    "orSignUp": "or sign up free with",
+    "google": "Google",
+    "email": "Email",
+    "finePre": "By continuing you accept the",
+    "terms": "Terms",
+    "finePost": "and the",
+    "privacy": "Privacy Policy",
+    "perk": "Free plan with 500 credits",
+    "phrases": {
+      "p1": "Design your system",
+      "p2": "Generate your UX/UI",
+      "p3": "Map your code",
+      "p4": "Living blueprint",
+      "p5": "Build with your AI",
+      "p6": "Audit your code"
+    },
     "modeLabel": "Build mode",
     "modes": {
       "design": {
@@ -18,7 +35,8 @@
         "description": "Describe what you want to build. Think4Ever turns it into a reviewable blueprint of roles, workflows, rules and acceptance criteria — then builds it.",
         "promptLabel": "What do you want to build?",
         "placeholder": "A field service app where technicians get jobs, log parts and close work orders",
-        "preparing": "Great — we are preparing your blueprint. Sign up and let's build it."
+        "preparing": "Great — we are preparing your blueprint. Sign up and let's build it.",
+        "required": "What do you want to build is required."
       },
       "analyze": {
         "eyebrow": "Code → Understanding",
@@ -26,7 +44,8 @@
         "description": "Bring a real project — a public GitHub URL now, or a ZIP / connected repository once you are in. We import it and map the system into a visual, reviewable view.",
         "promptLabel": "Describe project focus areas or repository URL",
         "placeholder": "e.g. https://github.com/owner/repository or describe the parts of the codebase you want to understand and visualize...",
-        "preparing": "Great — we are mapping your repository. Sign up and let's build it."
+        "preparing": "Great — we are mapping your repository. Sign up and let's build it.",
+        "required": "Project focus areas or repository URL is required."
       },
       "harden": {
         "eyebrow": "Code → Production ready",
@@ -34,7 +53,8 @@
         "description": "Import your codebase, map the system, then reviewer agents audit it against a production-readiness checklist: security, configuration, reliability, data, observability, deploy and more.",
         "promptLabel": "Describe specific security or architecture concerns",
         "placeholder": "e.g. Audit checklist for security, configuration, reliability, data, observability, and deploy readiness...",
-        "preparing": "Great — we are preparing your production review. Sign up and let's build it."
+        "preparing": "Great — we are preparing your production review. Sign up and let's build it.",
+        "required": "Security or architecture concerns are required."
       },
       "prototype": {
         "eyebrow": "Idea → Working prototype",
@@ -42,9 +62,15 @@
         "description": "Describe the idea and get a working prototype built straight from the dev side. Production hardening and deeper design can follow later.",
         "promptLabel": "What should the prototype do?",
         "placeholder": "A habit tracker with daily streaks and a weekly review screen",
-        "preparing": "Great — we are preparing your prototype. Sign up and let's build it."
+        "preparing": "Great — we are preparing your prototype. Sign up and let's build it.",
+        "required": "What the prototype should do is required."
       }
-    }
+    },
+    "noCard": "No credit card",
+    "proofPre": "Teams at",
+    "proofAnd": "and",
+    "proofPost": "design before they build with Think4Ever.",
+    "proofLink": "Read their stories"
   },
   "nav": {
     "product": "Product",
@@ -1578,5 +1604,39 @@
   "customersPage": {
     "metaTitle": "Customer stories | Think4Ever",
     "metaDesc": "How consulting firms, founders, enterprises and security teams use Think4Ever to design before they build."
+  },
+  "contextGap": {
+    "eyebrow": "The context gap",
+    "titleBefore": "AI writes code faster than your team can",
+    "titleHighlight": "understand it",
+    "titleAfter": ".",
+    "caption": "Working without a shared system map compared with working in Think4Ever",
+    "area": "Area",
+    "withoutTitle": "Without a shared map",
+    "withTitle": "With Think4Ever",
+    "rows": {
+      "context": {
+        "label": "Context",
+        "without": "Every task starts from fragments. Each agent gets a different slice of the system.",
+        "with": "Every coding agent gets the same reviewed system context."
+      },
+      "knowledge": {
+        "label": "Knowledge",
+        "without": "Code, workflows and business decisions live in different places and drift apart.",
+        "with": "One connected model of requirements, rules, flows and architecture."
+      },
+      "changes": {
+        "label": "Changes",
+        "without": "A local change quietly becomes a system change.",
+        "with": "See the impact before anything is executed."
+      },
+      "tools": {
+        "label": "Tools",
+        "without": "You re-explain the product to every agent and every new teammate.",
+        "with": "Keep your coding tools. Claude Code, Cursor, Codex and others read the same blueprint."
+      }
+    },
+    "cta": "Start free",
+    "note": "Free plan with 500 credits. No credit card."
   }
 }

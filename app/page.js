@@ -3,6 +3,7 @@ import { getLocalizedMetadata } from '@/lib/metadata';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import CoherenceSection from '@/components/sections/home/CoherenceSection';
+import ContextGapSection from '@/components/sections/home/ContextGapSection';
 import CtaSection from '@/components/sections/home/CtaSection';
 import DiscoverRoleSection from '@/components/sections/home/DiscoverRoleSection';
 import HeroSection from '@/components/sections/home/HeroSection';
@@ -21,6 +22,7 @@ export default function Home() {
       <Header />
       <main className="home-clean flex-grow">
         <PortalStartSection />
+        <ContextGapSection />
         <DiscoverRoleSection />
         <HeroSection />
         <ProblemSection />

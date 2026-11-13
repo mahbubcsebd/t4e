@@ -1,18 +1,24 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import Eyebrow from "@/components/ui/Eyebrow";
+import { useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import { Button } from "@/components/ui/button";
 import { useAuthModal } from "@/context/AuthModalContext";
 import { callPortalApi } from "@/lib/portalApi";
-import StoreButtons from "@/components/sections/apps/StoreButtons";
+import HeroMascot from "@/components/sections/home/portal/HeroMascot";
+import PortalModes from "@/components/sections/home/portal/PortalModes";
+import {
+  usePrefersReducedMotion,
+  useTypedPhrases,
+} from "@/components/sections/home/portal/useTypedPhrases";
 import {
   GitFork,
   Code2,
   ShieldCheck,
   Zap,
-  Sparkles,
+  ArrowRight,
+  Check,
   Loader2,
 } from "lucide-react";
 
@@ -24,22 +30,30 @@ const MODE_ICONS = {
   prototype: Zap,
 };
 const MODE_KEYS = Object.keys(MODE_ICONS);
+const PHRASE_KEYS = ["p1", "p2", "p3", "p4", "p5", "p6"];
+const UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
+const TYPING_IDLE_MS = 130;
+const PROMPT_MAX_LENGTH = 4000;
 
-// Field-level error component styled identical to ContactForm
-const InputError = ({ error, className = "" }) => {
-  if (!error) return null;
-  return (
-    <p className={`text-[11px] text-rose-500 font-bold mt-1.5 ml-1 ${className}`}>
-      {error}
-    </p>
-  );
-};
+const localizeHref = (language, path) =>
+  language === "en" ? path : `/${language}${path}`;
+
+function readPageParams() {
+  if (typeof window === "undefined") return {};
+  const q = new URLSearchParams(window.location.search);
+  const params = {};
+  UTM_KEYS.forEach((k) => {
+    if (q.get(k)) params[k] = q.get(k);
+  });
+  if (q.get("ref")) params.ref_key = q.get("ref");
+  if (q.get("inv")) params.invite_token = q.get("inv");
+  return params;
+}
 
 export default function PortalStartSection() {
   const { language, t } = useLanguage();
   const { openAuthModal } = useAuthModal();
 
-  // Mode & input state
   const modes = MODE_KEYS.map((key) => ({
     key,
     icon: MODE_ICONS[key],
@@ -50,99 +64,96 @@ export default function PortalStartSection() {
     placeholder: t(`portalStart.modes.${key}.placeholder`),
     preparing_message: t(`portalStart.modes.${key}.preparing`),
   }));
+  const phrases = PHRASE_KEYS.map((k) => t(`portalStart.phrases.${k}`));
+
   const [selectedModeKey, setSelectedModeKey] = useState("design");
   const [projectPrompt, setProjectPrompt] = useState("");
   const [intentToken, setIntentToken] = useState(null);
   const [preparingMsg, setPreparingMsg] = useState("");
+  const [loadingAction, setLoadingAction] = useState(null);
+  const [promptError, setPromptError] = useState("");
+  const [isShaking, setIsShaking] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
+  const [pageParams] = useState(readPageParams);
+  const typingTimer = useRef(null);
 
-  // Loading & error handling
-  const [loading, setLoading] = useState(false);
-  const [errors, setErrors] = useState({});
-  const [pageParams] = useState(() => {
-    if (typeof window === "undefined") return {};
-    const q = new URLSearchParams(window.location.search);
-    const params = {};
-    ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach(
-      (k) => {
-        if (q.get(k)) params[k] = q.get(k);
-      }
-    );
-    if (q.get("ref")) params.ref_key = q.get("ref");
-    if (q.get("inv")) params.invite_token = q.get("inv");
-    return params;
+  const isReducedMotion = usePrefersReducedMotion();
+
+  useEffect(() => () => clearTimeout(typingTimer.current), []);
+
+  const { text: typedText, phraseIndex } = useTypedPhrases(phrases, {
+    isReducedMotion,
   });
 
-  // Current active mode object
-  const currentMode =
-    modes.find((m) => m.key === selectedModeKey) || modes[0];
+  const currentMode = useMemo(
+    () => modes.find((m) => m.key === selectedModeKey) || modes[0],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [selectedModeKey, language]
+  );
+  const isLoading = loadingAction !== null;
 
-  // Helper to compile choice fields
-  const getChoicePayload = () => {
+  const handleSelectMode = (key) => {
+    setSelectedModeKey(key);
+    setPromptError("");
+  };
+
+  const handlePromptChange = (e) => {
+    setProjectPrompt(e.target.value);
+    setPromptError("");
+    setIsTyping(true);
+    clearTimeout(typingTimer.current);
+    typingTimer.current = setTimeout(() => setIsTyping(false), TYPING_IDLE_MS);
+  };
+
+  // Saves the chosen path + idea as a signup intent. Returns the token/message
+  // to hand to the auth modal.
+  const prepareIntent = async () => {
     const text = projectPrompt.trim();
-    const isGitUrl =
-      text.startsWith("http://") ||
-      text.startsWith("https://") ||
-      text.startsWith("github.com/");
+    if (!text) return { token: intentToken, prepMsg: preparingMsg || currentMode.preparing_message };
 
-    return {
+    const isGitUrl = /^(https?:\/\/|github\.com\/)/.test(text);
+    const payload = {
       build_mode: currentMode.key,
       prompt: text,
       project_prompt: text,
       ...(isGitUrl ? { import_source: "github", import_url: text } : {}),
       ...pageParams,
     };
-  };
+    const res = await callPortalApi("POST", "/auth/signup-intent", payload, language);
 
-  // Helper to clear errors for a field
-  const clearError = (field) => {
-    if (errors[field]) {
-      setErrors((prev) => {
-        const next = { ...prev };
-        delete next[field];
-        return next;
-      });
+    if (!res.ok || !res.data) {
+      return { token: intentToken, prepMsg: preparingMsg || currentMode.preparing_message };
     }
+    const token = res.data.intent_token || intentToken;
+    const prepMsg = res.data.preparing_message || currentMode.preparing_message;
+    setIntentToken(token);
+    setPreparingMsg(prepMsg);
+    return { token, prepMsg };
   };
 
-  // Open modal on Sign up or Sign in click
-  const handleOpenAuthModal = async (tab = "signup") => {
-    setErrors({});
+  // action: "send" (needs an idea) | "send" | "signin"
+  const handleAction = async (action) => {
+    if (isLoading) return;
+    setPromptError("");
 
-    // Validate prompt (required for signup)
-    if (tab === "signup" && !projectPrompt.trim()) {
-      let msg = "What do you want to build is required.";
-      if (currentMode.key === "analyze") {
-        msg = "Project focus areas or repository URL is required.";
-      } else if (currentMode.key === "harden") {
-        msg = "Security or architecture concerns are required.";
-      } else if (currentMode.key === "prototype") {
-        msg = "What the prototype should do is required.";
-      }
-      setErrors({ prompt: msg });
+    if (action === "send" && !projectPrompt.trim()) {
+      setPromptError(t(`portalStart.modes.${currentMode.key}.required`));
+      setIsShaking(true);
       return;
     }
 
-    let token = intentToken;
-    let prepMsg = preparingMsg || currentMode.preparing_message;
-
-    if (projectPrompt.trim()) {
-      setLoading(true);
-      const payload = getChoicePayload();
-      const res = await callPortalApi("POST", "/auth/signup-intent", payload, language);
-      setLoading(false);
-
-      if (res.ok && res.data) {
-        if (res.data.intent_token) {
-          token = res.data.intent_token;
-          setIntentToken(res.data.intent_token);
-        }
-        prepMsg = res.data.preparing_message || currentMode.preparing_message;
-        setPreparingMsg(prepMsg);
-      }
+    if (action === "signin") {
+      openAuthModal({ tab: "signin", mode: currentMode, prompt: projectPrompt.trim(), intentToken, preparingMsg });
+      return;
     }
 
+    setLoadingAction(action);
+    const { token, prepMsg } = await prepareIntent();
+    setLoadingAction(null);
+
     openAuthModal({
-      tab,
+      tab: "signup",
       mode: currentMode,
       prompt: projectPrompt.trim(),
       intentToken: token,
@@ -151,219 +162,142 @@ export default function PortalStartSection() {
   };
 
   return (
-    <section className="relative min-h-[calc(100svh-64px)] md:min-h-[calc(100vh-76px)] flex flex-col justify-center overflow-hidden bg-background py-8 sm:py-14 lg:py-16">
-      {/* ── Soft Ambient Pastel Background Glow ── */}
+    <section className="relative isolate flex min-h-[calc(100svh-64px)] flex-col overflow-x-clip bg-[#f8fafc] md:min-h-[calc(100vh-76px)]">
+      {/* Backdrop */}
       <div
-        aria-hidden
-        className="pointer-events-none select-none absolute inset-0 z-0 overflow-hidden"
-      >
-        <div className="absolute -top-32 -left-32 w-[650px] h-[650px] rounded-full bg-[#1D63E0] opacity-[0.06] blur-[140px]" />
-        <div className="absolute -bottom-32 -right-24 w-[600px] h-[600px] rounded-full bg-[#FF7A1A] opacity-[0.07] blur-[130px]" />
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] rounded-full bg-[#3b82f6] opacity-[0.03] blur-[160px]" />
-      </div>
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[900px]"
+        style={{
+          background:
+            "radial-gradient(60% 46% at 12% 4%, rgba(147,197,253,.75), transparent 70%), radial-gradient(52% 40% at 96% 14%, rgba(249,115,22,.13), transparent 70%), radial-gradient(70% 50% at 50% 62%, rgba(37,99,235,.1), transparent 72%), linear-gradient(#fff, #f8fafc)",
+        }}
+      />
 
-      <div className="relative z-10 w-full max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* ── 1. Header Titles & Subtitles ── */}
-        <div className="text-center max-w-3xl mx-auto mb-6 md:mb-10">
-          <div className="hidden md:flex justify-center mb-3.5">
-            <Eyebrow uppercase={true}>
-              {t("portalStart.startHere")}
-            </Eyebrow>
-          </div>
-          <h1 className="text-[34px] sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-foreground tracking-tight leading-[1.1] mb-3 md:mb-4">
-            {t("portalStart.titleA")} <span className="text-primary">{t("portalStart.titleB")}</span>
-          </h1>
-          <p className="text-[15px] md:hidden text-foreground/65 leading-relaxed max-w-xs mx-auto">
-            {t("portalStart.subMobile")}
-          </p>
-          <p className="hidden md:block text-lg text-foreground/75 font-normal leading-relaxed max-w-2xl mx-auto">
-            {t("portalStart.subDesktop")}
-          </p>
-        </div>
+      <div className="mx-auto flex w-full max-w-[1100px] flex-1 flex-col items-center px-4 pb-4 pt-1 text-center sm:px-7 md:pb-10">
+        {/* Mascot: height follows the viewport; page scrolls on very short screens */}
+        <HeroMascot
+          sceneIndex={phraseIndex}
+          isListening={isFocused}
+          isTyping={isTyping}
+          isReducedMotion={isReducedMotion}
+          className="h-[clamp(72px,calc(100svh-600px),min(300px,calc((100vw-32px)*0.5625)))] w-auto max-w-full shrink-0 md:h-[clamp(120px,24svh,280px)]"
+        />
 
-        {/* ── 2. The 4 Mode Cards ── */}
-        {/* Mobile: compact pill selector */}
-        <div
-          role="tablist"
-          aria-label={t("portalStart.modeLabel")}
-          className="md:hidden mb-3 grid grid-cols-2 gap-2"
+        <h1 className="mt-0 text-balance text-[clamp(25px,min(8vw,5.8svh),52px)] font-extrabold leading-[1.08] tracking-[-0.03em] text-[#0f172a] md:text-[clamp(34px,5vw,54px)]">
+          {t("portalStart.titleA")}{" "}
+          <em className="whitespace-nowrap not-italic text-[#f97316]">
+            {t("portalStart.titleB")}
+          </em>
+        </h1>
+
+        <p
+          aria-hidden="true"
+          className="mt-0.5 flex h-[26px] items-center justify-center whitespace-nowrap text-[clamp(16px,2.5svh,22px)] font-medium text-[#2563eb] md:mt-2 md:h-9 md:text-2xl"
         >
-          {modes.map((m) => {
-            const Icon = m.icon;
-            const isActive = selectedModeKey === m.key;
-            return (
-              <button
-                key={m.key}
-                type="button"
-                role="tab"
-                aria-selected={isActive}
-                onClick={() => {
-                  setSelectedModeKey(m.key);
-                  clearError("prompt");
-                }}
-                className={[
-                  "inline-flex items-center justify-center gap-1.5 rounded-xl border px-3 py-3 text-[13px] font-semibold transition-all duration-200 active:scale-95",
-                  isActive
-                    ? "bg-foreground text-background border-foreground shadow-md"
-                    : "bg-white/90 text-foreground/70 border-border",
-                ].join(" ")}
-              >
-                <Icon className="w-3.5 h-3.5" />
-                {m.title}
-              </button>
-            );
-          })}
-        </div>
+          <span>{typedText}</span>
+          <span className="hero-motion ml-[3px] h-[18px] w-0.5 bg-[#f97316] animate-[hero-caret-blink_1s_steps(1)_infinite] md:h-[26px]" />
+        </p>
+        <p className="sr-only">{t("portalStart.subMobile")}</p>
 
-        <div className="hidden md:grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mb-5">
-          {modes.map((m) => {
-            const Icon = m.icon;
-            const isActive = selectedModeKey === m.key;
-            return (
-              <button
-                key={m.key}
-                type="button"
-                onClick={() => {
-                  setSelectedModeKey(m.key);
-                  clearError("prompt");
-                }}
-                className={[
-                  "group relative text-left p-5 sm:p-6 rounded-2xl border transition-all duration-200 cursor-pointer",
-                  "focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40",
-                  isActive
-                    ? "bg-white border-primary shadow-lg shadow-primary/10 ring-2 ring-primary/20 scale-[1.01]"
-                    : "bg-white/95 border-border hover:border-primary/40 hover:shadow-md shadow-xs",
-                ].join(" ")}
-              >
-                {/* Active Indicator Dot */}
-                {isActive && (
-                  <span className="absolute top-4 right-4 flex h-2.5 w-2.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary" />
-                  </span>
-                )}
-
-                {/* Card Icon */}
-                <div
-                  className={[
-                    "flex items-center justify-center w-10 h-10 rounded-xl mb-3.5 transition-colors duration-200",
-                    isActive
-                      ? "bg-primary/15 text-primary"
-                      : "bg-muted text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary",
-                  ].join(" ")}
-                >
-                  <Icon className="w-5 h-5" />
-                </div>
-
-                {/* Eyebrow */}
-                <p
-                  className={[
-                    "text-[10px] sm:text-[11px] font-bold tracking-wider uppercase mb-1.5 transition-colors duration-200",
-                    isActive ? "text-primary" : "text-muted-foreground",
-                  ].join(" ")}
-                >
-                  {m.eyebrow}
-                </p>
-
-                {/* Title */}
-                <h3 className="text-base sm:text-lg font-bold text-foreground leading-snug mb-2">
-                  {m.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-xs sm:text-[13px] text-foreground/65 leading-relaxed line-clamp-3">
-                  {m.description}
-                </p>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* ── 3. Active Mode Interactive Input Box (Clean Unified Textarea) ── */}
-        <div className="w-full bg-white border border-border/60 rounded-3xl md:rounded-2xl shadow-[0_8px_30px_-12px_rgba(29,99,224,0.25)] md:shadow-sm p-3 md:p-7 mb-4 md:mb-5">
-          <div>
-            <div className="hidden md:flex items-center justify-between mb-2">
-              <label className="text-sm font-semibold text-foreground">
-                {currentMode.prompt_label} <span className="text-rose-500 font-bold">*</span>
-              </label>
-              <span className="text-xs text-foreground/45">
-                {projectPrompt.length} / 4000
-              </span>
-            </div>
-
+        <div className="w-full max-w-[680px] md:max-w-[760px]">
+          {/* Idea box */}
+          <div
+            onAnimationEnd={() => setIsShaking(false)}
+            className={[
+              "mt-2 rounded-2xl border-[1.5px] bg-white text-left shadow-[0_10px_15px_-3px_rgba(0,0,0,.08),0_4px_6px_-4px_rgba(0,0,0,.05)] transition-[border-color,box-shadow] duration-200 md:mt-3",
+              "focus-within:border-[#2563eb] focus-within:shadow-[0_0_0_3px_rgba(37,99,235,.15),0_10px_15px_-3px_rgba(0,0,0,.08)]",
+              promptError ? "border-rose-400" : "border-slate-200",
+              isShaking ? "hero-motion animate-[hero-shake_.35s]" : "",
+            ].join(" ")}
+          >
             <textarea
+              id="portal-idea"
               value={projectPrompt}
-              maxLength={4000}
-              onChange={(e) => {
-                setProjectPrompt(e.target.value);
-                clearError("prompt");
+              maxLength={PROMPT_MAX_LENGTH}
+              onChange={handlePromptChange}
+              onFocus={() => setIsFocused(true)}
+              onBlur={() => setIsFocused(false)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
+                  e.preventDefault();
+                  handleAction("send");
+                }
               }}
-              rows={4}
+              rows={2}
               aria-label={currentMode.prompt_label}
+              aria-invalid={Boolean(promptError)}
               placeholder={currentMode.placeholder}
-              className={[
-                "w-full text-base text-foreground placeholder:text-foreground/35 rounded-2xl md:rounded-xl p-3.5 sm:p-4 resize-none outline-none leading-relaxed transition-all",
-                errors.prompt
-                  ? "bg-rose-50/50 border-2 border-rose-400 focus:ring-2 focus:ring-rose-200"
-                  : "bg-muted/20 border border-border/80 focus:border-primary focus:ring-2 focus:ring-primary/20",
-              ].join(" ")}
+              className="block w-full resize-none rounded-2xl bg-transparent px-4 pb-1 pt-2.5 text-[14px] leading-snug md:text-base text-[#0f172a] outline-none placeholder:text-slate-400 md:min-h-[72px] md:pt-3"
             />
-
-            {/* Validation Message matching ContactForm */}
-            <InputError error={errors.prompt} />
-          </div>
-
-          {/* Subtle dynamic hint message */}
-          {projectPrompt.trim().length > 5 && (
-            <div className="hidden md:flex mt-4 pt-3.5 border-t border-border/60 flex items-center gap-2 text-xs sm:text-sm font-medium text-primary">
-              <Sparkles className="w-3.5 h-3.5 shrink-0" />
-              <span>{currentMode.preparing_message}</span>
+            <div className="flex items-center px-2 pb-2 pt-1">
+              <button
+                type="button"
+                disabled={isLoading}
+                onClick={() => handleAction("send")}
+                className="ml-auto inline-flex h-9 items-center gap-1.5 whitespace-nowrap rounded-xl bg-[#2563eb] pl-3.5 pr-3 text-[13px] font-semibold md:h-11 md:pl-4 md:pr-3.5 md:text-[15px] text-white transition-[background-color,transform] duration-200 hover:bg-[#1d4ed8] active:scale-[0.97] disabled:cursor-wait disabled:opacity-60 md:px-5"
+              >
+                {loadingAction === "send" ? (
+                  <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+                ) : null}
+                {t("portalStart.send")}
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </button>
             </div>
-          )}
-        </div>
-
-        {/* ── 4. Action CTAs (Consistent rounded-full buttons matching the site) ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3.5 w-full max-w-[460px] mx-auto">
-          <Button
-            size="lg"
-            disabled={loading}
-            onClick={() => handleOpenAuthModal("signup")}
-            className="w-full h-12 md:h-auto"
-          >
-            {loading && <Loader2 className="w-4 h-4 animate-spin mr-2" />}
-            {t("portalStart.signup")}
-          </Button>
-
-          <Button
-            variant="outline"
-            size="lg"
-            disabled={loading}
-            onClick={() => handleOpenAuthModal("signin")}
-            className="hidden md:inline-flex w-full"
-          >
-            {t("portalStart.haveAccount")}
-          </Button>
-          <button
-            type="button"
-            disabled={loading}
-            onClick={() => handleOpenAuthModal("signin")}
-            className="md:hidden py-2 text-sm text-foreground/60"
-          >
-            {t("portalStart.haveAccountShort")}{" "}
-            <span className="font-semibold text-primary">{t("portalStart.signIn")}</span>
-          </button>
-        </div>
-
-        {/* ── 5. Native apps ── */}
-        <div className="mt-5 md:mt-10 flex flex-col items-center gap-4 w-full max-w-[460px] mx-auto">
-          <div className="flex items-center gap-4 w-full" aria-hidden="true">
-            <span className="h-px flex-1 bg-gradient-to-r from-transparent to-border" />
-            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              {t("portalStart.installApp")}
-            </span>
-            <span className="h-px flex-1 bg-gradient-to-l from-transparent to-border" />
+            {promptError && (
+              <p role="alert" className="px-4 pb-2.5 text-[13px] text-[#b84e00]">
+                {promptError}
+              </p>
+            )}
           </div>
-          <StoreButtons variant="blue" />
+
+          <PortalModes
+            modes={modes}
+            selectedKey={selectedModeKey}
+            onSelect={handleSelectMode}
+            label={t("portalStart.modeLabel")}
+          />
+
+          {/* Below the chatbox: sign-in, cost, proof, legal */}
+          <div className="mt-3 flex flex-col items-center gap-2 md:mt-5 md:gap-3">
+            <Button
+              variant="outline"
+              size="lg"
+              disabled={isLoading}
+              onClick={() => handleAction("signin")}
+            >
+              {t("portalStart.haveAccount")}
+            </Button>
+            <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[13px] font-medium text-[#0f172a] md:text-sm">
+              {["perk", "noCard"].map((key) => (
+                <span key={key} className="inline-flex items-center gap-1.5">
+                  <Check className="h-4 w-4 text-[#0B4BD6]" strokeWidth={2.6} aria-hidden="true" />
+                  {t(`portalStart.${key}`)}
+                </span>
+              ))}
+            </p>
+            <p className="max-w-[520px] text-[13px] leading-snug text-slate-600">
+              {t("portalStart.proofPre")} <b className="font-bold text-[#0f172a]">EY</b>,{" "}
+              <b className="font-bold text-[#0f172a]">YogiFi</b> {t("portalStart.proofAnd")}{" "}
+              <b className="font-bold text-[#0f172a]">Insignian Homes</b> {t("portalStart.proofPost")}{" "}
+              <Link
+                href={localizeHref(language, "/customers/")}
+                className="whitespace-nowrap font-semibold text-[#2563eb] hover:underline"
+              >
+                {t("portalStart.proofLink")} &rarr;
+              </Link>
+            </p>
+            <p className="text-xs leading-snug text-slate-500">
+              {t("portalStart.finePre")}{" "}
+              <Link href={localizeHref(language, "/terms-and-conditions/")} className="underline">
+                {t("portalStart.terms")}
+              </Link>{" "}
+              {t("portalStart.finePost")}{" "}
+              <Link href={localizeHref(language, "/privacy-policy/")} className="underline">
+                {t("portalStart.privacy")}
+              </Link>
+              .
+            </p>
+          </div>
         </div>
       </div>
     </section>
