@@ -17,9 +17,7 @@ import {
   Code2,
   ShieldCheck,
   Zap,
-  ArrowRight,
   Check,
-  Loader2,
 } from "lucide-react";
 
 // 4 modes; copy lives in dictionaries (portalStart.modes.*)
@@ -226,22 +224,8 @@ export default function PortalStartSection() {
               aria-label={currentMode.prompt_label}
               aria-invalid={Boolean(promptError)}
               placeholder={currentMode.placeholder}
-              className="block w-full resize-none rounded-2xl bg-transparent px-4 pb-1 pt-2.5 text-[14px] leading-snug md:text-base text-[#0f172a] outline-none placeholder:text-slate-400 md:min-h-[72px] md:pt-3"
+              className="block w-full resize-none rounded-2xl bg-transparent min-h-[96px] px-4 pb-2.5 pt-3 text-base leading-snug text-[#0f172a] outline-none placeholder:text-slate-400 md:min-h-[72px]"
             />
-            <div className="flex items-center px-2 pb-2 pt-1">
-              <button
-                type="button"
-                disabled={isLoading}
-                onClick={() => handleAction("send")}
-                className="ml-auto inline-flex h-9 items-center gap-1.5 whitespace-nowrap rounded-xl bg-[#2563eb] pl-3.5 pr-3 text-[13px] font-semibold md:h-11 md:pl-4 md:pr-3.5 md:text-[15px] text-white transition-[background-color,transform] duration-200 hover:bg-[#1d4ed8] active:scale-[0.97] disabled:cursor-wait disabled:opacity-60 md:px-5"
-              >
-                {loadingAction === "send" ? (
-                  <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
-                ) : null}
-                {t("portalStart.send")}
-                <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </button>
-            </div>
             {promptError && (
               <p role="alert" className="px-4 pb-2.5 text-[13px] text-[#b84e00]">
                 {promptError}
