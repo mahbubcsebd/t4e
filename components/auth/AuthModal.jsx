@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { useLanguage } from "@/context/LanguageContext";
 import { PORTAL_CONFIG, callPortalApi } from "@/lib/portalApi";
+import { buildGoogleAuthUrl } from "@/lib/googleAuthUrl";
 import {
   ArrowLeft,
   ArrowRight,
@@ -23,8 +24,11 @@ import {
   ChevronDown,
 } from "lucide-react";
 
+// Seconds before the OTP "send a new code" button re-enables (matches the reference site).
+const RESEND_COOLDOWN_SECONDS = 30;
+
 // Google Branded SVG
-function GoogleIcon({ className = "w-4 h-4" }) {
+export function GoogleIcon({ className = "w-4 h-4" }) {
   return (
     <svg className={className} viewBox="0 0 24 24">
       <path
@@ -138,23 +142,13 @@ export default function AuthModal({
   };
 
   // Google Auth URL compliant with Section 8 of Think4Ever Landing API documentation
-  const getGoogleAuthUrl = () => {
-    const p = new URLSearchParams({ login: "google" });
-    if (modalData?.intentToken) {
-      p.set("intent", modalData.intentToken);
-    } else {
-      if (modalData?.mode?.key) p.set("mode", modalData.mode.key);
-      if (modalData?.prompt?.trim()) p.set("prompt", modalData.prompt.trim());
-    }
-
-    Object.keys(pageParams).forEach((k) => {
-      const paramKey =
-        k === "ref_key" ? "ref" : k === "invite_token" ? "inv" : k;
-      p.set(paramKey, pageParams[k]);
+  const getGoogleAuthUrl = () =>
+    buildGoogleAuthUrl({
+      intentToken: modalData?.intentToken,
+      modeKey: modalData?.mode?.key,
+      prompt: modalData?.prompt,
+      pageParams,
     });
-
-    return `${PORTAL_CONFIG.PORTAL}/?${p.toString()}`;
-  };
 
   // Sign Up Submit
   const handleSignUpSubmit = async (e) => {
@@ -166,7 +160,7 @@ export default function AuthModal({
     if (!emailVal) {
       newErrors.suEmail = "Email is required.";
     } else {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
       if (!emailRegex.test(emailVal)) {
         newErrors.suEmail = "Please enter a valid email address.";
       }
@@ -199,7 +193,7 @@ export default function AuthModal({
       if (res.data?.code_required || res.status === 201 || res.status === 200) {
         setCodeEmail(emailVal);
         setCodeKind("signup");
-        setResendCooldown(45);
+        setResendCooldown(RESEND_COOLDOWN_SECONDS);
         setOtp("");
         setServerError("");
         setErrors({});
@@ -233,7 +227,7 @@ export default function AuthModal({
       setErrors(newErrors);
       return;
     }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     if (!emailRegex.test(emailVal)) {
       newErrors.siEmail = "Please enter a valid email address.";
       setErrors(newErrors);
@@ -254,7 +248,7 @@ export default function AuthModal({
       setCodeEmail(emailVal);
       // If requiresVerification: true, user never finished signup code step
       setCodeKind(res.data?.requiresVerification ? "signup" : "login");
-      setResendCooldown(45);
+      setResendCooldown(RESEND_COOLDOWN_SECONDS);
       setOtp("");
       setServerError("");
       setErrors({});
@@ -276,7 +270,7 @@ export default function AuthModal({
     if (!emailVal) {
       newErrors.siEmail = "Email is required.";
     } else {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
       if (!emailRegex.test(emailVal)) {
         newErrors.siEmail = "Please enter a valid email address.";
       }
@@ -315,7 +309,7 @@ export default function AuthModal({
       // Account never finished sign-up verification
       setCodeEmail(emailVal);
       setCodeKind("signup");
-      setResendCooldown(45);
+      setResendCooldown(RESEND_COOLDOWN_SECONDS);
       setOtp("");
       setServerError("");
       setErrors({});
@@ -388,7 +382,7 @@ export default function AuthModal({
     setLoading(false);
 
     if (res.ok) {
-      setResendCooldown(45);
+      setResendCooldown(RESEND_COOLDOWN_SECONDS);
       setOtp("");
     } else {
       setServerError(

@@ -270,3 +270,34 @@ mark {
     max-width: 100vw;
   }
 }
+
+/* ── Home hero (PortalStartSection) animations ── */
+@keyframes hero-mascot-listen {
+  50% {
+    transform: translateY(-4px) scale(0.82);
+  }
+}
+@keyframes hero-caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes hero-shake {
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-motion {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+  }
+}
