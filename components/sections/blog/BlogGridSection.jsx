@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Search, BookOpen, Layers, Sparkles } from "lucide-react";
 import SectionCard from "@/components/layout/SectionCard";

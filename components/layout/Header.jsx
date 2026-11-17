@@ -493,7 +493,7 @@ export default function Header() {
               }`}
             >
               {resourcesLinks.map((res, idx) => (
-                <Link
+                <a
                   key={idx}
                   href={res.href}
                   className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-muted group/item transition-colors"
@@ -509,7 +509,7 @@ export default function Header() {
                       {res.desc}
                     </p>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -912,13 +912,13 @@ export default function Header() {
                       >
                         Customer stories
                       </Link>
-                      <Link
+                      <a
                         href={localizeHref('/blog/')}
                         onClick={() => setMobileMenuOpen(false)}
                         className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
                       >
                         {t('nav.blog')}
-                      </Link>
+                      </a>
                       <Link
                         href={localizeHref('/faq/')}
                         onClick={() => setMobileMenuOpen(false)}

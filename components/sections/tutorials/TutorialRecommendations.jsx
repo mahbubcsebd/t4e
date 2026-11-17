@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 
 export const TutorialRecommendations = ({ tutorials, currentTutorialId }) => {
