@@ -3,7 +3,6 @@
 import SectionHeading from "@/components/layout/SectionHeading";
 import SectionCard from "@/components/layout/SectionCard";
 import { Code, GitFork, ShieldCheck } from "lucide-react";
-import Link from "next/link";
 import { useEffect } from "react";
 
 const steps = [
@@ -105,9 +104,9 @@ export default function ReviewedHandoffSection() {
 
               if (step.highlighted) {
                 return (
-                  <Link key={idx} href={step.href} className={cardClass}>
+                  <a key={idx} href={step.href} className={cardClass}>
                     {inner}
-                  </Link>
+                  </a>
                 );
               }
 

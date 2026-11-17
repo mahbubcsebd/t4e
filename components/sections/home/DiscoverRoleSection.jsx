@@ -70,13 +70,13 @@ function CoverTile({ t, guideHref }) {
               aria-hidden="true"
             />
           </a>
-          <Link
+          <a
             href={guideHref}
             className="inline-flex w-max max-w-full items-center gap-1.5 text-sm font-medium text-[#d6e3ff] hover:text-white hover:underline underline-offset-4"
           >
             {t('discoverRole.guideLink')}
             <ArrowRight className="w-4 h-4" aria-hidden="true" />
-          </Link>
+          </a>
         </div>
       </div>
 

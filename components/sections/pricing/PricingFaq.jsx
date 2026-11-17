@@ -27,12 +27,12 @@ export default function PricingFaq() {
     return (
       <>
         {parts[0]}
-        <Link
+        <a
           href={localizeHref("/tutorials/how-to-design-in-think/")}
           className="text-primary font-semibold hover:underline"
         >
           {linkText}
-        </Link>
+        </a>
         {parts.slice(1).join("")}
       </>
     );
