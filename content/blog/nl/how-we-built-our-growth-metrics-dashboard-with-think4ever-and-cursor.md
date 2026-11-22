@@ -4,7 +4,7 @@ description: "Ontwerp het systeem in think4ever, geef een bouwbrief aan Cursor e
 date: "17 november 2026"
 readTime: "8 min leestijd"
 category: "Product"
-author: "Think4Ever"
+author: "Sunil Kishen"
 image: "/images/blog/how-we-built-our-growth-metrics-dashboard-with-think4ever-and-cursor/how-we-built-our-growth-metrics-dashboard-with-think4ever-and-cursor-1.jpg"
 hideThumbnail: true
 ---

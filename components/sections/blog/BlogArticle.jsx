@@ -7,9 +7,11 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import Link from "next/link";
+import { resolveAuthor } from "@/lib/authors";
 
 export const BlogArticle = ({ post, currentLang }) => {
   const [zoomedImgSrc, setZoomedImgSrc] = useState(null);
+  const author = resolveAuthor(post.author);
 
   // Dynamically query all images rendered via ReactMarkdown
   useEffect(() => {
@@ -60,6 +62,15 @@ export const BlogArticle = ({ post, currentLang }) => {
 
           {/* Meta */}
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-8 gap-y-4 text-[13px] text-muted-foreground font-medium">
+            {author && (
+              <a
+                href={`/author/${author.slug}/`}
+                rel="author"
+                className="text-[#1D63E0] font-bold underline-offset-4 decoration-2 decoration-[#1D63E0]/30 transition-colors hover:text-[#FF7A1A] hover:underline hover:decoration-[#FF7A1A]"
+              >
+                {author.name}
+              </a>
+            )}
             <div className="flex items-center gap-2">
               <span>{post.date}</span>
               <span className="w-1.5 h-1.5 rounded-full bg-border" />

@@ -4,7 +4,7 @@ description: "Outsource a single task or an entire project inside Think4Ever. Th
 date: "November 10, 2026"
 readTime: "7 min read"
 category: "Product"
-author: "Think4Ever"
+author: "Sunil Kishen"
 image: "/images/blog/think4ever-marketplace-thumbnail.jpg"
 ---
 

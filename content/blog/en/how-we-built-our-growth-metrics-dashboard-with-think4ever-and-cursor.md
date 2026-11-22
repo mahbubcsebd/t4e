@@ -4,7 +4,7 @@ description: "Design the system in think4ever, hand a build brief to Cursor and 
 date: "November 17, 2026"
 readTime: "8 min read"
 category: "Product"
-author: "Think4Ever"
+author: "Sunil Kishen"
 image: "/images/blog/how-we-built-our-growth-metrics-dashboard-with-think4ever-and-cursor/how-we-built-our-growth-metrics-dashboard-with-think4ever-and-cursor-1.jpg"
 hideThumbnail: true
 ---

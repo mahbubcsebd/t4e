@@ -4,7 +4,7 @@ description: "Aprenda cómo los mapas de estructura, gráficos de dependencias, 
 date: "26 de agosto de 2026"
 readTime: "12 min de lectura"
 category: "Ingeniería y arquitectura"
-author: "Think4Ever"
+author: "Sunil Kishen"
 image: "/images/blog/white-paper-think-design-thumbnail.jpg"
 hideThumbnail: true
 ---

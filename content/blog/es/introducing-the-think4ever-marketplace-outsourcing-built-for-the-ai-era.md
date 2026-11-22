@@ -4,7 +4,7 @@ description: "Externaliza una sola tarea o un proyecto completo dentro de Think4
 date: "10 de noviembre de 2026"
 readTime: "7 min de lectura"
 category: "Producto"
-author: "Think4Ever"
+author: "Sunil Kishen"
 image: "/images/blog/think4ever-marketplace-thumbnail.jpg"
 ---
 
