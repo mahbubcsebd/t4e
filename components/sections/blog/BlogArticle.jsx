@@ -66,7 +66,7 @@ export const BlogArticle = ({ post, currentLang }) => {
               <a
                 href={`/author/${author.slug}/`}
                 rel="author"
-                className="text-foreground font-bold hover:underline"
+                className="text-[#1D63E0] font-bold underline-offset-4 decoration-2 decoration-[#1D63E0]/30 transition-colors hover:text-[#FF7A1A] hover:underline hover:decoration-[#FF7A1A]"
               >
                 {author.name}
               </a>
