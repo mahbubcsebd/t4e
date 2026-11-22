@@ -7,6 +7,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
+import JsonLd from "@/components/JsonLd";
+import { buildArticleLd, toIsoDate } from "@/lib/jsonLd";
 
 export async function generateMetadata(props) {
   const params = await props.params;
@@ -61,6 +63,14 @@ export default async function TutorialDetailPage(props) {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <JsonLd
+        data={buildArticleLd({
+          post: { ...tutorial, lang: "en" },
+          url: `https://think4ever.com/tutorials/${slug}/`,
+          datePublished: toIsoDate(tutorial.date),
+          type: "TechArticle",
+        })}
+      />
       <Header />
       <main className="flex-grow bg-background py-8 md:py-12 relative z-10">
         <SectionCard>

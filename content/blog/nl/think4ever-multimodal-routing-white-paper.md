@@ -4,7 +4,7 @@ description: "Deze whitepaper schetst de economische en technische voordelen van
 date: "10 augustus 2026"
 readTime: "8 min leestijd"
 category: "Whitepaper"
-author: "Think4Ever"
+author: "Sunil Kishen"
 image: "/images/blog/white-paper-think-design-thumbnail.jpg"
 hideThumbnail: true
 ---

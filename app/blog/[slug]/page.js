@@ -7,6 +7,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
+import JsonLd from "@/components/JsonLd";
+import { buildArticleLd, toIsoDate } from "@/lib/jsonLd";
 
 export const dynamicParams = false;
 
@@ -63,8 +65,21 @@ export default async function BlogDetailPage(props) {
     notFound();
   }
 
+  const canonicalUrl = `https://think4ever.com/blog/${post.canonicalSlug || slug}/`;
+  const imageUrl = post.image
+    ? post.image.startsWith("http") ? post.image : `https://think4ever.com${post.image}`
+    : undefined;
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <JsonLd
+        data={buildArticleLd({
+          post,
+          url: canonicalUrl,
+          datePublished: toIsoDate(post.date),
+          image: imageUrl,
+        })}
+      />
       <Header />
       <main className="flex-grow bg-background py-8 md:py-12 relative z-10">
         <SectionCard>

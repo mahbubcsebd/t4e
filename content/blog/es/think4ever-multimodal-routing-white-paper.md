@@ -4,7 +4,7 @@ description: "Este documento técnico describe las ventajas económicas y técni
 date: "10 de agosto de 2026"
 readTime: "8 min de lectura"
 category: "Libro blanco"
-author: "Think4Ever"
+author: "Sunil Kishen"
 image: "/images/blog/white-paper-think-design-thumbnail.jpg"
 hideThumbnail: true
 ---

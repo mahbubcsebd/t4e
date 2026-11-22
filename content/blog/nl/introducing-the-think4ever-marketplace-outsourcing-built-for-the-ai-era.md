@@ -4,7 +4,7 @@ description: "Besteed één taak of een heel project uit binnen Think4Ever. Thin
 date: "10 november 2026"
 readTime: "7 min leestijd"
 category: "Product"
-author: "Think4Ever"
+author: "Sunil Kishen"
 image: "/images/blog/think4ever-marketplace-thumbnail.jpg"
 ---
 

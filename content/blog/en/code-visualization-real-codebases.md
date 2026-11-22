@@ -4,7 +4,7 @@ description: "Learn how structure maps, dependency graphs, runtime traces and ar
 date: "August 26, 2026"
 readTime: "12 min read"
 category: "Engineering & architecture"
-author: "Think4Ever"
+author: "Sunil Kishen"
 image: "/images/blog/white-paper-think-design-thumbnail.jpg"
 hideThumbnail: true
 ---

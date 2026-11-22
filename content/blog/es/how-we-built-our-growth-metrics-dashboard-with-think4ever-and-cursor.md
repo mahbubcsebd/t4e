@@ -4,7 +4,7 @@ description: "Dise√±e el sistema en think4ever, entregue un brief de construcci√
 date: "17 de noviembre de 2026"
 readTime: "8 min de lectura"
 category: "Producto"
-author: "Think4Ever"
+author: "Sunil Kishen"
 image: "/images/blog/how-we-built-our-growth-metrics-dashboard-with-think4ever-and-cursor/how-we-built-our-growth-metrics-dashboard-with-think4ever-and-cursor-1.jpg"
 hideThumbnail: true
 ---
