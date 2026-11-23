@@ -19,7 +19,8 @@ Next.js 16.3.1 (App Router), React 19, JavaScript (jsconfig), Tailwind v4, shadc
 
 ## Conventions
 - Read node_modules/next/dist/docs before using Next APIs.
-- Copy lives in dictionaries (EN/ES) — update both.
+- Copy lives in dictionaries (EN/ES/NL) — update all.
+- What's new page content lives in content/whats-new/{en,es,nl}.json (add new month at top of `months` in all three).
 
 @AGENTS.md
 

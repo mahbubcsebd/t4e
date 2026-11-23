@@ -16,6 +16,7 @@ import {
   Play,
   Puzzle,
   Rocket,
+  ScanSearch,
   Settings,
   Shield,
   Store,
@@ -131,6 +132,12 @@ export default function Header() {
       icon: <Globe className="w-4 h-4 text-foreground" />,
     },
     {
+      title: t('nav.whatsNew', "What's new"),
+      desc: t('nav.whatsNewDesc', 'Every new feature, month by month.'),
+      href: localizeHref('/whats-new/'),
+      icon: <Rocket className="w-4 h-4 text-foreground" />,
+    },
+    {
       title: t('nav.faq', 'FAQ'),
       desc: t('nav.faqDesc', 'Frequently asked questions.'),
       href: localizeHref('/faq'),
@@ -194,10 +201,13 @@ export default function Header() {
       icon: <Settings className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t('nav.docsMenu.apiTitle', 'Think API'),
-      desc: t('nav.docsMenu.apiDesc', '10 - Programmatically manage tokens.'),
-      href: 'https://think4ever.com/docs/think_api',
-      icon: <Terminal className="w-4 h-4 text-foreground" />,
+      title: t('nav.docsMenu.gapAnalysisTitle', 'Gap Analysis'),
+      desc: t(
+        'nav.docsMenu.gapAnalysisDesc',
+        '10 - See what is built and what is missing.',
+      ),
+      href: 'https://think4ever.com/docs/gap_analysis/',
+      icon: <ScanSearch className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.docsMenu.productionHardeningTitle', 'Production Hardening'),
@@ -209,10 +219,10 @@ export default function Header() {
       icon: <Shield className="w-4 h-4 text-foreground" />,
     },
     {
-      title: t('nav.docsMenu.portalTitle', 'Think4ever Portal'),
-      desc: t('nav.docsMenu.portalDesc', '11 - Manage your team dashboard'),
-      href: 'https://think4ever.com/docs/portal/dashboard',
-      icon: <Users className="w-4 h-4 text-foreground" />,
+      title: t('nav.docsMenu.apiTitle', 'Think API'),
+      desc: t('nav.docsMenu.apiDesc', '11 - Programmatically manage tokens.'),
+      href: 'https://think4ever.com/docs/think_api',
+      icon: <Terminal className="w-4 h-4 text-foreground" />,
     },
     {
       title: t('nav.docsMenu.marketplaceTitle', 'Marketplace'),
@@ -224,8 +234,14 @@ export default function Header() {
       icon: <Store className="w-4 h-4 text-foreground" />,
     },
     {
+      title: t('nav.docsMenu.portalTitle', 'Think4ever Portal'),
+      desc: t('nav.docsMenu.portalDesc', '12 - Manage your team dashboard'),
+      href: 'https://think4ever.com/docs/portal/dashboard',
+      icon: <Users className="w-4 h-4 text-foreground" />,
+    },
+    {
       title: t('nav.docsMenu.vscodeTitle', 'VS Code Plugin'),
-      desc: t('nav.docsMenu.vscodeDesc', '12 - Access T4E inside VS Code.'),
+      desc: t('nav.docsMenu.vscodeDesc', '13 - Access T4E inside VS Code.'),
       href: 'https://think4ever.com/docs/dev/vs_code_integration',
       icon: <Code className="w-4 h-4 text-foreground" />,
     },
@@ -919,6 +935,13 @@ export default function Header() {
                       >
                         {t('nav.blog')}
                       </a>
+                      <Link
+                        href={localizeHref('/whats-new/')}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        {t('nav.whatsNew', "What's new")}
+                      </Link>
                       <Link
                         href={localizeHref('/faq/')}
                         onClick={() => setMobileMenuOpen(false)}

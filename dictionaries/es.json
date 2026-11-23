@@ -114,15 +114,17 @@
       "reverseEngTitle": "Ingeniería Inversa de Proyecto",
       "reverseEngDesc": "4 - Importe su base de código.",
       "apiTitle": "Think API",
-      "apiDesc": "10 - Administre tokens programáticamente.",
+      "apiDesc": "11 - Administre tokens programáticamente.",
       "productionHardeningTitle": "Endurecimiento de Producción",
       "productionHardeningDesc": "5 - Evalúe la preparación de su proyecto.",
       "portalTitle": "Think4ever Portal",
-      "portalDesc": "11 - Administre el panel de equipo",
+      "portalDesc": "12 - Administre el panel de equipo",
       "marketplaceTitle": "Mercado",
       "marketplaceDesc": "6 - Encuentre freelancers o contrate.",
       "vscodeTitle": "Plugin VS Code",
-      "vscodeDesc": "12 - Acceda a T4E desde VS Code."
+      "vscodeDesc": "13 - Acceda a T4E desde VS Code.",
+      "gapAnalysisTitle": "Análisis de brechas",
+      "gapAnalysisDesc": "10 - Vea qué está construido y qué falta."
     },
     "tutorialsMenu": {
       "title": "Tutoriales",
@@ -157,7 +159,9 @@
     },
     "productVideos": "Videos de productos",
     "whitePapers": "Libros blancos y guías",
-    "apps": "Aplicaciones"
+    "apps": "Aplicaciones",
+    "whatsNew": "Novedades",
+    "whatsNewDesc": "Cada novedad, mes a mes."
   },
   "hero": {
     "eyebrow": "El código heredado o el código generado por IA crea puntos ciegos que nadie puede ver.",
@@ -1767,5 +1771,42 @@
     },
     "cta": "Empezar gratis",
     "note": "Plan gratuito con 500 créditos. Sin tarjeta de crédito."
+  },
+  "whatsNewPage": {
+    "metaTitle": "Novedades de think4ever | Think4Ever",
+    "metaDesc": "Todo lo que think4ever ha aprendido desde septiembre de 2025, mes a mes: 177 funciones nuevas para planificar, diseñar, crear y compartir software con IA.",
+    "eyebrow": "Septiembre 2025 – Noviembre 2026",
+    "titleLine1": "Novedades",
+    "titleLine2Prefix": "en ",
+    "lead": "¿Ya probaste think4ever? Esto es todo lo que ha aprendido desde entonces, mes a mes y en palabras sencillas.",
+    "seeLatest": "Ver lo último",
+    "downloadPdf": "Descargar en PDF",
+    "chartAria": "Funciones nuevas por mes",
+    "chartHint": "Cada barra es un mes. Su altura es el número de cosas nuevas que puedes hacer. Haz clic en una barra para ir a ese mes.",
+    "chartTotal": "{total} novedades en {months} meses",
+    "newLabel": "nuevas",
+    "searchLabel": "Buscar funciones",
+    "searchPlaceholder": "Busca funciones, p. ej. Jira, temas, Cursor",
+    "jumpLabel": "Ir al mes",
+    "filterAria": "Filtrar por área",
+    "filterAll": "Todo",
+    "alsoNew": "También nuevo",
+    "emptyText": "Nada coincide con esa búsqueda. Prueba otra palabra o",
+    "showEverything": "muestra todo",
+    "categories": {
+      "Build": "Crear",
+      "Plan": "Planificar",
+      "Design": "Diseño",
+      "AI": "IA",
+      "Connect": "Conectar",
+      "Share": "Compartir",
+      "Team": "Equipo",
+      "Workspace": "Espacio de trabajo",
+      "Marketplace": "Marketplace",
+      "App": "App",
+      "Account": "Cuenta"
+    },
+    "results": "{count} resultados",
+    "clearSearch": "Borrar búsqueda"
   }
 }

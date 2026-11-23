@@ -37,15 +37,17 @@
       "reverseEngTitle": "Reverse Engineering van Project",
       "reverseEngDesc": "4 - Importeer uw bestaande codebase.",
       "apiTitle": "Think API",
-      "apiDesc": "10 - Beheer tokens programmatisch.",
+      "apiDesc": "11 - Beheer tokens programmatisch.",
       "productionHardeningTitle": "Productie Verharding",
       "productionHardeningDesc": "5 - Beoordeel de productiegereedheid.",
       "portalTitle": "Think4ever Portal",
-      "portalDesc": "11 - Beheer uw teamdashboard",
+      "portalDesc": "12 - Beheer uw teamdashboard",
       "marketplaceTitle": "Marktplaats",
       "marketplaceDesc": "6 - Vind freelancers of huur in.",
       "vscodeTitle": "VS Code Plugin",
-      "vscodeDesc": "12 - Toegang tot T4E in VS Code."
+      "vscodeDesc": "13 - Toegang tot T4E in VS Code.",
+      "gapAnalysisTitle": "Gap Analysis",
+      "gapAnalysisDesc": "10 - Zie wat is gebouwd en wat ontbreekt."
     },
     "tutorialsMenu": {
       "title": "Tutorials",
@@ -84,7 +86,9 @@
     "blogDesc": "Lees het laatste nieuws en artikelen.",
     "faq": "FAQ",
     "faqDesc": "Veelgestelde vragen.",
-    "apps": "Applicaties"
+    "apps": "Applicaties",
+    "whatsNew": "Wat is nieuw",
+    "whatsNewDesc": "Elke nieuwe functie, maand voor maand."
   },
   "hero": {
     "eyebrow": "Legacycode of door AI gegenereerde code creëert blinde vlekken die niemand kan zien.",
@@ -1144,5 +1148,42 @@
   "customersPage": {
     "metaTitle": "Klantverhalen | Think4Ever",
     "metaDesc": "Hoe adviesbureaus, oprichters, ondernemingen en beveiligingsteams Think4Ever gebruiken om te ontwerpen voordat ze bouwen."
+  },
+  "whatsNewPage": {
+    "metaTitle": "Wat is nieuw in think4ever | Think4Ever",
+    "metaDesc": "Alles wat think4ever sinds september 2025 heeft geleerd, maand voor maand: 177 nieuwe functies om software met AI te plannen, ontwerpen, bouwen en delen.",
+    "eyebrow": "September 2025 – November 2026",
+    "titleLine1": "Wat is nieuw",
+    "titleLine2Prefix": "in ",
+    "lead": "Think4ever eerder geprobeerd? Dit is alles wat het sindsdien heeft geleerd, maand voor maand, in gewone taal.",
+    "seeLatest": "Bekijk het nieuwste",
+    "downloadPdf": "Download als pdf",
+    "chartAria": "Nieuwe functies per maand",
+    "chartHint": "Elke balk is één maand. De hoogte is het aantal nieuwe dingen dat je kunt doen. Klik op een balk om naar die maand te gaan.",
+    "chartTotal": "{total} nieuwe dingen in {months} maanden",
+    "newLabel": "nieuw",
+    "searchLabel": "Functies zoeken",
+    "searchPlaceholder": "Zoek functies, bijv. Jira, thema's, Cursor",
+    "jumpLabel": "Ga naar maand",
+    "filterAria": "Filter op gebied",
+    "filterAll": "Alles",
+    "alsoNew": "Ook nieuw",
+    "emptyText": "Niets komt overeen met die zoekopdracht. Probeer een ander woord of",
+    "showEverything": "toon alles",
+    "categories": {
+      "Build": "Bouwen",
+      "Plan": "Plannen",
+      "Design": "Ontwerp",
+      "AI": "AI",
+      "Connect": "Koppelen",
+      "Share": "Delen",
+      "Team": "Team",
+      "Workspace": "Werkruimte",
+      "Marketplace": "Marketplace",
+      "App": "App",
+      "Account": "Account"
+    },
+    "results": "{count} resultaten",
+    "clearSearch": "Zoekopdracht wissen"
   }
 }

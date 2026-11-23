@@ -141,6 +141,12 @@ export default function Footer() {
                 {t('nav.blog')}
               </a>
               <Link
+                href={localizeHref('/whats-new/')}
+                className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
+              >
+                {t('nav.whatsNew', "What's new")}
+              </Link>
+              <Link
                 href={localizeHref('/faq')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
               >

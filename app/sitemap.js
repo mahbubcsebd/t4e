@@ -1,4 +1,4 @@
-import { AUTHORS, SITE_URL, authorUrl } from "@/lib/authors";
+import { SITE_URL } from "@/lib/authors";
 import { toIsoDate } from "@/lib/jsonLd";
 import { getAllPosts } from "@/lib/markdown";
 import { getAllTutorials } from "@/lib/tutorials";
@@ -18,6 +18,7 @@ const STATIC_ROUTES = [
   "integrations",
   "marketplaces",
   "resources",
+  "whats-new",
   "security",
   "faq",
   "contact-us",
@@ -52,8 +53,6 @@ export default function sitemap() {
       entries.push(entry(lang, `tutorials/${tutorial.slug}`, toIsoDate(tutorial.date)));
     }
   }
-
-  for (const author of Object.values(AUTHORS)) entries.push({ url: authorUrl(author) });
 
   return entries;
 }
