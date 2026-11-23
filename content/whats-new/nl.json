@@ -1,0 +1,1286 @@
+{
+  "links": {
+    "tasks": "Documentatie: Taken",
+    "share": "Documentatie: Bekijken & delen",
+    "skills": "Documentatie: Agent Skills",
+    "mcp": "Documentatie: Think MCP",
+    "mcpOverview": "Documentatie: MCP-installatiehandleidingen",
+    "mcpCursor": "Documentatie: Cursor",
+    "thinkp": "Documentatie: .thinkp importeren",
+    "api": "Documentatie: Think API",
+    "agentDocs": "Documentatie: Agentdocumenten",
+    "apps": "Download de apps",
+    "users": "Documentatie: Gebruikers",
+    "onboarding": "Documentatie: Aan de slag",
+    "market": "Documentatie: Marketplace",
+    "lang": "Documentatie: Talen",
+    "hard": "Documentatie: Production Hardening",
+    "analyze": "Documentatie: Reverse engineering",
+    "create": "Documentatie: Een nieuw project bouwen",
+    "reqDocs": "Documentatie: Requirementsdocumenten",
+    "quality": "Documentatie: Codekwaliteit",
+    "ui": "Documentatie: UI-ontwerp",
+    "jira": "Documentatie: Jira",
+    "theme": "Documentatie: Thema’s",
+    "sidekick": "Documentatie: Sidekick",
+    "settings": "Documentatie: Projectinstellingen",
+    "concept": "Documentatie: Concept",
+    "eco": "Documentatie: Integraties",
+    "integrations": "Alle integraties",
+    "dev": "Documentatie: Developer Mode",
+    "run": "Documentatie: De app uitvoeren",
+    "publicAccess": "Documentatie: Openbare toegang",
+    "vscode": "Documentatie: VS Code",
+    "intent": "Documentatie: Ontwerpen vanuit intentie",
+    "issues": "Documentatie: Issues",
+    "kb": "Documentatie: Kennisbank",
+    "feedback": "Documentatie: Feedback",
+    "req": "Documentatie: Requirements",
+    "keys": "Documentatie: API-sleutels",
+    "collab": "Documentatie: Samenwerking",
+    "others": "Documentatie: Wijzigingsgeschiedenis",
+    "portal": "Documentatie: Portaal",
+    "intro": "Documentatie: Designer",
+    "roles": "Documentatie: Rollen & rechten",
+    "diagrams": "Documentatie: Technische diagrammen",
+    "testing": "Documentatie: Testen",
+    "vc": "Documentatie: Versiebeheer",
+    "summary": "Documentatie: Conceptsamenvatting",
+    "funcArch": "Documentatie: Functionele architectuur",
+    "tClaude": "Tutorial: Ontwerp in Think, code in Claude",
+    "tCodex": "Tutorial: Ontwerp in Think, code in Codex",
+    "tHarden": "Tutorial: Maak vibe-coded apps klaar voor productie",
+    "tTeam": "Tutorial: Medeontwikkelaars toevoegen",
+    "tExisting": "Tutorial: Maak van bestaande code een blauwdruk",
+    "tIntent": "Tutorial: Bouw een app vanuit intentie",
+    "bCursor": "Blog: Ons dashboard, gebouwd met Cursor",
+    "bMarket": "Blog: Introductie van de Marketplace",
+    "bHarden": "Blog: Van prototype naar productie",
+    "bCodeViz": "Blog: Codevisualisatie voor echte codebases",
+    "bOneSpec": "Blog: Eén specificatie, elke agent"
+  },
+  "months": [
+    {
+      "id": "november-2026",
+      "month": "November",
+      "year": 2026,
+      "count": 12,
+      "title": "Controleer het. Vergrendel het. Deel het.",
+      "summary": "Tools om het werk te controleren en te beschermen: zie hoeveel van het plan echt in de code zit, bevries een afgesproken ontwerp en deel een klikbare preview.",
+      "features": [
+        {
+          "category": "Build",
+          "title": "Gap Analysis",
+          "description": "Hoeveel van het plan zit echt in de code? Elk conceptonderdeel krijgt een percentage, wat er is gebouwd, wat er ontbreekt en de code als bewijs.",
+          "links": [
+            "tasks"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Van bevindingen naar taken",
+          "description": "Voer de analyse uit voor één fase of één taak, maak taken van wat er ontbreekt en vergelijk voor en nu na een oplossing.",
+          "links": [
+            "tasks"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Ontwerp vergrendelen",
+          "description": "Bevries het concept, de UI-schermen en de requirements. Niemand en niets verandert ze totdat jij ze ontgrendelt: geen teamgenoot, geen AI.",
+          "links": []
+        },
+        {
+          "category": "Design",
+          "title": "Geïmporteerde projecten krijgen hun echte schermen",
+          "description": "Importeer bestaande code en het platform bouwt de eigen schermen van de app opnieuw op in hun oorspronkelijke look, gekoppeld aan het concept.",
+          "links": [
+            "analyze",
+            "tExisting"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Interactieve previewlink",
+          "description": "Deel een klikbare preview op volledig scherm, alleen met de schermen. Knoppen en navigatie werken; verder wordt niets getoond.",
+          "links": [
+            "share"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Agent Skills voor het bedrijf",
+          "description": "Schrijf de vaste instructies van je bedrijf één keer op. Elke agent volgt ze in elk project.",
+          "links": [
+            "skills"
+          ]
+        },
+        {
+          "category": "Connect",
+          "title": "Meer vanuit je codeertool",
+          "description": "Bewerk het concept onderdeel voor onderdeel, voer het hele takenbord uit en start een Gap Analysis vanuit Claude Code, Cursor of Codex.",
+          "links": [
+            "mcp"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Export bevat het hele ontwerp",
+          "description": "Een .thinkp-bestand bevat nu stijlen, menu’s, afbeeldingen en documenten en kan vanuit de startwizard als nieuw project worden geïmporteerd.",
+          "links": [
+            "thinkp"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Tokens beheren, toevoegen aan Cursor",
+          "link": "mcpCursor"
+        },
+        {
+          "text": "Duidelijkere fasen"
+        },
+        {
+          "text": "Documenten dragen de naam van je project"
+        },
+        {
+          "text": "Verkenner: alles samenvouwen, alles uitvouwen"
+        }
+      ]
+    },
+    {
+      "id": "october-2026",
+      "month": "Oktober",
+      "year": 2026,
+      "count": 13,
+      "title": "Open voor je tools",
+      "summary": "Je AI-codeertool kan een app bouwen en uitvoeren in de think4ever-cloud, de app doet bijna alles wat het web kan, en rapporten lezen als voorbereide zakelijke documenten.",
+      "features": [
+        {
+          "category": "Connect",
+          "title": "Bouwen en uitvoeren vanuit je codeertool",
+          "description": "Claude Code, Cursor of Codex kan bestanden schrijven, pakketten installeren, de app starten, de logs lezen en de app publiceren in de think4ever-cloud.",
+          "links": [
+            "mcp",
+            "tClaude",
+            "tCodex",
+            "bCursor"
+          ]
+        },
+        {
+          "category": "Connect",
+          "title": "Publieke API 1.0",
+          "description": "De API dekt nu bijna de hele werkruimte: code-import, versiebeheer, documenten, discussies, deellinks en meer.",
+          "links": [
+            "api"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Analytische zakelijke rapporten",
+          "description": "Elf rapporttypen met grafieken, tabellen en conclusies in duidelijke zakelijke taal. Deel via een link of download als PDF.",
+          "links": [
+            "agentDocs"
+          ]
+        },
+        {
+          "category": "App",
+          "title": "De app wordt een volwaardige client",
+          "description": "Versie 1.0.1 doet bijna alles wat de webwerkruimte doet, in acht talen, met een Windows-installatieprogramma.",
+          "links": [
+            "apps"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Een goed welkom voor nieuwe teamleden",
+          "description": "Een nieuw lid krijgt een welkomstmail en kiest zelf een wachtwoord bij de eerste aanmelding. Gegevens, rollen en projecttoegang stel je in één stap in.",
+          "links": [
+            "users",
+            "tTeam"
+          ]
+        },
+        {
+          "category": "Account",
+          "title": "Begin bij “Wat wil je bouwen?”",
+          "description": "Kies je route op de eerste pagina. Je antwoord reist mee door de registratie en de werkruimte opent bij die stap.",
+          "links": [
+            "onboarding"
+          ]
+        },
+        {
+          "category": "Account",
+          "title": "Aanmelden met een code per e-mail",
+          "description": "Geen wachtwoord nodig: een code van zes cijfers meldt je aan. Ook de wachtwoordregels zijn eenvoudiger.",
+          "links": []
+        },
+        {
+          "category": "Marketplace",
+          "title": "Een complete wervingsworkflow",
+          "description": "Huur meerdere freelancers in voor één opdracht, herzie aanbiedingen als genummerde versies en volg een gedeelde activiteitentijdlijn in de chat.",
+          "links": [
+            "market",
+            "bMarket"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Geïmporteerde code wordt volledig gelezen"
+        },
+        {
+          "text": "Stapsgewijze handleidingen"
+        },
+        {
+          "text": "Agenttaken gebruiken jouw model"
+        },
+        {
+          "text": "Sidekick-extra’s in de app"
+        },
+        {
+          "text": "Nieuw logo; afbeeldingen blijven staan"
+        }
+      ]
+    },
+    {
+      "id": "september-2026",
+      "month": "September",
+      "year": 2026,
+      "count": 11,
+      "title": "Jouw taal. Klaar voor productie.",
+      "summary": "Het hele product in acht talen, een go-live-review voor bestaande code en een marketplace die je project kent.",
+      "marker": "Drie maanden geleden voor het laatst hier? Alles boven deze lijn is nieuw voor je.",
+      "features": [
+        {
+          "category": "Workspace",
+          "title": "Acht talen",
+          "description": "Engels, Spaans, Portugees, Frans, Duits, Hindi, Nederlands en Arabisch met een rechts-naar-links-opmaak. Eén keuze volgt je overal.",
+          "links": [
+            "lang"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "De AI antwoordt in jouw taal",
+          "description": "Sidekick, de buildchat en de ontwerpchat antwoorden in de taal die je hebt gekozen. E-mails en meldingen volgen die ook.",
+          "links": [
+            "lang"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Production Hardening",
+          "description": "Een go-live-review van je code: 39 controles in 9 gebieden, een score en een cijfer van A tot E, met bewijs en een aanbevolen oplossing per controle.",
+          "links": [
+            "hard",
+            "tHarden",
+            "bHarden"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Los de bevindingen op met één klik",
+          "description": "Geef de bevindingen aan think4ever-agents, of kopieer een kant-en-klaar oplossingsverzoek voor Claude Code, Cursor of Codex. Download de review als PDF.",
+          "links": [
+            "hard"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Geïmporteerde code wordt beter begrepen",
+          "description": "De technologie wordt uit je code herkend. Projecten met React, Next.js, Remix, Supabase en Firebase worden correct beschreven.",
+          "links": [
+            "analyze"
+          ]
+        },
+        {
+          "category": "Marketplace",
+          "title": "Werven met kennis van je project",
+          "description": "“Ask Think” schrijft de vacaturetekst op basis van je project, en elk voorstel krijgt een AI-geschiktheidsscore met sterke punten en aandachtspunten.",
+          "links": [
+            "market"
+          ]
+        },
+        {
+          "category": "Marketplace",
+          "title": "Precies de toegang die een freelancer nodig heeft",
+          "description": "Een contract geeft een login voor de werkruimte of een token voor de eigen codeertool van de freelancer, voor gekozen projecten. Het eindigt vanzelf.",
+          "links": [
+            "market"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Claude Opus 5.5 en snel van model wisselen",
+          "description": "Een nieuw topmodel. Als een model blijft falen, zet een pop-up alleen dat soort werk in twee klikken over naar een ander model.",
+          "links": [
+            "settings"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Tekst bewerken in de ontwerppreview"
+        },
+        {
+          "text": "Profielen, reviews en opgeslagen zoekopdrachten"
+        },
+        {
+          "text": "Marketplace vanuit de werkruimte"
+        }
+      ]
+    },
+    {
+      "id": "august-2026",
+      "month": "Augustus",
+      "year": 2026,
+      "count": 16,
+      "title": "Een duidelijk pad van idee naar draaiende app",
+      "summary": "Een startwizard, een “Wat nu?”-bord, deellinks voor je eigen klanten, echte PDF- en Word-bestanden en builds die pauzeren in plaats van falen.",
+      "features": [
+        {
+          "category": "Workspace",
+          "title": "Startwizard",
+          "description": "Een nieuw project stelt één vraag: bestaande code analyseren of ontwerpen vanuit een idee. Daarna brengt het je er naartoe.",
+          "links": [
+            "create"
+          ]
+        },
+        {
+          "category": "Workspace",
+          "title": "“Wat nu?”-bord",
+          "description": "Vijf stappen van concept tot draaiende app, elk gemarkeerd als klaar, bezig of gereed om te starten. Klik op een stap om te beginnen.",
+          "links": []
+        },
+        {
+          "category": "Share",
+          "title": "Bekijken & delen",
+          "description": "Deel via een link een overzichtelijke alleen-lezenweergave van het project, voor mensen zonder account. Jij kiest de onderdelen en een vervaldatum.",
+          "links": [
+            "share"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Echte PDF- en Word-bestanden",
+          "description": "Exporteer requirementsdocumenten en de functionele architectuur als .pdf en .docx, en de requirementstekst in vijf formaten.",
+          "links": [
+            "reqDocs"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Builds die pauzeren in plaats van falen",
+          "description": "Een app bouwen vanuit een ontwerp gaat veel sneller, en een stap die mislukt pauzeert het plan zodat je kunt hervatten.",
+          "links": [
+            "tasks"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Codekwaliteitsscan",
+          "description": "Scan het project op bugs, kwetsbaarheden en code smells, met ernst en hersteltijd. Stuur bevindingen naar de agents om ze op te lossen.",
+          "links": [
+            "quality"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Kaart van de applicatiearchitectuur",
+          "description": "Een interactieve kaart van een bestaande codebase: de onderdelen, de componenten daarin en hoe ze zich tot elkaar verhouden.",
+          "links": [
+            "bCodeViz"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Miniaturen, kijkmodus en een paginachat",
+          "description": "Zie een echt beeld van elk scherm, klik door ontwerpen als een bezoeker en stel vragen over een pagina zonder die te wijzigen.",
+          "links": [
+            "ui"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Publiceren naar Jira",
+          "link": "jira"
+        },
+        {
+          "text": "Taken eenvoudig gemaakt"
+        },
+        {
+          "text": "App uitvoeren vanuit de ontwerpmodus"
+        },
+        {
+          "text": "Veilige uploads"
+        },
+        {
+          "text": "Eenvoudigere menu’s, sneller openen"
+        },
+        {
+          "text": "Bruikbaar op een telefoon"
+        },
+        {
+          "text": "Schermen gegroepeerd per module"
+        },
+        {
+          "text": "Direct aan het werk na het aanmelden"
+        }
+      ]
+    },
+    {
+      "id": "july-2026",
+      "month": "Juli",
+      "year": 2026,
+      "count": 18,
+      "title": "173 thema’s, en een AI die eerst vraagt",
+      "summary": "De visuele kant groeide op, de AI werd veiliger en stabieler om mee te werken, en grote ideeën konden in fasen worden gebouwd.",
+      "features": [
+        {
+          "category": "Design",
+          "title": "173 kant-en-klare thema’s",
+          "description": "Kies de look van je schermen uit een catalogus met complete thema’s, elk met een screenshot en een live demo.",
+          "links": [
+            "theme"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Je eigen thema, of de stijl van je website",
+          "description": "Beschrijf een look en de AI bouwt het thema. Of voer een websiteadres in en hergebruik de kleuren, lettertypen en het logo.",
+          "links": [
+            "theme"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "De AI vraagt voordat er iets verandert",
+          "description": "In beide chats toont de AI wat hij van plan is te wijzigen en wacht hij op “Bevestigen en toepassen” of “Afwijzen”.",
+          "links": [
+            "sidekick"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Fasen (Roadmap)",
+          "description": "Splits een concept op in benoemde fasen, filter het canvas op fase en bouw één fase tegelijk.",
+          "links": [
+            "concept"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Bouw met ons of met je eigen tool",
+          "description": "Druk op Build en kies: think4ever-agents, of Claude Code, Cursor, Codex en zes andere tools die je ontwerp direct lezen.",
+          "links": [
+            "mcp",
+            "bOneSpec"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Projectgeheugen",
+          "description": "Beslissingen, beperkingen en voorkeuren worden per project onthouden en in latere sessies gebruikt. Je kunt ze bekijken en bewerken.",
+          "links": []
+        },
+        {
+          "category": "AI",
+          "title": "Kies het model per soort werk",
+          "description": "Kies apart een model voor concept, UI-ontwerp, diagrammen, chat, bouwen en documenten. GLM-5.2 en Kimi K3 staan nu ook in de lijst.",
+          "links": [
+            "settings"
+          ]
+        },
+        {
+          "category": "Marketplace",
+          "title": "Freelance-marketplace",
+          "description": "Plaats opdrachten, stuur voorstellen, sluit contracten en chat live. De freelancer krijgt toegang tot het afgesproken project zolang het contract loopt.",
+          "links": [
+            "market",
+            "bMarket"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Kies welke pagina’s je bouwt"
+        },
+        {
+          "text": "Eén wijziging op alle schermen"
+        },
+        {
+          "text": "Herstelt zichzelf"
+        },
+        {
+          "text": "Pagina Functionele architectuur",
+          "link": "funcArch"
+        },
+        {
+          "text": "Venster Omgevingsvariabelen"
+        },
+        {
+          "text": "Het project downloaden, de database exporteren"
+        },
+        {
+          "text": "Sidekick-gemak"
+        },
+        {
+          "text": "Een bonnetje van wat de AI heeft gewijzigd"
+        },
+        {
+          "text": "Elf regio’s bij het registreren"
+        },
+        {
+          "text": "Marketplace in de app"
+        }
+      ]
+    },
+    {
+      "id": "june-2026",
+      "month": "Juni",
+      "year": 2026,
+      "count": 18,
+      "title": "Sidekick neemt het stuur",
+      "summary": "De werkruimte veranderde van vorm, de assistent begon het werk te doen in plaats van het te beschrijven en het platform opende zich voor andere tools.",
+      "marker": "Zes maanden geleden voor het laatst hier? Alles boven deze lijn is nieuw voor je.",
+      "features": [
+        {
+          "category": "AI",
+          "title": "Sidekick doet het klikwerk",
+          "description": "De assistent antwoordt live en handelt: hij wijzigt het concept, maakt taken, opent de juiste pagina en voert menuacties voor je uit.",
+          "links": [
+            "sidekick"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Bouwen, uitvoeren en importeren vanuit de chat",
+          "description": "Vraag Sidekick om UI-schermen te maken of te wijzigen, je app te starten of te stoppen, de logs te tonen of code uit GitHub te importeren.",
+          "links": [
+            "sidekick"
+          ]
+        },
+        {
+          "category": "Connect",
+          "title": "Je plan in Claude Code, Cursor en Codex",
+          "description": "AI-codeertools verbinden via MCP en werken vanuit hetzelfde concept, dezelfde ontwerpen en taken. Installatiehandleidingen voor negen tools.",
+          "links": [
+            "mcpOverview",
+            "tClaude",
+            "tCodex"
+          ]
+        },
+        {
+          "category": "Connect",
+          "title": "Publieke API",
+          "description": "Een gedocumenteerde API met toegangstokens die je zelf aanmaakt, beperkt en intrekt, en een console om aanroepen uit te proberen.",
+          "links": [
+            "api"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Elf conceptlagen",
+          "description": "Vier nieuwe lagen: API-endpoints, status en levenscyclus, gebeurtenissen en jobs, omgeving en configuratie. Het plan dekt nu het hele product.",
+          "links": [
+            "concept"
+          ]
+        },
+        {
+          "category": "App",
+          "title": "think4ever-app voor Windows en Android",
+          "description": "Projecten, het conceptcanvas, requirements, UI-previews, Sidekick en een ontwikkelaarswerkruimte in een native app.",
+          "links": [
+            "apps"
+          ]
+        },
+        {
+          "category": "Workspace",
+          "title": "Nieuwe indeling, donker thema",
+          "description": "Menu’s bovenaan, Sidekick links vastgezet op elke pagina en een donker thema met een licht/donker-schakelaar.",
+          "links": []
+        },
+        {
+          "category": "Connect",
+          "title": "Tien connectors",
+          "description": "Jira, Confluence, Figma, GitHub, Slack, Notion, Linear, Sentry, Google Drive en OneDrive. Voeg items toe aan de chat of laat de AI ze doorzoeken.",
+          "links": [
+            "eco",
+            "integrations"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Nieuwe projecten beginnen als een gesprek"
+        },
+        {
+          "text": "Discussies bij elk conceptonderdeel"
+        },
+        {
+          "text": "Wijzigingsgeschiedenis",
+          "link": "others"
+        },
+        {
+          "text": "Het hele project in één bestand"
+        },
+        {
+          "text": "Requirements goedkeuren vóór de build"
+        },
+        {
+          "text": "Architectuurweergave en objectlijst"
+        },
+        {
+          "text": "Builds overleven onderbrekingen"
+        },
+        {
+          "text": "Chatgeschiedenis en vraag-pop-ups"
+        },
+        {
+          "text": "Hulpmiddelen van Developer Mode",
+          "link": "dev"
+        },
+        {
+          "text": "Doorgaan met Google"
+        }
+      ]
+    },
+    {
+      "id": "may-2026",
+      "month": "Mei",
+      "year": 2026,
+      "count": 17,
+      "title": "Van idee naar draaiende code op één plek",
+      "summary": "De maand waarin het product één samenhangende tool werd: plan het project, schakel over naar code, laat de agents het stap voor stap bouwen, voer het uit en deel een openbare link.",
+      "features": [
+        {
+          "category": "Build",
+          "title": "Developer Mode komt in de werkruimte",
+          "description": "Eén aanmelding, twee weergaven van hetzelfde project. Schakel van ontwerp naar code: AI-codeerchat, bestandseditor, terminal, database en een browser voor je draaiende app.",
+          "links": [
+            "dev"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Doelen met een plan dat jij goedkeurt",
+          "description": "Beschrijf wat je wilt. De agents stellen een stapsgewijs plan op; jij bekijkt het, vinkt stappen uit en voert uit. Overslaan, pauzeren of annuleren kan altijd.",
+          "links": [
+            "tasks"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Bouwen vanuit je ontwerp",
+          "description": "“Vanuit ontwerp” vergelijkt de code met je concept en UI-ontwerpen en plant het werk om het verschil te dichten.",
+          "links": []
+        },
+        {
+          "category": "Build",
+          "title": "Voer je app uit en deel een openbare link",
+          "description": "De app draait in de werkruimte. Met één schakelaar krijgt hij een openbaar adres dat iedereen kan openen.",
+          "links": [
+            "run",
+            "publicAccess"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Bibliotheek met oplossingsontwerpen",
+          "description": "299 kant-en-klare startpunten in 10 sectoren. Zoek, bekijk en pas er een toe met een klik: inclusief schermen, flows, data, rollen en regels.",
+          "links": []
+        },
+        {
+          "category": "Connect",
+          "title": "VS Code-extensie",
+          "description": "Bewerk projectbestanden in VS Code, houd een lokale map in twee richtingen gesynchroniseerd, praat met de agents en stuur terminalfouten naar ze terug.",
+          "links": [
+            "vscode"
+          ]
+        },
+        {
+          "category": "Workspace",
+          "title": "Begin met “Wat wil je bouwen?”",
+          "description": "Beschrijf het idee in je eigen woorden, voeg bestanden toe of importeer bestaande code uit GitHub, een ZIP of je repository.",
+          "links": [
+            "intent",
+            "tIntent"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Bedrijfsgebruikers met rollen",
+          "description": "Voeg teamleden toe, geef ze rollen en bepaal per project wie toegang heeft. Elk lid ziet alleen wat zijn of haar rol toestaat.",
+          "links": [
+            "users",
+            "tTeam"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Van code naar concept"
+        },
+        {
+          "text": "Sidekick antwoordt zonder iets te wijzigen"
+        },
+        {
+          "text": "Conceptwijzigingen stellen taken voor"
+        },
+        {
+          "text": "Alleen de ontbrekende pagina’s maken"
+        },
+        {
+          "text": "Diagrammen vanuit een prompt"
+        },
+        {
+          "text": "Beperk wat een agent mag wijzigen"
+        },
+        {
+          "text": "Wachtwoord resetten met een code per e-mail"
+        },
+        {
+          "text": "Regio’s India en Australië"
+        },
+        {
+          "text": "Elke technologiestack is welkom"
+        }
+      ]
+    },
+    {
+      "id": "april-2026",
+      "month": "April",
+      "year": 2026,
+      "count": 11,
+      "title": "Voer het project uit waar je het plant",
+      "summary": "De werkruimte groeide van “plannen en bouwen” uit tot een plek waar een team het project ook kan beheren: issues, een kennisbank, feedbackformulieren en een Jira-koppeling.",
+      "features": [
+        {
+          "category": "Team",
+          "title": "Issuetracker",
+          "description": "Meld en volg bugs, features en taken binnen het project: lijst-, bord- en overzichtsweergaven, filters, opmerkingen en bijlagen.",
+          "links": [
+            "issues"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Kennisbank",
+          "description": "Een wiki voor elk project met een blokeditor, automatisch opslaan, versiegeschiedenis, sjablonen, tags en Markdown-export.",
+          "links": [
+            "kb"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Feedbackformulieren via een openbare link",
+          "description": "Maak een enquête, poll of feedbackformulier en deel het via een link. Mensen antwoorden zonder account; resultaten kunnen naar CSV worden geëxporteerd.",
+          "links": [
+            "feedback"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Begin een concept met je documenten",
+          "description": "Voeg requirements, specificaties of notities toe. De AI schrijft er de requirements uit of bouwt het hele concept.",
+          "links": [
+            "req"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Meer AI-modellen, plus Grok",
+          "description": "Nieuwere modellen van Claude, GPT, Gemini en DeepSeek, en Grok als nieuwe aanbieder. Lange antwoorden worden niet meer afgekapt.",
+          "links": []
+        },
+        {
+          "category": "Connect",
+          "title": "Jira-koppeling",
+          "description": "Koppel een Jira-project en haal de issues in de issuetracker van het platform, met status en prioriteit op elkaar afgestemd.",
+          "links": [
+            "jira"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Je eigen sleutel werkt overal",
+          "description": "Documenten en presentaties werken met de sleutel van elke aanbieder, en meerdere agents kunnen tegelijk op één sleutel werken.",
+          "links": [
+            "keys"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Opmerkingen en vermeldingen op één plek",
+          "description": "Alle opmerkingendraden, je @vermeldingen en elke actieve deellink staan verzameld op één pagina.",
+          "links": [
+            "collab"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Extra instructies voor een build"
+        },
+        {
+          "text": "Testdata die zichzelf herstelt"
+        },
+        {
+          "text": "Rijkere weergaven voor beveiliging en testcases"
+        }
+      ]
+    },
+    {
+      "id": "march-2026",
+      "month": "Maart",
+      "year": 2026,
+      "count": 15,
+      "title": "Bewerk alles, maak alles ongedaan",
+      "summary": "Requirements die het plan bijhouden, een geschiedenis waarin je terug kunt stappen, ontwerptools voor elk element en het eerste accountportaal.",
+      "features": [
+        {
+          "category": "Plan",
+          "title": "Requirements die het plan bijwerken",
+          "description": "Bewerk de requirements en de AI stelt de bijbehorende conceptwijzigingen voor, elk met een reden. Vink de gewenste aan en pas ze toe.",
+          "links": [
+            "req"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Wijzigingsgeschiedenis met terugzetten in één klik",
+          "description": "Elke AI-wijziging aan het concept staat in een lijst met tijd en beschrijving. Eén klik zet het concept terug naar de toestand vóór die wijziging.",
+          "links": [
+            "others"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Bewerk elk element in de ontwerppreview",
+          "description": "Klik met de rechtermuisknop op een element om tekstgrootte, kleuren en witruimte direct te wijzigen, of kies “Ask AI to Change” voor alleen dat element.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "20 pagina-indelingen met live preview",
+          "description": "Kies de paginastructuur voordat je bouwt: zijbalk, dashboard, hero, raster, gesplitst scherm en meer, met preview op desktop, tablet en telefoon.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Je eigen afbeeldingen in het ontwerp",
+          "description": "Upload een logo, foto’s of media met een instructie zoals “gebruik dit als hoofdlogo” en de AI plaatst ze.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Code-editor en ZIP-upload",
+          "description": "Open elk bronbestand in een ingebouwde editor en breng een bestaande codebase binnen als ZIP van maximaal 500 MB.",
+          "links": [
+            "analyze"
+          ]
+        },
+        {
+          "category": "Account",
+          "title": "Het accountportaal",
+          "description": "Registreer je één keer en ga met één klik naar je werkruimte, al aangemeld. Ook je profiel, instellingen en support vind je daar.",
+          "links": [
+            "portal"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Zoeken in het hele concept",
+          "description": "Eén zoekvak vindt schermen, flows, dataobjecten, rollen, integraties en regels en springt naar het resultaat.",
+          "links": [
+            "concept"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Een geschreven samenvatting voor elk scherm"
+        },
+        {
+          "text": "Eén navigatie voor alle pagina’s"
+        },
+        {
+          "text": "Live “AI is bezig”-indicatoren"
+        },
+        {
+          "text": "Containers"
+        },
+        {
+          "text": "Commitgeschiedenis, diff en terugzetten",
+          "link": "vc"
+        },
+        {
+          "text": "Database-export"
+        },
+        {
+          "text": "Gebruikersgids en Mijn profiel"
+        }
+      ]
+    },
+    {
+      "id": "february-2026",
+      "month": "Februari",
+      "year": 2026,
+      "count": 11,
+      "title": "Eén werkruimte, zes lagen",
+      "summary": "Het concept groeide van alleen schermen uit tot een volledig beeld van het product, en alles verhuisde naar één projectwerkruimte.",
+      "features": [
+        {
+          "category": "Plan",
+          "title": "Een concept met zes lagen",
+          "description": "Naast schermen: bedrijfsflows, dataobjecten, rollen en rechten, integraties en bedrijfsregels. Sidekick bouwt en bewerkt alle zes.",
+          "links": [
+            "concept"
+          ]
+        },
+        {
+          "category": "Workspace",
+          "title": "De nieuwe projectwerkruimte",
+          "description": "Eén menu voor alles in een project: conceptlagen, UI-ontwerpen, diagrammen, documenten, taken, database, broncode en versiebeheer.",
+          "links": [
+            "intro"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Breng je bestaande code mee",
+          "description": "Wijs het platform naar een codebase en het schrijft het concept op basis van de code, met een live voortgangsvenster.",
+          "links": [
+            "analyze",
+            "tExisting",
+            "bCodeViz"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Bekijk het concept door de ogen van één rol",
+          "description": "Kies een rol en de schermen die daarbij bereikbaar zijn, lichten op. Elk scherm toont wie toegang heeft.",
+          "links": [
+            "roles"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Ontwerpen en diagrammen worden op de achtergrond gebouwd",
+          "description": "UI-ontwerpen en architectuurdiagrammen worden gebouwd terwijl je doorwerkt en verschijnen op hun eigen pagina’s als ze klaar zijn.",
+          "links": [
+            "diagrams"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Gebruikers, groepen en rechten",
+          "description": "Voeg teamgebruikers toe, plaats ze in kant-en-klare groepen en bepaal wat elke groep mag doen. De interface verbergt wat een gebruiker niet mag gebruiken.",
+          "links": [
+            "users"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Gebruik je eigen AI-sleutels",
+          "description": "Voeg je eigen sleutels van aanbieders toe onder Mijn API-sleutels en laat al het AI-werk daarop draaien.",
+          "links": [
+            "keys"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Betere buildplanning en taakbeheer",
+          "description": "Grotere builds worden in fasen gepland, Annuleren stopt een taak echt en de takenlijst heeft filters, alles annuleren en live status.",
+          "links": [
+            "tasks"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Een concept exporteren en importeren"
+        },
+        {
+          "text": "Snelstart op een leeg concept"
+        },
+        {
+          "text": "Projectchat beantwoordt vragen"
+        }
+      ]
+    },
+    {
+      "id": "january-2026",
+      "month": "Januari",
+      "year": 2026,
+      "count": 6,
+      "title": "Jij kiest de technologie en de look",
+      "summary": "Twee beslissingen die de AI eerst alleen nam, werden die van jou: waarmee het product wordt gebouwd en hoe het eruitziet.",
+      "features": [
+        {
+          "category": "Build",
+          "title": "Technologiestack",
+          "description": "Kies je backend, database en front-end uit lange lijsten. Elke agent en elk document volgt daarna jouw keuze.",
+          "links": [
+            "settings"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Themagalerij",
+          "description": "Kies een van de 34 kant-en-klare kleurthema’s voor je UI-ontwerp en bekijk het eerst op voorbeeldelementen. (Vandaag telt de catalogus er 173.)",
+          "links": [
+            "theme"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Test Case Agent",
+          "description": "Testcases geschreven op basis van je code: genummerde stappen, het verwachte resultaat van elke stap, prioriteiten en tags, gegroepeerd per gebied.",
+          "links": [
+            "testing"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Betrouwbaardere Git-commits",
+          "description": "Committen werkt nu op een gloednieuwe map, kiest de juiste branch en haalt eerst de nieuwste wijzigingen op.",
+          "links": [
+            "vc"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Conceptwerkbalk in drie menu’s"
+        },
+        {
+          "text": "Developer Agent kan vanaf nul beginnen"
+        }
+      ]
+    },
+    {
+      "id": "december-2025",
+      "month": "December",
+      "year": 2025,
+      "count": 6,
+      "title": "Jouw repository, jouw documenten",
+      "summary": "Twee dingen waar teams vroeg om vragen: een koppeling met hun eigen coderepository en kant-en-klare documenten, geschreven op basis van het concept.",
+      "marker": "Een jaar geleden voor het laatst hier? Alles boven deze lijn is nieuw voor je.",
+      "features": [
+        {
+          "category": "Build",
+          "title": "Versiebeheer",
+          "description": "Koppel een project aan GitHub, GitLab, gewone Git of SVN. Commit, werk bij en lees het volledige logboek van elke bewerking.",
+          "links": [
+            "vc"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "De Developer Agent commit zijn eigen werk",
+          "description": "Na een geslaagde codeertaak commit de agent de wijzigingen naar je repository, met zijn eigen toelichting als bericht.",
+          "links": [
+            "vc"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Documenten geschreven op basis van je concept",
+          "description": "Conceptsamenvatting, functionele specificatie, technische specificatie en databaseontwerpdocument, elk met een voorblad en inhoudsopgave.",
+          "links": [
+            "reqDocs",
+            "summary"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Exporteren als SVG en PNG",
+          "description": "Download het concept als nette vectortekening of als afbeelding, en elk flowdiagram als afbeelding.",
+          "links": []
+        }
+      ],
+      "also": [
+        {
+          "text": "Requirementsvragen accepteren vrije tekst"
+        },
+        {
+          "text": "Direct het nieuwe project in"
+        }
+      ]
+    },
+    {
+      "id": "november-2025",
+      "month": "November",
+      "year": 2025,
+      "count": 4,
+      "title": "De AI vraagt voordat hij bouwt",
+      "summary": "Het platform helpt je nu uitzoeken wat je eigenlijk wilt voordat er iets wordt getekend.",
+      "features": [
+        {
+          "category": "Plan",
+          "title": "Requirements analyseren",
+          "description": "Beschrijf een ruw idee. De AI stelt verduidelijkende vragen, met een optie “Laat de AI beslissen”, en maakt van je antwoorden geschreven requirements en een concept.",
+          "links": [
+            "intent",
+            "req"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Requirements blijven bij het concept",
+          "description": "Elk concept bevat een geschreven beschrijving van wat het systeem moet doen. Lees, bewerk en bewaar die op elk moment.",
+          "links": [
+            "req"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Kaart- en grafiekelementen",
+          "description": "Schermen in een concept kunnen nu kaarten en grafieken bevatten, en de AI gebruikt ze als ze passen.",
+          "links": []
+        },
+        {
+          "category": "AI",
+          "title": "Met de spraakassistent kun je je zin afmaken",
+          "description": "Een korte pauze onderbreekt je niet meer: de assistent wacht iets langer voordat hij antwoordt.",
+          "links": []
+        }
+      ],
+      "also": []
+    },
+    {
+      "id": "october-2025",
+      "month": "Oktober",
+      "year": 2025,
+      "count": 11,
+      "title": "Van concept naar klikbare schermen",
+      "summary": "De maand waarin het platform leerde ontwerpen. Eén knop maakt van een concept echte pagina’s waar je doorheen kunt klikken en die je wijzigt door te beschrijven wat je wilt.",
+      "features": [
+        {
+          "category": "Design",
+          "title": "UI-ontwerp bouwen",
+          "description": "Eén knop maakt van je concept een volledige set echte pagina’s met een gedeelde stijl en werkende navigatie ertussen.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Klik door je ontwerp als door een app",
+          "description": "Open de ontworpen pagina’s in een browsertabblad, spring vanuit een Pagina’s-menu naar elke pagina en volg de links tussen schermen.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Wijzig een pagina door hem te beschrijven",
+          "description": "In de chat Pagina wijzigen zeg je wat er moet veranderen. De AI ziet de pagina zoals jij hem ziet en wijzigt alleen wat je hebt gevraagd.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Ongedaan maken en versiegeschiedenis voor elke pagina",
+          "description": "Elke wijziging aan een pagina wordt bewaard. Ga met één klik terug naar elke eerdere versie; er gaat niets verloren.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Architectuurdiagrammen uit één concept",
+          "description": "Eén knop tekent een volledige set diagrammen uit je concept: gebruikersflow, dataflow, databaseschema, sequentie, deployment, beveiliging en meer.",
+          "links": [
+            "diagrams"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Security Agent",
+          "description": "Een beveiligingsreview van je code: problemen op ernst met de betrokken bestanden en verwijzingen naar CWE en OWASP. Download het als Word-rapport.",
+          "links": [
+            "agentDocs"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Flowdiagrameditor met een eigen Sidekick"
+        },
+        {
+          "text": "Agents bouwen vanuit je plan"
+        },
+        {
+          "text": "Probeer een scherm als klikbare mock-up"
+        },
+        {
+          "text": "Het concept exporteren als afbeelding"
+        },
+        {
+          "text": "Analytical Agent verwerkt grotere data"
+        }
+      ]
+    },
+    {
+      "id": "september-2025",
+      "month": "September",
+      "year": 2025,
+      "count": 8,
+      "title": "Praat je idee om tot een plan",
+      "summary": "Waar dit verhaal begint: een werkruimte met projecten, een visueel conceptcanvas, een AI-chat en een team van AI-agents. In september leerde het platform luisteren, en bouwen op wat het hoorde.",
+      "features": [
+        {
+          "category": "AI",
+          "title": "Praat je idee om tot een concept",
+          "description": "De spraakassistent vraagt wat je wilt bouwen, leest een samenvatting terug en tekent het concept voor je.",
+          "links": []
+        },
+        {
+          "category": "Build",
+          "title": "Build met één klik",
+          "description": "Een Build-knop geeft je concept aan de AI-agents en brengt je naar de takenlijst als het werk klaar is.",
+          "links": [
+            "tasks"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Analytical Agent",
+          "description": "Stel een vraag over je data en krijg een rapport met tabellen, grafieken en conclusies, uitsluitend gebouwd op je echte data.",
+          "links": []
+        },
+        {
+          "category": "Build",
+          "title": "Een project dat vanaf minuut één klaar is",
+          "description": "Elk nieuw project krijgt automatisch een eigen map en een eigen database. Niets om handmatig in te stellen.",
+          "links": []
+        }
+      ],
+      "also": [
+        {
+          "text": "Maak kennis met Sidekick",
+          "link": "sidekick"
+        },
+        {
+          "text": "Veiligere AI-bewerkingen van een concept"
+        },
+        {
+          "text": "Projecttabbladen onthouden hun plek"
+        },
+        {
+          "text": "QA Agent legt uit waarom een app niet startte"
+        }
+      ]
+    }
+  ]
+}

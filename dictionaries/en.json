@@ -116,15 +116,17 @@
       "reverseEngTitle": "Reverse Engineering an existing Project",
       "reverseEngDesc": "4 - Import your existing codebase.",
       "apiTitle": "Think API",
-      "apiDesc": "10 - Programmatically manage tokens.",
+      "apiDesc": "11 - Programmatically manage tokens.",
       "productionHardeningTitle": "Production Hardening",
       "productionHardeningDesc": "5 - Assess your project's production readiness.",
       "portalTitle": "Think4ever Portal",
-      "portalDesc": "11 - Manage your team dashboard",
+      "portalDesc": "12 - Manage your team dashboard",
       "marketplaceTitle": "Marketplace",
       "marketplaceDesc": "6 - Find freelancers, hire, or get hired.",
       "vscodeTitle": "VS Code Plugin",
-      "vscodeDesc": "12 - Access T4E inside VS Code."
+      "vscodeDesc": "13 - Access T4E inside VS Code.",
+      "gapAnalysisTitle": "Gap Analysis",
+      "gapAnalysisDesc": "10 - See what is built and what is missing."
     },
     "tutorialsMenu": {
       "title": "Tutorials",
@@ -157,7 +159,9 @@
         "desc": "How to use Think4Ever design artifacts across the SDLC"
       }
     },
-    "apps": "Apps"
+    "apps": "Apps",
+    "whatsNew": "What's new",
+    "whatsNewDesc": "Every new feature, month by month."
   },
   "hero": {
     "eyebrow": "Legacy code or AI Generated code creates blind spots no one can see.",
@@ -1638,5 +1642,42 @@
     },
     "cta": "Start free",
     "note": "Free plan with 500 credits. No credit card."
+  },
+  "whatsNewPage": {
+    "metaTitle": "What's new in think4ever | Think4Ever",
+    "metaDesc": "Everything think4ever has learned since September 2025, month by month: 177 new features for planning, designing, building and sharing software with AI.",
+    "eyebrow": "September 2025 – November 2026",
+    "titleLine1": "What's new",
+    "titleLine2Prefix": "in ",
+    "lead": "Tried think4ever before? Here is everything it has learned since, month by month, in plain words.",
+    "seeLatest": "See the latest",
+    "downloadPdf": "Download as PDF",
+    "chartAria": "New features per month",
+    "chartHint": "Each bar is one month. Its height is the number of new things you can do. Click a bar to jump to that month.",
+    "chartTotal": "{total} new things in {months} months",
+    "newLabel": "new",
+    "searchLabel": "Search features",
+    "searchPlaceholder": "Search features, e.g. Jira, themes, Cursor",
+    "jumpLabel": "Jump to month",
+    "filterAria": "Filter by area",
+    "filterAll": "All",
+    "alsoNew": "Also new",
+    "emptyText": "Nothing matches that search. Try another word, or",
+    "showEverything": "show everything",
+    "categories": {
+      "Build": "Build",
+      "Plan": "Plan",
+      "Design": "Design",
+      "AI": "AI",
+      "Connect": "Connect",
+      "Share": "Share",
+      "Team": "Team",
+      "Workspace": "Workspace",
+      "Marketplace": "Marketplace",
+      "App": "App",
+      "Account": "Account"
+    },
+    "results": "{count} results",
+    "clearSearch": "Clear search"
   }
 }

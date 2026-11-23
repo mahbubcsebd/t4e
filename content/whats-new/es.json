@@ -1,0 +1,1286 @@
+{
+  "links": {
+    "tasks": "Documentación: Tareas",
+    "share": "Documentación: Ver y compartir",
+    "skills": "Documentación: Agent Skills",
+    "mcp": "Documentación: Think MCP",
+    "mcpOverview": "Documentación: Guías de configuración de MCP",
+    "mcpCursor": "Documentación: Cursor",
+    "thinkp": "Documentación: Importar .thinkp",
+    "api": "Documentación: Think API",
+    "agentDocs": "Documentación: Documentos de agentes",
+    "apps": "Obtén las apps",
+    "users": "Documentación: Usuarios",
+    "onboarding": "Documentación: Primeros pasos",
+    "market": "Documentación: Marketplace",
+    "lang": "Documentación: Idiomas",
+    "hard": "Documentación: Production Hardening",
+    "analyze": "Documentación: Ingeniería inversa",
+    "create": "Documentación: Crear un proyecto nuevo",
+    "reqDocs": "Documentación: Documentos de requisitos",
+    "quality": "Documentación: Calidad del código",
+    "ui": "Documentación: Diseño de interfaz",
+    "jira": "Documentación: Jira",
+    "theme": "Documentación: Temas",
+    "sidekick": "Documentación: Sidekick",
+    "settings": "Documentación: Configuración del proyecto",
+    "concept": "Documentación: Concepto",
+    "eco": "Documentación: Integraciones",
+    "integrations": "Todas las integraciones",
+    "dev": "Documentación: Modo desarrollador",
+    "run": "Documentación: Ejecutar la app",
+    "publicAccess": "Documentación: Acceso público",
+    "vscode": "Documentación: VS Code",
+    "intent": "Documentación: Diseño a partir de la intención",
+    "issues": "Documentación: Incidencias",
+    "kb": "Documentación: Base de conocimiento",
+    "feedback": "Documentación: Comentarios",
+    "req": "Documentación: Requisitos",
+    "keys": "Documentación: Claves de API",
+    "collab": "Documentación: Colaboración",
+    "others": "Documentación: Historial de cambios",
+    "portal": "Documentación: Portal",
+    "intro": "Documentación: Diseñador",
+    "roles": "Documentación: Roles y permisos",
+    "diagrams": "Documentación: Diagramas técnicos",
+    "testing": "Documentación: Pruebas",
+    "vc": "Documentación: Control de versiones",
+    "summary": "Documentación: Resumen del concepto",
+    "funcArch": "Documentación: Arquitectura funcional",
+    "tClaude": "Tutorial: Diseña en Think, programa en Claude",
+    "tCodex": "Tutorial: Diseña en Think, programa en Codex",
+    "tHarden": "Tutorial: Lleva a producción las apps creadas con vibe coding",
+    "tTeam": "Tutorial: Añade co-desarrolladores",
+    "tExisting": "Tutorial: Convierte código existente en un plano",
+    "tIntent": "Tutorial: Crea una app a partir de una intención",
+    "bCursor": "Blog: Nuestro panel, creado con Cursor",
+    "bMarket": "Blog: Presentamos el Marketplace",
+    "bHarden": "Blog: Del prototipo a producción",
+    "bCodeViz": "Blog: Visualización de código para bases de código reales",
+    "bOneSpec": "Blog: Una especificación, todos los agentes"
+  },
+  "months": [
+    {
+      "id": "november-2026",
+      "month": "Noviembre",
+      "year": 2026,
+      "count": 12,
+      "title": "Compruébalo. Bloquéalo. Compártelo.",
+      "summary": "Herramientas para comprobar y proteger el trabajo: mira cuánto del plan está realmente en el código, congela un diseño acordado y comparte una vista previa en la que se puede hacer clic.",
+      "features": [
+        {
+          "category": "Build",
+          "title": "Gap Analysis",
+          "description": "¿Cuánto del plan está realmente en el código? Cada elemento del concepto recibe un porcentaje, lo que está construido, lo que falta y el código como prueba.",
+          "links": [
+            "tasks"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "De los hallazgos a las tareas",
+          "description": "Ejecuta el análisis para una fase o una tarea, convierte lo que falta en tareas y compara el antes y el ahora tras una corrección.",
+          "links": [
+            "tasks"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Bloquear diseño",
+          "description": "Congela el concepto, las pantallas de interfaz y los requisitos. Nadie ni nada los cambia hasta que los desbloquees: ni un compañero, ni una IA.",
+          "links": []
+        },
+        {
+          "category": "Design",
+          "title": "Los proyectos importados obtienen sus pantallas reales",
+          "description": "Importa código existente y la plataforma reconstruye las pantallas propias de la app con su aspecto original, vinculadas al concepto.",
+          "links": [
+            "analyze",
+            "tExisting"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Enlace de vista previa interactiva",
+          "description": "Comparte una vista previa a pantalla completa y con clics, solo de las pantallas. Los botones y la navegación funcionan; no se muestra nada más.",
+          "links": [
+            "share"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Agent Skills de la empresa",
+          "description": "Escribe una sola vez las instrucciones permanentes de tu empresa. Todos los agentes las siguen en todos los proyectos.",
+          "links": [
+            "skills"
+          ]
+        },
+        {
+          "category": "Connect",
+          "title": "Más desde tu herramienta de programación",
+          "description": "Edita el concepto elemento por elemento, ejecuta todo el tablero de tareas e inicia un Gap Analysis desde Claude Code, Cursor o Codex.",
+          "links": [
+            "mcp"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "La exportación incluye todo el diseño",
+          "description": "Un archivo .thinkp ahora incluye estilos, menús, imágenes y documentos, y se puede importar como proyecto nuevo desde el asistente de inicio.",
+          "links": [
+            "thinkp"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Gestiona tokens, añade a Cursor",
+          "link": "mcpCursor"
+        },
+        {
+          "text": "Fases más claras"
+        },
+        {
+          "text": "Los documentos llevan el nombre de tu proyecto"
+        },
+        {
+          "text": "Explorador: contraer todo, expandir todo"
+        }
+      ]
+    },
+    {
+      "id": "october-2026",
+      "month": "Octubre",
+      "year": 2026,
+      "count": 13,
+      "title": "Abierto a tus herramientas",
+      "summary": "Tu herramienta de programación con IA puede crear y ejecutar una app en la nube de think4ever, la app cubre casi todo lo que hace la web y los informes se leen como documentos de negocio preparados.",
+      "features": [
+        {
+          "category": "Connect",
+          "title": "Crea y ejecuta desde tu herramienta de programación",
+          "description": "Claude Code, Cursor o Codex pueden escribir archivos, instalar paquetes, iniciar la app, leer sus registros y publicarla en la nube de think4ever.",
+          "links": [
+            "mcp",
+            "tClaude",
+            "tCodex",
+            "bCursor"
+          ]
+        },
+        {
+          "category": "Connect",
+          "title": "API pública 1.0",
+          "description": "La API ahora cubre casi todo el espacio de trabajo: importación de código, control de versiones, documentos, debates, enlaces para compartir y más.",
+          "links": [
+            "api"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Informes de negocio analíticos",
+          "description": "Once tipos de informe con gráficos, tablas y conclusiones en lenguaje de negocio sencillo. Compártelos por enlace o descárgalos como PDF.",
+          "links": [
+            "agentDocs"
+          ]
+        },
+        {
+          "category": "App",
+          "title": "La app se convierte en un cliente completo",
+          "description": "La versión 1.0.1 cubre casi todo lo que hace el espacio de trabajo web, en ocho idiomas y con un instalador para Windows.",
+          "links": [
+            "apps"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Una bienvenida como se debe para los nuevos miembros del equipo",
+          "description": "Un miembro nuevo recibe un correo de bienvenida y elige su propia contraseña en el primer inicio de sesión. Los datos, los roles y el acceso a proyectos se configuran en un solo paso.",
+          "links": [
+            "users",
+            "tTeam"
+          ]
+        },
+        {
+          "category": "Account",
+          "title": "Empieza con “¿Qué quieres crear?”",
+          "description": "Elige tu camino en la primera página. Tu respuesta te acompaña durante el registro y el espacio de trabajo se abre en ese paso.",
+          "links": [
+            "onboarding"
+          ]
+        },
+        {
+          "category": "Account",
+          "title": "Inicia sesión con un código enviado por correo",
+          "description": "Sin contraseña: un código de seis dígitos te permite iniciar sesión. Las reglas de contraseña también son más sencillas.",
+          "links": []
+        },
+        {
+          "category": "Marketplace",
+          "title": "Un flujo de contratación completo",
+          "description": "Contrata a varios freelancers en un mismo trabajo, revisa las ofertas como versiones numeradas y sigue una cronología de actividad compartida en el chat.",
+          "links": [
+            "market",
+            "bMarket"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "El código importado se lee por completo"
+        },
+        {
+          "text": "Guías paso a paso"
+        },
+        {
+          "text": "Las tareas de los agentes usan tu modelo"
+        },
+        {
+          "text": "Extras de Sidekick en la app"
+        },
+        {
+          "text": "Nuevo logotipo; las imágenes no se mueven"
+        }
+      ]
+    },
+    {
+      "id": "september-2026",
+      "month": "Septiembre",
+      "year": 2026,
+      "count": 11,
+      "title": "Tu idioma. Listo para producción.",
+      "summary": "Todo el producto en ocho idiomas, una revisión previa al lanzamiento para código existente y un marketplace que conoce tu proyecto.",
+      "marker": "¿Estuviste aquí por última vez hace tres meses? Todo lo que hay sobre esta línea es nuevo para ti.",
+      "features": [
+        {
+          "category": "Workspace",
+          "title": "Ocho idiomas",
+          "description": "Inglés, español, portugués, francés, alemán, hindi, neerlandés y árabe con diseño de derecha a izquierda. Una sola elección te acompaña en todas partes.",
+          "links": [
+            "lang"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "La IA responde en tu idioma",
+          "description": "Sidekick, el chat de construcción y el chat de diseño responden en el idioma que elegiste. Los correos y las notificaciones también lo siguen.",
+          "links": [
+            "lang"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Production Hardening",
+          "description": "Una revisión previa al lanzamiento de tu código: 39 comprobaciones en 9 áreas, una puntuación y una calificación de A a E, con evidencias y una corrección recomendada por cada comprobación.",
+          "links": [
+            "hard",
+            "tHarden",
+            "bHarden"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Corrige los hallazgos con un clic",
+          "description": "Entrega los hallazgos a los agentes de think4ever o copia una solicitud de corrección lista para Claude Code, Cursor o Codex. Descarga la revisión en PDF.",
+          "links": [
+            "hard"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "El código importado se entiende mejor",
+          "description": "La tecnología se detecta a partir de tu código. Los proyectos de React, Next.js, Remix, Supabase y Firebase se describen correctamente.",
+          "links": [
+            "analyze"
+          ]
+        },
+        {
+          "category": "Marketplace",
+          "title": "Una contratación que conoce tu proyecto",
+          "description": "“Ask Think” redacta la oferta de trabajo a partir de tu proyecto, y cada propuesta recibe una puntuación de adecuación con IA, con puntos fuertes y dudas.",
+          "links": [
+            "market"
+          ]
+        },
+        {
+          "category": "Marketplace",
+          "title": "Exactamente el acceso que necesita un freelancer",
+          "description": "Un contrato concede un acceso al espacio de trabajo o un token para la herramienta de programación del propio freelancer, para los proyectos elegidos. Termina por sí solo.",
+          "links": [
+            "market"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Claude Opus 5.5 y un cambio rápido de modelo",
+          "description": "Un nuevo modelo de primer nivel. Si un modelo sigue fallando, una ventana emergente traslada solo ese tipo de trabajo a otro en dos clics.",
+          "links": [
+            "settings"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Edita texto en la vista previa del diseño"
+        },
+        {
+          "text": "Perfiles, reseñas y búsquedas guardadas"
+        },
+        {
+          "text": "Marketplace desde el espacio de trabajo"
+        }
+      ]
+    },
+    {
+      "id": "august-2026",
+      "month": "Agosto",
+      "year": 2026,
+      "count": 16,
+      "title": "Un camino claro de la idea a la app en funcionamiento",
+      "summary": "Un asistente de inicio, un tablero “¿Qué sigue?”, enlaces para compartir con tus propios clientes, archivos PDF y Word reales, y compilaciones que se pausan en lugar de fallar.",
+      "features": [
+        {
+          "category": "Workspace",
+          "title": "Asistente de inicio",
+          "description": "Un proyecto nuevo hace una sola pregunta: analizar código existente o diseñar a partir de una idea. Luego te lleva allí.",
+          "links": [
+            "create"
+          ]
+        },
+        {
+          "category": "Workspace",
+          "title": "Tablero “¿Qué sigue?”",
+          "description": "Cinco pasos del concepto a una app en funcionamiento, cada uno marcado como hecho, en curso o listo. Haz clic en un paso para iniciarlo.",
+          "links": []
+        },
+        {
+          "category": "Share",
+          "title": "Ver y compartir",
+          "description": "Comparte por enlace una vista limpia de solo lectura del proyecto, para personas sin cuenta. Tú eliges las secciones y la caducidad.",
+          "links": [
+            "share"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Archivos PDF y Word reales",
+          "description": "Exporta los documentos de requisitos y la Arquitectura funcional como .pdf y .docx, y el texto de los requisitos en cinco formatos.",
+          "links": [
+            "reqDocs"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Compilaciones que se pausan en lugar de fallar",
+          "description": "Crear una app a partir de un diseño es mucho más rápido, y un paso que falla pausa el plan para que puedas reanudarlo.",
+          "links": [
+            "tasks"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Análisis de calidad del código",
+          "description": "Analiza el proyecto en busca de errores, vulnerabilidades y code smells, con gravedad y tiempo de corrección. Envía los hallazgos a los agentes para que los corrijan.",
+          "links": [
+            "quality"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Mapa de arquitectura de la aplicación",
+          "description": "Un mapa interactivo de una base de código existente: sus partes, los componentes que hay dentro y cómo se relacionan.",
+          "links": [
+            "bCodeViz"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Miniaturas, Modo de vista y un chat de página",
+          "description": "Mira una imagen real de cada pantalla, recorre los diseños como un visitante y haz preguntas sobre una página sin modificarla.",
+          "links": [
+            "ui"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Publicar en Jira",
+          "link": "jira"
+        },
+        {
+          "text": "Tareas simplificadas"
+        },
+        {
+          "text": "Ejecutar la app desde el modo Diseño"
+        },
+        {
+          "text": "Cargas seguras"
+        },
+        {
+          "text": "Menús más simples, apertura más rápida"
+        },
+        {
+          "text": "Utilizable en el teléfono"
+        },
+        {
+          "text": "Pantallas agrupadas por módulo"
+        },
+        {
+          "text": "Inicia sesión y ve directo al trabajo"
+        }
+      ]
+    },
+    {
+      "id": "july-2026",
+      "month": "Julio",
+      "year": 2026,
+      "count": 18,
+      "title": "173 temas y una IA que pregunta primero",
+      "summary": "El lado visual maduró, la IA se volvió más segura y estable para trabajar, y las ideas grandes pudieron construirse por fases.",
+      "features": [
+        {
+          "category": "Design",
+          "title": "173 temas listos para usar",
+          "description": "Elige el aspecto de tus pantallas en un catálogo de temas completos, cada uno con una captura de pantalla y una demostración en vivo.",
+          "links": [
+            "theme"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Tu propio tema o el estilo de tu sitio web",
+          "description": "Describe un aspecto y la IA crea el tema. O introduce la dirección de un sitio web y reutiliza sus colores, fuentes y logotipo.",
+          "links": [
+            "theme"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "La IA pregunta antes de cambiar nada",
+          "description": "En ambos chats la IA muestra lo que planea cambiar y espera “Confirmar y aplicar” o “Rechazar”.",
+          "links": [
+            "sidekick"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Fases (Roadmap)",
+          "description": "Divide un concepto en fases con nombre, filtra el lienzo por fase y construye una fase a la vez.",
+          "links": [
+            "concept"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Construye con nosotros o con tu propia herramienta",
+          "description": "Pulsa Build y elige: los agentes de think4ever, o Claude Code, Cursor, Codex y otras seis herramientas que leen tu diseño directamente.",
+          "links": [
+            "mcp",
+            "bOneSpec"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Memoria del proyecto",
+          "description": "Las decisiones, restricciones y preferencias se recuerdan por proyecto y se usan en sesiones posteriores. Puedes verlas y editarlas.",
+          "links": []
+        },
+        {
+          "category": "AI",
+          "title": "Elige el modelo según el tipo de trabajo",
+          "description": "Elige un modelo por separado para concepto, diseño de interfaz, diagramas, chat, construcción y documentos. GLM-5.2 y Kimi K3 se sumaron a la lista.",
+          "links": [
+            "settings"
+          ]
+        },
+        {
+          "category": "Marketplace",
+          "title": "Marketplace de freelancers",
+          "description": "Publica trabajos, envía propuestas, acuerda contratos y chatea en directo. El freelancer obtiene acceso al proyecto acordado mientras el contrato esté vigente.",
+          "links": [
+            "market",
+            "bMarket"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Elige qué páginas construir"
+        },
+        {
+          "text": "Un cambio en todas las pantallas"
+        },
+        {
+          "text": "Se recupera por sí solo"
+        },
+        {
+          "text": "Página de Arquitectura funcional",
+          "link": "funcArch"
+        },
+        {
+          "text": "Ventana de variables de entorno"
+        },
+        {
+          "text": "Descarga el proyecto, exporta la base de datos"
+        },
+        {
+          "text": "Mayor comodidad con Sidekick"
+        },
+        {
+          "text": "Un recibo de lo que cambió la IA"
+        },
+        {
+          "text": "Once regiones al registrarse"
+        },
+        {
+          "text": "Marketplace en la app"
+        }
+      ]
+    },
+    {
+      "id": "june-2026",
+      "month": "Junio",
+      "year": 2026,
+      "count": 18,
+      "title": "Sidekick toma el volante",
+      "summary": "El espacio de trabajo cambió de forma, el asistente empezó a hacer el trabajo en lugar de describirlo y la plataforma se abrió a otras herramientas.",
+      "marker": "¿Estuviste aquí por última vez hace seis meses? Todo lo que hay sobre esta línea es nuevo para ti.",
+      "features": [
+        {
+          "category": "AI",
+          "title": "Sidekick hace los clics por ti",
+          "description": "El asistente responde en vivo y actúa: cambia el concepto, crea tareas, abre la página correcta y ejecuta acciones de menú por ti.",
+          "links": [
+            "sidekick"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Crea, ejecuta e importa desde el chat",
+          "description": "Pide a Sidekick que cree o cambie pantallas de interfaz, inicie o detenga tu app, muestre sus registros o importe código desde GitHub.",
+          "links": [
+            "sidekick"
+          ]
+        },
+        {
+          "category": "Connect",
+          "title": "Tu plan dentro de Claude Code, Cursor y Codex",
+          "description": "Las herramientas de programación con IA se conectan mediante MCP y trabajan a partir del mismo concepto, diseños y tareas. Guías de configuración para nueve herramientas.",
+          "links": [
+            "mcpOverview",
+            "tClaude",
+            "tCodex"
+          ]
+        },
+        {
+          "category": "Connect",
+          "title": "API pública",
+          "description": "Una API documentada con tokens de acceso que tú mismo creas, limitas y revocas, y una consola para probar llamadas.",
+          "links": [
+            "api"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Once capas de concepto",
+          "description": "Cuatro capas nuevas: API Endpoints, Estado y ciclo de vida, Eventos y trabajos, Entorno y configuración. El plan ahora cubre todo el producto.",
+          "links": [
+            "concept"
+          ]
+        },
+        {
+          "category": "App",
+          "title": "App de think4ever para Windows y Android",
+          "description": "Proyectos, el lienzo del concepto, requisitos, vistas previas de interfaz, Sidekick y un espacio de trabajo para desarrolladores en una app nativa.",
+          "links": [
+            "apps"
+          ]
+        },
+        {
+          "category": "Workspace",
+          "title": "Nuevo diseño, tema oscuro",
+          "description": "Menús arriba, Sidekick anclado a la izquierda en todas las páginas y un tema oscuro con un interruptor claro/oscuro.",
+          "links": []
+        },
+        {
+          "category": "Connect",
+          "title": "Diez conectores",
+          "description": "Jira, Confluence, Figma, GitHub, Slack, Notion, Linear, Sentry, Google Drive y OneDrive. Adjunta elementos al chat o deja que la IA los busque.",
+          "links": [
+            "eco",
+            "integrations"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Los proyectos nuevos empiezan como una conversación"
+        },
+        {
+          "text": "Debates sobre cualquier elemento del concepto"
+        },
+        {
+          "text": "Historial de cambios",
+          "link": "others"
+        },
+        {
+          "text": "Todo el proyecto en un archivo"
+        },
+        {
+          "text": "Aprueba los requisitos antes de construir"
+        },
+        {
+          "text": "Vista de arquitectura y lista de objetos"
+        },
+        {
+          "text": "Las compilaciones sobreviven a las interrupciones"
+        },
+        {
+          "text": "Historial del chat y ventanas emergentes de preguntas"
+        },
+        {
+          "text": "Herramientas del modo desarrollador",
+          "link": "dev"
+        },
+        {
+          "text": "Continuar con Google"
+        }
+      ]
+    },
+    {
+      "id": "may-2026",
+      "month": "Mayo",
+      "year": 2026,
+      "count": 17,
+      "title": "De la idea al código en funcionamiento en un solo lugar",
+      "summary": "El mes en que el producto se convirtió en una sola herramienta conectada: planifica el proyecto, pasa al código, deja que los agentes lo construyan paso a paso, ejecútalo y comparte un enlace público.",
+      "features": [
+        {
+          "category": "Build",
+          "title": "El modo desarrollador se une al espacio de trabajo",
+          "description": "Un solo inicio de sesión, dos vistas del mismo proyecto. Pasa del diseño al código: chat de programación con IA, editor de archivos, terminal, base de datos y un navegador para tu app en ejecución.",
+          "links": [
+            "dev"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Objetivos con un plan que tú apruebas",
+          "description": "Describe lo que quieres. Los agentes redactan un plan paso a paso; tú lo revisas, desmarcas pasos y lo ejecutas. Omite, pausa o cancela en cualquier momento.",
+          "links": [
+            "tasks"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Construye a partir de tu diseño",
+          "description": "“Desde el diseño” compara el código con tu concepto y tus diseños de interfaz y planifica el trabajo para cerrar la brecha.",
+          "links": []
+        },
+        {
+          "category": "Build",
+          "title": "Ejecuta tu app y comparte un enlace público",
+          "description": "La app se ejecuta dentro del espacio de trabajo. Un interruptor le da una dirección pública que cualquiera puede abrir.",
+          "links": [
+            "run",
+            "publicAccess"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Biblioteca de diseños de soluciones",
+          "description": "299 puntos de partida listos para usar en 10 sectores. Busca, previsualiza y aplica uno con un clic: pantallas, flujos, datos, roles y reglas incluidos.",
+          "links": []
+        },
+        {
+          "category": "Connect",
+          "title": "Extensión de VS Code",
+          "description": "Edita los archivos del proyecto en VS Code, mantén una carpeta local sincronizada en ambos sentidos, habla con los agentes y envíales de vuelta los errores del terminal.",
+          "links": [
+            "vscode"
+          ]
+        },
+        {
+          "category": "Workspace",
+          "title": "Empieza con “¿Qué quieres crear?”",
+          "description": "Describe la idea con tus propias palabras, adjunta archivos o importa código existente desde GitHub, un ZIP o tu repositorio.",
+          "links": [
+            "intent",
+            "tIntent"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Usuarios de la empresa con roles",
+          "description": "Añade miembros del equipo, asígnales roles y decide por proyecto quién tiene acceso. Cada miembro ve solo lo que su rol permite.",
+          "links": [
+            "users",
+            "tTeam"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Del código al concepto"
+        },
+        {
+          "text": "Sidekick responde sin cambiar nada"
+        },
+        {
+          "text": "Los cambios del concepto proponen tareas"
+        },
+        {
+          "text": "Crea solo las páginas que faltan"
+        },
+        {
+          "text": "Diagramas a partir de un prompt"
+        },
+        {
+          "text": "Limita lo que un agente puede cambiar"
+        },
+        {
+          "text": "Restablecimiento de contraseña por código de correo"
+        },
+        {
+          "text": "Regiones de India y Australia"
+        },
+        {
+          "text": "Cualquier stack tecnológico es bienvenido"
+        }
+      ]
+    },
+    {
+      "id": "april-2026",
+      "month": "Abril",
+      "year": 2026,
+      "count": 11,
+      "title": "Ejecuta el proyecto donde lo planificas",
+      "summary": "El espacio de trabajo pasó de “planificar y construir” a ser un lugar donde un equipo también puede gestionar el proyecto: incidencias, una base de conocimiento, formularios de comentarios y una conexión con Jira.",
+      "features": [
+        {
+          "category": "Team",
+          "title": "Gestor de incidencias",
+          "description": "Informa y haz seguimiento de errores, funciones y tareas dentro del proyecto: vistas de lista, tablero y resumen, filtros, comentarios y archivos adjuntos.",
+          "links": [
+            "issues"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Base de conocimiento",
+          "description": "Una wiki para cada proyecto con editor de bloques, guardado automático, historial de versiones, plantillas, etiquetas y exportación a Markdown.",
+          "links": [
+            "kb"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Formularios de comentarios mediante enlace público",
+          "description": "Crea una encuesta, una votación o un formulario de comentarios y compártelo por enlace. Las personas responden sin cuenta; los resultados se pueden exportar a CSV.",
+          "links": [
+            "feedback"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Inicia un concepto a partir de tus documentos",
+          "description": "Adjunta requisitos, especificaciones o notas. La IA redacta los requisitos a partir de ellos o construye todo el concepto.",
+          "links": [
+            "req"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Más modelos de IA, además de Grok",
+          "description": "Modelos más recientes de Claude, GPT, Gemini y DeepSeek, y Grok como nuevo proveedor. Las respuestas largas ya no se cortan.",
+          "links": []
+        },
+        {
+          "category": "Connect",
+          "title": "Conexión con Jira",
+          "description": "Conecta un proyecto de Jira y trae sus incidencias al gestor de incidencias de la plataforma, con el estado y la prioridad correspondientes.",
+          "links": [
+            "jira"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Tu propia clave funciona en todas partes",
+          "description": "Los documentos y las presentaciones funcionan con la clave de cualquier proveedor, y varios agentes pueden trabajar con una misma clave al mismo tiempo.",
+          "links": [
+            "keys"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Comentarios y menciones en un solo lugar",
+          "description": "Todos los hilos de comentarios, tus @menciones y cada enlace compartido activo se reúnen en una sola página.",
+          "links": [
+            "collab"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Instrucciones adicionales para una compilación"
+        },
+        {
+          "text": "Datos de prueba que se corrigen solos"
+        },
+        {
+          "text": "Vistas de seguridad y de casos de prueba más completas"
+        }
+      ]
+    },
+    {
+      "id": "march-2026",
+      "month": "Marzo",
+      "year": 2026,
+      "count": 15,
+      "title": "Edita lo que sea, deshaz lo que sea",
+      "summary": "Requisitos que mantienen el plan al día, un historial al que puedes volver paso a paso, herramientas de diseño para cada elemento y el primer portal de cuenta.",
+      "features": [
+        {
+          "category": "Plan",
+          "title": "Requisitos que actualizan el plan",
+          "description": "Edita los requisitos y la IA propone los cambios correspondientes en el concepto, cada uno con su motivo. Marca los que quieras y aplícalos.",
+          "links": [
+            "req"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Historial de cambios con reversión en un clic",
+          "description": "Cada cambio de la IA en el concepto aparece en una lista con la hora y una descripción. Un clic devuelve el concepto a como estaba antes de ese cambio.",
+          "links": [
+            "others"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Edita cualquier elemento en la vista previa del diseño",
+          "description": "Haz clic derecho en un elemento para cambiar directamente el tamaño de su texto, sus colores y su espaciado, o elige “Pedir a la IA que lo cambie” solo para ese elemento.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "20 diseños de página con vista previa en vivo",
+          "description": "Elige la estructura de la página antes de construir: barra lateral, panel, hero, cuadrícula, pantalla dividida y más, con vista previa en escritorio, tableta y teléfono.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Tus propias imágenes en el diseño",
+          "description": "Sube un logotipo, imágenes o contenido multimedia con una instrucción como “usa esto como logotipo principal” y la IA los coloca.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Editor de código y carga de ZIP",
+          "description": "Abre cualquier archivo fuente en un editor integrado e incorpora una base de código existente como un ZIP de hasta 500 MB.",
+          "links": [
+            "analyze"
+          ]
+        },
+        {
+          "category": "Account",
+          "title": "El portal de cuenta",
+          "description": "Regístrate una sola vez y entra a tu espacio de trabajo con un clic, ya con la sesión iniciada. Tu perfil, tus ajustes y el soporte también están ahí.",
+          "links": [
+            "portal"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Búsqueda en todo el concepto",
+          "description": "Un solo cuadro de búsqueda encuentra pantallas, flujos, objetos de datos, roles, integraciones y reglas, y salta al resultado.",
+          "links": [
+            "concept"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Un resumen escrito para cada pantalla"
+        },
+        {
+          "text": "Una sola navegación en todas las páginas"
+        },
+        {
+          "text": "Indicadores en vivo de “La IA está trabajando”"
+        },
+        {
+          "text": "Contenedores"
+        },
+        {
+          "text": "Historial de commits, diff y reversión",
+          "link": "vc"
+        },
+        {
+          "text": "Exportación de la base de datos"
+        },
+        {
+          "text": "Guía del usuario y Mi perfil"
+        }
+      ]
+    },
+    {
+      "id": "february-2026",
+      "month": "Febrero",
+      "year": 2026,
+      "count": 11,
+      "title": "Un espacio de trabajo, seis capas",
+      "summary": "El concepto pasó de ser solo pantallas a ser una imagen completa del producto, y todo se trasladó a un único espacio de trabajo de proyecto.",
+      "features": [
+        {
+          "category": "Plan",
+          "title": "Un concepto con seis capas",
+          "description": "Además de las pantallas: Flujos de negocio, Objetos de datos, Roles y permisos, Integraciones y Reglas de negocio. Sidekick construye y edita las seis.",
+          "links": [
+            "concept"
+          ]
+        },
+        {
+          "category": "Workspace",
+          "title": "El nuevo espacio de trabajo del proyecto",
+          "description": "Un menú para todo lo que hay en un proyecto: capas del concepto, diseños de interfaz, diagramas, documentos, tareas, base de datos, código fuente y control de versiones.",
+          "links": [
+            "intro"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Trae tu código existente",
+          "description": "Apunta la plataforma a una base de código y esta escribe el concepto a partir del código, con una ventana de progreso en vivo.",
+          "links": [
+            "analyze",
+            "tExisting",
+            "bCodeViz"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Mira el concepto a través de un rol",
+          "description": "Elige un rol y se resaltan las pantallas a las que puede acceder. Cada pantalla indica quién tiene acceso.",
+          "links": [
+            "roles"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Los diseños y diagramas se construyen en segundo plano",
+          "description": "Los diseños de interfaz y los diagramas de arquitectura se construyen mientras sigues trabajando y aparecen en sus propias páginas cuando están listos.",
+          "links": [
+            "diagrams"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Usuarios, grupos y permisos",
+          "description": "Añade usuarios del equipo, ponlos en grupos predefinidos y decide qué puede hacer cada grupo. La interfaz oculta lo que un usuario no puede usar.",
+          "links": [
+            "users"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Usa tus propias claves de IA",
+          "description": "Añade las claves de tus propios proveedores en Mis claves de API y ejecuta todo el trabajo de IA con ellas.",
+          "links": [
+            "keys"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Mejor planificación de compilaciones y control de tareas",
+          "description": "Las compilaciones más grandes se planifican por etapas, Cancelar detiene de verdad una tarea, y la lista de tareas tiene filtros, cancelar todo y estado en vivo.",
+          "links": [
+            "tasks"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Exportar e importar un concepto"
+        },
+        {
+          "text": "Inicio rápido en un concepto vacío"
+        },
+        {
+          "text": "El chat del proyecto responde preguntas"
+        }
+      ]
+    },
+    {
+      "id": "january-2026",
+      "month": "Enero",
+      "year": 2026,
+      "count": 6,
+      "title": "Tú eliges la tecnología y el aspecto",
+      "summary": "Dos decisiones que antes tomaba la IA sola pasaron a ser tuyas: con qué se construye el producto y qué aspecto tiene.",
+      "features": [
+        {
+          "category": "Build",
+          "title": "Stack tecnológico",
+          "description": "Elige tu backend, tu base de datos y tu front end en listas extensas. Cada agente y cada documento sigue entonces tu elección.",
+          "links": [
+            "settings"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Galería de temas",
+          "description": "Elige uno de los 34 temas de color listos para usar en tu diseño de interfaz y previsualízalo primero con elementos de muestra. (Hoy el catálogo tiene 173.)",
+          "links": [
+            "theme"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Agente de casos de prueba",
+          "description": "Casos de prueba escritos a partir de tu código: pasos numerados, el resultado esperado de cada paso, prioridades y etiquetas, agrupados por área.",
+          "links": [
+            "testing"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Commits de Git más fiables",
+          "description": "Ahora el commit funciona en una carpeta nueva, elige la rama correcta y descarga primero los últimos cambios.",
+          "links": [
+            "vc"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Barra de herramientas del concepto en tres menús"
+        },
+        {
+          "text": "El agente desarrollador puede empezar desde cero"
+        }
+      ]
+    },
+    {
+      "id": "december-2025",
+      "month": "Diciembre",
+      "year": 2025,
+      "count": 6,
+      "title": "Tu repositorio, tus documentos",
+      "summary": "Dos cosas que los equipos piden pronto: una conexión con su propio repositorio de código y documentos terminados escritos a partir del concepto.",
+      "marker": "¿Estuviste aquí por última vez hace un año? Todo lo que hay sobre esta línea es nuevo para ti.",
+      "features": [
+        {
+          "category": "Build",
+          "title": "Control de versiones",
+          "description": "Conecta un proyecto a GitHub, GitLab, Git simple o SVN. Haz commit, actualiza y lee el registro completo de cada operación.",
+          "links": [
+            "vc"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "El agente desarrollador hace commit de su propio trabajo",
+          "description": "Tras una tarea de programación exitosa, el agente hace commit de los cambios en tu repositorio, con su propia explicación como mensaje.",
+          "links": [
+            "vc"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Documentos escritos a partir de tu concepto",
+          "description": "Resumen del concepto, Especificación funcional, Especificación técnica y Documento de diseño de la base de datos, cada uno con portada e índice.",
+          "links": [
+            "reqDocs",
+            "summary"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Exporta como SVG y PNG",
+          "description": "Descarga el concepto como un dibujo vectorial limpio o como una imagen, y cualquier diagrama de flujo como imagen.",
+          "links": []
+        }
+      ],
+      "also": [
+        {
+          "text": "Las preguntas de requisitos aceptan texto libre"
+        },
+        {
+          "text": "Directo al nuevo proyecto"
+        }
+      ]
+    },
+    {
+      "id": "november-2025",
+      "month": "Noviembre",
+      "year": 2025,
+      "count": 4,
+      "title": "La IA pregunta antes de construir",
+      "summary": "Ahora la plataforma te ayuda a definir lo que realmente quieres antes de dibujar nada.",
+      "features": [
+        {
+          "category": "Plan",
+          "title": "Analizar requisitos",
+          "description": "Describe una idea aproximada. La IA hace preguntas aclaratorias, con una opción “Deja que la IA decida”, y convierte tus respuestas en requisitos escritos y un concepto.",
+          "links": [
+            "intent",
+            "req"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Los requisitos permanecen con el concepto",
+          "description": "Cada concepto lleva una descripción escrita de lo que debe hacer el sistema. Léela, edítala y guárdala en cualquier momento.",
+          "links": [
+            "req"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Elementos de tarjeta y gráfico",
+          "description": "Las pantallas de un concepto ahora pueden contener tarjetas y gráficos, y la IA los usa cuando encajan.",
+          "links": []
+        },
+        {
+          "category": "AI",
+          "title": "El asistente de voz te deja terminar la frase",
+          "description": "Una pausa breve ya no te interrumpe: el asistente espera un momento más antes de responder.",
+          "links": []
+        }
+      ],
+      "also": []
+    },
+    {
+      "id": "october-2025",
+      "month": "Octubre",
+      "year": 2025,
+      "count": 11,
+      "title": "Del concepto a pantallas en las que se puede hacer clic",
+      "summary": "El mes en que la plataforma aprendió a diseñar. Un botón convierte un concepto en páginas reales por las que puedes navegar y que puedes cambiar describiendo lo que quieres.",
+      "features": [
+        {
+          "category": "Design",
+          "title": "Crear diseño de interfaz",
+          "description": "Un botón convierte tu concepto en un conjunto completo de páginas reales con un estilo compartido y navegación funcional entre ellas.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Recorre tu diseño como una app",
+          "description": "Abre las páginas diseñadas en una pestaña del navegador, salta a cualquier página desde un menú de páginas y sigue los enlaces entre pantallas.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Cambia una página describiéndola",
+          "description": "En el chat Modificar página dices qué debe cambiar. La IA ve la página como tú y cambia solo lo que pediste.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Deshacer e historial de versiones para cada página",
+          "description": "Se conserva cada cambio de una página. Vuelve a cualquier versión anterior con un clic; no se pierde nada.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Diagramas de arquitectura a partir de un concepto",
+          "description": "Un botón dibuja un conjunto completo de diagramas a partir de tu concepto: flujo de usuario, flujo de datos, esquema de base de datos, secuencia, despliegue, seguridad y más.",
+          "links": [
+            "diagrams"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Agente de seguridad",
+          "description": "Una revisión de seguridad de tu código: problemas por gravedad con los archivos afectados y referencias a CWE y OWASP. Descárgala como informe de Word.",
+          "links": [
+            "agentDocs"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Editor de diagramas de flujo con su propio Sidekick"
+        },
+        {
+          "text": "Los agentes construyen a partir de tu plan"
+        },
+        {
+          "text": "Prueba una pantalla como maqueta interactiva"
+        },
+        {
+          "text": "Exporta el concepto como imagen"
+        },
+        {
+          "text": "El agente analítico maneja más datos"
+        }
+      ]
+    },
+    {
+      "id": "september-2025",
+      "month": "Septiembre",
+      "year": 2025,
+      "count": 8,
+      "title": "Convierte tu idea en un plan hablando",
+      "summary": "Donde empieza esta historia: un espacio de trabajo con proyectos, un lienzo visual de conceptos, un chat con IA y un equipo de agentes de IA. En septiembre la plataforma aprendió a escuchar y a construir a partir de lo que escuchó.",
+      "features": [
+        {
+          "category": "AI",
+          "title": "Convierte tu idea en un concepto hablando",
+          "description": "El asistente de voz pregunta qué quieres crear, te lee un resumen y dibuja el concepto por ti.",
+          "links": []
+        },
+        {
+          "category": "Build",
+          "title": "Build con un clic",
+          "description": "Un botón Build entrega tu concepto a los agentes de IA y te lleva a la lista de tareas cuando el trabajo termina.",
+          "links": [
+            "tasks"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Agente analítico",
+          "description": "Haz una pregunta sobre tus datos y obtén un informe con tablas, gráficos y conclusiones, construido únicamente a partir de tus datos reales.",
+          "links": []
+        },
+        {
+          "category": "Build",
+          "title": "Un proyecto listo desde el primer minuto",
+          "description": "Cada proyecto nuevo obtiene automáticamente su propia carpeta y su propia base de datos. Nada que configurar a mano.",
+          "links": []
+        }
+      ],
+      "also": [
+        {
+          "text": "Conoce a Sidekick",
+          "link": "sidekick"
+        },
+        {
+          "text": "Ediciones de IA más seguras en un concepto"
+        },
+        {
+          "text": "Las pestañas del proyecto conservan su lugar"
+        },
+        {
+          "text": "El agente de QA explica por qué una app no arrancaba"
+        }
+      ]
+    }
+  ]
+}

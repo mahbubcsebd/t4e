@@ -1,0 +1,1286 @@
+{
+  "links": {
+    "tasks": "Docs: Tasks",
+    "share": "Docs: View & Share",
+    "skills": "Docs: Agent Skills",
+    "mcp": "Docs: Think MCP",
+    "mcpOverview": "Docs: MCP setup guides",
+    "mcpCursor": "Docs: Cursor",
+    "thinkp": "Docs: Import .thinkp",
+    "api": "Docs: Think API",
+    "agentDocs": "Docs: Agents Documents",
+    "apps": "Get the apps",
+    "users": "Docs: Users",
+    "onboarding": "Docs: Getting started",
+    "market": "Docs: Marketplace",
+    "lang": "Docs: Languages",
+    "hard": "Docs: Production Hardening",
+    "analyze": "Docs: Reverse Engineering",
+    "create": "Docs: Build a new project",
+    "reqDocs": "Docs: Requirements Docs",
+    "quality": "Docs: Code Quality",
+    "ui": "Docs: UI Design",
+    "jira": "Docs: Jira",
+    "theme": "Docs: Themes",
+    "sidekick": "Docs: Sidekick",
+    "settings": "Docs: Project Settings",
+    "concept": "Docs: Concept",
+    "eco": "Docs: Integrations",
+    "integrations": "All integrations",
+    "dev": "Docs: Developer Mode",
+    "run": "Docs: Run the app",
+    "publicAccess": "Docs: Public access",
+    "vscode": "Docs: VS Code",
+    "intent": "Docs: Design from Intent",
+    "issues": "Docs: Issues",
+    "kb": "Docs: Knowledge base",
+    "feedback": "Docs: Feedback",
+    "req": "Docs: Requirements",
+    "keys": "Docs: API Keys",
+    "collab": "Docs: Collaboration",
+    "others": "Docs: Change History",
+    "portal": "Docs: Portal",
+    "intro": "Docs: Designer",
+    "roles": "Docs: Roles & Permissions",
+    "diagrams": "Docs: Technical Diagrams",
+    "testing": "Docs: Testing",
+    "vc": "Docs: Version Control",
+    "summary": "Docs: Concept Summary",
+    "funcArch": "Docs: Functional Architecture",
+    "tClaude": "Tutorial: Design in Think, Code in Claude",
+    "tCodex": "Tutorial: Design in Think, Code in Codex",
+    "tHarden": "Tutorial: Make vibe-coded apps production ready",
+    "tTeam": "Tutorial: Add co-developers",
+    "tExisting": "Tutorial: Turn existing code into a blueprint",
+    "tIntent": "Tutorial: Build an app from intent",
+    "bCursor": "Blog: Our dashboard, built with Cursor",
+    "bMarket": "Blog: Introducing the Marketplace",
+    "bHarden": "Blog: From prototype to production",
+    "bCodeViz": "Blog: Code visualization for real codebases",
+    "bOneSpec": "Blog: One spec, every agent"
+  },
+  "months": [
+    {
+      "id": "november-2026",
+      "month": "November",
+      "year": 2026,
+      "count": 12,
+      "title": "Check it. Lock it. Share it.",
+      "summary": "Tools for checking and protecting the work: see how much of the plan is really in the code, freeze an agreed design, and share a clickable preview.",
+      "features": [
+        {
+          "category": "Build",
+          "title": "Gap Analysis",
+          "description": "How much of the plan is really in the code? Every concept item gets a percentage, what is built, what is missing, and the code as proof.",
+          "links": [
+            "tasks"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "From findings to tasks",
+          "description": "Run the analysis for one phase or one task, turn what is missing into tasks, and compare before and now after a fix.",
+          "links": [
+            "tasks"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Lock Design",
+          "description": "Freeze the concept, UI screens and requirements. Nobody and nothing changes them until you unlock: not a teammate, not an AI.",
+          "links": []
+        },
+        {
+          "category": "Design",
+          "title": "Imported projects get their real screens",
+          "description": "Bring in existing code and the platform rebuilds the app's own screens in their original look, tied to the concept.",
+          "links": [
+            "analyze",
+            "tExisting"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Interactive preview link",
+          "description": "Share a full-screen, clickable preview of the screens only. Buttons and navigation work; nothing else is shown.",
+          "links": [
+            "share"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Company Agent Skills",
+          "description": "Write your company's standing instructions once. Every agent follows them in every project.",
+          "links": [
+            "skills"
+          ]
+        },
+        {
+          "category": "Connect",
+          "title": "More from your coding tool",
+          "description": "Edit the concept item by item, run the whole task board and start a Gap Analysis from Claude Code, Cursor or Codex.",
+          "links": [
+            "mcp"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Export carries the whole design",
+          "description": "A .thinkp file now includes styles, menus, images and documents, and can be imported as a new project from the start wizard.",
+          "links": [
+            "thinkp"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Manage tokens, add to Cursor",
+          "link": "mcpCursor"
+        },
+        {
+          "text": "Clearer phases"
+        },
+        {
+          "text": "Documents carry your project's name"
+        },
+        {
+          "text": "Explorer: collapse all, expand all"
+        }
+      ]
+    },
+    {
+      "id": "october-2026",
+      "month": "October",
+      "year": 2026,
+      "count": 13,
+      "title": "Open to your tools",
+      "summary": "Your AI coding tool can build and run an app in the think4ever cloud, the app covers nearly everything the web does, and reports read like prepared business documents.",
+      "features": [
+        {
+          "category": "Connect",
+          "title": "Build and run from your coding tool",
+          "description": "Claude Code, Cursor or Codex can write files, install packages, start the app, read its logs and publish it in the think4ever cloud.",
+          "links": [
+            "mcp",
+            "tClaude",
+            "tCodex",
+            "bCursor"
+          ]
+        },
+        {
+          "category": "Connect",
+          "title": "Public API 1.0",
+          "description": "The API now covers almost the whole workspace: code import, version control, documents, discussions, share links and more.",
+          "links": [
+            "api"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Analytical business reports",
+          "description": "Eleven report types with charts, tables and conclusions in plain business language. Share by link or download as PDF.",
+          "links": [
+            "agentDocs"
+          ]
+        },
+        {
+          "category": "App",
+          "title": "The app becomes a full client",
+          "description": "Version 1.0.1 covers nearly everything the web workspace does, in eight languages, with a Windows installer.",
+          "links": [
+            "apps"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "A proper welcome for new team members",
+          "description": "A new member gets a welcome e-mail and chooses their own password at first sign-in. Details, roles and project access are set in one step.",
+          "links": [
+            "users",
+            "tTeam"
+          ]
+        },
+        {
+          "category": "Account",
+          "title": "Start from “What do you want to build?”",
+          "description": "Choose your path on the first page. Your answer travels through sign-up, and the workspace opens on that step.",
+          "links": [
+            "onboarding"
+          ]
+        },
+        {
+          "category": "Account",
+          "title": "Sign in with an e-mailed code",
+          "description": "No password needed: a six-digit code signs you in. Password rules are simpler too.",
+          "links": []
+        },
+        {
+          "category": "Marketplace",
+          "title": "A complete hiring workflow",
+          "description": "Hire several freelancers on one job, revise offers as numbered versions, and follow a shared activity timeline in the chat.",
+          "links": [
+            "market",
+            "bMarket"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Imported code is read completely"
+        },
+        {
+          "text": "Step-by-step guides"
+        },
+        {
+          "text": "Agent tasks use your model"
+        },
+        {
+          "text": "Sidekick extras in the app"
+        },
+        {
+          "text": "New logo; images stay put"
+        }
+      ]
+    },
+    {
+      "id": "september-2026",
+      "month": "September",
+      "year": 2026,
+      "count": 11,
+      "title": "Your language. Ready for production.",
+      "summary": "The whole product in eight languages, a go-live review for existing code, and a marketplace that knows your project.",
+      "marker": "Last here three months ago? Everything above this line is new for you.",
+      "features": [
+        {
+          "category": "Workspace",
+          "title": "Eight languages",
+          "description": "English, Spanish, Portuguese, French, German, Hindi, Dutch and Arabic with a right-to-left layout. One choice follows you everywhere.",
+          "links": [
+            "lang"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "The AI answers in your language",
+          "description": "Sidekick, the build chat and the design chat reply in the language you chose. E-mails and notifications follow it too.",
+          "links": [
+            "lang"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Production Hardening",
+          "description": "A go-live review of your code: 39 checks in 9 areas, a score and an A–E grade, with evidence and a recommended fix per check.",
+          "links": [
+            "hard",
+            "tHarden",
+            "bHarden"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Fix the findings in one click",
+          "description": "Hand the findings to think4ever agents, or copy a ready fix request for Claude Code, Cursor or Codex. Download the review as PDF.",
+          "links": [
+            "hard"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Imported code is understood better",
+          "description": "The technology is detected from your code. React, Next.js, Remix, Supabase and Firebase projects are described correctly.",
+          "links": [
+            "analyze"
+          ]
+        },
+        {
+          "category": "Marketplace",
+          "title": "Hiring that knows your project",
+          "description": "“Ask Think” drafts the job post from your project, and every proposal gets an AI fit score with strengths and concerns.",
+          "links": [
+            "market"
+          ]
+        },
+        {
+          "category": "Marketplace",
+          "title": "Exactly the access a freelancer needs",
+          "description": "A contract grants a workspace login or a token for the freelancer's own coding tool, for chosen projects. It ends by itself.",
+          "links": [
+            "market"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Claude Opus 5.5, and a quick model switch",
+          "description": "A new top model. If a model keeps failing, a pop-up moves just that kind of work to another one in two clicks.",
+          "links": [
+            "settings"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Edit text in the design preview"
+        },
+        {
+          "text": "Profiles, reviews and saved searches"
+        },
+        {
+          "text": "Marketplace from the workspace"
+        }
+      ]
+    },
+    {
+      "id": "august-2026",
+      "month": "August",
+      "year": 2026,
+      "count": 16,
+      "title": "A clear path from idea to running app",
+      "summary": "A start wizard, a “What's next?” board, share links for your own customers, real PDF and Word files, and builds that pause instead of failing.",
+      "features": [
+        {
+          "category": "Workspace",
+          "title": "Start wizard",
+          "description": "A new project asks one question: analyse existing code, or design from an idea. Then it takes you there.",
+          "links": [
+            "create"
+          ]
+        },
+        {
+          "category": "Workspace",
+          "title": "“What's next?” board",
+          "description": "Five steps from concept to a running app, each marked done, in progress or ready. Click a step to start it.",
+          "links": []
+        },
+        {
+          "category": "Share",
+          "title": "View & Share",
+          "description": "Share a clean read-only view of the project by link, for people without an account. You choose the sections and an expiry.",
+          "links": [
+            "share"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Real PDF and Word files",
+          "description": "Export requirement documents and the Functional Architecture as .pdf and .docx, and the requirements text in five formats.",
+          "links": [
+            "reqDocs"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Builds that pause instead of failing",
+          "description": "Building an app from a design is much faster, and a step that fails pauses the plan so you can resume it.",
+          "links": [
+            "tasks"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Code Quality scan",
+          "description": "Scan the project for bugs, vulnerabilities and code smells, with severity and fix time. Send findings to the agents to fix.",
+          "links": [
+            "quality"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Application Architecture map",
+          "description": "An interactive map of an existing codebase: its parts, the components inside them and how they relate.",
+          "links": [
+            "bCodeViz"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Thumbnails, View Mode and a page chat",
+          "description": "See a real picture of every screen, click through designs like a visitor, and ask questions about a page without changing it.",
+          "links": [
+            "ui"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Publish to Jira",
+          "link": "jira"
+        },
+        {
+          "text": "Tasks made simple"
+        },
+        {
+          "text": "Run App from Design mode"
+        },
+        {
+          "text": "Safe uploads"
+        },
+        {
+          "text": "Simpler menus, faster opening"
+        },
+        {
+          "text": "Usable on a phone"
+        },
+        {
+          "text": "Screens grouped by module"
+        },
+        {
+          "text": "Sign in straight to work"
+        }
+      ]
+    },
+    {
+      "id": "july-2026",
+      "month": "July",
+      "year": 2026,
+      "count": 18,
+      "title": "173 themes, and an AI that asks first",
+      "summary": "The visual side grew up, the AI became safer and steadier to work with, and large ideas could be built in phases.",
+      "features": [
+        {
+          "category": "Design",
+          "title": "173 ready-made themes",
+          "description": "Pick the look of your screens from a catalog of complete themes, each with a screenshot and a live demo.",
+          "links": [
+            "theme"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Your own theme, or the style of your website",
+          "description": "Describe a look and the AI builds the theme. Or enter a website address and reuse its colours, fonts and logo.",
+          "links": [
+            "theme"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "The AI asks before it changes anything",
+          "description": "In both chats the AI shows what it plans to change and waits for “Confirm & Apply” or “Reject”.",
+          "links": [
+            "sidekick"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Phases (Roadmap)",
+          "description": "Split a concept into named phases, filter the canvas by phase and build one phase at a time.",
+          "links": [
+            "concept"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Build with us or with your own tool",
+          "description": "Press Build and choose: think4ever agents, or Claude Code, Cursor, Codex and six other tools that read your design directly.",
+          "links": [
+            "mcp",
+            "bOneSpec"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Project Memory",
+          "description": "Decisions, constraints and preferences are remembered per project and used in later sessions. You can view and edit them.",
+          "links": []
+        },
+        {
+          "category": "AI",
+          "title": "Choose the model per type of work",
+          "description": "Pick a model separately for concept, UI design, diagrams, chat, building and documents. GLM-5.2 and Kimi K3 joined the list.",
+          "links": [
+            "settings"
+          ]
+        },
+        {
+          "category": "Marketplace",
+          "title": "Freelance marketplace",
+          "description": "Post jobs, send proposals, agree contracts and chat live. The freelancer gets access to the agreed project while the contract runs.",
+          "links": [
+            "market",
+            "bMarket"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Choose which pages to build"
+        },
+        {
+          "text": "One change across all screens"
+        },
+        {
+          "text": "Recovers by itself"
+        },
+        {
+          "text": "Functional Architecture page",
+          "link": "funcArch"
+        },
+        {
+          "text": "Environment Variables window"
+        },
+        {
+          "text": "Download the project, export the database"
+        },
+        {
+          "text": "Sidekick comfort"
+        },
+        {
+          "text": "A receipt of what the AI changed"
+        },
+        {
+          "text": "Eleven regions at sign-up"
+        },
+        {
+          "text": "Marketplace in the app"
+        }
+      ]
+    },
+    {
+      "id": "june-2026",
+      "month": "June",
+      "year": 2026,
+      "count": 18,
+      "title": "Sidekick takes the wheel",
+      "summary": "The workspace changed shape, the assistant started doing the work instead of describing it, and the platform opened up to other tools.",
+      "marker": "Last here six months ago? Everything above this line is new for you.",
+      "features": [
+        {
+          "category": "AI",
+          "title": "Sidekick does the clicking",
+          "description": "The assistant answers live and acts: it changes the concept, creates tasks, opens the right page and runs menu actions for you.",
+          "links": [
+            "sidekick"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Build, run and import from the chat",
+          "description": "Ask Sidekick to create or change UI screens, start or stop your app, show its logs, or import code from GitHub.",
+          "links": [
+            "sidekick"
+          ]
+        },
+        {
+          "category": "Connect",
+          "title": "Your plan inside Claude Code, Cursor and Codex",
+          "description": "AI coding tools connect over MCP and work from the same concept, designs and tasks. Setup guides for nine tools.",
+          "links": [
+            "mcpOverview",
+            "tClaude",
+            "tCodex"
+          ]
+        },
+        {
+          "category": "Connect",
+          "title": "Public API",
+          "description": "A documented API with access tokens you create, limit and revoke yourself, and a console to try calls.",
+          "links": [
+            "api"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Eleven concept layers",
+          "description": "Four new layers: API Endpoints, State & Lifecycle, Events & Jobs, Environment & Config. The plan now covers the whole product.",
+          "links": [
+            "concept"
+          ]
+        },
+        {
+          "category": "App",
+          "title": "think4ever app for Windows and Android",
+          "description": "Projects, the concept canvas, requirements, UI previews, Sidekick and a developer workspace in a native app.",
+          "links": [
+            "apps"
+          ]
+        },
+        {
+          "category": "Workspace",
+          "title": "New layout, dark theme",
+          "description": "Menus on top, Sidekick docked on the left on every page, and a dark theme with a light/dark switch.",
+          "links": []
+        },
+        {
+          "category": "Connect",
+          "title": "Ten connectors",
+          "description": "Jira, Confluence, Figma, GitHub, Slack, Notion, Linear, Sentry, Google Drive and OneDrive. Attach items to the chat or let the AI search them.",
+          "links": [
+            "eco",
+            "integrations"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "New projects start as a conversation"
+        },
+        {
+          "text": "Discussions on any concept item"
+        },
+        {
+          "text": "Changes History",
+          "link": "others"
+        },
+        {
+          "text": "The whole project in one file"
+        },
+        {
+          "text": "Approve requirements before the build"
+        },
+        {
+          "text": "Architecture view and object list"
+        },
+        {
+          "text": "Builds survive interruptions"
+        },
+        {
+          "text": "Chat history and question pop-ups"
+        },
+        {
+          "text": "Developer Mode tools",
+          "link": "dev"
+        },
+        {
+          "text": "Continue with Google"
+        }
+      ]
+    },
+    {
+      "id": "may-2026",
+      "month": "May",
+      "year": 2026,
+      "count": 17,
+      "title": "From idea to running code in one place",
+      "summary": "The month the product became one connected tool: plan the project, switch to code, let the agents build it step by step, run it and share a public link.",
+      "features": [
+        {
+          "category": "Build",
+          "title": "Developer Mode joins the workspace",
+          "description": "One sign-in, two views of the same project. Switch from design to code: AI coding chat, file editor, terminal, database and a browser for your running app.",
+          "links": [
+            "dev"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Goals with a plan you approve",
+          "description": "Describe what you want. The agents draft a step-by-step plan; you review it, untick steps, and run. Skip, pause or cancel at any time.",
+          "links": [
+            "tasks"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Build from your design",
+          "description": "“From Design” compares the code with your concept and UI designs and plans the work to close the gap.",
+          "links": []
+        },
+        {
+          "category": "Build",
+          "title": "Run your app and share a public link",
+          "description": "The app runs inside the workspace. One switch gives it a public address that anyone can open.",
+          "links": [
+            "run",
+            "publicAccess"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Solution Designs Library",
+          "description": "299 ready-made starting points in 10 industries. Search, preview and apply one with a click: screens, flows, data, roles and rules included.",
+          "links": []
+        },
+        {
+          "category": "Connect",
+          "title": "VS Code extension",
+          "description": "Edit project files in VS Code, keep a local folder in two-way sync, talk to the agents and send terminal errors back to them.",
+          "links": [
+            "vscode"
+          ]
+        },
+        {
+          "category": "Workspace",
+          "title": "Start with “What do you want to build?”",
+          "description": "Describe the idea in your own words, attach files, or import existing code from GitHub, a ZIP or your repository.",
+          "links": [
+            "intent",
+            "tIntent"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Company Users with roles",
+          "description": "Add team members, give them roles and decide per project who has access. Each member sees only what their role allows.",
+          "links": [
+            "users",
+            "tTeam"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Code to concept"
+        },
+        {
+          "text": "Sidekick answers without changing anything"
+        },
+        {
+          "text": "Concept changes propose tasks"
+        },
+        {
+          "text": "Create only the missing pages"
+        },
+        {
+          "text": "Diagrams from a prompt"
+        },
+        {
+          "text": "Limit what an agent may change"
+        },
+        {
+          "text": "Password reset by e-mail code"
+        },
+        {
+          "text": "India and Australia regions"
+        },
+        {
+          "text": "Any technology stack is welcome"
+        }
+      ]
+    },
+    {
+      "id": "april-2026",
+      "month": "April",
+      "year": 2026,
+      "count": 11,
+      "title": "Run the project where you plan it",
+      "summary": "The workspace grew from “plan and build” into a place where a team can also run the project: issues, a knowledge base, feedback forms and a Jira connection.",
+      "features": [
+        {
+          "category": "Team",
+          "title": "Issue tracker",
+          "description": "Report and follow bugs, features and tasks inside the project: list, board and summary views, filters, comments and file attachments.",
+          "links": [
+            "issues"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Knowledge base",
+          "description": "A wiki for each project with a block editor, auto-save, version history, templates, tags and Markdown export.",
+          "links": [
+            "kb"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Feedback forms by public link",
+          "description": "Build a survey, poll or feedback form and share it by link. People answer without an account; results can be exported to CSV.",
+          "links": [
+            "feedback"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Start a concept from your documents",
+          "description": "Attach requirements, specs or notes. The AI writes the requirements from them or builds the whole concept.",
+          "links": [
+            "req"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "More AI models, plus Grok",
+          "description": "Newer Claude, GPT, Gemini and DeepSeek models, and Grok as a new provider. Long answers are no longer cut short.",
+          "links": []
+        },
+        {
+          "category": "Connect",
+          "title": "Jira connection",
+          "description": "Connect a Jira project and bring its issues into the platform's issue tracker, with status and priority matched.",
+          "links": [
+            "jira"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Your own key works everywhere",
+          "description": "Documents and presentations work with any provider's key, and several agents can work on one key at the same time.",
+          "links": [
+            "keys"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Comments and mentions in one place",
+          "description": "All comment threads, your @mentions and every active share link are collected on one page.",
+          "links": [
+            "collab"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Extra instructions for a build"
+        },
+        {
+          "text": "Test data that fixes itself"
+        },
+        {
+          "text": "Richer security and test-case views"
+        }
+      ]
+    },
+    {
+      "id": "march-2026",
+      "month": "March",
+      "year": 2026,
+      "count": 15,
+      "title": "Edit anything, undo anything",
+      "summary": "Requirements that keep the plan in step, a history you can step back through, design tools for every element, and the first account portal.",
+      "features": [
+        {
+          "category": "Plan",
+          "title": "Requirements that update the plan",
+          "description": "Edit the requirements and the AI proposes the matching concept changes, each with a reason. Tick the ones you want and apply.",
+          "links": [
+            "req"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Change History with one-click revert",
+          "description": "Every AI change to the concept is listed with time and description. One click takes the concept back to before that change.",
+          "links": [
+            "others"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Edit any element in the design preview",
+          "description": "Right-click an element to change its text size, colours and spacing directly, or choose “Ask AI to Change” for just that element.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "20 page layouts with live preview",
+          "description": "Choose the page structure before building: sidebar, dashboard, hero, grid, split screen and more, previewed on desktop, tablet and phone.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Your own images in the design",
+          "description": "Upload a logo, pictures or media with an instruction such as “use this as the main logo” and the AI places them.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Code editor and ZIP upload",
+          "description": "Open any source file in a built-in editor, and bring an existing codebase in as a ZIP of up to 500 MB.",
+          "links": [
+            "analyze"
+          ]
+        },
+        {
+          "category": "Account",
+          "title": "The account portal",
+          "description": "Sign up once and enter your workspace with one click, already signed in. Your profile, settings and support live there too.",
+          "links": [
+            "portal"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Search across the whole concept",
+          "description": "One search box finds screens, flows, data objects, roles, integrations and rules, and jumps to the result.",
+          "links": [
+            "concept"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "A written summary for every screen"
+        },
+        {
+          "text": "One navigation across all pages"
+        },
+        {
+          "text": "Live “AI is working” indicators"
+        },
+        {
+          "text": "Containers"
+        },
+        {
+          "text": "Commit history, diff and revert",
+          "link": "vc"
+        },
+        {
+          "text": "Database export"
+        },
+        {
+          "text": "User Guide and My Profile"
+        }
+      ]
+    },
+    {
+      "id": "february-2026",
+      "month": "February",
+      "year": 2026,
+      "count": 11,
+      "title": "One workspace, six layers",
+      "summary": "The concept grew from screens only into a full picture of the product, and everything moved into one project workspace.",
+      "features": [
+        {
+          "category": "Plan",
+          "title": "A concept with six layers",
+          "description": "Next to screens: Business Flows, Data Objects, Roles & Permissions, Integrations and Business Rules. Sidekick builds and edits all six.",
+          "links": [
+            "concept"
+          ]
+        },
+        {
+          "category": "Workspace",
+          "title": "The new Project Workspace",
+          "description": "One menu for everything in a project: concept layers, UI designs, diagrams, documents, tasks, database, source code and version control.",
+          "links": [
+            "intro"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Bring your existing code",
+          "description": "Point the platform at a codebase and it writes the concept from the code, with a live progress window.",
+          "links": [
+            "analyze",
+            "tExisting",
+            "bCodeViz"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "See the concept through one role",
+          "description": "Pick a role and the screens it can reach are highlighted. Each screen lists who has access.",
+          "links": [
+            "roles"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Designs and diagrams build in the background",
+          "description": "UI designs and architecture diagrams are built while you keep working, and appear in their own pages when ready.",
+          "links": [
+            "diagrams"
+          ]
+        },
+        {
+          "category": "Team",
+          "title": "Users, groups and permissions",
+          "description": "Add team users, put them in ready-made groups and decide what each group may do. The interface hides what a user may not use.",
+          "links": [
+            "users"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Use your own AI keys",
+          "description": "Add your own provider keys under My API Keys and run all AI work on them.",
+          "links": [
+            "keys"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "Better build planning and task control",
+          "description": "Bigger builds are planned in stages, Cancel really stops a task, and the task list has filters, cancel-all and live status.",
+          "links": [
+            "tasks"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Export and import a concept"
+        },
+        {
+          "text": "Quick start on an empty concept"
+        },
+        {
+          "text": "Project chat answers questions"
+        }
+      ]
+    },
+    {
+      "id": "january-2026",
+      "month": "January",
+      "year": 2026,
+      "count": 6,
+      "title": "You choose the technology and the look",
+      "summary": "Two decisions the AI used to make alone became yours: what the product is built with, and how it looks.",
+      "features": [
+        {
+          "category": "Build",
+          "title": "Technology Stack",
+          "description": "Choose your backend, database and front end from long lists. Every agent and every document then follows your choice.",
+          "links": [
+            "settings"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Theme gallery",
+          "description": "Pick one of 34 ready-made colour themes for your UI design and preview it on sample elements first. (Today the catalog holds 173.)",
+          "links": [
+            "theme"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Test Case Agent",
+          "description": "Test cases written from your code: numbered steps, the expected result of each step, priorities and tags, grouped by area.",
+          "links": [
+            "testing"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "More dependable Git commits",
+          "description": "Committing now works on a brand-new folder, picks the right branch and pulls the latest changes first.",
+          "links": [
+            "vc"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Concept toolbar in three menus"
+        },
+        {
+          "text": "Developer Agent can start from nothing"
+        }
+      ]
+    },
+    {
+      "id": "december-2025",
+      "month": "December",
+      "year": 2025,
+      "count": 6,
+      "title": "Your repository, your documents",
+      "summary": "Two things teams ask for early: a connection to their own code repository, and finished documents written from the concept.",
+      "marker": "Last here a year ago? Everything above this line is new for you.",
+      "features": [
+        {
+          "category": "Build",
+          "title": "Version Control",
+          "description": "Connect a project to GitHub, GitLab, plain Git or SVN. Commit, update and read the full log of every operation.",
+          "links": [
+            "vc"
+          ]
+        },
+        {
+          "category": "Build",
+          "title": "The Developer Agent commits its own work",
+          "description": "After a successful coding task the agent commits the changes to your repository, with its own explanation as the message.",
+          "links": [
+            "vc"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Documents written from your concept",
+          "description": "Concept Summary, Functional Specification, Technical Specification and Database Design Document, each with a cover page and table of contents.",
+          "links": [
+            "reqDocs",
+            "summary"
+          ]
+        },
+        {
+          "category": "Share",
+          "title": "Export as SVG and PNG",
+          "description": "Download the concept as a clean vector drawing or a picture, and any flow diagram as an image.",
+          "links": []
+        }
+      ],
+      "also": [
+        {
+          "text": "Requirements questions accept free text"
+        },
+        {
+          "text": "Straight into the new project"
+        }
+      ]
+    },
+    {
+      "id": "november-2025",
+      "month": "November",
+      "year": 2025,
+      "count": 4,
+      "title": "The AI asks before it builds",
+      "summary": "The platform now helps you work out what you actually want before anything is drawn.",
+      "features": [
+        {
+          "category": "Plan",
+          "title": "Analyze Requirements",
+          "description": "Describe a rough idea. The AI asks clarifying questions, with a “Let AI decide” option, and turns your answers into written requirements and a concept.",
+          "links": [
+            "intent",
+            "req"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Requirements stay with the concept",
+          "description": "Every concept carries a written description of what the system should do. Read it, edit it and save it at any time.",
+          "links": [
+            "req"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Card and Chart elements",
+          "description": "Screens in a concept can now contain cards and charts, and the AI uses them when they fit.",
+          "links": []
+        },
+        {
+          "category": "AI",
+          "title": "Voice Assistant lets you finish your sentence",
+          "description": "A short pause no longer cuts you off: the assistant waits a moment longer before it answers.",
+          "links": []
+        }
+      ],
+      "also": []
+    },
+    {
+      "id": "october-2025",
+      "month": "October",
+      "year": 2025,
+      "count": 11,
+      "title": "From concept to clickable screens",
+      "summary": "The month the platform learned to design. One button turns a concept into real pages you can click through and change by describing what you want.",
+      "features": [
+        {
+          "category": "Design",
+          "title": "Build UI Design",
+          "description": "One button turns your concept into a full set of real pages with a shared style and working navigation between them.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Click through your design like an app",
+          "description": "Open the designed pages in a browser tab, jump to any page from a Pages menu, and follow the links between screens.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Change a page by describing it",
+          "description": "In the Modify Page chat you say what should change. The AI sees the page as you see it and changes only what you asked for.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Design",
+          "title": "Undo and version history for every page",
+          "description": "Every change to a page is kept. Go back to any earlier version with one click; nothing is lost.",
+          "links": [
+            "ui"
+          ]
+        },
+        {
+          "category": "Plan",
+          "title": "Architecture diagrams from one concept",
+          "description": "One button draws a full set of diagrams from your concept: user flow, data flow, database schema, sequence, deployment, security and more.",
+          "links": [
+            "diagrams"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Security Agent",
+          "description": "A security review of your code: issues by severity with the affected files and references to CWE and OWASP. Download it as a Word report.",
+          "links": [
+            "agentDocs"
+          ]
+        }
+      ],
+      "also": [
+        {
+          "text": "Flow-diagram editor with its own Sidekick"
+        },
+        {
+          "text": "Agents build from your plan"
+        },
+        {
+          "text": "Try a screen as a clickable mock-up"
+        },
+        {
+          "text": "Export the concept as a picture"
+        },
+        {
+          "text": "Analytical Agent handles bigger data"
+        }
+      ]
+    },
+    {
+      "id": "september-2025",
+      "month": "September",
+      "year": 2025,
+      "count": 8,
+      "title": "Talk your idea into a plan",
+      "summary": "Where this story starts: a workspace with projects, a visual concept canvas, an AI chat and a team of AI agents. In September the platform learned to listen, and to build from what it heard.",
+      "features": [
+        {
+          "category": "AI",
+          "title": "Talk your idea into a concept",
+          "description": "The Voice Assistant asks what you want to build, reads back a summary and draws the concept for you.",
+          "links": []
+        },
+        {
+          "category": "Build",
+          "title": "One-click Build",
+          "description": "A Build button hands your concept to the AI agents and takes you to the task list when the work is done.",
+          "links": [
+            "tasks"
+          ]
+        },
+        {
+          "category": "AI",
+          "title": "Analytical Agent",
+          "description": "Ask a question about your data and get a report with tables, charts and conclusions, built only from your real data.",
+          "links": []
+        },
+        {
+          "category": "Build",
+          "title": "A project that is ready from minute one",
+          "description": "Every new project gets its own folder and its own database automatically. Nothing to set up by hand.",
+          "links": []
+        }
+      ],
+      "also": [
+        {
+          "text": "Meet Sidekick",
+          "link": "sidekick"
+        },
+        {
+          "text": "Safer AI edits to a concept"
+        },
+        {
+          "text": "Project tabs keep their place"
+        },
+        {
+          "text": "QA Agent explains why an app would not start"
+        }
+      ]
+    }
+  ]
+}
