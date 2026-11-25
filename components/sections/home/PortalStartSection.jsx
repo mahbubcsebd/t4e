@@ -19,6 +19,8 @@ import {
   ShieldCheck,
   Zap,
   Check,
+  ArrowRight,
+  Loader2,
 } from "lucide-react";
 
 // 4 modes; copy lives in dictionaries (portalStart.modes.*)
@@ -30,7 +32,13 @@ const MODE_ICONS = {
 };
 const MODE_KEYS = Object.keys(MODE_ICONS);
 const PHRASE_KEYS = ["p1", "p2", "p3", "p4", "p5", "p6"];
-const UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
+const UTM_KEYS = [
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_term",
+  "utm_content",
+];
 const TYPING_IDLE_MS = 130;
 const PROMPT_MAX_LENGTH = 4000;
 
@@ -88,7 +96,7 @@ export default function PortalStartSection() {
   const currentMode = useMemo(
     () => modes.find((m) => m.key === selectedModeKey) || modes[0],
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [selectedModeKey, language]
+    [selectedModeKey, language],
   );
   const isLoading = loadingAction !== null;
 
@@ -109,7 +117,11 @@ export default function PortalStartSection() {
   // to hand to the auth modal.
   const prepareIntent = async () => {
     const text = projectPrompt.trim();
-    if (!text) return { token: intentToken, prepMsg: preparingMsg || currentMode.preparing_message };
+    if (!text)
+      return {
+        token: intentToken,
+        prepMsg: preparingMsg || currentMode.preparing_message,
+      };
 
     const isGitUrl = /^(https?:\/\/|github\.com\/)/.test(text);
     const payload = {
@@ -119,10 +131,18 @@ export default function PortalStartSection() {
       ...(isGitUrl ? { import_source: "github", import_url: text } : {}),
       ...pageParams,
     };
-    const res = await callPortalApi("POST", "/auth/signup-intent", payload, language);
+    const res = await callPortalApi(
+      "POST",
+      "/auth/signup-intent",
+      payload,
+      language,
+    );
 
     if (!res.ok || !res.data) {
-      return { token: intentToken, prepMsg: preparingMsg || currentMode.preparing_message };
+      return {
+        token: intentToken,
+        prepMsg: preparingMsg || currentMode.preparing_message,
+      };
     }
     const token = res.data.intent_token || intentToken;
     const prepMsg = res.data.preparing_message || currentMode.preparing_message;
@@ -143,7 +163,13 @@ export default function PortalStartSection() {
     }
 
     if (action === "signin") {
-      openAuthModal({ tab: "signin", mode: currentMode, prompt: projectPrompt.trim(), intentToken, preparingMsg });
+      openAuthModal({
+        tab: "signin",
+        mode: currentMode,
+        prompt: projectPrompt.trim(),
+        intentToken,
+        preparingMsg,
+      });
       return;
     }
 
@@ -161,7 +187,10 @@ export default function PortalStartSection() {
   };
 
   return (
-    <section id="home-hero" className="relative isolate flex flex-col overflow-x-clip bg-[#f8fafc] max-md:pb-0!">
+    <section
+      id="home-hero"
+      className="relative isolate flex flex-col overflow-x-clip bg-[#f8fafc] max-md:pb-0!"
+    >
       {/* Backdrop */}
       <div
         aria-hidden="true"
@@ -218,7 +247,11 @@ export default function PortalStartSection() {
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
               onKeyDown={(e) => {
-                if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
+                if (
+                  e.key === "Enter" &&
+                  !e.shiftKey &&
+                  !e.nativeEvent.isComposing
+                ) {
                   e.preventDefault();
                   handleAction("send");
                 }
@@ -238,7 +271,10 @@ export default function PortalStartSection() {
               />
             </div>
             {promptError && (
-              <p role="alert" className="px-4 pb-2.5 text-[13px] text-[#b84e00]">
+              <p
+                role="alert"
+                className="px-4 pb-2.5 text-[13px] text-[#b84e00]"
+              >
                 {promptError}
               </p>
             )}
@@ -253,15 +289,35 @@ export default function PortalStartSection() {
 
           {/* Below the chatbox: sign-in, cost, proof, legal */}
           <div className="mt-3 flex flex-col items-center gap-2 md:mt-5 md:gap-3">
-            <Button
-              variant="outline"
-              size="lg"
-              disabled={isLoading}
-              onClick={() => handleAction("signin")}
-              className="max-md:hidden"
-            >
-              {t("portalStart.haveAccount")}
-            </Button>
+            {/* Tiles only pick the path, so one constant button continues to sign-up */}
+            <div className="flex w-full flex-col items-center gap-2 md:w-auto md:flex-row md:gap-3">
+              <Button
+                size="lg"
+                disabled={isLoading}
+                onClick={() => handleAction("send")}
+                className="min-h-12 w-full cursor-pointer gap-2 text-base md:w-auto md:min-w-[240px]"
+              >
+                {isLoading ? (
+                  <Loader2
+                    className="h-4 w-4 animate-spin"
+                    aria-hidden="true"
+                  />
+                ) : null}
+                {t("portalStart.signup")}
+                {isLoading ? null : (
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                )}
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                disabled={isLoading}
+                onClick={() => handleAction("signin")}
+                className="min-h-12 max-md:hidden"
+              >
+                {t("portalStart.haveAccount")}
+              </Button>
+            </div>
             {/* Phones: quiet sign-in link + one merged proof line */}
             <p className="text-sm text-slate-600 md:hidden">
               {t("portalStart.haveAccountShort")}{" "}
@@ -280,15 +336,22 @@ export default function PortalStartSection() {
             <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[13px] font-medium text-[#0f172a] max-md:hidden md:text-sm">
               {["perk", "noCard"].map((key) => (
                 <span key={key} className="inline-flex items-center gap-1.5">
-                  <Check className="h-4 w-4 text-[#0B4BD6]" strokeWidth={2.6} aria-hidden="true" />
+                  <Check
+                    className="h-4 w-4 text-[#0B4BD6]"
+                    strokeWidth={2.6}
+                    aria-hidden="true"
+                  />
                   {t(`portalStart.${key}`)}
                 </span>
               ))}
             </p>
             <p className="max-w-[520px] text-[13px] leading-snug text-slate-600 max-md:hidden">
-              {t("portalStart.proofPre")} <b className="font-bold text-[#0f172a]">EY</b>,{" "}
-              <b className="font-bold text-[#0f172a]">YogiFi</b> {t("portalStart.proofAnd")}{" "}
-              <b className="font-bold text-[#0f172a]">Insignian Homes</b> {t("portalStart.proofPost")}{" "}
+              {t("portalStart.proofPre")}{" "}
+              <b className="font-bold text-[#0f172a]">EY</b>,{" "}
+              <b className="font-bold text-[#0f172a]">YogiFi</b>{" "}
+              {t("portalStart.proofAnd")}{" "}
+              <b className="font-bold text-[#0f172a]">Insignian Homes</b>{" "}
+              {t("portalStart.proofPost")}{" "}
               <Link
                 href={localizeHref(language, "/customers/")}
                 className="whitespace-nowrap font-semibold text-[#2563eb] hover:underline"
@@ -303,11 +366,17 @@ export default function PortalStartSection() {
               }`}
             >
               {t("portalStart.finePre")}{" "}
-              <Link href={localizeHref(language, "/terms-and-conditions/")} className="underline">
+              <Link
+                href={localizeHref(language, "/terms-and-conditions/")}
+                className="underline"
+              >
                 {t("portalStart.terms")}
               </Link>{" "}
               {t("portalStart.finePost")}{" "}
-              <Link href={localizeHref(language, "/privacy-policy/")} className="underline">
+              <Link
+                href={localizeHref(language, "/privacy-policy/")}
+                className="underline"
+              >
                 {t("portalStart.privacy")}
               </Link>
               .
