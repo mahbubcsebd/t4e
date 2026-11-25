@@ -207,6 +207,14 @@ mark {
   border-radius: 4px !important;
 }
 
+/* Skip style/layout work for below-the-fold home sections until scrolled near.
+   First two sections (portal + context gap) stay eager. */
+.home-clean > section:nth-child(n + 3),
+.home-clean > div > section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
+}
+
 /* ── Home page · mobile-only clean layout (scoped to <main class="home-clean">) ── */
 @media (max-width: 767px) {
   .home-clean > section {
