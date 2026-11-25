@@ -8,7 +8,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { ArrowRight, Paperclip } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 const IMAGE_DIR = '/images/roles';
 const PANEL_IMAGE = `${IMAGE_DIR}/roles-panel.jpg`;
@@ -39,7 +39,7 @@ const formatNumber = (index) => String(index + 1).padStart(2, '0');
 
 function CoverTile({ t, guideHref }) {
   return (
-    <div className="relative overflow-hidden rounded-xl bg-[#093cad] text-white flex flex-col min-h-[380px] md:col-span-2 lg:col-span-1 lg:row-span-2">
+    <div className="relative overflow-hidden rounded-xl bg-[#093cad] text-white flex flex-col min-h-[380px] md:col-span-2 lg:col-span-1 lg:row-span-2 max-md:hidden">
       <div className="relative z-10 p-6 sm:p-8">
         <p className="flex items-baseline gap-2 leading-none">
           <span className="text-7xl sm:text-8xl font-extrabold text-primary tracking-tight">
@@ -162,6 +162,101 @@ function RoleCard({ role, index, roleLabel, useLabel, moreLabel, onOpen }) {
           />
         </span>
       </button>
+    </div>
+  );
+}
+
+// Phones: compact swipe card; the next card peeks in from the right.
+function RoleSwipeCard({ role, index, moreLabel, onOpen }) {
+  return (
+    <button
+      type="button"
+      onClick={() => onOpen(index)}
+      aria-haspopup="dialog"
+      className="group relative flex min-h-[168px] w-[78%] shrink-0 snap-start scroll-ml-4 cursor-pointer flex-col overflow-hidden rounded-2xl border border-[#e6d6b8] bg-[#fbf6ec] p-4 text-left shadow-sm shadow-[#093cad]/5 transition-transform duration-200 active:scale-[0.98] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-primary"
+    >
+      {/* Oversized number as a quiet backdrop gives each card a clear identity */}
+      <span
+        className="pointer-events-none absolute -right-1 -top-3 select-none text-[84px] font-extrabold leading-none tracking-tighter text-primary/10"
+        aria-hidden="true"
+      >
+        {formatNumber(index)}
+      </span>
+      <span className="relative text-xl font-extrabold leading-tight tracking-tight text-foreground">
+        {role.name}
+      </span>
+      <span className="relative mt-2 line-clamp-3 text-[15px] leading-snug text-[#24407e]">
+        {role.desc}
+      </span>
+      <span className="relative mt-auto flex items-center gap-1 pt-3 text-sm font-bold text-primary">
+        {moreLabel}
+        <ArrowRight className="h-3.5 w-3.5 transition-transform group-active:translate-x-0.5" aria-hidden="true" />
+      </span>
+    </button>
+  );
+}
+
+// Phones: swipe row with a fade on the trailing edge and tappable progress dots.
+function RoleSwipeRow({ roleList, moreLabel, onOpen }) {
+  const rowRef = useRef(null);
+  const [current, setCurrent] = useState(0);
+
+  const cardStep = () => {
+    const row = rowRef.current;
+    const card = row?.firstElementChild?.firstElementChild;
+    return card ? card.offsetWidth + 12 : 1;
+  };
+
+  const handleScroll = () => {
+    const row = rowRef.current;
+    if (!row) return;
+    const atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 4;
+    setCurrent(atEnd ? roleList.length - 1 : Math.round(row.scrollLeft / cardStep()));
+  };
+
+  const goTo = (index) => {
+    rowRef.current?.scrollTo({ left: index * cardStep(), behavior: 'smooth' });
+  };
+
+  return (
+    <div className="md:hidden">
+      <div className="relative">
+        <div
+          ref={rowRef}
+          id="role-cards-mobile"
+          role="list"
+          onScroll={handleScroll}
+          className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto overscroll-x-contain px-4 pb-3 hide-scrollbar"
+        >
+          {roleList.map((role, index) => (
+            <div key={role.name} role="listitem" className="contents">
+              <RoleSwipeCard role={role} index={index} moreLabel={moreLabel} onOpen={onOpen} />
+            </div>
+          ))}
+        </div>
+        <div
+          className="pointer-events-none absolute inset-y-0 -right-4 w-8 bg-gradient-to-l from-background to-transparent"
+          aria-hidden="true"
+        />
+      </div>
+
+      <div className="mt-1 flex items-center justify-center gap-1" aria-hidden="true">
+        {roleList.map((role, index) => (
+          <button
+            key={role.name}
+            type="button"
+            tabIndex={-1}
+            onClick={() => goTo(index)}
+            className="flex h-6 w-5 items-center justify-center"
+          >
+            <span
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                index === current ? 'w-5 bg-primary' : 'w-1.5 bg-[#d9c9a8]'
+              }`}
+            />
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
@@ -321,7 +416,7 @@ export default function DiscoverRoleSection() {
 
           <div
             id="role-cards"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 scroll-mt-24"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 scroll-mt-24 max-md:hidden"
           >
             <CoverTile t={t} guideHref={guideHref} />
             {roleList.map((role, index) => (
@@ -336,6 +431,12 @@ export default function DiscoverRoleSection() {
               />
             ))}
           </div>
+
+          <RoleSwipeRow
+            roleList={roleList}
+            moreLabel={t('discoverRole.moreLabel')}
+            onOpen={setActiveIndex}
+          />
         </div>
       </SectionCard>
 

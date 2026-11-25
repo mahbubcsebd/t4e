@@ -111,7 +111,6 @@ export default function CenterCarousel({ items }) {
                   className="object-cover"
                   sizes="(max-width: 768px) 400px, 400px"
                   quality={65}
-                  priority={currentIndex === 0}
                 />
               </motion.div>
             </motion.div>

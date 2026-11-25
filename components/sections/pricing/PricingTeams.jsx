@@ -179,7 +179,7 @@ export default function PricingTeams() {
                       <h4 className="text-xs font-extrabold uppercase tracking-wider text-[#9cc0ff]">
                         {t('pricingPage.plan3Name', 'Think Big')}
                       </h4>
-                      <span className="text-[9px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-[#3b82f6] text-white">
+                      <span className="text-[9px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-[#1d4ed8] text-white">
                         {t('pricingPage.labelShared', 'Shared')}
                       </span>
                     </div>

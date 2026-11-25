@@ -6,6 +6,7 @@
     "dev": "next dev",
     "prebuild": "node -e \"for (const d of ['.next','out']) require('fs').rmSync(d,{recursive:true,force:true})\"",
     "build": "next build",
+    "postbuild": "node scripts/set-html-lang.mjs",
     "start": "next start",
     "lint": "eslint"
   },

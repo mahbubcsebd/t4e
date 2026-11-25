@@ -1,48 +1,9 @@
 "use client";
 
-// 4 build modes. Mobile: compact 2x2 chips + the active mode's one-line
-// description. md+: full cards (eyebrow, title, description).
-export default function PortalModes({ modes, selectedKey, onSelect, label }) {
-  const active = modes.find((m) => m.key === selectedKey) || modes[0];
-
+// 4 build modes as cards (md+). Phones use ModeSelect inside the idea box.
+export default function PortalModes({ modes, selectedKey, onSelect }) {
   return (
-    <div className="w-full">
-      {/* Mobile chips */}
-      <div
-        role="tablist"
-        aria-label={label}
-        className="md:hidden mt-2 grid grid-cols-2 gap-1.5"
-      >
-        {modes.map((m) => {
-          const Icon = m.icon;
-          const isActive = selectedKey === m.key;
-          return (
-            <button
-              key={m.key}
-              type="button"
-              role="tab"
-              aria-selected={isActive}
-              onClick={() => onSelect(m.key)}
-              className={[
-                "inline-flex min-h-8 items-center justify-center gap-1.5 rounded-full border px-2 text-[12.5px] leading-tight transition-all duration-200 active:scale-95",
-                isActive
-                  ? "border-[#93c5fd] bg-[#eff6ff] font-bold text-[#1d4ed8]"
-                  : "border-slate-200 bg-transparent font-medium text-slate-600",
-              ].join(" ")}
-            >
-              <Icon className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-              {m.title}
-            </button>
-          );
-        })}
-      </div>
-      <p
-        key={active.key}
-        className="md:hidden mt-1.5 line-clamp-2 text-center text-[11.5px] leading-snug text-slate-500 animate-[hero-fade_.3s_ease-out]"
-      >
-        {active.description}
-      </p>
-
+    <div className="w-full max-md:hidden">
       {/* Desktop cards */}
       <div className="hidden md:grid mt-4 w-full grid-cols-2 lg:grid-cols-4 gap-3">
         {modes.map((m) => {

@@ -4,6 +4,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import StoreButtons from '@/components/sections/apps/StoreButtons';
 
 export default function Footer() {
   const { t, language } = useLanguage();
@@ -19,7 +20,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-background border-t border-border pt-16 pb-8 relative overflow-hidden">
+    <footer className="bg-background border-t border-border pt-16 max-md:pt-10 pb-8 max-md:pb-24 relative overflow-hidden">
       {/* Subtle gradient accent top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
 
@@ -28,7 +29,7 @@ export default function Footer() {
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[200px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 max-md:gap-8 lg:gap-8">
           {/* Brand Column */}
           <div className="md:col-span-4 lg:col-span-5 flex flex-col items-start gap-5">
             <Link
@@ -44,7 +45,7 @@ export default function Footer() {
                 className="h-10 w-auto object-contain"
               />
             </Link>
-            <p className="text-foreground/70 dark:text-foreground/80 text-sm leading-relaxed max-w-sm">
+            <p className="text-foreground/70 dark:text-foreground/80 text-sm leading-relaxed max-w-sm max-md:hidden">
               {t('hero.subtitle')}
             </p>
             {/* Social icons */}
@@ -68,15 +69,23 @@ export default function Footer() {
                 <FaLinkedinIn className="w-5 h-5" />
               </Link>
             </div>
+
+            {/* Phones: app badges live here instead of the hero */}
+            <div className="mt-2 w-full max-w-[460px] md:hidden">
+              <p className="mb-3 text-xs font-semibold text-foreground/70">
+                {t('portalStart.installApp')}
+              </p>
+              <StoreButtons variant="blue" />
+            </div>
           </div>
 
           {/* Links Grid */}
           <div className="md:col-span-8 lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
             {/* Product Column */}
             <div className="flex flex-col gap-3 text-sm">
-              <h4 className="text-foreground font-bold uppercase tracking-wider text-xs mb-2">
+              <h3 className="text-foreground font-bold uppercase tracking-wider text-xs mb-2">
                 {t('nav.product')}
-              </h4>
+              </h3>
               <Link
                 href={localizeHref('/how-it-works')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
@@ -117,9 +126,9 @@ export default function Footer() {
 
             {/* Resources Column */}
             <div className="flex flex-col gap-3 text-sm">
-              <h4 className="text-foreground font-bold uppercase tracking-wider text-xs mb-2">
+              <h3 className="text-foreground font-bold uppercase tracking-wider text-xs mb-2">
                 {t('nav.resources')}
-              </h4>
+              </h3>
               <Link
                 href={localizeHref('/resources/')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
@@ -176,9 +185,9 @@ export default function Footer() {
 
             {/* Legal Column */}
             <div className="flex flex-col gap-3 text-sm">
-              <h4 className="text-foreground font-bold uppercase tracking-wider text-xs mb-2">
+              <h3 className="text-foreground font-bold uppercase tracking-wider text-xs mb-2">
                 Legal & Privacy
-              </h4>
+              </h3>
               <Link
                 href={localizeHref('/contact-us')}
                 className="text-foreground/70 dark:text-foreground/80 hover:text-primary transition-colors duration-200"
@@ -202,8 +211,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Footer */}
-        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-foreground/70 dark:text-foreground/50 font-medium">
+        <div className="mt-16 max-md:mt-8 pt-8 max-md:pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-foreground/85 font-medium">
             {t('footer.copyright')}
           </p>
           {/* Gradient badge */}

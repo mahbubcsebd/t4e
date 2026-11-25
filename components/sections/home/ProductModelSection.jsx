@@ -28,7 +28,7 @@ const carouselItems = [
     title: "Screens & Navigation",
     description:
       "Every screen of your application on one visual map, with the navigation paths between them. Click any screen later to refine it or design its UI.",
-    image: "/images/carousel/screens-navigation.png",
+    image: "/images/carousel/screens-navigation.webp",
     icon: <Monitor className="w-5 h-5 text-foreground" />,
   },
   {
@@ -171,17 +171,17 @@ export default function ProductModelSection() {
           />
 
           {/* The Blueprint Architecture Visual */}
-          <div className="relative w-full mt-10">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10">
+          <div className="relative w-full mt-10 max-md:mt-0">
+            <div className="grid grid-cols-1 max-md:grid-cols-2 max-md:gap-3 lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10">
               {/* Left Column (Perspectives 1 & 3) */}
-              <div className="lg:col-span-4 flex flex-col justify-between gap-6 lg:gap-16 relative z-10 order-2 lg:order-1">
+              <div className="lg:col-span-4 flex flex-col justify-between gap-6 lg:gap-16 relative z-10 order-2 lg:order-1 max-md:contents">
                 {/* Perspective 1: Engineering */}
-                <div className="gemini-card rounded-xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+                <div className="gemini-card rounded-xl p-6 max-md:p-3  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                   {/* Connecting Line to Center */}
                   <div className="absolute -right-[120px] top-1/2 w-[120px] border-t-2 border-dotted border-border/80 hidden lg:block z-[-1]"></div>
 
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-muted rounded-xl text-foreground border border-border shrink-0">
+                    <div className="p-3 bg-muted rounded-xl text-foreground border border-border shrink-0 max-md:hidden">
                       <Cpu className="w-5 h-5" />
                     </div>
                     <div>
@@ -196,12 +196,12 @@ export default function ProductModelSection() {
                 </div>
 
                 {/* Perspective 3: Operations */}
-                <div className="gemini-card rounded-xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+                <div className="gemini-card rounded-xl p-6 max-md:p-3  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                   {/* Connecting Line to Center */}
                   <div className="absolute -right-[120px] top-1/2 w-[120px] border-t-2 border-dotted border-border/80 hidden lg:block z-[-1]"></div>
 
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-muted rounded-xl text-foreground border border-border shrink-0">
+                    <div className="p-3 bg-muted rounded-xl text-foreground border border-border shrink-0 max-md:hidden">
                       <Workflow className="w-5 h-5" />
                     </div>
                     <div>
@@ -229,14 +229,14 @@ export default function ProductModelSection() {
               </div>
 
               {/* Right Column (Perspectives 2 & 4) */}
-              <div className="lg:col-span-4 flex flex-col justify-between gap-6 lg:gap-16 relative z-10 order-3">
+              <div className="lg:col-span-4 flex flex-col justify-between gap-6 lg:gap-16 relative z-10 order-3 max-md:contents">
                 {/* Perspective 2: Product */}
-                <div className="gemini-card rounded-xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+                <div className="gemini-card rounded-xl p-6 max-md:p-3  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                   {/* Connecting Line to Center */}
                   <div className="absolute -left-[120px] top-1/2 w-[120px] border-t-2 border-dotted border-border/80 hidden lg:block z-[-1]"></div>
 
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-muted rounded-xl text-foreground border border-border shrink-0">
+                    <div className="p-3 bg-muted rounded-xl text-foreground border border-border shrink-0 max-md:hidden">
                       <Layout className="w-5 h-5" />
                     </div>
                     <div>
@@ -251,12 +251,12 @@ export default function ProductModelSection() {
                 </div>
 
                 {/* Perspective 4: Business */}
-                <div className="gemini-card rounded-xl p-6  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
+                <div className="gemini-card rounded-xl p-6 max-md:p-3  hover:-translate-y-1 transition-all duration-300 relative group h-full flex flex-col justify-center">
                   {/* Connecting Line to Center */}
                   <div className="absolute -left-[120px] top-1/2 w-[120px] border-t-2 border-dotted border-border/80 hidden lg:block z-[-1]"></div>
 
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-muted rounded-xl text-foreground border border-border shrink-0">
+                    <div className="p-3 bg-muted rounded-xl text-foreground border border-border shrink-0 max-md:hidden">
                       <Database className="w-5 h-5" />
                     </div>
                     <div>

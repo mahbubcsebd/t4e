@@ -1,5 +1,6 @@
 ---
 title: "Whitepaper: Think Design - Het AI-coderingsharnas opnieuw definiëren voor enterprise softwareontwikkeling"
+seoTitle: "Wat uw AI-coderingsharnas mist: ontwerpcontext | Think4Ever"
 description: "De opkomst van AI-gestuurde softwareontwikkeling heeft het knelpunt van softwareontwikkeling verschoven van het handmatig schrijven van syntaxis naar contextbeheer en -verificatie."
 date: "18 april 2026"
 readTime: "8 min leestijd"

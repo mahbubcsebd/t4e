@@ -1,6 +1,6 @@
 ---
 title: "Context Is Not Intent: The Living Blueprint as a System of Record for AI-Built Software"
-description: "How a living, approved blueprint complements AI coding agents, and why it is a different category from code search and auto-generated repository wikis."
+description: "How a living, approved blueprint complements AI coding agents, and why it is a different category from code search and auto-generated repository wikis. Think of it as living documentation for AI-built software."
 date: "October 20, 2026"
 readTime: "8 min read"
 category: "Architecture"
@@ -13,7 +13,7 @@ hideThumbnail: true
 
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">Context Is Not Intent: The Living Blueprint as a System of Record for AI-Built Software</h2>
-<p class="text-lg font-medium text-gray-700 mb-6">How a living, approved blueprint complements AI coding agents, and why it is a different category from code search and auto-generated repository wikis</p>
+<p class="text-lg font-medium text-gray-700 mb-6">How a living, approved blueprint complements AI coding agents, and why it is a different category from code search and auto-generated repository wikis. Think of it as living documentation for AI-built software</p>
 
 <p>AI made code cheap. It did not make code right.</p>
 

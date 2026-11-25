@@ -96,6 +96,9 @@ export const BlogArticle = ({ post, currentLang }) => {
           <ReactMarkdown 
             rehypePlugins={[rehypeRaw]}
             components={{
+              // Article images sit below the fold: don't compete with CSS/JS on first load
+              // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
+              img: ({ node, ...props }) => <img loading="lazy" decoding="async" {...props} />,
               a: ({ node, className, ...props }) => {
                 const href = props.href || "";
                 let baseClass = className 

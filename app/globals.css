@@ -162,6 +162,24 @@ button:focus-visible,
   outline-offset: 2px !important;
 }
 
+/* WCAG AA: brand orange (#FF7A1A) fails contrast as text on light surfaces.
+   Use a darker orange for text; keep brand orange on dark surfaces. */
+:root {
+  --primary-text: #B84A00;
+}
+.text-primary {
+  color: var(--primary-text);
+}
+.bg-foreground .text-primary,
+.bg-black .text-primary,
+[class*="bg-[#0"] .text-primary,
+[class*="bg-[#1"] .text-primary,
+[class*="bg-slate-9"] .text-primary,
+[class*="bg-neutral-9"] .text-primary,
+[class*="bg-gray-9"] .text-primary {
+  color: var(--primary);
+}
+
 /* Iconography Guidelines */
 svg.lucide {
   stroke-width: 1.8px !important;
@@ -187,6 +205,14 @@ mark {
   border: 1px solid #E6D885 !important;
   padding: 1px 4px !important;
   border-radius: 4px !important;
+}
+
+/* Skip style/layout work for below-the-fold home sections until scrolled near.
+   First two sections (portal + context gap) stay eager. */
+.home-clean > section:nth-child(n + 3),
+.home-clean > div > section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
 }
 
 /* ── Home page · mobile-only clean layout (scoped to <main class="home-clean">) ── */
@@ -215,7 +241,8 @@ mark {
     align-items: flex-start;
     text-align: left;
   }
-  .home-clean .section-heading > :not(h2):not(p):not(div) {
+  .home-clean .section-heading > :not(h2):not(p):not(div),
+  .home-clean .section-heading > div > span {
     display: none;
   }
   .home-clean .section-heading h2 {
@@ -253,16 +280,7 @@ mark {
     font-size: 1.125rem;
   }
 
-  /* Role cards: single-column stack, no horizontal scroll */
-  .home-clean #role-cards {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0.875rem;
-  }
-  .home-clean #role-cards > * {
-    min-width: 0;
-    max-width: 100%;
-  }
+  /* Role cards: phones use a swipe row (DiscoverRoleSection), desktop grid is hidden */
 
   /* Safety net: nothing on the home page may scroll sideways */
   .home-clean {
@@ -309,4 +327,13 @@ mark {
   select {
     font-size: 16px;
   }
+}
+
+/* Horizontal swipe rows: keep scrolling, hide the scrollbar */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }

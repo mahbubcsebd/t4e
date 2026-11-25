@@ -1,6 +1,6 @@
 ---
 title: "El contexto no es intención: El Living Blueprint como sistema de registro para software creado con IA"
-description: "Cómo un blueprint vivo y aprobado complementa a los agentes de código de IA, y por qué es una categoría diferente de la búsqueda de código y las wikis de repositorios generadas automáticamente."
+description: "Cómo un blueprint vivo y aprobado complementa a los agentes de código de IA, y por qué es una categoría diferente de la búsqueda de código y las wikis de repositorios generadas automáticamente. Documentación viva para software creado con IA."
 date: "20 de octubre de 2026"
 readTime: "8 min de lectura"
 category: "Arquitectura"
@@ -13,7 +13,7 @@ hideThumbnail: true
 
 <section>
 <h2 class="text-2xl font-bold text-gray-900 mb-4">El contexto no es intención: El Living Blueprint como sistema de registro para software creado con IA</h2>
-<p class="text-lg font-medium text-gray-700 mb-6">Cómo un blueprint vivo y aprobado complementa a los agentes de código de IA, y por qué es una categoría diferente de la búsqueda de código y las wikis de repositorios generadas automáticamente</p>
+<p class="text-lg font-medium text-gray-700 mb-6">Cómo un blueprint vivo y aprobado complementa a los agentes de código de IA, y por qué es una categoría diferente de la búsqueda de código y las wikis de repositorios generadas automáticamente. Documentación viva para software creado con IA</p>
 
 <p>La IA abarató el código. No hizo que el código fuera correcto.</p>
 

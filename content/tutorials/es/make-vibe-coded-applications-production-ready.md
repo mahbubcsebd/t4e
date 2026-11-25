@@ -1,6 +1,7 @@
 ---
 title: 'Cómo hacerlo: Hacer que las aplicaciones de Vibe-Coding estén listas para producción'
-description: 'Aprende a usar Think4Ever Production Hardening para auditar, asegurar y fortalecer aplicaciones creadas con IA o vibe coding para el entorno empresarial.'
+seoTitle: "Cómo preparar una app vibe-coded para producción (lista)"
+description: 'Audite una app creada con IA en seguridad, configuración, fiabilidad, datos y despliegue, y corrija lo que falte antes del lanzamiento.'
 category: 'Development'
 readTime: '6 min de lectura'
 hideThumbnail: true

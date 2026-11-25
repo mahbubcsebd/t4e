@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
 import JsonLd from "@/components/JsonLd";
+import { contentAlternates, seoText } from "@/lib/contentSeo";
 import { buildArticleLd, toIsoDate } from "@/lib/jsonLd";
 
 export const dynamicParams = false;
@@ -21,8 +22,7 @@ export async function generateMetadata(props) {
   const post = getPostBySlug(slug, lang);
   if (!post) return {};
 
-  const title = `${post.title} | Think4Ever Blog`;
-  const description = post.desc || post.description;
+  const { title, description } = seoText(post.title, "Think4Ever Blog", post.desc || post.description, post.seoTitle);
   const relativeImageUrl = post.image || `/images/opengraph-image.jpg`;
   const imageUrl = relativeImageUrl.startsWith('http') 
     ? relativeImageUrl 
@@ -31,7 +31,10 @@ export async function generateMetadata(props) {
   return {
     title,
     description,
-    alternates: { canonical: `/${lang}/blog/${post.canonicalSlug || slug}/` },
+    alternates: {
+      canonical: `/${lang}/blog/${post.canonicalSlug || slug}/`,
+      languages: contentAlternates("blog", post.canonicalSlug || slug),
+    },
     openGraph: {
       title,
       description,

@@ -23,7 +23,7 @@ export default function ProductDemoSection() {
 
 
             <div className="relative z-10 flex flex-col items-center max-w-2xl">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-muted text-foreground text-xs font-bold tracking-wide mb-6 border border-border">
+              <span className="inline-flex max-md:hidden items-center gap-1.5 px-3 py-1 rounded-full bg-muted text-foreground text-xs font-bold tracking-wide mb-6 border border-border">
                 <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                 {t("demo.eyebrow")}
               </span>
@@ -36,7 +36,7 @@ export default function ProductDemoSection() {
               </p>
 
               {/* Buttons */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-md:hidden">
                 <Button
                   className="w-full sm:w-auto"
                   onClick={() => {

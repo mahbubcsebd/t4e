@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 
 const FRAME_COUNT = 78;
 const FPS = 15;
+const DESKTOP_QUERY = "(min-width: 768px)";
 const MASK =
   "radial-gradient(ellipse 54% 56% at 50% 50%, #000 45%, transparent 100%)";
 const CANVAS_MASK =
@@ -74,10 +75,21 @@ export default function HeroMascot({
             isVisible = entry.isIntersecting;
           })
         : null;
-    observer?.observe(canvas);
 
-    load();
+    // Mascot is hidden below md: don't download 78 frames or run the timer there.
+    const mq = window.matchMedia(DESKTOP_QUERY);
+    let started = false;
+    const startIfDesktop = () => {
+      if (started || !mq.matches) return;
+      started = true;
+      observer?.observe(canvas);
+      load();
+    };
+    startIfDesktop();
+    mq.addEventListener("change", startIfDesktop);
+
     return () => {
+      mq.removeEventListener("change", startIfDesktop);
       clearInterval(intervalId);
       observer?.disconnect();
     };
@@ -97,7 +109,7 @@ export default function HeroMascot({
             src={`/hero/scenes/${name}.webp`}
             alt=""
             decoding="async"
-            loading={i === 0 ? "eager" : "lazy"}
+            loading="lazy"
             className={[
               "hero-motion absolute inset-0 h-full w-full object-cover mix-blend-multiply",
               "transition-[opacity,transform] duration-[900ms,3200ms] ease-out",

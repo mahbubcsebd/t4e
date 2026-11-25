@@ -83,7 +83,7 @@ export default function ValueSection() {
 
               {/* Content */}
               <div className="p-8 sm:p-10 flex-1 bg-transparent flex flex-col items-center text-center md:items-start md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 mb-5">
+                <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 mb-5 max-md:hidden">
                   <div className="p-2 sm:p-2.5 bg-card rounded-lg border border-border">
                     <Eye className="w-4 h-4 sm:w-5 sm:h-5 text-foreground" />
                   </div>
@@ -115,7 +115,7 @@ export default function ValueSection() {
                 </div>
               </div>
               <div className="p-8 sm:p-10 flex-1 bg-transparent flex flex-col items-center text-center md:items-start md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 mb-5">
+                <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 mb-5 max-md:hidden">
                   <div className="p-2 sm:p-2.5 bg-card rounded-lg border border-border">
                     <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-foreground" />
                   </div>
@@ -147,7 +147,7 @@ export default function ValueSection() {
                 </div>
               </div>
               <div className="p-8 sm:p-10 flex-1 bg-transparent flex flex-col items-center text-center md:items-start md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 mb-5">
+                <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 mb-5 max-md:hidden">
                   <div className="p-2 sm:p-2.5 bg-card rounded-lg border border-border">
                     <SlidersHorizontal className="w-4 h-4 sm:w-5 sm:h-5 text-foreground" />
                   </div>
@@ -171,14 +171,14 @@ export default function ValueSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-50/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
 
             <div className="flex flex-col items-start gap-4 relative z-10 w-full lg:w-[40%]">
-              <div className="p-3.5 bg-muted text-foreground border border-border rounded-xl shadow-md shrink-0 group-hover:scale-110 transition-transform duration-500 mb-1">
+              <div className="p-3.5 bg-muted text-foreground border border-border rounded-xl shadow-md shrink-0 group-hover:scale-110 transition-transform duration-500 mb-1 max-md:hidden">
                 <Terminal className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
                 <strong className="text-xl sm:text-2xl font-medium text-foreground block mb-2 sm:mb-3 tracking-tight">
                   {t("values.compatTitle")}
                 </strong>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-lg">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-lg max-md:hidden">
                   {t("values.compatDesc")}
                 </p>
               </div>

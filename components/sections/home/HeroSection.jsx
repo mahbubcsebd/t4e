@@ -40,14 +40,14 @@ export default function HeroSection() {
               </Eyebrow>
 
               {/* Main Headline */}
-              <h1 className="text-[32px] leading-[1.1] md:text-[48px] lg:text-[52px] font-extrabold tracking-tight text-foreground mb-4">
+              <h2 className="text-[32px] leading-[1.1] md:text-[48px] lg:text-[52px] font-extrabold tracking-tight text-foreground mb-4">
                 {t("hero.titlePrefix")}
                 <br className="hidden md:block" />
                 <span className="text-primary">
                   {" "}
                   {t("hero.titleHighlight")}
                 </span>
-              </h1>
+              </h2>
 
               {/* Subtitle */}
               <p className="max-w-[600px] text-base sm:text-lg text-foreground/80 font-normal leading-relaxed mb-6">
@@ -64,7 +64,7 @@ export default function HeroSection() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="w-full sm:w-auto"
+                  className="w-full sm:w-auto max-md:hidden"
                   onClick={() => {
                     setVideoId("FY68DuwOf4Q");
                     setIsVideoOpen(true);
@@ -75,7 +75,7 @@ export default function HeroSection() {
               </div>
 
               {/* Integrations */}
-              <div className="mt-8 flex flex-col items-center lg:items-start w-full">
+              <div className="mt-8 flex flex-col items-center lg:items-start w-full max-md:hidden">
                 <div className="w-full h-[1px] bg-border/50 mb-5"></div>
                 <Eyebrow className="mb-4">Integrations</Eyebrow>
                 <CodingToolPills
@@ -139,7 +139,7 @@ export default function HeroSection() {
                           }}
                           transition={{ duration: 0.4 }}
                         >
-                          <div className="text-center mb-4">
+                          <div className="text-center mb-4 max-md:hidden">
                             <span className="inline-block text-[10px] sm:text-[11px] font-medium text-foreground bg-muted px-2.5 py-1 rounded-full uppercase tracking-wider">
                               {t("hero.cardOneBadge")}
                             </span>
@@ -269,7 +269,7 @@ export default function HeroSection() {
                             </motion.div>
                           </div>
 
-                          <div className="mt-4 flex justify-center text-[12px] sm:text-[13px] font-medium text-muted-foreground">
+                          <div className="mt-4 flex justify-center text-[12px] sm:text-[13px] font-medium text-muted-foreground max-md:hidden">
                             <span>{t("hero.cardOneFooter")}</span>
                           </div>
                         </motion.div>
@@ -284,7 +284,7 @@ export default function HeroSection() {
                           }}
                           transition={{ duration: 0.4 }}
                         >
-                          <div className="text-center mb-4">
+                          <div className="text-center mb-4 max-md:hidden">
                             <span className="inline-block text-[10px] sm:text-[11px] font-medium text-foreground bg-muted px-2.5 py-1 rounded-full uppercase tracking-wider">
                               {t("hero.cardTwoBadge")}
                             </span>
@@ -399,7 +399,7 @@ export default function HeroSection() {
                             </motion.div>
                           </div>
 
-                          <div className="mt-4 flex justify-center text-[12px] sm:text-[13px] font-medium text-muted-foreground">
+                          <div className="mt-4 flex justify-center text-[12px] sm:text-[13px] font-medium text-muted-foreground max-md:hidden">
                             <span>{t("hero.cardTwoFooter")}</span>
                           </div>
                         </motion.div>

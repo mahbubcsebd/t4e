@@ -1,5 +1,6 @@
 ---
 title: "White Paper: Think Design - Redefining the AI Coding Harness for Enterprise Software Development"
+seoTitle: "What Your AI Coding Harness Is Missing: Design Context | Think4Ever"
 description: "The emergence of AI-driven software development has shifted the bottleneck of software engineering from manual syntax writing to context management and verification. Learn how Think Design grounds agentic execution in design contracts."
 date: "April 18, 2026"
 readTime: "8 min read"

@@ -1,6 +1,7 @@
 ---
 title: 'How to: Make Vibe-Coded Applications Production Ready'
-description: 'Learn how to use Think4Ever Production Hardening to audit, secure, and harden vibe-coded or AI-generated applications for enterprise readiness.'
+seoTitle: "How to Make a Vibe-Coded App Production Ready (Checklist)"
+description: 'Audit an AI-built app for security, configuration, reliability, data and deployment, and fix what is missing before launch.'
 category: 'Development'
 readTime: '6 min read'
 hideThumbnail: true

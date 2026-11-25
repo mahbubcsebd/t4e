@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import BlogGridSection from "@/components/sections/blog/BlogGridSection";
 import { getAllPosts } from "@/lib/markdown";
 import { notFound } from "next/navigation";
+import { buildLanguageAlternates } from "@/lib/seo";
 
 export async function generateStaticParams() {
   return [{ lang: 'es' }, { lang: 'nl' }];
@@ -14,13 +15,18 @@ export async function generateMetadata(props) {
   
   if (lang === 'es') {
     return {
-      title: "Blog de Think4Ever — Artículos, Marcos e Información sobre Ingeniería de IA",
+      title: "Blog de Think4Ever — Ingeniería de IA",
+      alternates: {
+        canonical: "/es/blog/",
+        languages: buildLanguageAlternates("/blog/", ["en", "es"]),
+      },
       description: "Lea documentos técnicos, marcos arquitectónicos y perspectivas sobre el desarrollo de software impulsado por IA.",
     };
   }
   if (lang === 'nl') {
     return {
-      title: "Think4Ever Blog — Artikelen, Frameworks en AI Engineering Inzichten",
+      title: "Think4Ever Blog — AI Engineering Inzichten",
+      alternates: { canonical: "/nl/blog/" },
       description: "Lees whitepapers, architectonische frameworks en technische inzichten over AI-gedreven softwareontwikkeling.",
     };
   }

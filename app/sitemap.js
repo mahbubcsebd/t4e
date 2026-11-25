@@ -2,6 +2,7 @@ import { SITE_URL } from "@/lib/authors";
 import { toIsoDate } from "@/lib/jsonLd";
 import { getAllPosts } from "@/lib/markdown";
 import { getAllTutorials } from "@/lib/tutorials";
+import { hasTranslation } from "@/lib/contentSeo";
 
 export const dynamic = "force-static";
 
@@ -11,7 +12,6 @@ const LANGS = ["en", "es", "nl"];
 const STATIC_ROUTES = [
   "",
   "blog",
-  "tutorials",
   "price",
   "customers",
   "how-it-works",
@@ -31,12 +31,15 @@ const STATIC_ROUTES = [
 
 const localizedUrl = (lang, path) => {
   const prefix = lang === "en" ? "" : `/${lang}`;
-  return `${SITE_URL}${prefix}${path ? `/${path}` : ""}${path || lang !== "en" ? "/" : ""}`;
+  return `${SITE_URL}${prefix}${path ? `/${path}` : ""}/`;
 };
 
-const entry = (lang, path, lastModified) => ({
+// Pages without their own date share the build date.
+const BUILD_DATE = toIsoDate(new Date());
+
+const entry = (lang, path, lastModified = BUILD_DATE) => ({
   url: localizedUrl(lang, path),
-  ...(lastModified && { lastModified }),
+  lastModified,
 });
 
 export default function sitemap() {
@@ -44,12 +47,18 @@ export default function sitemap() {
   const entries = [];
 
   for (const lang of LANGS) {
-    for (const route of STATIC_ROUTES) entries.push(entry(lang, route));
+    // nl UI pages still use English copy, so only en/es list the static routes.
+    if (lang !== "nl") {
+      for (const route of STATIC_ROUTES) entries.push(entry(lang, route));
+    }
 
     for (const post of enPosts) {
+      const realSlug = post.canonicalSlug || post.slug;
+      if (!hasTranslation("blog", realSlug, lang)) continue;
       entries.push(entry(lang, `blog/${post.canonicalSlug || post.slug}`, toIsoDate(post.date)));
     }
-    for (const tutorial of getAllTutorials(lang)) {
+    for (const tutorial of getAllTutorials("en")) {
+      if (!hasTranslation("tutorials", tutorial.slug, lang)) continue;
       entries.push(entry(lang, `tutorials/${tutorial.slug}`, toIsoDate(tutorial.date)));
     }
   }
