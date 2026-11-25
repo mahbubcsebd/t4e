@@ -1,5 +1,6 @@
 ---
 title: "Libro Blanco: Think Design - Redefiniendo el arnés de código IA para el desarrollo de software empresarial"
+seoTitle: "Lo que le falta a su arnés de código con IA: contexto de diseño | Think4Ever"
 description: "La aparición del desarrollo de software impulsado por IA ha desplazado el cuello de botella de la ingeniería de software de la escritura manual de sintaxis a la gestión y verificación del contexto."
 date: "18 de abril de 2026"
 readTime: "8 min de lectura"

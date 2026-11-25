@@ -1,0 +1,28 @@
+# Think4Ever
+
+> Think4Ever turns an idea or an existing codebase into a living blueprint: architecture, workflows, dependencies and business rules that people review and AI coding agents follow. Spec-driven AI development and codebase visualization, with a free plan (500 credits, no card required).
+
+Works with Claude Code, Codex, Cursor and other MCP-compatible coding agents through Think MCP.
+
+## Product
+- [Home](https://think4ever.com/): what Think4Ever does and how to start
+- [How it works](https://think4ever.com/how-it-works/): from code or intent to a living blueprint
+- [Code to Design](https://think4ever.com/code-to-design/): visualize any codebase, architecture diagrams from code
+- [Design to Code](https://think4ever.com/design-to-code/): spec-driven development for Claude Code, Codex and Cursor
+- [Integrations](https://think4ever.com/integrations/): Think MCP and supported coding agents
+- [Pricing](https://think4ever.com/price/): start free, pay for what you use, no subscription
+- [Security](https://think4ever.com/security/): repository access, human review, private deployment
+- [FAQ](https://think4ever.com/faq/)
+
+## Guides
+- [Turn existing code into a living blueprint](https://think4ever.com/tutorials/turn-existing-code-into-a-living-blueprint/)
+- [Make vibe-coded applications production ready](https://think4ever.com/tutorials/make-vibe-coded-applications-production-ready/)
+
+## Articles
+- [The living blueprint as a system of record for AI-built software](https://think4ever.com/blog/the-living-blueprint-as-a-system-of-record-for-ai-built-software/)
+- [Blog index](https://think4ever.com/blog/)
+- [Customers](https://think4ever.com/customers/)
+
+## Optional
+- [Spanish site](https://think4ever.com/es/)
+- [Sitemap](https://think4ever.com/sitemap.xml)

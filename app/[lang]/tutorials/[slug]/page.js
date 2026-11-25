@@ -18,7 +18,7 @@ export async function generateMetadata(props) {
   const tutorial = getTutorialBySlug(slug, lang);
   if (!tutorial) return {};
 
-  const { title, description } = seoText(tutorial.title, "Think4Ever Tutorials", tutorial.desc || tutorial.description);
+  const { title, description } = seoText(tutorial.title, "Think4Ever Tutorials", tutorial.desc || tutorial.description, tutorial.seoTitle);
   const relativeImageUrl = tutorial.image || `/images/opengraph-image.jpg`;
   const imageUrl = relativeImageUrl.startsWith('http') 
     ? relativeImageUrl 

@@ -280,10 +280,10 @@
     "explorePath2": "Verken Ontwerp naar Code"
   },
   "codeToDesignPage": {
-    "metaTitle": "Code naar Ontwerp — Begrijp en Visualiseer uw Software | Think4Ever",
-    "metaDesc": "Verander een bestaand softwareproject in een levende, controleerbare blauwdruk van architectuur, afhankelijkheden, workflows en bedrijfsregels.",
+    "metaTitle": "Visualiseer elke codebase: architectuurdiagrammen uit code | Think4Ever",
+    "metaDesc": "Importeer een repo en krijg een altijd actuele kaart van architectuur, afhankelijkheden, workflows en bedrijfsregels. Begrijp elke codebase in minuten.",
     "heroEyebrow": "Code → Ontwerp",
-    "heroTitlePrefix": "Begrijp een onbekende codebase ",
+    "heroTitlePrefix": "Begrijp en visualiseer elke codebase ",
     "heroTitleHighlight": "binnen enkele minuten.",
     "heroSubtitle": "Zet bestanden om in een gedeelde systeemkaart—architectuur, werkstromen, afhankelijkheden en zakelijke regels—voordat iemand de code wijzigt.",
     "heroCtaPrimary": "Gratis starten →",
@@ -319,8 +319,8 @@
     "ctaSubtitle": "Koppel één echt project en bekijk het systeem achter de code."
   },
   "designToCodePage": {
-    "metaTitle": "Ontwerp naar Code — Bouw Software Trouw aan Bedrijfsintentie | Think4Ever",
-    "metaDesc": "Zet goedgekeurde bedrijfsdoelstellingen, architectuur, workflows en regels om in gedeelde implementatiecontext voor Think4Ever of uw coderingsagent.",
+    "metaTitle": "Spec-driven development voor Claude Code, Codex en Cursor | Think4Ever",
+    "metaDesc": "Zet goedgekeurde bedrijfsintentie om in een levende specificatie en bouw met Think4Ever of uw eigen coderingsagent via Think MCP.",
     "heroEyebrow": "Ontwerp → Code",
     "heroTitlePrefix": "Zet goedgekeurde bedoeling om in ",
     "heroTitleHighlight": "een coherente implementatie.",
@@ -822,8 +822,8 @@
     }
   },
   "layout": {
-    "metaTitle": "Verander code in een levende systeemkaart | Think4Ever",
-    "metaDesc": "Verander bestaande code in een levende systeemblauwdruk. Beoordeel de bedrijfsintentie, bekijk de impact van wijzigingen en geef elke codeeragent de systeemcontext die deze nodig heeft."
+    "metaTitle": "Verander uw idee of code in een levende blauwdruk | Think4Ever",
+    "metaDesc": "Verander uw idee of bestaande code in een levende blauwdruk: architectuur, workflows en regels die uw AI-coderingsagents volgen. Werkt met Claude Code, Codex en Cursor. Begin gratis."
   },
   "notFoundPage": {
     "eyebrow": "Fout 404",

@@ -355,10 +355,10 @@
     "metaDesc": "See how Think4Ever bridges code and design: start from an existing codebase or business intent, create a living blueprint, and guide AI changes with precision."
   },
   "codeToDesignPage": {
-    "metaTitle": "Code to Design — Understand and Visualize Your Software | Think4Ever",
-    "metaDesc": "Turn an existing software project into a living, reviewable blueprint of architecture, dependencies, workflows and business rules.",
+    "metaTitle": "Visualize Any Codebase: Architecture Diagrams From Code | Think4Ever",
+    "metaDesc": "Import a repo and get an always-current map of its architecture, dependencies, workflows and business rules. Understand any codebase in minutes.",
     "heroEyebrow": "Code → Design",
-    "heroTitlePrefix": "Understand an unfamiliar project ",
+    "heroTitlePrefix": "Understand and visualize any codebase ",
     "heroTitleHighlight": "in minutes.",
     "heroSubtitle": "Turn files into a shared system map—architecture, workflows, dependencies and business rules—before anyone changes the code.",
     "heroCtaPrimary": "Start free →",
@@ -394,8 +394,8 @@
     "ctaSubtitle": "Connect one real project and review the system behind the code."
   },
   "designToCodePage": {
-    "metaTitle": "Design to Code — Build Software Faithful to Business Intent | Think4Ever",
-    "metaDesc": "Turn approved business objectives, architecture, workflows and rules into shared implementation context for Think4Ever or your coding agent.",
+    "metaTitle": "Spec-Driven Development for Claude Code, Codex and Cursor | Think4Ever",
+    "metaDesc": "Turn approved business intent into a living spec, then build with Think4Ever or your own coding agent through Think MCP.",
     "heroEyebrow": "Design → Code",
     "heroTitlePrefix": "Turn approved intent into ",
     "heroTitleHighlight": "coherent implementation.",
@@ -1356,8 +1356,8 @@
     "okay": "Okay"
   },
   "layout": {
-    "metaTitle": "Turn Code Into a Living System Map | Think4Ever",
-    "metaDesc": "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs."
+    "metaTitle": "Turn Your Idea or Code Into a Living Blueprint | Think4Ever",
+    "metaDesc": "Turn your idea or existing code into a living blueprint: architecture, workflows and rules your AI coding agents follow. Works with Claude Code, Codex and Cursor. Start free."
   },
   "notFoundPage": {
     "eyebrow": "Error 404",

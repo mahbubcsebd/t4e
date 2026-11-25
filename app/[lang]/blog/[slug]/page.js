@@ -22,7 +22,7 @@ export async function generateMetadata(props) {
   const post = getPostBySlug(slug, lang);
   if (!post) return {};
 
-  const { title, description } = seoText(post.title, "Think4Ever Blog", post.desc || post.description);
+  const { title, description } = seoText(post.title, "Think4Ever Blog", post.desc || post.description, post.seoTitle);
   const relativeImageUrl = post.image || `/images/opengraph-image.jpg`;
   const imageUrl = relativeImageUrl.startsWith('http') 
     ? relativeImageUrl 

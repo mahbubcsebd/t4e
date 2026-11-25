@@ -1,3 +1,6 @@
+# Friendly 404 page, sent with a real 404 status
+ErrorDocument 404 /404.html
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -14,6 +17,7 @@
 
   # 2b. Legacy /pricing -> /price (canonical pricing page)
   RewriteRule ^pricing/?$ /price/ [R=301,L]
+  RewriteRule ^(es|nl)/pricing/?$ /$1/price/ [R=301,L]
 
   # 3. Handle Next.js RSC Flight payload requests:
   # Next.js may fetch /path.txt; rewrite it to /path/index.txt if it exists
@@ -34,7 +38,8 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !\.(txt|js|css|png|jpg|jpeg|gif|ico|svg|woff2?|map)$ [NC]
-  RewriteRule ^ 404.html [L]
+  # Real 404 status (a plain "404.html [L]" rewrite answers 200 = soft 404)
+  RewriteRule ^ - [R=404,L]
 </IfModule>
 
 # Ensure .txt files (Next.js Flight data) are served as clean text/plain without caching

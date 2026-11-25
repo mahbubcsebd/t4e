@@ -17,14 +17,14 @@ export const metadata = {
   metadataBase: process.env.NEXT_PUBLIC_VERCEL_URL 
     ? new URL(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}`) 
     : new URL("https://think4ever.com"),
-  title: "Turn Code Into a Living System Map | Think4Ever",
-  description: "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.",
+  title: "Turn Your Idea or Code Into a Living Blueprint | Think4Ever",
+  description: "Turn your idea or existing code into a living blueprint: architecture, workflows and rules your AI coding agents follow. Works with Claude Code, Codex and Cursor. Start free.",
   icons: {
     icon: "/images/favicon.ico",
   },
   openGraph: {
-    title: "Turn Code Into a Living System Map | Think4Ever",
-    description: "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.",
+    title: "Turn Your Idea or Code Into a Living Blueprint | Think4Ever",
+    description: "Turn your idea or existing code into a living blueprint: architecture, workflows and rules your AI coding agents follow. Works with Claude Code, Codex and Cursor. Start free.",
     type: "website",
     url: "https://think4ever.com",
     siteName: "Think4Ever",
@@ -39,8 +39,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Turn Code Into a Living System Map | Think4Ever",
-    description: "Turn existing code into a living system blueprint. Review business intent, see change impact and give every coding agent the system context it needs.",
+    title: "Turn Your Idea or Code Into a Living Blueprint | Think4Ever",
+    description: "Turn your idea or existing code into a living blueprint: architecture, workflows and rules your AI coding agents follow. Works with Claude Code, Codex and Cursor. Start free.",
     images: ["https://think4ever.com/images/opengraph-image.jpg"],
   },
 };

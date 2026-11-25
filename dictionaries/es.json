@@ -355,10 +355,10 @@
     "ctaSubtitle": "Vea el sistema detrás del código antes de pedirle a un agente que lo cambie."
   },
   "codeToDesignPage": {
-    "metaTitle": "De Código a Diseño — Entienda y Visualice su Software | Think4Ever",
-    "metaDesc": "Convierta un proyecto de software existente en un plano vivo y revisable de la arquitectura, dependencias, flujos de trabajo y reglas de negocio.",
+    "metaTitle": "Visualice cualquier código: diagramas de arquitectura | Think4Ever",
+    "metaDesc": "Importe un repositorio y obtenga un mapa siempre actualizado de su arquitectura, dependencias, flujos de trabajo y reglas de negocio. Comprenda cualquier código en minutos.",
     "heroEyebrow": "Código → Diseño",
-    "heroTitlePrefix": "Comprenda una base de código desconocida ",
+    "heroTitlePrefix": "Comprenda y visualice cualquier base de código ",
     "heroTitleHighlight": "en minutos.",
     "heroSubtitle": "Convierta los archivos en un mapa del sistema compartido: arquitectura, flujos de trabajo, dependencias y reglas de negocio, antes de que alguien cambie el código.",
     "heroCtaPrimary": "Comenzar gratis →",
@@ -394,8 +394,8 @@
     "ctaSubtitle": "Conecte un proyecto real y revise el sistema detrás del código."
   },
   "designToCodePage": {
-    "metaTitle": "De Diseño a Código — Cree Software Fiel a la Intención del Negocio | Think4Ever",
-    "metaDesc": "Convierta objetivos de negocio, arquitectura, flujos de trabajo y reglas aprobadas en contexto de implementación compartido para Think4Ever o su agente de código.",
+    "metaTitle": "Desarrollo guiado por especificaciones: Claude Code, Codex, Cursor | Think4Ever",
+    "metaDesc": "Convierta la intención de negocio aprobada en una especificación viva y desarrolle con Think4Ever o su propio agente de código mediante Think MCP.",
     "heroEyebrow": "Diseño → Código",
     "heroTitlePrefix": "Convierta la intención aprobada en ",
     "heroTitleHighlight": "una implementación coherente.",
@@ -1356,8 +1356,8 @@
     "okay": "Aceptar"
   },
   "layout": {
-    "metaTitle": "Convierta su código en un mapa de sistema vivo | Think4Ever",
-    "metaDesc": "Convierta el código existente en un plano vivo del sistema. Revise la intención comercial, vea el impacto de los cambios y proporcione a cada agente de codificación el contexto del sistema que necesita."
+    "metaTitle": "Convierta su idea o código en un plano vivo | Think4Ever",
+    "metaDesc": "Convierta su idea o código existente en un plano vivo: arquitectura, flujos de trabajo y reglas que siguen sus agentes de código con IA. Funciona con Claude Code, Codex y Cursor. Comience gratis."
   },
   "notFoundPage": {
     "eyebrow": "Error 404",

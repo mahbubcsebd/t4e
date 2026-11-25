@@ -31,12 +31,15 @@ const STATIC_ROUTES = [
 
 const localizedUrl = (lang, path) => {
   const prefix = lang === "en" ? "" : `/${lang}`;
-  return `${SITE_URL}${prefix}${path ? `/${path}` : ""}${path || lang !== "en" ? "/" : ""}`;
+  return `${SITE_URL}${prefix}${path ? `/${path}` : ""}/`;
 };
 
-const entry = (lang, path, lastModified) => ({
+// Pages without their own date share the build date.
+const BUILD_DATE = toIsoDate(new Date());
+
+const entry = (lang, path, lastModified = BUILD_DATE) => ({
   url: localizedUrl(lang, path),
-  ...(lastModified && { lastModified }),
+  lastModified,
 });
 
 export default function sitemap() {
