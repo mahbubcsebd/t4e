@@ -17,7 +17,7 @@ export default function OnboardingPage() {
       <header className="bg-white border-b border-[#c8d9ed] px-6 py-4 flex items-center justify-between sticky top-0 z-50 shadow-sm">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/images/t4e-logo.png"
+            src="/images/t4e-logo.webp"
             alt="Think4Ever"
             width={140}
             height={32}

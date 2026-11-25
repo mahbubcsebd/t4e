@@ -12,7 +12,7 @@ hideThumbnail: true
 <div class="space-y-8 text-gray-600">
 
 <section>
-<h1 class="text-2xl font-bold text-gray-900 mb-6">Code Visualization for Real Codebases: Maps, Graphs and Architecture Views</h1>
+<h2 class="text-2xl font-bold text-gray-900 mb-6">Code Visualization for Real Codebases: Maps, Graphs and Architecture Views</h2>
 <p class="text-lg mb-6">How to choose the right view for understanding, changing and explaining a software system.</p>
 
 <div class="bg-[#f0f4ff] border border-[#d2e0ff] rounded-lg p-5 md:p-6 my-8">

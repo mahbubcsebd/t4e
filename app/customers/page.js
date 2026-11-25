@@ -1,3 +1,4 @@
+import { buildLanguageAlternates } from "@/lib/seo";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CustomersIndexContent from "@/components/sections/customers/CustomersIndexContent";
@@ -5,14 +6,25 @@ import CustomersIndexContent from "@/components/sections/customers/CustomersInde
 export const metadata = {
   title: "Customer stories | Think4Ever",
   description:
-    "How consulting firms, founders, enterprises and security teams use Think4Ever to design before they build: EY, YogiFi, Insignian Homes and security analyst Jake Williams.",
-  alternates: { canonical: "/customers/" },
+    "How EY, YogiFi, Insignian Homes and security analyst Jake Williams use Think4Ever to design before they build.",
+  alternates: {
+    canonical: "/customers/",
+    languages: buildLanguageAlternates("/customers/", ["en", "es"]),
+  },
   openGraph: {
     title: "Customer stories | Think4Ever",
     description:
-      "How consulting firms, founders, enterprises and security teams use Think4Ever to design before they build: EY, YogiFi, Insignian Homes and security analyst Jake Williams.",
+      "How EY, YogiFi, Insignian Homes and security analyst Jake Williams use Think4Ever to design before they build.",
     url: "https://think4ever.com/customers/",
     type: "website",
+    images: [
+      {
+        url: "https://think4ever.com/images/opengraph-image.jpg",
+        width: 1200,
+        height: 1200,
+        alt: "Think4Ever customer stories",
+      },
+    ],
   },
 };
 

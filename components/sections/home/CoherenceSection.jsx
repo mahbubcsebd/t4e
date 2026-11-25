@@ -48,7 +48,7 @@ export default function CoherenceSection() {
           />
 
           {/* Workspace Interface Window */}
-          <Container>
+          <Container className="max-md:hidden">
             <div className="max-w-[1600px] mx-auto bg-card rounded-xl border border-border shadow-lg shadow-black/5 overflow-hidden flex flex-col group">
               {/* Mac-style Window Header */}
               <div className="h-12 bg-muted/50 border-b border-border flex items-center px-5 justify-between">

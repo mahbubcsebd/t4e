@@ -1,6 +1,7 @@
 "use client";
 
-import { ArrowRight, Check, X } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, Check, ChevronDown, X } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useAuthModal } from "@/context/AuthModalContext";
 import { Button } from "@/components/ui/button";
@@ -11,6 +12,7 @@ const ROW_KEYS = ["context", "knowledge", "changes", "tools"];
 export default function ContextGapSection() {
   const { t } = useLanguage();
   const { openAuthModal } = useAuthModal();
+  const [isCompareOpen, setIsCompareOpen] = useState(false);
   const withoutLabel = t("contextGap.withoutTitle");
   const withLabel = t("contextGap.withTitle");
 
@@ -19,7 +21,7 @@ export default function ContextGapSection() {
       aria-labelledby="context-gap-title"
       className="relative mx-auto w-full max-w-[1600px] px-4 pb-10 sm:px-6 md:pb-14 md:pt-6 lg:px-8 max-md:pt-6!"
     >
-      <div className="mx-auto mb-8 flex w-full max-w-[640px] md:mb-12 flex-col items-center gap-4">
+      <div className="mx-auto mb-8 flex w-full max-w-[640px] md:mb-12 flex-col items-center gap-4 max-md:hidden">
         <div className="flex w-full items-center gap-4" aria-hidden="true">
           <span className="h-px flex-1 bg-gradient-to-r from-transparent to-slate-200" />
           <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
@@ -30,7 +32,7 @@ export default function ContextGapSection() {
         <StoreButtons variant="blue" className="max-w-[460px]" />
       </div>
 
-      <span className="block text-center text-xs font-bold uppercase tracking-[0.08em] text-slate-600">
+      <span className="block text-center text-xs font-bold uppercase tracking-[0.08em] text-slate-600 max-md:hidden">
         {t("contextGap.eyebrow")}
       </span>
       <h2
@@ -72,7 +74,7 @@ export default function ContextGapSection() {
               >
                 {t(`contextGap.rows.${key}.label`)}
               </th>
-              <td className="border-t border-slate-200 px-[18px] py-4 align-top text-[15px] text-slate-600 max-md:block max-md:border-0 max-md:px-4 max-md:py-1.5">
+              <td className={`border-t border-slate-200 px-[18px] py-4 align-top text-[15px] text-slate-600 max-md:border-0 max-md:px-4 max-md:py-1.5 ${isCompareOpen ? "max-md:block" : "max-md:hidden"}`}>
                 <span className="flex items-start gap-2">
                   <X className="mt-[3px] h-[18px] w-[18px] shrink-0 text-[#C2570C]" strokeWidth={2.4} aria-hidden="true" />
                   <span>
@@ -94,6 +96,19 @@ export default function ContextGapSection() {
           ))}
         </tbody>
       </table>
+
+      <button
+        type="button"
+        onClick={() => setIsCompareOpen((open) => !open)}
+        aria-expanded={isCompareOpen}
+        className="mx-auto mt-3 flex min-h-11 items-center gap-1.5 px-2 text-[15px] font-semibold text-[#093CAD] md:hidden"
+      >
+        {isCompareOpen ? t("contextGap.compareHide") : t("contextGap.compareShow")}
+        <ChevronDown
+          className={`h-4 w-4 transition-transform ${isCompareOpen ? "rotate-180" : ""}`}
+          aria-hidden="true"
+        />
+      </button>
 
       <div className="mt-6 flex flex-wrap items-center justify-center gap-x-[18px] gap-y-2.5">
         <Button size="lg" onClick={() => openAuthModal("signup")}>

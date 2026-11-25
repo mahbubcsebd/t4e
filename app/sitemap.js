@@ -2,6 +2,7 @@ import { SITE_URL } from "@/lib/authors";
 import { toIsoDate } from "@/lib/jsonLd";
 import { getAllPosts } from "@/lib/markdown";
 import { getAllTutorials } from "@/lib/tutorials";
+import { hasTranslation } from "@/lib/contentSeo";
 
 export const dynamic = "force-static";
 
@@ -11,7 +12,6 @@ const LANGS = ["en", "es", "nl"];
 const STATIC_ROUTES = [
   "",
   "blog",
-  "tutorials",
   "price",
   "customers",
   "how-it-works",
@@ -44,12 +44,18 @@ export default function sitemap() {
   const entries = [];
 
   for (const lang of LANGS) {
-    for (const route of STATIC_ROUTES) entries.push(entry(lang, route));
+    // nl UI pages still use English copy, so only en/es list the static routes.
+    if (lang !== "nl") {
+      for (const route of STATIC_ROUTES) entries.push(entry(lang, route));
+    }
 
     for (const post of enPosts) {
+      const realSlug = post.canonicalSlug || post.slug;
+      if (!hasTranslation("blog", realSlug, lang)) continue;
       entries.push(entry(lang, `blog/${post.canonicalSlug || post.slug}`, toIsoDate(post.date)));
     }
-    for (const tutorial of getAllTutorials(lang)) {
+    for (const tutorial of getAllTutorials("en")) {
+      if (!hasTranslation("tutorials", tutorial.slug, lang)) continue;
       entries.push(entry(lang, `tutorials/${tutorial.slug}`, toIsoDate(tutorial.date)));
     }
   }

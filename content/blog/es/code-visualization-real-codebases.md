@@ -12,7 +12,7 @@ hideThumbnail: true
 <div class="space-y-8 text-gray-600">
 
 <section>
-<h1 class="text-2xl font-bold text-gray-900 mb-6">Visualización de Código para Bases de Código Reales: Mapas, Gráficos y Vistas de Arquitectura</h1>
+<h2 class="text-2xl font-bold text-gray-900 mb-6">Visualización de Código para Bases de Código Reales: Mapas, Gráficos y Vistas de Arquitectura</h2>
 <p class="text-lg mb-6">Cómo elegir la vista correcta para comprender, cambiar y explicar un sistema de software.</p>
 
 <div class="bg-[#f0f4ff] border border-[#d2e0ff] rounded-lg p-5 md:p-6 my-8">

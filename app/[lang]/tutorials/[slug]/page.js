@@ -1,3 +1,4 @@
+import { contentAlternates, seoText } from "@/lib/contentSeo";
 import { getTutorialBySlug, getAllTutorials } from "@/lib/tutorials";
 import { notFound } from "next/navigation";
 import { TutorialDetailNav } from "@/components/sections/tutorials/TutorialDetailNav";
@@ -17,8 +18,7 @@ export async function generateMetadata(props) {
   const tutorial = getTutorialBySlug(slug, lang);
   if (!tutorial) return {};
 
-  const title = `${tutorial.title} | Think4Ever Tutorials`;
-  const description = tutorial.desc || tutorial.description;
+  const { title, description } = seoText(tutorial.title, "Think4Ever Tutorials", tutorial.desc || tutorial.description);
   const relativeImageUrl = tutorial.image || `/images/opengraph-image.jpg`;
   const imageUrl = relativeImageUrl.startsWith('http') 
     ? relativeImageUrl 
@@ -27,7 +27,10 @@ export async function generateMetadata(props) {
   return {
     title,
     description,
-    alternates: { canonical: `/${lang}/tutorials/${slug}/` },
+    alternates: {
+      canonical: `/${lang}/tutorials/${slug}/`,
+      languages: contentAlternates("tutorials", slug),
+    },
     openGraph: {
       title,
       description,

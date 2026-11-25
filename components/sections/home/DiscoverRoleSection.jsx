@@ -39,7 +39,7 @@ const formatNumber = (index) => String(index + 1).padStart(2, '0');
 
 function CoverTile({ t, guideHref }) {
   return (
-    <div className="relative overflow-hidden rounded-xl bg-[#093cad] text-white flex flex-col min-h-[380px] md:col-span-2 lg:col-span-1 lg:row-span-2">
+    <div className="relative overflow-hidden rounded-xl bg-[#093cad] text-white flex flex-col min-h-[380px] md:col-span-2 lg:col-span-1 lg:row-span-2 max-md:hidden">
       <div className="relative z-10 p-6 sm:p-8">
         <p className="flex items-baseline gap-2 leading-none">
           <span className="text-7xl sm:text-8xl font-extrabold text-primary tracking-tight">
@@ -163,6 +163,30 @@ function RoleCard({ role, index, roleLabel, useLabel, moreLabel, onOpen }) {
         </span>
       </button>
     </div>
+  );
+}
+
+// Phones: compact swipe card; the next card peeks in from the right.
+function RoleSwipeCard({ role, index, onOpen }) {
+  return (
+    <button
+      type="button"
+      onClick={() => onOpen(index)}
+      aria-haspopup="dialog"
+      className="flex min-h-[132px] w-[78%] shrink-0 snap-start cursor-pointer flex-col rounded-xl border border-[#e6d6b8] bg-[#fbf6ec] p-4 text-left focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-primary"
+    >
+      <span className="flex items-baseline gap-2">
+        <span className="text-3xl font-extrabold leading-none tracking-tight text-primary">
+          {formatNumber(index)}
+        </span>
+        <span className="text-lg font-extrabold tracking-tight text-foreground">
+          {role.name}
+        </span>
+      </span>
+      <span className="mt-2 line-clamp-3 text-base leading-snug text-[#24407e]">
+        {role.desc}
+      </span>
+    </button>
   );
 }
 
@@ -321,7 +345,7 @@ export default function DiscoverRoleSection() {
 
           <div
             id="role-cards"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 scroll-mt-24"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 scroll-mt-24 max-md:hidden"
           >
             <CoverTile t={t} guideHref={guideHref} />
             {roleList.map((role, index) => (
@@ -334,6 +358,18 @@ export default function DiscoverRoleSection() {
                 moreLabel={t('discoverRole.moreLabel')}
                 onOpen={setActiveIndex}
               />
+            ))}
+          </div>
+
+          <div
+            id="role-cards-mobile"
+            role="list"
+            className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto overscroll-x-contain px-4 pb-2 hide-scrollbar md:hidden"
+          >
+            {roleList.map((role, index) => (
+              <div key={role.name} role="listitem" className="contents">
+                <RoleSwipeCard role={role} index={index} onOpen={setActiveIndex} />
+              </div>
             ))}
           </div>
         </div>

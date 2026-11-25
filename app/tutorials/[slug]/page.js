@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
 import JsonLd from "@/components/JsonLd";
+import { contentAlternates, seoText } from "@/lib/contentSeo";
 import { buildArticleLd, toIsoDate } from "@/lib/jsonLd";
 
 export async function generateMetadata(props) {
@@ -17,8 +18,7 @@ export async function generateMetadata(props) {
 
   if (!tutorial) return {};
 
-  const title = `${tutorial.title} | Think4Ever Tutorials`;
-  const description = tutorial.desc || tutorial.description;
+  const { title, description } = seoText(tutorial.title, "Think4Ever Tutorials", tutorial.desc || tutorial.description);
   const relativeImageUrl = tutorial.image || `/images/opengraph-image.jpg`;
   const imageUrl = relativeImageUrl.startsWith('http') 
     ? relativeImageUrl 
@@ -27,7 +27,10 @@ export async function generateMetadata(props) {
   return {
     title,
     description,
-    alternates: { canonical: `/tutorials/${slug}/` },
+    alternates: {
+      canonical: `/tutorials/${slug}/`,
+      languages: contentAlternates("tutorials", slug),
+    },
     openGraph: {
       title,
       description,

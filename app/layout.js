@@ -50,6 +50,12 @@ export default function RootLayout({ children }) {
     <html lang="en" data-scroll-behavior="smooth" className={`${dmSans.variable} h-full antialiased scroll-smooth`} suppressHydrationWarning>
       <head>
         <meta name="google" content="notranslate" />
+        {/* Static export has one root <html>; set lang for /es/ and /nl/ before paint. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "var m=location.pathname.match(/^\\/(es|nl)(\\/|$)/);if(m)document.documentElement.lang=m[1];",
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col font-sans bg-background text-foreground transition-colors duration-300">
         <Script src="/t4e-analytics.js" strategy="lazyOnload" />

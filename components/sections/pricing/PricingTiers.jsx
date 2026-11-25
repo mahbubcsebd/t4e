@@ -103,7 +103,7 @@ export default function PricingTiers() {
                 {/* Badge */}
                 {plan.badge && (
                   <div className="absolute -top-3.5 right-6 z-20">
-                    <span className="text-[10px] font-extrabold uppercase px-3 py-1 rounded-full tracking-wider shadow-lg bg-amber-600 text-white shadow-amber-600/30">
+                    <span className="text-[10px] font-extrabold uppercase px-3 py-1 rounded-full tracking-wider shadow-lg bg-amber-700 text-white shadow-amber-600/30">
                       {plan.badge}
                     </span>
                   </div>
@@ -243,7 +243,7 @@ export default function PricingTiers() {
                       onClick={() => openAuthModal("signup")}
                       className={`flex w-full items-center justify-center rounded-full text-sm font-bold py-3.5 transition-all duration-300 cursor-pointer ${
                         plan.featured
-                          ? "bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-600/25 hover:shadow-xl hover:shadow-amber-600/40 hover:-translate-y-0.5"
+                          ? "bg-amber-700 hover:bg-amber-800 text-white shadow-lg shadow-amber-600/25 hover:shadow-xl hover:shadow-amber-600/40 hover:-translate-y-0.5"
                           : plan.team
                           ? "bg-[#093cad] hover:bg-[#072d82] text-white shadow-lg shadow-[#093cad]/25 hover:shadow-xl hover:shadow-[#093cad]/40 hover:-translate-y-0.5"
                           : "bg-muted text-foreground border border-border/60 hover:bg-muted/80 hover:border-border hover:text-foreground"
@@ -256,7 +256,7 @@ export default function PricingTiers() {
                       href={localizeHref(plan.href)}
                       className={`flex w-full items-center justify-center rounded-full text-sm font-bold py-3.5 transition-all duration-300 ${
                         plan.featured
-                          ? "bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-600/25 hover:shadow-xl hover:shadow-amber-600/40 hover:-translate-y-0.5"
+                          ? "bg-amber-700 hover:bg-amber-800 text-white shadow-lg shadow-amber-600/25 hover:shadow-xl hover:shadow-amber-600/40 hover:-translate-y-0.5"
                           : plan.team
                           ? "bg-[#093cad] hover:bg-[#072d82] text-white shadow-lg shadow-[#093cad]/25 hover:shadow-xl hover:shadow-[#093cad]/40 hover:-translate-y-0.5"
                           : "bg-muted text-foreground border border-border/60 hover:bg-muted/80 hover:border-border hover:text-foreground"

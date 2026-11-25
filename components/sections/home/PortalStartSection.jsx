@@ -8,6 +8,7 @@ import { useAuthModal } from "@/context/AuthModalContext";
 import { callPortalApi } from "@/lib/portalApi";
 import HeroMascot from "@/components/sections/home/portal/HeroMascot";
 import PortalModes from "@/components/sections/home/portal/PortalModes";
+import ModeSelect from "@/components/sections/home/portal/ModeSelect";
 import {
   usePrefersReducedMotion,
   useTypedPhrases,
@@ -160,7 +161,7 @@ export default function PortalStartSection() {
   };
 
   return (
-    <section className="relative isolate flex flex-col overflow-x-clip bg-[#f8fafc] max-md:pb-0!">
+    <section id="home-hero" className="relative isolate flex flex-col overflow-x-clip bg-[#f8fafc] max-md:pb-0!">
       {/* Backdrop */}
       <div
         aria-hidden="true"
@@ -178,7 +179,7 @@ export default function PortalStartSection() {
           isListening={isFocused}
           isTyping={isTyping}
           isReducedMotion={isReducedMotion}
-          className="h-[clamp(72px,calc(100svh-600px),min(300px,calc((100vw-32px)*0.5625)))] w-auto max-w-full shrink-0 md:h-[clamp(120px,24svh,280px)]"
+          className="h-[clamp(72px,calc(100svh-600px),min(300px,calc((100vw-32px)*0.5625)))] w-auto max-w-full shrink-0 max-md:hidden md:h-[clamp(120px,24svh,280px)]"
         />
 
         <h1 className="mt-0 text-balance text-[clamp(25px,min(8vw,5.8svh),52px)] font-extrabold leading-[1.08] tracking-[-0.03em] text-[#0f172a] md:text-[clamp(34px,5vw,54px)]">
@@ -190,12 +191,14 @@ export default function PortalStartSection() {
 
         <p
           aria-hidden="true"
-          className="mt-0.5 flex h-[26px] items-center justify-center whitespace-nowrap text-[clamp(16px,2.5svh,22px)] font-medium text-[#2563eb] md:mt-2 md:h-9 md:text-2xl"
+          className="mt-0.5 flex h-[26px] items-center max-md:hidden justify-center whitespace-nowrap text-[clamp(16px,2.5svh,22px)] font-medium text-[#2563eb] md:mt-2 md:h-9 md:text-2xl"
         >
           <span>{typedText}</span>
           <span className="hero-motion ml-[3px] h-[18px] w-0.5 bg-[#f97316] animate-[hero-caret-blink_1s_steps(1)_infinite] md:h-[26px]" />
         </p>
-        <p className="sr-only">{t("portalStart.subMobile")}</p>
+        <p className="mt-2 max-w-[320px] text-balance text-base leading-snug text-slate-600 md:sr-only">
+          {t("portalStart.subMobile")}
+        </p>
 
         <div className="w-full max-w-[680px] md:max-w-[760px]">
           {/* Idea box */}
@@ -226,6 +229,14 @@ export default function PortalStartSection() {
               placeholder={currentMode.placeholder}
               className="block w-full resize-none rounded-2xl bg-transparent min-h-[96px] px-4 pb-2.5 pt-3 text-base leading-snug text-[#0f172a] outline-none placeholder:text-slate-400 md:min-h-[112px] md:pt-4"
             />
+            <div className="flex items-center px-3 pb-3 md:hidden">
+              <ModeSelect
+                modes={modes}
+                selectedKey={selectedModeKey}
+                onSelect={handleSelectMode}
+                label={t("portalStart.modeLabel")}
+              />
+            </div>
             {promptError && (
               <p role="alert" className="px-4 pb-2.5 text-[13px] text-[#b84e00]">
                 {promptError}
@@ -247,10 +258,26 @@ export default function PortalStartSection() {
               size="lg"
               disabled={isLoading}
               onClick={() => handleAction("signin")}
+              className="max-md:hidden"
             >
               {t("portalStart.haveAccount")}
             </Button>
-            <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[13px] font-medium text-[#0f172a] md:text-sm">
+            {/* Phones: quiet sign-in link + one merged proof line */}
+            <p className="text-sm text-slate-600 md:hidden">
+              {t("portalStart.haveAccountShort")}{" "}
+              <button
+                type="button"
+                disabled={isLoading}
+                onClick={() => handleAction("signin")}
+                className="inline-flex min-h-11 items-center px-1 font-semibold text-[#2563eb] underline underline-offset-2"
+              >
+                {t("portalStart.signIn")}
+              </button>
+            </p>
+            <p className="max-w-[320px] text-balance text-xs leading-snug text-slate-500 md:hidden">
+              {t("portalStart.compactLine")}
+            </p>
+            <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[13px] font-medium text-[#0f172a] max-md:hidden md:text-sm">
               {["perk", "noCard"].map((key) => (
                 <span key={key} className="inline-flex items-center gap-1.5">
                   <Check className="h-4 w-4 text-[#0B4BD6]" strokeWidth={2.6} aria-hidden="true" />
@@ -258,7 +285,7 @@ export default function PortalStartSection() {
                 </span>
               ))}
             </p>
-            <p className="max-w-[520px] text-[13px] leading-snug text-slate-600">
+            <p className="max-w-[520px] text-[13px] leading-snug text-slate-600 max-md:hidden">
               {t("portalStart.proofPre")} <b className="font-bold text-[#0f172a]">EY</b>,{" "}
               <b className="font-bold text-[#0f172a]">YogiFi</b> {t("portalStart.proofAnd")}{" "}
               <b className="font-bold text-[#0f172a]">Insignian Homes</b> {t("portalStart.proofPost")}{" "}
@@ -269,7 +296,12 @@ export default function PortalStartSection() {
                 {t("portalStart.proofLink")} &rarr;
               </Link>
             </p>
-            <p className="text-xs leading-snug text-slate-500">
+            {/* On phones the legal line only appears once the visitor has typed */}
+            <p
+              className={`text-xs leading-snug text-slate-500 ${
+                projectPrompt.trim() ? "" : "max-md:hidden"
+              }`}
+            >
               {t("portalStart.finePre")}{" "}
               <Link href={localizeHref(language, "/terms-and-conditions/")} className="underline">
                 {t("portalStart.terms")}

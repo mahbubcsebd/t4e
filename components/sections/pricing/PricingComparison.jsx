@@ -232,7 +232,7 @@ export default function PricingComparison() {
                   <th className="p-4 sm:p-5 text-xs sm:text-sm font-bold uppercase tracking-wider text-muted-foreground w-[18%]">
                     {t("pricingPage.plan1Name", "Think Free")}
                   </th>
-                  <th className="p-4 sm:p-5 text-xs sm:text-sm font-bold uppercase tracking-wider text-amber-600 w-[18%]">
+                  <th className="p-4 sm:p-5 text-xs sm:text-sm font-bold uppercase tracking-wider text-amber-700 w-[18%]">
                     {t("pricingPage.plan2Name", "Think New")}
                   </th>
                   <th className="p-4 sm:p-5 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-primary bg-primary/5 w-[18%] border-x border-primary/20">

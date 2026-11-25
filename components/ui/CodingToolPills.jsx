@@ -92,7 +92,7 @@ export default function CodingToolPills({ variant = "light", className = "", all
           className="group flex items-center gap-2.5 bg-card border border-border hover:border-primary/50 text-foreground text-[13px] font-semibold pr-4 pl-1.5 py-1.5 rounded-full transition-all duration-300 cursor-default shadow-sm"
         >
           <div className="flex items-center justify-center w-7 h-7 rounded-full bg-muted border border-border group-hover:scale-110 transition-transform duration-300">
-            <tool.icon className="w-[15px] h-[15px] text-foreground" />
+            <tool.icon className="w-[15px] h-[15px] text-foreground" aria-hidden="true" role="presentation" />
           </div>
           <span className="tracking-wide">{tool.name}</span>
         </div>

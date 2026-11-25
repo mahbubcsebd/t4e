@@ -79,7 +79,6 @@ export default function Header() {
   const [mobileTutorialsOpen, setMobileTutorialsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const desktopLangDropdownRef = useRef(null);
-  const mobileLangDropdownRef = useRef(null);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -88,11 +87,8 @@ export default function Header() {
       const isOutsideDesktop =
         desktopLangDropdownRef.current &&
         !desktopLangDropdownRef.current.contains(event.target);
-      const isOutsideMobile =
-        mobileLangDropdownRef.current &&
-        !mobileLangDropdownRef.current.contains(event.target);
 
-      if (isOutsideDesktop && isOutsideMobile) {
+      if (isOutsideDesktop) {
         setLangDropdownOpen(false);
       }
     };
@@ -360,7 +356,7 @@ export default function Header() {
           aria-label="Think4Ever Home"
         >
           <Image
-            src="/images/t4e-logo.png"
+            src="/images/t4e-logo.webp"
             alt="Think4Ever"
             width={260}
             height={80}
@@ -719,71 +715,20 @@ export default function Header() {
           </Button>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
-          <div className="relative" ref={mobileLangDropdownRef}>
-            <button
-              onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              className="flex items-center gap-1 text-[14px] font-medium text-white/90 hover:text-white transition-colors py-2"
-              aria-label="Select language"
-            >
-              <Globe className="w-4 h-4 text-white/90" />
-              <span className="uppercase">{currentLang.code}</span>
-              <ChevronDown
-                className={`w-3.5 h-3.5 text-white/90 transition-transform duration-200 ${langDropdownOpen ? 'rotate-180' : ''}`}
-              />
-            </button>
-
-            {langDropdownOpen && (
-              <div className="absolute right-0 top-full mt-1 w-36 bg-card rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-border py-1.5 z-50 animate-in fade-in slide-in-from-top-2">
-                {availableLanguages
-                  .filter((l) => !l.hidden)
-                  .map((lang) => {
-                    const targetHref = getLocalizedPathname
-                      ? getLocalizedPathname(lang.code, pathname, language)
-                      : '#';
-                    return (
-                      <a
-                        key={lang.code}
-                        href={targetHref}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          handleLanguageChange(lang.code);
-                        }}
-                        className={`w-full flex items-center justify-between px-4 py-2 text-[13px] transition-colors ${
-                          language === lang.code
-                            ? 'text-foreground font-bold bg-muted'
-                            : 'text-muted-foreground font-medium hover:bg-muted'
-                        }`}
-                        aria-label={`Change language to ${lang.name}`}
-                      >
-                        <div className="flex items-center gap-2">
-                          <Image
-                            src={`https://flagcdn.com/w20/${lang.code === 'en' ? 'us' : lang.code}.png`}
-                            alt={lang.name}
-                            width={18}
-                            height={13}
-                            unoptimized
-                            className="w-[18px] h-[13px] rounded-sm shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
-                          />
-                          <span translate="no">{lang.name}</span>
-                        </div>
-                        {language === lang.code && (
-                          <span className="text-primary font-bold text-xs">
-                            ✓
-                          </span>
-                        )}
-                      </a>
-                    );
-                  })}
-              </div>
-            )}
-          </div>
+        {/* Mobile: Start free always visible; language + Sign in live in the menu */}
+        <div className="flex items-center gap-1.5 sm:gap-3 lg:hidden">
+          <Button
+            onClick={() => openAuthModal('signup')}
+            className="bg-white text-[#093cad] hover:bg-gray-100 shadow-none font-bold px-4 h-11 text-sm cursor-pointer"
+          >
+            {t('nav.startFree')}
+          </Button>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-white hover:text-white/80 transition-colors"
+            className="grid h-11 w-11 place-items-center text-white hover:text-white/80 transition-colors"
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -1058,25 +1003,59 @@ export default function Header() {
               </Link>
             </div> */}
 
-            <div className="pt-2 pb-2 grid grid-cols-2 gap-2">
+            <div className="border-t border-border pt-3">
+              <p className="mb-2 flex items-center gap-1.5 text-[13px] font-semibold text-[#314865]">
+                <Globe className="w-4 h-4" aria-hidden="true" />
+                {t('nav.language', 'Language')}
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                {availableLanguages
+                  .filter((l) => !l.hidden)
+                  .map((lang) => (
+                    <a
+                      key={lang.code}
+                      href={
+                        getLocalizedPathname
+                          ? getLocalizedPathname(lang.code, pathname, language)
+                          : '#'
+                      }
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setMobileMenuOpen(false);
+                        handleLanguageChange(lang.code);
+                      }}
+                      aria-current={language === lang.code ? 'true' : undefined}
+                      aria-label={`Change language to ${lang.name}`}
+                      className={`flex min-h-11 items-center justify-center gap-2 rounded-lg border text-[13px] transition-colors ${
+                        language === lang.code
+                          ? 'border-primary bg-muted font-bold text-foreground'
+                          : 'border-border font-medium text-muted-foreground hover:bg-muted'
+                      }`}
+                    >
+                      <Image
+                        src={`https://flagcdn.com/w20/${lang.code === 'en' ? 'us' : lang.code}.png`}
+                        alt=""
+                        width={18}
+                        height={13}
+                        unoptimized
+                        className="w-[18px] h-[13px] rounded-sm shadow-[0_0_2px_rgba(0,0,0,0.2)] object-cover"
+                      />
+                      <span translate="no">{lang.name}</span>
+                    </a>
+                  ))}
+              </div>
+            </div>
+
+            <div className="pt-3 pb-2">
               <Button
                 variant="outline"
-                className="w-full text-center cursor-pointer"
+                className="w-full min-h-11 text-center cursor-pointer"
                 onClick={() => {
                   setMobileMenuOpen(false);
                   openAuthModal('signin');
                 }}
               >
                 {t('nav.signIn')}
-              </Button>
-              <Button
-                className="w-full text-center cursor-pointer"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  openAuthModal('signup');
-                }}
-              >
-                {t('nav.startFree')}
               </Button>
             </div>
           </motion.div>

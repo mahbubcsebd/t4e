@@ -19,6 +19,7 @@
     "finePost": "y la",
     "privacy": "Política de privacidad",
     "perk": "Plan gratis con 500 créditos",
+    "compactLine": "Plan gratis con 500 créditos · Sin tarjeta de crédito · Usado por EY, YogiFi e Insignian Homes",
     "phrases": {
       "p1": "Diseñe su sistema",
       "p2": "Genere su UX/UI",
@@ -73,6 +74,7 @@
     "proofLink": "Lea sus historias"
   },
   "nav": {
+    "language": "Idioma",
     "product": "Producto",
     "marketplace": "Marketplace",
     "howItWorks": "Cómo funciona",
@@ -1747,6 +1749,8 @@
     "area": "Área",
     "withoutTitle": "Sin un mapa compartido",
     "withTitle": "Con Think4Ever",
+    "compareShow": "Comparar con trabajar sin un mapa compartido",
+    "compareHide": "Ocultar la comparación",
     "rows": {
       "context": {
         "label": "Contexto",

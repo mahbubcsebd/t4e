@@ -68,8 +68,8 @@ export default function ReviewedHandoffSection() {
               const inner = (
                 <>
                   {/* Top row: icon + recommended badge */}
-                  <div className="flex items-start justify-between mb-5">
-                    <div className="w-10 h-10 rounded-xl bg-[#eef3fb] dark:bg-muted border border-[#d6e4f7] dark:border-border flex items-center justify-center">
+                  <div className="flex items-start justify-between mb-5 max-md:mb-2">
+                    <div className="w-10 h-10 max-md:hidden rounded-xl bg-[#eef3fb] dark:bg-muted border border-[#d6e4f7] dark:border-border flex items-center justify-center">
                       {step.icon}
                     </div>
                     {step.recommended && (
@@ -80,12 +80,12 @@ export default function ReviewedHandoffSection() {
                   </div>
 
                   {/* Category label */}
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-primary mb-2">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-primary mb-2 max-md:hidden">
                     {step.category}
                   </p>
 
                   {/* Title */}
-                  <h3 className="text-[18px] font-bold text-[#1a2a3a] dark:text-foreground mb-3">
+                  <h3 className="text-[18px] font-bold text-[#1a2a3a] dark:text-foreground mb-3 max-md:mb-1.5">
                     {step.title}
                   </h3>
 
@@ -96,7 +96,7 @@ export default function ReviewedHandoffSection() {
                 </>
               );
 
-              const cardClass = `relative group bg-white dark:bg-card rounded-2xl p-6 transition-all duration-300 flex flex-col h-full ${
+              const cardClass = `relative group bg-white dark:bg-card rounded-2xl p-6 max-md:p-4 transition-all duration-300 flex flex-col h-full ${
                 step.highlighted
                   ? "border-2 border-primary shadow-sm shadow-primary/10 cursor-pointer hover:-translate-y-1 hover:shadow-lg"
                   : "border border-[#d6e4f7] dark:border-border shadow-sm"

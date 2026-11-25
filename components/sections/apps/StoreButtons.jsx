@@ -78,7 +78,6 @@ export default function StoreButtons({
           target="_blank"
           rel="noopener noreferrer"
           className={buttonBaseClass}
-          aria-label="Download Think4Ever from Microsoft Store"
         >
           <MicrosoftStoreIcon className="w-4.5 h-4.5 sm:w-5.5 sm:h-5.5 md:w-6 md:h-6 shrink-0 transition-transform group-hover:scale-105" />
           <div className="text-left leading-tight min-w-0">
@@ -103,7 +102,6 @@ export default function StoreButtons({
           target="_blank"
           rel="noopener noreferrer"
           className={buttonBaseClass}
-          aria-label="Download Think4Ever on Google Play"
         >
           <GooglePlayIcon className="w-4.5 h-4.5 sm:w-5.5 sm:h-5.5 md:w-6 md:h-6 shrink-0 transition-transform group-hover:scale-105" />
           <div className="text-left leading-tight min-w-0">

@@ -2,10 +2,15 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import BlogGridSection from "@/components/sections/blog/BlogGridSection";
 import { getAllPosts } from "@/lib/markdown";
+import { buildLanguageAlternates } from "@/lib/seo";
 
 export const metadata = {
-  title: "Think4Ever Blog — Articles, Frameworks and AI Engineering Insights",
+  title: "Think4Ever Blog — AI Engineering Insights",
   description: "Read white papers, architectural frameworks, and engineering insights on AI-driven software development with shared context.",
+  alternates: {
+    canonical: "/blog/",
+    languages: buildLanguageAlternates("/blog/", ["en", "es"]),
+  },
 };
 
 export default function BlogPage() {
