@@ -79,10 +79,8 @@ export default function Header() {
   const [mobileTutorialsOpen, setMobileTutorialsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const desktopLangDropdownRef = useRef(null);
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const handleClickOutside = (event) => {
       const isOutsideDesktop =
         desktopLangDropdownRef.current &&

@@ -16,13 +16,13 @@ const dmSans = DM_Sans({
 export const metadata = {
   // Fixed on purpose: preview deploys must never leak their address into canonicals.
   metadataBase: new URL("https://think4ever.com"),
-  title: "Turn Your Idea or Code Into a Living Blueprint | Think4Ever",
+  title: "Think4Ever: Spec-Driven AI Development and Living Codebase Maps",
   description: "Turn your idea or existing code into a living blueprint: architecture, workflows and rules your AI coding agents follow. Works with Claude Code, Codex and Cursor. Start free.",
   icons: {
     icon: "/images/favicon.ico",
   },
   openGraph: {
-    title: "Turn Your Idea or Code Into a Living Blueprint | Think4Ever",
+    title: "Think4Ever: Spec-Driven AI Development and Living Codebase Maps",
     description: "Turn your idea or existing code into a living blueprint: architecture, workflows and rules your AI coding agents follow. Works with Claude Code, Codex and Cursor. Start free.",
     type: "website",
     url: "https://think4ever.com",
@@ -38,7 +38,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Turn Your Idea or Code Into a Living Blueprint | Think4Ever",
+    title: "Think4Ever: Spec-Driven AI Development and Living Codebase Maps",
     description: "Turn your idea or existing code into a living blueprint: architecture, workflows and rules your AI coding agents follow. Works with Claude Code, Codex and Cursor. Start free.",
     images: ["https://think4ever.com/images/opengraph-image.jpg"],
   },
