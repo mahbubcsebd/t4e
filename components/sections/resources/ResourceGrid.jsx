@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/ui/AppLink";
 import { useLanguage } from "@/context/LanguageContext";
 import { Play, BookOpen, Layers } from "lucide-react";
 import VideoModal from "@/components/ui/VideoModal";
@@ -81,7 +81,6 @@ export default function ResourceGrid() {
                         setIsVideoOpen(true);
                       }}
                       className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-foreground bg-primary/5 hover:bg-muted px-4 py-2.5 rounded-full transition-colors focus:outline-none w-max border border-border"
-                      aria-label={`Play video: ${t("resourcesPage.video1Title")}`}
                     >
                       <Play className="w-4 h-4 fill-current" />
                       <span>{t("resourcesPage.video1Link")}</span>
@@ -111,7 +110,6 @@ export default function ResourceGrid() {
                         setIsVideoOpen(true);
                       }}
                       className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-foreground bg-primary/5 hover:bg-muted px-4 py-2.5 rounded-full transition-colors focus:outline-none w-max border border-border"
-                      aria-label={`Play video: ${t("resourcesPage.video2Title")}`}
                     >
                       <Play className="w-4 h-4 fill-current" />
                       <span>{t("resourcesPage.video2Link")}</span>

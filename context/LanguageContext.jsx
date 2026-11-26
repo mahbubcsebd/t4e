@@ -2,10 +2,10 @@
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 import en from "@/dictionaries/en.json";
-import es from "@/dictionaries/es.json";
-import nl from "@/dictionaries/nl.json";
 
-const dictionaries = { en, es, nl };
+// English is always bundled (it is the fallback). Other languages are supplied
+// by the route that needs them (see EsLanguageProvider), so en pages stay small.
+const BASE_DICTIONARIES = { en };
 
 const LanguageContext = createContext();
 
@@ -43,7 +43,7 @@ export function getLocalizedPathname(targetLang, currentPath, currentLang) {
   return p;
 }
 
-export function LanguageProvider({ children }) {
+export function LanguageProvider({ children, dictionaries = BASE_DICTIONARIES }) {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -60,7 +60,7 @@ export function LanguageProvider({ children }) {
   }, [language]);
 
   const setLanguage = (lang) => {
-    if (!dictionaries[lang]) return;
+    if (!availableLanguages.some((l) => l.code === lang)) return;
     try {
       localStorage.setItem("think4ever_lang", lang);
     } catch (e) {}

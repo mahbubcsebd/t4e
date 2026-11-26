@@ -4,7 +4,7 @@ import Container from '@/components/layout/Container';
 import SectionCard from '@/components/layout/SectionCard';
 import SectionHeading from '@/components/layout/SectionHeading';
 import { useLanguage } from '@/context/LanguageContext';
-import Link from 'next/link';
+import Link from '@/components/ui/AppLink';
 import {
   ArrowDown,
   ArrowRight,

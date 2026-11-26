@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/ui/AppLink";
 import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -40,7 +40,7 @@ export default function RegisterPage() {
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#09090d] tracking-tight leading-tight mb-4">
                 {t("registerPage.title")}
-                <span className="text-gradient decoration-[#07A7E1]/30">
+                <span className="text-primary decoration-[#07A7E1]/30">
                   {t("registerPage.titleHighlight")}
                 </span>
               </h1>
@@ -55,9 +55,9 @@ export default function RegisterPage() {
                     1
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-[#09090d]">
+                    <h2 className="text-base font-bold text-[#09090d]">
                       {t("registerPage.benefit1Title")}
-                    </h3>
+                    </h2>
                     <p className="text-xs sm:text-sm text-[#465a75]">
                       {t("registerPage.benefit1Desc")}
                     </p>
@@ -69,9 +69,9 @@ export default function RegisterPage() {
                     2
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-[#09090d]">
+                    <h2 className="text-base font-bold text-[#09090d]">
                       {t("registerPage.benefit2Title")}
-                    </h3>
+                    </h2>
                     <p className="text-xs sm:text-sm text-[#465a75]">
                       {t("registerPage.benefit2Desc")}
                     </p>
@@ -83,9 +83,9 @@ export default function RegisterPage() {
                     3
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-[#09090d]">
+                    <h2 className="text-base font-bold text-[#09090d]">
                       {t("registerPage.benefit3Title")}
-                    </h3>
+                    </h2>
                     <p className="text-xs sm:text-sm text-[#465a75]">
                       {t("registerPage.benefit3Desc")}
                     </p>
@@ -116,7 +116,7 @@ export default function RegisterPage() {
 
                 <div className="relative flex items-center justify-center mb-6">
                   <div className="border-t border-[#c8d9ed] w-full"></div>
-                  <span className="bg-white px-3 text-xs text-[#71849c] font-medium absolute">
+                  <span className="bg-white px-3 text-xs text-[#566782] font-medium absolute">
                     {t("registerPage.divider")}
                   </span>
                 </div>
@@ -178,6 +178,7 @@ export default function RegisterPage() {
                         {t("registerPage.dataRegion")}
                       </label>
                       <select
+                        aria-label={t("registerPage.dataRegion")}
                         value={formData.region}
                         onChange={(e) =>
                           setFormData({ ...formData, region: e.target.value })
@@ -234,7 +235,7 @@ export default function RegisterPage() {
                   </button>
                 </form>
 
-                <div className="mt-6 pt-4 border-t border-[#c8d9ed]/50 text-center text-xs text-[#71849c]">
+                <div className="mt-6 pt-4 border-t border-[#c8d9ed]/50 text-center text-xs text-[#566782]">
                   <span>{t("registerPage.alreadyAccount")} </span>
                   <button
                     type="button"

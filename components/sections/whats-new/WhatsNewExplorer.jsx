@@ -116,7 +116,7 @@ export default function WhatsNewExplorer({ months, total }) {
         }`}
       >
         {label}
-        <span className={`ml-1 font-medium ${isActive ? "text-[#b7ccf4]" : "text-muted-foreground/70"}`}>{count}</span>
+        <span className={`ml-1 font-medium ${isActive ? "text-[#b7ccf4]" : "text-slate-600"}`}>{count}</span>
       </button>
     );
   };

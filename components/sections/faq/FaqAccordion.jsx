@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/ui/AppLink";
 import { useLanguage } from "@/context/LanguageContext";
 import { useAuthModal } from "@/context/AuthModalContext";
 import { ChevronDown } from "lucide-react";

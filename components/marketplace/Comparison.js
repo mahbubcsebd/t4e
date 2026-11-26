@@ -47,7 +47,7 @@ export default function MarketplaceComparison() {
             <table className="w-full text-left border-collapse min-w-[600px]">
               <thead>
                 <tr className="bg-muted/50 border-b border-border/70">
-                  <th className="p-4 md:p-6 font-semibold text-foreground w-1/4"></th>
+                  <th className="p-4 md:p-6 font-semibold text-foreground w-1/4"><span className="sr-only">Feature</span></th>
                   <th className="p-4 md:p-6 font-semibold text-muted-foreground w-[37.5%] border-l border-border/70">
                     {t('marketplace.comparison.col1', 'Typical freelance marketplaces')}
                   </th>
@@ -59,9 +59,9 @@ export default function MarketplaceComparison() {
               <tbody className="divide-y divide-border/70">
                 {comparisonData.map((row, idx) => (
                   <tr key={idx} className="hover:bg-muted/30 transition-colors">
-                    <td className="p-4 md:p-6 font-medium text-foreground align-top">
+                    <th scope="row" className="p-4 md:p-6 font-medium text-foreground align-top text-left">
                       {row.feature}
-                    </td>
+                    </th>
                     <td className="p-4 md:p-6 text-muted-foreground align-top border-l border-border/70">
                       <div className="flex items-start gap-3">
                         <XCircle className="w-5 h-5 text-destructive/70 shrink-0 mt-0.5" />

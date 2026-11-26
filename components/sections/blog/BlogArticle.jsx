@@ -2,13 +2,9 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { ZoomableImage } from "@/components/ZoomableImage";
-import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
-import Link from "next/link";
 
-export const BlogArticle = ({ post, currentLang }) => {
+export const BlogArticle = ({ post, children }) => {
   const [zoomedImgSrc, setZoomedImgSrc] = useState(null);
 
   // Dynamically query all images rendered via ReactMarkdown
@@ -40,16 +36,14 @@ export const BlogArticle = ({ post, currentLang }) => {
         img.removeEventListener("click", handleClick);
       });
     };
-  }, [post.content, zoomedImgSrc]);
+  }, [zoomedImgSrc]);
 
   return (
     <article className="relative rounded-xl p-5 sm:p-10 lg:p-16 shadow-sm border border-border/60 overflow-hidden">
       <div className="relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          className="mb-10 text-center sm:text-left"
+        <div
+          style={{ "--delay": "0.1s" }}
+          className="animate-fade-up mb-10 text-center sm:text-left"
         >
           <span className="inline-block px-3 py-1.5 bg-muted border border-border text-foreground text-[10px] font-extrabold tracking-widest rounded-full mb-6 uppercase shadow-sm">
             {post.category}
@@ -66,15 +60,13 @@ export const BlogArticle = ({ post, currentLang }) => {
               <span>{post.readTime}</span>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Featured Image */}
         {!post.hideThumbnail && post.image && (
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-            className="mb-12 relative aspect-[2/1] overflow-hidden rounded-2xl border border-border/80 shadow-md group"
+          <div
+            style={{ "--delay": "0.2s" }}
+            className="animate-fade-up mb-12 relative aspect-[2/1] overflow-hidden rounded-2xl border border-border/80 shadow-md group"
           >
             <ZoomableImage
               src={post.image}
@@ -83,59 +75,16 @@ export const BlogArticle = ({ post, currentLang }) => {
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               priority
             />
-          </motion.div>
+          </div>
         )}
 
         {/* Article Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-          className="prose max-w-none prose-headings:text-foreground prose-headings:font-bold prose-p:text-[16px] prose-p:leading-loose prose-p:text-muted-foreground prose-strong:text-foreground prose-strong:font-bold prose-th:text-foreground prose-a:text-blue-600 prose-a:underline hover:prose-a:text-blue-800 prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:text-foreground prose-blockquote:font-medium prose-blockquote:not-italic"
+        <div
+          style={{ "--delay": "0.3s" }}
+          className="animate-fade-up prose max-w-none prose-headings:text-foreground prose-headings:font-bold prose-p:text-[16px] prose-p:leading-loose prose-p:text-muted-foreground prose-strong:text-foreground prose-strong:font-bold prose-th:text-foreground prose-a:text-blue-600 prose-a:underline hover:prose-a:text-blue-800 prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:text-foreground prose-blockquote:font-medium prose-blockquote:not-italic"
         >
-          <ReactMarkdown 
-            rehypePlugins={[rehypeRaw]}
-            components={{
-              // Article images sit below the fold: don't compete with CSS/JS on first load
-              // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
-              img: ({ node, ...props }) => <img loading="lazy" decoding="async" {...props} />,
-              a: ({ node, className, ...props }) => {
-                const href = props.href || "";
-                let baseClass = className 
-                  ? className.replace(/text-\[#1b30a7\]/g, "text-blue-600").replace(/hover:text-\[#142380\]/g, "hover:text-blue-800")
-                  : "text-blue-600 hover:underline";
-                if (!baseClass.includes("text-blue-600")) {
-                  baseClass = `${baseClass} text-blue-600`;
-                }
-                if (!baseClass.includes("hover:underline") && !baseClass.includes("underline")) {
-                  baseClass = `${baseClass} hover:underline`;
-                }
-
-                if (href.startsWith("#")) {
-                  return (
-                    <a href={href} className={baseClass} {...props} />
-                  );
-                }
-
-                if (href.startsWith("/")) {
-                  const localizeHref = (path) => {
-                    let normalized = path;
-                    if (!normalized.includes('#') && !normalized.includes('?') && !normalized.includes('.') && !normalized.endsWith('/')) {
-                      normalized += '/';
-                    }
-                    return currentLang === "en" ? normalized : `/${currentLang}${normalized}`;
-                  };
-                  return (
-                    <Link href={localizeHref(href)} className={baseClass} {...props} />
-                  );
-                }
-                return <a href={href} target="_blank" rel="noopener noreferrer" className={baseClass} {...props} />;
-              }
-            }}
-          >
-            {post.content}
-          </ReactMarkdown>
-        </motion.div>
+          {children}
+        </div>
       </div>
 
       {/* Global Dialog for content inline images */}

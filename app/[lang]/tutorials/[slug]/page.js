@@ -3,6 +3,7 @@ import { getTutorialBySlug, getAllTutorials } from "@/lib/tutorials";
 import { notFound } from "next/navigation";
 import { TutorialDetailNav } from "@/components/sections/tutorials/TutorialDetailNav";
 import { TutorialArticle } from "@/components/sections/tutorials/TutorialArticle";
+import TutorialMarkdown from "@/components/sections/tutorials/TutorialMarkdown";
 import { TutorialRecommendations } from "@/components/sections/tutorials/TutorialRecommendations";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -86,7 +87,9 @@ export default async function TranslatedTutorialDetailPage(props) {
         <SectionCard>
           <Container className="mx-auto">
             <TutorialDetailNav />
-            <TutorialArticle tutorial={tutorial} currentLang={lang} />
+            <TutorialArticle tutorial={{ ...tutorial, content: undefined }}>
+              <TutorialMarkdown content={tutorial.content} currentLang={lang} />
+            </TutorialArticle>
             <TutorialRecommendations tutorials={allTutorials} currentTutorialId={tutorial.id} />
           </Container>
         </SectionCard>

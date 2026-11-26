@@ -1001,6 +1001,10 @@
     "ctaBtnPrimary": "Analyze a project →",
     "ctaBtnSecondary": "Talk to sales"
   },
+  "marketplacesPage": {
+    "metaTitle": "Think4Ever Marketplace: the outsourcing marketplace for the AI era",
+    "metaDesc": "Where AI-enabled freelancers and enterprises get work done. Outsource a task or a whole project and get AI-scored proposals."
+  },
   "faqPage": {
     "metaTitle": "Think4Ever FAQ — Living Blueprints, Code Understanding and MCP",
     "metaDesc": "Answers about Think4Ever living blueprints, Code to Design, Design to Code, change-impact analysis, coding agents, MCP and getting started.",

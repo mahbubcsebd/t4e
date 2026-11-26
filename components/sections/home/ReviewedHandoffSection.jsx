@@ -90,7 +90,7 @@ export default function ReviewedHandoffSection() {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-[13px] text-[#5a7a99] dark:text-muted-foreground leading-relaxed">
+                  <p className="text-[13px] text-[#4a6985] dark:text-muted-foreground leading-relaxed">
                     {step.desc}
                   </p>
                 </>

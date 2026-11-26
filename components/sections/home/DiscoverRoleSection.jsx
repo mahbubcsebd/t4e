@@ -7,7 +7,7 @@ import { useAuthModal } from '@/context/AuthModalContext';
 import { useLanguage } from '@/context/LanguageContext';
 import { ArrowRight, Paperclip } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/ui/AppLink';
 import { useRef, useState } from 'react';
 
 const IMAGE_DIR = '/images/roles';

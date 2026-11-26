@@ -52,7 +52,7 @@ export default function AppsSteps() {
                     <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/15 to-primary/5 text-primary border border-primary/25 font-extrabold text-lg flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                       0{step.num}
                     </span>
-                    <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/80">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-slate-600">
                       Step {step.num}
                     </span>
                   </div>

@@ -1001,6 +1001,10 @@
     "ctaBtnPrimary": "Analizar un proyecto →",
     "ctaBtnSecondary": "Hablar con ventas"
   },
+  "marketplacesPage": {
+    "metaTitle": "Think4Ever Marketplace: el mercado de contratación para la era de la IA",
+    "metaDesc": "Donde freelancers y empresas con IA hacen el trabajo. Subcontrate una tarea o un proyecto completo y reciba propuestas puntuadas por IA."
+  },
   "faqPage": {
     "metaTitle": "Preguntas Frecuentes Think4Ever — Planos Vivos, Comprensión de Código y MCP",
     "metaDesc": "Respuestas sobre planos vivos de Think4Ever, de Código a Diseño, de Diseño a Código, análisis de impacto de cambios, agentes de codificación, MCP y cómo empezar.",

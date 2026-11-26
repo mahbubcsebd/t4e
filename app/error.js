@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 import Container from "@/components/layout/Container";
 import SectionCard from "@/components/layout/SectionCard";
 import { AlertCircle, RotateCcw, Home } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/ui/AppLink";
 export default function ErrorBoundary({ error, reset }) {
   useEffect(() => {
     console.error("Application error:", error);

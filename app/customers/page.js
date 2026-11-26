@@ -20,8 +20,8 @@ export const metadata = {
     images: [
       {
         url: "https://think4ever.com/images/opengraph-image.jpg",
-        width: 1200,
-        height: 1200,
+        width: 1080,
+        height: 1081,
         alt: "Think4Ever customer stories",
       },
     ],

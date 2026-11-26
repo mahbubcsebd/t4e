@@ -44,7 +44,7 @@ export default function MarketplaceTwoWays() {
                 <h3 className="text-xl font-bold text-[#1a2a3a] dark:text-foreground mb-4">
                   {card.title}
                 </h3>
-                <p className="text-[14px] text-[#5a7a99] dark:text-muted-foreground leading-relaxed">
+                <p className="text-[14px] text-[#4a6985] dark:text-muted-foreground leading-relaxed">
                   {card.description}
                 </p>
               </div>

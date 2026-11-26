@@ -7,7 +7,7 @@ import Container from "@/components/layout/Container";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
 import { useAuthModal } from "@/context/AuthModalContext";
-import Link from "next/link";
+import Link from "@/components/ui/AppLink";
 
 export default function CtaSection() {
   const { t } = useLanguage();

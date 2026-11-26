@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import Link from "@/components/ui/AppLink";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SectionCard from "@/components/layout/SectionCard";
