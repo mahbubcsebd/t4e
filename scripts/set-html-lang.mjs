@@ -1,10 +1,10 @@
 // Static export has one root layout, so every page is emitted with <html lang="en">.
-// After build, rewrite the lang attribute of /es/ and /nl/ pages to match their language.
+// After build, rewrite the lang attribute of /es/ pages to match their language.
 import fs from "node:fs";
 import path from "node:path";
 
 const OUT_DIR = "out";
-const LANGS = ["es", "nl"];
+const LANGS = ["es"];
 
 function* htmlFiles(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {

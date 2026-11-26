@@ -13,7 +13,7 @@ export async function generateMetadata(props) {
   const params = await props.params;
   const { lang, slug } = params;
 
-  if (lang !== "es" && lang !== "nl") return {};
+  if (lang !== "es") return {};
 
   const tutorial = getTutorialBySlug(slug, lang);
   if (!tutorial) return {};
@@ -48,7 +48,7 @@ export async function generateMetadata(props) {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const langs = ["es", "nl"];
+  const langs = ["es"];
   const params = [];
 
   for (const lang of langs) {
@@ -68,7 +68,7 @@ export default async function TranslatedTutorialDetailPage(props) {
   const params = await props.params;
   const { lang, slug } = params;
 
-  if (lang !== "es" && lang !== "nl") {
+  if (lang !== "es") {
     notFound();
   }
 

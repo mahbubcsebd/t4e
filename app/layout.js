@@ -14,9 +14,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata = {
-  metadataBase: process.env.NEXT_PUBLIC_VERCEL_URL 
-    ? new URL(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}`) 
-    : new URL("https://think4ever.com"),
+  // Fixed on purpose: preview deploys must never leak their address into canonicals.
+  metadataBase: new URL("https://think4ever.com"),
   title: "Turn Your Idea or Code Into a Living Blueprint | Think4Ever",
   description: "Turn your idea or existing code into a living blueprint: architecture, workflows and rules your AI coding agents follow. Works with Claude Code, Codex and Cursor. Start free.",
   icons: {
