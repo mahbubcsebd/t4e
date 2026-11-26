@@ -12,10 +12,14 @@ import PricingProjectLimits from '@/components/sections/pricing/PricingProjectLi
 import PricingTeams from '@/components/sections/pricing/PricingTeams';
 import PricingTiers from '@/components/sections/pricing/PricingTiers';
 import { getLocalizedMetadata } from '@/lib/metadata';
+import JsonLd from '@/components/JsonLd';
+import { buildPageLd } from '@/lib/pageLd';
 
-export default function PricingPage() {
+export default async function PricingPage({ params }) {
+  const lang = params ? (await params).lang : 'en';
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <JsonLd data={buildPageLd({ lang, dictKey: 'pricingPage', path: '/price/', faqPath: 'pricingPage.faqItems' })} />
       <Header />
       <main className="flex-grow">
         <PricingHero />

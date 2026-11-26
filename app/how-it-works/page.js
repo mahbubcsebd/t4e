@@ -1,4 +1,6 @@
 import { getLocalizedMetadata } from '@/lib/metadata';
+import JsonLd from '@/components/JsonLd';
+import { buildPageLd } from '@/lib/pageLd';
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HowItWorksHero from "@/components/sections/how-it-works/HowItWorksHero";
@@ -9,9 +11,11 @@ import CtaSection from "@/components/sections/home/CtaSection";
 
 
 
-export default function HowItWorksPage() {
+export default async function HowItWorksPage({ params }) {
+  const lang = params ? (await params).lang : 'en';
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <JsonLd data={buildPageLd({ lang, dictKey: 'howItWorksPage', path: '/how-it-works/' })} />
       <Header />
       <main className="flex-grow">
         <HowItWorksHero />

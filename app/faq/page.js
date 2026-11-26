@@ -1,4 +1,6 @@
 import { getLocalizedMetadata } from '@/lib/metadata';
+import JsonLd from '@/components/JsonLd';
+import { buildPageLd } from '@/lib/pageLd';
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FaqAccordion from "@/components/sections/faq/FaqAccordion";
@@ -6,9 +8,11 @@ import CtaSection from "@/components/sections/home/CtaSection";
 
 
 
-export default function FaqPage() {
+export default async function FaqPage({ params }) {
+  const lang = params ? (await params).lang : 'en';
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <JsonLd data={buildPageLd({ lang, dictKey: 'faqPage', path: '/faq/', faqPath: 'faqPage.items' })} />
       <Header />
       <main className="flex-grow">
         <FaqAccordion />
