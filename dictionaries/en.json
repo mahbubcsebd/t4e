@@ -68,6 +68,8 @@
       }
     },
     "noCard": "No credit card",
+    "seoH1": "Think4Ever turns your idea or your code into a living blueprint.",
+    "seeHowItWorks": "See how it works",
     "proofPre": "Teams at",
     "proofAnd": "and",
     "proofPost": "design before they build with Think4Ever.",
@@ -1360,7 +1362,7 @@
     "okay": "Okay"
   },
   "layout": {
-    "metaTitle": "Turn Your Idea or Code Into a Living Blueprint | Think4Ever",
+    "metaTitle": "Think4Ever: Spec-Driven AI Development and Living Codebase Maps",
     "metaDesc": "Turn your idea or existing code into a living blueprint: architecture, workflows and rules your AI coding agents follow. Works with Claude Code, Codex and Cursor. Start free."
   },
   "notFoundPage": {

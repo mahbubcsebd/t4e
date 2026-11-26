@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "@/components/ui/AppLink";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
+import VideoModal from "@/components/ui/VideoModal";
 import { useAuthModal } from "@/context/AuthModalContext";
 import { callPortalApi } from "@/lib/portalApi";
 import HeroMascot from "@/components/sections/home/portal/HeroMascot";
@@ -21,6 +22,7 @@ import {
   Check,
   ArrowRight,
   Loader2,
+  Play,
 } from "lucide-react";
 
 // 4 modes; copy lives in dictionaries (portalStart.modes.*)
@@ -38,6 +40,10 @@ const UTM_KEYS = [
   "utm_campaign",
   "utm_term",
   "utm_content",
+];
+const DEMO_VIDEOS = [
+  { key: "codeToDesign", id: "FY68DuwOf4Q", labelKey: "demo.btnCodeToDesign" },
+  { key: "designToCode", id: "Lq-vza9_CzI", labelKey: "demo.btnDesignToCode" },
 ];
 const TYPING_IDLE_MS = 130;
 const PROMPT_MAX_LENGTH = 4000;
@@ -82,6 +88,7 @@ export default function PortalStartSection() {
   const [isShaking, setIsShaking] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
+  const [videoId, setVideoId] = useState("");
   const [pageParams] = useState(readPageParams);
   const typingTimer = useRef(null);
 
@@ -211,12 +218,14 @@ export default function PortalStartSection() {
           className="h-[clamp(72px,calc(100svh-600px),min(300px,calc((100vw-32px)*0.5625)))] w-auto max-w-full shrink-0 max-md:hidden md:h-[clamp(120px,24svh,280px)]"
         />
 
-        <h1 className="mt-0 text-balance text-[clamp(25px,min(8vw,5.8svh),52px)] font-extrabold leading-[1.08] tracking-[-0.03em] text-[#0f172a] md:text-[clamp(34px,5vw,54px)]">
+        {/* SEO heading, hidden until the visible headline is approved */}
+        <h1 className="sr-only">{t("portalStart.seoH1")}</h1>
+        <p className="mt-0 text-balance text-[clamp(25px,min(8vw,5.8svh),52px)] font-extrabold leading-[1.08] tracking-[-0.03em] text-[#0f172a] md:text-[clamp(34px,5vw,54px)]">
           {t("portalStart.titleA")}{" "}
           <em className="whitespace-nowrap not-italic text-[#f97316]">
             {t("portalStart.titleB")}
           </em>
-        </h1>
+        </p>
 
         <p
           aria-hidden="true"
@@ -345,6 +354,26 @@ export default function PortalStartSection() {
                 </span>
               ))}
             </p>
+            {/* Product videos, opened in the same modal as the demo section */}
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              <span className="w-full text-center text-[13px] font-semibold text-slate-600 md:w-auto">
+                {t("portalStart.seeHowItWorks")}
+              </span>
+              {DEMO_VIDEOS.map(({ key, id, labelKey }) => (
+                <button
+                  key={key}
+                  type="button"
+                  onClick={() => setVideoId(id)}
+                  className="inline-flex min-h-11 cursor-pointer md:min-h-9 items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3.5 text-[13px] font-semibold text-[#0f172a] shadow-sm transition-colors hover:border-[#2563eb] hover:text-[#2563eb] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563eb]"
+                >
+                  <Play
+                    className="h-3.5 w-3.5 fill-current text-[#2563eb]"
+                    aria-hidden="true"
+                  />
+                  {t(labelKey)}
+                </button>
+              ))}
+            </div>
             <p className="max-w-[520px] text-[13px] leading-snug text-slate-600 max-md:hidden">
               {t("portalStart.proofPre")}{" "}
               <b className="font-bold text-[#0f172a]">EY</b>,{" "}
@@ -384,6 +413,12 @@ export default function PortalStartSection() {
           </div>
         </div>
       </div>
+
+      <VideoModal
+        isOpen={Boolean(videoId)}
+        onClose={() => setVideoId("")}
+        videoId={videoId}
+      />
     </section>
   );
 }

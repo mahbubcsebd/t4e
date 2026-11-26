@@ -189,7 +189,7 @@ export default function HowItWorksSection() {
                       <div className="p-4">
                         <div className="bg-muted border border-border rounded-lg p-2.5 mb-3 relative">
                           <span className="text-[11px] text-primary font-medium leading-relaxed block">
-                            "Implement checkout based on the validated map."
+                            &ldquo;Implement checkout based on the validated map.&rdquo;
                           </span>
                         </div>
                         <div className="flex items-center gap-2.5 mt-3">
