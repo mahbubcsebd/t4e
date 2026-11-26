@@ -177,11 +177,10 @@ function RoleSwipeCard({ role, index, moreLabel, onOpen }) {
     >
       {/* Oversized number as a quiet backdrop gives each card a clear identity */}
       <span
-        className="pointer-events-none absolute -right-1 -top-3 select-none text-[84px] font-extrabold leading-none tracking-tighter text-primary/10"
+        className="pointer-events-none absolute -right-1 -top-3 select-none text-[84px] font-extrabold leading-none tracking-tighter text-primary/10 before:content-[attr(data-n)]"
+        data-n={formatNumber(index)}
         aria-hidden="true"
-      >
-        {formatNumber(index)}
-      </span>
+      />
       <span className="relative text-xl font-extrabold leading-tight tracking-tight text-foreground">
         {role.name}
       </span>
