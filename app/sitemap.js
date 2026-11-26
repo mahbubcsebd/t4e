@@ -6,7 +6,7 @@ import { hasTranslation } from "@/lib/contentSeo";
 
 export const dynamic = "force-static";
 
-const LANGS = ["en", "es", "nl"];
+const LANGS = ["en", "es"];
 
 // Public pages. register and onboarding are app flows, so they stay out.
 const STATIC_ROUTES = [
@@ -47,10 +47,7 @@ export default function sitemap() {
   const entries = [];
 
   for (const lang of LANGS) {
-    // nl UI pages still use English copy, so only en/es list the static routes.
-    if (lang !== "nl") {
-      for (const route of STATIC_ROUTES) entries.push(entry(lang, route));
-    }
+    for (const route of STATIC_ROUTES) entries.push(entry(lang, route));
 
     for (const post of enPosts) {
       const realSlug = post.canonicalSlug || post.slug;

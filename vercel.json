@@ -5,8 +5,11 @@
     { "source": "/pricing/", "destination": "/price/", "permanent": true },
     { "source": "/es/pricing", "destination": "/es/price/", "permanent": true },
     { "source": "/es/pricing/", "destination": "/es/price/", "permanent": true },
-    { "source": "/nl/pricing", "destination": "/nl/price/", "permanent": true },
-    { "source": "/nl/pricing/", "destination": "/nl/price/", "permanent": true }
+    { "source": "/nl/pricing", "destination": "/price/", "permanent": true },
+    { "source": "/nl/pricing/", "destination": "/price/", "permanent": true },
+    { "source": "/nl", "destination": "/", "permanent": true },
+    { "source": "/nl/", "destination": "/", "permanent": true },
+    { "source": "/nl/:path+", "destination": "/:path", "permanent": true }
   ],
   "headers": [
     {

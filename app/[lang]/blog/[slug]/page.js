@@ -17,7 +17,7 @@ export async function generateMetadata(props) {
   const params = await props.params;
   const { lang, slug } = params;
 
-  if (lang !== "es" && lang !== "nl") return {};
+  if (lang !== "es") return {};
 
   const post = getPostBySlug(slug, lang);
   if (!post) return {};
@@ -50,7 +50,7 @@ export async function generateMetadata(props) {
 }
 
 export async function generateStaticParams() {
-  const langs = ["es", "nl"];
+  const langs = ["es"];
   const params = [];
 
   for (const lang of langs) {
@@ -72,7 +72,7 @@ export default async function TranslatedBlogDetailPage(props) {
   const params = await props.params;
   const { lang, slug } = params;
 
-  if (lang !== "es" && lang !== "nl") {
+  if (lang !== "es") {
     notFound();
   }
 

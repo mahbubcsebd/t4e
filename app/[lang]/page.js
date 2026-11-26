@@ -8,7 +8,7 @@ export async function generateMetadata({ params }) {
 }
 
 export function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'es' }, { lang: 'nl' }];
+  return [{ lang: 'en' }, { lang: 'es' }];
 }
 
 export default Page;

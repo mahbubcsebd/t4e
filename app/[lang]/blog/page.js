@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { buildLanguageAlternates } from "@/lib/seo";
 
 export async function generateStaticParams() {
-  return [{ lang: 'es' }, { lang: 'nl' }];
+  return [{ lang: 'es' }];
 }
 
 export async function generateMetadata(props) {
@@ -23,13 +23,6 @@ export async function generateMetadata(props) {
       description: "Lea documentos técnicos, marcos arquitectónicos y perspectivas sobre el desarrollo de software impulsado por IA.",
     };
   }
-  if (lang === 'nl') {
-    return {
-      title: "Think4Ever Blog — AI Engineering Inzichten",
-      alternates: { canonical: "/nl/blog/" },
-      description: "Lees whitepapers, architectonische frameworks en technische inzichten over AI-gedreven softwareontwikkeling.",
-    };
-  }
   
   return { title: "Think4Ever Blog" };
 }
@@ -38,7 +31,7 @@ export default async function TranslatedBlogPage(props) {
   const params = await props.params;
   const { lang } = params;
 
-  if (lang !== 'es' && lang !== 'nl') {
+  if (lang !== 'es') {
     notFound();
   }
 

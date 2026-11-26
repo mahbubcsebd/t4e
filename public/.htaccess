@@ -17,7 +17,12 @@ ErrorDocument 404 /404.html
 
   # 2b. Legacy /pricing -> /price (canonical pricing page)
   RewriteRule ^pricing/?$ /price/ [R=301,L]
-  RewriteRule ^(es|nl)/pricing/?$ /$1/price/ [R=301,L]
+  RewriteRule ^es/pricing/?$ /es/price/ [R=301,L]
+
+  # 2c. Dutch site retired: /nl/... -> English equivalent
+  RewriteRule ^nl/pricing/?$ /price/ [R=301,L]
+  RewriteRule ^nl/?$ / [R=301,L]
+  RewriteRule ^nl/(.+)$ /$1 [R=301,L]
 
   # 3. Handle Next.js RSC Flight payload requests:
   # Next.js may fetch /path.txt; rewrite it to /path/index.txt if it exists
