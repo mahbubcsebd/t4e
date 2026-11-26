@@ -1,8 +1,17 @@
 {
+  "buildCommand": "npm run build",
+  "redirects": [
+    { "source": "/pricing", "destination": "/price/", "permanent": true },
+    { "source": "/pricing/", "destination": "/price/", "permanent": true },
+    { "source": "/es/pricing", "destination": "/es/price/", "permanent": true },
+    { "source": "/es/pricing/", "destination": "/es/price/", "permanent": true },
+    { "source": "/nl/pricing", "destination": "/nl/price/", "permanent": true },
+    { "source": "/nl/pricing/", "destination": "/nl/price/", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "(?<host>.*\.vercel\.app)" }],
+      "has": [{ "type": "host", "value": "(?<host>.*\\.vercel\\.app)" }],
       "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
     }
   ]
