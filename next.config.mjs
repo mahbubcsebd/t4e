@@ -6,6 +6,9 @@ const nextConfig = {
     qualities: [65, 75],
   },
   trailingSlash: true,
+  experimental: {
+    inlineCss: true,
+  },
 };
 
 export default nextConfig;
