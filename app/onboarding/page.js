@@ -3,7 +3,7 @@
 import { useLanguage } from '@/context/LanguageContext';
 import { CheckCircle2, Code2, Folder, Sparkles } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/ui/AppLink';
 import { useState } from 'react';
 
 export default function OnboardingPage() {
@@ -85,7 +85,7 @@ export default function OnboardingPage() {
                   }}
                   className="bg-[#f9fcff] border-2 border-[#c8d9ed] hover:border-[#093cad] rounded-2xl p-6 text-left transition-all hover:shadow-lg relative group flex flex-col justify-between"
                 >
-                  <span className="absolute -top-3 left-6 bg-[#07A7E1] text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full">
+                  <span className="absolute -top-3 left-6 bg-[#0A6B96] text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full">
                     {t('onboardingPage.path1Badge')}
                   </span>
                   <div>

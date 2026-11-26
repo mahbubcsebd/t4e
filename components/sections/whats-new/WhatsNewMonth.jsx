@@ -39,9 +39,9 @@ function FeatureCard({ feature, query, categoryLabel }) {
   return (
     <article className="flex flex-col rounded-2xl border border-border bg-white p-5 shadow-sm transition-shadow hover:shadow-md">
       <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-blue">{categoryLabel}</span>
-      <h4 className="mt-1.5 text-[17px] font-bold leading-snug text-foreground">
+      <h3 className="mt-1.5 text-[17px] font-bold leading-snug text-foreground">
         <Highlight text={feature.title} query={query} />
-      </h4>
+      </h3>
       <p className="mt-1.5 text-[15px] leading-relaxed text-muted-foreground">
         <Highlight text={feature.description} query={query} />
       </p>
@@ -98,7 +98,7 @@ export default function WhatsNewMonth({ month, query, isLatest, showMarker }) {
         </span>
 
         <div className="flex items-baseline justify-between gap-4">
-          <h3
+          <h2
             id={isLatest ? "latest" : `${month.id}-heading`}
             className="text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl"
           >
@@ -110,9 +110,9 @@ export default function WhatsNewMonth({ month, query, isLatest, showMarker }) {
               }}
               className="hover:text-brand-blue"
             >
-              {month.month} <span className="font-medium text-[#97a5c2]">{month.year}</span>
+              {month.month} <span className="font-medium text-slate-600">{month.year}</span>
             </a>
-          </h3>
+          </h2>
           <span className="shrink-0 text-xs font-bold tracking-[0.14em] text-brand-blue">
             {month.count} {t("whatsNewPage.newLabel").toUpperCase()}
           </span>

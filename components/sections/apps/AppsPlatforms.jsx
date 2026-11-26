@@ -83,7 +83,7 @@ export default function AppsPlatforms() {
                     <h3 className="text-xl sm:text-2xl font-extrabold text-foreground tracking-tight">
                       {t("appsPage.platforms.android.title", "Think4Ever for Android")}
                     </h3>
-                    <span className="inline-block text-xs font-semibold px-2.5 py-0.5 mt-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                    <span className="inline-block text-xs font-semibold px-2.5 py-0.5 mt-1 rounded-full bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 border border-emerald-500/20">
                       {t("appsPage.platforms.android.badge", "Google Play · Free")}
                     </span>
                   </div>

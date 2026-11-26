@@ -61,7 +61,7 @@ export default function HowItWorksSection() {
                           </div>
                         </div>
                         <div className="w-full h-9 border border-border rounded-lg flex items-center px-3 gap-2 bg-muted/10">
-                          <SiGithub className="w-4 h-4 text-muted-foreground" />
+                          <SiGithub className="w-4 h-4 text-muted-foreground" aria-hidden="true" />
                           <span className="text-[11px] text-muted-foreground font-mono">
                             github.com/org/repo
                           </span>

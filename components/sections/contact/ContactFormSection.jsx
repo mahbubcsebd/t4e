@@ -3,7 +3,7 @@
 import React, { useState, useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { MapPin, Mail, Check, AlertCircle } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/ui/AppLink";
 
 export default function ContactFormSection() {
   const { t } = useLanguage();

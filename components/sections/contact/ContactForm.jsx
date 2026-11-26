@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, ChevronDown } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/ui/AppLink";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { GlobalSuccessPopup } from "@/components/ui/GlobalSuccessPopup";

@@ -6,7 +6,7 @@ import SectionHeading from '@/components/layout/SectionHeading';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/LanguageContext';
 import { CheckCircle2 } from 'lucide-react';
-import Link from 'next/link';
+import Link from '@/components/ui/AppLink';
 
 export default function EnterpriseEvaluation() {
   const { t } = useLanguage();

@@ -103,7 +103,6 @@ export default function MarketplaceHowItWorks() {
                   ? 'bg-background shadow-sm text-foreground'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
-              aria-label="View Hiring guide"
             >
               {t('marketplace.howItWorks.tabHiring', 'For hiring')}
             </button>
@@ -114,7 +113,6 @@ export default function MarketplaceHowItWorks() {
                   ? 'bg-background shadow-sm text-foreground'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
-              aria-label="View Finding Work guide"
             >
               {t('marketplace.howItWorks.tabFinding', 'For finding work')}
             </button>

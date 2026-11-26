@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/LanguageContext';
 import { useAuthModal } from '@/context/AuthModalContext';
-import { AnimatePresence, motion } from 'framer-motion';
+import Collapse from '@/components/ui/Collapse';
 import {
   BookOpen,
   Briefcase,
@@ -25,7 +25,7 @@ import {
   X,
 } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/ui/AppLink';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
@@ -740,14 +740,8 @@ export default function Header() {
       </div>
 
       {/* Mobile Drawer */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden bg-card border-b border-border px-6 py-4 flex flex-col gap-0 max-h-[calc(100vh-80px)] overflow-y-auto"
-          >
+      <Collapse open={mobileMenuOpen} className="lg:hidden bg-card" openClassName="border-b border-border">
+<div className="px-6 py-4 flex flex-col gap-0 max-h-[calc(100vh-80px)] overflow-y-auto">
             <div className="flex flex-col gap-0">
               <button
                 onClick={() => setMobileHowItWorksOpen(!mobileHowItWorksOpen)}
@@ -755,21 +749,11 @@ export default function Header() {
                 aria-label="Toggle mobile Product menu"
               >
                 <span>{t('nav.product', 'Product')}</span>
-                <motion.div
-                  animate={{ rotate: mobileHowItWorksOpen ? 180 : 0 }}
-                >
+                <div className={`transition-transform duration-200 ${mobileHowItWorksOpen ? 'rotate-180' : ''}`}>
                   <ChevronDown className="w-4 h-4" />
-                </motion.div>
+</div>
               </button>
-              <AnimatePresence initial={false}>
-                {mobileHowItWorksOpen && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2, ease: 'easeInOut' }}
-                    className="overflow-hidden"
-                  >
+              <Collapse open={mobileHowItWorksOpen}>
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       <Link
                         href={localizeHref('/how-it-works')}
@@ -815,9 +799,7 @@ export default function Header() {
                         Production Hardening
                       </Link>
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+</Collapse>
             </div>
 
             <div className="py-1">
@@ -851,19 +833,11 @@ export default function Header() {
                 aria-label="Toggle mobile Resources menu"
               >
                 <span>{t('nav.resources')}</span>
-                <motion.div animate={{ rotate: mobileResourcesOpen ? 180 : 0 }}>
+                <div className={`transition-transform duration-200 ${mobileResourcesOpen ? 'rotate-180' : ''}`}>
                   <ChevronDown className="w-4 h-4" />
-                </motion.div>
+</div>
               </button>
-              <AnimatePresence initial={false}>
-                {mobileResourcesOpen && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2, ease: 'easeInOut' }}
-                    className="overflow-hidden"
-                  >
+              <Collapse open={mobileResourcesOpen}>
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       {/* Resource Library link removed per request */}
                       <Link
@@ -895,9 +869,7 @@ export default function Header() {
                         FAQ
                       </Link>
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+</Collapse>
             </div>
 
             <div className="flex flex-col gap-0">
@@ -907,19 +879,11 @@ export default function Header() {
                 aria-label="Toggle mobile Docs menu"
               >
                 <span>{t('nav.docs')}</span>
-                <motion.div animate={{ rotate: mobileDocsOpen ? 180 : 0 }}>
+                <div className={`transition-transform duration-200 ${mobileDocsOpen ? 'rotate-180' : ''}`}>
                   <ChevronDown className="w-4 h-4" />
-                </motion.div>
+</div>
               </button>
-              <AnimatePresence initial={false}>
-                {mobileDocsOpen && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2, ease: 'easeInOut' }}
-                    className="overflow-hidden"
-                  >
+              <Collapse open={mobileDocsOpen}>
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       {docsLinks.map((doc, idx) => (
                         <Link
@@ -934,9 +898,7 @@ export default function Header() {
                         </Link>
                       ))}
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+</Collapse>
             </div>
 
             <div className="flex flex-col gap-0">
@@ -946,19 +908,11 @@ export default function Header() {
                 aria-label="Toggle mobile Tutorials menu"
               >
                 <span>{t('nav.tutorialsMenu.title', 'Tutorials')}</span>
-                <motion.div animate={{ rotate: mobileTutorialsOpen ? 180 : 0 }}>
+                <div className={`transition-transform duration-200 ${mobileTutorialsOpen ? 'rotate-180' : ''}`}>
                   <ChevronDown className="w-4 h-4" />
-                </motion.div>
+</div>
               </button>
-              <AnimatePresence initial={false}>
-                {mobileTutorialsOpen && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2, ease: 'easeInOut' }}
-                    className="overflow-hidden"
-                  >
+              <Collapse open={mobileTutorialsOpen}>
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50 ml-1 pb-2 pt-1">
                       {tutorialsLinks.map((tut, idx) => (
                         <a
@@ -971,9 +925,7 @@ export default function Header() {
                         </a>
                       ))}
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+</Collapse>
             </div>
 
             <div className="py-1 mb-2">
@@ -1058,9 +1010,8 @@ export default function Header() {
                 {t('nav.signIn')}
               </Button>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+</div>
+</Collapse>
     </header>
   );
 }

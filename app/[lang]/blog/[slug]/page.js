@@ -2,6 +2,7 @@ import { getPostBySlug, getAllPosts, SLUG_ALIASES } from "@/lib/markdown";
 import { notFound } from "next/navigation";
 import { BlogDetailNav } from "@/components/sections/blog/BlogDetailNav";
 import { BlogArticle } from "@/components/sections/blog/BlogArticle";
+import BlogMarkdown from "@/components/sections/blog/BlogMarkdown";
 import { BlogRecommendations } from "@/components/sections/blog/BlogRecommendations";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -105,7 +106,9 @@ export default async function TranslatedBlogDetailPage(props) {
         <SectionCard>
           <Container className="mx-auto">
             <BlogDetailNav />
-            <BlogArticle post={post} currentLang={lang} />
+            <BlogArticle post={{ ...post, content: undefined }}>
+              <BlogMarkdown content={post.content} currentLang={lang} />
+            </BlogArticle>
             <BlogRecommendations posts={allPosts} currentPostId={post.id} />
           </Container>
         </SectionCard>

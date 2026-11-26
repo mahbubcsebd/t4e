@@ -3,7 +3,7 @@
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { ArrowRight, Code2, Sparkles } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/ui/AppLink";
 import { Button } from "@/components/ui/button";
 import Container from "@/components/layout/Container";
 import SectionCard from "@/components/layout/SectionCard";

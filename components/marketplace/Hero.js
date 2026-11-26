@@ -1,9 +1,8 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import Link from '@/components/ui/AppLink';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import MarketplaceContainer from '@/components/marketplace/ui/MarketplaceContainer';
@@ -13,23 +12,6 @@ import { useAuthModal } from '@/context/AuthModalContext';
 export default function MarketplaceHero() {
   const { t } = useLanguage();
   const { openAuthModal } = useAuthModal();
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.12, delayChildren: 0.15 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 28 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
-    },
-  };
-
   return (
     <section className="relative bg-background pt-8 lg:pt-12 pb-4 lg:pb-8 overflow-hidden transition-colors duration-300">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/4 pointer-events-none" />
@@ -37,38 +19,31 @@ export default function MarketplaceHero() {
 
       <MarketplaceContainer>
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-10">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
+          <div
             className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left w-full max-w-2xl mx-auto lg:max-w-none"
           >
-            <motion.span
-              variants={itemVariants}
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-muted text-foreground text-xs font-bold tracking-wide mb-4 border border-border"
+            <span
+               style={{ "--delay": "0.15s" }} className="animate-fade-up inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-muted text-foreground text-xs font-bold tracking-wide mb-4 border border-border"
             >
               <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               {t('marketplace.hero.eyebrow', 'Think4Ever Marketplace')}
-            </motion.span>
+            </span>
 
-            <motion.h1
-              variants={itemVariants}
-              className="text-[32px] leading-[1.1] md:text-[48px] lg:text-[52px] font-extrabold tracking-tight text-foreground mb-4"
+            <h1
+               style={{ "--delay": "0.27s" }} className="animate-fade-up text-[32px] leading-[1.1] md:text-[48px] lg:text-[52px] font-extrabold tracking-tight text-foreground mb-4"
             >
               {t('marketplace.hero.titlePrefix', 'The outsourcing marketplace for the ')}
               <span className="text-primary">{t('marketplace.hero.titleHighlight', 'AI era.')}</span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              variants={itemVariants}
-              className="max-w-[600px] text-base sm:text-lg text-muted-foreground/90 font-normal leading-relaxed mb-6"
+            <p
+               style={{ "--delay": "0.39s" }} className="animate-fade-up max-w-[600px] text-base sm:text-lg text-muted-foreground/90 font-normal leading-relaxed mb-6"
             >
               {t('marketplace.hero.subtitle', 'Where AI-enabled freelancers and enterprises get work done. Outsource a single task or an entire project, right inside Think4Ever: ThinkBrain writes the job post and scores proposals, and your hire starts in your project with no repo sharing or setup.')}
-            </motion.p>
+            </p>
 
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 w-full sm:w-auto mb-4"
+            <div
+               style={{ "--delay": "0.51s" }} className="animate-fade-up flex flex-wrap items-center justify-center lg:justify-start gap-4 w-full sm:w-auto mb-4"
             >
               <Button
                 onClick={() => openAuthModal("signup")}
@@ -85,9 +60,9 @@ export default function MarketplaceHero() {
               >
                 {t('marketplace.hero.findWork', 'Find Work')}
               </Button>
-            </motion.div>
+            </div>
 
-            <motion.div variants={itemVariants} className="mt-8 flex flex-col items-center lg:items-start w-full">
+            <div  style={{ "--delay": "0.63s" }} className="animate-fade-up mt-8 flex flex-col items-center lg:items-start w-full">
               <div className="w-full h-[1px] bg-border/50 mb-5" />
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-3">
                 {t('marketplace.hero.topExpertise', 'Top Expertise')}
@@ -109,18 +84,15 @@ export default function MarketplaceHero() {
                   </span>
                 ))}
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="w-full lg:flex-1 relative mt-10 lg:mt-0"
+          <div
+             style={{ "--delay": "0.30s" }} className="animate-fade-up w-full lg:flex-1 relative mt-10 lg:mt-0"
           >
             <div className="relative w-full aspect-[4/3] lg:aspect-[3/2] bg-muted overflow-hidden shadow-2xl shadow-primary/10 rounded-tr-[60px] rounded-bl-[60px] rounded-tl-2xl rounded-br-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2850&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=70&w=1200&auto=format&fit=crop"
                 alt={t('marketplace.hero.imgAlt', 'Team collaboration at Think4Ever Marketplace')}
                 fill
                 priority
@@ -130,11 +102,8 @@ export default function MarketplaceHero() {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent mix-blend-multiply" />
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -bottom-5 -left-4 sm:-left-6 lg:-left-8 bg-card border border-border shadow-2xl shadow-black/10 rounded-2xl p-5 w-[260px] sm:w-[300px] z-20"
+            <div
+               style={{ "--delay": "0.60s" }} className="animate-fade-up absolute -bottom-5 -left-4 sm:-left-6 lg:-left-8 bg-card border border-border shadow-2xl shadow-black/10 rounded-2xl p-5 w-[260px] sm:w-[300px] z-20"
             >
               <ul className="space-y-3">
                 {[
@@ -150,8 +119,8 @@ export default function MarketplaceHero() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </MarketplaceContainer>
     </section>

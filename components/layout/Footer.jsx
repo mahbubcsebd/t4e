@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/context/LanguageContext';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/ui/AppLink';
 import { FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import StoreButtons from '@/components/sections/apps/StoreButtons';
 

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* The site is light-only (ThemeProvider forces light), so dark: must follow the .dark class, not the OS setting. */
+@custom-variant dark (&:is(.dark *));
+
 :root {
   --background: #fafafa;
   --foreground: #0B1B3A; /* Ink */
@@ -336,4 +339,52 @@ mark {
 }
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+/* Entrance animation that runs from CSS alone, so content is never hidden while JS loads. */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--delay, 0s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    animation: none;
+  }
+}
+
+/* Home carousel: cross-fade between slides with CSS only. */
+@keyframes carousel-text-in {
+  from { opacity: 0; transform: translateY(10px); filter: blur(4px); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+@keyframes carousel-text-out {
+  from { opacity: 1; transform: none; filter: blur(0); }
+  to { opacity: 0; transform: translateY(-10px); filter: blur(4px); }
+}
+@keyframes carousel-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes carousel-fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes carousel-zoom { from { transform: scale(1.6); } to { transform: scale(2); } }
+
+.carousel-text-in { animation: carousel-text-in 0.5s ease-out both; }
+.carousel-text-out { animation: carousel-text-out 0.5s ease-out both; pointer-events: none; }
+.carousel-fade-in { animation: carousel-fade-in 0.8s ease-in-out both; }
+.carousel-fade-out { animation: carousel-fade-out 0.8s ease-in-out both; pointer-events: none; }
+.carousel-zoom { animation: carousel-zoom 12s linear both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-text-in, .carousel-text-out, .carousel-fade-in, .carousel-fade-out, .carousel-zoom {
+    animation: none;
+  }
 }

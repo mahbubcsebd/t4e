@@ -1,14 +1,57 @@
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Layers } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
 
+function CarouselText({ item }) {
+  return (
+    <>
+      <h3 className="flex items-center justify-center gap-2 text-xl font-semibold text-foreground tracking-tight mb-3 px-2">
+        {item.icon && <span className="shrink-0">{item.icon}</span>}
+        <span>{item.title}</span>
+      </h3>
+      <p className="text-sm text-muted-foreground max-w-[300px] leading-relaxed">
+        {item.description}
+      </p>
+    </>
+  );
+}
+
+function CarouselImage({ item, zoomed = false }) {
+  return (
+    <div
+      className={`w-full h-full relative origin-center ${zoomed ? "scale-[2]" : "carousel-zoom"}`}
+      style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+    >
+      <Image
+        src={item.image}
+        alt={item.title}
+        fill
+        className="object-cover"
+        sizes="(max-width: 768px) 400px, 400px"
+        quality={65}
+      />
+    </div>
+  );
+}
+
 export default function CenterCarousel({ items }) {
   const { t } = useLanguage();
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // `previous` keeps the outgoing slide mounted for the cross-fade.
+  const [{ current: currentIndex, previous: previousIndex }, setSlide] = useState({
+    current: 0,
+    previous: null,
+  });
+  const setCurrentIndex = useCallback(
+    (next) =>
+      setSlide((state) => {
+        const target = typeof next === "function" ? next(state.current) : next;
+        return target === state.current ? state : { current: target, previous: state.current };
+      }),
+    []
+  );
   const autoplayRef = useRef(null);
 
   const startAutoplay = useCallback(() => {
@@ -16,7 +59,7 @@ export default function CenterCarousel({ items }) {
     autoplayRef.current = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % items.length);
     }, 5000);
-  }, [items.length]);
+  }, [items.length, setCurrentIndex]);
 
   useEffect(() => {
     startAutoplay();
@@ -52,26 +95,21 @@ export default function CenterCarousel({ items }) {
 
         {/* Dynamic Text Area - Absolute positioning prevents layout shift during transition */}
         <div className="relative w-full h-[120px] sm:h-[100px] mb-8 shrink-0">
-          <AnimatePresence>
-            <motion.div
-              key={`text-${currentIndex}`}
-              initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              className="absolute inset-x-0 top-0 flex flex-col items-center w-full"
+          {previousIndex !== null && (
+            <div
+              key={`text-out-${previousIndex}-${currentIndex}`}
+              aria-hidden="true"
+              className="carousel-text-out absolute inset-x-0 top-0 flex flex-col items-center w-full"
             >
-              <h3 className="flex items-center justify-center gap-2 text-xl font-semibold text-foreground tracking-tight mb-3 px-2">
-                {items[currentIndex].icon && (
-                  <span className="shrink-0">{items[currentIndex].icon}</span>
-                )}
-                <span>{items[currentIndex].title}</span>
-              </h3>
-              <p className="text-sm text-muted-foreground max-w-[300px] leading-relaxed">
-                {items[currentIndex].description}
-              </p>
-            </motion.div>
-          </AnimatePresence>
+              <CarouselText item={items[previousIndex]} />
+            </div>
+          )}
+          <div
+            key={`text-${currentIndex}`}
+            className={`${previousIndex !== null ? "carousel-text-in " : ""}absolute inset-x-0 top-0 flex flex-col items-center w-full`}
+          >
+            <CarouselText item={items[currentIndex]} />
+          </div>
         </div>
       </div>
 
@@ -79,42 +117,21 @@ export default function CenterCarousel({ items }) {
       <div className="relative mt-auto pt-5 pb-0 w-full flex justify-center items-center group">
         <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden shadow-lg border-[6px] border-[#aaccff] bg-muted shrink-0 group-hover:border-primary/60 group-hover:shadow-primary/20 transition-all duration-700">
           {/* Removed mode="wait" to allow true crossfading without blanking */}
-          <AnimatePresence>
-            <motion.div
-              key={`image-${currentIndex}`}
-              className="absolute inset-0 w-full h-full"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
+          {previousIndex !== null && (
+            <div
+              key={`image-out-${previousIndex}-${currentIndex}`}
+              aria-hidden="true"
+              className="carousel-fade-out absolute inset-0 w-full h-full"
             >
-              {/* Hardware acceleration and anti-aliasing fixes to prevent the "waving" / shimmering effect during slow zoom */}
-              <motion.div
-                className="w-full h-full relative origin-center"
-                initial={{ scale: 1.6, z: 0, rotationZ: 0.01 }}
-                animate={{ scale: 2.0, z: 0, rotationZ: 0.01 }}
-                transition={{
-                  duration: 12,
-                  ease: "linear",
-                }}
-                style={{
-                  willChange: "transform",
-                  backfaceVisibility: "hidden",
-                  WebkitBackfaceVisibility: "hidden",
-                  transformStyle: "preserve-3d",
-                }}
-              >
-                <Image
-                  src={items[currentIndex].image}
-                  alt={items[currentIndex].title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 400px, 400px"
-                  quality={65}
-                />
-              </motion.div>
-            </motion.div>
-          </AnimatePresence>
+              <CarouselImage item={items[previousIndex]} zoomed />
+            </div>
+          )}
+          <div
+            key={`image-${currentIndex}`}
+            className={`${previousIndex !== null ? "carousel-fade-in " : ""}absolute inset-0 w-full h-full`}
+          >
+            <CarouselImage item={items[currentIndex]} />
+          </div>
         </div>
       </div>
     </div>

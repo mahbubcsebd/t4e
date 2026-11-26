@@ -59,9 +59,9 @@ export default function ControlPoint() {
                   <span className="text-[10px] font-extrabold text-foreground bg-muted px-3 py-1 rounded-full uppercase tracking-wider block mb-3 w-max">
                     {t('howItWorksPage.approvedTag')}
                   </span>
-                  <h4 className="text-sm font-bold text-foreground">
+                  <p className="text-sm font-bold text-foreground">
                     {t('howItWorksPage.approvedRule')}
-                  </h4>
+                  </p>
                 </div>
 
                 {/* Divergence Alert */}

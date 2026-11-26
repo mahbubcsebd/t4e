@@ -2,13 +2,9 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { ZoomableImage } from "@/components/ZoomableImage";
-import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
-import Link from "next/link";
 
-export const TutorialArticle = ({ tutorial, currentLang }) => {
+export const TutorialArticle = ({ tutorial, children }) => {
   const [zoomedImgSrc, setZoomedImgSrc] = useState(null);
 
   // Dynamically query all images rendered via ReactMarkdown
@@ -40,16 +36,14 @@ export const TutorialArticle = ({ tutorial, currentLang }) => {
         img.removeEventListener("click", handleClick);
       });
     };
-  }, [tutorial.content, zoomedImgSrc]);
+  }, [zoomedImgSrc]);
 
   return (
     <article className="relative rounded-xl p-5 sm:p-10 lg:p-16 shadow-sm border border-border/60 overflow-hidden">
       <div className="relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          className="mb-10 text-center sm:text-left"
+        <div
+          style={{ "--delay": "0.1s" }}
+          className="animate-fade-up mb-10 text-center sm:text-left"
         >
           {tutorial.category && (
             <span className="inline-block px-3 py-1.5 bg-muted border border-border text-foreground text-[10px] font-extrabold tracking-widest rounded-full mb-6 uppercase shadow-sm">
@@ -78,15 +72,13 @@ export const TutorialArticle = ({ tutorial, currentLang }) => {
               </div>
             )}
           </div> */}
-        </motion.div>
+        </div>
 
         {/* Featured Image */}
         {!tutorial.hideThumbnail && tutorial.image && (
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-            className="mb-12 relative aspect-[2/1] overflow-hidden rounded-2xl border border-border/80 shadow-md group"
+          <div
+            style={{ "--delay": "0.2s" }}
+            className="animate-fade-up mb-12 relative aspect-[2/1] overflow-hidden rounded-2xl border border-border/80 shadow-md group"
           >
             <ZoomableImage
               src={tutorial.image}
@@ -95,40 +87,16 @@ export const TutorialArticle = ({ tutorial, currentLang }) => {
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               priority
             />
-          </motion.div>
+          </div>
         )}
 
         {/* Article Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-          className="prose max-w-none prose-headings:text-foreground prose-headings:font-bold prose-p:text-[16px] prose-p:leading-loose prose-p:text-muted-foreground prose-strong:text-foreground prose-strong:font-bold prose-th:text-foreground prose-a:text-primary prose-a:font-semibold hover:prose-a:text-primary/80 prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:text-foreground prose-blockquote:font-medium prose-blockquote:not-italic"
+        <div
+          style={{ "--delay": "0.3s" }}
+          className="animate-fade-up prose max-w-none prose-headings:text-foreground prose-headings:font-bold prose-p:text-[16px] prose-p:leading-loose prose-p:text-muted-foreground prose-strong:text-foreground prose-strong:font-bold prose-th:text-foreground prose-a:text-primary prose-a:font-semibold hover:prose-a:text-primary/80 prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:text-foreground prose-blockquote:font-medium prose-blockquote:not-italic"
         >
-          <ReactMarkdown 
-            rehypePlugins={[rehypeRaw]}
-            components={{
-              a: ({ node, ...props }) => {
-                const href = props.href || "";
-                if (href.startsWith("/")) {
-                  const localizeHref = (path) => {
-                    let normalized = path;
-                    if (!normalized.includes('#') && !normalized.includes('?') && !normalized.includes('.') && !normalized.endsWith('/')) {
-                      normalized += '/';
-                    }
-                    return currentLang === "en" ? normalized : `/${currentLang}${normalized}`;
-                  };
-                  return (
-                    <Link href={localizeHref(href)} {...props} />
-                  );
-                }
-                return <Link href={href} target="_blank" rel="noopener noreferrer" {...props} />;
-              }
-            }}
-          >
-            {tutorial.content}
-          </ReactMarkdown>
-        </motion.div>
+          {children}
+        </div>
       </div>
 
       {/* Global Dialog for content inline images */}

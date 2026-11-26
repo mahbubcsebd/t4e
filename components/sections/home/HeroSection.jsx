@@ -6,9 +6,9 @@ import CodingToolPills from "@/components/ui/CodingToolPills";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
 import { useAuthModal } from "@/context/AuthModalContext";
-import { AnimatePresence, motion } from "framer-motion";
+
 import { Box, CheckCircle2, Code2, LayoutTemplate, Play } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/ui/AppLink";
 import { useEffect, useState } from "react";
 import Eyebrow from "@/components/ui/Eyebrow";
 
@@ -129,15 +129,8 @@ export default function HeroSection() {
 
                       {/* Animated Content Scene (Grid Stack for Auto Height) */}
                       <div className="grid w-full relative">
-                        <motion.div
-                          className="col-start-1 row-start-1 flex-1 flex flex-col justify-between relative z-10"
-                          initial={false}
-                          animate={{
-                            opacity: activeScene === 1 ? 1 : 0,
-                            pointerEvents: activeScene === 1 ? "auto" : "none",
-                            zIndex: activeScene === 1 ? 20 : 0,
-                          }}
-                          transition={{ duration: 0.4 }}
+                        <div
+                          className={`col-start-1 row-start-1 flex-1 flex flex-col justify-between relative transition-opacity duration-[400ms] ${activeScene === 1 ? "opacity-100 pointer-events-auto z-20" : "opacity-0 pointer-events-none z-0"}`}
                         >
                           <div className="text-center mb-4 max-md:hidden">
                             <span className="inline-block text-[10px] sm:text-[11px] font-medium text-foreground bg-muted px-2.5 py-1 rounded-full uppercase tracking-wider">
@@ -150,14 +143,7 @@ export default function HeroSection() {
 
                           {/* Stage diagram */}
                           <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-2 md:gap-0 items-center bg-[#f0f4f9] p-3 md:p-4 rounded-xl border border-border/40 relative max-w-4xl mx-auto w-full dark:bg-card/50 dark:border-border">
-                            <motion.div
-                              initial={false}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{
-                                duration: 0.5,
-                                delay: 0.1,
-                                ease: "easeOut",
-                              }}
+                            <div
                               className="bg-card p-4 sm:p-5 rounded-xl border border-border relative z-10 w-full h-full flex flex-col justify-center"
                             >
                               <div className="flex items-center gap-1 mb-2">
@@ -174,51 +160,26 @@ export default function HeroSection() {
                                 <div className="h-1.5 sm:h-2 bg-slate-200 rounded-full w-3/4"></div>
                                 <div className="h-1.5 sm:h-2 bg-primary rounded-full w-4/5"></div>
                               </div>
-                            </motion.div>
+                            </div>
 
                             {/* Central Interactive Play Button Connection */}
                             <div className="flex items-center justify-center relative py-3 md:py-0 md:px-4 w-full md:w-24 h-full">
-                              <motion.div
-                                initial={false}
-                                animate={{ scaleX: 1, opacity: 1 }}
-                                transition={{
-                                  duration: 0.6,
-                                  delay: 0.4,
-                                  ease: "easeOut",
-                                }}
-                                style={{ originX: 0 }}
+                              <div
                                 className="absolute left-0 right-0 top-1/2 -translate-y-1/2 hidden md:flex items-center z-0"
                               >
                                 <div className="flex-grow h-[2px] bg-border"></div>
                                 <div className="w-0 h-0 border-y-[5px] border-y-transparent border-l-[8px] border-l-border -ml-[1px]"></div>
-                              </motion.div>
+                              </div>
 
-                              <motion.div
-                                initial={false}
-                                animate={{ scaleY: 1, opacity: 1 }}
-                                transition={{
-                                  duration: 0.6,
-                                  delay: 0.4,
-                                  ease: "easeOut",
-                                }}
-                                style={{ originY: 0 }}
+                              <div
                                 className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 flex md:hidden flex-col items-center z-0"
                               >
                                 <div className="flex-grow w-[2px] bg-border"></div>
                                 <div className="w-0 h-0 border-x-[5px] border-x-transparent border-t-[8px] border-t-border -mt-[1px]"></div>
-                              </motion.div>
+                              </div>
 
                               {/* The Play Button */}
-                              <motion.button
-                                initial={false}
-                                animate={{ scale: 1, opacity: 1 }}
-                                transition={{
-                                  duration: 0.5,
-                                  delay: 1.0,
-                                  type: "spring",
-                                  stiffness: 250,
-                                  damping: 20,
-                                }}
+                              <button
                                 onClick={() => {
                                   setVideoId("XtfgRmkqsYw");
                                   setIsVideoOpen(true);
@@ -230,17 +191,10 @@ export default function HeroSection() {
                                   className="w-3 h-3 sm:w-4 sm:h-4 text-foreground group-hover:text-primary transition-colors ml-1"
                                   fill="currentColor"
                                 />
-                              </motion.button>
+                              </button>
                             </div>
 
-                            <motion.div
-                              initial={false}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{
-                                duration: 0.5,
-                                delay: 0.7,
-                                ease: "easeOut",
-                              }}
+                            <div
                               className="bg-card p-4 sm:p-5 rounded-xl border border-border relative z-10 w-full h-full flex flex-col justify-center"
                             >
                               <div className="flex items-center gap-1 mb-2">
@@ -266,23 +220,16 @@ export default function HeroSection() {
                                   {t("hero.nodeUI")}
                                 </span>
                               </div>
-                            </motion.div>
+                            </div>
                           </div>
 
                           <div className="mt-4 flex justify-center text-[12px] sm:text-[13px] font-medium text-muted-foreground max-md:hidden">
                             <span>{t("hero.cardOneFooter")}</span>
                           </div>
-                        </motion.div>
+                        </div>
 
-                        <motion.div
-                          className="col-start-1 row-start-1 flex-1 flex flex-col justify-between relative z-10"
-                          initial={false}
-                          animate={{
-                            opacity: activeScene === 2 ? 1 : 0,
-                            pointerEvents: activeScene === 2 ? "auto" : "none",
-                            zIndex: activeScene === 2 ? 20 : 0,
-                          }}
-                          transition={{ duration: 0.4 }}
+                        <div
+                          className={`col-start-1 row-start-1 flex-1 flex flex-col justify-between relative transition-opacity duration-[400ms] ${activeScene === 2 ? "opacity-100 pointer-events-auto z-20" : "opacity-0 pointer-events-none z-0"}`}
                         >
                           <div className="text-center mb-4 max-md:hidden">
                             <span className="inline-block text-[10px] sm:text-[11px] font-medium text-foreground bg-muted px-2.5 py-1 rounded-full uppercase tracking-wider">
@@ -295,14 +242,7 @@ export default function HeroSection() {
 
                           {/* Stage diagram */}
                           <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-2 md:gap-0 items-center bg-[#f0f4f9] p-3 md:p-4 rounded-xl border border-border/40 relative max-w-4xl mx-auto w-full dark:bg-card/50 dark:border-border">
-                            <motion.div
-                              initial={false}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{
-                                duration: 0.5,
-                                delay: 0.1,
-                                ease: "easeOut",
-                              }}
+                            <div
                               className="bg-card p-4 sm:p-5 rounded-xl border border-border relative z-10 h-full flex flex-col justify-center w-full"
                             >
                               <div className="flex items-center gap-1 mb-2">
@@ -314,51 +254,26 @@ export default function HeroSection() {
                               <b className="text-xs sm:text-sm font-bold text-foreground block mt-1 leading-snug">
                                 {t("hero.cardTwoIntentName")}
                               </b>
-                            </motion.div>
+                            </div>
 
                             {/* Central Interactive Play Button Connection */}
                             <div className="flex items-center justify-center relative py-3 md:py-0 md:px-4 w-full md:w-24 h-full">
-                              <motion.div
-                                initial={false}
-                                animate={{ scaleX: 1, opacity: 1 }}
-                                transition={{
-                                  duration: 0.6,
-                                  delay: 0.4,
-                                  ease: "easeOut",
-                                }}
-                                style={{ originX: 0 }}
+                              <div
                                 className="absolute left-0 right-0 top-1/2 -translate-y-1/2 hidden md:flex items-center z-0"
                               >
                                 <div className="flex-grow h-[2px] bg-border"></div>
                                 <div className="w-0 h-0 border-y-[5px] border-y-transparent border-l-[8px] border-l-border -ml-[1px]"></div>
-                              </motion.div>
+                              </div>
 
-                              <motion.div
-                                initial={false}
-                                animate={{ scaleY: 1, opacity: 1 }}
-                                transition={{
-                                  duration: 0.6,
-                                  delay: 0.4,
-                                  ease: "easeOut",
-                                }}
-                                style={{ originY: 0 }}
+                              <div
                                 className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 flex md:hidden flex-col items-center z-0"
                               >
                                 <div className="flex-grow w-[2px] bg-border"></div>
                                 <div className="w-0 h-0 border-x-[5px] border-x-transparent border-t-[8px] border-t-border -mt-[1px]"></div>
-                              </motion.div>
+                              </div>
 
                               {/* The Play Button */}
-                              <motion.button
-                                initial={false}
-                                animate={{ scale: 1, opacity: 1 }}
-                                transition={{
-                                  duration: 0.5,
-                                  delay: 1.0,
-                                  type: "spring",
-                                  stiffness: 250,
-                                  damping: 20,
-                                }}
+                              <button
                                 onClick={() => {
                                   setVideoId("4Yxbu3gZNYY");
                                   setIsVideoOpen(true);
@@ -370,17 +285,10 @@ export default function HeroSection() {
                                   className="w-3 h-3 sm:w-4 sm:h-4 text-foreground group-hover:text-primary transition-colors ml-1"
                                   fill="currentColor"
                                 />
-                              </motion.button>
+                              </button>
                             </div>
 
-                            <motion.div
-                              initial={false}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{
-                                duration: 0.5,
-                                delay: 0.7,
-                                ease: "easeOut",
-                              }}
+                            <div
                               className="bg-card p-4 sm:p-5 rounded-xl border border-border relative z-10 h-full flex flex-col justify-center w-full"
                             >
                               <div className="flex items-center gap-1 mb-2">
@@ -396,13 +304,13 @@ export default function HeroSection() {
                                 <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-foreground" />{" "}
                                 {t("hero.cardTwoStatus")}
                               </span>
-                            </motion.div>
+                            </div>
                           </div>
 
                           <div className="mt-4 flex justify-center text-[12px] sm:text-[13px] font-medium text-muted-foreground max-md:hidden">
                             <span>{t("hero.cardTwoFooter")}</span>
                           </div>
-                        </motion.div>
+                        </div>
                       </div>
                     </div>
                   </div>
