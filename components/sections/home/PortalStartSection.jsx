@@ -355,8 +355,8 @@ export default function PortalStartSection() {
               ))}
             </p>
             {/* Product videos, opened in the same modal as the demo section */}
-            <div className="flex flex-wrap items-center justify-center gap-2 max-md:hidden">
-              <span className="text-[13px] font-semibold text-slate-600">
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              <span className="w-full text-center text-[13px] font-semibold text-slate-600 md:w-auto">
                 {t("portalStart.seeHowItWorks")}
               </span>
               {DEMO_VIDEOS.map(({ key, id, labelKey }) => (
@@ -364,7 +364,7 @@ export default function PortalStartSection() {
                   key={key}
                   type="button"
                   onClick={() => setVideoId(id)}
-                  className="inline-flex min-h-9 cursor-pointer items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3.5 text-[13px] font-semibold text-[#0f172a] shadow-sm transition-colors hover:border-[#2563eb] hover:text-[#2563eb] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563eb]"
+                  className="inline-flex min-h-11 cursor-pointer md:min-h-9 items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3.5 text-[13px] font-semibold text-[#0f172a] shadow-sm transition-colors hover:border-[#2563eb] hover:text-[#2563eb] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563eb]"
                 >
                   <Play
                     className="h-3.5 w-3.5 fill-current text-[#2563eb]"
