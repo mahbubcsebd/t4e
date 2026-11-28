@@ -1443,6 +1443,16 @@
           "Same capabilities as the web platform",
           "Play Store data safety: no data collected or shared with third parties"
         ]
+      },
+      "ios": {
+        "title": "Think4Ever for iOS",
+        "badge": "App Store · Free",
+        "desc": "Think4Ever on your iPhone or iPad, so you can review blueprints, follow builds and approve changes away from your desk.",
+        "features": [
+          "Native iOS app for iPhone and iPad",
+          "Same capabilities as the web platform",
+          "Free to download on the App Store"
+        ]
       }
     },
     "screenshots": {
@@ -1611,7 +1621,7 @@
     "cta": {
       "eyebrow": "Download Think4Ever",
       "title": "Understand the system. Change it with confidence.",
-      "desc": "Get the native app for Windows or Android and start mapping your first project today."
+      "desc": "Get the native app for Windows, Android or iOS and start mapping your first project today."
     }
   },
   "customersPage": {

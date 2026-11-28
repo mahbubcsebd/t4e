@@ -1572,6 +1572,16 @@
           "Mismas capacidades que la plataforma web",
           "Seguridad de datos de Play Store: no se recopilan ni comparten datos con terceros"
         ]
+      },
+      "ios": {
+        "title": "Think4Ever para iOS",
+        "badge": "App Store · Gratis",
+        "desc": "Think4Ever en tu iPhone o iPad para revisar planos, seguir compilaciones y aprobar cambios fuera de tu escritorio.",
+        "features": [
+          "Aplicación nativa de iOS para iPhone y iPad",
+          "Mismas capacidades que la plataforma web",
+          "Descarga gratuita en la App Store"
+        ]
       }
     },
     "screenshots": {
@@ -1740,7 +1750,7 @@
     "cta": {
       "eyebrow": "Descarga Think4Ever",
       "title": "Comprende el sistema. Modifícalo con total confianza.",
-      "desc": "Obtén la aplicación nativa para Windows o Android y comienza a mapear tu primer proyecto hoy mismo."
+      "desc": "Obtén la aplicación nativa para Windows, Android o iOS y comienza a mapear tu primer proyecto hoy mismo."
     }
   },
   "customersPage": {

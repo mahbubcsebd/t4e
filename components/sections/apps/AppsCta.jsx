@@ -34,7 +34,7 @@ export default function AppsCta() {
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl mb-8">
               {t(
                 "appsPage.cta.desc",
-                "Get the native app for Windows or Android and start mapping your first project today."
+                "Get the native app for Windows, Android or iOS and start mapping your first project today."
               )}
             </p>
 

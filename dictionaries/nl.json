@@ -975,6 +975,16 @@
           "Dezelfde mogelijkheden als het webplatform",
           "Play Store gegevensbeveiliging: geen gegevens verzameld of gedeeld met derden"
         ]
+      },
+      "ios": {
+        "title": "Think4Ever voor iOS",
+        "badge": "App Store · Gratis",
+        "desc": "Think4Ever op je iPhone of iPad, zodat je blauwdrukken kunt controleren, builds kunt volgen en wijzigingen kunt goedkeuren buiten je bureau.",
+        "features": [
+          "Native iOS app voor iPhone en iPad",
+          "Dezelfde mogelijkheden als het webplatform",
+          "Gratis te downloaden in de App Store"
+        ]
       }
     },
     "screenshots": {
@@ -1143,7 +1153,7 @@
     "cta": {
       "eyebrow": "Download Think4Ever",
       "title": "Begrijp het systeem. Wijzig met vertrouwen.",
-      "desc": "Download de native app voor Windows of Android en breng vandaag nog je eerste project in kaart."
+      "desc": "Download de native app voor Windows, Android of iOS en breng vandaag nog je eerste project in kaart."
     }
   },
   "customersPage": {
