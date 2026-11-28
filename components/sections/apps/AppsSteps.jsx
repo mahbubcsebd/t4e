@@ -16,7 +16,7 @@ export default function AppsSteps() {
         {
           num: "1",
           title: "Download",
-          desc: "Install Think4Ever from the Microsoft Store or Google Play.",
+          desc: "Install Think4Ever from the Microsoft Store, Google Play or the App Store.",
         },
         {
           num: "2",

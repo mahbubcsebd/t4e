@@ -1373,18 +1373,19 @@
     "ctaSecondary": "Return home"
   },
   "appsPage": {
-    "metaTitle": "Think4Ever Apps for Windows and Android",
-    "metaDesc": "Download Think4Ever for Windows and Android. Run Think4Ever locally, with the same capabilities as the Think4Ever web platform.",
+    "metaTitle": "Think4Ever Apps for Windows, Android and iOS",
+    "metaDesc": "Download Think4Ever for Windows, Android and iOS. Run Think4Ever locally, with the same capabilities as the Think4Ever web platform.",
     "hero": {
       "eyebrow": "Think4Ever apps",
       "title": "Think4Ever, installed on your device",
-      "lead": "Native apps for Windows and Android bring the full Think4Ever platform to your own device. Run Think4Ever locally, with the same capabilities as the web platform.",
-      "iosBold": "iOS coming soon",
-      "note": "Free to download. Sign in to get started. iOS app coming soon.",
+      "lead": "Native apps for Windows, Android and iOS bring the full Think4Ever platform to your own device. Run Think4Ever locally, with the same capabilities as the web platform.",
+      "note": "Free to download. Sign in to get started.",
       "getOnStore": "Get it from",
       "getOnPlay": "Get it on",
       "microsoftStore": "Microsoft Store",
       "googlePlay": "Google Play",
+      "getOnAppStore": "Download on the",
+      "appStore": "App Store",
       "titlePrefix": "Think4Ever, ",
       "titleHighlight": "installed on your device"
     },
@@ -1441,6 +1442,16 @@
           "Native Android app for phones and tablets",
           "Same capabilities as the web platform",
           "Play Store data safety: no data collected or shared with third parties"
+        ]
+      },
+      "ios": {
+        "title": "Think4Ever for iOS",
+        "badge": "App Store · Free",
+        "desc": "Think4Ever on your iPhone or iPad, so you can review blueprints, follow builds and approve changes away from your desk.",
+        "features": [
+          "Native iOS app for iPhone and iPad",
+          "Same capabilities as the web platform",
+          "Free to download on the App Store"
         ]
       }
     },
@@ -1526,7 +1537,7 @@
         {
           "num": "1",
           "title": "Download",
-          "desc": "Install Think4Ever from the Microsoft Store or Google Play."
+          "desc": "Install Think4Ever from the Microsoft Store, Google Play or the App Store."
         },
         {
           "num": "2",
@@ -1546,7 +1557,7 @@
       "items": [
         {
           "question": "Can the apps do everything the web platform does?",
-          "answer": "Yes. The Windows and Android apps have the same capabilities as Think4Ever on the web."
+          "answer": "Yes. The Windows, Android and iOS apps have the same capabilities as Think4Ever on the web."
         },
         {
           "question": "How much do the apps cost?",
@@ -1603,14 +1614,14 @@
         },
         {
           "question": "Is there an app for iPhone and iPad?",
-          "answer": "The iOS native app is coming soon. Until then, use Think4Ever in your browser at portal.think4ever.com."
+          "answer": "Yes. The Think4Ever iOS app is available on the App Store. You can also use Think4Ever in your browser at portal.think4ever.com."
         }
       ]
     },
     "cta": {
       "eyebrow": "Download Think4Ever",
       "title": "Understand the system. Change it with confidence.",
-      "desc": "Get the native app for Windows or Android and start mapping your first project today."
+      "desc": "Get the native app for Windows, Android or iOS and start mapping your first project today."
     }
   },
   "customersPage": {

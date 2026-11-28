@@ -1502,18 +1502,19 @@
     }
   },
   "appsPage": {
-    "metaTitle": "Aplicaciones Think4Ever para Windows y Android",
-    "metaDesc": "Descarga Think4Ever para Windows y Android. Ejecuta Think4Ever localmente, con las mismas capacidades que la plataforma web de Think4Ever.",
+    "metaTitle": "Aplicaciones Think4Ever para Windows, Android e iOS",
+    "metaDesc": "Descarga Think4Ever para Windows, Android e iOS. Ejecuta Think4Ever localmente, con las mismas capacidades que la plataforma web de Think4Ever.",
     "hero": {
       "eyebrow": "Aplicaciones Think4Ever",
       "title": "Think4Ever, instalado en tu dispositivo",
-      "lead": "Las aplicaciones nativas para Windows y Android llevan la plataforma completa de Think4Ever a tu propio dispositivo. Ejecuta Think4Ever localmente, con las mismas capacidades que la plataforma web.",
-      "iosBold": "iOS próximamente",
-      "note": "Descarga gratuita. Inicia sesión para comenzar. Aplicación para iOS disponible próximamente.",
+      "lead": "Las aplicaciones nativas para Windows, Android e iOS llevan la plataforma completa de Think4Ever a tu propio dispositivo. Ejecuta Think4Ever localmente, con las mismas capacidades que la plataforma web.",
+      "note": "Descarga gratuita. Inicia sesión para comenzar.",
       "getOnStore": "Consíguelo en",
       "getOnPlay": "Disponible en",
       "microsoftStore": "Microsoft Store",
       "googlePlay": "Google Play",
+      "getOnAppStore": "Descárgalo en la",
+      "appStore": "App Store",
       "titlePrefix": "Think4Ever, ",
       "titleHighlight": "instalado en tu dispositivo"
     },
@@ -1570,6 +1571,16 @@
           "Aplicación nativa de Android para teléfonos y tabletas",
           "Mismas capacidades que la plataforma web",
           "Seguridad de datos de Play Store: no se recopilan ni comparten datos con terceros"
+        ]
+      },
+      "ios": {
+        "title": "Think4Ever para iOS",
+        "badge": "App Store · Gratis",
+        "desc": "Think4Ever en tu iPhone o iPad para revisar planos, seguir compilaciones y aprobar cambios fuera de tu escritorio.",
+        "features": [
+          "Aplicación nativa de iOS para iPhone y iPad",
+          "Mismas capacidades que la plataforma web",
+          "Descarga gratuita en la App Store"
         ]
       }
     },
@@ -1655,7 +1666,7 @@
         {
           "num": "1",
           "title": "Descargar",
-          "desc": "Instala Think4Ever desde Microsoft Store o Google Play."
+          "desc": "Instala Think4Ever desde Microsoft Store, Google Play o la App Store."
         },
         {
           "num": "2",
@@ -1675,7 +1686,7 @@
       "items": [
         {
           "question": "¿Pueden las aplicaciones hacer todo lo que hace la plataforma web?",
-          "answer": "Sí. Las aplicaciones para Windows y Android cuentan con las mismas capacidades completas que Think4Ever en la web."
+          "answer": "Sí. Las aplicaciones para Windows, Android e iOS cuentan con las mismas capacidades completas que Think4Ever en la web."
         },
         {
           "question": "¿Cuánto cuestan las aplicaciones?",
@@ -1732,14 +1743,14 @@
         },
         {
           "question": "¿Hay alguna aplicación para iPhone y iPad?",
-          "answer": "La aplicación nativa para iOS estará disponible próximamente. Mientras tanto, puedes usar Think4Ever en tu navegador en portal.think4ever.com."
+          "answer": "Sí. La aplicación de Think4Ever para iOS ya está disponible en la App Store. También puedes usar Think4Ever en tu navegador en portal.think4ever.com."
         }
       ]
     },
     "cta": {
       "eyebrow": "Descarga Think4Ever",
       "title": "Comprende el sistema. Modifícalo con total confianza.",
-      "desc": "Obtén la aplicación nativa para Windows o Android y comienza a mapear tu primer proyecto hoy mismo."
+      "desc": "Obtén la aplicación nativa para Windows, Android o iOS y comienza a mapear tu primer proyecto hoy mismo."
     }
   },
   "customersPage": {

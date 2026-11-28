@@ -29,7 +29,7 @@ export default function ContextGapSection() {
           </span>
           <span className="h-px flex-1 bg-gradient-to-l from-transparent to-slate-200" />
         </div>
-        <StoreButtons variant="blue" className="max-w-[460px]" />
+        <StoreButtons variant="blue" className="max-w-[620px]" />
       </div>
 
       <span className="block text-center text-xs font-bold uppercase tracking-[0.08em] text-slate-600 max-md:hidden">

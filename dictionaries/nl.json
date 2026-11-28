@@ -905,18 +905,19 @@
     "okay": "Oké"
   },
   "appsPage": {
-    "metaTitle": "Think4Ever Apps voor Windows en Android",
-    "metaDesc": "Download Think4Ever voor Windows en Android. Draai Think4Ever lokaal, met dezelfde mogelijkheden als het Think4Ever webplatform.",
+    "metaTitle": "Think4Ever Apps voor Windows, Android en iOS",
+    "metaDesc": "Download Think4Ever voor Windows, Android en iOS. Draai Think4Ever lokaal, met dezelfde mogelijkheden als het Think4Ever webplatform.",
     "hero": {
       "eyebrow": "Think4Ever apps",
       "title": "Think4Ever, geïnstalleerd op je apparaat",
-      "lead": "Native apps voor Windows en Android brengen het volledige Think4Ever platform naar je eigen apparaat. Draai Think4Ever lokaal, met dezelfde mogelijkheden als het webplatform.",
-      "iosBold": "iOS binnenkort beschikbaar",
-      "note": "Gratis te downloaden. Log in om te beginnen. iOS-app binnenkort beschikbaar.",
+      "lead": "Native apps voor Windows, Android en iOS brengen het volledige Think4Ever platform naar je eigen apparaat. Draai Think4Ever lokaal, met dezelfde mogelijkheden als het webplatform.",
+      "note": "Gratis te downloaden. Log in om te beginnen.",
       "getOnStore": "Download via",
       "getOnPlay": "Download op",
       "microsoftStore": "Microsoft Store",
       "googlePlay": "Google Play",
+      "getOnAppStore": "Download in de",
+      "appStore": "App Store",
       "titlePrefix": "Think4Ever, ",
       "titleHighlight": "geïnstalleerd op je apparaat"
     },
@@ -973,6 +974,16 @@
           "Native Android app voor telefoons en tablets",
           "Dezelfde mogelijkheden als het webplatform",
           "Play Store gegevensbeveiliging: geen gegevens verzameld of gedeeld met derden"
+        ]
+      },
+      "ios": {
+        "title": "Think4Ever voor iOS",
+        "badge": "App Store · Gratis",
+        "desc": "Think4Ever op je iPhone of iPad, zodat je blauwdrukken kunt controleren, builds kunt volgen en wijzigingen kunt goedkeuren buiten je bureau.",
+        "features": [
+          "Native iOS app voor iPhone en iPad",
+          "Dezelfde mogelijkheden als het webplatform",
+          "Gratis te downloaden in de App Store"
         ]
       }
     },
@@ -1058,7 +1069,7 @@
         {
           "num": "1",
           "title": "Downloaden",
-          "desc": "Installeer Think4Ever vanuit de Microsoft Store of Google Play."
+          "desc": "Installeer Think4Ever vanuit de Microsoft Store, Google Play of de App Store."
         },
         {
           "num": "2",
@@ -1135,14 +1146,14 @@
         },
         {
           "question": "Is er een app voor iPhone en iPad?",
-          "answer": "De native iOS-app is binnenkort beschikbaar. Gebruik tot die tijd Think4Ever in je browser op portal.think4ever.com."
+          "answer": "Ja. De Think4Ever iOS-app is beschikbaar in de App Store. Je kunt Think4Ever ook in je browser gebruiken op portal.think4ever.com."
         }
       ]
     },
     "cta": {
       "eyebrow": "Download Think4Ever",
       "title": "Begrijp het systeem. Wijzig met vertrouwen.",
-      "desc": "Download de native app voor Windows of Android en breng vandaag nog je eerste project in kaart."
+      "desc": "Download de native app voor Windows, Android of iOS en breng vandaag nog je eerste project in kaart."
     }
   },
   "customersPage": {

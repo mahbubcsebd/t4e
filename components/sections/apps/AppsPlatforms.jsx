@@ -5,7 +5,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import SectionCard from "@/components/layout/SectionCard";
 import Container from "@/components/layout/Container";
 import SectionHeading from "@/components/layout/SectionHeading";
-import StoreButtons, { MicrosoftStoreIcon, GooglePlayIcon } from "./StoreButtons";
+import StoreButtons, { MicrosoftStoreIcon, GooglePlayIcon, AppleIcon } from "./StoreButtons";
 import { Check } from "lucide-react";
 
 export default function AppsPlatforms() {
@@ -13,6 +13,7 @@ export default function AppsPlatforms() {
 
   const winFeatures = t("appsPage.platforms.windows.features") || [];
   const androidFeatures = t("appsPage.platforms.android.features") || [];
+  const iosFeatures = t("appsPage.platforms.ios.features") || [];
 
   return (
     <section className="py-8 md:py-12 lg:py-16 border-b border-border" id="download">
@@ -24,7 +25,7 @@ export default function AppsPlatforms() {
             className="mb-10 md:mb-14"
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-8 items-stretch">
             {/* Windows Card */}
             <div className="flex flex-col justify-between bg-card/80 hover:bg-card border border-border/90 hover:border-primary/40 rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300">
               <div>
@@ -114,6 +115,52 @@ export default function AppsPlatforms() {
               {/* Action Button */}
               <div className="pt-4 border-t border-border/60">
                 <StoreButtons variant="blue" showOnly="android" />
+              </div>
+            </div>
+
+            {/* iOS Card */}
+            <div className="flex flex-col justify-between bg-card/80 hover:bg-card border border-border/90 hover:border-primary/40 rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300">
+              <div>
+                {/* Header with Icon + Title */}
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-muted/80 border border-border flex items-center justify-center shrink-0 shadow-sm">
+                    <AppleIcon className="w-7 h-7 text-foreground" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-foreground tracking-tight">
+                      {t("appsPage.platforms.ios.title", "Think4Ever for iOS")}
+                    </h3>
+                    <span className="inline-block text-xs font-semibold px-2.5 py-0.5 mt-1 rounded-full bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 border border-emerald-500/20">
+                      {t("appsPage.platforms.ios.badge", "App Store · Free")}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6">
+                  {t(
+                    "appsPage.platforms.ios.desc",
+                    "Think4Ever on your iPhone or iPad, so you can review blueprints, follow builds and approve changes away from your desk."
+                  )}
+                </p>
+
+                {/* Features List */}
+                <ul className="space-y-3 mb-8">
+                  {Array.isArray(iosFeatures) &&
+                    iosFeatures.map((feat, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-sm text-foreground/90 font-medium">
+                        <div className="w-5 h-5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                          <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                        </div>
+                        <span className="leading-snug">{feat}</span>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+
+              {/* Action Button */}
+              <div className="pt-4 border-t border-border/60">
+                <StoreButtons variant="blue" showOnly="ios" />
               </div>
             </div>
           </div>

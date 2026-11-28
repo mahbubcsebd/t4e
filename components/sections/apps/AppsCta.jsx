@@ -34,13 +34,13 @@ export default function AppsCta() {
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl mb-8">
               {t(
                 "appsPage.cta.desc",
-                "Get the native app for Windows or Android and start mapping your first project today."
+                "Get the native app for Windows, Android or iOS and start mapping your first project today."
               )}
             </p>
 
             {/* Store Buttons */}
             <div className="flex justify-center w-full">
-              <StoreButtons variant="blue" className="max-w-[460px]" />
+              <StoreButtons variant="blue" className="max-w-[620px]" />
             </div>
           </div>
         </div>
