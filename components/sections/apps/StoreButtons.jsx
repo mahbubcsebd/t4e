@@ -39,10 +39,18 @@ export function GooglePlayIcon({ className = "w-5 h-5 sm:w-6 sm:h-6 md:w-6.5 md:
   );
 }
 
+export function AppleIcon({ className = "w-5 h-5 sm:w-6 sm:h-6 md:w-6.5 md:h-6.5" }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+      <path d="M16.37 12.6c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.78 1.3 10.33.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.38.82 1.4-.03 2.28-1.27 3.14-2.52.99-1.45 1.4-2.85 1.42-2.92-.03-.01-2.72-1.04-2.75-4.14ZM13.8 5c.72-.87 1.2-2.08 1.07-3.28-1.03.04-2.28.69-3.02 1.55-.66.77-1.24 2-1.09 3.18 1.15.09 2.32-.58 3.04-1.45Z" />
+    </svg>
+  );
+}
+
 export default function StoreButtons({
   variant = "dark",
   className = "",
-  showOnly = null, // "windows" | "android" | null
+  showOnly = null, // "windows" | "android" | "ios" | null
 }) {
   const { t } = useLanguage();
 
@@ -62,11 +70,11 @@ export default function StoreButtons({
   const containerClass = isBlue && showOnly
     ? cn("flex w-full", className)
     : isBlue
-    ? cn("grid grid-cols-2 gap-3.5 w-full", className)
+    ? cn("grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 w-full", className)
     : showOnly
     ? cn("flex items-center w-full sm:w-auto", className)
     : cn(
-        "grid grid-cols-2 gap-2 sm:gap-3.5 sm:flex sm:flex-wrap sm:items-center w-full sm:w-auto",
+        "grid grid-cols-3 gap-2 sm:gap-3.5 sm:flex sm:flex-wrap sm:items-center w-full sm:w-auto",
         className
       );
 
@@ -115,6 +123,30 @@ export default function StoreButtons({
             </span>
             <span className={"block text-[11px] sm:text-[13px] md:text-[14.5px] font-bold tracking-tight whitespace-nowrap"}>
               {t("appsPage.hero.googlePlay", "Google Play")}
+            </span>
+          </div>
+        </Link>
+      )}
+
+      {(!showOnly || showOnly === "ios") && (
+        <Link
+          href="https://apps.apple.com/us/app/think4ever/id6817708158"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={buttonBaseClass}
+        >
+          <AppleIcon className="w-4.5 h-4.5 sm:w-5.5 sm:h-5.5 md:w-6 md:h-6 shrink-0 transition-transform group-hover:scale-105" />
+          <div className="text-left leading-tight min-w-0">
+            <span
+              className={cn(
+                "block text-[8.5px] sm:text-[9.5px] md:text-[10.5px] font-medium tracking-wide uppercase truncate",
+                isLight ? "text-muted-foreground" : "text-white/70"
+              )}
+            >
+              {t("appsPage.hero.getOnAppStore", "Download on the")}
+            </span>
+            <span className={"block text-[11px] sm:text-[13px] md:text-[14.5px] font-bold tracking-tight whitespace-nowrap"}>
+              {t("appsPage.hero.appStore", "App Store")}
             </span>
           </div>
         </Link>

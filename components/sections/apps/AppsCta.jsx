@@ -40,7 +40,7 @@ export default function AppsCta() {
 
             {/* Store Buttons */}
             <div className="flex justify-center w-full">
-              <StoreButtons variant="blue" className="max-w-[460px]" />
+              <StoreButtons variant="blue" className="max-w-[620px]" />
             </div>
           </div>
         </div>

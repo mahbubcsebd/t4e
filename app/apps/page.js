@@ -28,9 +28,9 @@ export default function AppsPage() {
 }
 
 export const fallbackMetadata = {
-  title: "Think4Ever Apps for Windows and Android",
+  title: "Think4Ever Apps for Windows, Android and iOS",
   description:
-    "Download Think4Ever for Windows and Android. Run Think4Ever locally, with the same capabilities as the Think4Ever web platform.",
+    "Download Think4Ever for Windows, Android and iOS. Run Think4Ever locally, with the same capabilities as the Think4Ever web platform.",
 };
 
 export async function generateMetadata() {

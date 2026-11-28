@@ -25,7 +25,7 @@ export default function AppsHero() {
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-foreground tracking-tight leading-[1.12] mb-5">
               {t("appsPage.hero.titlePrefix", "Think4Ever, ")}
-              <span className="text-primary">
+              <span className="text-[#FF7A1A]">
                 {t("appsPage.hero.titleHighlight", "installed on your device")}
               </span>
             </h1>
@@ -33,23 +33,20 @@ export default function AppsHero() {
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 max-w-2xl mx-auto lg:mx-0">
               {t(
                 "appsPage.hero.lead",
-                "Native apps for Windows and Android bring the full Think4Ever platform to your own device. Run Think4Ever locally, with the same capabilities as the web platform."
-              )}{" "}
-              <strong className="font-bold text-foreground">
-                {t("appsPage.hero.iosBold", "iOS coming soon")}
-              </strong>
+                "Native apps for Windows, Android and iOS bring the full Think4Ever platform to your own device. Run Think4Ever locally, with the same capabilities as the web platform."
+              )}
             </p>
 
             {/* Store Download Buttons */}
             <div className="flex justify-center lg:justify-start mb-4 w-full">
-              <StoreButtons variant="blue" className="max-w-[460px]" />
+              <StoreButtons variant="blue" className="max-w-[620px]" />
             </div>
 
             {/* Microcopy note */}
             <p className="text-xs sm:text-sm text-muted-foreground font-medium">
               {t(
                 "appsPage.hero.note",
-                "Free to download. Sign in to get started. iOS app coming soon."
+                "Free to download. Sign in to get started."
               )}
             </p>
           </div>
